@@ -7,7 +7,6 @@ const srcDir = 'src';
 const buildDir = 'build';
 
 const files = {
-	html: [`${srcDir}/**/*.html`],
 	allScss: [`${srcDir}/scss/**/*`],
 	scss: [`${srcDir}/scss/*`],
 };
@@ -20,14 +19,10 @@ function errorHandler(err) {
 const scssFiles = () => src(files.scss)
 	.pipe(sass({ outputStyle: 'expanded' }).on('error', errorHandler))
 	.pipe(autoprefixer())
-	.pipe(dest(`${buildDir}/styles`));
-
-const htmlFiles = () => src(files.html)
 	.pipe(dest(buildDir));
 
 const watchFiles = (done) => {
 	watch(files.allScss, parallel(scssFiles));
-	watch(files.html, parallel(htmlFiles));
 	done();
 };
 
@@ -37,7 +32,7 @@ task(clean);
 task(scssFiles);
 task(
 	'build',
-	parallel(scssFiles, htmlFiles),
+	parallel(scssFiles),
 );
 task('watch', series('build', watchFiles));
 task('default', series('clean', 'watch'));
