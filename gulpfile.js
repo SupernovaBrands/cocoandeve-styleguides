@@ -4,11 +4,11 @@ const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 
 const srcDir = 'src';
-const buildDir = 'build';
+const buildDir = 'css';
 
 const files = {
 	allScss: [`${srcDir}/scss/**/*`],
-	scss: [`${srcDir}/scss/*`],
+	scss: [`${srcDir}/scss/*.scss`],
 };
 
 function errorHandler(err) {
