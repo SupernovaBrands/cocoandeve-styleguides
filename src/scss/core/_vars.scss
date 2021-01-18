@@ -7,3 +7,47 @@ $grid-breakpoints: (
   lg: 992px,
   xl: 1200px
 );
+
+$_font-size-base: 16;
+$line-height-base: 20 / $_font-size-base;
+
+$headings-font-weight: 700;
+
+$h1-font-size: 24 / $_font-size-base * 1em;
+$h2-font-size: 24 / $_font-size-base * 1em;
+$h3-font-size: 18 / $_font-size-base * 1em;
+$h4-font-size: 16 / $_font-size-base * 1em;
+$h1-line-height: 28 / 24;
+$h2-line-height: 28 / 24;
+$h3-line-height: 22 / 18;
+$h4-line-height: 20 / 16;
+
+$h1-font-size-lg: 36 / $_font-size-base * 1em;
+$h2-font-size-lg: 32 / $_font-size-base * 1em;
+$h3-font-size-lg: 24 / $_font-size-base * 1em;
+$h4-font-size-lg: 20 / $_font-size-base * 1em;
+$h1-line-height-lg: 42 / 36;
+$h2-line-height-lg: 38 / 32;
+$h3-line-height-lg: 28 / 24;
+$h4-line-height-lg: 24 / 20;
+
+$grid-gutter-width: 15px;
+$grid-gutter-width-lg: 30px;
+
+$pink: #FF5A8D;
+$pink-light: #F5DADF;
+$green: #00635B;
+$green-light: #E0F0E9;
+$gray-600: #4E4E4E;
+$gray-900: #151515;
+$colors: (
+  'pink': $pink,
+  'pink-light': $pink-light,
+  'green': $green,
+  'green-light': $green-light,
+  'gray': $gray-600,
+  'gray-dark': $gray-900,
+);
+
+$primary: $pink;
+$secondary: $green;
