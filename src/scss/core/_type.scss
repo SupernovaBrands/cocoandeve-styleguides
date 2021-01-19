@@ -1,38 +1,30 @@
 h1, .h1 { 
-  font-size: $h1-font-size;
   line-height: $h1-line-height;
-
-  @media (min-width: map-get($grid-breakpoints, lg)) {
+  @include media-breakpoint-up(lg) ){
     font-size: $h1-font-size-lg;
     line-height: $h1-line-height-lg;
   }
 }
 
-h2, .h2 { 
-  font-size: $h2-font-size; 
+h2, .h2 {
   line-height: $h2-line-height;
-
-  @media (min-width: map-get($grid-breakpoints, lg)) {
+  @include media-breakpoint-up(lg) ){
     font-size: $h2-font-size-lg;
     line-height: $h2-line-height-lg;
   }
 }
 
-h3, .h3 { 
-  font-size: $h3-font-size;
+h3, .h3 {
   line-height: $h3-line-height;
-
-  @media (min-width: map-get($grid-breakpoints, lg)) {
+  @include media-breakpoint-up(lg) ){
     font-size: $h3-font-size-lg;
     line-height: $h3-line-height-lg;
   }
 }
 
 h4, .h4 { 
-  font-size: $h4-font-size;
   line-height: $h4-line-height;
-
-  @media (min-width: map-get($grid-breakpoints, lg)) {
+  @include media-breakpoint-up(lg) ){
     font-size: $h4-font-size-lg;
     line-height: $h4-line-height-lg;
   }

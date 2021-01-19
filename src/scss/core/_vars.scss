@@ -12,11 +12,11 @@ $grid-gutter-width: 15px;
 $grid-gutter-width-lg: 30px;
 
 // colors
-$primary: #00635B;
-$secondary: #FF5A8D;
+$primary: #F3436C;
+$secondary: #00635B;
 $body-color: #151515;
 $light-green: #E0F0E9;
-$light-pink: #F5DADF;
+$primary-light: #F5DADF;
 $gray: #4E4E4E;
 
 // em numbers based of original design base font size 16pixel (mobile and desktop) and converted to em using pxtoem.com
@@ -33,13 +33,13 @@ $h3-font-size-lg: 1.5em;
 $h4-font-size-lg: 1.25em;
 
 // line-height
-$h1-line-height: 2.625em;
-$h2-line-height: 2.375em;
-$h3-line-height: 1.75em;
-$h4-line-height: 1.25em;
+$h1-line-height: 1.167em;
+$h2-line-height: 1.167em;
+$h3-line-height: 1.222em;
+$h4-line-height: 1.200em;
 
 // line-height for desktop
-$h1-line-height-lg: 1.75em;
-$h2-line-height-lg: 1.75em;
-$h3-line-height-lg: 1.375em;
-$h4-line-height-lg: 1.25em;
+$h1-line-height-lg: 1.167em;
+$h2-line-height-lg: 1.188em;
+$h3-line-height-lg: 1.167em;
+$h4-line-height-lg: 1.200em;
