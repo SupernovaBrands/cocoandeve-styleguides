@@ -20,30 +20,29 @@ $grid-gutter-width: 15px;
 $grid-gutter-width-lg: 30px;
 
 // Font Sizes
-$_font-size-base: 16;
-$line-height-base: 20 / $_font-size-base;
+$line-height-base: calc-font-ratio(20);
 $line-height-lg: $line-height-base;
-$line-height-sm: $line-height-base;
+$line-height-sm: calc-font-ratio(17, $context: 14);
 
 $headings-font-weight: 700;
 
-$h1-font-size: 24 / $_font-size-base * 1em;
-$h2-font-size: 24 / $_font-size-base * 1em;
-$h3-font-size: 18 / $_font-size-base * 1em;
-$h4-font-size: 16 / $_font-size-base * 1em;
-$h1-line-height: 28 / 24;
-$h2-line-height: 28 / 24;
-$h3-line-height: 22 / 18;
-$h4-line-height: 20 / 16;
+$h1-font-size: calc-font-ratio(24, $unit: 1em);
+$h2-font-size: calc-font-ratio(24, $unit: 1em);
+$h3-font-size: calc-font-ratio(18, $unit: 1em);
+$h4-font-size: calc-font-ratio(16, $unit: 1em);
+$h1-line-height: calc-font-ratio(28, $context: 24);
+$h2-line-height: calc-font-ratio(28, $context: 24);
+$h3-line-height: calc-font-ratio(22, $context: 18);
+$h4-line-height: calc-font-ratio(20);
 
-$h1-font-size-lg: 36 / $_font-size-base * 1em;
-$h2-font-size-lg: 32 / $_font-size-base * 1em;
-$h3-font-size-lg: 24 / $_font-size-base * 1em;
-$h4-font-size-lg: 20 / $_font-size-base * 1em;
-$h1-line-height-lg: 42 / 36;
-$h2-line-height-lg: 38 / 32;
-$h3-line-height-lg: 28 / 24;
-$h4-line-height-lg: 24 / 20;
+$h1-font-size-lg: calc-font-ratio(36, $unit: 1em);
+$h2-font-size-lg: calc-font-ratio(32, $unit: 1em);
+$h3-font-size-lg: calc-font-ratio(24, $unit: 1em);
+$h4-font-size-lg: calc-font-ratio(20, $unit: 1em);
+$h1-line-height-lg: calc-font-ratio(42, $context: 36);
+$h2-line-height-lg: calc-font-ratio(38, $context: 32);
+$h3-line-height-lg: calc-font-ratio(28, $context: 24);
+$h4-line-height-lg: calc-font-ratio(24, $context: 20);
 
 // Colors
 $gray-400: #D0D0D0;
@@ -62,8 +61,24 @@ $theme-colors: (
   'secondary-light': $secondary-light,
 );
 
+$body-color: $gray-900;
+
 // Forms
+$input-color: $body-color;
 $input-placeholder-color: $gray-500;
-$input-btn-padding-y-sm: 8.25 / $_font-size-base * 1rem;
-$search-icon-padding-y-sm: 7 / $_font-size-base * 1rem;
-$input-border-radius-sm: 18 / $_font-size-base * 1rem;
+$input-btn-focus-color: transparent;
+$input-focus-border-color: $gray-400;
+$input-btn-padding-y-sm: calc-font-ratio(8.5, $unit: 1rem);
+$input-btn-padding-x-sm: calc-font-ratio(6, $unit: 1rem);
+$search-icon-padding-y-sm: calc-font-ratio(7, $unit: 1rem);
+$input-border-radius-sm: calc-font-ratio(18, $unit: 1rem);
+
+// Buttons
+$btn-padding-y: calc-font-ratio(9, $unit: 1rem);
+$btn-padding-x: calc-font-ratio(28, $unit: 1rem);
+
+$btn-padding-y-lg: calc-font-ratio(17, $unit: 1rem);
+$btn-padding-x-lg: calc-font-ratio(54, $unit: 1rem);
+
+$btn-padding-y-sm: calc-font-ratio(8.5, $unit: 1rem);
+$btn-padding-x-sm: calc-font-ratio(28, $unit: 1rem);
