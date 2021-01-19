@@ -1,4 +1,4 @@
-@media (min-width: map-get($grid-breakpoints, lg)) {
+@include media-breakpoint-up(lg) {
 	.row {
 		margin-right: -$grid-gutter-width-lg / 2;
 		margin-left: -$grid-gutter-width-lg / 2;
