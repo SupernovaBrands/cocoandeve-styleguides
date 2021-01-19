@@ -8,8 +8,9 @@ const cssDir = 'css';
 
 const files = {
 	html: [`docs/**/*`],
-	allScss: [`src/scss/**/*`],
-	scss: [`src/scss/*.scss`],
+	js: [`js/**/*`],
+	allScss: [`scss/**/*`],
+	scss: [`scss/*.scss`],
 };
 
 function errorHandler(err) {
@@ -18,6 +19,9 @@ function errorHandler(err) {
 }
 
 const htmlFiles = () => src(files.html)
+	.pipe(browserSync.stream());
+
+const jsFiles = () => src(files.js)
 	.pipe(browserSync.stream());
 
 const scssFiles = () => src(files.scss)
@@ -29,6 +33,7 @@ const scssFiles = () => src(files.scss)
 const watchFiles = (done) => {
 	watch(files.allScss, parallel(scssFiles));
 	watch(files.html, parallel(htmlFiles));
+	watch(files.js, parallel(jsFiles));
 	done();
 };
 
