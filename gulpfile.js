@@ -4,7 +4,7 @@ const del = require('del');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 
-const cssDir = 'docs/css';
+const cssDir = 'css';
 
 const files = {
 	html: [`docs/**/*`],
@@ -34,7 +34,6 @@ const watchFiles = (done) => {
 
 const server = (done) => {
 	connect.server({
-		root: 'docs',
 		port: 8080,
 		livereload: true
 	});
