@@ -15,6 +15,10 @@ $container-max-widths: (
   xl: 1170px
 );
 
+// Grid
+$grid-gutter-width: 15px;
+$grid-gutter-width-lg: 30px;
+
 // Font Sizes
 $_font-size-base: 16;
 $line-height-base: 20 / $_font-size-base;
@@ -40,10 +44,6 @@ $h1-line-height-lg: 42 / 36;
 $h2-line-height-lg: 38 / 32;
 $h3-line-height-lg: 28 / 24;
 $h4-line-height-lg: 24 / 20;
-
-// Grid
-$grid-gutter-width: 15px;
-$grid-gutter-width-lg: 30px;
 
 // Colors
 $gray-400: #D0D0D0;
