@@ -549,8 +549,8 @@ pre code {
 .container-lg,
 .container-xl {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 7.5px;
+  padding-left: 7.5px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -582,8 +582,8 @@ pre code {
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
+  margin-right: -7.5px;
+  margin-left: -7.5px;
 }
 
 .no-gutters {
@@ -605,8 +605,8 @@ pre code {
 .col-xl-auto {
   position: relative;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 7.5px;
+  padding-left: 7.5px;
 }
 
 .col {
@@ -4565,26 +4565,26 @@ input[type="button"].btn-block {
 }
 
 .card-deck .card {
-  margin-bottom: 15px;
+  margin-bottom: 7.5px;
 }
 
 @media (min-width: 375px) {
   .card-deck {
     display: flex;
     flex-flow: row wrap;
-    margin-right: -15px;
-    margin-left: -15px;
+    margin-right: -7.5px;
+    margin-left: -7.5px;
   }
   .card-deck .card {
     flex: 1 0 0%;
-    margin-right: 15px;
+    margin-right: 7.5px;
     margin-bottom: 0;
-    margin-left: 15px;
+    margin-left: 7.5px;
   }
 }
 
 .card-group > .card {
-  margin-bottom: 15px;
+  margin-bottom: 7.5px;
 }
 
 @media (min-width: 375px) {
