@@ -8,14 +8,12 @@ $grid-breakpoints: (
   xl: 1200px
 );
 
-
-$grid-gutter-width: 15px;
 $grid-gutter-width-lg: 30px;
 
 // COLORS
 
-$primary: #00635B;
-$secondary: #FF5A8D;
+$primary: #f3436c;
+$secondary: #00635b;
 $body-color: #151515;
 $light-green: #E0F0E9;
 $light-pink: #F5DADF;
@@ -23,6 +21,8 @@ $gray: #4E4E4E;
 
 
 // FONT SIZES
+
+$headings-font-weight: 700;
 
 $h1-font-size: 1.5em;
 $h2-font-size: 1.5em;
@@ -37,12 +37,12 @@ $h4-font-size-lg: 1.25em;
 
 // LINE HEIGHS
 
-$h1-line-height: 2.625em;
-$h2-line-height: 2.375em;
-$h3-line-height: 1.75em;
-$h4-line-height: 1.25em;
+$h1-line-height: 1.116;
+$h2-line-height: 1.116;
+$h3-line-height: 1.222;
+$h4-line-height: 1.25;
 
-$h1-line-height-lg: 1.75em;
-$h2-line-height-lg: 1.75em;
-$h3-line-height-lg: 1.375em;
-$h4-line-height-lg: 1.25em;
+$h1-line-height-lg: 1.166;
+$h2-line-height-lg: 1.187;
+$h3-line-height-lg: 1.166;
+$h4-line-height-lg: 1.2;
