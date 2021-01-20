@@ -82,3 +82,12 @@ $btn-padding-x-lg: calc-font-ratio(54, $unit: 1rem);
 
 $btn-padding-y-sm: calc-font-ratio(8.5, $unit: 1rem);
 $btn-padding-x-sm: calc-font-ratio(28, $unit: 1rem);
+
+// Carousels
+$carousel-indicator-width: calc-font-ratio(12, $unit: 1rem);
+$carousel-indicator-height: calc-font-ratio(12, $unit: 1rem);
+$carousel-indicator-active-bg: $primary;
+
+$carousel-control-color: $primary;
+$carousel-control-prev-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='22.627' height='22.627' viewBox='0 0 22.627 22.627'><g transform='translate(14.314 22.627) rotate(-135)'><path fill='#{$carousel-control-color}' d='M13.333,16V2.667H0V0H16V16Z'/></g></svg>") !default;
+$carousel-control-next-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='22.627' height='22.627' viewBox='0 0 22.627 22.627'><g transform='translate(7.314 0) rotate(45)'><path fill='#{$carousel-control-color}' d='M13.333,16V2.667H0V0H16V16Z'/></g></svg>") !default;

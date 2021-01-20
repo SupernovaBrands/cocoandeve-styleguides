@@ -1,0 +1,55 @@
+.carousel-indicators {
+  &--white {
+    li {
+      background-color: $white;
+    }
+  }
+}
+
+.carousel-control-prev, .carousel-control-next {
+  &--grouped-right {
+    width: 2.4em;
+    height: 2.5em;
+    top: auto;
+    bottom: 1em;
+    margin: auto;
+    right: 1.5em;
+  }
+
+  &--grouped-right-desktop-only {
+      @include media-breakpoint-up(lg) {
+      width: 2.4em;
+      height: 2.5em;
+      top: auto;
+      bottom: 1em;
+      margin: auto;
+      right: 1.5em;
+    }
+  }
+}
+
+.carousel-control-prev {
+  &--grouped-right {
+    right: 5em;
+    left: auto;
+  }
+
+  &--grouped-right-desktop-only {
+    @include media-breakpoint-up(lg) {
+      right: 5em;
+      left: auto;
+    }
+  }
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  width: 1.375em;
+  height: 1.375em;
+
+  &--background-white {
+    background-color: white;
+    width: 2.5em;
+    height: 2.5em;
+    background-size: 1.375em;
+  }
+}
