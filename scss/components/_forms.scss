@@ -1,0 +1,79 @@
+.form-control {
+	padding-top: $input-padding-y-top;
+	padding-bottom: $input-padding-y-bottom;
+
+	.input-group-sm > &,
+	&-sm {
+		padding-top: $input-padding-y-top-sm;
+		padding-bottom: $input-padding-y-bottom-sm;
+	}
+
+	&:disabled,
+	&:disabled::placeholder,
+	&[readonly],
+	&[readonly]::placeholder {
+		color: $input-disabled-color;
+	}
+}
+
+.search-box {
+	.search-icon {
+		fill: $primary;
+	}
+
+	.close-icon {
+		fill: $gray-400;
+	}
+
+	&-icon,
+	&-close {
+		padding: $search-icon-padding-y-sm !important;
+		background-color: $white;
+		line-height: 1em;
+	}
+
+	&-icon {
+		padding-left: 1rem !important;
+		border-right: 0;
+	}
+
+	&-close {
+		padding-right: 1rem !important;
+		border-left: 0;
+		border-top-right-radius: $input-border-radius-sm !important;
+		border-bottom-right-radius: $input-border-radius-sm !important;
+		@include media-breakpoint-up(lg) {
+			display: none;
+		}
+	}
+	&.dirty &-close {
+		display: block;
+		padding-right: $input-border-radius-sm + $search-icon-padding-y-sm * 2 !important;
+		border-right: 0;
+		margin-right: - $input-border-radius-sm;
+		border-radius: 0 !important;
+	}
+
+	.form-control {
+		border-left-width: 0;
+		border-right-width: 0;
+		@include media-breakpoint-up(lg) {
+			border-right-width: 1px;
+			border-top-right-radius: $input-border-radius-sm !important;
+			border-bottom-right-radius: $input-border-radius-sm !important;
+		}
+	}
+	&.dirty .form-control {
+		border-right-width: 0;
+		border-radius: 0 !important;
+	}
+
+	.btn {
+		display: none;
+		border-radius: $input-border-radius-sm !important;
+	}
+
+	&.dirty .btn {
+		display: block;
+	}
+}
