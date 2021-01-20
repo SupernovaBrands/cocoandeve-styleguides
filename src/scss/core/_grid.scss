@@ -1,7 +1,12 @@
-@media (min-width: map-get($grid-breakpoints, lg)) {
+.container {
+	padding-right: $grid-gutter-width;
+	padding-left: $grid-gutter-width;
+}
+
+@include media-breakpoint-up(lg) {
 	.row {
-		margin-right: -$grid-gutter-width-lg / 2;
-		margin-left: -$grid-gutter-width-lg / 2;
+		margin-right: -$grid-gutter-width;
+		margin-left: -$grid-gutter-width;
 	}
 
 	.row>.col,

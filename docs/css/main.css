@@ -9803,6 +9803,11 @@ a.text-dark:hover, a.text-dark:focus {
   font-weight: 300;
 }
 
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
 @media (min-width: 992px) {
   .row {
     margin-right: -15px;
