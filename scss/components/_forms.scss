@@ -19,6 +19,7 @@
 .search-box {
 	border: 1px solid $gray-400;
 	border-radius: $input-border-radius-sm;
+	background: $white;
 
 	& .input-group-prepend &__icon,
 	& .input-group-append &__close {
@@ -54,6 +55,7 @@
 
 	.form-control {
 		border: 0;
+		background: transparent;
 	}
 
 	.input-group-append .btn {

@@ -9910,6 +9910,7 @@ h4, .h4 {
 .search-box {
   border: 1px solid #D0D0D0;
   border-radius: 1.28571em;
+  background: #fff;
 }
 
 .search-box .input-group-prepend .search-box__icon,
@@ -9949,6 +9950,7 @@ h4, .h4 {
 
 .search-box .form-control {
   border: 0;
+  background: transparent;
 }
 
 .search-box .input-group-append .btn {
