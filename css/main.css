@@ -9856,6 +9856,38 @@ h4, .h4 {
   }
 }
 
+@font-face {
+  font-family: "supernova-icon";
+  src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?8daf2995288b08d34c06b19a4eaf52e9#supernova-icon") format("svg"), url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?8daf2995288b08d34c06b19a4eaf52e9") format("truetype"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff?8daf2995288b08d34c06b19a4eaf52e9") format("woff"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?8daf2995288b08d34c06b19a4eaf52e9") format("woff2");
+}
+
+.sni {
+  display: flex;
+}
+
+.sni:before {
+  font-family: supernova-icon !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.sni.sni-close:before {
+  content: "";
+}
+
+.sni.sni-plus:before {
+  content: "";
+}
+
+.sni.sni-search:before {
+  content: "";
+}
+
 .btn {
   padding-top: 0.4375em;
   padding-bottom: 0.6875em;
@@ -9913,6 +9945,16 @@ h4, .h4 {
   background: #fff;
 }
 
+.search-box .sni-search {
+  font-size: 1.42857em;
+  color: #F3436C;
+}
+
+.search-box .sni-close {
+  font-size: 0.85714em;
+  color: #D0D0D0;
+}
+
 .search-box .input-group-prepend .search-box__icon,
 .search-box .input-group-append .search-box__close {
   padding: 0.42857em;
@@ -9923,15 +9965,14 @@ h4, .h4 {
 .search-box .input-group-prepend .search-box__icon {
   padding-left: 1rem;
   border-right: 0;
-  fill: #F3436C;
 }
 
 .search-box .input-group-append .search-box__close {
   padding-right: 1rem;
   border-left: 0;
-  fill: #D0D0D0;
   border-top-right-radius: 1.28571em;
   border-bottom-right-radius: 1.28571em;
+  text-decoration: none;
 }
 
 @media (min-width: 992px) {
@@ -9941,7 +9982,7 @@ h4, .h4 {
 }
 
 .search-box.dirty .search-box__close {
-  display: block;
+  display: flex;
   padding-right: 2.14286em;
   border-right: 0;
   margin-right: -1.28571em;
@@ -9961,6 +10002,79 @@ h4, .h4 {
 
 .search-box.dirty .btn {
   display: block;
+}
+
+.upsell {
+  background: #FAF9F9;
+  padding: 0.625em 0.9375em;
+}
+
+@media (min-width: 992px) {
+  .upsell {
+    padding: 0.625em 0.625em;
+  }
+}
+
+.upsell img {
+  max-width: 100%;
+}
+
+.upsell__img {
+  width: 4.6875em;
+}
+
+@media (min-width: 992px) {
+  .upsell__img {
+    width: 3.5em;
+  }
+}
+
+.upsell__title {
+  margin-bottom: 0.4375em;
+}
+
+@media (min-width: 992px) {
+  .upsell__title {
+    margin-bottom: 0.125em;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .upsell__price {
+    font-size: 0.875rem;
+    line-height: 1.21429;
+  }
+}
+
+.upsell__price .compare {
+  text-decoration: line-through;
+}
+
+.upsell figcaption {
+  margin-left: 1.6875em;
+}
+
+@media (min-width: 992px) {
+  .upsell figcaption {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+}
+
+.upsell__atc-btn:hover {
+  text-decoration: none;
+}
+
+.upsell__atc-btn__icon {
+  font-size: 1.875em;
+  color: #F3436C;
+}
+
+.upsell__atc-btn__text {
+  font-size: 0.75em;
+  margin-top: 0.16667em;
+  text-decoration: underline;
+  color: #151515;
 }
 
 .cart-bubble-div {

@@ -21,6 +21,16 @@
 	border-radius: $input-border-radius-sm;
 	background: $white;
 
+	.sni-search {
+		font-size: calc-em(20, 14);
+		color: $primary;
+	}
+
+	.sni-close {
+		font-size: calc-em(12, 14);
+		color: $gray-400;
+	}
+
 	& .input-group-prepend &__icon,
 	& .input-group-append &__close {
 		padding: $search-icon-padding-y-sm;
@@ -31,22 +41,21 @@
 	& .input-group-prepend &__icon {
 		padding-left: 1rem;
 		border-right: 0;
-		fill: $primary;
 	}
 
 	& .input-group-append &__close {
 		padding-right: 1rem;
 		border-left: 0;
-		fill: $gray-400;
 		border-top-right-radius: $input-border-radius-sm;
 		border-bottom-right-radius: $input-border-radius-sm;
+		text-decoration: none;
 		@include media-breakpoint-up(lg) {
 			display: none;
 		}
 	}
 
 	&.dirty &__close {
-		display: block;
+		display: flex;
 		padding-right: $input-border-radius-sm + $search-icon-padding-y-sm * 2;
 		border-right: 0;
 		margin-right: - $input-border-radius-sm;
