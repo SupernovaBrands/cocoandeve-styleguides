@@ -2,10 +2,6 @@
 	@return $pixels / $context * $unit;
 }
 
-@function calc-em($pixels, $context: 16, $unit: 1em) {
-	@return calc-font-ratio($pixels, $context, $unit);
-}
-
-@function calc-em-sm($pixels) {
-	@return calc-em($pixels, $context: 14);
+@function calc-em($pixels, $context: 16) {
+	@return calc-font-ratio($pixels, $context, 1em);
 }

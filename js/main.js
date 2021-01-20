@@ -10,7 +10,7 @@ $(document).ready(function () {
 				parent.removeClass('dirty');
 			}
 		});
-		searchBox.find('.search-box-close').on('click', function (e) {
+		searchBox.find('.search-box__close').on('click', function (e) {
 			e.preventDefault();
 			const parent = $(this).parents('.search-box');
 			const input = parent.find('input');

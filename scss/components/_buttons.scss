@@ -19,4 +19,16 @@
 		padding-bottom: $btn-padding-y-bottom-lg;
 		border-width: $btn-border-width-lg;
 	}
+
+	&-primary {
+		&:hover,
+		&:focus,
+		&.focus,
+		&:not(:disabled):not(.disabled):active,
+		&:not(:disabled):not(.disabled).active,
+		.show>&.dropdown-toggle {
+			background-color: $primary-dark;
+			border-color: $primary-dark;
+		}
+	}
 }

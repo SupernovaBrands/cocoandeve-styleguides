@@ -53,13 +53,12 @@ $gray-900: #151515;
 
 $primary: #F3436C;
 $primary-light: #F5DADF;
+$primary-dark: #B22D4B;
 $secondary: #00635B;
 $secondary-light: #E0F0E9;
 $theme-colors: (
   'primary': $primary,
-  'primary-light': $primary-light,
   'secondary': $secondary,
-  'secondary-light': $secondary-light,
 );
 
 $body-color: $gray-900;
@@ -78,13 +77,13 @@ $input-padding-y-bottom: calc-em(16);
 $input-padding-x: 1em;
 $custom-select-indicator-padding: 1em;
 
-$input-padding-y-sm: calc-em-sm(17 / 2);
-$input-padding-y-top-sm: calc-em-sm(7);
-$input-padding-y-bottom-sm: calc-em-sm(10);
-$input-padding-x-sm: calc-em-sm(6);
+$input-padding-y-sm: calc-em(15 / 2, 14);
+$input-padding-y-top-sm: calc-em(6, 14);
+$input-padding-y-bottom-sm: calc-em(9, 14);
+$input-padding-x-sm: calc-em(6, 14);
 
-$search-icon-padding-y-sm: calc-em-sm(7);
-$input-border-radius-sm: calc-em-sm(18);
+$search-icon-padding-y-sm: calc-em(6, 14);
+$input-border-radius-sm: calc-em(18, 14);
 
 // Buttons
 $btn-hover-darken: 23.5%;

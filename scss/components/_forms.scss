@@ -17,60 +17,49 @@
 }
 
 .search-box {
-	.search-icon {
+	border: 1px solid $gray-400;
+	border-radius: $input-border-radius-sm;
+
+	& .input-group-prepend &__icon,
+	& .input-group-append &__close {
+		padding: $search-icon-padding-y-sm;
+		background-color: transparent;
+		border: 0;
+	}
+
+	& .input-group-prepend &__icon {
+		padding-left: 1rem;
+		border-right: 0;
 		fill: $primary;
 	}
 
-	.close-icon {
-		fill: $gray-400;
-	}
-
-	&-icon,
-	&-close {
-		padding: $search-icon-padding-y-sm !important;
-		background-color: $white;
-		line-height: 1em;
-	}
-
-	&-icon {
-		padding-left: 1rem !important;
-		border-right: 0;
-	}
-
-	&-close {
-		padding-right: 1rem !important;
+	& .input-group-append &__close {
+		padding-right: 1rem;
 		border-left: 0;
-		border-top-right-radius: $input-border-radius-sm !important;
-		border-bottom-right-radius: $input-border-radius-sm !important;
+		fill: $gray-400;
+		border-top-right-radius: $input-border-radius-sm;
+		border-bottom-right-radius: $input-border-radius-sm;
 		@include media-breakpoint-up(lg) {
 			display: none;
 		}
 	}
-	&.dirty &-close {
+
+	&.dirty &__close {
 		display: block;
-		padding-right: $input-border-radius-sm + $search-icon-padding-y-sm * 2 !important;
+		padding-right: $input-border-radius-sm + $search-icon-padding-y-sm * 2;
 		border-right: 0;
 		margin-right: - $input-border-radius-sm;
-		border-radius: 0 !important;
+		border-radius: 0;
 	}
 
 	.form-control {
-		border-left-width: 0;
-		border-right-width: 0;
-		@include media-breakpoint-up(lg) {
-			border-right-width: 1px;
-			border-top-right-radius: $input-border-radius-sm !important;
-			border-bottom-right-radius: $input-border-radius-sm !important;
-		}
-	}
-	&.dirty .form-control {
-		border-right-width: 0;
-		border-radius: 0 !important;
+		border: 0;
 	}
 
-	.btn {
+	.input-group-append .btn {
 		display: none;
-		border-radius: $input-border-radius-sm !important;
+		border-radius: $input-border-radius-sm;
+		margin: -1px -1px -1px 0px;
 	}
 
 	&.dirty .btn {
