@@ -10,7 +10,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const cssDir = 'css';
 
 const files = {
-	html: ['docs/**/*'],
+	html: ['docs/**/*', 'index.html'],
 	js: ['js/**/*'],
 	allScss: ['scss/**/*'],
 	scss: ['scss/*.scss'],
