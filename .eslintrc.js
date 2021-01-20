@@ -39,5 +39,6 @@ module.exports = {
 			},
 		],
 		quotes: [2, 'single', 'avoid-escape'],
+		'prefer-arrow-callback': 0,
 	},
 };

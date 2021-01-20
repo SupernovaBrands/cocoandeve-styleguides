@@ -10174,41 +10174,6 @@ h4, .h4 {
   }
 }
 
-.search-box .search-icon {
-  fill: #F3436C;
-}
-
-.search-box .close-icon {
-  fill: #D0D0D0;
-}
-
-.search-box-icon, .search-box-close {
-  padding: 0.4375rem !important;
-  background-color: #fff;
-}
-
-.search-box-icon {
-  padding-left: 1rem !important;
-  border-right: 0;
-}
-
-.search-box-close {
-  padding-right: 2rem !important;
-  border-left: 0;
-  border-right: 0;
-  margin-right: -1.125rem;
-}
-
-.search-box-btn {
-  padding: 0.53125rem 1.75rem !important;
-  border-radius: 1.125rem !important;
-}
-
-.search-box-input {
-  border-left: 0;
-  border-right: 0;
-}
-
 .cart-bubble-div {
   position: relative;
   top: -42px;
@@ -12252,3 +12217,5 @@ form.footer-search-form button {
 footer p {
   line-height: 1.3;
 }
+
+/*# sourceMappingURL=main.css.map */
