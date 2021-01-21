@@ -1,16 +1,19 @@
-const { src, dest, watch, parallel, task, series } = require('gulp');
+const {
+	src, dest, watch, parallel, task, series,
+} = require('gulp');
 const browserSync = require('browser-sync');
 const del = require('del');
 const sass = require('gulp-sass');
+const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
 
 const cssDir = 'css';
 
 const files = {
-	html: [`docs/**/*`],
-	js: [`js/**/*`],
-	allScss: [`scss/**/*`],
-	scss: [`scss/*.scss`],
+	html: ['docs/**/*'],
+	js: ['js/**/*'],
+	allScss: ['scss/**/*'],
+	scss: ['scss/*.scss'],
 };
 
 function errorHandler(err) {
@@ -25,8 +28,10 @@ const jsFiles = () => src(files.js)
 	.pipe(browserSync.stream());
 
 const scssFiles = () => src(files.scss)
+	.pipe(sourcemaps.init())
 	.pipe(sass({ outputStyle: 'expanded' }).on('error', errorHandler))
 	.pipe(autoprefixer())
+	.pipe(sourcemaps.write('.'))
 	.pipe(dest(cssDir))
 	.pipe(browserSync.stream());
 
@@ -42,9 +47,9 @@ const initServer = (done) => {
 		server: true,
 		port: 8080,
 		middleware: [
-			function(req, res, next) {
+			function (req, res, next) {
 				// Handling URL for CSS files
-				if (req.url.indexOf('/cocoandeve-styleguides') == 0) {
+				if (req.url.indexOf('/cocoandeve-styleguides') === 0) {
 					req.url = req.url.replace(/^(\/cocoandeve-styleguides)/, '');
 				}
 				next();
@@ -52,7 +57,7 @@ const initServer = (done) => {
 		],
 	});
 	done();
-}
+};
 
 const clean = () => del([cssDir]);
 
