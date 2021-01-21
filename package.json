@@ -4,6 +4,7 @@
   "description": "Here we have all the CORE, COMPONENTS, COMPOUND, SECTIONS and TEMPLATE scss-code organized in the same waas is done on the Shopify repo.",
   "main": "index.html",
   "scripts": {
+    "buildfont": "fantasticon",
     "start": "gulp",
     "build": "gulp build",
     "watch": "gulp watch",
@@ -28,6 +29,7 @@
     "eslint": "^7.18.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
+    "fantasticon": "^1.0.31",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-sass": "^4.1.0",
