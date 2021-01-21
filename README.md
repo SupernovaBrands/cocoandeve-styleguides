@@ -19,3 +19,7 @@ Can use https://placeholder.com/ for placeholder images. i.e:
 - 150x150: `https://via.placeholder.com/150`
 - 375x223 jpg: `https://via.placeholder.com/375x223.jpg`
 - 30x30 png: `https://via.placeholder.com/30.png`
+
+## Font Icon
+1. Put svg in `fonts/svgs`
+2. Run `npm run buildfont` to build the font icon
