@@ -9888,6 +9888,38 @@ h4, .h4 {
   content: "";
 }
 
+@font-face {
+  font-family: "supernova-icon";
+  src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?8daf2995288b08d34c06b19a4eaf52e9#supernova-icon") format("svg"), url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?8daf2995288b08d34c06b19a4eaf52e9") format("truetype"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff?8daf2995288b08d34c06b19a4eaf52e9") format("woff"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?8daf2995288b08d34c06b19a4eaf52e9") format("woff2");
+}
+
+.sni {
+  display: flex;
+}
+
+.sni:before {
+  font-family: supernova-icon !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.sni.sni-close:before {
+  content: "";
+}
+
+.sni.sni-plus:before {
+  content: "";
+}
+
+.sni.sni-search:before {
+  content: "";
+}
+
 .btn {
   padding-top: 0.4375em;
   padding-bottom: 0.6875em;

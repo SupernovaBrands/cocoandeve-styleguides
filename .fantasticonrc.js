@@ -13,7 +13,7 @@ module.exports = {
 		html: './fonts/templates/html.hbs',
 	},
 	pathOptions: {
-		scss: './scss/components/_supernova-icon.scss',
-		html: './docs/components/supernova-icon.html',
+		scss: './scss/components/_icons.scss',
+		html: './docs/components/icons.html',
 	}
 };
