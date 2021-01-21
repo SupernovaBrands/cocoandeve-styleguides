@@ -16,7 +16,7 @@ ${{ name }}-font: "{{ name }}";
 {{# if selector }}
 {{ selector }}:before {
 {{ else }}
-{{ tag }}[class^="{{prefix}}-"]:before, {{ tag }}[class*=" {{prefix}}-"]:before {
+{{ tag }}[class^="{{prefix}}__"]:before, {{ tag }}[class*=" {{prefix}}__"]:before {
 {{/ if }}
 	font-family: {{ name }} !important;
 	font-style: normal;
@@ -36,7 +36,7 @@ ${{ name }}-map: (
 
 {{# each codepoints }}
 {{# if ../selector }}
-{{ ../selector }}.{{ ../prefix }}-{{ @key }}:before {
+{{ ../selector }}.{{ ../prefix }}__{{ @key }}:before {
 {{ else }}
 {{ tag }}.{{ ../prefix }}-{{ @key }}:before {
 {{/ if }}

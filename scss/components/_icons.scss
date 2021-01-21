@@ -29,12 +29,12 @@ $supernova-icon-map: (
 	"search": "\f103",
 );
 
-.sni.sni-close:before {
+.sni.sni__close:before {
 	content: map-get($supernova-icon-map, "close");
 }
-.sni.sni-plus:before {
+.sni.sni__plus:before {
 	content: map-get($supernova-icon-map, "plus");
 }
-.sni.sni-search:before {
+.sni.sni__search:before {
 	content: map-get($supernova-icon-map, "search");
 }

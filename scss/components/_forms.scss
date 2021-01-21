@@ -21,12 +21,12 @@
 	border-radius: $input-border-radius-sm;
 	background: $white;
 
-	.sni-search {
+	.sni__search {
 		font-size: calc-em(20, 14);
 		color: $primary;
 	}
 
-	.sni-close {
+	.sni__close {
 		font-size: calc-em(12, 14);
 		color: $gray-400;
 	}
@@ -54,7 +54,7 @@
 		}
 	}
 
-	&.dirty &__close {
+	&--filled .input-group-append &__close {
 		display: flex;
 		padding-right: $input-border-radius-sm + $search-icon-padding-y-sm * 2;
 		border-right: 0;
@@ -73,7 +73,7 @@
 		margin: -1px -1px -1px 0px;
 	}
 
-	&.dirty .btn {
+	&--filled .btn {
 		display: block;
 	}
 }

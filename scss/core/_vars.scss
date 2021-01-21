@@ -20,9 +20,9 @@ $grid-gutter-width: 15px;
 $grid-gutter-width-lg: 30px;
 
 // Font Sizes
-$line-height-base: calc-font-ratio(20, $context: 16);
+$line-height-base: calc-em(20, $context: 16, $unit: 1);
 $line-height-lg: $line-height-base;
-$line-height-sm: calc-font-ratio(17, $context: 14);
+$line-height-sm: calc-em(17, $context: 14, $unit: 1);
 
 $headings-font-weight: 700;
 
@@ -30,19 +30,19 @@ $h1-font-size: calc-em(24);
 $h2-font-size: calc-em(24);
 $h3-font-size: calc-em(18);
 $h4-font-size: calc-em(16);
-$h1-line-height: calc-font-ratio(28, $context: 24);
-$h2-line-height: calc-font-ratio(28, $context: 24);
-$h3-line-height: calc-font-ratio(22, $context: 18);
-$h4-line-height: calc-font-ratio(20, $context: 16);
+$h1-line-height: calc-em(28, $context: 24, $unit: 1);
+$h2-line-height: calc-em(28, $context: 24, $unit: 1);
+$h3-line-height: calc-em(22, $context: 18, $unit: 1);
+$h4-line-height: calc-em(20, $context: 16, $unit: 1);
 
 $h1-font-size-lg: calc-em(36);
 $h2-font-size-lg: calc-em(32);
 $h3-font-size-lg: calc-em(24);
 $h4-font-size-lg: calc-em(20);
-$h1-line-height-lg: calc-font-ratio(42, $context: 36);
-$h2-line-height-lg: calc-font-ratio(38, $context: 32);
-$h3-line-height-lg: calc-font-ratio(28, $context: 24);
-$h4-line-height-lg: calc-font-ratio(24, $context: 20);
+$h1-line-height-lg: calc-em(42, $context: 36, $unit: 1);
+$h2-line-height-lg: calc-em(38, $context: 32, $unit: 1);
+$h3-line-height-lg: calc-em(28, $context: 24, $unit: 1);
+$h4-line-height-lg: calc-em(24, $context: 20, $unit: 1);
 
 // Colors
 $gray-100: #FAF9F9;
@@ -96,7 +96,7 @@ $btn-padding-x-icon: calc-em(20);
 
 $btn-font-size-lg: 1em;
 $btn-line-height-lg: $line-height-base;
-$btn-border-radius-lg: calc-font-ratio(8, $unit: 1rem);
+$btn-border-radius-lg: calc-em(8, $unit: 1rem);
 $btn-border-width-lg: 2px;
 $btn-padding-y-lg: calc-em(26 / 2);
 $btn-padding-y-top-lg: calc-em(11);

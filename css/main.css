@@ -9876,47 +9876,15 @@ h4, .h4 {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.sni.sni-close:before {
+.sni.sni__close:before {
   content: "";
 }
 
-.sni.sni-plus:before {
+.sni.sni__plus:before {
   content: "";
 }
 
-.sni.sni-search:before {
-  content: "";
-}
-
-@font-face {
-  font-family: "supernova-icon";
-  src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?8daf2995288b08d34c06b19a4eaf52e9#supernova-icon") format("svg"), url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?8daf2995288b08d34c06b19a4eaf52e9") format("truetype"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff?8daf2995288b08d34c06b19a4eaf52e9") format("woff"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?8daf2995288b08d34c06b19a4eaf52e9") format("woff2");
-}
-
-.sni {
-  display: flex;
-}
-
-.sni:before {
-  font-family: supernova-icon !important;
-  font-style: normal;
-  font-weight: normal !important;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.sni.sni-close:before {
-  content: "";
-}
-
-.sni.sni-plus:before {
-  content: "";
-}
-
-.sni.sni-search:before {
+.sni.sni__search:before {
   content: "";
 }
 
@@ -9977,12 +9945,12 @@ h4, .h4 {
   background: #fff;
 }
 
-.search-box .sni-search {
+.search-box .sni__search {
   font-size: 1.42857em;
   color: #F3436C;
 }
 
-.search-box .sni-close {
+.search-box .sni__close {
   font-size: 0.85714em;
   color: #D0D0D0;
 }
@@ -10013,7 +9981,7 @@ h4, .h4 {
   }
 }
 
-.search-box.dirty .search-box__close {
+.search-box--filled .input-group-append .search-box__close {
   display: flex;
   padding-right: 2.14286em;
   border-right: 0;
@@ -10032,7 +10000,7 @@ h4, .h4 {
   margin: -1px -1px -1px 0px;
 }
 
-.search-box.dirty .btn {
+.search-box--filled .btn {
   display: block;
 }
 
