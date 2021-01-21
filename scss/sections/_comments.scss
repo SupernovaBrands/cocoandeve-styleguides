@@ -1,0 +1,49 @@
+.comments {
+	&__header {
+		border-bottom: 2px solid $gray-100;
+	}
+
+	&__title {
+		border-bottom: 2px solid $primary;
+		margin-bottom: -2px;
+		padding-right: calc-em(25);
+	}
+
+	&__form {
+		form {
+			display: none;
+			@include media-breakpoint-up(lg) {
+				display: block;
+			}
+		}
+		&__close-btn,
+		&--show &__open-btn {
+			display: none;
+		}
+		&--show form,
+		&--show &__close-btn {
+			display: block;
+		}
+		@include media-breakpoint-down(md) {
+			.btn {
+				width: 100%;
+			}
+		}
+		.btn-block + .btn-block {
+			margin-top: 0;
+		}
+	}
+
+	&__comment {
+		&__img {
+			width: calc-em(75);
+			@include media-breakpoint-up(lg) {
+				width: calc-em(70);
+			}
+		}
+		&__title {
+			margin-top: calc-em(-3);
+			margin-bottom: calc-em(5);
+		}
+	}
+}

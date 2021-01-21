@@ -16,6 +16,12 @@
 	}
 }
 
+.form-group {
+	@include media-breakpoint-up(lg) {
+		margin-bottom: $form-group-margin-bottom-lg;
+	}
+}
+
 .search-box {
 	border: 1px solid $gray-400;
 	border-radius: $input-border-radius-sm;

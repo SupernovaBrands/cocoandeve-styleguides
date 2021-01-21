@@ -17,6 +17,14 @@ $container-max-widths: (
   xl: 1200px
 );
 
+$spacers: (
+  10: calc-em(10),
+  15: calc-em(15),
+  20: calc-em(20),
+  30: calc-em(30),
+  40: calc-em(40),
+);
+
 // Typography
 $font-family-sans-serif: "sofia-pro", "Helvetica Neue", Arial,  sans-serif;
 
@@ -64,6 +72,8 @@ $theme-colors: (
 $body-color: $gray-900;
 
 // Forms
+$form-group-margin-bottom: map-get($spacers, 10);
+$form-group-margin-bottom-lg: map-get($spacers, 20);
 $input-color: $body-color;
 $input-placeholder-color: $gray-500;
 $input-btn-focus-color: transparent;
