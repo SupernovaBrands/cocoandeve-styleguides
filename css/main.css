@@ -10217,7 +10217,7 @@ h4, .h4 {
 }
 
 .carousel-control-prev-icon--background-white, .carousel-control-next-icon--background-white {
-  background-color: white;
+  background-color: #fff;
   width: 2.5em;
   height: 2.5em;
   background-size: 1.375em;
