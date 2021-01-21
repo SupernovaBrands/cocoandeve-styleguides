@@ -1,0 +1,31 @@
+.video-card {
+    img {
+        border-radius: 0.625em;
+    }
+    .play-icon {
+        cursor: pointer;
+        width: 2.250em;
+        height: 2.250em;
+        right: 1.250em;
+        bottom: 1.250em;
+
+        @include media-breakpoint-up(lg) {
+            width: 3.375em;
+            height: 3.375em;
+            right: 2.188em;
+            bottom: 2.188em;
+        }
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    figcaption {
+        margin-top: 1.125em;
+
+        @include media-breakpoint-up(lg) {
+            margin-top: 0.875em;
+        }
+    }
+}

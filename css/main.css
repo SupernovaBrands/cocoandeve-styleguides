@@ -34,7 +34,7 @@
   --breakpoint-sm: 375px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
-  --breakpoint-xl: 1200px;
+  --breakpoint-xl: 1260px;
   --font-family-sans-serif: "sofia-pro", "Helvetica Neue", Arial, sans-serif;
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
@@ -575,9 +575,9 @@ pre code {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1260px) {
   .container, .container-sm, .container-md, .container-lg, .container-xl {
-    max-width: 1170px;
+    max-width: 1200px;
   }
 }
 
@@ -1315,7 +1315,7 @@ pre code {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1260px) {
   .col-xl {
     flex-basis: 0;
     flex-grow: 1;
@@ -1845,7 +1845,7 @@ pre code {
   }
 }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 1259.98px) {
   .table-responsive-xl {
     display: block;
     width: 100%;
@@ -3237,7 +3237,7 @@ input[type="button"].btn-block {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1260px) {
   .dropdown-menu-xl-left {
     right: auto;
     left: 0;
@@ -4450,7 +4450,7 @@ input[type="button"].btn-block {
   }
 }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 1259.98px) {
   .navbar-expand-xl > .container,
   .navbar-expand-xl > .container-fluid, .navbar-expand-xl > .container-sm, .navbar-expand-xl > .container-md, .navbar-expand-xl > .container-lg, .navbar-expand-xl > .container-xl {
     padding-right: 0;
@@ -4458,7 +4458,7 @@ input[type="button"].btn-block {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1260px) {
   .navbar-expand-xl {
     flex-flow: row nowrap;
     justify-content: flex-start;
@@ -5597,7 +5597,7 @@ a.badge-secondary-light:focus, a.badge-secondary-light.focus {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1260px) {
   .list-group-horizontal-xl {
     flex-direction: row;
   }
@@ -6075,7 +6075,7 @@ a.close.disabled {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1260px) {
   .modal-xl {
     max-width: 1140px;
   }
@@ -7001,7 +7001,7 @@ button.bg-secondary-light:focus {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1260px) {
   .d-xl-none {
     display: none !important;
   }
@@ -7555,7 +7555,7 @@ button.bg-secondary-light:focus {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1260px) {
   .flex-xl-row {
     flex-direction: row !important;
   }
@@ -7708,7 +7708,7 @@ button.bg-secondary-light:focus {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1260px) {
   .float-xl-left {
     float: left !important;
   }
@@ -9363,7 +9363,7 @@ button.bg-secondary-light:focus {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1260px) {
   .m-xl-0 {
     margin: 0 !important;
   }
@@ -9790,7 +9790,7 @@ button.bg-secondary-light:focus {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1260px) {
   .text-xl-left {
     text-align: left !important;
   }
@@ -10171,6 +10171,42 @@ h4, .h4 {
   .row > [class*="col-"] {
     padding-right: 15px;
     padding-left: 15px;
+  }
+}
+
+.video-card img {
+  border-radius: 0.625em;
+}
+
+.video-card .play-icon {
+  cursor: pointer;
+  width: 2.250em;
+  height: 2.250em;
+  right: 1.250em;
+  bottom: 1.250em;
+}
+
+@media (min-width: 992px) {
+  .video-card .play-icon {
+    width: 3.375em;
+    height: 3.375em;
+    right: 2.188em;
+    bottom: 2.188em;
+  }
+}
+
+.video-card .play-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.video-card figcaption {
+  margin-top: 1.125em;
+}
+
+@media (min-width: 992px) {
+  .video-card figcaption {
+    margin-top: 0.875em;
   }
 }
 
@@ -10699,7 +10735,7 @@ ul.widget-navbar li:hover a {
   text-decoration: underline;
 }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 1259.98px) {
   .navbar-nav .nav-link {
     font-size: 1rem;
     line-height: 24px;
@@ -10732,7 +10768,7 @@ ul.widget-navbar li:hover a {
   }
 }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 1259.98px) {
   .navbar-nav .nav-item {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
@@ -12148,7 +12184,7 @@ form.footer-search-form button {
   color: #fff;
 }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 1259.98px) {
   .footer-widget ul.list-unstyled {
     margin-bottom: 1rem;
   }
