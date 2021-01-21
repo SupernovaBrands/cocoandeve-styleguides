@@ -2,7 +2,7 @@
   "name": "cocoandeve-styleguides",
   "version": "1.0.0",
   "description": "Here we have all the CORE, COMPONENTS, COMPOUND, SECTIONS and TEMPLATE scss-code organized in the same waas is done on the Shopify repo.",
-  "main": "docs/index.html",
+  "main": "index.html",
   "scripts": {
     "start": "gulp",
     "build": "gulp build",
@@ -20,10 +20,16 @@
   },
   "homepage": "https://github.com/SupernovaBrands/cocoandeve-styleguides#readme",
   "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "babel-eslint": "^10.1.0",
+    "browser-sync": "^2.26.13",
     "del": "^5.1.0",
+    "eslint": "^7.18.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
-    "gulp-connect": "^5.7.0",
     "gulp-sass": "^4.1.0"
   }
 }

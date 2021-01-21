@@ -1,15 +1,16 @@
 const { src, dest, watch, parallel, task, series } = require('gulp');
-const connect = require('gulp-connect');
+const browserSync = require('browser-sync');
 const del = require('del');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 
-const cssDir = 'docs/css';
+const cssDir = 'css';
 
 const files = {
 	html: [`docs/**/*`],
-	allScss: [`src/scss/**/*`],
-	scss: [`src/scss/*.scss`],
+	js: [`js/**/*`],
+	allScss: [`scss/**/*`],
+	scss: [`scss/*.scss`],
 };
 
 function errorHandler(err) {
@@ -18,25 +19,37 @@ function errorHandler(err) {
 }
 
 const htmlFiles = () => src(files.html)
-	.pipe(connect.reload());
+	.pipe(browserSync.stream());
+
+const jsFiles = () => src(files.js)
+	.pipe(browserSync.stream());
 
 const scssFiles = () => src(files.scss)
 	.pipe(sass({ outputStyle: 'expanded' }).on('error', errorHandler))
 	.pipe(autoprefixer())
 	.pipe(dest(cssDir))
-	.pipe(connect.reload());
+	.pipe(browserSync.stream());
 
 const watchFiles = (done) => {
 	watch(files.allScss, parallel(scssFiles));
 	watch(files.html, parallel(htmlFiles));
+	watch(files.js, parallel(jsFiles));
 	done();
 };
 
-const server = (done) => {
-	connect.server({
-		root: 'docs',
+const initServer = (done) => {
+	browserSync.init({
+		server: true,
 		port: 8080,
-		livereload: true
+		middleware: [
+			function(req, res, next) {
+				// Handling URL for CSS files
+				if (req.url.indexOf('/cocoandeve-styleguides') == 0) {
+					req.url = req.url.replace(/^(\/cocoandeve-styleguides)/, '');
+				}
+				next();
+			},
+		],
 	});
 	done();
 }
@@ -45,10 +58,10 @@ const clean = () => del([cssDir]);
 
 task(clean);
 task(scssFiles);
-task(server);
+task(initServer);
 task(
 	'build',
 	parallel(scssFiles),
 );
 task('watch', series('build', watchFiles));
-task('default', series('clean', 'watch', 'server'));
+task('default', series('clean', 'watch', 'initServer'));
