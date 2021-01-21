@@ -1825,7 +1825,7 @@ pre code {
 .form-control {
   display: block;
   width: 100%;
-  height: calc(1.25em + 1.75em + 2px);
+  height: calc(1.25em + 1.75em + 4px);
   padding: 0.875em 1em;
   font-size: 1rem;
   font-weight: 400;
@@ -1903,8 +1903,8 @@ select.form-control:focus::-ms-value {
 }
 
 .col-form-label {
-  padding-top: calc(0.875em + 1px);
-  padding-bottom: calc(0.875em + 1px);
+  padding-top: calc(0.875em + 2px);
+  padding-bottom: calc(0.875em + 2px);
   margin-bottom: 0;
   font-size: inherit;
   line-height: 1.25;
@@ -1918,8 +1918,8 @@ select.form-control:focus::-ms-value {
 }
 
 .col-form-label-sm {
-  padding-top: calc(0.53571em + 1px);
-  padding-bottom: calc(0.53571em + 1px);
+  padding-top: calc(0.53571em + 2px);
+  padding-bottom: calc(0.53571em + 2px);
   font-size: 0.875rem;
   line-height: 1.21429;
 }
@@ -1943,7 +1943,7 @@ select.form-control:focus::-ms-value {
 }
 
 .form-control-sm {
-  height: calc(1.21429em + 1.07143em + 2px);
+  height: calc(1.21429em + 1.07143em + 4px);
   padding: 0.53571em 0.42857em;
   font-size: 0.875rem;
   line-height: 1.21429;
@@ -2295,7 +2295,7 @@ textarea.form-control {
       -ms-user-select: none;
           user-select: none;
   background-color: transparent;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   padding: 0.5625em 1.75em;
   font-size: 1rem;
   line-height: 1.25;
@@ -3478,7 +3478,7 @@ input[type="button"].btn-block {
 
 .input-group-sm > .form-control:not(textarea),
 .input-group-sm > .custom-select {
-  height: calc(1.21429em + 1.07143em + 2px);
+  height: calc(1.21429em + 1.07143em + 4px);
 }
 
 .input-group-sm > .form-control,
@@ -3676,25 +3676,15 @@ input[type="button"].btn-block {
 .custom-select {
   display: inline-block;
   width: 100%;
-<<<<<<< HEAD
-  height: calc(1.25em + 0.75rem + 4px);
-  padding: 0.375rem 1.75rem 0.375rem 0.75rem;
-=======
-  height: calc(1.25em + 1.75em + 2px);
+  height: calc(1.25em + 1.75em + 4px);
   padding: 0.875em 2em 0.875em 1em;
->>>>>>> master
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.25;
   color: #151515;
   vertical-align: middle;
-<<<<<<< HEAD
-  background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px;
-  border: 2px solid #D0D0D0;
-=======
   background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 1em center/8px 10px;
-  border: 1px solid #D0D0D0;
->>>>>>> master
+  border: 2px solid #D0D0D0;
   border-radius: 0.25rem;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -3733,7 +3723,7 @@ input[type="button"].btn-block {
 }
 
 .custom-select-sm {
-  height: calc(1.21429em + 1.07143em + 2px);
+  height: calc(1.21429em + 1.07143em + 4px);
   padding-top: 0.53571em;
   padding-bottom: 0.53571em;
   padding-left: 0.42857em;
@@ -3752,7 +3742,7 @@ input[type="button"].btn-block {
   position: relative;
   display: inline-block;
   width: 100%;
-  height: calc(1.25em + 1.75em + 2px);
+  height: calc(1.25em + 1.75em + 4px);
   margin-bottom: 0;
 }
 
@@ -3760,7 +3750,7 @@ input[type="button"].btn-block {
   position: relative;
   z-index: 2;
   width: 100%;
-  height: calc(1.25em + 1.75em + 2px);
+  height: calc(1.25em + 1.75em + 4px);
   margin: 0;
   opacity: 0;
 }
@@ -3789,7 +3779,7 @@ input[type="button"].btn-block {
   right: 0;
   left: 0;
   z-index: 1;
-  height: calc(1.25em + 1.75em + 2px);
+  height: calc(1.25em + 1.75em + 4px);
   padding: 0.875em 1em;
   font-weight: 400;
   line-height: 1.25;
@@ -9868,7 +9858,7 @@ h4, .h4 {
 
 @font-face {
   font-family: "supernova-icon";
-  src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?8daf2995288b08d34c06b19a4eaf52e9#supernova-icon") format("svg"), url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?8daf2995288b08d34c06b19a4eaf52e9") format("truetype"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff?8daf2995288b08d34c06b19a4eaf52e9") format("woff"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?8daf2995288b08d34c06b19a4eaf52e9") format("woff2");
+  src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?7f1b99a4eb26f5c187509e53497760da#supernova-icon") format("svg"), url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?7f1b99a4eb26f5c187509e53497760da") format("truetype"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff?7f1b99a4eb26f5c187509e53497760da") format("woff"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?7f1b99a4eb26f5c187509e53497760da") format("woff2");
 }
 
 .sni {
@@ -9890,12 +9880,16 @@ h4, .h4 {
   content: "";
 }
 
-.sni.sni__plus:before {
+.sni.sni__play:before {
   content: "";
 }
 
-.sni.sni__search:before {
+.sni.sni__plus:before {
   content: "";
+}
+
+.sni.sni__search:before {
+  content: "";
 }
 
 .btn {
@@ -9925,6 +9919,41 @@ h4, .h4 {
 .show > .btn-primary.dropdown-toggle {
   background-color: #B22D4B;
   border-color: #B22D4B;
+}
+
+.video-card img {
+  border-radius: 0.625em;
+}
+
+.video-card .play-icon {
+  cursor: pointer;
+  right: 1.250em;
+  bottom: 1.250em;
+}
+
+.video-card .play-icon i {
+  font-size: 2.250em;
+  color: #F3436C;
+}
+
+@media (min-width: 992px) {
+  .video-card .play-icon {
+    right: 2.188em;
+    bottom: 2.188em;
+  }
+  .video-card .play-icon i {
+    font-size: 3.375em;
+  }
+}
+
+.video-card figcaption {
+  margin-top: 1.125em;
+}
+
+@media (min-width: 992px) {
+  .video-card figcaption {
+    margin-top: 0.875em;
+  }
 }
 
 .form-control {
