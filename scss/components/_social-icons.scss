@@ -1,0 +1,16 @@
+.social-icon {
+  &__primary {
+    color: $primary;
+    @include font-size($icon-primary-font-size);
+  }
+}
+
+.social-list {
+  .list-inline-item {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: $list-inline-padding-icon;
+    }
+  }
+}
