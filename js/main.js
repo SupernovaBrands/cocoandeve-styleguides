@@ -18,4 +18,10 @@ $(document).ready(function () {
 			parent.removeClass('search-box--filled');
 		});
 	}
+
+	// Carousel Post Card
+	$('#postCardCarouselCaptions').carousel('pause')
+	$('#postCardCarousel').on('slid.bs.carousel', function(evt) {
+		$('#postCardCarouselCaptions').carousel(evt.to)
+	})
 });

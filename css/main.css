@@ -6232,8 +6232,8 @@ a.close.disabled {
 .carousel-indicators li {
   box-sizing: content-box;
   flex: 0 1 auto;
-  width: 0.75rem;
-  height: 0.75rem;
+  width: 0.75em;
+  height: 0.75em;
   margin-right: 3px;
   margin-left: 3px;
   text-indent: -999px;
@@ -9856,55 +9856,6 @@ h4, .h4 {
   }
 }
 
-<<<<<<< HEAD
-.carousel-indicators--white li {
-  background-color: #fff;
-}
-
-.carousel-control-prev--grouped-right, .carousel-control-next--grouped-right {
-  width: 2.4em;
-  height: 2.5em;
-  top: auto;
-  bottom: 1em;
-  margin: auto;
-  right: 1.5em;
-}
-
-@media (min-width: 992px) {
-  .carousel-control-prev--grouped-right-desktop-only, .carousel-control-next--grouped-right-desktop-only {
-    width: 2.4em;
-    height: 2.5em;
-    top: auto;
-    bottom: 1em;
-    margin: auto;
-    right: 1.5em;
-  }
-}
-
-.carousel-control-prev--grouped-right {
-  right: 5em;
-  left: auto;
-}
-
-@media (min-width: 992px) {
-  .carousel-control-prev--grouped-right-desktop-only {
-    right: 5em;
-    left: auto;
-  }
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  width: 1.375em;
-  height: 1.375em;
-}
-
-.carousel-control-prev-icon--background-white, .carousel-control-next-icon--background-white {
-  background-color: #fff;
-  width: 2.5em;
-  height: 2.5em;
-  background-size: 1.375em;
-=======
 @font-face {
   font-family: "supernova-icon";
   src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?8daf2995288b08d34c06b19a4eaf52e9#supernova-icon") format("svg"), url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?8daf2995288b08d34c06b19a4eaf52e9") format("truetype"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff?8daf2995288b08d34c06b19a4eaf52e9") format("woff"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?8daf2995288b08d34c06b19a4eaf52e9") format("woff2");
@@ -10053,6 +10004,48 @@ h4, .h4 {
   display: block;
 }
 
+@media (max-width: 991.98px) {
+  .carousel--full-width {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+}
+
+.carousel-indicators--white li {
+  background-color: #fff;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 1.375em;
+  height: 1.375em;
+}
+
+.carousel-control--background span {
+  background-color: #fff;
+  width: 2.5em;
+  height: 2.5em;
+  background-size: 1.375em;
+}
+
+@media (min-width: 992px) {
+  .carousel-control--right-lg {
+    width: 2.5em;
+    height: 2.5em;
+    top: auto;
+    bottom: 1em;
+    margin: auto;
+    right: 1.5em;
+  }
+}
+
+@media (min-width: 992px) {
+  .carousel-control--right-lg.carousel-control-prev {
+    right: 5em;
+    left: auto;
+  }
+}
+
 .upsell {
   background: #FAF9F9;
   padding: 0.625em 0.9375em;
@@ -10124,7 +10117,6 @@ h4, .h4 {
   margin-top: 0.16667em;
   text-decoration: underline;
   color: #151515;
->>>>>>> master
 }
 
 .cart-bubble-div {
@@ -10246,6 +10238,31 @@ header.stickywrap:not(.stickyHeader):not(.stickyHeaderOnTop) .cart-bubble-div.mo
     display: block;
     top: 0;
   }
+}
+
+@media (max-width: 991.98px) {
+  .post-card {
+    margin-bottom: 2.5em;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .post-card picture {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+}
+
+.post-card img {
+  width: 100%;
+}
+
+.post-card span {
+  margin-bottom: 0.625em;
+}
+
+.post-card__body {
+  margin-top: 1.25em;
 }
 
 .navbar {
@@ -12169,6 +12186,34 @@ form.footer-search-form button {
 
 footer p {
   line-height: 1.3;
+}
+
+.sidebar {
+  background-color: #F5DADF;
+  padding: 1.5625em;
+}
+
+@media (max-width: 991.98px) {
+  .sidebar {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+}
+
+.sidebar--title {
+  font-size: 1.25em;
+  line-height: 1.5625em;
+  margin-bottom: 15px;
+}
+
+.sidebar .post-card {
+  margin-bottom: 0.9375em;
+}
+
+@media (min-width: 992px) {
+  .sidebar .post-card {
+    margin-bottom: 1.875em;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

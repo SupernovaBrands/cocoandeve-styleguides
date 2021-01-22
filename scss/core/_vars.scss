@@ -108,8 +108,8 @@ $btn-padding-y-bottom-sm: calc-em(10);
 $btn-padding-x-sm: calc-em(28);
 
 // Carousels
-$carousel-indicator-width: calc-font-ratio(12, $unit: 1rem);
-$carousel-indicator-height: calc-font-ratio(12, $unit: 1rem);
+$carousel-indicator-width: calc-em(12);
+$carousel-indicator-height: calc-em(12);
 $carousel-indicator-active-bg: $primary;
 
 $carousel-control-color: $primary;
