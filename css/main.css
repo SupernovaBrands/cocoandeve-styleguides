@@ -9844,10 +9844,6 @@ h4, .h4 {
   text-decoration: underline;
 }
 
-.text-primary-color {
-  color: #F3436C;
-}
-
 .container {
   padding-right: 15px;
   padding-left: 15px;
@@ -10031,7 +10027,7 @@ h4, .h4 {
   }
 }
 
-.breadcrumb-item a {
+.breadcrumb-item__link {
   color: #151515;
 }
 
