@@ -1,49 +1,35 @@
 .comments {
-	&__header {
+	header {
 		border-bottom: 2px solid $gray-100;
 	}
 
-	&__title {
-		border-bottom: 2px solid $primary;
-		margin-bottom: -2px;
-		padding-right: calc-em(25);
+	hr {
+		margin-bottom: -1px;
+		box-shadow: 0 1px $primary;
 	}
 
 	&__form {
-		form {
-			display: none;
-			@include media-breakpoint-up(lg) {
-				display: block;
-			}
-		}
-		&__close-btn,
-		&--show &__open-btn {
-			display: none;
-		}
-		&--show form,
-		&--show &__close-btn {
-			display: block;
-		}
 		@include media-breakpoint-down(md) {
 			.btn {
 				width: 100%;
 			}
 		}
-		.btn-block + .btn-block {
-			margin-top: 0;
-		}
 	}
 
 	&__comment {
-		&__img {
-			width: calc-em(75);
+		img {
 			@include media-breakpoint-up(lg) {
-				width: calc-em(70);
+				@include make-col(1, 8);
 			}
 		}
-		&__title {
+		h3 {
 			margin-top: calc-em(-3);
 			margin-bottom: calc-em(5);
+		}
+		&__text {
+			@include media-breakpoint-up(lg) {
+				@include make-col(7, 8);
+			}
 		}
 	}
 }

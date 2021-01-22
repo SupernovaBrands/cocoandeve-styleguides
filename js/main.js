@@ -1,4 +1,8 @@
 $(document).ready(function () {
+	window.showGrid = function () {
+		jQuery('body').append('<style type="text/css">.gridoverlay{position:fixed;top:0;left:50%;transform:translateX(-50%);z-index:9999}.gridoverlay .col{height:100vh}.gridoverlay .col:before{content:"";display:block;background-color:rgba(0,123,255,0.3);height:100%}</style><div class="container gridoverlay"><div class="row"><div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div></div></div>');
+	};
+
 	// Search boxes
 	const searchBox = $('.search-box');
 	if (searchBox.length > 0) {
@@ -32,11 +36,15 @@ $(document).ready(function () {
 
 	if ($('.comments__form').length > 0) {
 		$('.comments__form__open-btn').on('click', function () {
-			$(this).parent('.comments__form').addClass('comments__form--show');
+			$(this).siblings('.comments__form').removeClass('d-none');
+			$(this).siblings('.comments__form__close-btn').removeClass('d-none');
+			$(this).addClass('d-none');
 		});
 
 		$('.comments__form__close-btn').on('click', function () {
-			$(this).parent('.comments__form').removeClass('comments__form--show');
+			$(this).siblings('.comments__form').addClass('d-none');
+			$(this).siblings('.comments__form__open-btn').removeClass('d-none');
+			$(this).addClass('d-none');
 		});
 
 		const checkFormValid = debounce((formEl) => {
@@ -52,27 +60,26 @@ $(document).ready(function () {
 				submitEl.disabled = true;
 			}
 		});
-		$('.comments__form form input, .comments__form form textarea').on('keyup', function () {
+		$('.comments__form input, .comments__form textarea').on('keyup', function () {
 			checkFormValid($(this).parents('form'));
 		});
 
-		$('.comments__form form').on('submit', function (e) {
+		$('.comments__form').on('submit', function (e) {
 			e.preventDefault();
-			const container = $(this).parents('section.comments');
-			const commentEl = container.find('.comments__comment').first();
+			const commentList = $(this).siblings('.comments__list');
 			const name = $(this).find('input[name="name"]').val();
 			const comment = $(this).find('textarea[name="comment"]').val();
 
 			$(this).find('input, textarea').val('');
 			$(this).parent('.comments__form').removeClass('comments__form--show');
 
-			commentEl.before(`<div class="comments__comment d-flex align-items-start mb-20">\
-				<img class="comments__comment__img" src="https://via.placeholder.com/150x150.jpg/E0F0E9" />\
-				<div class="ml-15">\
-					<h3 class="comments__comment__title">${name}</h3>\
+			commentList.prepend(`<li class="comments__comment row align-items-start mb-20">\
+				<img class="col-3" src="https://via.placeholder.com/150x150.jpg/E0F0E9" />\
+				<div class="comments__comment__text col-9">\
+					<h4 class="font-weight-bold">${name}</h4>\
 					<p class="m-0">${comment.replaceAll('\n', '<br>')}</p>\
 				</div>\
-			</div>`);
+			</li>`);
 		});
 	}
 });

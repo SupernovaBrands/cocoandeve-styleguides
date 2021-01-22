@@ -16,59 +16,60 @@
 	<div class="container mt-4">
 		<h1>Comments</h1>
 		<div class="row">
-			<div class="col-12 col-lg-8">
-				<section class="comments pb-10">
-					<div class="comments__header d-flex my-30">
-						<h3 class="comments__title pb-10">154 Comments</h3>
+			<section class="comments col-12 col-lg-8">
+				<header class="my-30 row">
+					<h4 class="col-12 font-weight-bold mb-0">154 Comments</h4>
+					<div class="col-6 col-lg-3">
+						<hr class="border-primary mt-10 mb-0">
 					</div>
-					<div class="comments__form mb-30 mb-lg-40">
-						<form class="no-gutter">
-							<div class="row">
-								<div class="input-group form-group col-lg-6">
-									<input class="form-control" type="text" name="name" placeholder="Name*" required />
-								</div>
-								<div class="input-group form-group col-lg-6">
-									<input class="form-control" type="email" name="email" placeholder="Email*" required />
-								</div>
-							</div>
-							<div class="row">
-								<div class="input-group form-group col mb-30">
-									<textarea class="form-control" name="comment" placeholder="Your comment" rows="7" required></textarea>
-								</div>
-							</div>
-							<div class="row">
-								<div class="form-group col text-right">
-									<button class="btn btn-lg btn-primary" type="submit" disabled>Post Comment</button>
-								</div>
-							</div>
-						</form>
-						<button class="comments__form__open-btn btn btn-lg  btn-block btn-outline-primary d-lg-none">Add comment</button>
-						<button class="comments__form__close-btn btn btn-lg  btn-block btn-outline-primary d-lg-none">Close</button>
+				</header>
+				<form class="comments__form no-gutter d-none d-lg-block">
+					<div class="row">
+						<div class="input-group form-group col-lg-6">
+							<input class="form-control" type="text" name="name" placeholder="Name*" required />
+						</div>
+						<div class="input-group form-group col-lg-6">
+							<input class="form-control" type="email" name="email" placeholder="Email*" required />
+						</div>
 					</div>
-					<div class="comments__comment d-flex align-items-start mb-20">
-						<img class="comments__comment__img" src="https://via.placeholder.com/150x150.jpg/E0F0E9" />
-						<div class="ml-15">
-							<h3 class="comments__comment__title">Ashley</h3>
+					<div class="row">
+						<div class="input-group form-group col mb-30">
+							<textarea class="form-control" name="comment" placeholder="Your comment" rows="7" required></textarea>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col text-right">
+							<button class="btn btn-lg btn-primary" type="submit" disabled>Post Comment</button>
+						</div>
+					</div>
+				</form>
+				<button class="comments__form__open-btn btn btn-lg btn-block btn-outline-primary d-lg-none">Add comment</button>
+				<button class="comments__form__close-btn btn btn-lg btn-block btn-outline-primary d-none d-lg-none mt-0">Close</button>
+				<ul class="comments__list mt-30 mt-lg-40 pb-10 p-0">
+					<li class="comments__comment row align-items-start mb-20">
+						<img class="col-3" src="https://via.placeholder.com/150x150.jpg/E0F0E9" />
+						<div class="comments__comment__text col-9">
+							<h4 class="font-weight-bold">Ashley</h4>
 							<p class="m-0">Got thirsty hair in dire need of some serious TLC? You can also apply our nourishing fig and coconut masque to dry hair and let it soak in for at least 20 mins. Or for butter-soft results, pop on a shower cap, silk scarf or our super-cute, static-free Microfibre Hair Towel Wrap and sleep in your hair masque overnight!</p>
 						</div>
-					</div>
-					<div class="comments__comment d-flex align-items-start mb-20">
-						<img class="comments__comment__img" src="https://via.placeholder.com/150x150.jpg/E0F0E9" />
-						<div class="ml-15">
-							<h3 class="comments__comment__title">Mishelle</h3>
+					</li>
+					<li class="comments__comment row align-items-start mb-20">
+						<img class="col-3" src="https://via.placeholder.com/150x150.jpg/E0F0E9" />
+						<div class="comments__comment__text col-9">
+							<h4 class="font-weight-bold">Mishelle</h4>
 							<p class="m-0">Amazing! Love it!</p>
 						</div>
-					</div>
-					<div class="comments__comment d-flex align-items-start mb-20">
-						<img class="comments__comment__img" src="https://via.placeholder.com/150x150.jpg/E0F0E9" />
-						<div class="ml-15">
-							<h3 class="comments__comment__title">Anny</h3>
+					</li>
+					<li class="comments__comment row align-items-start mb-20">
+						<img class="col-3" src="https://via.placeholder.com/150x150.jpg/E0F0E9" />
+						<div class="comments__comment__text col-9">
+							<h4 class="font-weight-bold">Anny</h4>
 							<p class="m-0">Or for butter-soft results, pop on a shower cap, silk scarf or our super-cute, static-free Microfibre Hair Towel Wrap
 							and sleep in your hair masque overnight!</p>
 						</div>
-					</div>
-				</section>
-			</div>
+					</li>
+				</ul>
+			</section>
 		</div>
 	</div>
 </body>
