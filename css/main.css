@@ -9925,23 +9925,23 @@ h4, .h4 {
   border-radius: 0.625em;
 }
 
-.video-card .play-icon {
+.video-card--icon {
   cursor: pointer;
   right: 1.25em;
   bottom: 1.25em;
 }
 
-.video-card .play-icon i {
+.video-card--icon i {
   font-size: 2.25em;
   color: #F3436C;
 }
 
 @media (min-width: 992px) {
-  .video-card .play-icon {
+  .video-card--icon {
     right: 2.1875em;
     bottom: 2.1875em;
   }
-  .video-card .play-icon i {
+  .video-card--icon i {
     font-size: 3.375em;
   }
 }

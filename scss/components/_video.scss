@@ -2,7 +2,7 @@
     img {
         border-radius: calc-em(10, 16);
     }
-    .play-icon {
+    &--icon {
         cursor: pointer;
         right: calc-em(20, 16);
         bottom: calc-em(20, 16);
