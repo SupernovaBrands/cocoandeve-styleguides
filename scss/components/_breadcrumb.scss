@@ -1,3 +1,9 @@
+.breadcrumb {
+  @include media-breakpoint-up(lg) {
+    @include font-size($font-size-base);
+  }
+}
+
 .breadcrumb-item {
   a {
     color: $gray-900;

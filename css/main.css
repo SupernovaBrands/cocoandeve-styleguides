@@ -4674,6 +4674,7 @@ input[type="button"].btn-block {
   flex-wrap: wrap;
   padding: 0.75rem 1rem;
   margin-bottom: 1rem;
+  font-size: 0.75em;
   list-style: none;
   background-color: #fff;
   border-radius: 0.25rem;
@@ -10006,6 +10007,12 @@ h4, .h4 {
 
 .search-box--filled .btn {
   display: block;
+}
+
+@media (min-width: 992px) {
+  .breadcrumb {
+    font-size: 1rem;
+  }
 }
 
 .breadcrumb-item a {
