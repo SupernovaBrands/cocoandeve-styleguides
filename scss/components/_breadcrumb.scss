@@ -1,0 +1,12 @@
+.breadcrumb-item {
+  a {
+    color: $gray-900;
+  }
+  + .breadcrumb-item {
+    @include media-breakpoint-up(lg) { 
+      &::before {
+        content: escape-svg($breadcrumb-divider-lg);
+      }
+    }
+  }
+}

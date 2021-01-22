@@ -4675,7 +4675,7 @@ input[type="button"].btn-block {
   padding: 0.75rem 1rem;
   margin-bottom: 1rem;
   list-style: none;
-  background-color: #e9ecef;
+  background-color: #fff;
   border-radius: 0.25rem;
 }
 
@@ -4684,13 +4684,13 @@ input[type="button"].btn-block {
 }
 
 .breadcrumb-item + .breadcrumb-item {
-  padding-left: 0.5rem;
+  padding-left: 0.3125em;
 }
 
 .breadcrumb-item + .breadcrumb-item::before {
   display: inline-block;
-  padding-right: 0.5rem;
-  color: #4E4E4E;
+  padding-right: 0.3125em;
+  color: #151515;
   content: "/";
 }
 
@@ -4703,7 +4703,7 @@ input[type="button"].btn-block {
 }
 
 .breadcrumb-item.active {
-  color: #4E4E4E;
+  color: #151515;
 }
 
 .pagination {
@@ -9839,6 +9839,10 @@ h4, .h4 {
   }
 }
 
+.text-decoration-underline {
+  text-decoration: underline;
+}
+
 .container {
   padding-right: 15px;
   padding-left: 15px;
@@ -10002,6 +10006,16 @@ h4, .h4 {
 
 .search-box--filled .btn {
   display: block;
+}
+
+.breadcrumb-item a {
+  color: #151515;
+}
+
+@media (min-width: 992px) {
+  .breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
+  }
 }
 
 .upsell {
