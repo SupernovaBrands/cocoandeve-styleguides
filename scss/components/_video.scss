@@ -1,32 +1,26 @@
 .video-card {
     img {
-        border-radius: 0.625em;
+        border-radius: calc-em(10, 16);
     }
     .play-icon {
         cursor: pointer;
-        right: 1.250em;
-        bottom: 1.250em;
+        right: calc-em(20, 16);
+        bottom: calc-em(20, 16);
 
         i {
-            font-size: 2.250em;
+            font-size: calc-em(36, 16);
             color: $primary;
         }
 
         @include media-breakpoint-up(lg) {
-            right: 2.188em;
-            bottom: 2.188em;
+            right: calc-em(35, 16);
+            bottom: calc-em(35, 16);
             i {
-                font-size: 3.375em;
+                font-size: calc-em(54, 16);
             }
         }
 
 
     }
-    figcaption {
-        margin-top: 1.125em;
 
-        @include media-breakpoint-up(lg) {
-            margin-top: 0.875em;
-        }
-    }
 }

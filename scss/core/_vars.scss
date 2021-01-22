@@ -108,8 +108,7 @@ $btn-padding-y-bottom-sm: calc-em(10);
 $btn-padding-x-sm: calc-em(28);
 
 //HR
-$hr-border-color: $primary;
-$hr-border-width: calc-em(2, 16);
+$hr-border-color: $gray-600;
 $hr-border-radius: calc-em(2, 16);
 
 // Upsell
@@ -117,3 +116,11 @@ $upsell-padding-y: calc-em(10);
 $upsell-padding-x: calc-em(15);
 $upsell-padding-y-lg: calc-em(10);
 $upsell-padding-x-lg: calc-em(10);
+
+//Margins
+$spacers: (
+  1: calc-em(10, $context: 24),
+  2: calc-em(20, $context: 24),
+  3: calc-em(30, $context: 24),
+  4: calc-em(40, $context: 24),
+);

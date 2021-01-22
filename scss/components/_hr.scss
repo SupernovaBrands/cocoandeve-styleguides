@@ -1,11 +1,6 @@
-.hr-comments {
-    max-width: 10.313em;
-    margin-left: 0;
-    border-width: $hr-border-width;
-    border-top-right-radius: $hr-border-radius;
-    border-bottom-right-radius: $hr-border-radius;
-
-    @include media-breakpoint-up(lg) {
-        max-width: 10.625em;
+.hr {
+    &--primary {
+        border-color: $primary;
+        border-width: calc-em(2, 16);
     }
 }
