@@ -81,14 +81,10 @@ $input-disabled-bg: $gray-100;
 $input-disabled-color: $gray-400;
 
 $input-padding-y: calc-em(28 / 2);
-$input-padding-y-top: calc-em(12);
-$input-padding-y-bottom: calc-em(16);
 $input-padding-x: 1em;
 $custom-select-indicator-padding: 1em;
 
 $input-padding-y-sm: calc-em(15 / 2, 14);
-$input-padding-y-top-sm: calc-em(6, 14);
-$input-padding-y-bottom-sm: calc-em(9, 14);
 $input-padding-x-sm: calc-em(6, 14);
 
 $search-icon-padding-y-sm: calc-em(6, 14);
@@ -98,8 +94,6 @@ $input-border-radius-sm: calc-em(18, 14);
 $btn-hover-darken: 23.5%;
 $btn-font-weight: 700;
 $btn-padding-y: calc-em(9);
-$btn-padding-y-top: calc-em(7);
-$btn-padding-y-bottom: calc-em(11);
 $btn-padding-x: calc-em(28);
 $btn-padding-x-icon: calc-em(20);
 
@@ -108,13 +102,10 @@ $btn-line-height-lg: $line-height-base;
 $btn-border-radius-lg: calc-em(8, $unit: 1rem);
 $btn-border-width-lg: 2px;
 $btn-padding-y-lg: calc-em(26 / 2);
-$btn-padding-y-top-lg: calc-em(11);
-$btn-padding-y-bottom-lg: calc-em(15);
 $btn-padding-x-lg: calc-em(54);
 
-$btn-padding-y-top-sm: calc-em(7);
-$btn-padding-y-bottom-sm: calc-em(10);
-$btn-padding-x-sm: calc-em(28);
+$btn-padding-y-sm: calc-em(15 / 2, 14);
+$btn-padding-x-sm: calc-em(28, 14);
 
 // Upsell
 $upsell-padding-y: calc-em(10);

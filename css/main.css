@@ -2912,7 +2912,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-sm, .btn-group-sm > .btn {
-  padding: 0.25rem 1.75em;
+  padding: 0.53571em 2em;
   font-size: 0.875rem;
   line-height: 1.21429;
   border-radius: 0.2rem;
@@ -3280,8 +3280,8 @@ input[type="button"].btn-block {
 }
 
 .btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split {
-  padding-right: 1.3125em;
-  padding-left: 1.3125em;
+  padding-right: 1.5em;
+  padding-left: 1.5em;
 }
 
 .btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split {
@@ -11088,26 +11088,17 @@ h4, .h4 {
   content: "";
 }
 
-.btn {
-  padding-top: 0.4375em;
-  padding-bottom: 0.6875em;
-}
-
 .btn.with-icon {
   padding-right: 1.25em;
 }
 
 .input-group-sm > .input-group-prepend > .btn,
 .input-group-sm > .input-group-append > .btn, .btn-sm, .btn-group-sm > .btn {
-  padding-top: 0.4375em;
-  padding-bottom: 0.625em;
-  padding-left: 1.75em;
-  padding-right: 1.75em;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
 .btn-lg, .btn-group-lg > .btn {
-  padding-top: 0.6875em;
-  padding-bottom: 0.9375em;
   border-width: 2px;
 }
 
@@ -11115,16 +11106,6 @@ h4, .h4 {
 .show > .btn-primary.dropdown-toggle {
   background-color: #B22D4B;
   border-color: #B22D4B;
-}
-
-.form-control {
-  padding-top: 0.75em;
-  padding-bottom: 1em;
-}
-
-.input-group-sm > .form-control, .form-control-sm {
-  padding-top: 0.42857em;
-  padding-bottom: 0.64286em;
 }
 
 .form-control:disabled::-moz-placeholder, .form-control[readonly]::-moz-placeholder {
@@ -11206,7 +11187,7 @@ h4, .h4 {
   margin: -1px -1px -1px 0px;
 }
 
-.search-box--filled .btn {
+.search-box--filled .input-group-append .btn {
   display: block;
 }
 

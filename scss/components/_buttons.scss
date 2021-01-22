@@ -1,6 +1,4 @@
 .btn {
-	padding-top: $btn-padding-y-top;
-	padding-bottom: $btn-padding-y-bottom;
 	&.with-icon {
 		padding-right: $btn-padding-x-icon;
 	}
@@ -8,15 +6,11 @@
 	.input-group-sm > .input-group-prepend > &,
 	.input-group-sm > .input-group-append > &,
 	&-sm {
-		padding-top: $btn-padding-y-top-sm;
-		padding-bottom: $btn-padding-y-bottom-sm;
 		padding-left: $btn-padding-x-sm;
 		padding-right: $btn-padding-x-sm;
 	}
 
 	&-lg {
-		padding-top: $btn-padding-y-top-lg;
-		padding-bottom: $btn-padding-y-bottom-lg;
 		border-width: $btn-border-width-lg;
 	}
 
