@@ -1,0 +1,8 @@
+.how-to {
+    background-color: $primary-light;
+
+    @include media-breakpoint-down(lg) {
+        margin-right: -$grid-gutter-width;
+        margin-left: -$grid-gutter-width;
+    }
+}

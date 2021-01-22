@@ -118,8 +118,8 @@ $upsell-padding-x-lg: calc-em(10);
 
 //Margins
 $spacers: (
-  1: calc-em(10, $context: 24),
-  2: calc-em(20, $context: 24),
-  3: calc-em(30, $context: 24),
-  4: calc-em(40, $context: 24),
+  1: calc-em(10),
+  2: calc-em(20),
+  3: calc-em(30),
+  4: calc-em(40),
 );
