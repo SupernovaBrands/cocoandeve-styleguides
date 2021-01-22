@@ -1,5 +1,4 @@
 .carousel {
-
   &--full-width {
     @include media-breakpoint-down(md) {
       margin-right: -$grid-gutter-width;
