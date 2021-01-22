@@ -4032,7 +4032,7 @@ input[type="button"].btn-block {
 
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-  color: #495057;
+  color: #F3436C;
   background-color: #fff;
   border-color: #dee2e6 #dee2e6 #fff;
 }
@@ -9844,6 +9844,10 @@ h4, .h4 {
   text-decoration: underline;
 }
 
+.text-primary-color {
+  color: #F3436C;
+}
+
 .container {
   padding-right: 15px;
   padding-left: 15px;
@@ -10242,6 +10246,22 @@ header.stickywrap:not(.stickyHeader):not(.stickyHeaderOnTop) .cart-bubble-div.mo
     display: block;
     top: 0;
   }
+}
+
+.nav-category__link {
+  color: #151515;
+  padding: 0.375em 0.375em;
+}
+
+@media (min-width: 992px) {
+  .nav-category__link {
+    padding: 0.75em 0.75em;
+  }
+}
+
+.nav-category .active {
+  color: #F3436C;
+  text-decoration: underline;
 }
 
 .navbar {
