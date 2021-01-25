@@ -9857,7 +9857,7 @@ h4, .h4 {
 }
 
 @media (max-width: 991.98px) {
-  .no-gutters-in-container {
+  .no-gutters__in-container {
     margin-right: -15px;
     margin-left: -15px;
   }

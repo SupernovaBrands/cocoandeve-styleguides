@@ -16,9 +16,11 @@
 	}
 }
 
-.no-gutters-in-container {
-  @include media-breakpoint-down(md) {
-    margin-right: -$grid-gutter-width;
-    margin-left: -$grid-gutter-width;
+.no-gutters {
+  &__in-container {
+    @include media-breakpoint-down(md) {
+      margin-right: -$grid-gutter-width;
+      margin-left: -$grid-gutter-width;
+    }
   }
 }
