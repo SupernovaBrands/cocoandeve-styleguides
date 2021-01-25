@@ -6171,7 +6171,7 @@ a.close.disabled {
   width: 15%;
   color: #fff;
   text-align: center;
-  opacity: 0.5;
+  opacity: 1;
   transition: opacity 0.15s ease;
 }
 
@@ -6188,7 +6188,7 @@ a.close.disabled {
   color: #fff;
   text-decoration: none;
   outline: 0;
-  opacity: 0.9;
+  opacity: 1;
 }
 
 .carousel-control-prev {
@@ -9858,7 +9858,7 @@ h4, .h4 {
 
 @font-face {
   font-family: "supernova-icon";
-  src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?de693c07bcf27059a361e528847f17fd#supernova-icon") format("svg"), url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?de693c07bcf27059a361e528847f17fd") format("truetype"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff?de693c07bcf27059a361e528847f17fd") format("woff"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?de693c07bcf27059a361e528847f17fd") format("woff2");
+  src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?d04457a4dd13473c8c772a90583bd43e#supernova-icon") format("svg"), url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?d04457a4dd13473c8c772a90583bd43e") format("truetype"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff?d04457a4dd13473c8c772a90583bd43e") format("woff"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?d04457a4dd13473c8c772a90583bd43e") format("woff2");
 }
 
 .sni {
@@ -9876,20 +9876,28 @@ h4, .h4 {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.sni.sni__close:before {
+.sni.sni__chevron-next:before {
   content: "";
 }
 
-.sni.sni__play:before {
+.sni.sni__chevron-prev:before {
   content: "";
 }
 
-.sni.sni__plus:before {
+.sni.sni__close:before {
   content: "";
 }
 
-.sni.sni__search:before {
+.sni.sni__play:before {
   content: "";
+}
+
+.sni.sni__plus:before {
+  content: "";
+}
+
+.sni.sni__search:before {
+  content: "";
 }
 
 .btn.with-icon {
@@ -11861,7 +11869,7 @@ body.cart-drawer-open .cart-side-panel {
 }
 
 .how-to {
-  background-color: #F5DADF;
+  background-color: #fef2f4;
 }
 
 .show-neighbors {
@@ -11873,9 +11881,23 @@ body.cart-drawer-open .cart-side-panel {
   display: none;
 }
 
+.show-neighbors .carousel-control-next {
+  background: linear-gradient(270deg, #fef2f4 0%, #fef2f4 10%, transparent 99%, transparent 100%);
+}
+
+.show-neighbors .carousel-control-prev {
+  background: linear-gradient(90deg, #fef2f4 0%, #fef2f4 10%, transparent 99%, transparent 100%);
+}
+
 .show-neighbors .carousel-control-prev,
 .show-neighbors .carousel-control-next {
   width: 25%;
+}
+
+.show-neighbors .carousel-control-prev span,
+.show-neighbors .carousel-control-next span {
+  color: #F3436C;
+  font-size: 1.25em;
 }
 
 .show-neighbors .carousel-inner {

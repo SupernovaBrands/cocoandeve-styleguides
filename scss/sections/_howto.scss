@@ -1,5 +1,5 @@
 .how-to {
-    background-color: $primary-light;
+    background-color: $primary-ultra-light;
 }
 
 .show-neighbors {
@@ -10,9 +10,20 @@
         display: none;
     }
 
+    .carousel-control-next {
+        background: linear-gradient(270deg, $primary-ultra-light 0%, $primary-ultra-light 10%, transparent 99%, transparent 100%);
+    }
+    .carousel-control-prev {
+        background: linear-gradient(90deg, $primary-ultra-light 0%, $primary-ultra-light 10%, transparent 99%, transparent 100%);
+    }
+
     .carousel-control-prev,
     .carousel-control-next {
         width: $fragment-width;
+        span {
+            color: $primary;
+            font-size: calc-em(20, 16);
+        }
     }
 
     .carousel-inner {

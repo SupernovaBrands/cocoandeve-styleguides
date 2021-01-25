@@ -2,10 +2,10 @@ $supernova-icon-font: "supernova-icon";
 
 @font-face {
 	font-family: $supernova-icon-font;
-	src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?de693c07bcf27059a361e528847f17fd#supernova-icon") format("svg"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?de693c07bcf27059a361e528847f17fd") format("truetype"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff?de693c07bcf27059a361e528847f17fd") format("woff"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?de693c07bcf27059a361e528847f17fd") format("woff2");
+	src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?d04457a4dd13473c8c772a90583bd43e#supernova-icon") format("svg"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?d04457a4dd13473c8c772a90583bd43e") format("truetype"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.woff?d04457a4dd13473c8c772a90583bd43e") format("woff"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?d04457a4dd13473c8c772a90583bd43e") format("woff2");
 }
 
 .sni {
@@ -24,12 +24,20 @@ url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?de693c07bcf27059a361e528
 }
 
 $supernova-icon-map: (
-	"close": "\f101",
-	"play": "\f102",
-	"plus": "\f103",
-	"search": "\f104",
+	"chevron-next": "\f101",
+	"chevron-prev": "\f102",
+	"close": "\f103",
+	"play": "\f104",
+	"plus": "\f105",
+	"search": "\f106",
 );
 
+.sni.sni__chevron-next:before {
+	content: map-get($supernova-icon-map, "chevron-next");
+}
+.sni.sni__chevron-prev:before {
+	content: map-get($supernova-icon-map, "chevron-prev");
+}
 .sni.sni__close:before {
 	content: map-get($supernova-icon-map, "close");
 }
