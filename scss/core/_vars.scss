@@ -72,6 +72,9 @@ $theme-colors: (
 
 $body-color: $gray-900;
 
+$link-color: $body-color;
+$link-hover-color: $primary;
+
 // Forms
 $form-group-margin-bottom: map-get($spacers, 1);
 $input-color: $body-color;

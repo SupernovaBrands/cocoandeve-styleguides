@@ -1,0 +1,12 @@
+.blog-nav {
+	&--active {
+		color: $link-hover-color;
+		text-decoration: $link-hover-decoration;
+	}
+
+	.sni__search {
+		font-size: calc-em(20);
+		color: $primary;
+		text-decoration: none;
+	}
+}

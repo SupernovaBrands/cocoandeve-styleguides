@@ -1,0 +1,30 @@
+.blog-grid {
+	@include media-breakpoint-up(lg) {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: auto auto auto;
+		grid-template-areas: "post1 post1 search"
+			"post1 post1 sidebar"
+			"post2 post3 sidebar";
+	}
+
+	&__search {
+		grid-area: search;
+	}
+
+	&__post1 {
+		grid-area: post1;
+	}
+
+	&__post2 {
+		grid-area: post2;
+	}
+
+	&__post3 {
+		grid-area: post3;
+	}
+
+	&__sidebar {
+		grid-area: sidebar;
+	}
+}
