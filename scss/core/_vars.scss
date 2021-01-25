@@ -88,10 +88,10 @@ $input-border-radius-sm: calc-em(18, 14);
 
 // Nav
 $nav-tabs-link-active-color: $primary;
-$nav-link-category-padding-y: calc-em(12/2);
-$nav-link-category-padding-x: calc-em(12/2);
-$nav-link-category-padding-y-lg: calc-em(24/2);
-$nav-link-category-padding-x-lg: calc-em(24/2);
+$nav-link-padding-y: calc-em(12/2, $unit: 1rem);
+$nav-link-padding-x: calc-em(12/2, $unit: 1rem);
+$nav-link-padding-y-lg: calc-em(24/2, $unit: 1rem);
+$nav-link-padding-x-lg: calc-em(24/2, $unit: 1rem);
 
 // Buttons
 $btn-hover-darken: 23.5%;
@@ -132,4 +132,3 @@ $breadcrumb-font-size: calc-em(12);
 
 // Social Icon
 $icon-primary-font-size: calc-em(30);
-$list-inline-padding-icon: calc-em(16);

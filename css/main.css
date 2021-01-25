@@ -3993,7 +3993,7 @@ input[type="button"].btn-block {
 
 .nav-link {
   display: block;
-  padding: 0.5rem 1rem;
+  padding: 0.375rem 0.375rem;
 }
 
 .nav-link:hover, .nav-link:focus {
@@ -4093,8 +4093,8 @@ input[type="button"].btn-block {
 
 .navbar-brand {
   display: inline-block;
-  padding-top: 0.34375rem;
-  padding-bottom: 0.34375rem;
+  padding-top: 0.21875rem;
+  padding-bottom: 0.21875rem;
   margin-right: 1rem;
   font-size: 1.25rem;
   line-height: inherit;
@@ -4125,8 +4125,8 @@ input[type="button"].btn-block {
 
 .navbar-text {
   display: inline-block;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
 }
 
 .navbar-collapse {
@@ -10037,17 +10037,8 @@ h4, .h4 {
   }
 }
 
-.social-icon__primary {
-  color: #F3436C;
+.social-icon-primary {
   font-size: 1.875em;
-}
-
-.social-list .list-inline-item {
-  display: inline-block;
-}
-
-.social-list .list-inline-item:not(:last-child) {
-  margin-right: 1em;
 }
 
 .upsell {
@@ -10244,18 +10235,18 @@ header.stickywrap:not(.stickyHeader):not(.stickyHeaderOnTop) .cart-bubble-div.mo
   }
 }
 
-.nav-category__link {
+.nav-link {
+  padding: 0.375rem 0.375rem;
   color: #151515;
-  padding: 0.375em 0.375em;
 }
 
 @media (min-width: 992px) {
-  .nav-category__link {
-    padding: 0.75em 0.75em;
+  .nav-link {
+    padding: 0.75rem 0.75rem;
   }
 }
 
-.nav-category .active {
+.nav-link.active {
   color: #F3436C;
   text-decoration: underline;
 }

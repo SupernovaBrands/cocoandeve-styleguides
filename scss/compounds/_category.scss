@@ -1,13 +1,11 @@
-.nav-category {
-  &__link {
-    color: $gray-900;
-    padding: $nav-link-category-padding-y $nav-link-category-padding-x;
-    @include media-breakpoint-up(lg) {
-      padding: $nav-link-category-padding-y-lg $nav-link-category-padding-x-lg;
-    }
+.nav-link {
+  padding: $nav-link-padding-y $nav-link-padding-x;
+  color: $gray-900;
+  @include media-breakpoint-up(lg) {
+    padding: $nav-link-padding-y-lg $nav-link-padding-x-lg;
   }
 
-  .active {
+  &.active {
     color: $primary;
     text-decoration: underline;
   }
