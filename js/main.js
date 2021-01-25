@@ -26,28 +26,4 @@ $(document).ready(function () {
 			parent.removeClass('search-box--filled');
 		});
 	}
-
-	// Carousel Post Card
-	const postCardCarousel = $('#postCardCarousel')
-	const postCardCarouselCaptions = $('#postCardCarouselCaptions')
-	if (postCardCarousel.length > 0) {
-		postCardCarouselCaptions.carousel('pause')
-		postCardCarousel.on('slid.bs.carousel', function(evt) {
-			postCardCarouselCaptions.carousel(evt.to)
-		})
-	}
-
-	// Carousel Sidebar
-	const sidebarCarousel = $('#sidebarCarousel')
-	sidebarCarousel.find('.carousel-item').each(function(){
-	  	var next = $(this).next();
-	  	if (!next.length) {
-	    	next = $(this).siblings(':first');
-	  	}
-	  	next.children(':first-child').clone().appendTo($(this));
-
-	  	if (window.innerWidth > 992) {
-			sidebarCarousel.carousel('pause')
-		}
-	});
 });
