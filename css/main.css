@@ -9839,12 +9839,18 @@ h4, .h4 {
   }
 }
 
-.container {
-  padding-right: 15px;
-  padding-left: 15px;
+@media (max-width: 991.98px) {
+  .mobile-wrapper {
+    padding-right: 7.5px;
+    padding-left: 7.5px;
+  }
 }
 
 @media (min-width: 992px) {
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
   .row {
     margin-right: -15px;
     margin-left: -15px;
