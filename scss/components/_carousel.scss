@@ -1,11 +1,3 @@
-.carousel {
-  &--full-width {
-    @include media-breakpoint-down(md) {
-      margin-right: -$grid-gutter-width;
-      margin-left: -$grid-gutter-width;
-    }
-  }
-}
 .carousel-indicators {
   &--white {
     li {
@@ -16,17 +8,18 @@
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  width: 1.375em;
-  height: 1.375em;
+  background: none;
 }
 
 .carousel-control {
   &--background {
-    span {
+    &:before {
+      content: " ";
       background-color: $white;
       width: 2.5em;
       height: 2.5em;
-      background-size: 1.375em;
+      position: absolute;
+      z-index: -1;
     }
   }
 

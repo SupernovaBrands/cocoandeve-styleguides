@@ -15,3 +15,10 @@
 		padding-left: $grid-gutter-width-lg / 2;
 	}
 }
+
+.no-gutters-in-container {
+  @include media-breakpoint-down(md) {
+    margin-right: -$grid-gutter-width;
+    margin-left: -$grid-gutter-width;
+  }
+}
