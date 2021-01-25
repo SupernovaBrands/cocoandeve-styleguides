@@ -2,25 +2,48 @@
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-		<link rel="stylesheet" href="/cocoandeve-styleguides/css/main.css">
+        <link rel="stylesheet" href="/cocoandeve-styleguides/css/main.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src="/cocoandeve-styleguides/js/bootstrap.js"></script>
+        <script type="text/javascript" src="/cocoandeve-styleguides/js/main.js"></script>
 	</head>
 	<body>
         <div class="container">
             <section class="how-to">
                 <div class="row">
-                    <div class="col col-sm-10 col-lg-6 offset-sm-1 offset-lg-3 mb-2">
-                        <h1 class="text-center mt-2 mb-2">The Ultimate “HOW TO”s</h1>
+                    <div class="col-9 col-lg-6 mb-2">
+                        <h2 class="text-center h2 mt-2 mb-2">The Ultimate “HOW TO”s</h2>
                         <figure class="video-card text-center">
                             <picture class="d-block position-relative">
                                 <img src="https://via.placeholder.com/570x340" alt="Placeholder" class="d-block w-100">
-                                <span class="inner d-flex justify-content-center align-items-center position-absolute video-card--icon">
+                                <span class="inner d-flex justify-content-center align-items-center position-absolute video-card--icon" data-toggle="modal" data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-target="#videoCardModal">
                                     <i class="sni sni__play"></i>
                                 </span>
                             </picture>
                             <figcaption class="mt-2">
-                                <h3>Multi-masking #selfcaresunday with <br class="d-none d-lg-block">Janet Amrani</h3>
+                                <h3>Multi-masking #selfcaresunday with Janet Amrani</h3>
                             </figcaption>
                         </figure>
+
+                        <div class="modal fade" id="videoCardModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg video-modal" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-body video-modal--body">
+                                        <button type="button" class="close position-absolute video-modal--icon" data-dismiss="modal" aria-label="Close">
+                                            <span class="inner d-flex justify-content-center align-items-center">
+                                                <i class="sni sni__close"></i>
+                                            </span>
+                                        </button>
+                                        <!-- 16:9 aspect ratio -->
+                                        <div class="embed-responsive embed-responsive-16by9">
+                                            <video controls autoplay="true">
+                                                <source src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/TAN_HOW_TO_BONNIE_LR.mp4?v=1610351992" type="video/mp4">
+                                            </video>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

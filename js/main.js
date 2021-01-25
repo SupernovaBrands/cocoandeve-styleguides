@@ -18,4 +18,27 @@ $(document).ready(function () {
 			parent.removeClass('search-box--filled');
 		});
 	}
+
+
+
+	//video modal
+	// Gets the video src from the data-src on each button
+	var $videoSrc;
+	$('.video-card--icon').on('click',function() {
+		$videoSrc = $(this).data('src');
+	});
+
+	$('#videoCardModal').on('shown.bs.modal', function (e) {
+		// set the video src to autoplay and not to show related video.
+		$('#videoCardModal video source').attr('src', $videoSrc);
+		$('#videoCardModal video').get(0).play();
+	})
+	// stop playing the youtube video when I close the modal
+	$('#videoCardModal').on('hide.bs.modal', function (e) {
+		$('#videoCardModal video source').attr('src', $videoSrc);
+		$('#videoCardModal video').get(0).pause();
+	})
+
+
+
 });

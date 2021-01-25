@@ -19,8 +19,16 @@
                 font-size: calc-em(54, 16);
             }
         }
-
-
     }
+}
 
+.video-modal {
+    &--body{
+        padding: 0;
+    }
+    &--icon{
+        z-index: $zindex-modal;
+        right: calc-em(10, 16);
+        top: calc-em(10, 16);
+    }
 }

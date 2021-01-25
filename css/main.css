@@ -9946,6 +9946,16 @@ h4, .h4 {
   }
 }
 
+.video-modal--body {
+  padding: 0;
+}
+
+.video-modal--icon {
+  z-index: 1050;
+  right: 0.625em;
+  top: 0.625em;
+}
+
 .form-control {
   padding-top: 0.75em;
   padding-bottom: 1em;
