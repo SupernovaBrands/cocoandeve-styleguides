@@ -10230,18 +10230,8 @@ header.stickywrap:not(.stickyHeader):not(.stickyHeaderOnTop) .cart-bubble-div.mo
   }
 }
 
-@media (max-width: 991.98px) {
-  .post-card {
-    margin-bottom: 2.5em;
-  }
-}
-
 .post-card img {
   width: 100%;
-}
-
-.post-card__body {
-  margin-top: 1.25em;
 }
 
 .navbar {

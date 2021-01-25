@@ -1,13 +1,5 @@
 .post-card {
-  @include media-breakpoint-down(md) {
-    margin-bottom: 2.5em;
-  }
-
   img {
     width: 100%;
-  }
-
-  &__body {
-    margin-top: 1.25em;
   }
 }
