@@ -17,11 +17,13 @@ $container-max-widths: (
   xl: 1200px
 );
 
+$spacer: calc-em(20);
 $spacers: (
-  10: calc-em(10),
-  20: calc-em(20),
-  30: calc-em(30),
-  40: calc-em(40),
+  1: $spacer * 0.5,
+  2: $spacer * 1,
+  3: $spacer * 1.5,
+  4: $spacer * 2,
+  5: $spacer * 2.5,
 );
 
 // Typography
@@ -71,8 +73,8 @@ $theme-colors: (
 $body-color: $gray-900;
 
 // Forms
-$form-group-margin-bottom: map-get($spacers, 10);
-$form-group-margin-bottom-lg: map-get($spacers, 20);
+$form-group-margin-bottom: map-get($spacers, 1);
+$form-group-margin-bottom-lg: map-get($spacers, 2);
 $input-color: $body-color;
 $input-placeholder-color: $gray-500;
 $input-btn-focus-color: transparent;
