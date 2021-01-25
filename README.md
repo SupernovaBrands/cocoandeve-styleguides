@@ -21,5 +21,6 @@ Can use https://placeholder.com/ for placeholder images. i.e:
 - 30x30 png: `https://via.placeholder.com/30.png`
 
 ## Font Icon
-1. Put svg in `fonts/svgs`
-2. Run `npm run buildfont` to build the font icon
+1. Optimize SVG using this online tool: https://jakearchibald.github.io/svgomg/
+2. Put Optimizes SVG in `fonts/svgs`
+3. Run `npm run buildfont` to build the font icon
