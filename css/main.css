@@ -11883,11 +11883,38 @@ body.cart-drawer-open .cart-side-panel {
   background-color: #F5DADF;
 }
 
-@media (max-width: 1259.98px) {
-  .how-to {
-    margin-right: -15px;
-    margin-left: -15px;
-  }
+.show-neighbors {
+  overflow: hidden;
+}
+
+.show-neighbors .item__third:first-child,
+.show-neighbors .item__third:last-child {
+  display: none;
+}
+
+.show-neighbors .carousel-control-prev,
+.show-neighbors .carousel-control-next {
+  width: 25%;
+}
+
+.show-neighbors .carousel-inner {
+  width: 150%;
+  left: -25%;
+}
+
+.show-neighbors .carousel-item-next:not(.carousel-item-left),
+.show-neighbors .carousel-item-right.active {
+  transform: translate3d(33%, 0, 0);
+}
+
+.show-neighbors .carousel-item-prev:not(.carousel-item-right),
+.show-neighbors .carousel-item-left.active {
+  transform: translate3d(-33%, 0, 0);
+}
+
+.show-neighbors .video-card {
+  float: left;
+  width: 33.33333333%;
 }
 
 /* =====//   Footer Style   \===== */

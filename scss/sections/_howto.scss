@@ -1,8 +1,40 @@
 .how-to {
     background-color: $primary-light;
+}
 
-    @include media-breakpoint-down(lg) {
-        margin-right: -$grid-gutter-width;
-        margin-left: -$grid-gutter-width;
+.show-neighbors {
+    overflow: hidden;
+
+    .item__third:first-child,
+    .item__third:last-child {
+        display: none;
     }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: $fragment-width;
+    }
+
+    .carousel-inner {
+        width: (100% - 2 * $fragment-width) * 3;
+        left: 3 * $fragment-width - 100%;
+    }
+
+    .carousel-item-next:not(.carousel-item-left),
+    .carousel-item-right.active {
+        -webkit-transform: translate3d(33%, 0, 0);
+        transform: translate3d(33%, 0, 0);
+    }
+
+    .carousel-item-prev:not(.carousel-item-right),
+    .carousel-item-left.active {
+        -webkit-transform: translate3d(-33%, 0, 0);
+        transform: translate3d(-33%, 0, 0);
+    }
+
+    .video-card {
+        float: left;
+        width: 33.33333333%;
+    }
+
 }
