@@ -8,9 +8,7 @@
 }
 
 .form-group {
-	@include media-breakpoint-up(lg) {
-		margin-bottom: $form-group-margin-bottom-lg;
-	}
+	@extend .mb-lg-2;
 }
 
 .search-box {

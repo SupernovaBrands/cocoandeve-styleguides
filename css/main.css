@@ -8766,7 +8766,7 @@ button.bg-dark:focus {
   .mx-lg-2 {
     margin-right: 1.25em !important;
   }
-  .mb-lg-2,
+  .mb-lg-2, .form-group,
   .my-lg-2 {
     margin-bottom: 1.25em !important;
   }
@@ -9918,12 +9918,6 @@ h4, .h4 {
 
 .form-control:disabled, .form-control:disabled::placeholder, .form-control[readonly], .form-control[readonly]::placeholder {
   color: #D0D0D0;
-}
-
-@media (min-width: 992px) {
-  .form-group {
-    margin-bottom: 1.25em;
-  }
 }
 
 .search-box {
