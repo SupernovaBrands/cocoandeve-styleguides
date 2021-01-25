@@ -43,8 +43,8 @@ $(document).ready(function () {
 	})
 	// stop playing the youtube video when I close the modal
 	$('#videoCardModal').on('hide.bs.modal', function (e) {
-		$('#videoCardModal video source').attr('src', $videoSrc);
 		$('#videoCardModal video').get(0).pause();
+		$('#videoCardModal video source').attr('src', '');
 	});
 
 
