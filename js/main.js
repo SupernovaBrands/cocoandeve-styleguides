@@ -29,12 +29,14 @@ $(document).ready(function () {
 
 
 
-	//video modal
+	// video modal
 	// Gets the video src from the data-src on each button
 	var $videoSrc;
-	$('.video-card--icon').on('click',function() {
-		$videoSrc = $(this).data('src');
-	});
+	if ($('.video-card--icon').length > 0) {
+		$('.video-card--icon').on('click',function() {
+			$videoSrc = $(this).data('src');
+		});
+	}
 
 	$('#videoCardModal').on('shown.bs.modal', function (e) {
 		// set the video src to autoplay and not to show related video.
@@ -64,6 +66,6 @@ $(document).ready(function () {
 			prev.children(':nth-last-child(2)').clone().prependTo($(this));
 		});
 	}
-	
+
 
 });

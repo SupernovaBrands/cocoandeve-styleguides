@@ -9924,24 +9924,23 @@ h4, .h4 {
   border-radius: 0.625em;
 }
 
-.video-card--icon {
+.video-card picture {
   cursor: pointer;
-  right: 1.25em;
-  bottom: 1.25em;
 }
 
-.video-card--icon i {
-  font-size: 2.25em;
+.video-card picture:before {
+  position: absolute;
   color: #F3436C;
+  font-size: 2.25em;
+  right: 0.55556em;
+  bottom: 0.55556em;
 }
 
 @media (min-width: 992px) {
-  .video-card--icon {
-    right: 2.1875em;
-    bottom: 2.1875em;
-  }
-  .video-card--icon i {
+  .video-card picture:before {
     font-size: 3.375em;
+    right: 0.64815em;
+    bottom: 0.64815em;
   }
 }
 
@@ -9957,7 +9956,6 @@ h4, .h4 {
 }
 
 .video-modal--icon {
-  z-index: 1050;
   right: 0.625em;
   top: 0.625em;
 }

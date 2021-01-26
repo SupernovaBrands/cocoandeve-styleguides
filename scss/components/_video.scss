@@ -2,24 +2,24 @@
     img {
         border-radius: calc-em(10, 16);
     }
-    &--icon {
+    picture {
         cursor: pointer;
-        right: calc-em(20, 16);
-        bottom: calc-em(20, 16);
 
-        i {
-            font-size: calc-em(36, 16);
+        &:before {
+            position: absolute;
             color: $primary;
-        }
+            font-size: calc-em(36, 16);
+            right: calc-em(20, 36);
+            bottom: calc-em(20, 36);
 
-        @include media-breakpoint-up(lg) {
-            right: calc-em(35, 16);
-            bottom: calc-em(35, 16);
-            i {
+            @include media-breakpoint-up(lg) {
                 font-size: calc-em(54, 16);
+                right: calc-em(35, 54);
+                bottom: calc-em(35, 54);
             }
         }
     }
+
     @include media-breakpoint-down(md) {
         padding-left: calc-em(15);
         padding-right: calc-em(15);
@@ -27,11 +27,10 @@
 }
 
 .video-modal {
-    &--body{
+    &--body {
         padding: 0;
     }
-    &--icon{
-        z-index: $zindex-modal;
+    &--icon {
         right: calc-em(10, 16);
         top: calc-em(10, 16);
     }

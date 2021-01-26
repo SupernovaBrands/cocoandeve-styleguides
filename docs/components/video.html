@@ -13,14 +13,13 @@
 	<div class="container mt-4">
         <h1>Video Card</h1>
 
-        <figure class="video-card text-center mb-0 px-lg-2">
-            <picture class="d-block position-relative">
-                <img src="https://via.placeholder.com/570x340" alt="Placeholder" class="d-block w-100">
-                <span class="inner d-flex justify-content-center align-items-center position-absolute video-card--icon" data-toggle="modal" data-src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/TAN_HOW_TO_BONNIE_LR.mp4?v=1610351992" data-target="#videoCardModal">
-                    <i class="sni sni__play"></i>
-                </span>
+        <figure class="video-card mb-0 px-lg-2">
+            <picture class="d-block position-relative sni sni__play" data-toggle="modal" data-src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/TAN_HOW_TO_BONNIE_LR.mp4?v=1610351992" data-target="#videoCardModal">
+                <source srcset="https://via.placeholder.com/570x340" media="(min-width: 768px)">
+                <source srcset="https://via.placeholder.com/275x164">
+                <img src="https://via.placeholder.com/275x164" alt="Placeholder" class="d-block w-100">
             </picture>
-            <figcaption class="mt-2">
+            <figcaption class="text-center mt-2">
                 <h3>Multi-masking #selfcaresunday with Janet Amrani</h3>
             </figcaption>
         </figure>
@@ -29,16 +28,14 @@
             <div class="modal-dialog modal-lg modal-dialog-centered video-modal" role="document">
                 <div class="modal-content">
                     <div class="modal-body video-modal--body">
-                        <button type="button" class="close position-absolute video-modal--icon" data-dismiss="modal" aria-label="Close">
-                            <span class="inner d-flex justify-content-center align-items-center">
-                                <i class="sni sni__close"></i>
-                            </span>
-                        </button>
                         <!-- 16:9 aspect ratio -->
                         <div class="embed-responsive embed-responsive-16by9">
                             <video controls>
                                 <source src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/TAN_HOW_TO_BONNIE_LR.mp4?v=1610351992" type="video/mp4">
                             </video>
+                            <button type="button" class="close position-absolute video-modal--icon" data-dismiss="modal" aria-label="Close">
+                                <span class="sni sni__close"></span>
+                            </button>
                         </div>
                     </div>
                 </div>
