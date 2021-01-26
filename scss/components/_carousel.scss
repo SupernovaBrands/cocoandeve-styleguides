@@ -1,14 +1,9 @@
 .carousel-indicators {
-  &--white {
+  &--primary {
     li {
-        background-color: $white;
+        background-color: $primary;
     }
   }
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background: none;
 }
 
 .carousel-control {
