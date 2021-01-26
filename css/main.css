@@ -10225,10 +10225,6 @@ header.stickywrap:not(.stickyHeader):not(.stickyHeaderOnTop) .cart-bubble-div.mo
   }
 }
 
-.post-card img {
-  width: 100%;
-}
-
 .navbar {
   position: static;
   display: flex;
