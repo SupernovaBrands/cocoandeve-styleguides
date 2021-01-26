@@ -1,9 +1,16 @@
-.container {
-	padding-right: $grid-gutter-width;
-	padding-left: $grid-gutter-width;
+.mobile-wrapper {
+	@include media-breakpoint-down(md) {
+		padding-right: $grid-gutter-width / 2;
+		padding-left: $grid-gutter-width / 2;
+	}
 }
 
 @include media-breakpoint-up(lg) {
+	.container {
+		padding-right: $grid-gutter-width;
+		padding-left: $grid-gutter-width;
+	}
+
 	.row {
 		margin-right: -$grid-gutter-width;
 		margin-left: -$grid-gutter-width;
