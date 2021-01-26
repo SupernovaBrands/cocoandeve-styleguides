@@ -9894,8 +9894,14 @@ h4, .h4 {
   content: "";
 }
 
-.btn.with-icon {
+.btn__with-icon {
   padding-right: 1.25em;
+}
+
+.btn .sni {
+  font-size: 0.75em;
+  padding-left: 0.375em;
+  padding-right: 0.375em;
 }
 
 .input-group-sm > .input-group-prepend > .btn,

@@ -1,6 +1,11 @@
 .btn {
-	&.with-icon {
+	&__with-icon {
 		padding-right: $btn-padding-x-icon;
+	}
+	.sni {
+		font-size: calc-em(12);
+		padding-left: calc-em(6);
+		padding-right: calc-em(6);
 	}
 
 	.input-group-sm > .input-group-prepend > &,
