@@ -108,6 +108,15 @@ $btn-padding-x-lg: calc-em(54);
 $btn-padding-y-sm: calc-em(15 / 2, 14);
 $btn-padding-x-sm: calc-em(28, 14);
 
+// Carousels
+$carousel-indicator-width: calc-em(12);
+$carousel-indicator-height: calc-em(12);
+
+$carousel-control-color: $primary;
+
+$carousel-control-prev-icon-bg: none;
+$carousel-control-next-icon-bg: none;
+
 // Upsell
 $upsell-padding-y: calc-em(10);
 $upsell-padding-x: calc-em(15);

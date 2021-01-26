@@ -24,11 +24,19 @@ url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?de693c07bcf27059a361e528
 }
 
 $supernova-icon-map: (
-	"close": "\f101",
-	"plus": "\f102",
-	"search": "\f103",
+	"chevron-next": "\f101",
+	"chevron-prev": "\f102",
+	"close": "\f103",
+	"plus": "\f104",
+	"search": "\f105",
 );
 
+.sni.sni__chevron-next:before {
+	content: map-get($supernova-icon-map, "chevron-next");
+}
+.sni.sni__chevron-prev:before {
+	content: map-get($supernova-icon-map, "chevron-prev");
+}
 .sni.sni__close:before {
 	content: map-get($supernova-icon-map, "close");
 }
