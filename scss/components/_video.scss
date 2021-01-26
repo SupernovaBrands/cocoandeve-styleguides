@@ -20,6 +20,10 @@
             }
         }
     }
+    @include media-breakpoint-down(md) {
+        padding-left: calc-em(15);
+        padding-right: calc-em(15);
+    }
 }
 
 .video-modal {
