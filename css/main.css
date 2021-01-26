@@ -12217,9 +12217,19 @@ body.cart-drawer-open .cart-side-panel {
   transform: translate3d(33%, 0, 0);
 }
 
+.how-to__show-neighbors .carousel-item-next:not(.carousel-item-left) figcaption h3,
+.how-to__show-neighbors .carousel-item-right.active figcaption h3 {
+  display: none;
+}
+
 .how-to__show-neighbors .carousel-item-prev:not(.carousel-item-right),
 .how-to__show-neighbors .carousel-item-left.active {
   transform: translate3d(-33%, 0, 0);
+}
+
+.how-to__show-neighbors .carousel-item-prev:not(.carousel-item-right) figcaption h3,
+.how-to__show-neighbors .carousel-item-left.active figcaption h3 {
+  display: none;
 }
 
 .how-to__show-neighbors .video-card {

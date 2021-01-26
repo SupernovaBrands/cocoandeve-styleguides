@@ -1,21 +1,21 @@
 .how-to {
     background-color: $primary-ultra-light;
-    
+
     &__show-neighbors {
         overflow: hidden;
-    
+
         .item__third:first-child,
         .item__third:last-child {
             display: none;
         }
-    
+
         .carousel-control-next {
             background: linear-gradient(270deg, $primary-ultra-light 0%, $primary-ultra-light 10%, rgba(255, 255, 255, 0) 99%, rgba(255, 255, 255, 0) 100%);
         }
         .carousel-control-prev {
             background: linear-gradient(90deg, $primary-ultra-light 0%, $primary-ultra-light 10%, rgba(255, 255, 255, 0) 99%, rgba(255, 255, 255, 0) 100%);
         }
-    
+
         .carousel-control-prev,
         .carousel-control-next {
             width: $fragment-width;
@@ -24,7 +24,7 @@
                 font-size: calc-em(20, 16);
             }
         }
-    
+
         .carousel-inner {
             width: ((100% - 2 * $fragment-width) * 3) * 1.5;
             left: 1.5 * (100% / 12) - (9 * (100% / 12));
@@ -33,25 +33,30 @@
                 left: 3 * $fragment-width - 100%;
             }
         }
-    
+
         .carousel-item-next:not(.carousel-item-left),
         .carousel-item-right.active {
             -webkit-transform: translate3d(33%, 0, 0);
             transform: translate3d(33%, 0, 0);
+            figcaption h3 {
+                display: none;
+            }
         }
-    
+
         .carousel-item-prev:not(.carousel-item-right),
         .carousel-item-left.active {
             -webkit-transform: translate3d(-33%, 0, 0);
             transform: translate3d(-33%, 0, 0);
+            figcaption h3 {
+                display: none;
+            }
         }
-    
+
         .video-card {
             float: left;
             width: 33.33333333%;
         }
-    
-    }
-    
-}
 
+    }
+
+}
