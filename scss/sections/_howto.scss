@@ -19,10 +19,8 @@
         .carousel-control-prev,
         .carousel-control-next {
             width: $fragment-width;
-            span {
-                color: $primary;
-                font-size: calc-em(20, 16);
-            }
+            color: $primary;
+            font-size: calc-em(20, 16);
         }
 
         .carousel-inner {

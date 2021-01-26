@@ -11897,10 +11897,6 @@ body.cart-drawer-open .cart-side-panel {
 .how-to__show-neighbors .carousel-control-prev,
 .how-to__show-neighbors .carousel-control-next {
   width: 25%;
-}
-
-.how-to__show-neighbors .carousel-control-prev span,
-.how-to__show-neighbors .carousel-control-next span {
   color: #F3436C;
   font-size: 1.25em;
 }
