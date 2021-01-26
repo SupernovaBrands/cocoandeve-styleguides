@@ -155,13 +155,13 @@ sup {
 }
 
 a {
-  color: #151515;
+  color: #F3436C;
   text-decoration: none;
   background-color: transparent;
 }
 
 a:hover {
-  color: #F3436C;
+  color: #db0e3e;
   text-decoration: underline;
 }
 
@@ -2886,12 +2886,12 @@ fieldset:disabled a.btn {
 
 .btn-link {
   font-weight: 400;
-  color: #151515;
+  color: #F3436C;
   text-decoration: none;
 }
 
 .btn-link:hover {
-  color: #F3436C;
+  color: #db0e3e;
   text-decoration: underline;
 }
 
@@ -4719,14 +4719,14 @@ input[type="button"].btn-block {
   padding: 0.5rem 0.75rem;
   margin-left: -1px;
   line-height: 1.25;
-  color: #151515;
+  color: #F3436C;
   background-color: #fff;
   border: 1px solid #dee2e6;
 }
 
 .page-link:hover {
   z-index: 2;
-  color: #F3436C;
+  color: #db0e3e;
   text-decoration: none;
   background-color: #e9ecef;
   border-color: #dee2e6;
@@ -9993,17 +9993,6 @@ button.bg-primary-light:focus {
 
 .search-box--filled .input-group-append .btn {
   display: block;
-}
-
-.blog-nav--active {
-  color: #F3436C;
-  text-decoration: underline;
-}
-
-.blog-nav .sni__search {
-  font-size: 1.25em;
-  color: #F3436C;
-  text-decoration: none;
 }
 
 .upsell {
