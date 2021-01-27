@@ -9869,6 +9869,16 @@ h4, .h4 {
   }
 }
 
+.bg-primary-light {
+  background-color: #F5DADF !important;
+}
+
+a.bg-primary-light:hover, a.bg-primary-light:focus,
+button.bg-primary-light:hover,
+button.bg-primary-light:focus {
+  background-color: #eab2bc !important;
+}
+
 @font-face {
   font-family: "supernova-icon";
   src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?de693c07bcf27059a361e528847f17fd#supernova-icon") format("svg"), url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?de693c07bcf27059a361e528847f17fd") format("truetype"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff?de693c07bcf27059a361e528847f17fd") format("woff"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?de693c07bcf27059a361e528847f17fd") format("woff2");
@@ -12163,6 +12173,35 @@ footer p {
 .sidebar {
   background-color: #F5DADF;
   padding: 1.5625em;
+}
+
+@media (min-width: 992px) {
+  .blog-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "post1 post1 search" "post1 post1 sidebar" "post2 post3 sidebar";
+  }
+}
+
+.blog-grid__search {
+  grid-area: search;
+}
+
+.blog-grid__post1 {
+  grid-area: post1;
+}
+
+.blog-grid__post2 {
+  grid-area: post2;
+}
+
+.blog-grid__post3 {
+  grid-area: post3;
+}
+
+.blog-grid__sidebar {
+  grid-area: sidebar;
 }
 
 /*# sourceMappingURL=main.css.map */
