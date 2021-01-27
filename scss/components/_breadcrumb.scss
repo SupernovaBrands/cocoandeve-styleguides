@@ -4,15 +4,8 @@
   }
 }
 
-.breadcrumb-item {
+.breadcrumb-item { 
   &__link {
     color: $gray-900;
-  }
-  + .breadcrumb-item {
-    @include media-breakpoint-up(lg) { 
-      &::before {
-        content: escape-svg($breadcrumb-divider-lg);
-      }
-    }
   }
 }

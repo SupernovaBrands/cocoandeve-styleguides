@@ -122,11 +122,10 @@ $upsell-padding-y-lg: calc-em(10);
 $upsell-padding-x-lg: calc-em(10);
 
 // Breadcrumb
-$breadcrumb-divider: quote("/");
-$breadcrumb-divider-lg: quote('>');
 $breadcrumb-bg: $white;
 $breadcrumb-divider-color: $gray-900;
 $breadcrumb-active-color: $gray-900;
+$breadcrumb-divider: quote(">");
 $breadcrumb-item-padding: calc-em(5);
 $breadcrumb-font-size: calc-em(12);
 $breadcrumb-padding-x: calc-em(0);
