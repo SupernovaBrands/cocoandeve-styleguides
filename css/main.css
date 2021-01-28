@@ -10042,10 +10042,6 @@ h4, .h4 {
   border-width: 0.125em;
 }
 
-.how-to .carousel {
-  overflow-x: hidden;
-}
-
 .carousel-inner--center {
   transform: translateX(12.5%);
   overflow: visible;
@@ -11890,6 +11886,10 @@ body.cart-drawer-open .cart-side-panel {
 
 .how-to {
   background-color: #fef2f4;
+}
+
+.how-to .carousel {
+  overflow-x: hidden;
 }
 
 .how-to .carousel-control-next {

@@ -51,12 +51,10 @@ $(document).ready(function () {
 	//video carousel
 	//3 items
 	if ($('#carouselVideo3').length > 0) {
-		$('#carouselVideo3 a[data-slide]').on('click', function () {
-			$('#carouselVideo3 a[data-slide]').removeClass('d-none');
-		});
 
 		$('#carouselVideo3').on('slide.bs.carousel', function () {
 			console.log('slide event');
+			$('#carouselVideo3 a[data-slide]').removeClass('d-none');
 			$('#carouselVideo3 .carousel-item-prev').removeClass('carousel-item-prev');
 			$('#carouselVideo3 .carousel-item-next').removeClass('carousel-item-next');
 		});
@@ -69,14 +67,12 @@ $(document).ready(function () {
 
 			if (prevSlide.length > 0) {
 				prevSlide.addClass('carousel-item-prev');
-				$('#carouselVideo3 a[data-slide="prev"]').removeClass('d-none');
 			} else {
 				$('#carouselVideo3 a[data-slide="prev"]').addClass('d-none');
 			}
 
 			if (nextSlide.length > 0) {
 				nextSlide.addClass('carousel-item-next');
-				$('#carouselVideo3 a[data-slide="next"]').removeClass('d-none');
 			} else {
 				$('#carouselVideo3 a[data-slide="next"]').addClass('d-none');
 			}
