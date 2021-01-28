@@ -10042,6 +10042,10 @@ h4, .h4 {
   border-width: 0.125em;
 }
 
+.how-to .carousel {
+  overflow-x: hidden;
+}
+
 .carousel-inner--center {
   transform: translateX(12.5%);
   overflow: visible;
@@ -10051,6 +10055,16 @@ h4, .h4 {
   .carousel-inner--center {
     transform: translateX(25%);
   }
+}
+
+.carousel-item-left--out {
+  display: block;
+  transform: translateX(150%);
+}
+
+.carousel-item-next--out {
+  display: block;
+  transform: translateX(50%);
 }
 
 .upsell {

@@ -1,3 +1,9 @@
+.how-to {
+    .carousel {
+        overflow-x: hidden;
+    }
+}
+
 .carousel-inner {
     &--center {
         transform: translateX(12.5%);
@@ -6,5 +12,19 @@
         @include media-breakpoint-up(lg) {
             transform: translateX(25%);
         }
+    }
+}
+
+.carousel-item-left {
+    &--out {
+        display: block;
+        transform: translateX(150%);
+    }
+}
+
+.carousel-item-next {
+    &--out {
+        display: block;
+        transform: translateX(50%);
     }
 }
