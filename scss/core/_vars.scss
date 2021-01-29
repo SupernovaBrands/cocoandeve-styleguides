@@ -34,24 +34,17 @@ $line-height-lg: $line-height-base;
 $line-height-sm: calc-em(17, $context: 14, $unit: 1);
 
 $headings-font-weight: 700;
+$headings-line-height: $line-height-base;
 
 $h1-font-size: calc-em(24);
 $h2-font-size: calc-em(24);
 $h3-font-size: calc-em(18);
 $h4-font-size: calc-em(16);
-$h1-line-height: calc-em(28, $context: 24, $unit: 1);
-$h2-line-height: calc-em(28, $context: 24, $unit: 1);
-$h3-line-height: calc-em(22, $context: 18, $unit: 1);
-$h4-line-height: calc-em(20, $context: 16, $unit: 1);
 
 $h1-font-size-lg: calc-em(36);
 $h2-font-size-lg: calc-em(32);
 $h3-font-size-lg: calc-em(24);
 $h4-font-size-lg: calc-em(20);
-$h1-line-height-lg: calc-em(42, $context: 36, $unit: 1);
-$h2-line-height-lg: calc-em(38, $context: 32, $unit: 1);
-$h3-line-height-lg: calc-em(28, $context: 24, $unit: 1);
-$h4-line-height-lg: calc-em(24, $context: 20, $unit: 1);
 
 // Colors
 $primary: #F3436C;
