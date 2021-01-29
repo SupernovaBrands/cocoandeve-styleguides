@@ -1,19 +1,14 @@
 .form-control {
-	padding-top: $input-padding-y-top;
-	padding-bottom: $input-padding-y-bottom;
-
-	.input-group-sm > &,
-	&-sm {
-		padding-top: $input-padding-y-top-sm;
-		padding-bottom: $input-padding-y-bottom-sm;
-	}
-
 	&:disabled,
 	&:disabled::placeholder,
 	&[readonly],
 	&[readonly]::placeholder {
 		color: $input-disabled-color;
 	}
+}
+
+.form-group {
+	@extend .mb-lg-2;
 }
 
 .search-box {
@@ -73,7 +68,7 @@
 		margin: -1px -1px -1px 0px;
 	}
 
-	&--filled .btn {
+	&--filled .input-group-append .btn {
 		display: block;
 	}
 }

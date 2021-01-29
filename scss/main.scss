@@ -6,12 +6,14 @@
 @import 'core/fonts';
 @import 'core/type';
 @import 'core/grid';
+@import 'core/utilities';
 
 @import 'components/icons';
 @import 'components/buttons';
 @import 'components/forms';
 @import 'components/breadcrumb';
 @import 'components/social-icons';
+@import 'components/carousel';
 
 @import 'compounds/upsell';
 @import 'compounds/cart-bubble';
@@ -22,5 +24,6 @@
 @import 'sections/offcanvas';
 @import 'sections/cart-drawer';
 @import 'sections/footer';
+@import 'sections/sidebar';
 
 @import 'templates/blog';
