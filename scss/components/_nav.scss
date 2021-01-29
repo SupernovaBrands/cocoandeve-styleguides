@@ -1,0 +1,12 @@
+.nav-link {
+  color: $body-color;
+
+  @include media-breakpoint-up(lg) {
+    padding: $nav-link-padding-y-lg $nav-link-padding-x-lg;
+  }
+
+  &.active {
+    color: $primary;
+    text-decoration: underline;
+  }
+}

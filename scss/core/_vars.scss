@@ -85,7 +85,6 @@ $search-icon-padding-y-sm: calc-em(6, 14);
 $input-border-radius-sm: calc-em(18, 14);
 
 // Nav
-$nav-tabs-link-active-color: $primary;
 $nav-link-padding-y: calc-em(12/2, $unit: 1rem);
 $nav-link-padding-x: calc-em(12/2, $unit: 1rem);
 $nav-link-padding-y-lg: calc-em(24/2, $unit: 1rem);
@@ -130,7 +129,7 @@ $breadcrumb-active-color: $gray-900;
 $breadcrumb-divider: quote(">");
 $breadcrumb-item-padding: calc-em(5);
 $breadcrumb-font-size: calc-em(12);
-$breadcrumb-padding-x: calc-em(0);
+$breadcrumb-padding-x: 0;
 
 // Social Icon
 $icon-primary-font-size: calc-em(30);
