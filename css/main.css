@@ -9864,7 +9864,7 @@ button.bg-primary-light:focus {
 
 @font-face {
   font-family: "supernova-icon";
-  src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?de693c07bcf27059a361e528847f17fd#supernova-icon") format("svg"), url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?de693c07bcf27059a361e528847f17fd") format("truetype"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff?de693c07bcf27059a361e528847f17fd") format("woff"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?de693c07bcf27059a361e528847f17fd") format("woff2");
+  src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?1aa0d9526cd2c4f86fd6afd05b10c529#supernova-icon") format("svg"), url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?1aa0d9526cd2c4f86fd6afd05b10c529") format("truetype"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff?1aa0d9526cd2c4f86fd6afd05b10c529") format("woff"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?1aa0d9526cd2c4f86fd6afd05b10c529") format("woff2");
 }
 
 .sni {
