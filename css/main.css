@@ -10078,13 +10078,13 @@ button.bg-primary-light:focus {
   }
 }
 
-.carousel-inner--center {
+.carousel--centered .carousel-inner {
   transform: translateX(12.5%);
   overflow: visible;
 }
 
 @media (min-width: 992px) {
-  .carousel-inner--center {
+  .carousel--centered .carousel-inner {
     transform: translateX(25%);
   }
 }

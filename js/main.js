@@ -49,46 +49,32 @@ $(document).ready(function () {
 
 
 	//video carousel
-	//3 items
-	if ($('#carouselVideo3').length > 0) {
-
-		$('#carouselVideo3').on('slide.bs.carousel', function () {
-			console.log('slide event');
-			$('#carouselVideo3 a[data-slide]').removeClass('d-none');
-			$('#carouselVideo3 .carousel-item-prev').removeClass('carousel-item-prev');
-			$('#carouselVideo3 .carousel-item-next').removeClass('carousel-item-next');
-
-			/*//test transition
-			var currentIndex = $('#carouselVideo3 .carousel-item.active').index();
-			$('#carouselVideo3 .carousel-item').eq(2).addClass('carousel-item-left').addClass('carousel-item-left--out');
-			//$('#carouselVideo3 .carousel-item').eq(0).addClass('carousel-item-right').addClass('carousel-item-right--out');
-			*/
+	if ($('.carousel--centered').length > 0 && $('.carousel--centered .carousel-item').length > 1) {
+		//console.log('script run');
+		$('.carousel--centered').on('slide.bs.carousel', function () {
+			$(this).find('a[data-slide]').removeClass('d-none');
+			$(this).find('.carousel-item-prev').removeClass('carousel-item-prev');
+			$(this).find('.carousel-item-next').removeClass('carousel-item-next');
 		});
 
-		$('#carouselVideo3').on('slid.bs.carousel', function () {
-			console.log('slid event');
-			var currentIndex = $('#carouselVideo3 .carousel-item.active').index();
-			var prevSlide = $('#carouselVideo3 .carousel-item').eq(currentIndex).prev();
-			var nextSlide = $('#carouselVideo3 .carousel-item').eq(currentIndex).next();
-
-			//test transition
-			/*
-			$('#carouselVideo3 .carousel-item').eq(2).removeClass('carousel-item-left--out').removeClass('carousel-item-left');
-			//$('#carouselVideo3 .carousel-item').eq(0).removeClass('carousel-item-right--out').removeClass('carousel-item-right');
-			*/
+		$('.carousel--centered').on('slid.bs.carousel', function () {
+			var currentIndex = $(this).find('.carousel-item.active').index();
+			var prevSlide = $(this).find('.carousel-item').eq(currentIndex).prev();
+			var nextSlide = $(this).find('.carousel-item').eq(currentIndex).next();
 
 			if (prevSlide.length > 0) {
 				prevSlide.addClass('carousel-item-prev');
 			} else {
-				$('#carouselVideo3 a[data-slide="prev"]').addClass('d-none');
+				$(this).find('a[data-slide="prev"]').addClass('d-none');
 			}
 
 			if (nextSlide.length > 0) {
 				nextSlide.addClass('carousel-item-next');
 			} else {
-				$('#carouselVideo3 a[data-slide="next"]').addClass('d-none');
+				$(this).find('a[data-slide="next"]').addClass('d-none');
 			}
 		});
+
 	}
 
 	//2 items

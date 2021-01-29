@@ -37,8 +37,8 @@
   }
 }
 
-.carousel-inner {
-  &--center {
+.carousel--centered {
+  .carousel-inner {
       transform: translateX(12.5%);
       overflow: visible;
 
