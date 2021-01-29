@@ -10005,6 +10005,29 @@ button.bg-primary-light:focus {
   display: block;
 }
 
+.carousel--fixed-height {
+  overflow: hidden;
+  height: 11.875em;
+}
+
+@media (min-width: 992px) {
+  .carousel--fixed-height {
+    height: 25em;
+  }
+}
+
+.carousel--fixed-height .carousel-inner,
+.carousel--fixed-height .carousel-item,
+.carousel--fixed-height figure,
+.carousel--fixed-height img {
+  height: 100%;
+}
+
+.carousel--fixed-height img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .carousel-indicators--primary li {
   background-color: #F3436C;
 }
@@ -10228,6 +10251,10 @@ header.stickywrap:not(.stickyHeader):not(.stickyHeaderOnTop) .cart-bubble-div.mo
     display: block;
     top: 0;
   }
+}
+
+.post-card h3 {
+  height: 2.5em;
 }
 
 .navbar {
