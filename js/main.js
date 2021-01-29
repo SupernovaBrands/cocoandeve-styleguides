@@ -50,7 +50,6 @@ $(document).ready(function () {
 
 	//video carousel
 	if ($('.carousel--centered').length > 0 && $('.carousel--centered .carousel-item').length > 1) {
-		//console.log('script run');
 		$('.carousel--centered').on('slide.bs.carousel', function () {
 			$(this).find('a[data-slide]').removeClass('d-none');
 			$(this).find('.carousel-item-prev').removeClass('carousel-item-prev');
@@ -76,8 +75,5 @@ $(document).ready(function () {
 		});
 
 	}
-
-	//2 items
-
 
 });
