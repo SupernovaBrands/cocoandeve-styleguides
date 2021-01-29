@@ -30,18 +30,6 @@ $(document).ready(function () {
 	// Carousel Sidebar
 	const sidebarCarousel = $('#sidebarCarousel')
 	if (sidebarCarousel.length > 0) {
-		sidebarCarousel.find('.carousel-item').each(function(e){
-		  	var next = $(this).next();
-		  	if (!next.length) {
-		    	next = $(this).siblings(':first');
-		  	}
-		  	if (e % 2 == 0) {
-		  		next.children(':first-child').clone().appendTo($(this));
-			} else {
-				$(this).remove()
-			}
-		});
-
 		if (window.innerWidth < 992) {
 			sidebarCarousel.carousel('cycle')
 		}
