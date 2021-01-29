@@ -1,7 +1,9 @@
 .post-card {
   figure { 
     & ~ h3 {
-      height: 2.5em;
+      @include media-breakpoint-up(lg) {
+        height: 2.5em;
+      }
     }
   }
 }
