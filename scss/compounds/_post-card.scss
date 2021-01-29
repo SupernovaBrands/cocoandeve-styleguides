@@ -1,5 +1,7 @@
 .post-card {
-  h3 {
-    height: 2.5em;
+  figure { 
+    & ~ h3 {
+      height: 2.5em;
+    }
   }
 }

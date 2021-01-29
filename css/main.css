@@ -10253,7 +10253,7 @@ header.stickywrap:not(.stickyHeader):not(.stickyHeaderOnTop) .cart-bubble-div.mo
   }
 }
 
-.post-card h3 {
+.post-card figure ~ h3 {
   height: 2.5em;
 }
 
