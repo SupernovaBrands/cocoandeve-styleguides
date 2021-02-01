@@ -1,9 +1,12 @@
 .video-card {
-    img {
-        border-radius: calc-em(10, 16);
-    }
+
     picture {
+
         cursor: pointer;
+
+        img {
+            border-radius: calc-em(10, 16);
+        }
 
         &:before {
             position: absolute;
@@ -18,14 +21,17 @@
                 bottom: calc-em(35, 54);
             }
         }
+
     }
 
 }
 
 .video-modal {
+
     &--body {
         padding: 0;
     }
+
     &--icon {
         right: calc-em(10, 16);
         top: calc-em(10, 16);

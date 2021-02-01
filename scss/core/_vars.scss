@@ -49,7 +49,6 @@ $h4-font-size-lg: calc-em(20);
 // Colors
 $primary: #F3436C;
 $primary-light: #F5DADF;
-$primary-ultra-light: #fef2f4;
 $primary-dark: #B22D4B;
 $secondary: #00635B;
 $secondary-light: #E0F0E9;
@@ -104,12 +103,11 @@ $btn-padding-x-sm: calc-em(28, 14);
 
 //HR
 $hr-border-color: $gray-600;
+
 // Carousels
 $carousel-indicator-width: calc-em(12);
 $carousel-indicator-height: calc-em(12);
-
 $carousel-control-color: $primary;
-
 $carousel-control-prev-icon-bg: none;
 $carousel-control-next-icon-bg: none;
 
@@ -120,6 +118,5 @@ $upsell-padding-y-lg: calc-em(10);
 $upsell-padding-x-lg: calc-em(10);
 
 //Video Carousel
-$primary-light-gradient: #fef5f6;
 $carousel-control-opacity: 1;
 $carousel-control-hover-opacity: 1;

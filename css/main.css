@@ -9932,12 +9932,12 @@ button.bg-primary-light:focus {
   border-color: #B22D4B;
 }
 
-.video-card img {
-  border-radius: 0.625em;
-}
-
 .video-card picture {
   cursor: pointer;
+}
+
+.video-card picture img {
+  border-radius: 0.625em;
 }
 
 .video-card picture:before {
@@ -11921,19 +11921,19 @@ body.cart-drawer-open .cart-side-panel {
 }
 
 .how-to {
-  background-color: #fef2f4;
+  background-color: #F5DADF;
 }
 
-.how-to .carousel {
+.how-to .carousel--centered {
   overflow-x: hidden;
 }
 
 .how-to .carousel-control-next {
-  background: linear-gradient(270deg, #fef2f4 0%, #fef2f4 10%, rgba(255, 255, 255, 0) 99%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(270deg, #F5DADF 0%, #F5DADF 10%, rgba(255, 255, 255, 0) 99%, rgba(255, 255, 255, 0) 100%);
 }
 
 .how-to .carousel-control-prev {
-  background: linear-gradient(90deg, #fef2f4 0%, #fef2f4 10%, rgba(255, 255, 255, 0) 99%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(90deg, #F5DADF 0%, #F5DADF 10%, rgba(255, 255, 255, 0) 99%, rgba(255, 255, 255, 0) 100%);
 }
 
 .how-to .carousel-control-prev,
