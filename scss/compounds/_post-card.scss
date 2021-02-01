@@ -1,0 +1,7 @@
+.post-card {
+  h3:nth-child(3) {
+    @include media-breakpoint-up(lg) {
+      height: 2.5em;
+    }
+  }
+}
