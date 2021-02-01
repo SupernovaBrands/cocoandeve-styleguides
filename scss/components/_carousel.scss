@@ -18,6 +18,15 @@
       object-fit: cover;
     }
   }
+
+  &--sidebar {
+    .carousel-item {
+       @include media-breakpoint-up(lg) {
+        display: block;
+        float: none;
+      } 
+    }
+  }
 }
 
 .carousel-indicators {

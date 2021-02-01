@@ -10028,6 +10028,13 @@ button.bg-primary-light:focus {
      object-fit: cover;
 }
 
+@media (min-width: 992px) {
+  .carousel--sidebar .carousel-item {
+    display: block;
+    float: none;
+  }
+}
+
 .carousel-indicators--primary li {
   background-color: #F3436C;
 }
