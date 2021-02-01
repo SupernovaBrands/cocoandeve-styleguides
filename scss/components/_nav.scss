@@ -1,3 +1,8 @@
+@mixin active-nav($color) {
+  color: $color;
+  text-decoration: underline;
+}
+
 .nav-link {
   color: $body-color;
 
@@ -6,12 +11,10 @@
   }
 
   &.active {
-    color: $primary;
-    text-decoration: underline;
+    @include active-nav($primary);
   }
 
   &:hover {
-    color: $primary;
-    text-decoration: underline;
+    @include active-nav($primary);
   }
 }
