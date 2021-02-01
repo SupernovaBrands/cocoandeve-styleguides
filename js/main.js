@@ -32,6 +32,7 @@ $(document).ready(function () {
 	// Carousel Sidebar
 	const sidebarCarousel = $('.carousel--sidebar')
 	if (sidebarCarousel.length > 0 && window.innerWidth < lg) {
+		sidebarCarousel.addClass('carousel')
 		sidebarCarousel.carousel('cycle')
 	}
 });
