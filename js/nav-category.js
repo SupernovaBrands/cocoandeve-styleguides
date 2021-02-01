@@ -7,14 +7,12 @@ $(document).ready(function () {
         const searchBox = navCategory.find('.search-box');
         if (searchBox.length) {
           searchBox.removeClass('d-none');
-          $(this).parent().addClass('d-none');
         }
       });
       navCategory.find(".search-box__close").on('click', function() {
         const parent = $(this).parents(".search-box");
         if (parent.length) {
           parent.addClass('d-none');
-          linkSearch.parent().removeClass('d-none');
         }
       })
     }
