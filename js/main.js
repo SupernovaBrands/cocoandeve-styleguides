@@ -1,3 +1,5 @@
+const screenLG = 992
+
 $(document).ready(function () {
 	window.showGrid = function () {
 		jQuery('body').append('<style type="text/css">.gridoverlay{position:fixed;top:0;left:50%;transform:translateX(-50%);z-index:9999}.gridoverlay .col{height:100vh}.gridoverlay .col:before{content:"";display:block;background-color:rgba(0,123,255,0.3);height:100%}</style><div class="container gridoverlay"><div class="row"><div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div></div></div>');
@@ -25,5 +27,12 @@ $(document).ready(function () {
 			input.val('');
 			parent.removeClass('search-box--filled');
 		});
+	}
+
+	// Carousel Sidebar
+	const sidebarCarousel = $('.carousel--sidebar')
+	if (sidebarCarousel.length > 0 && window.innerWidth < screenLG) {
+		sidebarCarousel.addClass('carousel')
+		sidebarCarousel.carousel('cycle')
 	}
 });
