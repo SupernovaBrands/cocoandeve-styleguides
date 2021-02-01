@@ -1,4 +1,4 @@
-const lg = 992
+const screenLG = 992
 
 $(document).ready(function () {
 	window.showGrid = function () {
@@ -31,7 +31,7 @@ $(document).ready(function () {
 
 	// Carousel Sidebar
 	const sidebarCarousel = $('.carousel--sidebar')
-	if (sidebarCarousel.length > 0 && window.innerWidth < lg) {
+	if (sidebarCarousel.length > 0 && window.innerWidth < screenLG) {
 		sidebarCarousel.addClass('carousel')
 		sidebarCarousel.carousel('cycle')
 	}
