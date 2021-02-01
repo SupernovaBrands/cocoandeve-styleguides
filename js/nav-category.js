@@ -3,7 +3,7 @@ $(document).ready(function () {
   if (navCategory.length > 0) {
     const linkSearch = navCategory.find('.link-search');
     if (linkSearch) {
-      navCategory.find('.link-search').on('click', function () {
+      linkSearch.on('click', function () {
         navCategory.find('.search-box').removeClass('d-none');
       });
       navCategory.find(".search-box__close").on('click', function() {

@@ -1,8 +1,3 @@
-@mixin active-nav($color) {
-  color: $color;
-  text-decoration: underline;
-}
-
 .nav-link {
   color: $body-color;
 
@@ -10,11 +5,9 @@
     padding: $nav-link-padding-y-lg $nav-link-padding-x-lg;
   }
 
-  &.active {
-    @include active-nav($primary);
-  }
-
+  &.active,
   &:hover {
-    @include active-nav($primary);
+    color: $primary;
+    text-decoration: underline;
   }
 }

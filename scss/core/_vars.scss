@@ -36,6 +36,7 @@ $line-height-sm: calc-em(17, $context: 14, $unit: 1);
 $headings-font-weight: 700;
 $headings-line-height: $line-height-base;
 
+$font-size-base: calc-em(16);
 $h1-font-size: calc-em(24);
 $h2-font-size: calc-em(24);
 $h3-font-size: calc-em(18);
@@ -73,6 +74,8 @@ $input-btn-focus-color: transparent;
 $input-focus-border-color: $gray-400;
 $input-disabled-bg: $gray-100;
 $input-disabled-color: $gray-400;
+$custom-control-gutter: .5em;
+$custom-control-indicator-size: 1em;
 
 $input-padding-y: calc-em(28 / 2);
 $input-padding-x: 1em;
@@ -133,3 +136,6 @@ $breadcrumb-padding-x: 0;
 
 // Social Icon
 $icon-primary-font-size: calc-em(30);
+
+// Alert
+$alert-padding-x: 1.25em;
