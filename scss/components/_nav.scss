@@ -1,0 +1,18 @@
+.nav-link {
+  color: $body-color;
+
+  @include media-breakpoint-up(lg) {
+    padding: $nav-link-padding-y-lg $nav-link-padding-x-lg;
+  }
+
+  &.active,
+  &:hover {
+    color: $primary;
+    text-decoration: underline;
+  }
+}
+
+.link-search:hover {
+  text-decoration: none;
+  color: $body-color;
+}
