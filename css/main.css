@@ -10082,6 +10082,11 @@ button.bg-primary-light:focus {
   text-decoration: underline;
 }
 
+.nav-link.link-search:hover {
+  text-decoration: none;
+  color: #151515;
+}
+
 .upsell {
   background: #FAF9F9;
   padding: 0.625em 0.9375em;
