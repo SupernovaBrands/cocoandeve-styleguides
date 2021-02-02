@@ -9932,12 +9932,12 @@ button.bg-primary-light:focus {
   border-color: #B22D4B;
 }
 
-.video-card picture {
-  cursor: pointer;
+.video-card img {
+  border-radius: 0.625em;
 }
 
-.video-card picture img {
-  border-radius: 0.625em;
+.video-card picture {
+  cursor: pointer;
 }
 
 .video-card picture:before {
