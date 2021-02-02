@@ -10,9 +10,9 @@
     color: $primary;
     text-decoration: underline;
   }
+}
 
-  &.link-search:hover {
-    text-decoration: none;
-    color: $body-color;
-  }
+.link-search:hover {
+  text-decoration: none;
+  color: $body-color;
 }
