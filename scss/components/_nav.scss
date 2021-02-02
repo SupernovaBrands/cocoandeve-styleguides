@@ -5,14 +5,11 @@
     padding: $nav-link-padding-y-lg $nav-link-padding-x-lg;
   }
 
-  &.active,
-  &:hover {
-    color: $primary;
-    text-decoration: underline;
+  &:not(.link-search) {
+    &.active,
+    &:hover {
+      color: $primary;
+      text-decoration: underline;
+    }
   }
-}
-
-.link-search:hover {
-  text-decoration: none;
-  color: $body-color;
 }
