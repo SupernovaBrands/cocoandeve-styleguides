@@ -1,8 +1,4 @@
 .video-card {
-    img {
-        border-radius: calc-em(10, 16);
-    }
-
     picture {
         cursor: pointer;
 
@@ -19,6 +15,10 @@
                 bottom: calc-em(35, 54);
             }
         }
+    }
+
+    img {
+        border-radius: calc-em(10, 16);
     }
 
 }
