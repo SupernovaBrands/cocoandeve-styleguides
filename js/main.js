@@ -29,14 +29,13 @@ $(document).ready(function () {
 		});
 	}
 
-<<<<<<< HEAD
 	// Carousel Sidebar
 	const sidebarCarousel = $('.carousel--sidebar')
 	if (sidebarCarousel.length > 0 && window.innerWidth < screenLG) {
 		sidebarCarousel.addClass('carousel')
 		sidebarCarousel.carousel('cycle')
 	}
-=======
+
 	// video modal
 	// Gets the video src from the data-src on each button
 	var $videoSrc;
@@ -94,5 +93,4 @@ $(document).ready(function () {
 		});
 	}
 
->>>>>>> rizki/cpv4vq
 });
