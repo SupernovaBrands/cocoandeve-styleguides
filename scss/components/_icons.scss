@@ -2,10 +2,10 @@ $supernova-icon-font: "supernova-icon";
 
 @font-face {
 	font-family: $supernova-icon-font;
-	src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?1aa0d9526cd2c4f86fd6afd05b10c529#supernova-icon") format("svg"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?1aa0d9526cd2c4f86fd6afd05b10c529") format("truetype"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff?1aa0d9526cd2c4f86fd6afd05b10c529") format("woff"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?1aa0d9526cd2c4f86fd6afd05b10c529") format("woff2");
+	src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?70d56510520fe982e8d7a8225626cdaa#supernova-icon") format("svg"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?70d56510520fe982e8d7a8225626cdaa") format("truetype"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.woff?70d56510520fe982e8d7a8225626cdaa") format("woff"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?70d56510520fe982e8d7a8225626cdaa") format("woff2");
 }
 
 .sni {
@@ -27,8 +27,12 @@ $supernova-icon-map: (
 	"chevron-next": "\f101",
 	"chevron-prev": "\f102",
 	"close": "\f103",
-	"plus": "\f104",
-	"search": "\f105",
+	"facebook-square": "\f104",
+	"pinterest-square": "\f105",
+	"play": "\f106",
+	"plus": "\f107",
+	"search": "\f108",
+	"twitter-square": "\f109",
 );
 
 .sni.sni__chevron-next:before {
@@ -40,9 +44,21 @@ $supernova-icon-map: (
 .sni.sni__close:before {
 	content: map-get($supernova-icon-map, "close");
 }
+.sni.sni__facebook-square:before {
+	content: map-get($supernova-icon-map, "facebook-square");
+}
+.sni.sni__pinterest-square:before {
+	content: map-get($supernova-icon-map, "pinterest-square");
+}
+.sni.sni__play:before {
+	content: map-get($supernova-icon-map, "play");
+}
 .sni.sni__plus:before {
 	content: map-get($supernova-icon-map, "plus");
 }
 .sni.sni__search:before {
 	content: map-get($supernova-icon-map, "search");
+}
+.sni.sni__twitter-square:before {
+	content: map-get($supernova-icon-map, "twitter-square");
 }

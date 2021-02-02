@@ -16,3 +16,7 @@ h4, .h4 {
 		@include font-size($h4-font-size-lg);
 	}
 }
+
+.text-underline {
+	text-decoration: underline;
+}

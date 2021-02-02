@@ -35,4 +35,62 @@ $(document).ready(function () {
 		sidebarCarousel.addClass('carousel')
 		sidebarCarousel.carousel('cycle')
 	}
+
+	// video modal
+	// Gets the video src from the data-src on each button
+	var $videoSrc;
+	if ($('.video-card').length > 0) {
+		$('.video-card picture').on('click',function() {
+			$videoSrc = $(this).data('src');
+		});
+	}
+
+	$('#videoCardModal').on('shown.bs.modal', function (e) {
+		// set the video src to autoplay and not to show related video.
+		$(this).find('video').find('source').attr('src', $videoSrc);
+		$(this).find('video').get(0).load();
+		$(this).find('video').get(0).play();
+	});
+
+	// stop playing the youtube video when I close the modal
+	$('#videoCardModal').on('hide.bs.modal', function (e) {
+		$(this).find('video').find('source').attr('src', '');
+		$(this).find('video').get(0).load();
+		$(this).find('video').get(0).pause();
+	});
+
+	//video carousel
+	if ($('.carousel--centered').length > 0) {
+		$('.carousel--centered').each( function() {
+			if ($(this).find('.carousel-item').length > 1) {
+
+				$(this).on('slide.bs.carousel', function () {
+					$(this).find('a[data-slide]').removeClass('d-none');
+				});
+
+				var currentIndex, prevSlide, nextSlide;
+				$(this).on('slid.bs.carousel', function () {
+					currentIndex = $(this).find('.carousel-item.active').index();
+					prevSlide = $(this).find('.carousel-item').eq(currentIndex).prev();
+					nextSlide = $(this).find('.carousel-item').eq(currentIndex).next();
+
+					$(this).find('.carousel-item-prev').removeClass('carousel-item-prev');
+					$(this).find('.carousel-item-next').removeClass('carousel-item-next');
+
+					if (prevSlide.length > 0) {
+						prevSlide.addClass('carousel-item-prev');
+					} else {
+						$(this).find('a[data-slide="prev"]').addClass('d-none');
+					}
+
+					if (nextSlide.length > 0) {
+						nextSlide.addClass('carousel-item-next');
+					} else {
+						$(this).find('a[data-slide="next"]').addClass('d-none');
+					}
+				});
+			}
+		});
+	}
+
 });
