@@ -10160,14 +10160,9 @@ button.bg-primary-light:focus {
   }
 }
 
-.nav-link.active, .nav-link:hover {
+.nav-link:not(.link-search).active, .nav-link:not(.link-search):hover {
   color: #F3436C;
   text-decoration: underline;
-}
-
-.link-search:hover {
-  text-decoration: none;
-  color: #151515;
 }
 
 .upsell {
