@@ -68,4 +68,13 @@
   }
 }
 
+.carousel--centered {
+  .carousel-inner {
+      transform: translateX(12.5%);
+      overflow: visible;
 
+      @include media-breakpoint-up(lg) {
+          transform: translateX(25%);
+      }
+  }
+}

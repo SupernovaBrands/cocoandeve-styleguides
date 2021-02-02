@@ -420,7 +420,7 @@ hr {
   margin-top: 1.25em;
   margin-bottom: 1.25em;
   border: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid #4E4E4E;
 }
 
 small,
@@ -6171,7 +6171,7 @@ a.close.disabled {
   width: 15%;
   color: #F3436C;
   text-align: center;
-  opacity: 0.5;
+  opacity: 1;
   transition: opacity 0.15s ease;
 }
 
@@ -6188,7 +6188,7 @@ a.close.disabled {
   color: #F3436C;
   text-decoration: none;
   outline: 0;
-  opacity: 0.9;
+  opacity: 1;
 }
 
 .carousel-control-prev {
@@ -9864,7 +9864,7 @@ button.bg-primary-light:focus {
 
 @font-face {
   font-family: "supernova-icon";
-  src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?de693c07bcf27059a361e528847f17fd#supernova-icon") format("svg"), url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?de693c07bcf27059a361e528847f17fd") format("truetype"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff?de693c07bcf27059a361e528847f17fd") format("woff"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?de693c07bcf27059a361e528847f17fd") format("woff2");
+  src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?d04457a4dd13473c8c772a90583bd43e#supernova-icon") format("svg"), url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?d04457a4dd13473c8c772a90583bd43e") format("truetype"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff?d04457a4dd13473c8c772a90583bd43e") format("woff"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?d04457a4dd13473c8c772a90583bd43e") format("woff2");
 }
 
 .sni {
@@ -9894,12 +9894,16 @@ button.bg-primary-light:focus {
   content: "";
 }
 
-.sni.sni__plus:before {
+.sni.sni__play:before {
   content: "";
 }
 
-.sni.sni__search:before {
+.sni.sni__plus:before {
   content: "";
+}
+
+.sni.sni__search:before {
+  content: "";
 }
 
 .btn__with-icon {
@@ -9926,6 +9930,39 @@ button.bg-primary-light:focus {
 .show > .btn-primary.dropdown-toggle {
   background-color: #B22D4B;
   border-color: #B22D4B;
+}
+
+.video-card picture {
+  cursor: pointer;
+}
+
+.video-card picture:before {
+  position: absolute;
+  color: #F3436C;
+  font-size: 2.25em;
+  right: 0.55556em;
+  bottom: 0.55556em;
+}
+
+@media (min-width: 992px) {
+  .video-card picture:before {
+    font-size: 3.375em;
+    right: 0.64815em;
+    bottom: 0.64815em;
+  }
+}
+
+.video-card img {
+  border-radius: 0.625em;
+}
+
+.video-modal--body {
+  padding: 0;
+}
+
+.video-modal--icon {
+  right: 0.625em;
+  top: 0.625em;
 }
 
 .form-control:disabled::-moz-placeholder, .form-control[readonly]::-moz-placeholder {
@@ -10005,6 +10042,11 @@ button.bg-primary-light:focus {
   display: block;
 }
 
+.hr--primary {
+  border-color: #F3436C;
+  border-width: 0.125em;
+}
+
 .carousel--fixed-height {
   overflow: hidden;
   height: 11.875em;
@@ -10063,6 +10105,17 @@ button.bg-primary-light:focus {
   .carousel-control--right-lg.carousel-control-prev {
     right: 5em;
     left: auto;
+  }
+}
+
+.carousel--centered .carousel-inner {
+  transform: translateX(12.5%);
+  overflow: visible;
+}
+
+@media (min-width: 992px) {
+  .carousel--centered .carousel-inner {
+    transform: translateX(25%);
   }
 }
 
@@ -11901,6 +11954,28 @@ body.cart-drawer-open .cart-side-panel {
 /* Firefox */
 .QuantityInput[type=number] {
   -moz-appearance: textfield;
+}
+
+.how-to {
+  background-color: #F5DADF;
+}
+
+.how-to .carousel--centered {
+  overflow-x: hidden;
+}
+
+.how-to .carousel-control-next {
+  background: linear-gradient(270deg, #F5DADF 0%, #F5DADF 10%, rgba(255, 255, 255, 0) 99%, rgba(255, 255, 255, 0) 100%);
+}
+
+.how-to .carousel-control-prev {
+  background: linear-gradient(90deg, #F5DADF 0%, #F5DADF 10%, rgba(255, 255, 255, 0) 99%, rgba(255, 255, 255, 0) 100%);
+}
+
+.how-to .carousel-control-prev,
+.how-to .carousel-control-next {
+  color: #F3436C;
+  font-size: 1.25em;
 }
 
 /* =====//   Footer Style   \===== */

@@ -101,12 +101,13 @@ $btn-padding-x-lg: calc-em(54);
 $btn-padding-y-sm: calc-em(15 / 2, 14);
 $btn-padding-x-sm: calc-em(28, 14);
 
+//HR
+$hr-border-color: $gray-600;
+
 // Carousels
 $carousel-indicator-width: calc-em(12);
 $carousel-indicator-height: calc-em(12);
-
 $carousel-control-color: $primary;
-
 $carousel-control-prev-icon-bg: none;
 $carousel-control-next-icon-bg: none;
 
@@ -115,3 +116,7 @@ $upsell-padding-y: calc-em(10);
 $upsell-padding-x: calc-em(15);
 $upsell-padding-y-lg: calc-em(10);
 $upsell-padding-x-lg: calc-em(10);
+
+//Video Carousel
+$carousel-control-opacity: 1;
+$carousel-control-hover-opacity: 1;
