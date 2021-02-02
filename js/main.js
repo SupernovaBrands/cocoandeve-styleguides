@@ -46,6 +46,7 @@ $(document).ready(function () {
 	// stop playing the youtube video when I close the modal
 	$('#videoCardModal').on('hide.bs.modal', function (e) {
 		$(this).find('video').find('source').attr('src', '');
+		$(this).find('video').get(0).load();
 		$(this).find('video').get(0).pause();
 	});
 
@@ -56,8 +57,6 @@ $(document).ready(function () {
 
 				$(this).on('slide.bs.carousel', function () {
 					$(this).find('a[data-slide]').removeClass('d-none');
-					$(this).find('.carousel-item-prev').removeClass('carousel-item-prev');
-					$(this).find('.carousel-item-next').removeClass('carousel-item-next');
 				});
 
 				var currentIndex, prevSlide, nextSlide;
@@ -65,6 +64,9 @@ $(document).ready(function () {
 					currentIndex = $(this).find('.carousel-item.active').index();
 					prevSlide = $(this).find('.carousel-item').eq(currentIndex).prev();
 					nextSlide = $(this).find('.carousel-item').eq(currentIndex).next();
+
+					$(this).find('.carousel-item-prev').removeClass('carousel-item-prev');
+					$(this).find('.carousel-item-next').removeClass('carousel-item-next');
 
 					if (prevSlide.length > 0) {
 						prevSlide.addClass('carousel-item-prev');
