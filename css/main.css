@@ -10151,25 +10151,13 @@ button.bg-primary-light:focus {
 }
 
 .carousel--centered .carousel-item-prev--out {
-  transform: translateX(-175%);
+  transform: translateX(-200%);
   display: block;
-}
-
-@media (min-width: 992px) {
-  .carousel--centered .carousel-item-prev--out {
-    transform: translateX(-195%);
-  }
 }
 
 .carousel--centered .carousel-item-next--out {
-  transform: translateX(175%);
+  transform: translateX(200%);
   display: block;
-}
-
-@media (min-width: 992px) {
-  .carousel--centered .carousel-item-next--out {
-    transform: translateX(195%);
-  }
 }
 
 .nav-link {
