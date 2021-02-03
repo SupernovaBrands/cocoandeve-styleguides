@@ -1961,6 +1961,27 @@ footer p {
   grid-area: sidebar;
 }
 
+@media (min-width: 992px) {
+  .blog-post-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "content sidebar" "comment sidebar";
+  }
+}
+
+.blog-post-grid__content {
+  grid-area: content;
+}
+
+.blog-post-grid__comment {
+  grid-area: comment;
+}
+
+.blog-post-grid__sidebar {
+  grid-area: sidebar;
+}
+
 .article__content img, .article__content iframe {
   max-width: 100%;
 }

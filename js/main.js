@@ -42,9 +42,9 @@ $(document).ready(function () {
 		});
 	}
 
-	if ($('.blog__sidebar').length > 0) {
-		const sidebarCarousel = $('.carousel--sidebar');
-		if (sidebarCarousel.length > 0 && window.innerWidth < screenLG) {
+	const sidebarCarousel = $('.carousel--sidebar');
+	if (sidebarCarousel.length > 0) {
+		if (window.innerWidth < screenLG) {
 			sidebarCarousel.addClass('carousel');
 			sidebarCarousel.carousel('cycle');
 		}

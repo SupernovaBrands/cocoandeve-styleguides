@@ -29,6 +29,28 @@
 	}
 }
 
+.blog-post-grid {
+	@include media-breakpoint-up(lg) {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		grid-template-rows: auto auto;
+		grid-template-areas: "content sidebar"
+			"comment sidebar";
+	}
+
+	&__content {
+		grid-area: content;
+	}
+
+	&__comment {
+		grid-area: comment;
+	}
+
+	&__sidebar {
+		grid-area: sidebar;
+	}
+}
+
 .article__content {
 	img, iframe {
 		max-width: 100%;
