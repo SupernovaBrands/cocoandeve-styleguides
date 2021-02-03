@@ -21,7 +21,7 @@
 
   &--sidebar {
     .carousel-item {
-       @include media-breakpoint-up(lg) {
+      @include media-breakpoint-up(lg) {
         display: block;
         float: none;
       }
@@ -32,7 +32,7 @@
 .carousel-indicators {
   &--primary {
     li {
-        background-color: $primary;
+      background-color: $primary;
     }
   }
 }
@@ -70,12 +70,12 @@
 
 .carousel--centered {
   .carousel-inner {
-      transform: translateX(12.5%);
-      overflow: visible;
+    transform: translateX(12.5%);
+    overflow: visible;
 
-      @include media-breakpoint-up(lg) {
-          transform: translateX(25%);
-      }
+    @include media-breakpoint-up(lg) {
+      transform: translateX(25%);
+    }
   }
 
   .carousel-item-prev--out {

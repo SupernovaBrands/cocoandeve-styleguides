@@ -9,6 +9,19 @@ $(document).ready(function () {
 		window.showGrid();
 	}
 
+	const scrollToElement = (targetSelector) => {
+		$('html, body').animate({ scrollTop: $(targetSelector).offset().top - 70 }, 600);
+	};
+
+	$('.scroll-to-element').on('click', function (e) {
+		e.preventDefault();
+		scrollToElement($(this).attr('href'));
+	});
+
+	if (window.location.hash === '#how-to' && $('#blog__how-to').length > 0) {
+		scrollToElement('#blog__how-to');
+	}
+
 	// Search boxes
 	const searchBox = $('.search-box');
 	if (searchBox.length > 0) {
@@ -56,18 +69,43 @@ $(document).ready(function () {
 		});
 	}
 
+	const toggleHTMLVideo = (videoEl, show, source) => {
+		if (show) {
+			videoEl.find('source').attr('src', source);
+			videoEl.get(0).load();
+			videoEl.get(0).play();
+			videoEl.removeClass('d-none');
+		} else {
+			videoEl.find('source').attr('src', '');
+			videoEl.get(0).load();
+			videoEl.get(0).pause();
+			videoEl.addClass('d-none');
+		}
+	};
+
+	const toggleiFrameVideo = (iframeEl, show, source) => {
+		if (show) {
+			iframeEl.attr('src', source).removeClass('d-none');
+		} else {
+			iframeEl.attr('src', '').addClass('d-none');
+		}
+	};
+
 	$('#videoCardModal').on('shown.bs.modal', function () {
 		// set the video src to autoplay and not to show related video.
-		$(this).find('video').find('source').attr('src', $videoSrc);
-		$(this).find('video').get(0).load();
-		$(this).find('video').get(0).play();
+		if ($videoSrc.includes('.mp4')) {
+			toggleiFrameVideo($(this).find('iframe'), false);
+			toggleHTMLVideo($(this).find('video'), true, $videoSrc);
+		} else {
+			toggleHTMLVideo($(this).find('video'), false);
+			toggleiFrameVideo($(this).find('iframe'), true, $videoSrc);
+		}
 	});
 
 	// stop playing the youtube video when I close the modal
 	$('#videoCardModal').on('hide.bs.modal', function () {
-		$(this).find('video').find('source').attr('src', '');
-		$(this).find('video').get(0).load();
-		$(this).find('video').get(0).pause();
+		toggleHTMLVideo($(this).find('video'), false);
+		toggleiFrameVideo($(this).find('iframe'), false);
 	});
 
 	// video carousel

@@ -9827,6 +9827,14 @@ h4, .h4 {
   text-decoration: underline;
 }
 
+.link-secondary {
+  color: #151515;
+}
+
+.link-secondary:hover {
+  color: #F3436C;
+}
+
 @media (max-width: 991.98px) {
   .mobile-wrapper {
     padding-right: 7.5px;
