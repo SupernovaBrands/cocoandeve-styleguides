@@ -79,20 +79,20 @@
   }
 
   .carousel-item-prev--out {
-    transform: translateX(-125%);
+    transform: translateX(-175%);
     display: block;
 
     @include media-breakpoint-up(lg) {
-      transform: translateX(-150%);
+      transform: translateX(-195%);
     }
   }
 
   .carousel-item-next--out {
-    transform: translateX(125%);
+    transform: translateX(175%);
     display: block;
 
     @include media-breakpoint-up(lg) {
-      transform: translateX(150%);
+      transform: translateX(195%);
     }
   }
 
