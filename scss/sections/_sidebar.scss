@@ -1,4 +1,7 @@
 .sidebar {
   background-color: $primary-light;
-  padding: 1.5625em;
+  padding: map-get($spacers, 3) $grid-gutter-width;
+  @include media-breakpoint-up(lg) {
+    padding: calc-em(40) calc-em(25);
+  }
 }

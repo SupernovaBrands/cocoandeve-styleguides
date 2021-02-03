@@ -1,17 +1,13 @@
 @import 'core/functions';
 @import 'core/vars';
 
-@import 'bootstrap/bootstrap';
-
-@import 'core/fonts';
-@import 'core/type';
-@import 'core/grid';
-@import 'core/utilities';
+@import 'bootstrap/functions';
+@import 'bootstrap/variables';
+@import 'bootstrap/mixins';
 
 @import 'components/icons';
 @import 'components/buttons';
 @import 'components/video-card';
-@import 'components/forms';
 @import 'components/hr';
 @import 'components/breadcrumb';
 @import 'components/social-icons';
@@ -19,14 +15,11 @@
 @import 'components/nav';
 
 @import 'compounds/upsell';
-@import 'compounds/cart-bubble';
 @import 'compounds/post-card';
 
-@import 'sections/navbar';
-@import 'sections/header';
-@import 'sections/offcanvas';
-@import 'sections/cart-drawer';
 @import 'sections/howto';
+@import 'sections/modal-email';
+@import 'sections/product-waitlist';
 @import 'sections/footer';
 @import 'sections/sidebar';
 

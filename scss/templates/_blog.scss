@@ -28,3 +28,9 @@
 		grid-area: sidebar;
 	}
 }
+
+.article__content {
+	img, iframe {
+		max-width: 100%;
+	}
+}

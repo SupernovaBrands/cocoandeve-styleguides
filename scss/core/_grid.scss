@@ -16,8 +16,8 @@
 		margin-left: -$grid-gutter-width;
 	}
 
-	.row>.col,
-	.row>[class*="col-"] {
+	.col,
+	[class*="col-"] {
 		padding-right: $grid-gutter-width-lg / 2;
 		padding-left: $grid-gutter-width-lg / 2;
 	}
