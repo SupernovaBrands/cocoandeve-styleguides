@@ -10150,6 +10150,26 @@ button.bg-primary-light:focus {
   }
 }
 
+.carousel--centered .carousel-item-next--out {
+  transform: translateX(125%);
+}
+
+@media (min-width: 992px) {
+  .carousel--centered .carousel-item-next--out {
+    transform: translateX(150%);
+  }
+}
+
+.carousel--centered .carousel-item-prev--out {
+  transform: translateX(-125%);
+}
+
+@media (min-width: 992px) {
+  .carousel--centered .carousel-item-prev--out {
+    transform: translateX(-150%);
+  }
+}
+
 .nav-link {
   color: #151515;
 }
