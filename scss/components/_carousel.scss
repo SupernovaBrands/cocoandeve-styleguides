@@ -24,7 +24,7 @@
        @include media-breakpoint-up(lg) {
         display: block;
         float: none;
-      } 
+      }
     }
   }
 }
@@ -77,4 +77,15 @@
           transform: translateX(25%);
       }
   }
+
+  .carousel-item-prev--out {
+    transform: translateX(-200%);
+    display: block;
+  }
+
+  .carousel-item-next--out {
+    transform: translateX(200%);
+    display: block;
+  }
+
 }

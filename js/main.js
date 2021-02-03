@@ -74,8 +74,35 @@ $(document).ready(function () {
 	if ($('.carousel--centered').length > 0) {
 		$('.carousel--centered').each(function () {
 			if ($(this).find('.carousel-item').length > 1) {
-				$(this).on('slide.bs.carousel', function () {
+				// hide prev/next nav when no item prev class on page load
+				if ($(this).find('.carousel-item-prev').length === 0) {
+					$(this).find('a[data-slide="prev"]').addClass('d-none');
+				}
+
+				if ($(this).find('.carousel-item-next').length === 0) {
+					$(this).find('a[data-slide="next"]').addClass('d-none');
+				}
+
+				$(this).on('slide.bs.carousel', function (e) {
 					$(this).find('a[data-slide]').removeClass('d-none');
+					if ($(this).find('.carousel-item-prev').length > 0) {
+						if (e.direction === 'left') {
+							$(this).find('.carousel-item-prev').addClass('carousel-item-prev').addClass('carousel-item-prev--out');
+						} else {
+							$(this).find('.carousel-item-prev').prev()
+								.addClass('carousel-item-prev')
+								.removeClass('carousel-item-prev--out');
+						}
+					}
+					if ($(this).find('.carousel-item-next').length > 0) {
+						if (e.direction === 'right') {
+							$(this).find('.carousel-item-next').addClass('carousel-item-next').addClass('carousel-item-next--out');
+						} else {
+							$(this).find('.carousel-item-next').next()
+								.addClass('carousel-item-next')
+								.removeClass('carousel-item-next--out');
+						}
+					}
 				});
 
 				let currentIndex;
@@ -91,16 +118,20 @@ $(document).ready(function () {
 
 					if (prevSlide.length > 0) {
 						prevSlide.addClass('carousel-item-prev');
+						prevSlide.removeClass('carousel-item-prev--out');
 					} else {
 						$(this).find('a[data-slide="prev"]').addClass('d-none');
 					}
 
 					if (nextSlide.length > 0) {
 						nextSlide.addClass('carousel-item-next');
+						nextSlide.removeClass('carousel-item-next--out');
 					} else {
 						$(this).find('a[data-slide="next"]').addClass('d-none');
 					}
 				});
+			} else {
+				$(this).find('a[data-slide]').addClass('d-none');
 			}
 		});
 	}

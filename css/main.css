@@ -205,6 +205,16 @@
   }
 }
 
+.carousel--centered .carousel-item-prev--out {
+  transform: translateX(-200%);
+  display: block;
+}
+
+.carousel--centered .carousel-item-next--out {
+  transform: translateX(200%);
+  display: block;
+}
+
 .nav-link {
   color: #151515;
 }
