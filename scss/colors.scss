@@ -1,0 +1,40 @@
+@import 'core/functions';
+@import 'core/vars';
+
+@import 'bootstrap/bootstrap';
+
+@import 'core/fonts';
+@import 'core/type';
+@import 'core/grid';
+@import 'core/utilities';
+
+@mixin make-box($parent, $color) {
+	.box-#{$parent} {
+		text-align: center;
+
+		&:before {
+			content: '';
+			display: block;
+			width: 100%;
+			padding-top: 100%;
+			background-color: $color;
+			margin-bottom: map-get($spacers, 1);
+		}
+
+		&:after {
+			content: '#{$color}';
+			display: block;
+		}
+	}
+}
+
+@include make-box('primary', $primary);
+@include make-box('primary-light', $primary-light);
+@include make-box('primary-dark', $primary-dark);
+@include make-box('secondary', $secondary);
+@include make-box('secondary-light', $secondary-light);
+@include make-box('body-color', $body-color);
+@include make-box('secondary-body', $gray-600);
+@include make-box('gray-500', $gray-500);
+@include make-box('gray-400', $gray-400);
+@include make-box('gray-100', $gray-100);

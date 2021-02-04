@@ -6,11 +6,7 @@
 		padding: $upsell-padding-y-lg $upsell-padding-x-lg;
 	}
 
-	img {
-		max-width: 100%;
-	}
-
-	&__img {
+	picture {
 		width: calc-em(75);
 		@include media-breakpoint-up(lg) {
 			width: calc-em(56);
@@ -44,23 +40,23 @@
 		}
 	}
 
-	&__atc-btn {
+	.sni {
+		font-size: calc-em(30);
+		color: $primary;
+		transition: color $hover-transition-timing;
+	}
+
+	a:hover {
+		text-decoration: none;
 		.sni {
-			font-size: calc-em(30);
-			color: $primary;
-			transition: color $hover-transition-timing;
+			color: $primary-dark;
 		}
+	}
 
-		span {
-			font-size: calc-em(12);
-			margin-top: calc-em(2, 12);
-			text-decoration: underline;
-			color: $body-color;
-		}
-
-		&:hover {
-			text-decoration: none;
-			.sni { color: $primary-dark; }
-		}
+	&__atc-text {
+		font-size: calc-em(12);
+		margin-top: calc-em(2, 12);
+		text-decoration: underline;
+		color: $body-color;
 	}
 }

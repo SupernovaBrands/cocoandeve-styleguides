@@ -241,16 +241,12 @@
   }
 }
 
-.upsell img {
-  max-width: 100%;
-}
-
-.upsell__img {
+.upsell picture {
   width: 4.6875em;
 }
 
 @media (min-width: 992px) {
-  .upsell__img {
+  .upsell picture {
     width: 3.5em;
   }
 }
@@ -288,25 +284,25 @@
   }
 }
 
-.upsell__atc-btn .sni {
+.upsell .sni {
   font-size: 1.875em;
   color: #F3436C;
   transition: color 0.15s ease-in-out;
 }
 
-.upsell__atc-btn span {
+.upsell a:hover {
+  text-decoration: none;
+}
+
+.upsell a:hover .sni {
+  color: #B22D4B;
+}
+
+.upsell__atc-text {
   font-size: 0.75em;
   margin-top: 0.16667em;
   text-decoration: underline;
   color: #151515;
-}
-
-.upsell__atc-btn:hover {
-  text-decoration: none;
-}
-
-.upsell__atc-btn:hover .sni {
-  color: #B22D4B;
 }
 
 .post-card h3 {

@@ -1,8 +1,10 @@
+// Light pink background color
 @include bg-variant(".bg-primary-light", $primary-light, true);
 
+// Sticky sidebar at bottom
 .sticky-bottom {
 	top: auto;
-	bottom: 0;
+	bottom: map-get($spacers, 2);
 
 	&__container {
 		display: flex;
@@ -10,6 +12,7 @@
 	}
 }
 
+// Hover overlay for image
 .hover-overlay {
 	position: relative;
 	&:after {
