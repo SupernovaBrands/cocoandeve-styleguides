@@ -81,6 +81,9 @@
   .carousel-item-prev--out {
     transform: translateX(-200%);
     display: block;
+    &:nth-last-child(2) {
+      opacity: 0;
+    }
   }
 
   .carousel-item-next--out {

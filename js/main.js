@@ -46,16 +46,13 @@ $(document).ready(function () {
 	if (sidebarCarousel.length > 0) {
 		if (window.innerWidth < screenLG) {
 			sidebarCarousel.addClass('carousel');
-			sidebarCarousel.carousel('cycle');
 		}
 
 		$(window).on('resize', function () {
 			if (window.innerWidth >= screenLG) {
-				sidebarCarousel.carousel('dispose');
 				sidebarCarousel.removeClass('carousel');
 			} else {
 				sidebarCarousel.addClass('carousel');
-				sidebarCarousel.carousel('cycle');
 			}
 		});
 	}
@@ -112,6 +109,7 @@ $(document).ready(function () {
 	if ($('.carousel--centered').length > 0) {
 		$('.carousel--centered').each(function () {
 			if ($(this).find('.carousel-item').length > 1) {
+				const loop = $(this).find('.carousel-item').length > 5;
 				// hide prev/next nav when no item prev class on page load
 				if ($(this).find('.carousel-item-prev').length === 0) {
 					$(this).find('a[data-slide="prev"]').addClass('d-none');
@@ -123,21 +121,32 @@ $(document).ready(function () {
 
 				$(this).on('slide.bs.carousel', function (e) {
 					$(this).find('a[data-slide]').removeClass('d-none');
-					if ($(this).find('.carousel-item-prev').length > 0) {
-						if (e.direction === 'left') {
-							$(this).find('.carousel-item-prev').addClass('carousel-item-prev').addClass('carousel-item-prev--out');
-						} else {
-							$(this).find('.carousel-item-prev').prev()
-								.addClass('carousel-item-prev')
-								.removeClass('carousel-item-prev--out');
-						}
-					}
-					if ($(this).find('.carousel-item-next').length > 0) {
-						if (e.direction === 'right') {
-							$(this).find('.carousel-item-next').addClass('carousel-item-next').addClass('carousel-item-next--out');
-						} else {
+					if (e.direction === 'left') {
+						$(this).find('.carousel-item-prev').addClass('carousel-item-prev').addClass('carousel-item-prev--out');
+						if ($(this).find('.carousel-item-next').next().length > 0) {
 							$(this).find('.carousel-item-next').next()
 								.addClass('carousel-item-next')
+								.removeClass('carousel-item-prev--out carousel-item-next--out');
+						} else if (loop) {
+							$(this).find('.carousel-item').first()
+								.addClass('carousel-item-next')
+								.removeClass('carousel-item-prev--out carousel-item-next--out');
+							$(this).find('.carousel-item').first().next()
+								.addClass('carousel-item-next--out')
+								.removeClass('carousel-item-prev--out');
+						}
+					} else {
+						$(this).find('.carousel-item-next').addClass('carousel-item-next').addClass('carousel-item-next--out');
+						if ($(this).find('.carousel-item-prev').prev().length > 0) {
+							$(this).find('.carousel-item-prev').prev()
+								.addClass('carousel-item-prev')
+								.removeClass('carousel-item-prev--out carousel-item-next--out');
+						} else if (loop) {
+							$(this).find('.carousel-item').last()
+								.addClass('carousel-item-prev')
+								.removeClass('carousel-item-prev--out carousel-item-next--out');
+							$(this).find('.carousel-item').last().prev()
+								.addClass('carousel-item-prev--out')
 								.removeClass('carousel-item-next--out');
 						}
 					}
@@ -146,26 +155,48 @@ $(document).ready(function () {
 				let currentIndex;
 				let prevSlide;
 				let nextSlide;
+				let prev2Slide;
+				let next2Slide;
+				let carouselLength;
 				$(this).on('slid.bs.carousel', function () {
+					carouselLength = $(this).find('.carousel-item').length;
 					currentIndex = $(this).find('.carousel-item.active').index();
-					prevSlide = $(this).find('.carousel-item').eq(currentIndex).prev();
-					nextSlide = $(this).find('.carousel-item').eq(currentIndex).next();
+					console.log('here index', currentIndex);
 
-					$(this).find('.carousel-item-prev').removeClass('carousel-item-prev');
-					$(this).find('.carousel-item-next').removeClass('carousel-item-next');
+					if (loop) {
+						prevSlide = $(this).find('.carousel-item').eq(currentIndex > 0 ? currentIndex - 1 : carouselLength - 1);
+						nextSlide = $(this).find('.carousel-item').eq(currentIndex < (carouselLength - 1) ? currentIndex + 1 : 0);
+						prev2Slide = $(this).find('.carousel-item').eq(currentIndex - 2 + (currentIndex < 1 ? carouselLength : 0));
+						next2Slide = $(this).find('.carousel-item').eq(currentIndex + 2 - (currentIndex > (carouselLength - 2) ? carouselLength : 0));
 
-					if (prevSlide.length > 0) {
 						prevSlide.addClass('carousel-item-prev');
-						prevSlide.removeClass('carousel-item-prev--out');
-					} else {
-						$(this).find('a[data-slide="prev"]').addClass('d-none');
-					}
-
-					if (nextSlide.length > 0) {
+						$(this).find('.carousel-item').not(prevSlide).removeClass('carousel-item-prev');
 						nextSlide.addClass('carousel-item-next');
-						nextSlide.removeClass('carousel-item-next--out');
+						$(this).find('.carousel-item').not(nextSlide).removeClass('carousel-item-next');
+						prev2Slide.addClass('carousel-item-prev--out');
+						$(this).find('.carousel-item').not(prev2Slide).removeClass('carousel-item-prev--out');
+						next2Slide.addClass('carousel-item-next--out');
+						$(this).find('.carousel-item').not(next2Slide).removeClass('carousel-item-next--out');
 					} else {
-						$(this).find('a[data-slide="next"]').addClass('d-none');
+						prevSlide = $(this).find('.carousel-item').eq(currentIndex).prev();
+						nextSlide = $(this).find('.carousel-item').eq(currentIndex).next();
+
+						$(this).find('.carousel-item-prev').removeClass('carousel-item-prev');
+						$(this).find('.carousel-item-next').removeClass('carousel-item-next');
+
+						if (prevSlide.length > 0) {
+							prevSlide.addClass('carousel-item-prev');
+							prevSlide.removeClass('carousel-item-prev--out');
+						} else {
+							$(this).find('a[data-slide="prev"]').addClass('d-none');
+						}
+
+						if (nextSlide.length > 0) {
+							nextSlide.addClass('carousel-item-next');
+							nextSlide.removeClass('carousel-item-next--out');
+						} else {
+							$(this).find('a[data-slide="next"]').addClass('d-none');
+						}
 					}
 				});
 			} else {
