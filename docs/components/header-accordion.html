@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" href="/cocoandeve-styleguides/css/main.critical.css">
+        <link rel="stylesheet" href="/cocoandeve-styleguides/css/main.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.6.0/cjs/popper.min.js"></script> -->
+        <script src="/cocoandeve-styleguides/js/bootstrap.js"></script>
+        <script src="/cocoandeve-styleguides/js/main.js"></script>
+    </head>
+    <body>
+        <div class="container mt-4">
+            <h1>Accordion</h1>
+
+            <ul class="accordion list-unstyled col-9 accordion--menu" id="accordionOffCanvas" role="tablist" aria-multiselectable="true">
+                <li class="card">
+                    <div class="card-header p-0" role="tab" id="headingTwo1">
+                        <a class="collapsed position-relative sni sni__chevron-down" data-toggle="collapse" data-parent="#accordionOffCanvas" href="#collapseTwo1" aria-expanded="false" aria-controls="collapseTwo1">
+                            <div class="media">
+                                <source srcset="https://via.placeholder.com/48x48" media="(min-width: 992px)">
+                                <img src="https://via.placeholder.com/48x48" alt="Generic placeholder image" class="">
+                                <div class="media-body">
+                                    <h5 class="m-0">Haircare</h5>
+                                    Like A Virgin
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div id="collapseTwo1" class="collapse" role="tabpanel" aria-labelledby="headingTwo1" data-parent="#accordionOffCanvas">
+                        <div class="card-body">
+                            <ul class="list-unstyled">
+                                <li><a href="/products/super-nourishing-coconut-fig-hair-masque">Nourishing Hair Masque </a></li>
+                                <li><a href="/collections/hair-kits-gifts" title="">Hair Kits &amp; Gifts</a></li>
+                                <li><a href="/collections/hair">Shop All Hair</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

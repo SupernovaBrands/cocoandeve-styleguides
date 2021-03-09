@@ -2,10 +2,10 @@ $supernova-icon-font: "supernova-icon";
 
 @font-face {
 	font-family: $supernova-icon-font;
-	src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?70d56510520fe982e8d7a8225626cdaa#supernova-icon") format("svg"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?70d56510520fe982e8d7a8225626cdaa") format("truetype"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff?70d56510520fe982e8d7a8225626cdaa") format("woff"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?70d56510520fe982e8d7a8225626cdaa") format("woff2");
+	src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?0b6e3be3db0d8c4b3bc573808770bdd2#supernova-icon") format("svg"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?0b6e3be3db0d8c4b3bc573808770bdd2") format("truetype"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.woff?0b6e3be3db0d8c4b3bc573808770bdd2") format("woff"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?0b6e3be3db0d8c4b3bc573808770bdd2") format("woff2");
 }
 
 .sni {
@@ -24,17 +24,22 @@ url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?70d56510520fe982e8d7a822
 }
 
 $supernova-icon-map: (
-	"chevron-next": "\f101",
-	"chevron-prev": "\f102",
-	"close": "\f103",
-	"facebook-square": "\f104",
-	"pinterest-square": "\f105",
-	"play": "\f106",
-	"plus": "\f107",
-	"search": "\f108",
-	"twitter-square": "\f109",
+	"chevron-down": "\f101",
+	"chevron-next": "\f102",
+	"chevron-prev": "\f103",
+	"close": "\f104",
+	"facebook-square": "\f105",
+	"logo": "\f106",
+	"pinterest-square": "\f107",
+	"play": "\f108",
+	"plus": "\f109",
+	"search": "\f10a",
+	"twitter-square": "\f10b",
 );
 
+.sni.sni__chevron-down:before {
+	content: map-get($supernova-icon-map, "chevron-down");
+}
 .sni.sni__chevron-next:before {
 	content: map-get($supernova-icon-map, "chevron-next");
 }
@@ -46,6 +51,9 @@ $supernova-icon-map: (
 }
 .sni.sni__facebook-square:before {
 	content: map-get($supernova-icon-map, "facebook-square");
+}
+.sni.sni__logo:before {
+	content: map-get($supernova-icon-map, "logo");
 }
 .sni.sni__pinterest-square:before {
 	content: map-get($supernova-icon-map, "pinterest-square");

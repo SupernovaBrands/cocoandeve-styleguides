@@ -1,0 +1,24 @@
+.accordion--menu {
+    .card {
+        border: none;
+
+        .card-header {
+            background-color: transparent;
+        }
+
+        img {
+            border-radius: 6px;
+        }
+    }
+
+    a{
+        color: $body-color;
+        &:before {
+
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
