@@ -28,7 +28,7 @@
         &--range {
 
             .card-body {
-                border-top-width: 5px;
+                border-top-width: calc-em(5);
                 border-top-style: solid;
                 margin-top: calc-em(10);
 
@@ -63,7 +63,7 @@
         }
 
         img {
-            border-radius: 6px;
+            border-radius: calc-em(6);
         }
 
         h5 {

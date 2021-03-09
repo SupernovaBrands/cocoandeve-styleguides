@@ -17,9 +17,9 @@
 .navbar-brand {
   color: $secondary;
   &:before {
-    font-size: 1.75em;
+    font-size: calc-em(35,20);
     @include media-breakpoint-up(lg) {
-      font-size: 2.2em;
+      font-size: calc-em(44,20);
     }
   }
 
@@ -30,7 +30,7 @@
 
 .announcement-bar {
   background-color: $primary-light;
-  padding: 0.438em 0;
+  padding: calc-em(7) 0;
   a {
     color: $secondary;
     text-decoration: underline;

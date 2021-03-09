@@ -262,7 +262,7 @@
 
 .announcement-bar {
   background-color: #F5DADF;
-  padding: 0.438em 0;
+  padding: 0.4375em 0;
 }
 
 .announcement-bar a {
@@ -290,7 +290,7 @@
 }
 
 .accordion--menu .card--range .card-body {
-  border-top-width: 5px;
+  border-top-width: 0.3125em;
   border-top-style: solid;
   margin-top: 0.625em;
 }
@@ -320,7 +320,7 @@
 }
 
 .accordion--menu .card img {
-  border-radius: 6px;
+  border-radius: 0.375em;
 }
 
 .accordion--menu .card h5 {
