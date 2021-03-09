@@ -2,10 +2,10 @@ $supernova-icon-font: "supernova-icon";
 
 @font-face {
 	font-family: $supernova-icon-font;
-	src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?70d56510520fe982e8d7a8225626cdaa#supernova-icon") format("svg"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?70d56510520fe982e8d7a8225626cdaa") format("truetype"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff?70d56510520fe982e8d7a8225626cdaa") format("woff"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?70d56510520fe982e8d7a8225626cdaa") format("woff2");
+	src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?874ba1246ff367d7eb83d95e22f6d7df#supernova-icon") format("svg"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?874ba1246ff367d7eb83d95e22f6d7df") format("truetype"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.woff?874ba1246ff367d7eb83d95e22f6d7df") format("woff"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?874ba1246ff367d7eb83d95e22f6d7df") format("woff2");
 }
 
 .sni {
@@ -28,11 +28,15 @@ $supernova-icon-map: (
 	"chevron-prev": "\f102",
 	"close": "\f103",
 	"facebook-square": "\f104",
-	"pinterest-square": "\f105",
-	"play": "\f106",
-	"plus": "\f107",
-	"search": "\f108",
-	"twitter-square": "\f109",
+	"instagram": "\f105",
+	"palm-tree": "\f106",
+	"pinterest-square": "\f107",
+	"play": "\f108",
+	"plus": "\f109",
+	"search": "\f10a",
+	"tiktok": "\f10b",
+	"twitter-square": "\f10c",
+	"youtube": "\f10d",
 );
 
 .sni.sni__chevron-next:before {
@@ -47,6 +51,12 @@ $supernova-icon-map: (
 .sni.sni__facebook-square:before {
 	content: map-get($supernova-icon-map, "facebook-square");
 }
+.sni.sni__instagram:before {
+	content: map-get($supernova-icon-map, "instagram");
+}
+.sni.sni__palm-tree:before {
+	content: map-get($supernova-icon-map, "palm-tree");
+}
 .sni.sni__pinterest-square:before {
 	content: map-get($supernova-icon-map, "pinterest-square");
 }
@@ -59,6 +69,12 @@ $supernova-icon-map: (
 .sni.sni__search:before {
 	content: map-get($supernova-icon-map, "search");
 }
+.sni.sni__tiktok:before {
+	content: map-get($supernova-icon-map, "tiktok");
+}
 .sni.sni__twitter-square:before {
 	content: map-get($supernova-icon-map, "twitter-square");
+}
+.sni.sni__youtube:before {
+	content: map-get($supernova-icon-map, "youtube");
 }

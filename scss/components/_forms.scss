@@ -72,3 +72,10 @@
 		display: block;
 	}
 }
+
+.newsletter-form {
+  button {
+    width: calc(100% + 1rem);
+    margin-left: -1rem;
+  }
+}
