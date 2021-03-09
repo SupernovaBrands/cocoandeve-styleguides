@@ -285,42 +285,50 @@
   border-bottom: none;
 }
 
-.accordion--menu .card .card-body {
-  border-top: 5px solid #E0F0E9;
-  margin-top: 0.625em;
-}
-
 .accordion--menu .card img {
   border-radius: 6px;
 }
 
 .accordion--menu .card h5 {
   font-size: 1.625em;
-  line-height: 0.80769em;
 }
 
-.accordion--menu .card .media-body {
-  margin-left: 0.625em;
-}
-
-.accordion--menu a {
+.accordion--menu .card a {
   color: #151515;
 }
 
-.accordion--menu a:hover {
+.accordion--menu .card a:hover {
   text-decoration: none;
 }
 
-.accordion--menu a.collapsed:before {
+.accordion--menu .card a.collapsed:before {
   transform: translateY(-50%);
 }
 
-.accordion--menu a:before {
+.accordion--menu .card a:before {
   font-size: 0.8125em;
   position: absolute;
-  right: 0;
+  right: 25%;
   top: 50%;
   transform: translateY(-50%) rotate(180deg);
+}
+
+.accordion--menu .card--media .media-body {
+  margin-left: 0.625em;
+  height: 100%;
+}
+
+.accordion--menu .card--media .card-body {
+  border-top: 5px solid #E0F0E9;
+  margin-top: 0.625em;
+}
+
+.accordion--menu .card--media h5 {
+  line-height: 0.80769em;
+}
+
+.accordion--menu .card--media a:before {
+  right: 0;
 }
 
 .upsell {
