@@ -265,24 +265,22 @@
 }
 
 .announcement-bar {
-  background-color: #F5DADF;
-  padding: 0.4375em 0;
+  padding: 0.375em 0;
 }
 
 .announcement-bar a {
-  color: #00635B;
-  text-decoration: underline;
   font-size: 1.125em;
 }
 
-.accordion--menu {
-  padding-left: 0.9375em;
-  padding-right: 0.9375em;
+@media (max-width: 991.98px) {
+  .accordion--menu {
+    padding-left: 0.9375em;
+    padding-right: 0.9375em;
+  }
 }
 
 .accordion--menu .card .card-header--media .media-body {
   margin-left: 0.625em;
-  height: 100%;
 }
 
 .accordion--menu .card .card-header--media h5 {
@@ -329,10 +327,6 @@
 
 .accordion--menu .card h5 {
   font-size: 1.625em;
-}
-
-.accordion--menu .card a {
-  color: #151515;
 }
 
 .accordion--menu .card a:hover {

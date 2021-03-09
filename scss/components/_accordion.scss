@@ -1,16 +1,15 @@
 .accordion--menu {
-    padding-left: calc-em(15);
-    padding-right: calc-em(15);
+    @include media-breakpoint-down(md) {
+        padding-left: calc-em(15);
+        padding-right: calc-em(15);
+    }
 
     .card {
-
         .card-header {
-
             &--media {
 
                 .media-body {
                     margin-left: calc-em(10);
-                    height: 100%;
                 }
 
                 h5 {
@@ -26,7 +25,6 @@
         }
 
         &--range {
-
             .card-body {
                 border-top-width: calc-em(5);
                 border-top-style: solid;
@@ -46,7 +44,6 @@
             }
 
             .media-body {
-
                 &--hair {
                     color: $secondary;
                 }
@@ -71,8 +68,6 @@
         }
 
         a {
-            color: $body-color;
-
             &:hover {
                 text-decoration: none;
             }
