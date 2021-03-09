@@ -13,31 +13,33 @@
         <div class="container mt-4">
             <h1>Accordion</h1>
 
-            <ul class="accordion list-unstyled col-9 accordion--menu" id="accordionOffCanvas" role="tablist" aria-multiselectable="true">
-                <li class="card">
-                    <div class="card-header p-0" role="tab" id="headingTwo1">
-                        <a class="collapsed position-relative sni sni__chevron-down" data-toggle="collapse" data-parent="#accordionOffCanvas" href="#collapseTwo1" aria-expanded="false" aria-controls="collapseTwo1">
-                            <div class="media">
-                                <source srcset="https://via.placeholder.com/48x48" media="(min-width: 992px)">
-                                <img src="https://via.placeholder.com/48x48" alt="Generic placeholder image" class="">
-                                <div class="media-body">
-                                    <h5 class="m-0">Haircare</h5>
-                                    Like A Virgin
+            <div class="row">
+                <ul class="accordion list-unstyled col-9 accordion--menu py-2" id="accordionOffCanvas" role="tablist" aria-multiselectable="true">
+                    <li class="card">
+                        <div class="card-header p-0" role="tab" id="headingTwo1">
+                            <a class="collapsed position-relative sni sni__chevron-down" data-toggle="collapse" data-parent="#accordionOffCanvas" href="#collapseTwo1" aria-expanded="false" aria-controls="collapseTwo1">
+                                <div class="media">
+                                    <source srcset="https://via.placeholder.com/50x50" media="(min-width: 992px)">
+                                    <img src="https://via.placeholder.com/50x50" alt="Generic placeholder image" >
+                                    <div class="media-body">
+                                        <span>Haircare</span>
+                                        <h5 class="m-0">Like A Virgin</h5>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div id="collapseTwo1" class="collapse" role="tabpanel" aria-labelledby="headingTwo1" data-parent="#accordionOffCanvas">
-                        <div class="card-body">
-                            <ul class="list-unstyled">
-                                <li><a href="/products/super-nourishing-coconut-fig-hair-masque">Nourishing Hair Masque </a></li>
-                                <li><a href="/collections/hair-kits-gifts" title="">Hair Kits &amp; Gifts</a></li>
-                                <li><a href="/collections/hair">Shop All Hair</a></li>
-                            </ul>
+                            </a>
                         </div>
-                    </div>
-                </li>
-            </ul>
+                        <div id="collapseTwo1" class="collapse" role="tabpanel" aria-labelledby="headingTwo1" data-parent="#accordionOffCanvas">
+                            <div class="card-body py-1">
+                                <ul class="list-unstyled">
+                                    <li class="py-1"><a href="#">Nourishing Hair Masque </a></li>
+                                    <li class="py-1"><a href="#">Hair Kits & Gifts</a></li>
+                                    <li class="py-1"><a href="#"><strong>Shop All Hair</strong></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </body>
 </html>

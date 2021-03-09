@@ -1,24 +1,53 @@
 .accordion--menu {
+    padding-left: calc-em(15);
+    padding-right: calc-em(15);
+
     .card {
         border: none;
 
         .card-header {
             background-color: transparent;
+            border-bottom: none;
+        }
+
+        .card-body {
+            border-top: 5px solid $secondary-light;
+            margin-top: calc-em(10);
         }
 
         img {
             border-radius: 6px;
         }
+
+        h5 {
+            font-size: calc-em(26);
+            line-height: calc-em(21, 26);
+        }
+
+        .media-body {
+            margin-left: calc-em(10);
+        }
     }
 
     a{
         color: $body-color;
-        &:before {
 
+        &:hover {
+            text-decoration: none;
+        }
+
+        &.collapsed {
+            &:before {
+                transform: translateY(-50%);
+            }
+        }
+
+        &:before {
+            font-size: calc-em(13);
             position: absolute;
             right: 0;
             top: 50%;
-            transform: translateY(-50%);
+            transform: translateY(-50%) rotate(180deg);
         }
     }
 }

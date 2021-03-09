@@ -271,27 +271,56 @@
   font-size: 1.125em;
 }
 
+.accordion--menu {
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+}
+
 .accordion--menu .card {
   border: none;
 }
 
 .accordion--menu .card .card-header {
   background-color: transparent;
+  border-bottom: none;
+}
+
+.accordion--menu .card .card-body {
+  border-top: 5px solid #E0F0E9;
+  margin-top: 0.625em;
 }
 
 .accordion--menu .card img {
   border-radius: 6px;
 }
 
+.accordion--menu .card h5 {
+  font-size: 1.625em;
+  line-height: 0.80769em;
+}
+
+.accordion--menu .card .media-body {
+  margin-left: 0.625em;
+}
+
 .accordion--menu a {
   color: #151515;
 }
 
+.accordion--menu a:hover {
+  text-decoration: none;
+}
+
+.accordion--menu a.collapsed:before {
+  transform: translateY(-50%);
+}
+
 .accordion--menu a:before {
+  font-size: 0.8125em;
   position: absolute;
   right: 0;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%) rotate(180deg);
 }
 
 .upsell {
