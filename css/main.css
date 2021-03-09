@@ -351,17 +351,7 @@
   transform: translateY(-50%) rotate(180deg);
 }
 
-.cart-tooltip {
-  background-color: #F3436C;
-  color: #fff;
-}
-
-.cart-tooltip a {
-  color: #fff;
-  text-decoration: underline;
-}
-
-.cart-tooltip:after {
+.tooltip--add-to-cart:after {
   content: '';
   display: inline-block;
   position: absolute;
@@ -376,7 +366,7 @@
   cursor: pointer;
 }
 
-.cart-tooltip:before {
+.tooltip--add-to-cart:before {
   position: absolute;
   right: 0.9375em;
   top: 50%;

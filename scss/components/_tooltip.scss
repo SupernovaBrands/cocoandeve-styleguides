@@ -1,11 +1,4 @@
-.cart-tooltip {
-    background-color: $primary;
-    color: #fff;
-
-    a {
-        color: #fff;
-        text-decoration: underline;
-    }
+.tooltip--add-to-cart {
 
     &:after {
         content: '';
