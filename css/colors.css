@@ -4505,7 +4505,7 @@ input[type="button"].btn-block {
 .card-header {
   padding: 0.75rem 1.25rem;
   margin-bottom: 0;
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: transparent;
   border-bottom: 0 solid rgba(0, 0, 0, 0.125);
 }
 
@@ -4515,7 +4515,7 @@ input[type="button"].btn-block {
 
 .card-footer {
   padding: 0.75rem 1.25rem;
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: transparent;
   border-top: 0 solid rgba(0, 0, 0, 0.125);
 }
 

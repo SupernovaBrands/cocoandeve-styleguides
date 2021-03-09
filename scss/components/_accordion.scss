@@ -3,11 +3,63 @@
     padding-right: calc-em(15);
 
     .card {
-        border: none;
 
         .card-header {
-            background-color: transparent;
-            border-bottom: none;
+
+            &--media {
+
+                .media-body {
+                    margin-left: calc-em(10);
+                    height: 100%;
+                }
+
+                h5 {
+                    line-height: calc-em(21, 26);
+                }
+
+                a {
+                    &:before {
+                        right: 0;
+                    }
+                }
+            }
+        }
+
+        &--range {
+
+            .card-body {
+                border-top-width: 5px;
+                border-top-style: solid;
+                margin-top: calc-em(10);
+
+                &--hair {
+                    border-color: $secondary-light;
+                }
+
+                &--tan {
+                    border-color: $sh-purple-light;
+                }
+
+                &--body {
+                    border-color: $bali-bod-blue-light;
+                }
+            }
+
+            .media-body {
+
+                &--hair {
+                    color: $secondary;
+                }
+
+                &--tan {
+                    color: $sh-purple;
+                }
+
+                &--body {
+                    color: $bali-bod-blue;
+                }
+            }
+
         }
 
         img {
@@ -40,30 +92,6 @@
             }
         }
 
-        &--media {
-
-            .media-body {
-                margin-left: calc-em(10);
-                height: 100%;
-            }
-
-            .card-body {
-                border-top: 5px solid $secondary-light;
-                margin-top: calc-em(10);
-            }
-
-            h5 {
-                line-height: calc-em(21, 26);
-            }
-
-            a {
-                &:before {
-                    right: 0;
-                }
-            }
-        }
-
     }
-
 
 }
