@@ -1,0 +1,33 @@
+.cart-tooltip {
+    background-color: $primary;
+    color: #fff;
+
+    a {
+        color: #fff;
+        text-decoration: underline;
+    }
+
+    &:after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 calc-em(11) calc-em(11) calc-em(11);
+        border-color: transparent transparent $primary transparent;
+        top: 0;
+        right: calc-em(11);
+        transform: translateY(-100%);
+        cursor: pointer;
+    }
+
+    &:before {
+        position: absolute;
+        right: calc-em(15);
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: calc-em(24);
+    }
+
+}
