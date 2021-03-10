@@ -2,10 +2,10 @@ $supernova-icon-font: "supernova-icon";
 
 @font-face {
 	font-family: $supernova-icon-font;
-	src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?d6261163600d0e27e9fd399dbf086464#supernova-icon") format("svg"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?d6261163600d0e27e9fd399dbf086464") format("truetype"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff?d6261163600d0e27e9fd399dbf086464") format("woff"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?d6261163600d0e27e9fd399dbf086464") format("woff2");
+	src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?fccaee156daba3ee6ca716ccc1da623b#supernova-icon") format("svg"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?fccaee156daba3ee6ca716ccc1da623b") format("truetype"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.woff?fccaee156daba3ee6ca716ccc1da623b") format("woff"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?fccaee156daba3ee6ca716ccc1da623b") format("woff2");
 }
 
 .sni {
@@ -24,20 +24,24 @@ url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?d6261163600d0e27e9fd399d
 }
 
 $supernova-icon-map: (
-	"chevron-down": "\f101",
-	"chevron-next": "\f102",
-	"chevron-prev": "\f103",
-	"close-circle": "\f104",
-	"close": "\f105",
-	"facebook-square": "\f106",
-	"logo": "\f107",
-	"pinterest-square": "\f108",
-	"play": "\f109",
-	"plus": "\f10a",
-	"search": "\f10b",
-	"twitter-square": "\f10c",
+	"cart": "\f101",
+	"chevron-down": "\f102",
+	"chevron-next": "\f103",
+	"chevron-prev": "\f104",
+	"close-circle": "\f105",
+	"close": "\f106",
+	"facebook-square": "\f107",
+	"logo": "\f108",
+	"pinterest-square": "\f109",
+	"play": "\f10a",
+	"plus": "\f10b",
+	"search": "\f10c",
+	"twitter-square": "\f10d",
 );
 
+.sni.sni__cart:before {
+	content: map-get($supernova-icon-map, "cart");
+}
 .sni.sni__chevron-down:before {
 	content: map-get($supernova-icon-map, "chevron-down");
 }

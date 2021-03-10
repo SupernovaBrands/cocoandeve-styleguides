@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @font-face {
   font-family: "supernova-icon";
-  src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?d6261163600d0e27e9fd399dbf086464#supernova-icon") format("svg"), url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?d6261163600d0e27e9fd399dbf086464") format("truetype"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff?d6261163600d0e27e9fd399dbf086464") format("woff"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?d6261163600d0e27e9fd399dbf086464") format("woff2");
+  src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?fccaee156daba3ee6ca716ccc1da623b#supernova-icon") format("svg"), url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?fccaee156daba3ee6ca716ccc1da623b") format("truetype"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff?fccaee156daba3ee6ca716ccc1da623b") format("woff"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?fccaee156daba3ee6ca716ccc1da623b") format("woff2");
 }
 
 .sni {
@@ -19,52 +19,56 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.sni.sni__chevron-down:before {
+.sni.sni__cart:before {
   content: "";
 }
 
-.sni.sni__chevron-next:before {
+.sni.sni__chevron-down:before {
   content: "";
 }
 
-.sni.sni__chevron-prev:before {
+.sni.sni__chevron-next:before {
   content: "";
 }
 
-.sni.sni__close-circle:before {
+.sni.sni__chevron-prev:before {
   content: "";
 }
 
-.sni.sni__close:before {
+.sni.sni__close-circle:before {
   content: "";
 }
 
-.sni.sni__facebook-square:before {
+.sni.sni__close:before {
   content: "";
 }
 
-.sni.sni__logo:before {
+.sni.sni__facebook-square:before {
   content: "";
 }
 
-.sni.sni__pinterest-square:before {
+.sni.sni__logo:before {
   content: "";
 }
 
-.sni.sni__play:before {
+.sni.sni__pinterest-square:before {
   content: "";
 }
 
-.sni.sni__plus:before {
+.sni.sni__play:before {
   content: "";
 }
 
-.sni.sni__search:before {
+.sni.sni__plus:before {
   content: "";
 }
 
-.sni.sni__twitter-square:before {
+.sni.sni__search:before {
   content: "";
+}
+
+.sni.sni__twitter-square:before {
+  content: "";
 }
 
 .btn__with-icon {
@@ -270,6 +274,11 @@
 
 .announcement-bar a {
   font-size: 1.125em;
+}
+
+.cart-drawer {
+  font-size: 1.5em;
+  text-decoration: none;
 }
 
 @media (max-width: 991.98px) {
