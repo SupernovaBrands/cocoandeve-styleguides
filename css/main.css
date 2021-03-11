@@ -1699,6 +1699,19 @@ footer hr {
   border-color: #fff;
 }
 
+@media (min-width: 992px) {
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 5fr 2.5fr 2.5fr 2.5fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "newsletter links links links" "newsletter links links links";
+  }
+}
+
+.footer-grid__newsletter {
+  grid-area: newsletter;
+}
+
 .sidebar {
   background-color: #F5DADF;
   padding: 1.875em 15px;

@@ -9980,11 +9980,6 @@ button.bg-primary-light:focus {
   display: block;
 }
 
-.newsletter-form button {
-  width: calc(100% + 1rem);
-  margin-left: -1rem;
-}
-
 .cart-bubble-div {
   position: relative;
   top: -42px;

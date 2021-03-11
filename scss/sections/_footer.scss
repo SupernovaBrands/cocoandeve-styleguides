@@ -20,3 +20,18 @@ footer {
     border-color: $white;
   }
 }
+
+.footer-grid {
+  @include media-breakpoint-up(lg) {
+    display: grid;
+    grid-template-columns: 5fr 2.5fr 2.5fr 2.5fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "newsletter links links links"
+        "newsletter links links links";
+  }
+
+  &__newsletter {
+    grid-area: newsletter;
+  }
+}
