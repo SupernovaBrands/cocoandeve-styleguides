@@ -268,90 +268,24 @@
   color: #00635B;
 }
 
-.announcement-bar {
-  padding: 0.375em 0;
-}
-
-.announcement-bar a {
-  font-size: 1.125em;
-}
-
-.cart-drawer {
+.cart-icon {
   font-size: 1.5em;
-  text-decoration: none;
 }
 
-@media (max-width: 991.98px) {
-  .accordion--menu {
-    padding-left: 0.9375em;
-    padding-right: 0.9375em;
-  }
+.accordion .card {
+  border-left: none;
+  border-right: none;
 }
 
-.accordion--menu .card .card-header--media .media-body {
-  margin-left: 0.625em;
-}
-
-.accordion--menu .card .card-header--media h5 {
-  line-height: 0.80769em;
-}
-
-.accordion--menu .card .card-header--media a:before {
-  right: 0;
-}
-
-.accordion--menu .card--range .card-body {
-  border-top-width: 0.3125em;
-  border-top-style: solid;
-  margin-top: 0.625em;
-}
-
-.accordion--menu .card--range .card-body--hair {
-  border-color: #E0F0E9;
-}
-
-.accordion--menu .card--range .card-body--tan {
-  border-color: #FFCCFF;
-}
-
-.accordion--menu .card--range .card-body--body {
-  border-color: #bec5d8;
-}
-
-.accordion--menu .card--range .media-body--hair {
-  color: #00635B;
-}
-
-.accordion--menu .card--range .media-body--tan {
-  color: #993366;
-}
-
-.accordion--menu .card--range .media-body--body {
-  color: #213E7B;
-}
-
-.accordion--menu .card img {
-  border-radius: 0.375em;
-}
-
-.accordion--menu .card h5 {
-  font-size: 1.625em;
-}
-
-.accordion--menu .card a:hover {
-  text-decoration: none;
-}
-
-.accordion--menu .card a.collapsed:before {
+.accordion .card-header:before {
+  position: absolute;
+  right: 1.25em;
+  top: 50%;
   transform: translateY(-50%);
 }
 
-.accordion--menu .card a:before {
-  font-size: 0.8125em;
-  position: absolute;
-  right: 25%;
-  top: 50%;
-  transform: translateY(-50%) rotate(180deg);
+.accordion .card-header a {
+  font-size: 1.25em;
 }
 
 .tooltip--add-to-cart:after {
@@ -375,6 +309,14 @@
   top: 50%;
   transform: translateY(-50%);
   font-size: 1.5em;
+}
+
+.announcement-bar {
+  padding: 0.375em 0;
+}
+
+.announcement-bar a {
+  font-size: 1.125em;
 }
 
 .upsell {

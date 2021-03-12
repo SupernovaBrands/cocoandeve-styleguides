@@ -12,95 +12,31 @@
     <body>
         <div class="container mt-4">
             <h1>Accordion</h1>
-
-            <div class="row">
-                <ul class="accordion list-unstyled col-9 accordion--menu py-2" id="accordionOffCanvas" role="tablist" aria-multiselectable="true">
-                    <li class="card card--range py-1">
-                        <div class="card-header card-header--media p-0" role="tab" id="headingTwo1">
-                            <a class="collapsed position-relative sni sni__chevron-down text-body" data-toggle="collapse" data-parent="#accordionOffCanvas" href="#collapseTwo1" aria-expanded="false" aria-controls="collapseTwo1">
-                                <div class="media">
-                                    <source srcset="https://via.placeholder.com/50x50/EFADBA" media="(min-width: 992px)">
-                                    <img src="https://via.placeholder.com/50x50/EFADBA" alt="Generic placeholder image" >
-                                    <div class="media-body h-100 media-body--hair">
-                                        Haircare
-                                        <h5 class="m-0">Like A Virgin</h5>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div id="collapseTwo1" class="collapse" role="tabpanel" aria-labelledby="headingTwo1" data-parent="#accordionOffCanvas">
-                            <div class="card-body card-body--hair pt-1 pb-0">
-                                <ul class="list-unstyled">
-                                    <li><a href="#" class="d-block py-1 text-body">Nourishing Hair Masque </a></li>
-                                    <li><a href="#" class="d-block py-1 text-body">Hair Kits & Gifts</a></li>
-                                    <li><a href="#" class="d-block py-1 text-body"><strong>Shop All Hair</strong></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="card card--range py-1">
-                        <div class="card-header card-header--media p-0" role="tab" id="headingTwo2">
-                            <a class="collapsed position-relative sni sni__chevron-down text-body" data-toggle="collapse" data-parent="#accordionOffCanvas" href="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">
-                                <div class="media">
-                                    <source srcset="https://via.placeholder.com/50x50/EFADBA" media="(min-width: 992px)">
-                                    <img src="https://via.placeholder.com/50x50/EFADBA" alt="Generic placeholder image" >
-                                    <div class="media-body h-100 media-body--tan">
-                                        Self Tanner
-                                        <h5 class="m-0">Sunny Honey</h5>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div id="collapseTwo2" class="collapse" role="tabpanel" aria-labelledby="headingTwo2" data-parent="#accordionOffCanvas">
-                            <div class="card-body card-body--tan pt-1 pb-0">
-                                <ul class="list-unstyled">
-                                    <li><a href="#" class="d-block py-1 text-body">Nourishing Hair Masque </a></li>
-                                    <li><a href="#" class="d-block py-1 text-body">Hair Kits & Gifts</a></li>
-                                    <li><a href="#" class="d-block py-1 text-body"><strong>Shop All Hair</strong></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="card card--range py-1">
-                        <div class="card-header card-header--media p-0" role="tab" id="headingTwo3">
-                            <a class="collapsed position-relative sni sni__chevron-down text-body" data-toggle="collapse" data-parent="#accordionOffCanvas" href="#collapseTwo3" aria-expanded="false" aria-controls="collapseTwo3">
-                                <div class="media">
-                                    <source srcset="https://via.placeholder.com/50x50/EFADBA" media="(min-width: 992px)">
-                                    <img src="https://via.placeholder.com/50x50/EFADBA" alt="Generic placeholder image" >
-                                    <div class="media-body h-100 media-body--body">
-                                        Bodycare
-                                        <h5 class="m-0">Glow Figure</h5>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div id="collapseTwo3" class="collapse" role="tabpanel" aria-labelledby="headingTwo3" data-parent="#accordionOffCanvas">
-                            <div class="card-body card-body--body pt-1 pb-0">
-                                <ul class="list-unstyled">
-                                    <li><a href="#" class="d-block py-1 text-body">Nourishing Hair Masque </a></li>
-                                    <li><a href="#" class="d-block py-1 text-body">Hair Kits & Gifts</a></li>
-                                    <li><a href="#" class="d-block py-1 text-body"><strong>Shop All Hair</strong></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="card py-1">
-                        <div class="card-header p-0" role="tab" id="headingTwo4">
-                            <a class="collapsed position-relative sni sni__chevron-down text-body" data-toggle="collapse" data-parent="#accordionOffCanvas" href="#collapseTwo4" aria-expanded="false" aria-controls="collapseTwo4">
-                                <h5 class="m-0">Info</h5>
-                            </a>
-                        </div>
-                        <div id="collapseTwo4" class="collapse" role="tabpanel" aria-labelledby="headingTwo4" data-parent="#accordionOffCanvas">
-                            <div class="card-body  pt-1 pb-0 px-0">
-                                <ul class="list-unstyled">
-                                    <li><a href="#" class="d-block py-1 text-body">Shipping & Refund</a></li>
-                                    <li><a href="#" class="d-block py-1 text-body">Contact Us</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-
+            <div class="accordion w-100" id="accordionSimple">
+                <div class="card">
+                    <div class="card-header position-relative sni sni__chevron-next" id="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <a href="#" class="text-body">Collapsible #1</a>
+                    </div>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionSimple">
+                        <div class="card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header position-relative sni sni__chevron-next" id="headingTwo" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <a href="#" class="text-body">Collapsible #2</a>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSimple">
+                        <div class="card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header position-relative sni sni__chevron-next" id="headingThree" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <a href="#" class="text-body">Collapsible #3</a>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSimple">
+                        <div class="card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
+                    </div>
+                </div>
             </div>
         </div>
     </body>
