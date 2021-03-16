@@ -1686,11 +1686,6 @@ footer a {
   font-size: 0.875rem;
 }
 
-footer a:hover {
-  color: #fff;
-  text-decoration: none;
-}
-
 footer .sni {
   font-size: 1rem;
 }
@@ -1699,17 +1694,44 @@ footer hr {
   border-color: #fff;
 }
 
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas: "newsletter newsletter" "aboutus helplinks" "support followus" "currency item";
+}
+
 @media (min-width: 992px) {
   .footer-grid {
-    display: grid;
-    grid-template-columns: 5fr 2.5fr 2.5fr 2.5fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
     grid-template-rows: auto auto;
-    grid-template-areas: "newsletter links links links" "newsletter links links links";
+    grid-template-areas: "newsletter aboutus helplinks support" "newsletter followus currency item";
+    grid-column-gap: 15px;
   }
 }
 
 .footer-grid__newsletter {
   grid-area: newsletter;
+}
+
+.footer-grid__about-us {
+  grid-area: aboutus;
+}
+
+.footer-grid__help-links {
+  grid-area: helplinks;
+}
+
+.footer-grid__followus {
+  grid-area: followus;
+}
+
+.footer-grid__currency {
+  grid-area: currency;
+}
+
+.footer-grid__support {
+  grid-area: support;
 }
 
 .sidebar {

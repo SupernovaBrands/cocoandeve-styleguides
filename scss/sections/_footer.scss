@@ -5,11 +5,6 @@ footer {
   a {
     color: $white;
     font-size: 0.875rem;
-
-    &:hover {
-      color: $white;
-      text-decoration: none;
-    }
   }
 
   .sni {
@@ -22,16 +17,43 @@ footer {
 }
 
 .footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas: "newsletter newsletter"
+      "aboutus helplinks"
+      "support followus"
+      "currency item";
+
   @include media-breakpoint-up(lg) {
-    display: grid;
-    grid-template-columns: 5fr 2.5fr 2.5fr 2.5fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
     grid-template-rows: auto auto;
-    grid-template-areas:
-        "newsletter links links links"
-        "newsletter links links links";
+    grid-template-areas: "newsletter aboutus helplinks support"
+        "newsletter followus currency item";
+    grid-column-gap: $grid-gutter-width;
   }
 
   &__newsletter {
     grid-area: newsletter;
+  }
+
+  &__about-us {
+    grid-area: aboutus;
+  }
+
+  &__help-links {
+    grid-area: helplinks;
+  }
+
+   &__followus {
+    grid-area: followus;
+  }
+
+  &__currency {
+    grid-area: currency;
+  }
+
+  &__support {
+    grid-area: support;
   }
 }
