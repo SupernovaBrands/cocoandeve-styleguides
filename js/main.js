@@ -204,4 +204,25 @@ $(document).ready(function () {
 			}
 		});
 	}
+
+	if ($('.navbar-toggler').length > 0) {
+		$('.navbar-toggler[data-trigger]').on('click', function(e){
+			e.preventDefault();
+			e.stopPropagation();
+			var offcanvas_id =  $(this).attr('data-trigger');
+			$(offcanvas_id).toggleClass('show');
+			$('body').toggleClass('offcanvas-active');
+			$('.screen-overlay').toggleClass('show');
+		});
+	}
+
+	if ($('.screen-overlay').length > 0 && $('.mobile-offcanvas')) {
+		$('.mobile-offcanvas .btn-close, .screen-overlay').click(function(e){
+			$('.screen-overlay').removeClass('show');
+			$('.mobile-offcanvas').removeClass('show');
+			$('body').removeClass('offcanvas-active');
+		});
+	}
+
+
 });

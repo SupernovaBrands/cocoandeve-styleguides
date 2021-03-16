@@ -3,12 +3,19 @@
         border-left: none;
         border-right: none;
     }
+
     .card-header {
         &:before {
             position: absolute;
             right: calc-em(20);
             top: 50%;
-            transform: translateY(-50%);
+            transform: translateY(-50%) rotate(90deg);
+        }
+
+        &.collapsed {
+            &:before {
+                transform: translateY(-50%);
+            }
         }
 
         a {

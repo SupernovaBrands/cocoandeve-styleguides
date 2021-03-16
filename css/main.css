@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @font-face {
   font-family: "supernova-icon";
-  src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?fccaee156daba3ee6ca716ccc1da623b#supernova-icon") format("svg"), url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?fccaee156daba3ee6ca716ccc1da623b") format("truetype"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff?fccaee156daba3ee6ca716ccc1da623b") format("woff"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?fccaee156daba3ee6ca716ccc1da623b") format("woff2");
+  src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?c60a1f7896a1769938a647a7e59d49eb#supernova-icon") format("svg"), url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?c60a1f7896a1769938a647a7e59d49eb") format("truetype"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff?c60a1f7896a1769938a647a7e59d49eb") format("woff"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?c60a1f7896a1769938a647a7e59d49eb") format("woff2");
 }
 
 .sni {
@@ -19,56 +19,60 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.sni.sni__cart:before {
+.sni.sni__account:before {
   content: "";
 }
 
-.sni.sni__chevron-down:before {
+.sni.sni__cart:before {
   content: "";
 }
 
-.sni.sni__chevron-next:before {
+.sni.sni__chevron-down:before {
   content: "";
 }
 
-.sni.sni__chevron-prev:before {
+.sni.sni__chevron-next:before {
   content: "";
 }
 
-.sni.sni__close-circle:before {
+.sni.sni__chevron-prev:before {
   content: "";
 }
 
-.sni.sni__close:before {
+.sni.sni__close-circle:before {
   content: "";
 }
 
-.sni.sni__facebook-square:before {
+.sni.sni__close:before {
   content: "";
 }
 
-.sni.sni__logo:before {
+.sni.sni__facebook-square:before {
   content: "";
 }
 
-.sni.sni__pinterest-square:before {
+.sni.sni__logo:before {
   content: "";
 }
 
-.sni.sni__play:before {
+.sni.sni__pinterest-square:before {
   content: "";
 }
 
-.sni.sni__plus:before {
+.sni.sni__play:before {
   content: "";
 }
 
-.sni.sni__search:before {
+.sni.sni__plus:before {
   content: "";
 }
 
-.sni.sni__twitter-square:before {
+.sni.sni__search:before {
   content: "";
+}
+
+.sni.sni__twitter-square:before {
+  content: "";
 }
 
 .btn__with-icon {
@@ -237,6 +241,7 @@
 
 .nav-link {
   color: #151515;
+  position: relative;
 }
 
 @media (min-width: 992px) {
@@ -250,22 +255,51 @@
   text-decoration: underline;
 }
 
+.nav-link:before {
+  position: absolute;
+  top: 50%;
+  left: auto;
+  transform: translateY(-50%);
+  font-size: 1.375em;
+}
+
+@media (min-width: 992px) {
+  .nav-link:before {
+    left: 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .nav-link.sni__cart {
+    font-size: 1.25em;
+  }
+  .nav-link.sni__cart:before {
+    font-size: 1.25em;
+  }
+}
+
 .navbar-brand {
   color: #00635B;
 }
 
 .navbar-brand:before {
-  font-size: 1.75em;
+  font-size: 1.7em;
 }
 
 @media (min-width: 992px) {
   .navbar-brand:before {
-    font-size: 2.2em;
+    font-size: 2.05em;
   }
 }
 
 .navbar-brand:hover {
   color: #00635B;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav .nav-link.sni {
+    padding-left: 1.6em;
+  }
 }
 
 .accordion .card {
@@ -277,6 +311,10 @@
   position: absolute;
   right: 1.25em;
   top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.accordion .card-header.collapsed:before {
   transform: translateY(-50%);
 }
 
@@ -312,6 +350,7 @@
 }
 
 .announcement-bar a {
+  color: #00635B;
   font-size: 1.125em;
 }
 

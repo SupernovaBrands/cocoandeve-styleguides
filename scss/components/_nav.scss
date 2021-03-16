@@ -1,5 +1,6 @@
 .nav-link {
   color: $body-color;
+  position: relative;
 
   @include media-breakpoint-up(lg) {
     padding: $nav-link-padding-y-lg $nav-link-padding-x-lg;
@@ -12,18 +13,50 @@
       text-decoration: underline;
     }
   }
+
+  &:before {
+    position: absolute;
+    top: 50%;
+    left: auto;
+    transform: translateY(-50%);
+    font-size: calc-em(22, 16);
+    @include media-breakpoint-up(lg) {
+      left: 0;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    &.sni__cart {
+      font-size: calc-em(20, 16);
+      &:before {
+        font-size: calc-em(20);
+      }
+    }
+  }
 }
 
 .navbar-brand {
   color: $secondary;
   &:before {
-    font-size: calc-em(35,20);
+    font-size: calc-em(34,20);
     @include media-breakpoint-up(lg) {
-      font-size: calc-em(44,20);
+      font-size: calc-em(41,20);
     }
   }
 
   &:hover {
     color: $secondary;
+  }
+}
+
+
+.navbar-expand-lg {
+
+  .navbar-nav .nav-link {
+    @include media-breakpoint-up(lg) {
+      &.sni {
+        padding-left: calc-em(32, 20);
+      }
+    }
   }
 }
