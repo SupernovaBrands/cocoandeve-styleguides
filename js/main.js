@@ -216,10 +216,10 @@ $(document).ready(function () {
 		});
 	}
 
-	if ($('.screen-overlay').length > 0 && $('.mobile-offcanvas')) {
-		$('.mobile-offcanvas .btn-close, .screen-overlay').click(function(e){
+	if ($('.screen-overlay').length > 0 && $('.mobile-menu')) {
+		$('.mobile-menu .btn-close, .screen-overlay').click(function(e){
 			$('.screen-overlay').removeClass('show');
-			$('.mobile-offcanvas').removeClass('show');
+			$('.mobile-menu').removeClass('show');
 			$('body').removeClass('offcanvas-active');
 		});
 	}
