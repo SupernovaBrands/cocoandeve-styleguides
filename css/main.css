@@ -302,24 +302,20 @@
   }
 }
 
-.accordion .card {
+.card {
   border-left: none;
   border-right: none;
 }
 
-.accordion .card-header:before {
+.card-header:before {
   position: absolute;
   right: 0;
   top: 50%;
   transform: translateY(-50%) rotate(90deg);
 }
 
-.accordion .card-header.collapsed:before {
+.card-header.collapsed:before {
   transform: translateY(-50%);
-}
-
-.accordion .card-header a {
-  font-size: 1.25em;
 }
 
 .tooltip--add-to-cart:after {

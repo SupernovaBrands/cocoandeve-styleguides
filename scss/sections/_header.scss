@@ -17,11 +17,11 @@
         position: fixed;
         right: 12.5%;
         top: calc-em(35);
-        font-size: calc-em(20, 16);
+        font-size: calc-em(20);
     }
 }
 
-.mobile-offcanvas {
+.mobile-menu {
     visibility: hidden;
     transform: translateX(-100%);
     top: 0;
@@ -29,73 +29,65 @@
     z-index: 2;
     overflow-x: hidden;
     transition: visibility .2s ease-in-out, transform .2s ease-in-out;
+    padding-left: calc-em(15);
+    padding-right: calc-em(15);
 
     &.show {
         visibility: visible;
         transform: translateX(0);
     }
-}
-
-.accordion--mobile-menu {
-    padding-left: calc-em(15);
-    padding-right: calc-em(15);
 
     .card {
         border: none;
-        .card-header {
-            border-bottom: none;
-            &:before {
-                font-size: calc-em(13);
-                transform: translateY(-50%) rotate(180deg);
-            }
+    }
 
-            .media-body {
-                margin-left: calc-em(10);
-                &--color-hair {
-                    color: $secondary;
-                }
-
-                &--color-tan {
-                    color: $sh-purple;
-                }
-
-                &--color-body {
-                    color: $bali-bod-blue;
-                }
-            }
-
-            img {
-                border-radius: calc-em(6);
-            }
-        }
-
-        .card-body {
-            &--border {
-                border-top: calc-em(5) solid $gray-500;
-                margin-top: calc-em(10);
-                &-hair {
-                    border-color: $secondary-light;
-                }
-
-                &-tan {
-                    border-color: $sh-purple-light;
-                }
-
-                &-body {
-                    border-color: $bali-bod-blue-light;
-                }
-            }
+    .card-header {
+        border-bottom: none;
+        &:before {
+            font-size: calc-em(13);
+            transform: translateY(-50%) rotate(180deg);
         }
     }
 
-    h5 {
-        font-size: calc-em(26, 16);
+    .card-body--border {
+        border-top: calc-em(5) solid $gray-500;
+        &-hair {
+            border-color: $secondary-light;
+        }
+
+        &-tan {
+            border-color: $sh-purple-light;
+        }
+
+        &-body {
+            border-color: $bali-bod-blue-light;
+        }
+    }
+
+    .color-hair {
+        color: $secondary;
+    }
+
+    .color-tan {
+        color: $sh-purple;
+    }
+
+    .color-body {
+        color: $bali-bod-blue;
     }
 
     .btn {
         font-size: calc-em(20);
-        padding-top: calc-em(5.5, 16);
-        padding-bottom: calc-em(5.5, 16);
+        padding-top: calc-em(5.5);
+        padding-bottom: calc-em(5.5);
+        border-radius: calc-em(6);
+    }
+
+    h5 {
+        font-size: calc-em(26);
+    }
+
+    img {
         border-radius: calc-em(6);
     }
 
@@ -108,149 +100,130 @@
     }
 }
 
+.nav-item {
+    padding-left: calc-em(8);
+    padding-right: calc-em(8);
+    &:first-child {
+        padding-left: 0;
+    }
 
-.navbar-nav {
-    .nav-item {
-        padding-left: calc-em(8);
-        padding-right: calc-em(8);
-        &:first-child {
-            padding-left: 0;
-        }
+    &:last-child {
+        padding-right: 0;
+    }
+}
 
-        &:last-child {
-            padding-right: 0;
-        }
+.navbar-nav .nav-link {
+    font-weight: 700;
+    text-transform: uppercase;
+    @include media-breakpoint-up(xl) {
+        font-size: calc-em(20);
+    }
 
-        .nav-link {
-            font-weight: 700;
-            text-transform: uppercase;
+    &.dropdown-toggle {
+        padding: calc-em(6.5, 20) calc-em(17, 20);
+        border-radius: calc-em(6);
+    }
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.navbar-toggler:focus {
+    outline: none;
+}
+
+.navbar-toggler-icon {
+    width: calc-em(25, 20);
+    height: 2px;
+    background-color: $body-color;
+    position: relative;
+    &::before,
+    &::after {
+        content: '';
+        height: 2px;
+        background: $body-color;
+        position: absolute;
+        left: 0;
+    }
+
+    &::before {
+        width: calc-em(21, 20);
+        top: -(calc-em(8, 20));
+    }
+
+    &::after {
+        width: calc-em(19, 20);
+        top: calc-em(8, 20);
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .dropdown:hover .dropdown-menu--mega-menu {
+        opacity: 1;
+        visibility: visible;
+        top: 100%;
+    }
+
+    .dropdown-menu--mega-menu {
+        box-shadow: 0 calc-em(4) calc-em(5) 0 rgba(0, 0, 0, .06);
+        opacity: 0;
+        visibility: hidden;
+        transition: .3s;
+        h5 > a {
+            color: $body-color;
+            border-bottom: calc-em(5, 48) solid $body-color;
             @include media-breakpoint-up(xl) {
-                font-size: calc-em(20, 16);
-            }
-
-            &.dropdown-toggle {
-                padding: calc-em(6.5, 20) calc-em(17, 20);
-                border-radius: calc-em(6);
+                font-size: calc-em(48, 20);
+                line-height: calc-em(19, 16);
             }
 
             &:hover {
                 text-decoration: none;
             }
+
+            &.color-body {
+                color: $bali-bod-blue;
+                border-color: $bali-bod-blue;
+            }
+
+            &.color-hair {
+                color: $secondary;
+                border-color: $secondary;
+            }
+
+            &.color-tan {
+                color: $sh-purple;
+                border-color: $sh-purple;
+            }
         }
-    }
-}
 
-.navbar-toggler {
-    &:focus {
-        outline: none;
-    }
+        a {
+            color: $body-color;
+            @include media-breakpoint-up(xl) {
+                font-size: calc-em(20, 16);
+            }
+            &:hover {
+                color: $primary;
+            }
+        }
 
-    .navbar-toggler-icon {
-        width: calc-em(25, 20);
-        height: 2px;
-        background-color: $body-color;
-        position: relative;
-        &::before,
-        &::after {
+        .col-3::after {
             content: '';
-            height: 2px;
-            background: $body-color;
+            width: 100%;
+            padding-bottom: 85%;
+            display: inline-block;
+            position: relative;
+            z-index: -1;
+        }
+
+        figure {
             position: absolute;
+            bottom: 0;
             left: 0;
-        }
-
-        &::before {
-            width: calc-em(21, 20);
-            top: -(calc-em(8, 20));
-        }
-
-        &::after {
-            width: calc-em(19, 20);
-            top: calc-em(8, 20);
-        }
-    }
-}
-
-@include media-breakpoint-up(lg) {
-    .dropdown {
-        &:hover .dropdown-menu--mega-menu {
-            opacity: 1;
-            visibility: visible;
-            top: 100%;
-        }
-
-        .dropdown-menu {
-            &--mega-menu {
-                box-shadow: 0 calc-em(4) calc-em(5) 0 rgba(0, 0, 0, .06);
-                opacity: 0;
-                visibility: hidden;
-                transition: .3s;
-
-                h5 {
-                    @include media-breakpoint-up(xl) {
-                        font-size: calc-em(48, 16);
-                        line-height: calc-em(19, 16);
-                        margin-bottom: calc-em(15, 16);
-                    }
-
-                    a {
-                        color: $body-color;
-                        border-bottom: calc-em(5, 48) solid $body-color;
-                        &:hover {
-                            text-decoration: none;
-                        }
-
-                        &.color {
-                            &--body {
-                                color: $bali-bod-blue;
-                                border-color: $bali-bod-blue;
-                            }
-
-                            &--hair {
-                                color: $secondary;
-                                border-color: $secondary;
-                            }
-
-                            &--tan {
-                                color: $sh-purple;
-                                border-color: $sh-purple;
-                            }
-                        }
-                    }
-                }
-
-                li {
-                    a{
-                        color: $body-color;
-                        @include media-breakpoint-up(xl) {
-                            font-size: calc-em(20, 16);
-                        }
-                        &:hover {
-                            color: $primary;
-                        }
-                    }
-                }
-
-                figure {
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    right: 0;
-                    padding-left: calc-em(15);
-                    padding-right: calc-em(15);
-                }
-            }
-
-            .col-3 {
-                &::after {
-                    content: '';
-                    width: 100%;
-                    padding-bottom: 80%;
-                    display: inline-block;
-                    position: relative;
-                    z-index: -1;
-                }
-            }
+            right: 0;
+            padding-left: calc-em(15);
+            padding-right: calc-em(15);
         }
     }
 }

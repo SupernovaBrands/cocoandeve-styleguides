@@ -1,25 +1,17 @@
-.accordion {
-    .card {
-        border-left: none;
-        border-right: none;
+.card {
+    border-left: none;
+    border-right: none;
+}
+
+.card-header {
+    &:before {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%) rotate(90deg);
     }
 
-    .card-header {
-        &:before {
-            position: absolute;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%) rotate(90deg);
-        }
-
-        &.collapsed {
-            &:before {
-                transform: translateY(-50%);
-            }
-        }
-
-        a {
-            font-size: calc-em(20);
-        }
+    &.collapsed:before {
+        transform: translateY(-50%);
     }
 }
