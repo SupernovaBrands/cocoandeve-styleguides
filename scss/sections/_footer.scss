@@ -4,7 +4,7 @@ footer {
 
   a {
     color: $white;
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
 
   .sni {
@@ -30,7 +30,7 @@ footer {
     grid-template-rows: auto auto;
     grid-template-areas: "newsletter aboutus helplinks support"
         "newsletter followus currency item";
-    grid-column-gap: $grid-gutter-width;
+    grid-column-gap: $grid-gutter-width-lg;
   }
 
   &__newsletter {

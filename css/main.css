@@ -1683,7 +1683,7 @@ footer {
 
 footer a {
   color: #fff;
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 
 footer .sni {
@@ -1706,7 +1706,7 @@ footer hr {
     grid-template-columns: 2fr 1fr 1fr 1fr;
     grid-template-rows: auto auto;
     grid-template-areas: "newsletter aboutus helplinks support" "newsletter followus currency item";
-    grid-column-gap: 15px;
+    grid-column-gap: 30px;
   }
 }
 
