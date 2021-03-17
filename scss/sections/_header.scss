@@ -171,6 +171,17 @@
         visibility: hidden;
         transition: .3s;
 
+        &::before {
+            content: '';
+            width: 100%;
+            height: calc-em(16);
+            background: transparent;
+            position: absolute;
+            top: -(calc-em(15));
+            left: 0;
+            display: inline-block;
+        }
+
         .col-3::after {
             content: '';
             width: 100%;
