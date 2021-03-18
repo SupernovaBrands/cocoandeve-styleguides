@@ -1,5 +1,5 @@
 .screen-overlay {
-    z-index: 1;
+    z-index: $zindex-sticky;
     top: 0;
     left: 0;
     opacity: 0;
@@ -26,7 +26,7 @@
     transform: translateX(-100%);
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: $zindex-fixed;
     overflow-x: hidden;
     transition: visibility .2s ease-in-out, transform .2s ease-in-out;
     padding-left: calc-em(15);
