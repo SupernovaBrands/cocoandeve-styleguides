@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @font-face {
   font-family: "supernova-icon";
-  src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?70d56510520fe982e8d7a8225626cdaa#supernova-icon") format("svg"), url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?70d56510520fe982e8d7a8225626cdaa") format("truetype"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff?70d56510520fe982e8d7a8225626cdaa") format("woff"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?70d56510520fe982e8d7a8225626cdaa") format("woff2");
+  src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?b3851a7e8330d4dcf615a63010610b53#supernova-icon") format("svg"), url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?b3851a7e8330d4dcf615a63010610b53") format("truetype"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff?b3851a7e8330d4dcf615a63010610b53") format("woff"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?b3851a7e8330d4dcf615a63010610b53") format("woff2");
 }
 
 .sni {
@@ -51,8 +51,12 @@
   content: "";
 }
 
-.sni.sni__twitter-square:before {
+.sni.sni__star:before {
   content: "";
+}
+
+.sni.sni__twitter-square:before {
+  content: "";
 }
 
 .btn__with-icon {
@@ -234,6 +238,21 @@
   text-decoration: underline;
 }
 
+.badge {
+  min-width: 3.375em;
+  line-height: 1.375em;
+  text-transform: capitalize;
+}
+
+.review-stars .sni__star {
+  display: inline-block;
+  font-size: 1.25em;
+}
+
+.star-primary {
+  color: #F3436C;
+}
+
 .upsell {
   background: #FAF9F9;
   padding: 0.625em 0.9375em;
@@ -333,6 +352,14 @@
     overflow: hidden;
     height: 2.5em;
   }
+}
+
+.review-item img {
+  border-radius: 0.375em 0.375em 0 0;
+}
+
+.review-item__content {
+  padding: 1.25em 0.75em 0.9375em;
 }
 
 .how-to {
@@ -1956,6 +1983,76 @@ footer p {
   .sidebar {
     padding: 2.5em 1.5625em;
   }
+}
+
+.hero-carousel .carousel-indicators {
+  position: absolute;
+  left: 0;
+  bottom: 1.25em;
+  margin: 0 auto;
+  padding: 0 0.6875em;
+  max-width: 67.5em;
+}
+
+@media (min-width: 992px) {
+  .hero-carousel .carousel-indicators {
+    bottom: 3em;
+  }
+}
+
+.hero-carousel .carousel-indicators li {
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.6s ease;
+  width: 1em;
+  height: 1em;
+  background-color: transparent;
+  border: 0.125em solid white;
+  box-sizing: border-box;
+}
+
+.hero-carousel .carousel-indicators li.active {
+  background-color: white;
+}
+
+.hero-carousel .carousel-caption {
+  right: 0%;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+}
+
+.hero-carousel .carousel-caption__title {
+  font-weight: 700;
+  font-size: 2em;
+}
+
+@media (min-width: 992px) {
+  .hero-carousel .carousel-caption__title {
+    font-size: 4.5em;
+  }
+}
+
+.hero-carousel .carousel-caption .h4 {
+  margin: 0 0 1.25em;
+  max-width: 12.9375em;
+}
+
+@media (min-width: 992px) {
+  .hero-carousel .carousel-caption .h4 {
+    max-width: 35.9375em;
+    margin: 0 0 2.3125em;
+  }
+}
+
+.hero-carousel .carousel-caption .btn {
+  min-width: 9.625em;
+  border-radius: 0.375em;
+  padding: 0.6875em 1.875em 0.9375em;
 }
 
 @media (min-width: 992px) {

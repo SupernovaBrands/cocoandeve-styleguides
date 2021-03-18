@@ -43,6 +43,7 @@ $h3-font-size: calc-em(18);
 $h4-font-size: calc-em(16);
 
 $h1-font-size-lg: calc-em(36);
+$h1-font-size-xl: calc-em(72);
 $h2-font-size-lg: calc-em(32);
 $h3-font-size-lg: calc-em(24);
 $h4-font-size-lg: calc-em(20);
@@ -53,9 +54,14 @@ $primary-light: #F5DADF;
 $primary-dark: #B22D4B;
 $secondary: #00635B;
 $secondary-light: #E0F0E9;
+$purple: #993366;
+$blue: #213E7B;
+
 $theme-colors: (
   'primary': $primary,
   'secondary': $secondary,
+  'purple': $purple,
+  'blue': $blue
 );
 
 $body-color: #151515;
@@ -147,3 +153,9 @@ $alert-padding-x: 1.25em;
 
 // Interactions
 $hover-transition-timing: 0.15s ease-in-out;
+
+// Badge
+$badge-font-size: 1em;
+$badge-padding-y: 0;
+$badge-padding-x: calc-em(10);
+$badge-border-radius: calc-em(6);
