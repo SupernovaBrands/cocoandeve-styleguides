@@ -212,14 +212,15 @@ $(document).ready(function () {
 			var offcanvas_id =  $(this).attr('data-trigger');
 			$(offcanvas_id).toggleClass('show');
 			$('body').toggleClass('offcanvas-active');
-			$('.screen-overlay').toggleClass('show');
+			$('.mobile-nav').toggleClass('show');
 		});
 	}
 
-	if ($('.screen-overlay').length > 0 && $('.mobile-menu')) {
-		$('.mobile-menu .btn-close, .screen-overlay').click(function(e){
-			$('.screen-overlay').removeClass('show');
-			$('.mobile-menu').removeClass('show');
+	if ($('.mobile-nav').length > 0) {
+		$('.mobile-nav').click(function(e){
+			if (e.target !== e.currentTarget) return;
+			$('.mobile-nav').removeClass('show');
+			$('.mobile-nav__menu').removeClass('show');
 			$('body').removeClass('offcanvas-active');
 		});
 	}
