@@ -4,11 +4,17 @@ footer {
 
   a {
     color: $white;
-    font-size: 1rem;
+
+    &:hover {
+      color: $white;
+      text-decoration: underline;
+    }
   }
 
   .sni {
-    font-size: 1rem;
+    &:hover {
+      text-decoration: none;
+    }
   }
 
   hr {

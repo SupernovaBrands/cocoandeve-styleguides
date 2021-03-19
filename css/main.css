@@ -1683,11 +1683,15 @@ footer {
 
 footer a {
   color: #fff;
-  font-size: 1rem;
 }
 
-footer .sni {
-  font-size: 1rem;
+footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+footer .sni:hover {
+  text-decoration: none;
 }
 
 footer hr {
