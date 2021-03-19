@@ -10290,10 +10290,8 @@ header.stickywrap:not(.stickyHeader):not(.stickyHeaderOnTop) .cart-bubble-div.mo
     z-index: -1;
   }
   .dropdown-menu--mega-menu figure {
-    position: absolute;
     bottom: 0;
     left: 0;
-    right: 0;
     padding-left: 0.9375em;
     padding-right: 0.9375em;
   }
