@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @font-face {
   font-family: "supernova-icon";
-  src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?70d56510520fe982e8d7a8225626cdaa#supernova-icon") format("svg"), url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?70d56510520fe982e8d7a8225626cdaa") format("truetype"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff?70d56510520fe982e8d7a8225626cdaa") format("woff"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?70d56510520fe982e8d7a8225626cdaa") format("woff2");
+  src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?874ba1246ff367d7eb83d95e22f6d7df#supernova-icon") format("svg"), url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?874ba1246ff367d7eb83d95e22f6d7df") format("truetype"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff?874ba1246ff367d7eb83d95e22f6d7df") format("woff"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?874ba1246ff367d7eb83d95e22f6d7df") format("woff2");
 }
 
 .sni {
@@ -35,24 +35,40 @@
   content: "";
 }
 
-.sni.sni__pinterest-square:before {
+.sni.sni__instagram:before {
   content: "";
 }
 
-.sni.sni__play:before {
+.sni.sni__palm-tree:before {
   content: "";
 }
 
-.sni.sni__plus:before {
+.sni.sni__pinterest-square:before {
   content: "";
 }
 
-.sni.sni__search:before {
+.sni.sni__play:before {
   content: "";
 }
 
-.sni.sni__twitter-square:before {
+.sni.sni__plus:before {
   content: "";
+}
+
+.sni.sni__search:before {
+  content: "";
+}
+
+.sni.sni__tiktok:before {
+  content: "";
+}
+
+.sni.sni__twitter-square:before {
+  content: "";
+}
+
+.sni.sni__youtube:before {
+  content: "";
 }
 
 .btn__with-icon {
@@ -232,6 +248,11 @@
 .nav-link:not(.link-search).active, .nav-link:not(.link-search):hover {
   color: #F3436C;
   text-decoration: underline;
+}
+
+.dropdown-item:hover {
+  color: #fff;
+  background-color: #F3436C;
 }
 
 .upsell {
@@ -1655,296 +1676,66 @@ iframe#launcher.show--popup {
   }
 }
 
-/* =====//   Footer Style   \===== */
 footer {
-  position: relative;
-  line-height: 0;
-}
-
-.footer-widget {
-  width: 100%;
-  display: inline-block;
-}
-
-.footer-widget h3 {
+  background-color: #00635B;
   color: #fff;
 }
 
-.footer-widget ul.list-unstyled {
-  width: 100%;
-  display: inline-block;
-  padding: 0px;
-  margin: 0px;
-  list-style: none;
-}
-
-.footer-widget ul.list-unstyled li {
-  width: 100%;
-  line-height: 1;
-}
-
-.footer-widget ul.list-unstyled li a {
-  font-size: 1rem;
+footer a {
   color: #fff;
-  line-height: 18px;
-  display: inline-block;
 }
 
-.footer-widget ul.list-unstyled li a:hover {
+footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+footer .sni:hover {
   text-decoration: none;
 }
 
-.footer-widget .footer-widget-text {
-  width: 100%;
-  display: inline-block;
-  padding: 3px 0 50px 0;
+footer hr {
+  border-color: #fff;
 }
 
-.footer-widget .footer-widget-text p {
-  font-size: 1rem;
-  line-height: 22px;
-  color: #fff;
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas: "newsletter newsletter" "aboutus helplinks" "support followus" "currency item";
 }
 
-.footer-widget .footer-widget-text p a {
-  text-decoration: underline;
-  color: #fff;
-  display: table;
-}
-
-.footer-widget .footer-widget-small-text {
-  width: 100%;
-  display: inline-block;
-  padding: 3px 0;
-}
-
-.footer-widget .footer-widget-small-text p {
-  font-size: 0.875rem;
-  font-weight: 400;
-  line-height: 18px;
-  color: #fff;
-}
-
-.footer-widget .footer-widget-small-text p a {
-  text-decoration: underline;
-  color: #fff;
-}
-
-.footer-widget .footer-social-widget {
-  width: 100%;
-  display: inline-block;
-}
-
-.footer-widget ul.footer-social-icons {
-  width: 100%;
-  display: inline-block;
-  padding: 10px 0 0 0;
-  margin: 0px;
-  list-style: none;
-  line-height: 0px;
-}
-
-.footer-widget ul.footer-social-icons li {
-  float: left;
-  margin: 0px;
-  padding: 0 5px;
-}
-
-.footer-widget ul.footer-social-icons li:first-child {
-  padding-left: 0px;
-}
-
-.footer-widget ul.footer-social-icons li:last-child {
-  padding-right: 0px;
-}
-
-.footer-widget ul.footer-social-icons li a {
-  line-height: 0px;
-  display: inline-block;
-}
-
-.footer-widget ul.footer-social-icons li a svg {
-  width: 20px;
-  height: 20px;
-  display: inline-block;
-  fill: #fff;
-}
-
-.footer-newsletter-widget {
-  width: 100%;
-  display: inline-block;
-}
-
-.footer-newsletter-widget .footer-widget-text {
-  padding-bottom: 10px;
-}
-
-.footer-form-widget {
-  width: 100%;
-  display: inline-block;
-  margin-bottom: 20px;
-}
-
-.footer-form-widget form {
-  width: 100%;
-  display: inline-block;
-}
-
-.footer-form-widget form .input-group {
-  padding-right: 130px;
-  margin: 0px;
-  background: #fff;
-  border-radius: 6px;
-}
-
-.footer-form-widget form .input-group input[type="email"] {
-  width: 100%;
-  border: none;
-  margin: 0px;
-  font-size: 1.25rem;
-  line-height: 30px;
-  padding: 14px 16px;
-  border-radius: 6px;
-  color: #7b7b7b;
-  font-weight: 400;
-}
-
-.footer-form-widget form .input-group button.newsletter__submit {
-  width: 130px;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #fff;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  background: #f4436c;
-  padding: 14px 10px;
-  line-height: 30px;
-  border: none;
-  border-radius: 6px;
-}
-
-form.footer-search-form {
-  width: 100%;
-  display: inline-block;
-  position: relative;
-  margin-top: 5px;
-}
-
-form.footer-search-form input[type='text'],
-form.footer-search-form input[type='search'] {
-  width: 100%;
-  height: 40px;
-  border-radius: 6px;
-  padding: 0 42px 0 16px;
-  border: none;
-  color: #adadad;
-  font-size: 1rem;
-  line-height: normal;
-  font-style: italic;
-}
-
-form.footer-search-form input[type='search'] {
-  line-height: 20px;
-}
-
-form.footer-search-form button {
-  padding: 0;
-  border: none;
-  margin: 0;
-  line-height: 0;
-  position: absolute;
-  top: 0px;
-  right: 0;
-  background: none;
-  height: 40px;
-  width: 40px;
-}
-
-.footer_bottom {
-  padding: 10px 0;
-  border-top: 1px solid #fff;
-}
-
-.footer_bottom p {
-  font-size: 1rem;
-  color: #fff;
-}
-
-@media (max-width: 1259.98px) {
-  .footer-widget ul.list-unstyled {
-    margin-bottom: 1rem;
-  }
-  .footer-widget ul.list-unstyled li a {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-  .footer-widget .footer-widget-text {
-    padding: 4px 0 10px 0;
-  }
-  .footer-widget .footer-widget-text p {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-  .footer-widget .footer-widget-small-text {
-    padding: 5px 0 15px 0;
-  }
-  .footer-widget .footer-widget-small-text p {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-  .footer-form-widget {
-    margin-bottom: 10px;
-  }
-  .footer-form-widget form {
-    width: 100%;
-    display: inline-block;
-  }
-  .footer-form-widget form .input-group {
-    padding-right: 130px;
-    margin: 0px;
-    background: #fff;
-    border-radius: 6px;
-  }
-  .footer-form-widget form .input-group input[type="email"] {
-    font-size: 1rem;
-  }
-  .footer-form-widget form .input-group button.newsletter__submit {
-    width: 130px;
-    font-size: 1rem;
-  }
-  form.footer-search-form button {
-    top: 0px;
+@media (min-width: 992px) {
+  .footer-grid {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "newsletter aboutus helplinks support" "newsletter followus currency item";
+    grid-column-gap: 30px;
   }
 }
 
-@media (max-width: 767.98px) {
-  .footer-widget ul.list-unstyled li {
-    margin-bottom: 4px;
-  }
+.footer-grid__newsletter {
+  grid-area: newsletter;
 }
 
-.footer-container .navbar-nav .nav-link {
-  color: #fff;
+.footer-grid__about-us {
+  grid-area: aboutus;
 }
 
-.footer-container .navbar-nav .nav-item {
-  padding: 0px;
+.footer-grid__help-links {
+  grid-area: helplinks;
 }
 
-.footer-container h3 {
-  font-weight: 700;
-  font-size: 2rem;
+.footer-grid__followus {
+  grid-area: followus;
 }
 
-footer p {
-  line-height: 1.3;
+.footer-grid__currency {
+  grid-area: currency;
 }
 
-.footer_bottom p svg {
-  width: 18px;
-  margin-left: 10px;
-  margin-top: -7px;
+.footer-grid__support {
+  grid-area: support;
 }
 
 .sidebar {
