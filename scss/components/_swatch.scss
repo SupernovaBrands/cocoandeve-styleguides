@@ -1,0 +1,35 @@
+.swatch {
+	flex-shrink: 0;
+	width: 2em;
+	height: 2em;
+	border-radius: 50%;
+	border: 1px solid $gray-500;
+	box-shadow: inset 0px 0px 0px 2px #fff;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 2em 2em;
+
+	&.medium {
+		background-color: #AA7878;
+	}
+	&.dark {
+		background-color: #885757;
+	}
+	&.ultra-dark {
+		background-color: #5C2323;
+	}
+
+	&.girl-print-limited-edition {
+		background-image: url("/cocoandeve-styleguides/images/hairwrap-girl-print.png");
+	}
+	&.leaf-print {
+		background-image: url("/cocoandeve-styleguides/images/hairwrap-leaf-print.png");
+	}
+	&.green,
+	&.grun {
+		background-image: url("/cocoandeve-styleguides/images/eyemask-leaf-green.svg");
+	}
+	&.pink {
+		background-image: url("/cocoandeve-styleguides/images/eyemask-leaf-pink.svg");
+	}
+}

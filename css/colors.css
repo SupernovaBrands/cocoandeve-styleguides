@@ -211,7 +211,7 @@ table {
 caption {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  color: #4E4E4E;
+  color: #A3A3A3;
   text-align: left;
   caption-side: bottom;
 }
@@ -2002,7 +2002,7 @@ textarea.form-control {
 
 .form-check-input[disabled] ~ .form-check-label,
 .form-check-input:disabled ~ .form-check-label {
-  color: #4E4E4E;
+  color: #A3A3A3;
 }
 
 .form-check-label {
@@ -9610,7 +9610,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .text-muted {
-  color: #4E4E4E !important;
+  color: #A3A3A3 !important;
 }
 
 .text-black-50 {
@@ -9825,6 +9825,10 @@ h4, .h4 {
 
 .text-underline {
   text-decoration: underline;
+}
+
+.text-linethrough {
+  text-decoration: line-through;
 }
 
 .link-secondary {

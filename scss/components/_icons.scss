@@ -2,10 +2,10 @@ $supernova-icon-font: "supernova-icon";
 
 @font-face {
 	font-family: $supernova-icon-font;
-	src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?874ba1246ff367d7eb83d95e22f6d7df#supernova-icon") format("svg"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?874ba1246ff367d7eb83d95e22f6d7df") format("truetype"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff?874ba1246ff367d7eb83d95e22f6d7df") format("woff"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?874ba1246ff367d7eb83d95e22f6d7df") format("woff2");
+	src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?e02c97dedce1f96aaf1af9805874c19f#supernova-icon") format("svg"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?e02c97dedce1f96aaf1af9805874c19f") format("truetype"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.woff?e02c97dedce1f96aaf1af9805874c19f") format("woff"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?e02c97dedce1f96aaf1af9805874c19f") format("woff2");
 }
 
 .sni {
@@ -29,14 +29,17 @@ $supernova-icon-map: (
 	"close": "\f103",
 	"facebook-square": "\f104",
 	"instagram": "\f105",
-	"palm-tree": "\f106",
-	"pinterest-square": "\f107",
-	"play": "\f108",
-	"plus": "\f109",
-	"search": "\f10a",
-	"tiktok": "\f10b",
-	"twitter-square": "\f10c",
-	"youtube": "\f10d",
+	"minus": "\f106",
+	"palm-tree": "\f107",
+	"pinterest-square": "\f108",
+	"play": "\f109",
+	"plus-circle": "\f10a",
+	"plus": "\f10b",
+	"search": "\f10c",
+	"tiktok": "\f10d",
+	"trash": "\f10e",
+	"twitter-square": "\f10f",
+	"youtube": "\f110",
 );
 
 .sni.sni__chevron-next:before {
@@ -54,6 +57,9 @@ $supernova-icon-map: (
 .sni.sni__instagram:before {
 	content: map-get($supernova-icon-map, "instagram");
 }
+.sni.sni__minus:before {
+	content: map-get($supernova-icon-map, "minus");
+}
 .sni.sni__palm-tree:before {
 	content: map-get($supernova-icon-map, "palm-tree");
 }
@@ -63,6 +69,9 @@ $supernova-icon-map: (
 .sni.sni__play:before {
 	content: map-get($supernova-icon-map, "play");
 }
+.sni.sni__plus-circle:before {
+	content: map-get($supernova-icon-map, "plus-circle");
+}
 .sni.sni__plus:before {
 	content: map-get($supernova-icon-map, "plus");
 }
@@ -71,6 +80,9 @@ $supernova-icon-map: (
 }
 .sni.sni__tiktok:before {
 	content: map-get($supernova-icon-map, "tiktok");
+}
+.sni.sni__trash:before {
+	content: map-get($supernova-icon-map, "trash");
 }
 .sni.sni__twitter-square:before {
 	content: map-get($supernova-icon-map, "twitter-square");

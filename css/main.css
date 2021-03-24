@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @font-face {
   font-family: "supernova-icon";
-  src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?874ba1246ff367d7eb83d95e22f6d7df#supernova-icon") format("svg"), url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?874ba1246ff367d7eb83d95e22f6d7df") format("truetype"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff?874ba1246ff367d7eb83d95e22f6d7df") format("woff"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?874ba1246ff367d7eb83d95e22f6d7df") format("woff2");
+  src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?e02c97dedce1f96aaf1af9805874c19f#supernova-icon") format("svg"), url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?e02c97dedce1f96aaf1af9805874c19f") format("truetype"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff?e02c97dedce1f96aaf1af9805874c19f") format("woff"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?e02c97dedce1f96aaf1af9805874c19f") format("woff2");
 }
 
 .sni {
@@ -39,36 +39,48 @@
   content: "";
 }
 
-.sni.sni__palm-tree:before {
+.sni.sni__minus:before {
   content: "";
 }
 
-.sni.sni__pinterest-square:before {
+.sni.sni__palm-tree:before {
   content: "";
 }
 
-.sni.sni__play:before {
+.sni.sni__pinterest-square:before {
   content: "";
 }
 
-.sni.sni__plus:before {
+.sni.sni__play:before {
   content: "";
 }
 
-.sni.sni__search:before {
+.sni.sni__plus-circle:before {
   content: "";
 }
 
-.sni.sni__tiktok:before {
+.sni.sni__plus:before {
   content: "";
 }
 
-.sni.sni__twitter-square:before {
+.sni.sni__search:before {
   content: "";
 }
 
-.sni.sni__youtube:before {
+.sni.sni__tiktok:before {
   content: "";
+}
+
+.sni.sni__trash:before {
+  content: "";
+}
+
+.sni.sni__twitter-square:before {
+  content: "";
+}
+
+.sni.sni__youtube:before {
+  content: "";
 }
 
 .btn__with-icon {
@@ -253,6 +265,46 @@
 .dropdown-item:hover {
   color: #fff;
   background-color: #F3436C;
+}
+
+.swatch {
+  flex-shrink: 0;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  border: 1px solid #A3A3A3;
+  box-shadow: inset 0px 0px 0px 2px #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 2em 2em;
+}
+
+.swatch.medium {
+  background-color: #AA7878;
+}
+
+.swatch.dark {
+  background-color: #885757;
+}
+
+.swatch.ultra-dark {
+  background-color: #5C2323;
+}
+
+.swatch.girl-print-limited-edition {
+  background-image: url("/cocoandeve-styleguides/images/hairwrap-girl-print.png");
+}
+
+.swatch.leaf-print {
+  background-image: url("/cocoandeve-styleguides/images/hairwrap-leaf-print.png");
+}
+
+.swatch.green, .swatch.grun {
+  background-image: url("/cocoandeve-styleguides/images/eyemask-leaf-green.svg");
+}
+
+.swatch.pink {
+  background-image: url("/cocoandeve-styleguides/images/eyemask-leaf-pink.svg");
 }
 
 .upsell {
