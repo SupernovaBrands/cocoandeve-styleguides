@@ -37,6 +37,8 @@
 
 .navbar-brand {
   color: $secondary;
+  padding-top: calc-em(10);
+  padding-bottom: calc-em(10);
   &:before {
     font-size: calc-em(34,20);
     @include media-breakpoint-up(lg) {
@@ -51,6 +53,14 @@
 
 
 .navbar-expand-lg {
+  > nav:not(.mobile-nav) {
+    padding-right: $grid-gutter-width / 2;
+    padding-left: $grid-gutter-width / 2;
+    @include media-breakpoint-up(lg) {
+      padding-left: $grid-gutter-width;
+      padding-right: $grid-gutter-width;
+    }
+  }
 
   .navbar-nav .nav-link {
     @include media-breakpoint-up(lg) {

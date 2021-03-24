@@ -213,6 +213,7 @@ $(document).ready(function () {
 			$(offcanvas_id).toggleClass('show');
 			$('body').toggleClass('offcanvas-active');
 			$('.mobile-nav').toggleClass('show');
+			$('.navbar').addClass('h-100');
 		});
 	}
 
@@ -222,8 +223,34 @@ $(document).ready(function () {
 			$('.mobile-nav').removeClass('show');
 			$('.mobile-nav__menu').removeClass('show');
 			$('body').removeClass('offcanvas-active');
+			$('.navbar').removeClass('h-100');
 		});
 	}
 
 
+	// detect scroll top or down
+	if ($('.navbar').length > 0) {
+		var lastScrollTop = 0;
+		var navbarEl = $('.navbar');
+		var announceBar = $('.announcement-bar');
+		var navbarHeight = navbarEl.height();
+
+		$(window).on('scroll', function() {
+			navbarEl.addClass('navbar--sticky');
+			scrollTop = $(this).scrollTop();
+			if (scrollTop < lastScrollTop) {
+				navbarEl.removeClass('navbar--sticky__scrolled-down').addClass('navbar--sticky__scrolled-up');
+				if (scrollTop == 0 && announceBar.length > 0) {
+					navbarEl.removeClass('navbar--sticky').removeClass('navbar--sticky__scrolled-down').removeClass('navbar--sticky__scrolled-up');
+					announceBar.removeClass('d-none');
+				}
+			} else {
+				navbarEl.removeClass('navbar--sticky__scrolled-up').addClass('navbar--sticky__scrolled-down');
+				if (announceBar.length > 0 && scrollTop > navbarHeight) {
+					announceBar.addClass('d-none');
+				}
+			}
+			lastScrollTop = scrollTop;
+		});
+	}
 });

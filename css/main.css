@@ -280,6 +280,8 @@
 
 .navbar-brand {
   color: #00635B;
+  padding-top: 0.625em;
+  padding-bottom: 0.625em;
 }
 
 .navbar-brand:before {
@@ -294,6 +296,18 @@
 
 .navbar-brand:hover {
   color: #00635B;
+}
+
+.navbar-expand-lg > nav:not(.mobile-nav) {
+  padding-right: 7.5px;
+  padding-left: 7.5px;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg > nav:not(.mobile-nav) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 @media (min-width: 992px) {
