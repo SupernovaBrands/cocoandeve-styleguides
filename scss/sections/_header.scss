@@ -1,7 +1,5 @@
 .offcanvas-active {
-    overflow-y: hidden;
-    touch-action: none;
-    -webkit-touch-action: none;
+    overflow: hidden;
     .navbar {
         height: 100%;
     }
@@ -42,6 +40,8 @@
 
 .mobile-nav {
     top: 0;
+    bottom: 0;
+    left: 0;
     opacity: 0;
     transition: opacity .2s linear;
     &:before {
