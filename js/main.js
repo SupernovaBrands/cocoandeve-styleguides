@@ -232,17 +232,23 @@ $(document).ready(function () {
 			scrollTop = $(this).scrollTop();
 			if (scrollTop < lastScrollTop) {
 				navbarEl.removeClass('scrolled-down').addClass('scrolled-up');
-				if (scrollTop == 0) {
+				if (scrollTop <= 0) {
 					navbarEl.removeClass('position-fixed');
 					if (announceBar.length > 0) {
 						announceBar.removeClass('d-none');
 					}
 				}
 			} else {
-				navbarEl.removeClass('scrolled-up').addClass('scrolled-down');
-				if (announceBar.length > 0 && scrollTop > navbarHeight) {
-					announceBar.addClass('d-none');
+				if (scrollTop <= 0) {
+					//safari fix bounce effect
+					navbarEl.removeClass('position-fixed');
+				} else {
+					navbarEl.removeClass('scrolled-up').addClass('scrolled-down');
+					if (announceBar.length > 0 && scrollTop > navbarHeight) {
+						announceBar.addClass('d-none');
+					}
 				}
+				
 			}
 			lastScrollTop = scrollTop;
 		});
