@@ -10104,7 +10104,7 @@ header.stickywrap:not(.stickyHeader):not(.stickyHeaderOnTop) .cart-bubble-div.mo
 .offcanvas-active {
   overflow-y: hidden;
   touch-action: none;
-  -ms-touch-action: none;
+  -webkit-touch-action: none;
 }
 
 .offcanvas-active .navbar {
