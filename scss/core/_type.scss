@@ -37,7 +37,7 @@ h4, .h4 {
 }
 
 .sections-heading {
-	.h2 {
+	&.h2, .h2 {
 		font-size: $h2-font-size-lg;
 		@include media-breakpoint-up(lg) {
 			font-size: $h2-font-size-xl;
