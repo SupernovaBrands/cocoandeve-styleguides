@@ -2,10 +2,10 @@ $supernova-icon-font: "supernova-icon";
 
 @font-face {
 	font-family: $supernova-icon-font;
-	src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?b3851a7e8330d4dcf615a63010610b53#supernova-icon") format("svg"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?b3851a7e8330d4dcf615a63010610b53") format("truetype"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff?b3851a7e8330d4dcf615a63010610b53") format("woff"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?b3851a7e8330d4dcf615a63010610b53") format("woff2");
+	src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?03f03d009276dda2fa8a98a49d6219b0#supernova-icon") format("svg"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?03f03d009276dda2fa8a98a49d6219b0") format("truetype"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.woff?03f03d009276dda2fa8a98a49d6219b0") format("woff"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?03f03d009276dda2fa8a98a49d6219b0") format("woff2");
 }
 
 .sni {
@@ -28,12 +28,16 @@ $supernova-icon-map: (
 	"chevron-prev": "\f102",
 	"close": "\f103",
 	"facebook-square": "\f104",
-	"pinterest-square": "\f105",
-	"play": "\f106",
-	"plus": "\f107",
-	"search": "\f108",
-	"star": "\f109",
-	"twitter-square": "\f10a",
+	"fast-delivery": "\f105",
+	"guarantee": "\f106",
+	"pinterest-square": "\f107",
+	"play": "\f108",
+	"plus": "\f109",
+	"search": "\f10a",
+	"star-box": "\f10b",
+	"star": "\f10c",
+	"twitter-square": "\f10d",
+	"winner-award": "\f10e",
 );
 
 .sni.sni__chevron-next:before {
@@ -48,6 +52,12 @@ $supernova-icon-map: (
 .sni.sni__facebook-square:before {
 	content: map-get($supernova-icon-map, "facebook-square");
 }
+.sni.sni__fast-delivery:before {
+	content: map-get($supernova-icon-map, "fast-delivery");
+}
+.sni.sni__guarantee:before {
+	content: map-get($supernova-icon-map, "guarantee");
+}
 .sni.sni__pinterest-square:before {
 	content: map-get($supernova-icon-map, "pinterest-square");
 }
@@ -60,9 +70,15 @@ $supernova-icon-map: (
 .sni.sni__search:before {
 	content: map-get($supernova-icon-map, "search");
 }
+.sni.sni__star-box:before {
+	content: map-get($supernova-icon-map, "star-box");
+}
 .sni.sni__star:before {
 	content: map-get($supernova-icon-map, "star");
 }
 .sni.sni__twitter-square:before {
 	content: map-get($supernova-icon-map, "twitter-square");
+}
+.sni.sni__winner-award:before {
+	content: map-get($supernova-icon-map, "winner-award");
 }

@@ -24,6 +24,7 @@ $spacers: (
   3: $spacer * 1.5,
   4: $spacer * 2,
   5: $spacer * 2.5,
+  6: $spacer * 3
 );
 
 // Typography
@@ -32,6 +33,7 @@ $font-family-sans-serif: "sofia-pro", "Helvetica Neue", Arial, sans-serif;
 $line-height-base: calc-em(20, $context: 16, $unit: 1);
 $line-height-lg: $line-height-base;
 $line-height-sm: calc-em(17, $context: 14, $unit: 1);
+$line-height-xl: calc-em(24, $context: 16, $unit: 1);
 
 $headings-font-weight: 700;
 $headings-line-height: $line-height-base;
@@ -44,6 +46,7 @@ $h4-font-size: calc-em(16);
 
 $h1-font-size-lg: calc-em(36);
 $h1-font-size-xl: calc-em(72);
+$h2-font-size-xl: calc-em(48);
 $h2-font-size-lg: calc-em(32);
 $h3-font-size-lg: calc-em(24);
 $h4-font-size-lg: calc-em(20);
@@ -56,12 +59,18 @@ $secondary: #00635B;
 $secondary-light: #E0F0E9;
 $purple: #993366;
 $blue: #213E7B;
+$green-light: #00B67A;
+$yellow-light: #f9eeca;
 
 $theme-colors: (
   'primary': $primary,
+  'primary-light': $primary-light,
+  'secondary-light': $secondary-light,
   'secondary': $secondary,
   'purple': $purple,
-  'blue': $blue
+  'blue': $blue,
+  'yellow-light': $yellow-light,
+  'dark': black
 );
 
 $body-color: #151515;
@@ -108,6 +117,7 @@ $btn-padding-x-icon: calc-em(20);
 
 $btn-font-size-lg: 1em;
 $btn-line-height-lg: $line-height-base;
+$btn-line-height-xl: calc-em(30);
 $btn-border-radius-lg: calc-em(8, $unit: 1rem);
 $btn-border-width-lg: 2px;
 $btn-padding-y-lg: calc-em(26 / 2);

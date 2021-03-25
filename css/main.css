@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @font-face {
   font-family: "supernova-icon";
-  src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?b3851a7e8330d4dcf615a63010610b53#supernova-icon") format("svg"), url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?b3851a7e8330d4dcf615a63010610b53") format("truetype"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff?b3851a7e8330d4dcf615a63010610b53") format("woff"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?b3851a7e8330d4dcf615a63010610b53") format("woff2");
+  src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?03f03d009276dda2fa8a98a49d6219b0#supernova-icon") format("svg"), url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?03f03d009276dda2fa8a98a49d6219b0") format("truetype"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff?03f03d009276dda2fa8a98a49d6219b0") format("woff"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?03f03d009276dda2fa8a98a49d6219b0") format("woff2");
 }
 
 .sni {
@@ -35,28 +35,44 @@
   content: "";
 }
 
-.sni.sni__pinterest-square:before {
+.sni.sni__fast-delivery:before {
   content: "";
 }
 
-.sni.sni__play:before {
+.sni.sni__guarantee:before {
   content: "";
 }
 
-.sni.sni__plus:before {
+.sni.sni__pinterest-square:before {
   content: "";
 }
 
-.sni.sni__search:before {
+.sni.sni__play:before {
   content: "";
 }
 
-.sni.sni__star:before {
+.sni.sni__plus:before {
   content: "";
 }
 
-.sni.sni__twitter-square:before {
+.sni.sni__search:before {
   content: "";
+}
+
+.sni.sni__star-box:before {
+  content: "";
+}
+
+.sni.sni__star:before {
+  content: "";
+}
+
+.sni.sni__twitter-square:before {
+  content: "";
+}
+
+.sni.sni__winner-award:before {
+  content: "";
 }
 
 .btn__with-icon {
@@ -77,6 +93,7 @@
 
 .btn-lg {
   border-width: 2px;
+  line-height: 1.875em;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
@@ -223,6 +240,128 @@
   display: block;
 }
 
+.carousel--multiple-items .carousel-item__child {
+  flex: 0 0 80%;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.carousel--multiple-items .carousel-item.active,
+.carousel--multiple-items .carousel-item-next,
+.carousel--multiple-items .carousel-item-prev {
+  display: flex;
+  left: -70%;
+}
+
+@media (min-width: 992px) {
+  .carousel--multiple-items .carousel-item.active,
+  .carousel--multiple-items .carousel-item-next,
+  .carousel--multiple-items .carousel-item-prev {
+    left: -12.5%;
+  }
+}
+
+.carousel--multiple-items .carousel-item-next,
+.carousel--multiple-items .carousel-item-prev {
+  flex: 0 0 100%;
+  visibility: hidden;
+}
+
+@media (min-width: 992px) {
+  .carousel--multiple-items .carousel-item-next,
+  .carousel--multiple-items .carousel-item-prev {
+    visibility: visible;
+  }
+}
+
+.carousel--multiple-items .carousel-item-prev:not(.carousel-item-right),
+.carousel--multiple-items .active.carousel-item-left {
+  transform: translateX(-80%);
+}
+
+@media (min-width: 992px) {
+  .carousel--multiple-items .carousel-item-prev:not(.carousel-item-right),
+  .carousel--multiple-items .active.carousel-item-left {
+    transform: translateX(-25%);
+  }
+}
+
+.carousel--multiple-items .carousel-item-next:not(.carousel-item-left),
+.carousel--multiple-items .active.carousel-item-right {
+  transform: translateX(80%);
+}
+
+@media (min-width: 992px) {
+  .carousel--multiple-items .carousel-item-next:not(.carousel-item-left),
+  .carousel--multiple-items .active.carousel-item-right {
+    transform: translateX(25%);
+  }
+}
+
+.carousel--multiple-items .carousel-control:before {
+  height: 6.25em;
+  width: 3.125em;
+}
+
+.carousel--multiple-items .carousel-control--right-lg {
+  margin: 0;
+  height: 100%;
+  opacity: .9;
+}
+
+@media (min-width: 992px) {
+  .carousel--multiple-items .carousel-control--right-lg {
+    width: 6.25em;
+    right: -1.5em;
+  }
+  .carousel--multiple-items .carousel-control--right-lg:before {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0.25em 0.25em rgba(0, 0, 0, 0.06);
+  }
+}
+
+.carousel--multiple-items .carousel-control-next:before {
+  right: 0;
+  border-radius: 9.375em 0 0 9.375em;
+}
+
+@media (min-width: 992px) {
+  .carousel--multiple-items .carousel-control-next:before {
+    border-radius: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .carousel--multiple-items .carousel-control-prev {
+    left: -1.5em;
+  }
+}
+
+.carousel--multiple-items .carousel-control-prev:before {
+  left: 0;
+  border-radius: 0 9.375em 9.375em 0;
+}
+
+@media (min-width: 992px) {
+  .carousel--multiple-items .carousel-control-prev:before {
+    border-radius: 50%;
+  }
+}
+
+.carousel--multiple-items .carousel-control-next-icon,
+.carousel--multiple-items .carousel-control-prev-icon {
+  color: black;
+  font-size: 1.375em;
+}
+
+@media (min-width: 992px) {
+  .carousel--multiple-items .carousel-control-next-icon,
+  .carousel--multiple-items .carousel-control-prev-icon {
+    font-size: 1.625em;
+  }
+}
+
 .nav-link {
   color: #151515;
 }
@@ -251,6 +390,40 @@
 
 .star-primary {
   color: #F3436C;
+}
+
+.nav-fill {
+  border: 0.0625em solid black;
+  border-radius: 0.5em;
+}
+
+.nav-fill .nav-item:first-child .nav-link {
+  border-radius: 0.375em 0 0 0.375em;
+}
+
+.nav-fill .nav-item:last-child .nav-link {
+  border-radius: 0 0.375em 0.375em 0;
+}
+
+.nav-fill .nav-item:not(:last-child) {
+  border-right: 0.0625em solid black;
+}
+
+.nav-fill .nav-link {
+  padding: 0.625em 1.125em;
+}
+
+@media (min-width: 992px) {
+  .nav-fill .nav-link {
+    padding: 0.625em 1em;
+    font-size: 1.25em;
+    line-height: 1.25em;
+  }
+}
+
+.nav-fill .nav-link.active {
+  color: white;
+  background-color: #F3436C;
 }
 
 .upsell {
@@ -2053,6 +2226,158 @@ footer p {
   min-width: 9.625em;
   border-radius: 0.375em;
   padding: 0.6875em 1.875em 0.9375em;
+}
+
+.product-card__title {
+  font-size: 1.375em;
+  padding: 0 0.625em;
+}
+
+.product-card__price .price {
+  font-size: 1.375em;
+}
+
+.product-card__price .price:not(.crossed) {
+  color: #F3436C;
+  font-weight: 700;
+}
+
+.product-card .shop-swatch {
+  display: none;
+}
+
+.product-card .shop-swatch--opened {
+  display: block;
+}
+
+.product-card__badge {
+  position: absolute;
+  width: 4.125em;
+  height: 4.125em;
+  right: 0;
+  top: 0;
+}
+
+@media (min-width: 992px) {
+  .product-card__badge {
+    width: 5.625em;
+    height: 5.625em;
+  }
+}
+
+.product-carousel .nav-item {
+  width: 33.3%;
+}
+
+.sections-heading .col_sec_des {
+  line-height: 1.5;
+}
+
+@media (min-width: 992px) {
+  .sections-heading .col_sec_des {
+    font-size: 1.25em;
+  }
+}
+
+.collection-list figcaption {
+  bottom: 50%;
+  padding: 10px 40px 10px 20px;
+  text-align: left;
+  transform: translateY(50%);
+  -webkit-transform: translateY(50%);
+  -moz-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  -o-transform: translateY(50%);
+  width: 100%;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 0;
+  top: 0;
+}
+
+@media (min-width: 992px) {
+  .collection-list figcaption {
+    top: -50%;
+    bottom: 0;
+    height: 100%;
+    max-width: 18.25em;
+  }
+}
+
+.collection-list figcaption .h2 {
+  text-shadow: 0 0 1.5em rgba(0, 48, 45, 0.25);
+  font-size: 4.5em;
+}
+
+.collection-list figcaption p.d-md-block {
+  font-size: 1.25em;
+}
+
+.collection-list figcaption .svg-btn {
+  position: absolute;
+  right: 0;
+  top: 32%;
+  right: 0.46875em;
+  margin-top: -calc-em(30);
+  font-size: 2em;
+  color: white;
+}
+
+.services-list i.sni {
+  font-size: 3em;
+}
+
+.services-list__items {
+  border-bottom: 0.0625em solid #00635B;
+}
+
+.services-list__items .title {
+  line-height: 1.5em;
+}
+
+.trustpilot-stars .h4 {
+  color: #A3A3A3;
+}
+
+.trustpilot-stars .h3 {
+  font-size: 1.25em;
+}
+
+.trustpilot-stars .brand {
+  font-size: 1em;
+}
+
+.trustpilot-stars__icons i.sni__star-box,
+.trustpilot-stars__icons i.sni__star {
+  color: #00B67A;
+  margin: 0 0.0625em;
+  font-size: 1.5em;
+}
+
+.trustpilot-stars__icons i.sni__star {
+  font-size: 1em;
+}
+
+@media (min-width: 992px) {
+  .trustpilot-stars__icons i.sni__star {
+    font-size: 1.125em;
+  }
+}
+
+.list-logo img {
+  max-height: 2.0625em;
+}
+
+.real-results .carousel--multiple-items .carousel-control-next:before,
+.real-results .carousel--multiple-items .carousel-control-prev:before {
+  background: #F5DADF;
+}
+
+.instagram-wrap figure {
+  margin: 0.3125em;
 }
 
 @media (min-width: 992px) {

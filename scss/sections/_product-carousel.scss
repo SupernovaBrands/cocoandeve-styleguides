@@ -1,0 +1,41 @@
+.product-card {
+  &__title {
+    font-size: calc-em(22);
+    padding: 0 calc-em(10);
+  }
+
+  &__price {
+    .price {
+      font-size: calc-em(22);
+      &:not(.crossed) {
+        color: $primary;
+        font-weight: $headings-font-weight;
+      }
+    }
+  }
+
+  .shop-swatch {
+    display: none;
+    &--opened {
+      display: block;
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    width: calc-em(66);
+    height: calc-em(66);
+    right: 0;
+    top: 0;
+    @include media-breakpoint-up(lg) {
+      width: calc-em(90);
+      height: calc-em(90);
+    }
+  }
+}
+
+.product-carousel {
+  .nav-item {
+    width: 33.3%;
+  }
+}

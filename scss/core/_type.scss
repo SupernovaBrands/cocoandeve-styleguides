@@ -27,3 +27,20 @@ h4, .h4 {
 		color: $primary;
 	}
 }
+
+.text-color-black {
+	color: black;
+}
+
+.text-line-through {
+	text-decoration: line-through;
+}
+
+.sections-heading {
+	.h2 {
+		font-size: $h2-font-size-lg;
+		@include media-breakpoint-up(lg) {
+			font-size: $h2-font-size-xl;
+		}
+	}
+}

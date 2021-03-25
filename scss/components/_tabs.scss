@@ -1,0 +1,36 @@
+.nav-fill {
+  border: calc-em(1) solid black;
+  border-radius: calc-em(8);
+
+  .nav-item {
+    &:first-child {
+      .nav-link {
+        border-radius: calc-em(6) 0 0 calc-em(6);
+      }
+    }
+
+    &:last-child {
+      .nav-link {
+        border-radius: 0 calc-em(6) calc-em(6) 0;
+      }
+    }
+    &:not(:last-child) {
+      border-right: calc-em(1) solid black;
+    }
+  }
+
+
+  .nav-link {
+    padding: calc-em(10) calc-em(18);
+    @include media-breakpoint-up(lg) {
+      padding: 0.625em 1em;
+      font-size: calc-em(20);
+      line-height: calc-em(20);
+    }
+
+    &.active {
+      color: white;
+      background-color: $primary;
+    }
+  }
+}
