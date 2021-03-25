@@ -1,20 +1,47 @@
 .offcanvas-active {
     overflow-y: hidden;
-}
+    .navbar {
+        height: 100%;
+    }
 
-.mobile-nav {
-    z-index: $zindex-sticky;
-    top: 0;
-    opacity: 0;
-    transition: opacity .2s linear;
-
-    &.show {
+    .mobile-nav {
         opacity: 1;
         width: 100%;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.6);
+        &__menu{
+            transform: translateX(0);
+        }
     }
+}
 
+.navbar {
+    z-index: $zindex-sticky;
+    &.position-fixed {
+        top: 0;
+        right: 0;
+        left: 0;
+        box-shadow: 0 calc-em(4) calc-em(5) 0 rgba(0, 0, 0, .06);
+        @include media-breakpoint-down(md) {
+            align-items: flex-start;
+        }
+
+        &.scrolled-down {
+            transform:translateY(-100%);
+            transition: all 0.1s ease-in-out;
+        }
+    
+        &.scrolled-up {
+            transform:translateY(0);
+            transition: all 0.4s ease-in-out;
+        }
+    }
+}
+
+.mobile-nav {
+    top: 0;
+    opacity: 0;
+    transition: opacity .2s linear;
     &:before {
         position: absolute;
         right: 12.5%;
@@ -27,14 +54,9 @@
 .mobile-nav__menu {
     padding-left: calc-em(15);
     padding-right: calc-em(15);
-    z-index: $zindex-fixed;
     transform: translateX(-100%);
     transition: transform .1s ease-in-out;
     overflow-y: auto;
-
-    &.show {
-        transform: translateX(0);
-    }
 
     .card {
         border: none;
@@ -161,26 +183,6 @@
     &::after {
         width: calc-em(19, 20);
         top: calc-em(8, 20);
-    }
-}
-
-.navbar--sticky {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: $zindex-sticky;
-    box-shadow: 0 calc-em(4) calc-em(5) 0 rgba(0, 0, 0, .06);
-    @include media-breakpoint-down(md) {
-        align-items: flex-start;
-    }
-
-    &__scrolled-down{
-        transform:translateY(-100%); transition: all 0.1s ease-in-out;
-    }
-
-    &__scrolled-up{
-        transform:translateY(0); transition: all 0.4s ease-in-out;
     }
 }
 

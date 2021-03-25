@@ -9,10 +9,10 @@
         <script type="text/javascript" src="/cocoandeve-styleguides/js/main.js"></script>
 	</head>
 	<body>
-        <header class="navbar navbar-expand-lg p-0 flex-wrap">
+        <header class="navbar navbar-expand-lg p-0 flex-lg-wrap">
             <div class="announcement-bar bg-primary-light text-center w-100">
-                <div class="container justify-content-center">
-                    <a href="#"><strong>Up to 25% off + Free Gift worth $25.40</strong></a>
+                <div class="container justify-content-center font-weight-bold">
+                    <a href="#">Up to 25% off + Free Gift worth $25.40</a>
                 </div>
             </div>
             <nav class="container bg-white">
@@ -97,8 +97,8 @@
                 <a href="#" class="nav-link sni sni__cart d-flex align-items-center justify-content-end col-1 px-0 d-lg-none"></a>
             </nav>
 
-            <nav class="mobile-nav position-fixed d-lg-none sni sni__close">
-                <ul id="navbar_main" class="mobile-nav__menu accordion position-fixed h-100 col-9 bg-white list-unstyled py-2 mb-0" role="tablist" aria-multiselectable="true">
+            <nav id="navbarMobile" class="mobile-nav position-fixed d-lg-none sni sni__close">
+                <ul id="mobileMenu" class="mobile-nav__menu accordion position-fixed h-100 col-9 bg-white list-unstyled py-2 mb-0" role="tablist" aria-multiselectable="true">
                     <li class="py-1">
                         <a href="#" class="btn btn-primary btn-block text-white">Shop All</a>
                     </li>
@@ -110,7 +110,7 @@
                                 <h5 class="m-0">Like A Virgin</h5>
                             </figcaption>
                         </figure>
-                        <ul id="hairCare" class="collapse list-unstyled card-body card-body--border card-body--border-hair p-0" role="tabpanel" aria-labelledby="headingHair" data-parent="#navbar_main">
+                        <ul id="hairCare" class="collapse list-unstyled card-body card-body--border card-body--border-hair p-0" role="tabpanel" aria-labelledby="headingHair" data-parent="#mobileMenu">
                             <li class="px-2 py-1"><a href="#">Nourishing Hair Masque </a></li>
                             <li class="px-2 py-1"><a href="#">Hair Kits & Gifts</a></li>
                             <li class="px-2 py-1"><a href="#"><strong>Shop All Hair</strong></a></li>
@@ -124,7 +124,7 @@
                                 <h5 class="m-0">Sunny Honey</h5>
                             </figcaption>
                         </figure>
-                        <ul id="skinCare" class="collapse list-unstyled card-body card-body--border card-body--border-tan p-0" role="tabpanel" aria-labelledby="headingSkin" data-parent="#navbar_main">
+                        <ul id="skinCare" class="collapse list-unstyled card-body card-body--border card-body--border-tan p-0" role="tabpanel" aria-labelledby="headingSkin" data-parent="#mobileMenu">
                             <li class="px-2 py-1"><a href="#">Nourishing Hair Masque </a></li>
                             <li class="px-2 py-1"><a href="#">Hair Kits & Gifts</a></li>
                             <li class="px-2 py-1"><a href="#"><strong>Shop All Hair</strong></a></li>
@@ -138,7 +138,7 @@
                                 <h5 class="m-0">Glow Figure</h5>
                             </figcaption>
                         </figure>
-                        <ul id="bodyCare" class="collapse list-unstyled card-body card-body--border card-body--border-body p-0" role="tabpanel" aria-labelledby="headingTwo" data-parent="#navbar_main">
+                        <ul id="bodyCare" class="collapse list-unstyled card-body card-body--border card-body--border-body p-0" role="tabpanel" aria-labelledby="headingTwo" data-parent="#mobileMenu">
                             <li class="px-2 py-1"><a href="#">Nourishing Hair Masque </a></li>
                             <li class="px-2 py-1"><a href="#">Hair Kits & Gifts</a></li>
                             <li class="px-2 py-1"><a href="#"><strong>Shop All Hair</strong></a></li>
@@ -152,7 +152,7 @@
                                 <h5 class="m-0">Value Kits</h5>
                             </figcaption>
                         </figure>
-                        <ul id="collapseBundle" class="collapse list-unstyled card-body card-body--border p-0" role="tabpanel" aria-labelledby="headingBundles" data-parent="#navbar_main">
+                        <ul id="collapseBundle" class="collapse list-unstyled card-body card-body--border p-0" role="tabpanel" aria-labelledby="headingBundles" data-parent="#mobileMenu">
                             <li class="px-2 py-1"><a href="#">Nourishing Hair Masque </a></li>
                             <li class="px-2 py-1"><a href="#">Hair Kits & Gifts</a></li>
                             <li class="px-2 py-1"><a href="#"><strong>Shop All Hair</strong></a></li>
@@ -177,7 +177,7 @@
                         <div class="card-header position-relative collapsed sni sni__chevron-down p-0" id="headingInfo" data-toggle="collapse" data-target="#collapseInfo" aria-expanded="false" aria-controls="collapseInfo">
                             <h5 class="m-0">Info</h5>
                         </div>
-                        <ul id="collapseInfo" class="collapse card-body pt-1 pb-0 list-unstyled" role="tabpanel" aria-labelledby="headingInfo" data-parent="#navbar_main">
+                        <ul id="collapseInfo" class="collapse card-body pt-1 pb-0 list-unstyled" role="tabpanel" aria-labelledby="headingInfo" data-parent="#mobileMenu">
                             <li class="py-1"><a href="#">Shipping & Refund</a></li>
                             <li class="py-1"><a href="#">Contact Us</a></li>
                         </ul>
@@ -186,7 +186,7 @@
                         <div class="card-header position-relative collapsed sni sni__chevron-down p-0" id="headingCurrency" data-toggle="collapse" data-target="#currencySwitcher" aria-expanded="false" aria-controls="currencySwitcher">
                             <h5 class="m-0">US (USD)</h5>
                         </div>
-                        <ul id="currencySwitcher" class="collapse card-body pt-1 pb-0 list-unstyled" role="tabpanel" aria-labelledby="headingCurrency" data-parent="#navbar_main">
+                        <ul id="currencySwitcher" class="collapse card-body pt-1 pb-0 list-unstyled" role="tabpanel" aria-labelledby="headingCurrency" data-parent="#mobileMenu">
                             <li class="py-1"><a href="#">United Kingdom (GBP)</a></li>
                             <li class="py-1"><a href="#">USA (USD)</a></li>
                             <li class="py-1"><a href="#">Canada (CAD)</a></li>

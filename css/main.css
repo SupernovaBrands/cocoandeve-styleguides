@@ -2093,7 +2093,7 @@ footer p {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto auto;
-    grid-template-areas: "post1 post1 search" "post1 post1 sidebar" "post2 post3 sidebar";
+    grid-template-areas: "post1 post1 search" "post1 post1 sidebar" "post2 post3 sidebar";
   }
 }
 
@@ -2122,7 +2122,7 @@ footer p {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: auto auto;
-    grid-template-areas: "content sidebar" "comment sidebar";
+    grid-template-areas: "content sidebar" "comment sidebar";
   }
 }
 

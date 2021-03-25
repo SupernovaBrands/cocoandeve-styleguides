@@ -205,28 +205,20 @@ $(document).ready(function () {
 		});
 	}
 
-	if ($('.navbar-toggler').length > 0) {
-		$('.navbar-toggler[data-trigger]').on('click', function(e){
-			e.preventDefault();
-			e.stopPropagation();
-			var offcanvas_id =  $(this).attr('data-trigger');
-			$(offcanvas_id).toggleClass('show');
-			$('body').toggleClass('offcanvas-active');
-			$('.mobile-nav').toggleClass('show');
-			$('.navbar').addClass('h-100');
-		});
+	//mobile menu toggle
+	function mobileMenuToggler() {
+		$('.mobile-nav').toggleClass('show');
+		$('body').toggleClass('offcanvas-active');
 	}
 
-	if ($('.mobile-nav').length > 0) {
-		$('.mobile-nav').click(function(e){
-			if (e.target !== e.currentTarget) return;
-			$('.mobile-nav').removeClass('show');
-			$('.mobile-nav__menu').removeClass('show');
-			$('body').removeClass('offcanvas-active');
-			$('.navbar').removeClass('h-100');
-		});
-	}
+	$('.navbar-toggler').on('click', function(e){
+		mobileMenuToggler();
+	});
 
+	$('.mobile-nav').click(function(e){
+		if (e.target !== e.currentTarget) return;
+		mobileMenuToggler();
+	});
 
 	// detect scroll top or down
 	if ($('.navbar').length > 0) {
@@ -236,16 +228,18 @@ $(document).ready(function () {
 		var navbarHeight = navbarEl.height();
 
 		$(window).on('scroll', function() {
-			navbarEl.addClass('navbar--sticky');
+			navbarEl.addClass('position-fixed');
 			scrollTop = $(this).scrollTop();
 			if (scrollTop < lastScrollTop) {
-				navbarEl.removeClass('navbar--sticky__scrolled-down').addClass('navbar--sticky__scrolled-up');
-				if (scrollTop == 0 && announceBar.length > 0) {
-					navbarEl.removeClass('navbar--sticky').removeClass('navbar--sticky__scrolled-down').removeClass('navbar--sticky__scrolled-up');
-					announceBar.removeClass('d-none');
+				navbarEl.removeClass('scrolled-down').addClass('scrolled-up');
+				if (scrollTop == 0) {
+					navbarEl.removeClass('position-fixed');
+					if (announceBar.length > 0) {
+						announceBar.removeClass('d-none');
+					}
 				}
 			} else {
-				navbarEl.removeClass('navbar--sticky__scrolled-up').addClass('navbar--sticky__scrolled-down');
+				navbarEl.removeClass('scrolled-up').addClass('scrolled-down');
 				if (announceBar.length > 0 && scrollTop > navbarHeight) {
 					announceBar.addClass('d-none');
 				}

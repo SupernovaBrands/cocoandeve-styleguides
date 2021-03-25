@@ -10105,18 +10105,52 @@ header.stickywrap:not(.stickyHeader):not(.stickyHeaderOnTop) .cart-bubble-div.mo
   overflow-y: hidden;
 }
 
-.mobile-nav {
-  z-index: 1020;
-  top: 0;
-  opacity: 0;
-  transition: opacity .2s linear;
+.offcanvas-active .navbar {
+  height: 100%;
 }
 
-.mobile-nav.show {
+.offcanvas-active .mobile-nav {
   opacity: 1;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
+}
+
+.offcanvas-active .mobile-nav__menu {
+  transform: translateX(0);
+}
+
+.navbar {
+  z-index: 1020;
+}
+
+.navbar.position-fixed {
+  top: 0;
+  right: 0;
+  left: 0;
+  box-shadow: 0 0.25em 0.3125em 0 rgba(0, 0, 0, 0.06);
+}
+
+@media (max-width: 991.98px) {
+  .navbar.position-fixed {
+    align-items: flex-start;
+  }
+}
+
+.navbar.position-fixed.scrolled-down {
+  transform: translateY(-100%);
+  transition: all 0.1s ease-in-out;
+}
+
+.navbar.position-fixed.scrolled-up {
+  transform: translateY(0);
+  transition: all 0.4s ease-in-out;
+}
+
+.mobile-nav {
+  top: 0;
+  opacity: 0;
+  transition: opacity .2s linear;
 }
 
 .mobile-nav:before {
@@ -10130,14 +10164,9 @@ header.stickywrap:not(.stickyHeader):not(.stickyHeaderOnTop) .cart-bubble-div.mo
 .mobile-nav__menu {
   padding-left: 0.9375em;
   padding-right: 0.9375em;
-  z-index: 1030;
   transform: translateX(-100%);
   transition: transform .1s ease-in-out;
   overflow-y: auto;
-}
-
-.mobile-nav__menu.show {
-  transform: translateX(0);
 }
 
 .mobile-nav__menu .card {
@@ -10271,31 +10300,6 @@ header.stickywrap:not(.stickyHeader):not(.stickyHeaderOnTop) .cart-bubble-div.mo
 .navbar-toggler-icon::after {
   width: 0.95em;
   top: 0.4em;
-}
-
-.navbar--sticky {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1020;
-  box-shadow: 0 0.25em 0.3125em 0 rgba(0, 0, 0, 0.06);
-}
-
-@media (max-width: 991.98px) {
-  .navbar--sticky {
-    align-items: flex-start;
-  }
-}
-
-.navbar--sticky__scrolled-down {
-  transform: translateY(-100%);
-  transition: all 0.1s ease-in-out;
-}
-
-.navbar--sticky__scrolled-up {
-  transform: translateY(0);
-  transition: all 0.4s ease-in-out;
 }
 
 @media (min-width: 992px) {
