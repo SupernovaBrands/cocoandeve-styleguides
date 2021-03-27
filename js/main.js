@@ -211,7 +211,7 @@ $(document).ready(function () {
 		$('body').toggleClass('offcanvas-active');
 	}
 
-	$('.navbar-toggler').on('click', function(e){
+	$('.navbar-toggler').on('click', function(){
 		mobileMenuToggler();
 	});
 
@@ -248,7 +248,7 @@ $(document).ready(function () {
 						announceBar.addClass('d-none');
 					}
 				}
-				
+
 			}
 			lastScrollTop = scrollTop;
 		});

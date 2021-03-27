@@ -241,13 +241,6 @@
 
 .nav-link {
   color: #151515;
-  position: relative;
-}
-
-@media (min-width: 992px) {
-  .nav-link {
-    padding: 0.75em 0.75em;
-  }
 }
 
 .nav-link:not(.link-search).active, .nav-link:not(.link-search):hover {
@@ -255,7 +248,7 @@
   text-decoration: underline;
 }
 
-.nav-link:before {
+.nav-link:not(.link-search):before {
   position: absolute;
   top: 50%;
   left: auto;
@@ -264,7 +257,7 @@
 }
 
 @media (min-width: 992px) {
-  .nav-link:before {
+  .nav-link:not(.link-search):before {
     left: 0;
   }
 }
@@ -288,7 +281,7 @@
   font-size: 1.7em;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1260px) {
   .navbar-brand:before {
     font-size: 2.05em;
   }
@@ -298,21 +291,27 @@
   color: #00635B;
 }
 
-.navbar-expand-lg > nav:not(.mobile-nav) {
-  padding-right: 7.5px;
-  padding-left: 7.5px;
-}
-
-@media (min-width: 992px) {
+@media (max-width: 991.98px) {
   .navbar-expand-lg > nav:not(.mobile-nav) {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-right: 7.5px;
+    padding-left: 7.5px;
   }
 }
 
 @media (min-width: 992px) {
-  .navbar-expand-lg .navbar-nav .nav-link.sni {
+  .navbar-expand-lg .nav-link.dropdown-toggle {
+    padding: 0.325em 0.85em;
+    border-radius: 0.375em;
+  }
+  .navbar-expand-lg .nav-link:not(.dropdown-toggle) {
+    padding-left: 0.375em;
+    padding-right: 0.375em;
+  }
+  .navbar-expand-lg .nav-link:not(.dropdown-toggle).sni {
     padding-left: 1.6em;
+  }
+  .navbar-expand-lg .nav-link:hover {
+    text-decoration: none;
   }
 }
 
@@ -2093,7 +2092,7 @@ footer p {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto auto;
-    grid-template-areas: "post1 post1 search" "post1 post1 sidebar" "post2 post3 sidebar";
+    grid-template-areas: "post1 post1 search" "post1 post1 sidebar" "post2 post3 sidebar";
   }
 }
 
@@ -2122,7 +2121,7 @@ footer p {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: auto auto;
-    grid-template-areas: "content sidebar" "comment sidebar";
+    grid-template-areas: "content sidebar" "comment sidebar";
   }
 }
 
