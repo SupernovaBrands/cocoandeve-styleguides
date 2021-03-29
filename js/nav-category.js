@@ -18,4 +18,24 @@ $(document).ready(function () {
 			});
 		}
 	}
+
+	const navCategorySticky = $('.nav-category-two');
+	if (navCategorySticky.length > 0) {
+		const linkSearch = navCategorySticky.find('.link-search');
+		if (linkSearch) {
+			linkSearch.on('click', function () {
+				if ($(this).hasClass('opened')) {
+					navCategorySticky.find('.search-box').addClass('d-none');
+					navCategorySticky.find('.nav').removeClass('d-none');
+				} else {
+					navCategorySticky.find('.search-box').removeClass('d-none');
+					navCategorySticky.find('.nav').addClass('d-none');
+				}
+			});
+			navCategorySticky.find('.search-box__close').on('click', function () {
+				navCategorySticky.find('.search-box').addClass('d-none');
+				navCategorySticky.find('.nav').removeClass('d-none');
+			});
+		}
+	}
 });

@@ -9,40 +9,48 @@
 	<link rel="stylesheet" href="/cocoandeve-styleguides/css/main.critical.css">
 	<link rel="stylesheet" href="/cocoandeve-styleguides/css/main.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<!-- <script src="/cocoandeve-styleguides/js/bootstrap.js"></script> -->
+  <script src="/cocoandeve-styleguides/js/bootstrap.js"></script>
 	<script src="/cocoandeve-styleguides/js/main.js"></script>
+  <script src="/cocoandeve-styleguides/js/nav-category.js"></script>
 </head>
 
 <body>
 	<div class="mobile-wrapper">
 		<div class="container mt-4">
-      <ul class="mt-1 mb-2 nav nav-category justify-content-center align-items-center sticky-top blog-subnavigation no-gutters">
-        <li class="nav-item"><a href="/cocoandeve-styleguides/docs/templates/blog.html" class="nav-link active pb-0 pt-0">ALL</a></li>
-        <li class="nav-item"><a href="/cocoandeve-styleguides/docs/templates/blog-filtered.html" class="nav-link pb-0 pt-0">HAIR</a></li>
-        <li class="nav-item"><a href="/cocoandeve-styleguides/docs/templates/blog-filtered.html" class="nav-link pb-0 pt-0">TAN</a></li>
-        <li class="nav-item"><a href="/cocoandeve-styleguides/docs/templates/blog-filtered.html" class="nav-link pb-0 pt-0">BODY</a></li>
-        <li class="nav-item"><a href="#blog__how-to" class="scroll-to-element nav-link pb-0 pt-0">HOW TO'S</a></li>
-        <li class="nav-item d-lg-none">
-          <a href="#" class="nav-link pb-0 pt-0 link-search sni sni__search text-primary">
-          </a>
-        </li>
-        <div class="search-box input-group input-group-sm d-lg-none d-none mt-2">
+     <div class="text-center nav-category-two p-1 d-lg-none no-gutters__in-container">
+        <ul class="nav justify-content-center align-items-center p-1">
+          <li class="nav-item">
+            <a href="#" class="nav-link active pb-0 pt-0">ALL</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link pb-0 pt-0">HAIR</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link pb-0 pt-0">TAN</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link pb-0 pt-0">BODY</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link pb-0 pt-0">HOW TO'S</a>
+          </li>
+          <li class="nav-item d-lg-none">
+            <a href="#" class="nav-link pb-0 pt-0 link-search sni sni__search text-primary">
+            </a>
+          </li>
+        </ul>
+        <div class="search-box input-group input-group-sm d-lg-none d-none">
           <div class="input-group-prepend">
-            <span class="input-group-text search-box__icon">
-              <i class="sni sni__search"></i>
-            </span>
+            <a class="input-group-text search-box__close align-items-center search-box__icon" href="#" role="button">
+              <i class="sni sni__close text-primary"></i>
+            </a>
           </div>
           <input type="text" class="form-control" id="exampleSearch" placeholder="Search">
           <div class="input-group-append">
-            <a class="input-group-text search-box__close align-items-center" href="#" role="button">
-              <i class="sni sni__close"></i>
-            </a>
-          </div>
-          <div class="input-group-append">
-            <button class="search-box-btn btn btn-primary" type="submit">Search</button>
+            <button class="search-box-btn btn btn-primary d-block" type="submit">Search</button>
           </div>
         </div>
-      </ul>
+      </div>
 			<nav aria-label="breadcrumb">
 				<ol class="breadcrumb mb-0">
 					<li class="breadcrumb-item">

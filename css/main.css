@@ -260,6 +260,10 @@
   text-decoration: underline;
 }
 
+.nav-category-two {
+  background-color: #F5DADF;
+}
+
 .dropdown-item:hover {
   color: #fff;
   background-color: #F3436C;

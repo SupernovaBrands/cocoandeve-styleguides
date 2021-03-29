@@ -204,4 +204,6 @@ $(document).ready(function () {
 			}
 		});
 	}
+
+	// Nav Category Sticky on Scroll
 });
