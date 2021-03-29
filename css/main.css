@@ -135,6 +135,10 @@
   border-width: 0.125em;
 }
 
+.breadcrumb {
+  flex-wrap: nowrap;
+}
+
 @media (min-width: 992px) {
   .breadcrumb {
     font-size: 1em;
@@ -143,6 +147,12 @@
 
 .breadcrumb-item__link {
   color: #151515;
+}
+
+.breadcrumb-item:last-child {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .social-icon-primary {
@@ -1801,6 +1811,10 @@ footer hr {
 
 .article__content img, .article__content iframe {
   max-width: 100%;
+}
+
+.blog-subnavigation {
+  background-color: #F5DADF;
 }
 
 /*# sourceMappingURL=main.css.map */
