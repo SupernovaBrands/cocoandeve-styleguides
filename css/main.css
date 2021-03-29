@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @font-face {
   font-family: "supernova-icon";
-  src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?c60a1f7896a1769938a647a7e59d49eb#supernova-icon") format("svg"), url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?c60a1f7896a1769938a647a7e59d49eb") format("truetype"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff?c60a1f7896a1769938a647a7e59d49eb") format("woff"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?c60a1f7896a1769938a647a7e59d49eb") format("woff2");
+  src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?e05e12c46cd64f7a20b2b452bf8a5ca4#supernova-icon") format("svg"), url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?e05e12c46cd64f7a20b2b452bf8a5ca4") format("truetype"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff?e05e12c46cd64f7a20b2b452bf8a5ca4") format("woff"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?e05e12c46cd64f7a20b2b452bf8a5ca4") format("woff2");
 }
 
 .sni {
@@ -27,52 +27,56 @@
   content: "";
 }
 
-.sni.sni__chevron-down:before {
+.sni.sni__chevron-down-lg:before {
   content: "";
 }
 
-.sni.sni__chevron-next:before {
+.sni.sni__chevron-down:before {
   content: "";
 }
 
-.sni.sni__chevron-prev:before {
+.sni.sni__chevron-next:before {
   content: "";
 }
 
-.sni.sni__close-circle:before {
+.sni.sni__chevron-prev:before {
   content: "";
 }
 
-.sni.sni__close:before {
+.sni.sni__close-circle:before {
   content: "";
 }
 
-.sni.sni__facebook-square:before {
+.sni.sni__close:before {
   content: "";
 }
 
-.sni.sni__logo:before {
+.sni.sni__facebook-square:before {
   content: "";
 }
 
-.sni.sni__pinterest-square:before {
+.sni.sni__logo:before {
   content: "";
 }
 
-.sni.sni__play:before {
+.sni.sni__pinterest-square:before {
   content: "";
 }
 
-.sni.sni__plus:before {
+.sni.sni__play:before {
   content: "";
 }
 
-.sni.sni__search:before {
+.sni.sni__plus:before {
   content: "";
 }
 
-.sni.sni__twitter-square:before {
+.sni.sni__search:before {
   content: "";
+}
+
+.sni.sni__twitter-square:before {
+  content: "";
 }
 
 .btn__with-icon {
@@ -248,18 +252,9 @@
   text-decoration: underline;
 }
 
-.nav-link:not(.link-search):before {
-  position: absolute;
-  top: 50%;
-  left: auto;
-  transform: translateY(-50%);
+.nav-link.sni:before {
   font-size: 1.375em;
-}
-
-@media (min-width: 992px) {
-  .nav-link:not(.link-search):before {
-    left: 0;
-  }
+  margin-right: 0.3125em;
 }
 
 @media (max-width: 767.98px) {
@@ -299,16 +294,9 @@
 }
 
 @media (min-width: 992px) {
-  .navbar-expand-lg .nav-link.dropdown-toggle {
-    padding: 0.325em 0.85em;
-    border-radius: 0.375em;
-  }
-  .navbar-expand-lg .nav-link:not(.dropdown-toggle) {
+  .navbar-expand-lg .nav-link:not(.mega-menu__button) {
     padding-left: 0.375em;
     padding-right: 0.375em;
-  }
-  .navbar-expand-lg .nav-link:not(.dropdown-toggle).sni {
-    padding-left: 1.6em;
   }
   .navbar-expand-lg .nav-link:hover {
     text-decoration: none;

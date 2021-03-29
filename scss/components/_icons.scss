@@ -2,10 +2,10 @@ $supernova-icon-font: "supernova-icon";
 
 @font-face {
 	font-family: $supernova-icon-font;
-	src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?c60a1f7896a1769938a647a7e59d49eb#supernova-icon") format("svg"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?c60a1f7896a1769938a647a7e59d49eb") format("truetype"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff?c60a1f7896a1769938a647a7e59d49eb") format("woff"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?c60a1f7896a1769938a647a7e59d49eb") format("woff2");
+	src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?e05e12c46cd64f7a20b2b452bf8a5ca4#supernova-icon") format("svg"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?e05e12c46cd64f7a20b2b452bf8a5ca4") format("truetype"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.woff?e05e12c46cd64f7a20b2b452bf8a5ca4") format("woff"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?e05e12c46cd64f7a20b2b452bf8a5ca4") format("woff2");
 }
 
 .sni {
@@ -26,18 +26,19 @@ url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?c60a1f7896a1769938a647a7
 $supernova-icon-map: (
 	"account": "\f101",
 	"cart": "\f102",
-	"chevron-down": "\f103",
-	"chevron-next": "\f104",
-	"chevron-prev": "\f105",
-	"close-circle": "\f106",
-	"close": "\f107",
-	"facebook-square": "\f108",
-	"logo": "\f109",
-	"pinterest-square": "\f10a",
-	"play": "\f10b",
-	"plus": "\f10c",
-	"search": "\f10d",
-	"twitter-square": "\f10e",
+	"chevron-down-lg": "\f103",
+	"chevron-down": "\f104",
+	"chevron-next": "\f105",
+	"chevron-prev": "\f106",
+	"close-circle": "\f107",
+	"close": "\f108",
+	"facebook-square": "\f109",
+	"logo": "\f10a",
+	"pinterest-square": "\f10b",
+	"play": "\f10c",
+	"plus": "\f10d",
+	"search": "\f10e",
+	"twitter-square": "\f10f",
 );
 
 .sni.sni__account:before {
@@ -45,6 +46,9 @@ $supernova-icon-map: (
 }
 .sni.sni__cart:before {
 	content: map-get($supernova-icon-map, "cart");
+}
+.sni.sni__chevron-down-lg:before {
+	content: map-get($supernova-icon-map, "chevron-down-lg");
 }
 .sni.sni__chevron-down:before {
 	content: map-get($supernova-icon-map, "chevron-down");

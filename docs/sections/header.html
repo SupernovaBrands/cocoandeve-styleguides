@@ -16,25 +16,25 @@
                 </div>
             </div>
             <nav class="container bg-white">
-                <button class="navbar-toggler text-left col-1 px-0" type="button" data-trigger="#navbar_main">
-                    <span class="navbar-toggler-icon d-block"></span>
+                <button class="navbar-toggler text-left col-1 px-0" type="button">
+                    <span class="d-block"></span>
                 </button>
 
                 <ul class="navbar-collapse collapse w-100 px-0 navbar-nav align-items-center">
-                    <li class="nav-item">
-                        <a class="nav-link dropdown-toggle text-uppercase font-weight-bold text-white btn btn-primary mr-1" href="#" aria-haspopup="true" aria-expanded="false" data-target="megaMenuDropdown">Shop</a>
-                        <div id="megaMenuDropdown" class="dropdown-menu dropdown-menu--mega-menu bg-white mt-0 py-0 w-100 d-block">
+                    <li class="nav-item mega-menu__button">
+                        <a class="btn btn-primary position-relative align-items-center pr-4 mr-1 sni sni__chevron-down" href="#">Shop</a>
+                        <div class="mega-menu position-absolute bg-white mt-0 py-0 w-100 d-block">
                             <div class="container">
                                 <div class="row flex-grow-1 pb-1">
                                     <div class="col-3">
-                                        <h5 class="h1 mb-1"><a href="#" class="color-hair">Hair</a></h5>
+                                        <h5 class="h1 mb-1"><a href="#" class="hair">Hair</a></h5>
                                         <ul class="list-unstyled">
                                             <li><a href="#">Nourishing Hair Masque</a></li>
                                             <li><a href="#">Hair Kits & Gifts</a></li>
                                         </ul>
                                     </div>
                                     <div class="col-3">
-                                        <h5 class="h1 mb-1"><a href="#" class="color-tan">Tan</a></h5>
+                                        <h5 class="h1 mb-1"><a href="#" class="tan">Tan</a></h5>
                                         <ul class="list-unstyled">
                                             <li><a href="#">Bali Bronzing Foam</a></li>
                                             <li><a href="#">Bali Bronzing Bundle</a></li>
@@ -45,7 +45,7 @@
                                         </ul>
                                     </div>
                                     <div class="col-3">
-                                        <h5 class="h1 mb-1"><a href="#" class="color-body">Body</a></h5>
+                                        <h5 class="h1 mb-1"><a href="#" class="body">Body</a></h5>
                                         <ul class="list-unstyled">
                                             <li><a href="#">Bali Buffing Sugar</a></li>
                                             <li><a href="#">Bounce Body Masque</a></li>
@@ -73,39 +73,39 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-uppercase font-weight-bold" href="#">Blog</a>
+                        <a class="nav-link h4 m-0 text-uppercase font-weight-bold" href="#">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-uppercase font-weight-bold" href="#">FAQ</a>
+                        <a class="nav-link h4 m-0 text-uppercase font-weight-bold" href="#">FAQ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-uppercase font-weight-bold" href="#">Results IRL</a>
+                        <a class="nav-link h4 m-0 text-uppercase font-weight-bold" href="#">Results IRL</a>
                     </li>
                 </ul>
                 <a href="#" class="navbar-brand justify-content-center sni sni__logo"></a>
                 <ul class="navbar-collapse collapse justify-content-end w-100 px-0 navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link position-relative text-uppercase font-weight-bold sni sni__account" href="#">Account</a>
+                        <a class="nav-link h4 m-0 text-uppercase font-weight-bold sni sni__account" href="#">Account</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-uppercase font-weight-bold" href="#">Track My Order</a>
+                        <a class="nav-link h4 m-0 text-uppercase font-weight-bold" href="#">Track My Order</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link position-relative text-uppercase font-weight-bold sni sni__cart" href="#">Cart (10)</a>
+                        <a class="nav-link h4 m-0 text-uppercase font-weight-bold sni sni__cart" href="#">Cart (10)</a>
                     </li>
                 </ul>
                 <a href="#" class="nav-link sni sni__cart d-flex align-items-center justify-content-end col-1 px-0 d-lg-none"></a>
             </nav>
 
-            <nav id="navbarMobile" class="mobile-nav position-fixed d-lg-none sni sni__close">
+            <nav class="mobile-nav position-fixed d-lg-none sni sni__close">
                 <ul id="mobileMenu" class="mobile-nav__menu accordion position-fixed h-100 col-9 bg-white list-unstyled py-2 mb-0" role="tablist" aria-multiselectable="true">
                     <li class="py-1">
                         <a href="#" class="btn btn-primary btn-block text-white">Shop All</a>
                     </li>
                     <li class="card py-1">
-                        <figure id="headingHair" class="media card-header position-relative collapsed sni sni__chevron-down p-0" data-toggle="collapse" data-target="#hairCare" aria-expanded="false" aria-controls="hairCare">
+                        <figure id="headingHair" class="media card-header position-relative collapsed sni sni__chevron-down-lg p-0" data-toggle="collapse" data-target="#hairCare" aria-expanded="false" aria-controls="hairCare">
                             <img src="https://via.placeholder.com/50x50/EFADBA" alt="Generic placeholder image" >
-                            <figcaption class="media-body ml-1 color-hair">
+                            <figcaption class="media-body ml-1 hair">
                                 Haircare
                                 <h5 class="h1 m-0">Like A Virgin</h5>
                             </figcaption>
@@ -117,9 +117,9 @@
                         </ul>
                     </li>
                     <li class="card py-1">
-                        <figure id="headingSkin" class="media card-header position-relative collapsed sni sni__chevron-down p-0" data-toggle="collapse" data-target="#skinCare" aria-expanded="false" aria-controls="skinCare">
+                        <figure id="headingSkin" class="media card-header position-relative collapsed sni sni__chevron-down-lg p-0" data-toggle="collapse" data-target="#skinCare" aria-expanded="false" aria-controls="skinCare">
                             <img src="https://via.placeholder.com/50x50/EFADBA" alt="Generic placeholder image" >
-                            <figcaption class="media-body ml-1 color-tan">
+                            <figcaption class="media-body ml-1 tan">
                                 Self Tanner
                                 <h5 class="h1 m-0">Sunny Honey</h5>
                             </figcaption>
@@ -131,9 +131,9 @@
                         </ul>
                     </li>
                     <li class="card py-1">
-                        <figure id="headingBody" class="media card-header position-relative collapsed sni sni__chevron-down p-0" data-toggle="collapse" data-target="#bodyCare" aria-expanded="false" aria-controls="bodyCare">
+                        <figure id="headingBody" class="media card-header position-relative collapsed sni sni__chevron-down-lg p-0" data-toggle="collapse" data-target="#bodyCare" aria-expanded="false" aria-controls="bodyCare">
                             <img src="https://via.placeholder.com/50x50/EFADBA" alt="Generic placeholder image" >
-                            <figcaption class="media-body ml-1 color-body">
+                            <figcaption class="media-body ml-1 body">
                                 Bodycare
                                 <h5 class="h1 m-0">Glow Figure</h5>
                             </figcaption>
@@ -145,7 +145,7 @@
                         </ul>
                     </li>
                     <li class="card py-1">
-                        <figure id="headingBundles" class="media card-header position-relative collapsed sni sni__chevron-down p-0" data-toggle="collapse" data-target="#collapseBundle" aria-expanded="false" aria-controls="collapseBundle">
+                        <figure id="headingBundles" class="media card-header position-relative collapsed sni sni__chevron-down-lg p-0" data-toggle="collapse" data-target="#collapseBundle" aria-expanded="false" aria-controls="collapseBundle">
                             <img src="https://via.placeholder.com/50x50/EFADBA" alt="Generic placeholder image" >
                             <figcaption class="media-body ml-1">
                                 Bundles
@@ -174,7 +174,7 @@
                         <h5 class="h1 m-0"><a href="#">Result IRL</a></h5>
                     </li>
                     <li class="card py-1">
-                        <div class="card-header position-relative collapsed sni sni__chevron-down p-0" id="headingInfo" data-toggle="collapse" data-target="#collapseInfo" aria-expanded="false" aria-controls="collapseInfo">
+                        <div class="card-header position-relative collapsed sni sni__chevron-down-lg p-0" id="headingInfo" data-toggle="collapse" data-target="#collapseInfo" aria-expanded="false" aria-controls="collapseInfo">
                             <h5 class="h1 m-0">Info</h5>
                         </div>
                         <ul id="collapseInfo" class="collapse card-body pt-1 pb-0 list-unstyled" role="tabpanel" aria-labelledby="headingInfo" data-parent="#mobileMenu">
@@ -183,7 +183,7 @@
                         </ul>
                     </li>
                     <li class="card py-1">
-                        <div class="card-header position-relative collapsed sni sni__chevron-down p-0" id="headingCurrency" data-toggle="collapse" data-target="#currencySwitcher" aria-expanded="false" aria-controls="currencySwitcher">
+                        <div class="card-header position-relative collapsed sni sni__chevron-down-lg p-0" id="headingCurrency" data-toggle="collapse" data-target="#currencySwitcher" aria-expanded="false" aria-controls="currencySwitcher">
                             <h5 class="h1 m-0">US (USD)</h5>
                         </div>
                         <ul id="currencySwitcher" class="collapse card-body pt-1 pb-0 list-unstyled" role="tabpanel" aria-labelledby="headingCurrency" data-parent="#mobileMenu">
