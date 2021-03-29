@@ -1803,4 +1803,51 @@ footer hr {
   max-width: 100%;
 }
 
+.collection-header {
+  background-color: white;
+}
+
+@media (max-width: 991.98px) {
+  .collection-header {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .collection-header {
+    margin-right: -40%;
+  }
+}
+
+.collection-sidebar {
+  background-color: #FAF9F9;
+}
+
+.collection-sidebar a {
+  color: #151515;
+}
+
+.collection-sidebar a.active {
+  color: #F3436C;
+}
+
+.collection-grid__select {
+  width: 100%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url("https://cdn.shopify.com/s/files/1/0286/1327/9779/t/29/assets/select-arrow.png?v=9487355171690857461");
+  background-position: center right 0.625em;
+  background-repeat: no-repeat;
+  background-size: 1rem;
+}
+
+@media (min-width: 992px) {
+  .collection-grid__select {
+    width: auto;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
