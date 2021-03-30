@@ -83,4 +83,8 @@
 		-webkit-appearance: none;
 		margin: 0;
 	}
+
+	button:focus {
+		outline: none;
+	}
 }

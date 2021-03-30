@@ -25,6 +25,15 @@
 			border-bottom: $border-width solid $border-color;
 		}
 	}
+
+	&__discount-toggle:before {
+		content: "-\a0";
+		display: inline-block;
+	}
+
+	&__discount-toggle.collapsed:before {
+		content: "+\a0";
+	}
 }
 
 .cart-item {
@@ -33,10 +42,7 @@
 	}
 
 	&__remove {
-		font-size: calc-em(20);
-		@include media-breakpoint-up(lg) {
-			font-size: calc-em(24);
-		}
+		font-size: calc-em(24);
 	}
 }
 

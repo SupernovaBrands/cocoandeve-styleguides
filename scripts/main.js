@@ -1,3 +1,21 @@
+import '~mod/globals';
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Cart from '~comp/cart';
+
+if ($('#cart-drawer').length > 0) {
+	ReactDOM.render(
+		React.createElement(Cart, {}, null),
+		document.querySelector('#cart-drawer'),
+	);
+}
+
+const navCategory = $('.nav-category');
+if (navCategory.length > 0) {
+	import(/* webpackChunkName: 'nav-category' */ '~mod/nav-category');
+}
+
 $(document).ready(function () {
 	const screenLG = 992;
 
@@ -161,7 +179,6 @@ $(document).ready(function () {
 				$(this).on('slid.bs.carousel', function () {
 					carouselLength = $(this).find('.carousel-item').length;
 					currentIndex = $(this).find('.carousel-item.active').index();
-					console.log('here index', currentIndex);
 
 					if (loop) {
 						prevSlide = $(this).find('.carousel-item').eq(currentIndex > 0 ? currentIndex - 1 : carouselLength - 1);
@@ -206,17 +223,6 @@ $(document).ready(function () {
 	}
 
 	// Cart drawer
-	$('.cart-item__variants').on('show.bs.collapse', function () {
-		$(`.cart-item__edit[href="#${$(this).attr('id')}"]`).text('Done');
-	});
-	$('.cart-item__variants').on('hidden.bs.collapse', function () {
-		$(`.cart-item__edit[href="#${$(this).attr('id')}"]`).text('Edit');
-	});
-	$('.cart-item__variants .swatch').on('click', function () {
-		$(this).addClass('border-primary');
-		$(this).siblings('.swatch').removeClass('border-primary');
-	});
-
 	$('.manual-gwp__item .btn').on('click', function () {
 		if ($(this).hasClass('btn-primary')) {
 			$(this).removeClass('btn-primary');
@@ -227,17 +233,5 @@ $(document).ready(function () {
 			$(this).removeClass('btn-outline-primary');
 			$(this).text('Remove');
 		}
-	});
-
-	$('.cart-drawer__discount__apply').on('click', function () {
-		$(this).parent('.input-group-append').addClass('d-none');
-		$(this).parent().siblings('input').attr('readonly', true);
-		$('.cart-drawer__discount__remove').removeClass('d-none');
-	});
-
-	$('.cart-drawer__discount__remove').on('click', function () {
-		$(this).addClass('d-none');
-		$('.cart-drawer__discount__apply').parent('.input-group-append').removeClass('d-none');
-		$('.cart-drawer__discount__apply').parent().siblings('input').removeAttr('readonly');
 	});
 });

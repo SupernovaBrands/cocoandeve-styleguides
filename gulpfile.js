@@ -7,6 +7,9 @@ const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
 
+const webpack = require('webpack');
+const webpackConfig = require('./webpack.config.js');
+
 const cssDir = 'css';
 
 const files = {
@@ -34,6 +37,18 @@ const scssFiles = () => src(files.scss)
 	.pipe(sourcemaps.write('.'))
 	.pipe(dest(cssDir))
 	.pipe(browserSync.stream());
+
+const webpackBuild = (isWatch = false) => () => new Promise((resolve, reject) => {
+	webpack({ ...webpackConfig, watch: isWatch }, (err, stats) => {
+		if (err) {
+			return reject(err);
+		}
+		if (stats.hasErrors()) {
+			return reject(new Error(stats.compilation.errors.join('\n')));
+		}
+		return resolve();
+	});
+});
 
 const watchFiles = (done) => {
 	watch(files.allScss, parallel(scssFiles));
@@ -64,9 +79,14 @@ const clean = () => del([cssDir]);
 task(clean);
 task(scssFiles);
 task(initServer);
+task('webpack', webpackBuild());
+task('webpackWatch', webpackBuild(true));
 task(
 	'build',
-	parallel(scssFiles),
+	parallel(scssFiles, 'webpack'),
 );
-task('watch', series('build', watchFiles));
+task('watch', series(
+	parallel(scssFiles, 'webpackWatch'),
+	watchFiles,
+));
 task('default', series('clean', 'watch', 'initServer'));

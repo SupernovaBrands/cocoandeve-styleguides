@@ -9907,6 +9907,16 @@ button.bg-primary-light:focus {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
+.btn-unstyled {
+  border: 0;
+  padding: 0;
+  background: none;
+}
+
+.btn-unstyled:focus {
+  outline: none;
+}
+
 .box-primary {
   text-align: center;
 }

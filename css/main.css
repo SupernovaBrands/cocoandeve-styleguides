@@ -279,6 +279,14 @@
   background-size: 2em 2em;
 }
 
+.swatch:focus {
+  outline: none;
+}
+
+.swatch.disabled, .swatch[disabled] {
+  opacity: 0.5;
+}
+
 .swatch.medium {
   background-color: #AA7878;
 }

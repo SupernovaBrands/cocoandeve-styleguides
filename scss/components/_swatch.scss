@@ -9,6 +9,15 @@
 	background-position: center;
 	background-size: 2em 2em;
 
+	&:focus {
+		outline: none; // to remove focus border on button
+	}
+
+	&.disabled,
+	&[disabled] {
+		opacity: 0.5;
+	}
+
 	&.medium {
 		background-color: #AA7878;
 	}

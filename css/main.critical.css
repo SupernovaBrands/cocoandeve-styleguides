@@ -9907,6 +9907,16 @@ button.bg-primary-light:focus {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
+.btn-unstyled {
+  border: 0;
+  padding: 0;
+  background: none;
+}
+
+.btn-unstyled:focus {
+  outline: none;
+}
+
 .form-control:disabled::-moz-placeholder, .form-control[readonly]::-moz-placeholder {
   color: #D0D0D0;
 }
@@ -9992,6 +10002,10 @@ button.bg-primary-light:focus {
 .quantity-box input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.quantity-box button:focus {
+  outline: none;
 }
 
 .cart-bubble-div {
@@ -10940,18 +10954,21 @@ button.navbar-toggler.navbar-toggler-outside.open {
   border-bottom: 1px solid #dee2e6;
 }
 
+.cart-drawer__discount-toggle:before {
+  content: "-\a0";
+  display: inline-block;
+}
+
+.cart-drawer__discount-toggle.collapsed:before {
+  content: "+\a0";
+}
+
 .cart-item h4 {
   font-size: 1.25em;
 }
 
 .cart-item__remove {
-  font-size: 1.25em;
-}
-
-@media (min-width: 992px) {
-  .cart-item__remove {
-    font-size: 1.5em;
-  }
+  font-size: 1.5em;
 }
 
 .manual-gwp__container {
