@@ -260,8 +260,14 @@
   text-decoration: underline;
 }
 
-.nav-category-two {
+.nav-category__two {
   background-color: #F5DADF;
+}
+
+.nav-category__sticky {
+  z-index: 1020;
+  top: 0px;
+  display: none;
 }
 
 .dropdown-item:hover {
@@ -1815,10 +1821,6 @@ footer hr {
 
 .article__content img, .article__content iframe {
   max-width: 100%;
-}
-
-.blog-subnavigation {
-  background-color: #F5DADF;
 }
 
 /*# sourceMappingURL=main.css.map */

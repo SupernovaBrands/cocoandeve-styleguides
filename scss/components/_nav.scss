@@ -14,6 +14,14 @@
   }
 }
 
-.nav-category-two {
-  background-color: $primary-light;
+.nav-category {
+  &__two {
+    background-color: $primary-light;
+  }
+
+  &__sticky {
+    z-index: $zindex-sticky;
+    top: 0px;
+    display: none;
+  }
 }
