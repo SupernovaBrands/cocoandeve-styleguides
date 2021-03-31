@@ -206,7 +206,7 @@ $(document).ready(function () {
 	}
 
 	// Nav Category Sticky on Scroll
-	const navCategoryTwo = $('.nav-category__sticky');
+	const navCategoryTwo = $('.nav-category--sticky');
 	var scrollTop = 0;
 	$(window).on('scroll', function() {		
 		scrollTop = $(this).scrollTop();

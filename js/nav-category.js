@@ -19,7 +19,7 @@ $(document).ready(function () {
 		}
 	}
 
-	const navCategorySticky = $('.nav-category__sticky');
+	const navCategorySticky = $('.nav-category--sticky');
 	if (navCategorySticky.length > 0) {
 		const linkSearch = navCategorySticky.find('.link-search');
 		if (linkSearch) {

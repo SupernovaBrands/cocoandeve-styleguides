@@ -260,11 +260,11 @@
   text-decoration: underline;
 }
 
-.nav-category__pink {
+.nav-category--pink {
   background-color: #F5DADF;
 }
 
-.nav-category__sticky {
+.nav-category--sticky {
   z-index: 1020;
   top: 0px;
   display: none;
