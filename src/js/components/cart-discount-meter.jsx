@@ -21,7 +21,7 @@ const CartDiscountMeter = (props) => {
 	return (
 		<>
 			<h4>{text}</h4>
-			<div className="progress">
+			<div className="progress mb-3">
 				<div
 					className="progress-bar"
 					style={{ width: `${progress}%` }}

@@ -9,10 +9,6 @@
 		outline: none;
 	}
 
-	.modal-body {
-		overflow-y: scroll;
-	}
-
 	hr {
 		border-color: $border-color;
 	}
@@ -33,6 +29,12 @@
 
 	&__discount-toggle.collapsed:before {
 		content: "+\a0";
+	}
+
+	&__services .sni:before {
+		color: $secondary;
+		font-size: calc-em(50);
+		margin-bottom: map-get($spacers, 1) / 2;
 	}
 }
 

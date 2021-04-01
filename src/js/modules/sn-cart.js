@@ -24,6 +24,8 @@ products.forEach((product) => {
 		comparePrices[variant.id] = variant.compare_at_price ? parseFloat(variant.compare_at_price) : 0;
 		productQuantities[variant.id] = variant.inventory_quantity;
 		varIdtoHandle[variant.id] = product.handle;
+		// eslint-disable-next-line no-param-reassign
+		variant.available = variant.inventory_quantity > 0;
 
 		if (product.product_type === 'HERO') {
 			if ((product.title.toLowerCase().includes('bundle') && variant.title.toLowerCase().includes('bundle'))

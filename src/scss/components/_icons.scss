@@ -2,10 +2,10 @@ $supernova-icon-font: "supernova-icon";
 
 @font-face {
 	font-family: $supernova-icon-font;
-	src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?e02c97dedce1f96aaf1af9805874c19f#supernova-icon") format("svg"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?e02c97dedce1f96aaf1af9805874c19f") format("truetype"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff?e02c97dedce1f96aaf1af9805874c19f") format("woff"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?e02c97dedce1f96aaf1af9805874c19f") format("woff2");
+	src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?546837376239d88ab9716fe24108d173#supernova-icon") format("svg"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?546837376239d88ab9716fe24108d173") format("truetype"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.woff?546837376239d88ab9716fe24108d173") format("woff"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?546837376239d88ab9716fe24108d173") format("woff2");
 }
 
 .sni {
@@ -24,24 +24,30 @@ url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?e02c97dedce1f96aaf1af980
 }
 
 $supernova-icon-map: (
-	"chevron-next": "\f101",
-	"chevron-prev": "\f102",
-	"close": "\f103",
-	"facebook-square": "\f104",
-	"instagram": "\f105",
-	"minus": "\f106",
-	"palm-tree": "\f107",
-	"pinterest-square": "\f108",
-	"play": "\f109",
-	"plus-circle": "\f10a",
-	"plus": "\f10b",
-	"search": "\f10c",
-	"tiktok": "\f10d",
-	"trash": "\f10e",
-	"twitter-square": "\f10f",
-	"youtube": "\f110",
+	"awards": "\f101",
+	"chevron-next": "\f102",
+	"chevron-prev": "\f103",
+	"close": "\f104",
+	"delivery": "\f105",
+	"facebook-square": "\f106",
+	"instagram": "\f107",
+	"minus": "\f108",
+	"moneyback": "\f109",
+	"palm-tree": "\f10a",
+	"pinterest-square": "\f10b",
+	"play": "\f10c",
+	"plus-circle": "\f10d",
+	"plus": "\f10e",
+	"search": "\f10f",
+	"tiktok": "\f110",
+	"trash": "\f111",
+	"twitter-square": "\f112",
+	"youtube": "\f113",
 );
 
+.sni.sni__awards:before {
+	content: map-get($supernova-icon-map, "awards");
+}
 .sni.sni__chevron-next:before {
 	content: map-get($supernova-icon-map, "chevron-next");
 }
@@ -51,6 +57,9 @@ $supernova-icon-map: (
 .sni.sni__close:before {
 	content: map-get($supernova-icon-map, "close");
 }
+.sni.sni__delivery:before {
+	content: map-get($supernova-icon-map, "delivery");
+}
 .sni.sni__facebook-square:before {
 	content: map-get($supernova-icon-map, "facebook-square");
 }
@@ -59,6 +68,9 @@ $supernova-icon-map: (
 }
 .sni.sni__minus:before {
 	content: map-get($supernova-icon-map, "minus");
+}
+.sni.sni__moneyback:before {
+	content: map-get($supernova-icon-map, "moneyback");
 }
 .sni.sni__palm-tree:before {
 	content: map-get($supernova-icon-map, "palm-tree");

@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @font-face {
   font-family: "supernova-icon";
-  src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?e02c97dedce1f96aaf1af9805874c19f#supernova-icon") format("svg"), url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?e02c97dedce1f96aaf1af9805874c19f") format("truetype"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff?e02c97dedce1f96aaf1af9805874c19f") format("woff"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?e02c97dedce1f96aaf1af9805874c19f") format("woff2");
+  src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?546837376239d88ab9716fe24108d173#supernova-icon") format("svg"), url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?546837376239d88ab9716fe24108d173") format("truetype"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff?546837376239d88ab9716fe24108d173") format("woff"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?546837376239d88ab9716fe24108d173") format("woff2");
 }
 
 .sni {
@@ -19,68 +19,80 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.sni.sni__chevron-next:before {
+.sni.sni__awards:before {
   content: "";
 }
 
-.sni.sni__chevron-prev:before {
+.sni.sni__chevron-next:before {
   content: "";
 }
 
-.sni.sni__close:before {
+.sni.sni__chevron-prev:before {
   content: "";
 }
 
-.sni.sni__facebook-square:before {
+.sni.sni__close:before {
   content: "";
 }
 
-.sni.sni__instagram:before {
+.sni.sni__delivery:before {
   content: "";
 }
 
-.sni.sni__minus:before {
+.sni.sni__facebook-square:before {
   content: "";
 }
 
-.sni.sni__palm-tree:before {
+.sni.sni__instagram:before {
   content: "";
 }
 
-.sni.sni__pinterest-square:before {
+.sni.sni__minus:before {
   content: "";
 }
 
-.sni.sni__play:before {
+.sni.sni__moneyback:before {
   content: "";
 }
 
-.sni.sni__plus-circle:before {
+.sni.sni__palm-tree:before {
   content: "";
 }
 
-.sni.sni__plus:before {
+.sni.sni__pinterest-square:before {
   content: "";
 }
 
-.sni.sni__search:before {
+.sni.sni__play:before {
   content: "";
 }
 
-.sni.sni__tiktok:before {
+.sni.sni__plus-circle:before {
   content: "";
 }
 
-.sni.sni__trash:before {
+.sni.sni__plus:before {
   content: "";
 }
 
-.sni.sni__twitter-square:before {
+.sni.sni__search:before {
   content: "";
 }
 
-.sni.sni__youtube:before {
+.sni.sni__tiktok:before {
   content: "";
+}
+
+.sni.sni__trash:before {
+  content: "";
+}
+
+.sni.sni__twitter-square:before {
+  content: "";
+}
+
+.sni.sni__youtube:before {
+  content: "";
 }
 
 .btn__with-icon {

@@ -87,4 +87,8 @@
 	button:focus {
 		outline: none;
 	}
+
+	button[disabled] {
+		color: transparent;
+	}
 }

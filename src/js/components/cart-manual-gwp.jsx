@@ -19,7 +19,6 @@ const CartManualGwp = (props) => {
 			<h4 className="font-weight-bold mb-0">{title}</h4>
 			<p className="text-muted">{`${selectedKey.length}/${maxSelected} ${tStrings.items_selected}`}</p>
 			<ul className="list-unstyled manual-gwp__container d-flex pb-2 text-center">
-
 				{items.map((item) => {
 					const isSelected = !!(selectedKey.find((key) => isItemIdInKey(key, item.id)));
 					return (

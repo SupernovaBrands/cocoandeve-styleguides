@@ -75,11 +75,9 @@ export default class CartDiscountForm extends React.Component {
 					<div className="input-group py-1">
 						<input type="text" name="discount" className="form-control text-body" placeholder={tStrings.cart_discount_input} value={code} onChange={this.onTextChange} onKeyUp={this.onKeyUp} readOnly={isApplied || loading} />
 						{!isApplied && (
-							<div className="input-group-append">
-								<button className="btn btn-primary" type="button" onClick={this.applyDiscount}>
-									{loading ? (<div className="spinner-border" role="status" />) : tStrings.cart_discount_apply}
-								</button>
-							</div>
+							<button className="btn btn-primary rounded-left-0" type="button" onClick={this.applyDiscount}>
+								{loading ? (<div className="spinner-border" role="status" />) : tStrings.cart_discount_apply}
+							</button>
 						)}
 					</div>
 					{isApplied && (

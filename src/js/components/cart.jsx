@@ -380,8 +380,8 @@ export default class Cart extends React.Component {
 			discountMeter,
 		} = this.state;
 		return (
-			<div className="modal-dialog modal-md m-0 w-100 float-right">
-				<div className="modal-content vh-100 border-0 rounded-0">
+			<div className="modal-dialog modal-dialog-scrollable modal-md m-0 w-100 mh-100 float-right">
+				<div className="modal-content vh-100 mh-100 border-0 rounded-0">
 					<div className="modal-body mobile-wrapper pt-0 px-lg-0">
 						<div className="container d-flex flex-column align-items-stretch text-center pt-2">
 							<h2>{tStrings.cart_drawer_title}</h2>

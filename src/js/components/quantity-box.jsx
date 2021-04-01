@@ -83,34 +83,30 @@ export default class QuantityBox extends React.Component {
 
 	render() {
 		return (
-			<div className="quantity-box input-group">
-				<div className="input-group-prepend">
-					<button
-						className="input-group-text bg-transparent border-right-0 sni sni__minus"
-						type="button"
-						aria-label="Add Subtract"
-						disabled={!this.props.editable}
-						onClick={this.onSubtractQuantity}
-					/>
-				</div>
+			<div className="quantity-box d-flex">
+				<button
+					className="input-group-text bg-transparent border-right-0 rounded-right-0 sni sni__minus"
+					type="button"
+					aria-label="Add Subtract"
+					disabled={!this.props.editable}
+					onClick={this.onSubtractQuantity}
+				/>
 				<input
 					type="number"
 					name={this.props.name}
-					className="form-control border-left-0 border-right-0 p-0 text-center flex-grow-0 bg-transparent text-body"
+					className="form-control border-left-0 border-right-0 rounded-0 p-0 text-center flex-grow-0 bg-transparent text-body"
 					value={this.state.quantity}
 					onChange={this.onChangeQuantity}
 					onFocus={this.onFocus}
 					readOnly={!this.props.editable}
 				/>
-				<div className="input-group-append">
-					<button
-						className="input-group-text bg-transparent border-left-0 sni sni__plus"
-						type="button"
-						aria-label="Add Quantity"
-						disabled={!this.props.editable}
-						onClick={this.onAddQuantity}
-					/>
-				</div>
+				<button
+					className="input-group-text bg-transparent border-left-0 rounded-left-0 sni sni__plus"
+					type="button"
+					aria-label="Add Quantity"
+					disabled={!this.props.editable}
+					onClick={this.onAddQuantity}
+				/>
 			</div>
 		);
 	}

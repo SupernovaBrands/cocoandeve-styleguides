@@ -24,16 +24,18 @@ export default class CartItem extends React.Component {
 	componentDidMount() {
 		const optionsEl = document.getElementById(`cart-item__variants__${this.props.item.id}`);
 		if (optionsEl) {
-			optionsEl.addEventListener('show.bs.collapse', this.toggleVariantEdit);
-			optionsEl.addEventListener('hidden.bs.collapse', this.toggleVariantEdit);
+			$(optionsEl)
+				.on('show.bs.collapse', this.toggleVariantEdit)
+				.on('hidden.bs.collapse', this.toggleVariantEdit);
 		}
 	}
 
 	componentWillUnmount() {
 		const optionsEl = document.getElementById(`cart-item__variants__${this.props.item.id}`);
 		if (optionsEl) {
-			optionsEl.removeEventListener('show.bs.collapse', this.toggleVariantEdit);
-			optionsEl.removeEventListener('hidden.bs.collapse', this.toggleVariantEdit);
+			$(optionsEl)
+				.off('show.bs.collapse', this.toggleVariantEdit)
+				.off('hidden.bs.collapse', this.toggleVariantEdit);
 		}
 	}
 
@@ -60,52 +62,55 @@ export default class CartItem extends React.Component {
 	render() {
 		const { item } = this.props;
 		const { models } = item;
+		const showColor = models.color && models.variantOptions.length > 1;
+		const showColorOptions = showColor && !models.isFree;
 		return (
 			<li className="cart-item border-bottom">
 				<figure className="row py-2 mb-0 align-items-start">
 					<ConditionWrapper
-						condition={models.isFree}
+						condition={!models.isFree}
 						wrapper={(children) => <a href={item.url} className="col-3">{children}</a>}
-						wrapperFalse={(children) => <div className="col-3">{children}</div>}
 					>
-						<picture>
+						<picture className={models.isFree ? '' : 'col-3'}>
 							<img src={models.image} className="w-100" alt={item.product_title} />
 						</picture>
 					</ConditionWrapper>
 					<figcaption className="col-9">
 						<div className="d-flex align-items-start">
-							<h4 className="flex-grow-1 mr-1">{item.product_title}</h4>
+							<h4 className="flex-grow-1 mr-1">
+								<ConditionWrapper
+									condition={!models.isFree}
+									wrapper={(children) => <a href={item.url} className="link-secondary">{children}</a>}
+								>
+									{item.product_title}
+								</ConditionWrapper>
+							</h4>
 							{!models.isFree && (<button className="cart-item__remove btn-unstyled sni sni__trash" type="button" aria-label="Remove" onClick={this.onRemoveItem} />)}
 						</div>
 
-						{models.color && models.variantOptions.length > 1 && (
-							<>
-								<div className="d-flex flex-wrap mb-1 align-items-center">
-									<i className={`swatch ${models.colorHandle}`} />
-									<i className="ml-1 mr-1">{models.color}</i>
-									{!models.isFree && (
-										<a className="cart-item__edit" data-toggle="collapse" href={`#cart-item__variants__${item.id}`} role="button" aria-expanded="false" aria-controls={`cart-item__variants__${item.id}`}>{this.state.editingVariant ? 'Done' : 'Edit'}</a>
-									)}
-								</div>
-								{!models.isFree && (
-									<div className="cart-item__variants collapse border-top border-bottom mb-1" id={`cart-item__variants__${item.id}`}>
-										<ul className="list-unstyled d-flex py-1">
-											{this.state.variantOptions.map((option) => (
-												<li key={option.id}>
-													<button
-														className={`swatch mr-2 ${option.colorHandle} ${option.id === this.state.selectedVariant.id && 'border-primary'}`}
-														type="button"
-														tabIndex="-1"
-														disabled={!option.available}
-														aria-label={option.colorHandle}
-														onClick={() => this.onSelectVariant(option)}
-													/>
-												</li>
-											))}
-										</ul>
-									</div>
+						{showColor && (
+							<div className="d-flex flex-wrap mb-1 align-items-center">
+								<i className={`swatch ${models.colorHandle}`} />
+								<i className="ml-1 mr-1">{models.color}</i>
+								{showColorOptions && (
+									<a className="cart-item__edit" data-toggle="collapse" href={`#cart-item__variants__${item.id}`} role="button" aria-expanded="false" aria-controls={`cart-item__variants__${item.id}`}>{this.state.editingVariant ? 'Done' : 'Edit'}</a>
 								)}
-							</>
+							</div>
+						)}
+						{showColorOptions && (
+							<div className="cart-item__variants collapse border-top border-bottom mb-1" id={`cart-item__variants__${item.id}`}>
+								{this.state.variantOptions.map((option) => (
+									<button
+										key={option.id}
+										className={`swatch mr-2 my-1 ${option.colorHandle} ${option.id === this.state.selectedVariant.id && 'border-primary'}`}
+										type="button"
+										tabIndex="-1"
+										disabled={!option.available}
+										aria-label={option.colorHandle}
+										onClick={() => this.onSelectVariant(option)}
+									/>
+								))}
+							</div>
 						)}
 
 						{models.style && (
@@ -117,7 +122,7 @@ export default class CartItem extends React.Component {
 
 						{models.properties && Object.keys(models.properties).map((key) => (<p key={key} className="mb-1">{`${key}: ${item.properties[key]}`}</p>))}
 
-						<div className="d-flex align-items-end">
+						<div className="d-flex align-items-end justify-content-between">
 							<QuantityBox
 								name="updates[]"
 								editable={!item.models.isFree}
