@@ -13,7 +13,7 @@ module.exports = {
 		html: './fonts/templates/html.hbs',
 	},
 	pathOptions: {
-		scss: './scss/components/_icons.scss',
+		scss: './src/scss/components/_icons.scss',
 		html: './docs/components/icons.html',
 	}
 };

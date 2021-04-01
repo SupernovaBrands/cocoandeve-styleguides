@@ -22,20 +22,20 @@ const webpackCfg = {
 		ignored: ['**/vendor/*', '**/node_modules'],
 	},
 	entry: {
-		main: './scripts/main.js',
+		main: './src/js/main.js',
 	},
 	output: {
 		filename: '[name].js',
 		chunkFilename: 'chunk.[name].js?h=[contenthash]',
-		path: path.resolve(__dirname, 'js'),
+		path: path.resolve(__dirname, 'dist/js'),
 	},
 	resolve: {
 		extensions: ['.js', '.jsx', '.js.liquid'],
 		alias: {
-			'~vendor': path.resolve(__dirname, './scripts/vendor'),
-			'~mod': path.resolve(__dirname, './scripts/modules'),
-			'~comp': path.resolve(__dirname, './scripts/components'),
-			'~rt': path.resolve(__dirname, './scripts/templates'),
+			'~vendor': path.resolve(__dirname, './src/js/vendor'),
+			'~mod': path.resolve(__dirname, './src/js/modules'),
+			'~comp': path.resolve(__dirname, './src/js/components'),
+			'~rt': path.resolve(__dirname, './src/js/templates'),
 		},
 	},
 	module: {

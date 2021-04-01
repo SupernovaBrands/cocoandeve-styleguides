@@ -17,10 +17,10 @@ module.exports = {
 					'.js.liquid',
 				],
 				alias: {
-					'~vendor': './scripts/vendor',
-					'~mod': './scripts/modules',
-					'~comp': './scripts/components',
-					'~rt': './scripts/templates',
+					'~vendor': './src/js/vendor',
+					'~mod': './src/js/modules',
+					'~comp': './src/js/components',
+					'~rt': './src/js/templates',
 					'testHelpers': './__tests__/testHelpers'
 				}
 			}

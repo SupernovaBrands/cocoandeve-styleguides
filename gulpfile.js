@@ -10,13 +10,13 @@ const autoprefixer = require('gulp-autoprefixer');
 const webpack = require('webpack');
 const webpackConfig = require('./webpack.config.js');
 
-const cssDir = 'css';
+const cssDir = 'dist/css';
 
 const files = {
 	html: ['docs/**/*', 'index.html'],
-	js: ['js/**/*'],
-	allScss: ['scss/**/*'],
-	scss: ['scss/*.scss'],
+	js: ['dist/js/**/*'],
+	allScss: ['src/scss/**/*'],
+	scss: ['src/scss/*.scss'],
 };
 
 function errorHandler(err) {
