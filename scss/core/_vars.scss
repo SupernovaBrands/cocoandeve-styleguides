@@ -156,15 +156,18 @@ $alert-padding-x: 1.25em;
 // Interactions
 $hover-transition-timing: 0.15s ease-in-out;
 
-//accordion
+// accordion
 $card-border-radius: 0;
 $card-border-color: $gray-500;
 $card-cap-bg: transparent;
 
-//navbar
+// navbar
 $navbar-nav-link-padding-x: 0;
 $navbar-padding-y: calc-em(5, 16);
 $navbar-padding-x: 0;
 
-//dropdown
+// dropdown
 $dropdown-border-width: 0;
+
+// tooltip
+$tooltip-opacity: 1;

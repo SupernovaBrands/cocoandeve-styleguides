@@ -320,27 +320,23 @@
   transform: translateY(-50%);
 }
 
-.tooltip--add-to-cart:after {
-  content: '';
-  display: inline-block;
+.tooltip:before {
   position: absolute;
-  width: 0;
-  height: 0;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5em;
+}
+
+.tooltip:after {
+  content: '';
+  position: absolute;
   border-style: solid;
   border-width: 0 0.6875em 0.6875em 0.6875em;
   border-color: transparent transparent #F3436C transparent;
   top: 0;
-  right: 0.6875em;
-  transform: translateY(-100%);
-  cursor: pointer;
-}
-
-.tooltip--add-to-cart:before {
-  position: absolute;
-  right: 0.9375em;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.5em;
+  right: 15px;
+  transform: translateY(-90%);
 }
 
 .announcement-bar {
