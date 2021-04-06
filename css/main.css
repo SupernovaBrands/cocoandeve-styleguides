@@ -320,7 +320,7 @@
   transform: translateY(-50%);
 }
 
-.tooltip--add-to-cart:after {
+.tooltip:after {
   content: '';
   display: inline-block;
   position: absolute;
@@ -335,7 +335,7 @@
   cursor: pointer;
 }
 
-.tooltip--add-to-cart:before {
+.tooltip:before {
   position: absolute;
   right: 0.9375em;
   top: 50%;
