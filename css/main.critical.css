@@ -10113,6 +10113,29 @@ header.stickywrap:not(.stickyHeader):not(.stickyHeaderOnTop) .cart-bubble-div.mo
   z-index: 1020;
 }
 
+.navbar .hair {
+  color: #00635B;
+}
+
+.navbar .tan {
+  color: #993366;
+}
+
+.navbar .body {
+  color: #213E7B;
+}
+
+.navbar .nav-item--mega-menu a:before {
+  position: absolute;
+  right: 1.25em;
+}
+
+.navbar .nav-item--mega-menu:hover .mega-menu {
+  opacity: 1;
+  top: 90%;
+  visibility: visible;
+}
+
 .navbar.position-fixed {
   top: 0;
   right: 0;
@@ -10159,8 +10182,8 @@ header.stickywrap:not(.stickyHeader):not(.stickyHeaderOnTop) .cart-bubble-div.mo
 }
 
 .mobile-nav__menu {
-  padding-left: 0.9375em;
-  padding-right: 0.9375em;
+  padding-left: 15px;
+  padding-right: 15px;
   transform: translateX(-100%);
   transition: transform .1s ease-in-out;
   overflow-y: auto;
@@ -10172,11 +10195,6 @@ header.stickywrap:not(.stickyHeader):not(.stickyHeaderOnTop) .cart-bubble-div.mo
 
 .mobile-nav__menu .card-header {
   border-bottom: none;
-}
-
-.mobile-nav__menu .card-header:before {
-  font-size: 0.8125em;
-  transform: translateY(-50%) rotate(180deg);
 }
 
 .mobile-nav__menu .card-body--border:before {
@@ -10197,18 +10215,6 @@ header.stickywrap:not(.stickyHeader):not(.stickyHeaderOnTop) .cart-bubble-div.mo
 
 .mobile-nav__menu .card-body--border-body:before {
   border-color: #bec5d8;
-}
-
-.mobile-nav__menu .hair {
-  color: #00635B;
-}
-
-.mobile-nav__menu .tan {
-  color: #993366;
-}
-
-.mobile-nav__menu .body {
-  color: #213E7B;
 }
 
 .mobile-nav__menu a {
@@ -10275,17 +10281,14 @@ header.stickywrap:not(.stickyHeader):not(.stickyHeaderOnTop) .cart-bubble-div.mo
 }
 
 .mega-menu h5 > a.body {
-  color: #213E7B;
   border-color: #213E7B;
 }
 
 .mega-menu h5 > a.hair {
-  color: #00635B;
   border-color: #00635B;
 }
 
 .mega-menu h5 > a.tan {
-  color: #993366;
   border-color: #993366;
 }
 
@@ -10295,17 +10298,6 @@ header.stickywrap:not(.stickyHeader):not(.stickyHeaderOnTop) .cart-bubble-div.mo
 
 .mega-menu li > a:hover {
   color: #F3436C;
-}
-
-.mega-menu__button > a:before {
-  position: absolute;
-  right: 1.25em;
-}
-
-.mega-menu__button:hover .mega-menu {
-  opacity: 1;
-  top: 90%;
-  visibility: visible;
 }
 
 /*----- Cart Drawer -----*/

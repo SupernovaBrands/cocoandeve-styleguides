@@ -312,7 +312,8 @@
   position: absolute;
   right: 0;
   top: 50%;
-  transform: translateY(-50%) rotate(90deg);
+  font-size: 0.8125em;
+  transform: translateY(-50%) rotate(180deg);
 }
 
 .card-header.collapsed:before {

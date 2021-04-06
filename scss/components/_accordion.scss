@@ -8,7 +8,8 @@
         position: absolute;
         right: 0;
         top: 50%;
-        transform: translateY(-50%) rotate(90deg);
+        font-size: calc-em(13);
+        transform: translateY(-50%) rotate(180deg);
     }
 
     &.collapsed:before {
