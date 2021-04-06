@@ -220,37 +220,34 @@ $(document).ready(function () {
 		mobileMenuToggler();
 	});
 
-	// detect scroll top or down
-	if ($('.navbar').length > 0) {
-		var lastScrollTop = 0;
-		var navbarEl = $('.navbar');
-		var announceBar = $('.announcement-bar');
-		var navbarHeight = navbarEl.height();
+	// header navbar detect scroll top or down
+	var lastScrollTop = 0;
+	var navbarEl = $('.navbar');
+	var announceBar = $('.announcement-bar');
+	var navbarHeight = navbarEl.height();
 
-		$(window).on('scroll', function() {
-			navbarEl.addClass('position-fixed');
-			scrollTop = $(this).scrollTop();
-			if (scrollTop < lastScrollTop) {
-				navbarEl.removeClass('scrolled-down').addClass('scrolled-up');
-				if (scrollTop <= 0) {
-					navbarEl.removeClass('position-fixed');
-					if (announceBar.length > 0) {
-						announceBar.removeClass('d-none');
-					}
+	$(window).on('scroll', function() {
+		navbarEl.addClass('position-fixed');
+		scrollTop = $(this).scrollTop();
+		if (scrollTop < lastScrollTop) {
+			navbarEl.removeClass('scrolled-down').addClass('scrolled-up');
+			if (scrollTop <= 0) {
+				navbarEl.removeClass('position-fixed');
+				if (announceBar.length > 0) {
+					announceBar.removeClass('d-none');
 				}
-			} else {
-				if (scrollTop <= 0) {
-					//safari fix bounce effect
-					navbarEl.removeClass('position-fixed');
-				} else {
-					navbarEl.removeClass('scrolled-up').addClass('scrolled-down');
-					if (announceBar.length > 0 && scrollTop > navbarHeight) {
-						announceBar.addClass('d-none');
-					}
-				}
-
 			}
-			lastScrollTop = scrollTop;
-		});
-	}
+		} else {
+			if (scrollTop <= 0) {
+				//safari fix bounce effect
+				navbarEl.removeClass('position-fixed');
+			} else {
+				navbarEl.removeClass('scrolled-up').addClass('scrolled-down');
+				if (announceBar.length > 0 && scrollTop > navbarHeight) {
+					announceBar.addClass('d-none');
+				}
+			}
+		}
+		lastScrollTop = scrollTop;
+	});
 });
