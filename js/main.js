@@ -206,15 +206,15 @@ $(document).ready(function () {
 	}
 
 	// Nav Category Sticky on Scroll
-	const navCategoryTwo = $('.nav-category--sticky');
+	const navSticky = $('.nav-category--sticky');
 	var scrollTop = 0;
 	$(window).on('scroll', function() {		
 		scrollTop = $(this).scrollTop();
 		console.log(scrollTop)
 		if (scrollTop > 100) {
-			navCategoryTwo.slideDown();
+			navSticky.slideDown();
 		} else {
-			navCategoryTwo.slideUp();
+			navSticky.slideUp();
 		}
 	})
 });

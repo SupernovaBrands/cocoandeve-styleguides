@@ -17,8 +17,8 @@
 <body>
 	<div class="mobile-wrapper">
 		<div class="container mt-4">
-      <div class="text-center nav-category--pink nav-category--sticky p-1 d-lg-none no-gutters__in-container w-100 position-fixed">
-        <ul class="nav justify-content-center align-items-center p-1">
+      <div class="text-center nav-category nav-category--pink nav-category--sticky p-1 d-lg-none no-gutters__in-container w-100 position-fixed">
+        <ul class="nav justify-content-center align-items-center">
           <li class="nav-item">
             <a href="#" class="nav-link active pb-0 pt-0">ALL</a>
           </li>
@@ -39,18 +39,24 @@
             </a>
           </li>
         </ul>
-        <div class="search-box input-group input-group-sm d-lg-none d-none">
+        <div class="search-box input-group input-group-sm d-lg-none d-none mt-2">
           <div class="input-group-prepend">
-            <a class="input-group-text search-box__close align-items-center search-box__icon" href="#" role="button">
-              <i class="sni sni__close text-primary"></i>
-            </a>
+            <span class="input-group-text search-box__icon">
+              <i class="sni sni__search"></i>
+            </span>
           </div>
           <input type="text" class="form-control" id="exampleSearch" placeholder="Search">
           <div class="input-group-append">
-            <button class="search-box-btn btn btn-primary d-block" type="submit">Search</button>
+            <a class="input-group-text search-box__close align-items-center" href="#" role="button">
+              <i class="sni sni__close"></i>
+            </a>
+          </div>
+          <div class="input-group-append">
+            <button class="search-box-btn btn btn-primary" type="submit">Search</button>
           </div>
         </div>
       </div>
+      
 			<nav aria-label="breadcrumb">
 				<ol class="breadcrumb mb-0">
 					<li class="breadcrumb-item">
