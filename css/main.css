@@ -320,6 +320,18 @@
   transform: translateY(-50%);
 }
 
+.tooltip {
+  left: 0;
+  right: 0;
+  top: 100%;
+}
+
+@media (min-width: 992px) {
+  .tooltip {
+    left: auto;
+  }
+}
+
 .tooltip:before {
   position: absolute;
   right: 15px;
