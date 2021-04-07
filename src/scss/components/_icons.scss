@@ -12,7 +12,8 @@ url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?546837376239d88ab9716fe2
 	display: flex;
 }
 
-.sni:before {
+.sni:before,
+.sni-after:after {
 	font-family: supernova-icon !important;
 	font-style: normal;
 	font-weight: normal !important;
@@ -45,60 +46,79 @@ $supernova-icon-map: (
 	"youtube": "\f113",
 );
 
-.sni.sni__awards:before {
+.sni.sni__awards:before,
+.sni-after.sni__awards:after {
 	content: map-get($supernova-icon-map, "awards");
 }
-.sni.sni__chevron-next:before {
+.sni.sni__chevron-next:before,
+.sni-after.sni__chevron-next:after {
 	content: map-get($supernova-icon-map, "chevron-next");
 }
-.sni.sni__chevron-prev:before {
+.sni.sni__chevron-prev:before,
+.sni-after.sni__chevron-prev:after {
 	content: map-get($supernova-icon-map, "chevron-prev");
 }
-.sni.sni__close:before {
+.sni.sni__close:before,
+.sni-after.sni__close:after {
 	content: map-get($supernova-icon-map, "close");
 }
-.sni.sni__delivery:before {
+.sni.sni__delivery:before,
+.sni-after.sni__delivery:after {
 	content: map-get($supernova-icon-map, "delivery");
 }
-.sni.sni__facebook-square:before {
+.sni.sni__facebook-square:before,
+.sni-after.sni__facebook-square:after {
 	content: map-get($supernova-icon-map, "facebook-square");
 }
-.sni.sni__instagram:before {
+.sni.sni__instagram:before,
+.sni-after.sni__instagram:after {
 	content: map-get($supernova-icon-map, "instagram");
 }
-.sni.sni__minus:before {
+.sni.sni__minus:before,
+.sni-after.sni__minus:after {
 	content: map-get($supernova-icon-map, "minus");
 }
-.sni.sni__moneyback:before {
+.sni.sni__moneyback:before,
+.sni-after.sni__moneyback:after {
 	content: map-get($supernova-icon-map, "moneyback");
 }
-.sni.sni__palm-tree:before {
+.sni.sni__palm-tree:before,
+.sni-after.sni__palm-tree:after {
 	content: map-get($supernova-icon-map, "palm-tree");
 }
-.sni.sni__pinterest-square:before {
+.sni.sni__pinterest-square:before,
+.sni-after.sni__pinterest-square:after {
 	content: map-get($supernova-icon-map, "pinterest-square");
 }
-.sni.sni__play:before {
+.sni.sni__play:before,
+.sni-after.sni__play:after {
 	content: map-get($supernova-icon-map, "play");
 }
-.sni.sni__plus-circle:before {
+.sni.sni__plus-circle:before,
+.sni-after.sni__plus-circle:after {
 	content: map-get($supernova-icon-map, "plus-circle");
 }
-.sni.sni__plus:before {
+.sni.sni__plus:before,
+.sni-after.sni__plus:after {
 	content: map-get($supernova-icon-map, "plus");
 }
-.sni.sni__search:before {
+.sni.sni__search:before,
+.sni-after.sni__search:after {
 	content: map-get($supernova-icon-map, "search");
 }
-.sni.sni__tiktok:before {
+.sni.sni__tiktok:before,
+.sni-after.sni__tiktok:after {
 	content: map-get($supernova-icon-map, "tiktok");
 }
-.sni.sni__trash:before {
+.sni.sni__trash:before,
+.sni-after.sni__trash:after {
 	content: map-get($supernova-icon-map, "trash");
 }
-.sni.sni__twitter-square:before {
+.sni.sni__twitter-square:before,
+.sni-after.sni__twitter-square:after {
 	content: map-get($supernova-icon-map, "twitter-square");
 }
-.sni.sni__youtube:before {
+.sni.sni__youtube:before,
+.sni-after.sni__youtube:after {
 	content: map-get($supernova-icon-map, "youtube");
 }
