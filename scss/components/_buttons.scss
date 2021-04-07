@@ -1,15 +1,7 @@
 .btn {
 
-	&.sni:before,
 	&.sni-after:after {
 		font-size: calc-em(12);
-	}
-
-	&.sni:before {
-		padding-right: calc-em(6);
-	}
-
-	&.sni-after:after {
 		padding-left: calc-em(6);
 	}
 
