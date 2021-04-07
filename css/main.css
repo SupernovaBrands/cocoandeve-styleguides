@@ -145,14 +145,14 @@
   }
 }
 
-.breadcrumb-item__link {
-  color: #151515;
-}
-
-.breadcrumb-item:last-child {
+.breadcrumb-item {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+.breadcrumb-item__link {
+  color: #151515;
 }
 
 .social-icon-primary {
