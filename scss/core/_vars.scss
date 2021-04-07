@@ -165,6 +165,10 @@ $card-cap-bg: transparent;
 $navbar-nav-link-padding-x: calc-em(15 / 2, 20);
 $navbar-padding-y: 0;
 $navbar-padding-x: 0;
+$navbar-toggler-padding-x: 0;
+
+//navbar brand
+$navbar-brand-padding-y: calc-em(10, 16);
 
 // dropdown
 $dropdown-border-width: 0;

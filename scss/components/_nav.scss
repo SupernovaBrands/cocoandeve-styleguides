@@ -33,8 +33,6 @@
 
 .navbar-brand {
   color: $secondary;
-  padding-top: calc-em(10);
-  padding-bottom: calc-em(10);
 
   &:before {
     font-size: calc-em(34,20);
