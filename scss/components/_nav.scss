@@ -22,6 +22,12 @@
   &--sticky {
     z-index: $zindex-sticky;
     top: 0px;
-    display: none;
+    transform: translateY(-100%);
+    transition: all 0.1s ease-in-out;
+
+    &.active {
+      transform: translateY(0);
+      transition: all 0.1s ease-in-out;
+    }
   }
 }
