@@ -1,39 +1,50 @@
 .offcanvas-active {
     overflow: hidden;
-
-    .navbar {
-        height: 100%;
-    }
 }
 
 .navbar {
     z-index: $zindex-sticky;
 
+    .offcanvas-active & {
+        height: 100%;
+    }
+
     .hair {
         color: $secondary;
+
+        &:is(a) {
+            border-bottom: calc-em(5, 48) solid $secondary;
+        }
+
+        &:hover {
+            color: $secondary;
+            text-decoration: none;
+        }
     }
 
     .tan {
         color: $sh-purple;
+
+        &:is(a) {
+            border-bottom: calc-em(5, 48) solid $sh-purple;
+        }
+
+        &:hover {
+            color: $sh-purple;
+            text-decoration: none;
+        }
     }
 
     .body {
         color: $bali-bod-blue;
-    }
 
-    .nav-item--mega-menu:hover .mega-menu {
-        opacity: 1;
-        top: 90%;
-        visibility: visible;
+        &:is(a) {
+            border-bottom: calc-em(5, 48) solid $bali-bod-blue;
+        }
 
-        //fix mega menu margin
-        &:before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            top: 0;
-            transform: translateY(-50%);
-            height: $grid-gutter-width;
+        &:hover {
+            color: $bali-bod-blue;
+            text-decoration: none;
         }
     }
 
@@ -45,16 +56,16 @@
         @include media-breakpoint-down(md) {
             align-items: flex-start;
         }
+    }
 
-        &.scrolled-down {
-            transform: translateY(-100%);
-            transition: all 0.1s ease-in-out;
-        }
+    &.scrolled-down {
+        transform: translateY(-100%);
+        transition: all 0.1s ease-in-out;
+    }
 
-        &.scrolled-up {
-            transform: translateY(0);
-            transition: all 0.4s ease-in-out;
-        }
+    &.scrolled-up {
+        transform: translateY(0);
+        transition: all 0.4s ease-in-out;
     }
 
     @include media-breakpoint-down(lg) {
@@ -71,6 +82,9 @@
     left: 0;
     opacity: 0;
     transition: opacity .2s linear;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
 
     //overlay close icon
     &:before {
@@ -130,9 +144,6 @@
 
     &.show {
         opacity: 1;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.6);
 
         .mobile-nav__menu {
             transform: translateX(0);
@@ -142,7 +153,7 @@
 
 .navbar-toggler {
 
-    > span {
+    span {
         width: calc-em(25, 20);
         height: 2px;
         background-color: $body-color;
@@ -180,27 +191,31 @@
     left: 0;
     visibility: hidden;
 
+    &:before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: $grid-gutter-width;
+        transform: translateY(-50%);
+    }
+
+    .nav-item--mega-menu:hover & {
+        opacity: 1;
+        top: 90%;
+        visibility: visible;
+    }
+
     h5 > a {
         border-bottom: calc-em(5, 48) solid $body-color;
+
         &:hover {
             text-decoration: none;
         }
-
-        &.body {
-            border-color: $bali-bod-blue;
-        }
-
-        &.hair {
-            border-color: $secondary;
-        }
-
-        &.tan {
-            border-color: $sh-purple;
-        }
     }
 
-    li > a {
+    a {
         color: $body-color;
+
         &:hover {
             color: $primary;
         }
