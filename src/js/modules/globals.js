@@ -1,5 +1,9 @@
 // Mocks global variables in live store
 
+window.assetUrl = function (filename) {
+	return `/images/${filename}`;
+};
+
 window.tStrings = {
 	addToCart: 'Add To Cart',
 	soldOut: 'Out of stock',

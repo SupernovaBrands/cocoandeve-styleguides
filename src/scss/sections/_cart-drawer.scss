@@ -1,4 +1,6 @@
 .cart-drawer {
+	z-index: $zindex-cartdrawer;
+
 	&:not(.show) .modal-dialog {
 		transform: translate(100%, 0);
 	}

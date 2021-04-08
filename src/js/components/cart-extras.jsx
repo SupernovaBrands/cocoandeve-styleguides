@@ -1,4 +1,4 @@
-/* global tSettings tStrings */
+/* global tSettings tStrings assetUrl */
 
 import React from 'react';
 
@@ -12,7 +12,7 @@ const CartExtras = () => (
 
 		<a href="/checkout" className="text-center">
 			<div className="cart-drawer__shopify-icon d-flex align-items-center justify-content-center">
-				<img className="d-block mx-1" src="/images/shopify-payment.svg" width="112" height="34" alt="Shopify Icon" />
+				<img className="d-block mx-1" src={assetUrl('shopify-payment.svg')} width="112" height="34" alt="Shopify Icon" />
 			</div>
 
 			{tSettings.cart_payment_icons && (
