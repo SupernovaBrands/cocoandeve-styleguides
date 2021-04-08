@@ -48,6 +48,15 @@
         }
     }
 
+    .h1 > a {
+        border-bottom: calc-em(5, 48) solid $body-color;
+
+        &:hover {
+            color: $body-color;
+            text-decoration: none;
+        }
+    }
+
     &.position-fixed {
         top: 0;
         right: 0;
@@ -201,14 +210,6 @@
         opacity: 1;
         top: 90%;
         visibility: visible;
-    }
-
-    h5 > a {
-        border-bottom: calc-em(5, 48) solid $body-color;
-
-        &:hover {
-            text-decoration: none;
-        }
     }
 
     a {
