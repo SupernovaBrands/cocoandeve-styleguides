@@ -222,7 +222,7 @@ $(document).ready(function () {
 
 	// header navbar detect scroll top or down
 	var lastScrollTop = 0;
-	var navbarEl = $('.navbar');
+	var navbarEl = $('.main-header');
 	var announceBar = $('.announcement-bar');
 	var navbarHeight = navbarEl.height();
 
@@ -232,7 +232,8 @@ $(document).ready(function () {
 		if (scrollTop < lastScrollTop) {
 			navbarEl.removeClass('scrolled-down').addClass('scrolled-up');
 			if (scrollTop <= 0) {
-				navbarEl.removeClass('position-fixed');
+				//remove scrolled up for mobile menu show properly
+				navbarEl.removeClass('position-fixed').removeClass('scrolled-up');
 				if (announceBar.length > 0) {
 					announceBar.removeClass('d-none');
 				}
@@ -240,7 +241,7 @@ $(document).ready(function () {
 		} else {
 			if (scrollTop <= 0) {
 				//safari fix bounce effect
-				navbarEl.removeClass('position-fixed');
+				navbarEl.removeClass('position-fixed').removeClass('scrolled-up');
 			} else {
 				navbarEl.removeClass('scrolled-up').addClass('scrolled-down');
 				if (announceBar.length > 0 && scrollTop > navbarHeight) {

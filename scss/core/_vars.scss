@@ -164,7 +164,7 @@ $card-cap-bg: transparent;
 // navbar
 $navbar-nav-link-padding-x: calc-em(15 / 2, 20);
 $navbar-padding-y: 0;
-$navbar-padding-x: 0;
+$navbar-padding-x: calc-em(15 / 2, 16);
 $navbar-toggler-padding-x: 0;
 
 //navbar brand

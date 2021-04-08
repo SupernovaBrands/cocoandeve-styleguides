@@ -27,8 +27,6 @@
       }
     }
   }
-
-
 }
 
 .navbar-brand {
@@ -47,20 +45,17 @@
 }
 
 .navbar-expand-lg {
-  @include media-breakpoint-down(md) {
-    //navbar-expand-* issue https://github.com/twbs/bootstrap/issues/25654
-    > nav:not(.mobile-nav) {
-      padding-right: $grid-gutter-width / 2;
-      padding-left: $grid-gutter-width / 2;
-    }
-  }
 
   @include media-breakpoint-up(lg) {
-    .navbar-nav .nav-link{
-      line-height: calc-em(22, 16);
+    .navbar-nav {
+      flex-basis: 40%;
 
-      &:hover {
-        text-decoration: none;
+      .nav-link {
+        line-height: calc-em(22, 16);
+
+        &:hover {
+          text-decoration: none;
+        }
       }
     }
 
