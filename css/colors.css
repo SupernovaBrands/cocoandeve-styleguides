@@ -10938,16 +10938,6 @@ h4, .h4 {
   text-decoration: line-through;
 }
 
-.sections-heading.h2, .sections-heading .h2 {
-  font-size: 2em;
-}
-
-@media (min-width: 992px) {
-  .sections-heading.h2, .sections-heading .h2 {
-    font-size: 3em;
-  }
-}
-
 @media (max-width: 991.98px) {
   .mobile-wrapper {
     padding-right: 7.5px;

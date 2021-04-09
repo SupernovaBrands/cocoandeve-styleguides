@@ -3,11 +3,13 @@
 
 <head>
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="/cocoandeve-styleguides/css/owl.carousel.css">
   <link rel="stylesheet" href="/cocoandeve-styleguides/css/main.critical.css">
   <link rel="stylesheet" href="/cocoandeve-styleguides/css/main.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="/cocoandeve-styleguides/js/bootstrap.js"></script>
-  <script src="/cocoandeve-styleguides/js/carousel.js"></script>
+  <script src="/cocoandeve-styleguides/js/owl.carousel.min.js"></script>
+  <script src="/cocoandeve-styleguides/js/product-carousel.js"></script>
 </head>
 
 <body>
@@ -27,737 +29,872 @@
     </div>
     <div class="tab-content container px-sm-0">
       <div class="tab-pane fade" id="new" role="tabpanel" aria-labelledby="new-tab">
-        <div id="carousel-new" class="carousel slide carousel--multiple-items">
-          <ul class="carousel-inner pl-lg-2 pr-lg-2 pl-sm-0">
-            <li class="carousel-item active">
-              <div class="carousel-item__child bg-white product-card col-10 col-md-3 px-1 py-2 d-flex">
-                <figure class="m-0">
-                  <img class="grid-view-item__image lazyload w-100"
-                  alt="Image Alt"
-                  src="https://via.placeholder.com/243x243"
-                  data-src="https://via.placeholder.com/243x243"
-                  data-widths="[370,270,160]"
-                  data-sizes="auto"
-                  data-image>
-                </figure>
+        <div id="carousel-new" class="owl-carousel owl-flex">
+          <div class="bg-white product-card px-1 py-2 d-flex flex-column h-100">
+            <figure class="m-0">
+              <img class="grid-view-item__image lazyload w-100"
+              alt="Image Alt"
+              src="https://via.placeholder.com/243x243"
+              data-src="https://via.placeholder.com/243x243"
+              data-widths="[370,270,160]"
+              data-sizes="auto"
+              data-image>
+            </figure>
+            <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
+              <p class="mb-1 d-flex justify-content-center align-items-center">
+                <span class="review-stars">
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                </span>
+                <span>(42)</span>
+              </p>
+              <p class="product-card__title text-center">
+                <a href="#" class="text-color-black text-decoration-none">Sunny Honey Bali Bronzing Bundle 1</a>
+              </p>
+              <p class="product-card__price text-center">
+                <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
+              </p>
+              <form method="get" action="javascript:void(0)">
+                <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
+                <button type="submit" class="btn btn-lg btn-primary px-2 w-100">Add To Cart</button>
+              </form>
+            </div>
+          </div>
 
-                <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
-
-                  <p class="mb-1 d-flex justify-content-center align-items-center">
-                    <span class="review-stars">
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                    </span>
-                    <span>(42)</span>
-                  </p>
-                  <p class="product-card__title text-center">
-                    <a href="#" class="text-color-black text-decoration-none">Sunny Honey Bali Bronzing Bundle 1</a>
-                  </p>
-                  <p class="product-card__price text-center">
-                    <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
-                  </p>
-                  <form method="get" action="">
-                    <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                    <button type="submit" class="btn btn-lg btn-primary px-2 w-100">Add To Cart</button>
-                  </form>
+          <div class="bg-white product-card px-1 py-2 d-flex flex-column h-100">
+            <div class="product-card__badge" data-badge="bronzing-self-tanner-drops">
+              <picture>
+                <source srcset="https://via.placeholder.com/90x90/F3436C" media="(min-width: 992px)"/>
+                <source srcset="https://via.placeholder.com/66x66/F3436C"/>
+                <img class="img-fluid w-100 rounded-circle" src="https://via.placeholder.com/66x66/F3436C"/>
+              </picture>
+            </div>
+            <figure class="m-0">
+              <img class="grid-view-item__image lazyload w-100"
+              alt="Image Alt"
+              src="https://via.placeholder.com/243x243"
+              data-src="https://via.placeholder.com/243x243"
+              data-widths="[370,270,160]"
+              data-sizes="auto"
+              data-image>
+            </figure>
+            <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
+              <p class="mb-1 d-flex justify-content-center align-items-center">
+                <span class="review-stars">
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                </span>
+                <span>(42)</span>
+              </p>
+              <p class="product-card__title text-center">
+                <a href="#" class="text-color-black text-decoration-none">Like a Virgin Hair Masque 2</a>
+              </p>
+              <p class="product-card__price text-center">
+                <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
+              </p>
+              <form method="get" action="javascript:void(0)" >
+                <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
+                <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Shade</button>
+                <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
+                  <div class="shop-swatch text-center w-100 py-2">
+                    <label class="mb-2"><strong>Shade: </strong><span class="shade_name">Dark</span></label>
+                    <ul class="list-unstyled item-swatch d-flex justify-content-center">
+                      <li class="item available col-3" data-available="available">
+                        <span data-id="32068891541539" data-val="Medium" class="shade-medium"></span>
+                      </li>
+                      <li class=" item available active col-3" data-available="available">
+                        <span data-id="32068891607075" data-val="Dark" class="shade-dark"></span>
+                      </li>
+                      <li class=" item available col-3" data-available="available">
+                        <span data-id="32068891639843" data-val="Ultra Dark" class="shade-ultra-dark"></span>
+                      </li>
+                    </ul>
+                  </div>
+                  <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
+                    Add To Cart
+                  </button>
                 </div>
-              </div>
-            </li>
-            <li class="carousel-item position-relative">
-              <div class="carousel-item__child bg-white product-card col-10 col-md-3 px-1 py-2 d-flex">
-                <figure class="m-0">
-                  <img class="grid-view-item__image lazyload w-100"
-                  alt="Image Alt"
-                  src="https://via.placeholder.com/243x243"
-                  data-src="https://via.placeholder.com/243x243"
-                  data-widths="[370,270,160]"
-                  data-sizes="auto"
-                  data-image>
-                </figure>
-                <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
-                  <p class="mb-1 d-flex justify-content-center align-items-center">
-                    <span class="review-stars">
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                    </span>
-                    <span>(42)</span>
-                  </p>
-
-                  <p class="product-card__title text-center">
-                    <a href="#" class="text-color-black text-decoration-none">Like a Virgin Hair Masque 2</a>
-                  </p>
-                  <p class="product-card__price text-center">
-                    <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
-                  </p>
-                  <form method="get" action="">
-                    <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                    <button type="submit" class="btn btn-lg btn-primary px-2 w-100">Add To Cart</button>
-                  </form>
+              </form>
+            </div>
+          </div>
+          <div class="bg-white product-card px-1 py-2 d-flex flex-column h-100">
+            <figure class="m-0">
+              <img class="grid-view-item__image lazyload w-100"
+              alt="Image Alt"
+              src="https://via.placeholder.com/243x243"
+              data-src="https://via.placeholder.com/243x243"
+              data-widths="[370,270,160]"
+              data-sizes="auto"
+              data-image>
+            </figure>
+            <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
+              <p class="mb-1 d-flex justify-content-center align-items-center">
+                <span class="review-stars">
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                </span>
+                <span>(42)</span>
+              </p>
+              <p class="product-card__title text-center">
+                <a href="#" class="text-color-black text-decoration-none">Miracle Hair</a>
+              </p>
+              <p class="product-card__price text-center">
+                <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
+              </p>
+              <form method="get" action="javascript:void(0)" >
+                <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
+                <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Style</button>
+                <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
+                  <div class="shop-swatch text-center w-100 py-2">
+                    <label class="mb-2"><strong>Style: </strong><span class="shade_name">Girl Print: Limited edition!</span></label>
+                    <ul class="list-unstyled item-swatch d-flex justify-content-center">
+                      <li class=" item available active col-3" data-available="available">
+                        <span data-id="32068891607075" data-val="Girl Print" class="style-girl-print"></span>
+                      </li>
+                      <li class=" item available col-3" data-available="available">
+                        <span data-id="32068891639843" data-val="Print Leaf" class="style-leaf-print"></span>
+                      </li>
+                    </ul>
+                  </div>
+                  <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
+                    Add To Cart
+                  </button>
                 </div>
-              </div>
-            </li>
-            <li class="carousel-item position-relative">
-              <div class="carousel-item__child bg-white product-card col-10 col-md-3 px-1 py-2 d-flex">
-                <figure class="m-0">
-                  <img class="grid-view-item__image lazyload w-100"
-                  alt="Image Alt"
-                  src="https://via.placeholder.com/243x243"
-                  data-src="https://via.placeholder.com/243x243"
-                  data-widths="[370,270,160]"
-                  data-sizes="auto"
-                  data-image>
-                </figure>
-                <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
-                  <p class="mb-1 d-flex justify-content-center align-items-center">
-                    <span class="review-stars">
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                    </span>
-                    <span>(42)</span>
-                  </p>
+              </form>
+            </div>
+          </div>
+          <div class="bg-white product-card px-1 py-2 d-flex flex-column h-100">
+            <figure class="m-0">
+              <img class="grid-view-item__image lazyload w-100"
+              alt="Image Alt"
+              src="https://via.placeholder.com/243x243"
+              data-src="https://via.placeholder.com/243x243"
+              data-widths="[370,270,160]"
+              data-sizes="auto"
+              data-image>
+            </figure>
+            <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
+              <p class="mb-1 d-flex justify-content-center align-items-center">
+                <span class="review-stars">
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                </span>
+                <span>(42)</span>
+              </p>
+              <p class="product-card__title text-center">
+                <a href="#" class="text-color-black text-decoration-none">Sunny Honey Bali Bronzing Bundle 1</a>
+              </p>
+              <p class="product-card__price text-center">
+                <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
+              </p>
+              <form method="get" action="javascript:void(0)">
+                <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
+                <button type="submit" class="btn btn-lg btn-primary px-2 w-100">Add To Cart</button>
+              </form>
+            </div>
+          </div>
 
-                  <p class="product-card__title text-center">
-                    <a href="#" class="text-color-black text-decoration-none">Miracle Hair 3</a>
-                  </p>
-                  <p class="product-card__price text-center">
-                    <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
-                  </p>
-                  <form method="get" action="">
-                    <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                    <button type="submit" class="btn btn-lg btn-primary px-2 w-100">Add To Cart</button>
-                  </form>
+          <div class="bg-white product-card px-1 py-2 d-flex flex-column h-100">
+            <div class="product-card__badge" data-badge="bronzing-self-tanner-drops">
+              <picture>
+                <source srcset="https://via.placeholder.com/90x90/F3436C" media="(min-width: 992px)"/>
+                <source srcset="https://via.placeholder.com/66x66/F3436C"/>
+                <img class="img-fluid w-100 rounded-circle" src="https://via.placeholder.com/66x66/F3436C"/>
+              </picture>
+            </div>
+            <figure class="m-0">
+              <img class="grid-view-item__image lazyload w-100"
+              alt="Image Alt"
+              src="https://via.placeholder.com/243x243"
+              data-src="https://via.placeholder.com/243x243"
+              data-widths="[370,270,160]"
+              data-sizes="auto"
+              data-image>
+            </figure>
+            <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
+              <p class="mb-1 d-flex justify-content-center align-items-center">
+                <span class="review-stars">
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                </span>
+                <span>(42)</span>
+              </p>
+              <p class="product-card__title text-center">
+                <a href="#" class="text-color-black text-decoration-none">Like a Virgin Hair Masque 2</a>
+              </p>
+              <p class="product-card__price text-center">
+                <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
+              </p>
+              <form method="get" action="javascript:void(0)" >
+                <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
+                <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Shade</button>
+                <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
+                  <div class="shop-swatch text-center w-100 py-2">
+                    <label class="mb-2"><strong>Shade: </strong><span class="shade_name">Dark</span></label>
+                    <ul class="list-unstyled item-swatch d-flex justify-content-center">
+                      <li class="item available col-3" data-available="available">
+                        <span data-id="32068891541539" data-val="Medium" class="shade-medium"></span>
+                      </li>
+                      <li class=" item available active col-3" data-available="available">
+                        <span data-id="32068891607075" data-val="Dark" class="shade-dark"></span>
+                      </li>
+                      <li class=" item available col-3" data-available="available">
+                        <span data-id="32068891639843" data-val="Ultra Dark" class="shade-ultra-dark"></span>
+                      </li>
+                    </ul>
+                  </div>
+                  <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
+                    Add To Cart
+                  </button>
                 </div>
-              </div>
-            </li>
-            <li class="carousel-item position-relative">
-              <div class="carousel-item__child bg-white product-card col-10 col-md-3 px-1 py-2 d-flex">
-                <figure class="m-0">
-                  <img class="grid-view-item__image lazyload w-100"
-                  alt="Image Alt"
-                  src="https://via.placeholder.com/243x243"
-                  data-src="https://via.placeholder.com/243x243"
-                  data-widths="[370,270,160]"
-                  data-sizes="auto"
-                  data-image>
-                </figure>
-                <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
-                  <p class="mb-1 d-flex justify-content-center align-items-center">
-                    <span class="review-stars">
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                    </span>
-                    <span>(42)</span>
-                  </p>
-                  <p class="product-card__title text-center">
-                    <a href="#" class="text-color-black text-decoration-none">Sunny Honey Bali Bronzing Bundle 4</a>
-                  </p>
-
-                  <p class="product-card__price text-center">
-                    <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
-                  </p>
-                  <form method="get" action="">
-                    <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                    <button type="submit" class="btn btn-lg btn-primary px-2 w-100">Add To Cart</button>
-                  </form>
+              </form>
+            </div>
+          </div>
+          <div class="bg-white product-card px-1 py-2 d-flex flex-column h-100">
+            <figure class="m-0">
+              <img class="grid-view-item__image lazyload w-100"
+              alt="Image Alt"
+              src="https://via.placeholder.com/243x243"
+              data-src="https://via.placeholder.com/243x243"
+              data-widths="[370,270,160]"
+              data-sizes="auto"
+              data-image>
+            </figure>
+            <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
+              <p class="mb-1 d-flex justify-content-center align-items-center">
+                <span class="review-stars">
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                </span>
+                <span>(42)</span>
+              </p>
+              <p class="product-card__title text-center">
+                <a href="#" class="text-color-black text-decoration-none">Miracle Hair</a>
+              </p>
+              <p class="product-card__price text-center">
+                <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
+              </p>
+              <form method="get" action="javascript:void(0)" >
+                <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
+                <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Style</button>
+                <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
+                  <div class="shop-swatch text-center w-100 py-2">
+                    <label class="mb-2"><strong>Style: </strong><span class="shade_name">Girl Print: Limited edition!</span></label>
+                    <ul class="list-unstyled item-swatch d-flex justify-content-center">
+                      <li class=" item available active col-3" data-available="available">
+                        <span data-id="32068891607075" data-val="Girl Print" class="style-girl-print"></span>
+                      </li>
+                      <li class=" item available col-3" data-available="available">
+                        <span data-id="32068891639843" data-val="Print Leaf" class="style-leaf-print"></span>
+                      </li>
+                    </ul>
+                  </div>
+                  <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
+                    Add To Cart
+                  </button>
                 </div>
-              </div>
-            </li>
-            <li class="carousel-item position-relative">
-              <div class="carousel-item__child bg-white product-card col-10 col-md-3 px-1 py-2 d-flex">
-                <figure class="m-0">
-                  <img class="grid-view-item__image lazyload w-100"
-                  alt="Image Alt"
-                  src="https://via.placeholder.com/243x243"
-                  data-src="https://via.placeholder.com/243x243"
-                  data-widths="[370,270,160]"
-                  data-sizes="auto"
-                  data-image>
-                </figure>
-                <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
+              </form>
+            </div>
+          </div>
 
-                  <p class="mb-1 d-flex justify-content-center align-items-center">
-                    <span class="review-stars">
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                    </span>
-                    <span>(42)</span>
-                  </p>
-                  <p class="product-card__title text-center">
-                    <a href="#" class="text-color-black text-decoration-none">Like a Virgin Hair Masque 5</a>
-                  </p>
-                  <p class="product-card__price text-center">
-                    <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
-                  </p>
-                  <form method="get" action="">
-                    <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                    <button type="submit" class="btn btn-lg btn-primary px-2 w-100">Add To Cart</button>
-                  </form>
-                </div>
-              </div>
-            </li>
-            <li class="carousel-item position-relative">
-              <div class="carousel-item__child bg-white product-card col-10 col-md-3 px-1 py-2 d-flex">
-                <figure class="m-0">
-                  <img class="grid-view-item__image lazyload w-100"
-                  alt="Image Alt"
-                  src="https://via.placeholder.com/243x243"
-                  data-src="https://via.placeholder.com/243x243"
-                  data-widths="[370,270,160]"
-                  data-sizes="auto"
-                  data-image>
-                </figure>
-                <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
-                  <p class="mb-1 d-flex justify-content-center align-items-center">
-                    <span class="review-stars">
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                    </span>
-                    <span>(42)</span>
-                  </p>
-
-                  <p class="product-card__title text-center">
-                    <a href="#" class="text-color-black text-decoration-none">Miracle Hair 6</a>
-                  </p>
-                  <p class="product-card__price text-center">
-                    <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
-                  </p>
-                  <form method="get" action="">
-                    <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                    <button type="submit" class="btn btn-lg btn-primary px-2 w-100">Add To Cart</button>
-                  </form>
-                </div>
-              </div>
-            </li>
-          </ul>
-
-          <a class="carousel-control carousel-control-prev carousel-control--background carousel-control--right-lg" href="#carousel-new" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon sni sni__chevron-prev justify-content-center align-items-center mr-sm-2 mr-lg-0" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control carousel-control-next carousel-control--background carousel-control--right-lg" href="#carousel-new" role="button" data-slide="next">
-            <span class="carousel-control-next-icon sni sni__chevron-next justify-content-center align-items-center ml-sm-2 ml-lg-0" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
         </div>
       </div>
       <div class="tab-pane fade show active" id="bestsellers" role="tabpanel" aria-labelledby="bestsellers-tab">
-        <div id="carousel-bestsellers" class="carousel slide carousel--multiple-items">
-          <ul class="carousel-inner pl-lg-2 pr-lg-2 pl-sm-0">
-            <li class="carousel-item active">
-              <div class="carousel-item__child bg-white product-card col-10 col-md-3 px-1 py-2 d-flex">
-                <figure class="m-0">
-                  <img class="grid-view-item__image lazyload w-100"
-                  alt="Image Alt"
-                  src="https://via.placeholder.com/243x243"
-                  data-src="https://via.placeholder.com/243x243"
-                  data-widths="[370,270,160]"
-                  data-sizes="auto"
-                  data-image>
-                </figure>
-                <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
-                  <p class="mb-1 d-flex justify-content-center align-items-center">
-                    <span class="review-stars">
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                    </span>
-                    <span>(42)</span>
-                  </p>
-                  <p class="product-card__title text-center">
-                    <a href="#" class="text-color-black text-decoration-none">Sunny Honey Bali Bronzing Bundle 1</a>
-                  </p>
-                  <p class="product-card__price text-center">
-                    <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
-                  </p>
-                  <form method="get" action="">
-                    <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                    <button type="submit" class="btn btn-lg btn-primary px-2 w-100">Add To Cart</button>
-                  </form>
+        <div id="carousel-bestsellers" class="owl-carousel owl-flex">
+          <div class="bg-white product-card px-1 py-2 d-flex flex-column h-100">
+            <figure class="m-0">
+              <img class="grid-view-item__image lazyload w-100"
+              alt="Image Alt"
+              src="https://via.placeholder.com/243x243"
+              data-src="https://via.placeholder.com/243x243"
+              data-widths="[370,270,160]"
+              data-sizes="auto"
+              data-image>
+            </figure>
+            <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
+              <p class="mb-1 d-flex justify-content-center align-items-center">
+                <span class="review-stars">
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                </span>
+                <span>(42)</span>
+              </p>
+              <p class="product-card__title text-center">
+                <a href="#" class="text-color-black text-decoration-none">Sunny Honey Bali Bronzing Bundle 1</a>
+              </p>
+              <p class="product-card__price text-center">
+                <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
+              </p>
+              <form method="get" action="javascript:void(0)">
+                <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
+                <button type="submit" class="btn btn-lg btn-primary px-2 w-100">Add To Cart</button>
+              </form>
+            </div>
+          </div>
+
+          <div class="bg-white product-card px-1 py-2 d-flex flex-column h-100">
+            <div class="product-card__badge" data-badge="bronzing-self-tanner-drops">
+              <picture>
+                <source srcset="https://via.placeholder.com/90x90/F3436C" media="(min-width: 992px)"/>
+                <source srcset="https://via.placeholder.com/66x66/F3436C"/>
+                <img class="img-fluid w-100 rounded-circle" src="https://via.placeholder.com/66x66/F3436C"/>
+              </picture>
+            </div>
+            <figure class="m-0">
+              <img class="grid-view-item__image lazyload w-100"
+              alt="Image Alt"
+              src="https://via.placeholder.com/243x243"
+              data-src="https://via.placeholder.com/243x243"
+              data-widths="[370,270,160]"
+              data-sizes="auto"
+              data-image>
+            </figure>
+            <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
+              <p class="mb-1 d-flex justify-content-center align-items-center">
+                <span class="review-stars">
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                </span>
+                <span>(42)</span>
+              </p>
+              <p class="product-card__title text-center">
+                <a href="#" class="text-color-black text-decoration-none">Like a Virgin Hair Masque 2</a>
+              </p>
+              <p class="product-card__price text-center">
+                <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
+              </p>
+              <form method="get" action="javascript:void(0)" >
+                <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
+                <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Shade</button>
+                <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
+                  <div class="shop-swatch text-center w-100 py-2">
+                    <label class="mb-2"><strong>Shade: </strong><span class="shade_name">Dark</span></label>
+                    <ul class="list-unstyled item-swatch d-flex justify-content-center">
+                      <li class="item available col-3" data-available="available">
+                        <span data-id="32068891541539" data-val="Medium" class="shade-medium"></span>
+                      </li>
+                      <li class=" item available active col-3" data-available="available">
+                        <span data-id="32068891607075" data-val="Dark" class="shade-dark"></span>
+                      </li>
+                      <li class=" item available col-3" data-available="available">
+                        <span data-id="32068891639843" data-val="Ultra Dark" class="shade-ultra-dark"></span>
+                      </li>
+                    </ul>
+                  </div>
+                  <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
+                    Add To Cart
+                  </button>
                 </div>
-              </div>
-            </li>
-            <li class="carousel-item position-relative">
-              <div class="carousel-item__child bg-white product-card col-10 col-md-3 px-1 py-2 d-flex">
-                <div class="product-card__badge" data-badge="bronzing-self-tanner-drops">
-                  <picture>
-                    <source srcset="https://via.placeholder.com/90x90/F3436C" media="(min-width: 992px)"/>
-                    <source srcset="https://via.placeholder.com/66x66/F3436C"/>
-                    <img class="img-fluid w-100 rounded-circle" src="https://via.placeholder.com/66x66/F3436C"/>
-                  </picture>
+              </form>
+            </div>
+          </div>
+          <div class="bg-white product-card px-1 py-2 d-flex flex-column h-100">
+            <figure class="m-0">
+              <img class="grid-view-item__image lazyload w-100"
+              alt="Image Alt"
+              src="https://via.placeholder.com/243x243"
+              data-src="https://via.placeholder.com/243x243"
+              data-widths="[370,270,160]"
+              data-sizes="auto"
+              data-image>
+            </figure>
+            <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
+              <p class="mb-1 d-flex justify-content-center align-items-center">
+                <span class="review-stars">
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                </span>
+                <span>(42)</span>
+              </p>
+              <p class="product-card__title text-center">
+                <a href="#" class="text-color-black text-decoration-none">Miracle Hair</a>
+              </p>
+              <p class="product-card__price text-center">
+                <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
+              </p>
+              <form method="get" action="javascript:void(0)" >
+                <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
+                <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Style</button>
+                <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
+                  <div class="shop-swatch text-center w-100 py-2">
+                    <label class="mb-2"><strong>Style: </strong><span class="shade_name">Girl Print: Limited edition!</span></label>
+                    <ul class="list-unstyled item-swatch d-flex justify-content-center">
+                      <li class=" item available active col-3" data-available="available">
+                        <span data-id="32068891607075" data-val="Girl Print" class="style-girl-print"></span>
+                      </li>
+                      <li class=" item available col-3" data-available="available">
+                        <span data-id="32068891639843" data-val="Print Leaf" class="style-leaf-print"></span>
+                      </li>
+                    </ul>
+                  </div>
+                  <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
+                    Add To Cart
+                  </button>
                 </div>
-                <figure class="m-0">
-                  <img class="grid-view-item__image lazyload w-100"
-                  alt="Image Alt"
-                  src="https://via.placeholder.com/243x243"
-                  data-src="https://via.placeholder.com/243x243"
-                  data-widths="[370,270,160]"
-                  data-sizes="auto"
-                  data-image>
-                </figure>
-                <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
-                  <p class="mb-1 d-flex justify-content-center align-items-center">
-                    <span class="review-stars">
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                    </span>
-                    <span>(42)</span>
-                  </p>
-                  <p class="product-card__title text-center">
-                    <a href="#" class="text-color-black text-decoration-none">Like a Virgin Hair Masque 2</a>
-                  </p>
-                  <p class="product-card__price text-center">
-                    <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
-                  </p>
-                  <form method="get" action="" >
-                    <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                    <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Shade</button>
-                    <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
-                      <div class="shop-swatch text-center w-100 py-2">
-                        <label class="mb-2"><strong>Shade: </strong><span class="shade_name">Dark</span></label>
-                        <ul class="list-unstyled item-swatch d-flex justify-content-center">
-                          <li class="item available col-3" data-available="available">
-                            <span data-id="32068891541539" data-val="Medium" class="shade-medium"></span>
-                          </li>
-                          <li class=" item available active col-3" data-available="available">
-                            <span data-id="32068891607075" data-val="Dark" class="shade-dark"></span>
-                          </li>
-                          <li class=" item available col-3" data-available="available">
-                            <span data-id="32068891639843" data-val="Ultra Dark" class="shade-ultra-dark"></span>
-                          </li>
-                        </ul>
-                      </div>
-                      <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
-                        Add To Cart
-                      </button>
-                    </div>
-                  </form>
+              </form>
+            </div>
+          </div>
+          <div class="bg-white product-card px-1 py-2 d-flex flex-column h-100">
+            <figure class="m-0">
+              <img class="grid-view-item__image lazyload w-100"
+              alt="Image Alt"
+              src="https://via.placeholder.com/243x243"
+              data-src="https://via.placeholder.com/243x243"
+              data-widths="[370,270,160]"
+              data-sizes="auto"
+              data-image>
+            </figure>
+            <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
+              <p class="mb-1 d-flex justify-content-center align-items-center">
+                <span class="review-stars">
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                </span>
+                <span>(42)</span>
+              </p>
+              <p class="product-card__title text-center">
+                <a href="#" class="text-color-black text-decoration-none">Sunny Honey Bali Bronzing Bundle 1</a>
+              </p>
+              <p class="product-card__price text-center">
+                <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
+              </p>
+              <form method="get" action="javascript:void(0)">
+                <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
+                <button type="submit" class="btn btn-lg btn-primary px-2 w-100">Add To Cart</button>
+              </form>
+            </div>
+          </div>
+
+          <div class="bg-white product-card px-1 py-2 d-flex flex-column h-100">
+            <div class="product-card__badge" data-badge="bronzing-self-tanner-drops">
+              <picture>
+                <source srcset="https://via.placeholder.com/90x90/F3436C" media="(min-width: 992px)"/>
+                <source srcset="https://via.placeholder.com/66x66/F3436C"/>
+                <img class="img-fluid w-100 rounded-circle" src="https://via.placeholder.com/66x66/F3436C"/>
+              </picture>
+            </div>
+            <figure class="m-0">
+              <img class="grid-view-item__image lazyload w-100"
+              alt="Image Alt"
+              src="https://via.placeholder.com/243x243"
+              data-src="https://via.placeholder.com/243x243"
+              data-widths="[370,270,160]"
+              data-sizes="auto"
+              data-image>
+            </figure>
+            <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
+              <p class="mb-1 d-flex justify-content-center align-items-center">
+                <span class="review-stars">
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                </span>
+                <span>(42)</span>
+              </p>
+              <p class="product-card__title text-center">
+                <a href="#" class="text-color-black text-decoration-none">Like a Virgin Hair Masque 2</a>
+              </p>
+              <p class="product-card__price text-center">
+                <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
+              </p>
+              <form method="get" action="javascript:void(0)" >
+                <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
+                <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Shade</button>
+                <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
+                  <div class="shop-swatch text-center w-100 py-2">
+                    <label class="mb-2"><strong>Shade: </strong><span class="shade_name">Dark</span></label>
+                    <ul class="list-unstyled item-swatch d-flex justify-content-center">
+                      <li class="item available col-3" data-available="available">
+                        <span data-id="32068891541539" data-val="Medium" class="shade-medium"></span>
+                      </li>
+                      <li class=" item available active col-3" data-available="available">
+                        <span data-id="32068891607075" data-val="Dark" class="shade-dark"></span>
+                      </li>
+                      <li class=" item available col-3" data-available="available">
+                        <span data-id="32068891639843" data-val="Ultra Dark" class="shade-ultra-dark"></span>
+                      </li>
+                    </ul>
+                  </div>
+                  <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
+                    Add To Cart
+                  </button>
                 </div>
-              </div>
-            </li>
-            <li class="carousel-item position-relative">
-              <div class="carousel-item__child bg-white product-card col-10 col-md-3 px-1 py-2 d-flex">
-                <figure class="m-0">
-                  <img class="grid-view-item__image lazyload w-100"
-                  alt="Image Alt"
-                  src="https://via.placeholder.com/243x243"
-                  data-src="https://via.placeholder.com/243x243"
-                  data-widths="[370,270,160]"
-                  data-sizes="auto"
-                  data-image>
-                </figure>
-                <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
-                  <p class="mb-1 d-flex justify-content-center align-items-center">
-                    <span class="review-stars">
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                    </span>
-                    <span>(42)</span>
-                  </p>
-                  <p class="product-card__title text-center">
-                    <a href="#" class="text-color-black text-decoration-none">Miracle Hair</a>
-                  </p>
-                  <p class="product-card__price text-center">
-                    <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
-                  </p>
-                  <form method="get" action="" >
-                    <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                    <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Style</button>
-                    <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
-                      <div class="shop-swatch text-center w-100 py-2">
-                        <label class="mb-2"><strong>Style: </strong><span class="shade_name">Girl Print: Limited edition!</span></label>
-                        <ul class="list-unstyled item-swatch d-flex justify-content-center">
-                          <li class=" item available active col-3" data-available="available">
-                            <span data-id="32068891607075" data-val="Girl Print" class="style-girl-print"></span>
-                          </li>
-                          <li class=" item available col-3" data-available="available">
-                            <span data-id="32068891639843" data-val="Print Leaf" class="style-leaf-print"></span>
-                          </li>
-                        </ul>
-                      </div>
-                      <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
-                        Add To Cart
-                      </button>
-                    </div>
-                  </form>
+              </form>
+            </div>
+          </div>
+          <div class="bg-white product-card px-1 py-2 d-flex flex-column h-100">
+            <figure class="m-0">
+              <img class="grid-view-item__image lazyload w-100"
+              alt="Image Alt"
+              src="https://via.placeholder.com/243x243"
+              data-src="https://via.placeholder.com/243x243"
+              data-widths="[370,270,160]"
+              data-sizes="auto"
+              data-image>
+            </figure>
+            <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
+              <p class="mb-1 d-flex justify-content-center align-items-center">
+                <span class="review-stars">
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                </span>
+                <span>(42)</span>
+              </p>
+              <p class="product-card__title text-center">
+                <a href="#" class="text-color-black text-decoration-none">Miracle Hair</a>
+              </p>
+              <p class="product-card__price text-center">
+                <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
+              </p>
+              <form method="get" action="javascript:void(0)" >
+                <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
+                <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Style</button>
+                <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
+                  <div class="shop-swatch text-center w-100 py-2">
+                    <label class="mb-2"><strong>Style: </strong><span class="shade_name">Girl Print: Limited edition!</span></label>
+                    <ul class="list-unstyled item-swatch d-flex justify-content-center">
+                      <li class=" item available active col-3" data-available="available">
+                        <span data-id="32068891607075" data-val="Girl Print" class="style-girl-print"></span>
+                      </li>
+                      <li class=" item available col-3" data-available="available">
+                        <span data-id="32068891639843" data-val="Print Leaf" class="style-leaf-print"></span>
+                      </li>
+                    </ul>
+                  </div>
+                  <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
+                    Add To Cart
+                  </button>
                 </div>
-              </div>
-            </li>
-            <li class="carousel-item position-relative">
-              <div class="carousel-item__child bg-white product-card col-10 col-md-3 px-1 py-2 d-flex">
-                <figure class="m-0">
-                  <img class="grid-view-item__image lazyload w-100"
-                  alt="Image Alt"
-                  src="https://via.placeholder.com/243x243"
-                  data-src="https://via.placeholder.com/243x243"
-                  data-widths="[370,270,160]"
-                  data-sizes="auto"
-                  data-image>
-                </figure>
-                <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
-                  <p class="mb-1 d-flex justify-content-center align-items-center">
-                    <span class="review-stars">
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                    </span>
-                    <span>(42)</span>
-                  </p>
-                  <p class="product-card__title text-center">
-                    <a href="#" class="text-color-black text-decoration-none">Sunny Honey Bali Bronzing Bundle 4</a>
-                  </p>
-                  <p class="product-card__price text-center">
-                    <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
-                  </p>
-                  <form method="get" action="">
-                    <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                    <button type="submit" class="btn btn-lg btn-primary px-2 w-100">Add To Cart</button>
-                  </form>
-                </div>
-              </div>
-            </li>
-            <li class="carousel-item position-relative">
-              <div class="carousel-item__child bg-white product-card col-10 col-md-3 px-1 py-2 d-flex">
-                <figure class="m-0">
-                  <img class="grid-view-item__image lazyload w-100"
-                  alt="Image Alt"
-                  src="https://via.placeholder.com/243x243"
-                  data-src="https://via.placeholder.com/243x243"
-                  data-widths="[370,270,160]"
-                  data-sizes="auto"
-                  data-image>
-                </figure>
-                <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
-                  <p class="mb-1 d-flex justify-content-center align-items-center">
-                    <span class="review-stars">
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                    </span>
-                    <span>(42)</span>
-                  </p>
-                  <p class="product-card__title text-center">
-                    <a href="#" class="text-color-black text-decoration-none">Like a Virgin Hair Masque 5</a>
-                  </p>
-                  <p class="product-card__price text-center">
-                    <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
-                  </p>
-                  <form method="get" action="">
-                    <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                    <button type="submit" class="btn btn-lg btn-primary px-2 w-100">Add To Cart</button>
-                  </form>
-                </div>
-              </div>
-            </li>
-            <li class="carousel-item position-relative">
-              <div class="carousel-item__child bg-white product-card col-10 col-md-3 px-1 py-2 d-flex">
-                <figure class="m-0">
-                  <img class="grid-view-item__image lazyload w-100"
-                  alt="Image Alt"
-                  src="https://via.placeholder.com/243x243"
-                  data-src="https://via.placeholder.com/243x243"
-                  data-widths="[370,270,160]"
-                  data-sizes="auto"
-                  data-image>
-                </figure>
-                <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
-                  <p class="mb-1 d-flex justify-content-center align-items-center">
-                    <span class="review-stars">
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                    </span>
-                    <span>(42)</span>
-                  </p>
-                  <p class="product-card__title text-center">
-                    <a href="#" class="text-color-black text-decoration-none">Miracle Hair 6</a>
-                  </p>
-                  <p class="product-card__price text-center">
-                    <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
-                  </p>
-                  <form method="get" action="">
-                    <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                    <button type="submit" class="btn btn-lg btn-primary px-2 w-100">Add To Cart</button>
-                  </form>
-                </div>
-              </div>
-            </li>
-          </ul>
-          <a class="carousel-control carousel-control-prev carousel-control--background carousel-control--right-lg" href="#carousel-bestsellers" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon sni sni__chevron-prev justify-content-center align-items-center mr-sm-2 mr-lg-0" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control carousel-control-next carousel-control--background carousel-control--right-lg" href="#carousel-bestsellers" role="button" data-slide="next">
-            <span class="carousel-control-next-icon sni sni__chevron-next justify-content-center align-items-center ml-sm-2 ml-lg-0" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
       <div class="tab-pane fade" id="value-sets" role="tabpanel" aria-labelledby="value-sets-tab">
-        <div id="carousel-value-sets" class="carousel slide carousel--multiple-items">
-          <ul class="carousel-inner pl-lg-2 pr-lg-2 pl-sm-0">
-            <li class="carousel-item active">
-              <div class="carousel-item__child bg-white product-card col-10 col-md-3 px-1 py-2 d-flex">
-                <figure class="m-0">
-                  <img class="grid-view-item__image lazyload w-100"
-                  alt="Image Alt"
-                  src="https://via.placeholder.com/243x243"
-                  data-src="https://via.placeholder.com/243x243"
-                  data-widths="[370,270,160]"
-                  data-sizes="auto"
-                  data-image>
-                </figure>
-                <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
+        <div id="carousel-value-sets" class="owl-carousel owl-flex">
+          <div class="bg-white product-card px-1 py-2 d-flex flex-column h-100">
+            <figure class="m-0">
+              <img class="grid-view-item__image lazyload w-100"
+              alt="Image Alt"
+              src="https://via.placeholder.com/243x243"
+              data-src="https://via.placeholder.com/243x243"
+              data-widths="[370,270,160]"
+              data-sizes="auto"
+              data-image>
+            </figure>
+            <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
+              <p class="mb-1 d-flex justify-content-center align-items-center">
+                <span class="review-stars">
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                </span>
+                <span>(42)</span>
+              </p>
+              <p class="product-card__title text-center">
+                <a href="#" class="text-color-black text-decoration-none">Sunny Honey Bali Bronzing Bundle 1</a>
+              </p>
+              <p class="product-card__price text-center">
+                <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
+              </p>
+              <form method="get" action="javascript:void(0)">
+                <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
+                <button type="submit" class="btn btn-lg btn-primary px-2 w-100">Add To Cart</button>
+              </form>
+            </div>
+          </div>
 
-                  <p class="mb-1 d-flex justify-content-center align-items-center">
-                    <span class="review-stars">
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                    </span>
-                    <span>(42)</span>
-                  </p>
-                  <p class="product-card__title text-center">
-                    <a href="#" class="text-color-black text-decoration-none">Sunny Honey Bali Bronzing Bundle 1</a>
-                  </p>
-                  <p class="product-card__price text-center">
-                    <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
-                  </p>
-                  <form method="get" action="">
-                    <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                    <button type="submit" class="btn btn-lg btn-primary px-2 w-100">Add To Cart</button>
-                  </form>
+          <div class="bg-white product-card px-1 py-2 d-flex flex-column h-100">
+            <div class="product-card__badge" data-badge="bronzing-self-tanner-drops">
+              <picture>
+                <source srcset="https://via.placeholder.com/90x90/F3436C" media="(min-width: 992px)"/>
+                <source srcset="https://via.placeholder.com/66x66/F3436C"/>
+                <img class="img-fluid w-100 rounded-circle" src="https://via.placeholder.com/66x66/F3436C"/>
+              </picture>
+            </div>
+            <figure class="m-0">
+              <img class="grid-view-item__image lazyload w-100"
+              alt="Image Alt"
+              src="https://via.placeholder.com/243x243"
+              data-src="https://via.placeholder.com/243x243"
+              data-widths="[370,270,160]"
+              data-sizes="auto"
+              data-image>
+            </figure>
+            <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
+              <p class="mb-1 d-flex justify-content-center align-items-center">
+                <span class="review-stars">
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                </span>
+                <span>(42)</span>
+              </p>
+              <p class="product-card__title text-center">
+                <a href="#" class="text-color-black text-decoration-none">Like a Virgin Hair Masque 2</a>
+              </p>
+              <p class="product-card__price text-center">
+                <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
+              </p>
+              <form method="get" action="javascript:void(0)" >
+                <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
+                <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Shade</button>
+                <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
+                  <div class="shop-swatch text-center w-100 py-2">
+                    <label class="mb-2"><strong>Shade: </strong><span class="shade_name">Dark</span></label>
+                    <ul class="list-unstyled item-swatch d-flex justify-content-center">
+                      <li class="item available col-3" data-available="available">
+                        <span data-id="32068891541539" data-val="Medium" class="shade-medium"></span>
+                      </li>
+                      <li class=" item available active col-3" data-available="available">
+                        <span data-id="32068891607075" data-val="Dark" class="shade-dark"></span>
+                      </li>
+                      <li class=" item available col-3" data-available="available">
+                        <span data-id="32068891639843" data-val="Ultra Dark" class="shade-ultra-dark"></span>
+                      </li>
+                    </ul>
+                  </div>
+                  <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
+                    Add To Cart
+                  </button>
                 </div>
-              </div>
-            </li>
-            <li class="carousel-item position-relative">
-              <div class="carousel-item__child bg-white product-card col-10 col-md-3 px-1 py-2 d-flex">
-                <figure class="m-0">
-                  <img class="grid-view-item__image lazyload w-100"
-                  alt="Image Alt"
-                  src="https://via.placeholder.com/243x243"
-                  data-src="https://via.placeholder.com/243x243"
-                  data-widths="[370,270,160]"
-                  data-sizes="auto"
-                  data-image>
-                </figure>
-                <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
-                  <p class="mb-1 d-flex justify-content-center align-items-center">
-                    <span class="review-stars">
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                    </span>
-                    <span>(42)</span>
-                  </p>
-
-                  <p class="product-card__title text-center">
-                    <a href="#" class="text-color-black text-decoration-none">Like a Virgin Hair Masque 2</a>
-                  </p>
-                  <p class="product-card__price text-center">
-                    <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
-                  </p>
-                  <form method="get" action="">
-                    <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                    <button type="submit" class="btn btn-lg btn-primary px-2 w-100">Add To Cart</button>
-                  </form>
+              </form>
+            </div>
+          </div>
+          <div class="bg-white product-card px-1 py-2 d-flex flex-column h-100">
+            <figure class="m-0">
+              <img class="grid-view-item__image lazyload w-100"
+              alt="Image Alt"
+              src="https://via.placeholder.com/243x243"
+              data-src="https://via.placeholder.com/243x243"
+              data-widths="[370,270,160]"
+              data-sizes="auto"
+              data-image>
+            </figure>
+            <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
+              <p class="mb-1 d-flex justify-content-center align-items-center">
+                <span class="review-stars">
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                </span>
+                <span>(42)</span>
+              </p>
+              <p class="product-card__title text-center">
+                <a href="#" class="text-color-black text-decoration-none">Miracle Hair</a>
+              </p>
+              <p class="product-card__price text-center">
+                <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
+              </p>
+              <form method="get" action="javascript:void(0)" >
+                <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
+                <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Style</button>
+                <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
+                  <div class="shop-swatch text-center w-100 py-2">
+                    <label class="mb-2"><strong>Style: </strong><span class="shade_name">Girl Print: Limited edition!</span></label>
+                    <ul class="list-unstyled item-swatch d-flex justify-content-center">
+                      <li class=" item available active col-3" data-available="available">
+                        <span data-id="32068891607075" data-val="Girl Print" class="style-girl-print"></span>
+                      </li>
+                      <li class=" item available col-3" data-available="available">
+                        <span data-id="32068891639843" data-val="Print Leaf" class="style-leaf-print"></span>
+                      </li>
+                    </ul>
+                  </div>
+                  <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
+                    Add To Cart
+                  </button>
                 </div>
-              </div>
-            </li>
-            <li class="carousel-item position-relative">
-              <div class="carousel-item__child bg-white product-card col-10 col-md-3 px-1 py-2 d-flex">
-                <figure class="m-0">
-                  <img class="grid-view-item__image lazyload w-100"
-                  alt="Image Alt"
-                  src="https://via.placeholder.com/243x243"
-                  data-src="https://via.placeholder.com/243x243"
-                  data-widths="[370,270,160]"
-                  data-sizes="auto"
-                  data-image>
-                </figure>
-                <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
-                  <p class="mb-1 d-flex justify-content-center align-items-center">
-                    <span class="review-stars">
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                    </span>
-                    <span>(42)</span>
-                  </p>
+              </form>
+            </div>
+          </div>
+          <div class="bg-white product-card px-1 py-2 d-flex flex-column h-100">
+            <figure class="m-0">
+              <img class="grid-view-item__image lazyload w-100"
+              alt="Image Alt"
+              src="https://via.placeholder.com/243x243"
+              data-src="https://via.placeholder.com/243x243"
+              data-widths="[370,270,160]"
+              data-sizes="auto"
+              data-image>
+            </figure>
+            <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
+              <p class="mb-1 d-flex justify-content-center align-items-center">
+                <span class="review-stars">
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                </span>
+                <span>(42)</span>
+              </p>
+              <p class="product-card__title text-center">
+                <a href="#" class="text-color-black text-decoration-none">Sunny Honey Bali Bronzing Bundle 1</a>
+              </p>
+              <p class="product-card__price text-center">
+                <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
+              </p>
+              <form method="get" action="javascript:void(0)">
+                <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
+                <button type="submit" class="btn btn-lg btn-primary px-2 w-100">Add To Cart</button>
+              </form>
+            </div>
+          </div>
 
-                  <p class="product-card__title text-center">
-                    <a href="#" class="text-color-black text-decoration-none">Miracle Hair 3</a>
-                  </p>
-                  <p class="product-card__price text-center">
-                    <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
-                  </p>
-                  <form method="get" action="">
-                    <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                    <button type="submit" class="btn btn-lg btn-primary px-2 w-100">Add To Cart</button>
-                  </form>
+          <div class="bg-white product-card px-1 py-2 d-flex flex-column h-100">
+            <div class="product-card__badge" data-badge="bronzing-self-tanner-drops">
+              <picture>
+                <source srcset="https://via.placeholder.com/90x90/F3436C" media="(min-width: 992px)"/>
+                <source srcset="https://via.placeholder.com/66x66/F3436C"/>
+                <img class="img-fluid w-100 rounded-circle" src="https://via.placeholder.com/66x66/F3436C"/>
+              </picture>
+            </div>
+            <figure class="m-0">
+              <img class="grid-view-item__image lazyload w-100"
+              alt="Image Alt"
+              src="https://via.placeholder.com/243x243"
+              data-src="https://via.placeholder.com/243x243"
+              data-widths="[370,270,160]"
+              data-sizes="auto"
+              data-image>
+            </figure>
+            <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
+              <p class="mb-1 d-flex justify-content-center align-items-center">
+                <span class="review-stars">
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                </span>
+                <span>(42)</span>
+              </p>
+              <p class="product-card__title text-center">
+                <a href="#" class="text-color-black text-decoration-none">Like a Virgin Hair Masque 2</a>
+              </p>
+              <p class="product-card__price text-center">
+                <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
+              </p>
+              <form method="get" action="javascript:void(0)" >
+                <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
+                <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Shade</button>
+                <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
+                  <div class="shop-swatch text-center w-100 py-2">
+                    <label class="mb-2"><strong>Shade: </strong><span class="shade_name">Dark</span></label>
+                    <ul class="list-unstyled item-swatch d-flex justify-content-center">
+                      <li class="item available col-3" data-available="available">
+                        <span data-id="32068891541539" data-val="Medium" class="shade-medium"></span>
+                      </li>
+                      <li class=" item available active col-3" data-available="available">
+                        <span data-id="32068891607075" data-val="Dark" class="shade-dark"></span>
+                      </li>
+                      <li class=" item available col-3" data-available="available">
+                        <span data-id="32068891639843" data-val="Ultra Dark" class="shade-ultra-dark"></span>
+                      </li>
+                    </ul>
+                  </div>
+                  <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
+                    Add To Cart
+                  </button>
                 </div>
-              </div>
-            </li>
-            <li class="carousel-item position-relative">
-              <div class="carousel-item__child bg-white product-card col-10 col-md-3 px-1 py-2 d-flex">
-                <figure class="m-0">
-                  <img class="grid-view-item__image lazyload w-100"
-                  alt="Image Alt"
-                  src="https://via.placeholder.com/243x243"
-                  data-src="https://via.placeholder.com/243x243"
-                  data-widths="[370,270,160]"
-                  data-sizes="auto"
-                  data-image>
-                </figure>
-                <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
-                  <p class="mb-1 d-flex justify-content-center align-items-center">
-                    <span class="review-stars">
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                    </span>
-                    <span>(42)</span>
-                  </p>
-
-                  <p class="product-card__title text-center">
-                    <a href="#" class="text-color-black text-decoration-none">Sunny Honey Bali Bronzing Bundle 4</a>
-                  </p>
-
-                  <p class="product-card__price text-center">
-                    <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
-                  </p>
-                  <form method="get" action="">
-                    <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                    <button type="submit" class="btn btn-lg btn-primary px-2 w-100">Add To Cart</button>
-                  </form>
+              </form>
+            </div>
+          </div>
+          <div class="bg-white product-card px-1 py-2 d-flex flex-column h-100">
+            <figure class="m-0">
+              <img class="grid-view-item__image lazyload w-100"
+              alt="Image Alt"
+              src="https://via.placeholder.com/243x243"
+              data-src="https://via.placeholder.com/243x243"
+              data-widths="[370,270,160]"
+              data-sizes="auto"
+              data-image>
+            </figure>
+            <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
+              <p class="mb-1 d-flex justify-content-center align-items-center">
+                <span class="review-stars">
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                  <i class="sni sni__star star-primary"></i>
+                </span>
+                <span>(42)</span>
+              </p>
+              <p class="product-card__title text-center">
+                <a href="#" class="text-color-black text-decoration-none">Miracle Hair</a>
+              </p>
+              <p class="product-card__price text-center">
+                <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
+              </p>
+              <form method="get" action="javascript:void(0)" >
+                <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
+                <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Style</button>
+                <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
+                  <div class="shop-swatch text-center w-100 py-2">
+                    <label class="mb-2"><strong>Style: </strong><span class="shade_name">Girl Print: Limited edition!</span></label>
+                    <ul class="list-unstyled item-swatch d-flex justify-content-center">
+                      <li class=" item available active col-3" data-available="available">
+                        <span data-id="32068891607075" data-val="Girl Print" class="style-girl-print"></span>
+                      </li>
+                      <li class=" item available col-3" data-available="available">
+                        <span data-id="32068891639843" data-val="Print Leaf" class="style-leaf-print"></span>
+                      </li>
+                    </ul>
+                  </div>
+                  <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
+                    Add To Cart
+                  </button>
                 </div>
-              </div>
-            </li>
-            <li class="carousel-item position-relative">
-              <div class="carousel-item__child bg-white product-card col-10 col-md-3 px-1 py-2 d-flex">
-                <figure class="m-0">
-                  <img class="grid-view-item__image lazyload w-100"
-                  alt="Image Alt"
-                  src="https://via.placeholder.com/243x243"
-                  data-src="https://via.placeholder.com/243x243"
-                  data-widths="[370,270,160]"
-                  data-sizes="auto"
-                  data-image>
-                </figure>
-                <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
-                  <p class="mb-1 d-flex justify-content-center align-items-center">
-                    <span class="review-stars">
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                    </span>
-                    <span>(42)</span>
-                  </p>
-
-                  <p class="product-card__title text-center">
-                    <a href="#" class="text-color-black text-decoration-none">Like a Virgin Hair Masque 5</a>
-                  </p>
-                  <p class="product-card__price text-center">
-                    <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
-                  </p>
-                  <form method="get" action="">
-                    <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                    <button type="submit" class="btn btn-lg btn-primary px-2 w-100">Add To Cart</button>
-                  </form>
-                </div>
-              </div>
-            </li>
-            <li class="carousel-item position-relative">
-              <div class="carousel-item__child bg-white product-card col-10 col-md-3 px-1 py-2 d-flex">
-                <figure class="m-0">
-                  <img class="grid-view-item__image lazyload w-100"
-                  alt="Image Alt"
-                  src="https://via.placeholder.com/243x243"
-                  data-src="https://via.placeholder.com/243x243"
-                  data-widths="[370,270,160]"
-                  data-sizes="auto"
-                  data-image>
-                </figure>
-                <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
-                  <p class="mb-1 d-flex justify-content-center align-items-center">
-                    <span class="review-stars">
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                      <i class="sni sni__star star-primary"></i>
-                    </span>
-                    <span>(42)</span>
-                  </p>
-
-                  <p class="product-card__title text-center">
-                    <a href="#" class="text-color-black text-decoration-none">Miracle Hair 6</a>
-                  </p>
-                  <p class="product-card__price text-center">
-                    <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
-                  </p>
-                  <form method="get" action="">
-                    <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                    <button type="submit" class="btn btn-lg btn-primary px-2 w-100">Add To Cart</button>
-                  </form>
-                </div>
-              </div>
-            </li>
-          </ul>
-
-          <a class="carousel-control carousel-control-prev carousel-control--background carousel-control--right-lg" href="#carousel-value-sets" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon sni sni__chevron-prev justify-content-center align-items-center mr-sm-2 mr-lg-0" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control carousel-control-next carousel-control--background carousel-control--right-lg" href="#carousel-value-sets" role="button" data-slide="next">
-            <span class="carousel-control-next-icon sni sni__chevron-next justify-content-center align-items-center ml-sm-2 ml-lg-0" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <a href="#" class="btn btn-lg btn-outline-primary mb-2">Shop All</a>
+    <a href="#" class="btn btn-lg btn-outline-primary mt-4">Shop All</a>
   </section>
 </body>
 </html>

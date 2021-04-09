@@ -5,38 +5,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Homepage | Coco &amp; Eve Style Guides</title>
-
+  <link rel="stylesheet" href="/cocoandeve-styleguides/css/owl.carousel.css">
   <link rel="stylesheet" href="/cocoandeve-styleguides/css/main.critical.css">
   <link rel="stylesheet" href="/cocoandeve-styleguides/css/main.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="/cocoandeve-styleguides/js/bootstrap.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.0/lazysizes.min.js" integrity="sha512-JrL1wXR0TeToerkl6TPDUa9132S3PB1UeNpZRHmCe6TxS43PFJUcEYUhjJb/i63rSd+uRvpzlcGOtvC/rDQcDg==" crossorigin="anonymous"></script>
-
-  <script src="/cocoandeve-styleguides/js/carousel.js"></script>
+  <script src="/cocoandeve-styleguides/js/owl.carousel.min.js"></script>
+  <script src="/cocoandeve-styleguides/js/hero-banner.js"></script>
   <script src="/cocoandeve-styleguides/js/real-result.js"></script>
-  <script src="/cocoandeve-styleguides/js/product-card.js"></script>
+  <script src="/cocoandeve-styleguides/js/product-carousel.js"></script>
 </head>
 <body>
   <main>
     <!-- hero banner -->
-    <section id="hero-carousel" class="carousel slide hero-carousel" >
+    <section id="hero-carousel" class="hero-carousel position-relative" >
       <ol class="carousel-indicators text-right d-block">
-        <li data-target="#hero-carousel" data-slide-to="0" class="rounded-circle active d-inline-block"></li>
-        <li data-target="#hero-carousel" data-slide-to="1" class="rounded-circle d-inline-block"></li>
+        <li class="rounded-circle active d-inline-block"></li>
+        <li class="rounded-circle d-inline-block"></li>
       </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
+      <div class="owl-carousel">
+        <div class="item active">
           <a href="#">
             <picture>
-              <source media="(min-width: 991px)" data-srcset="https://via.placeholder.com/1280x489.jpg/EFADBA"/>
-              <source data-srcset="https://via.placeholder.com/375x419.jpg/EFADBA"/>
+              <source class="owl-lazy" media="(min-width: 991px)" data-srcset="https://via.placeholder.com/1280x489.jpg/EFADBA"/>
+              <source class="owl-lazy" data-srcset="https://via.placeholder.com/375x419.jpg/EFADBA"/>
               <img
-              class="w-100 lazyload"
+              class="w-100 owl-lazy"
               src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
               data-src="https://via.placeholder.com/375x419.jpg/EFADBA"
-              data-widths="[720, 900, 1080, 1296, 1512, 1728, 2048]"
-              data-sizes="auto"
-              loading="lazy"
               alt="Slide 01"/>
             </picture>
           </a>
@@ -48,18 +44,15 @@
             </div>
           </div>
         </div>
-        <div class="carousel-item">
+        <div class="item">
           <a href="#">
             <picture>
-              <source media="(min-width: 991px)" data-srcset="https://via.placeholder.com/1280x489.jpg/2596be"/>
-              <source data-srcset="https://via.placeholder.com/375x419.jpg/2596be"/>
+              <source class="owl-lazy" media="(min-width: 991px)" data-srcset="https://via.placeholder.com/1280x489.jpg/2596be"/>
+              <source class="owl-lazy" data-srcset="https://via.placeholder.com/375x419.jpg/2596be"/>
               <img
-              class="w-100 lazyload"
+              class="w-100 owl-lazy"
               src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
               data-src="https://via.placeholder.com/375x419.jpg/2596be"
-              data-widths="[720, 900, 1080, 1296, 1512, 1728, 2048]"
-              data-sizes="auto"
-              loading="lazy"
               alt="Slide 01"/>
             </picture>
           </a>
@@ -90,744 +83,879 @@
       </div>
       <div class="tab-content container px-sm-0">
         <div class="tab-pane fade" id="new" role="tabpanel" aria-labelledby="new-tab">
-          <div id="carousel-new" class="carousel slide carousel--multiple-items">
-            <ul class="carousel-inner pl-lg-2 pr-lg-2 pl-sm-0">
-              <li class="carousel-item active">
-                <div class="carousel-item__child bg-white product-card col-10 col-md-3 px-1 py-2 d-flex">
-                  <figure class="m-0">
-                    <img class="grid-view-item__image lazyload w-100"
-                    alt="Image Alt"
-                    src="https://via.placeholder.com/243x243"
-                    data-src="https://via.placeholder.com/243x243"
-                    data-widths="[370,270,160]"
-                    data-sizes="auto"
-                    data-image>
-                  </figure>
+          <div id="carousel-new" class="owl-carousel owl-flex">
+            <div class="bg-white product-card px-1 py-2 d-flex flex-column h-100">
+              <figure class="m-0">
+                <img class="grid-view-item__image lazyload w-100"
+                alt="Image Alt"
+                src="https://via.placeholder.com/243x243"
+                data-src="https://via.placeholder.com/243x243"
+                data-widths="[370,270,160]"
+                data-sizes="auto"
+                data-image>
+              </figure>
+              <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
+                <p class="mb-1 d-flex justify-content-center align-items-center">
+                  <span class="review-stars">
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                  </span>
+                  <span>(42)</span>
+                </p>
+                <p class="product-card__title text-center">
+                  <a href="#" class="text-color-black text-decoration-none">Sunny Honey Bali Bronzing Bundle 1</a>
+                </p>
+                <p class="product-card__price text-center">
+                  <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
+                </p>
+                <form method="get" action="javascript:void(0)">
+                  <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
+                  <button type="submit" class="btn btn-lg btn-primary px-2 w-100">Add To Cart</button>
+                </form>
+              </div>
+            </div>
 
-                  <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
-
-                    <p class="mb-1 d-flex justify-content-center align-items-center">
-                      <span class="review-stars">
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                      </span>
-                      <span>(42)</span>
-                    </p>
-                    <p class="product-card__title text-center">
-                      <a href="#" class="text-color-black text-decoration-none">Sunny Honey Bali Bronzing Bundle 1</a>
-                    </p>
-                    <p class="product-card__price text-center">
-                      <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
-                    </p>
-                    <form method="get" action="javascript:void(0)">
-                      <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                      <button type="submit" class="btn btn-lg btn-primary px-2 w-100">Add To Cart</button>
-                    </form>
+            <div class="bg-white product-card px-1 py-2 d-flex flex-column h-100">
+              <div class="product-card__badge" data-badge="bronzing-self-tanner-drops">
+                <picture>
+                  <source srcset="https://via.placeholder.com/90x90/F3436C" media="(min-width: 992px)"/>
+                  <source srcset="https://via.placeholder.com/66x66/F3436C"/>
+                  <img class="img-fluid w-100 rounded-circle" src="https://via.placeholder.com/66x66/F3436C"/>
+                </picture>
+              </div>
+              <figure class="m-0">
+                <img class="grid-view-item__image lazyload w-100"
+                alt="Image Alt"
+                src="https://via.placeholder.com/243x243"
+                data-src="https://via.placeholder.com/243x243"
+                data-widths="[370,270,160]"
+                data-sizes="auto"
+                data-image>
+              </figure>
+              <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
+                <p class="mb-1 d-flex justify-content-center align-items-center">
+                  <span class="review-stars">
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                  </span>
+                  <span>(42)</span>
+                </p>
+                <p class="product-card__title text-center">
+                  <a href="#" class="text-color-black text-decoration-none">Like a Virgin Hair Masque 2</a>
+                </p>
+                <p class="product-card__price text-center">
+                  <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
+                </p>
+                <form method="get" action="javascript:void(0)" >
+                  <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
+                  <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Shade</button>
+                  <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
+                    <div class="shop-swatch text-center w-100 py-2">
+                      <label class="mb-2"><strong>Shade: </strong><span class="shade_name">Dark</span></label>
+                      <ul class="list-unstyled item-swatch d-flex justify-content-center">
+                        <li class="item available col-3" data-available="available">
+                          <span data-id="32068891541539" data-val="Medium" class="shade-medium"></span>
+                        </li>
+                        <li class=" item available active col-3" data-available="available">
+                          <span data-id="32068891607075" data-val="Dark" class="shade-dark"></span>
+                        </li>
+                        <li class=" item available col-3" data-available="available">
+                          <span data-id="32068891639843" data-val="Ultra Dark" class="shade-ultra-dark"></span>
+                        </li>
+                      </ul>
+                    </div>
+                    <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
+                      Add To Cart
+                    </button>
                   </div>
-                </div>
-              </li>
-              <li class="carousel-item position-relative">
-                <div class="carousel-item__child bg-white product-card col-10 col-md-3 px-1 py-2 d-flex">
-                  <figure class="m-0">
-                    <img class="grid-view-item__image lazyload w-100"
-                    alt="Image Alt"
-                    src="https://via.placeholder.com/243x243"
-                    data-src="https://via.placeholder.com/243x243"
-                    data-widths="[370,270,160]"
-                    data-sizes="auto"
-                    data-image>
-                  </figure>
-                  <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
-                    <p class="mb-1 d-flex justify-content-center align-items-center">
-                      <span class="review-stars">
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                      </span>
-                      <span>(42)</span>
-                    </p>
-
-                    <p class="product-card__title text-center">
-                      <a href="#" class="text-color-black text-decoration-none">Like a Virgin Hair Masque 2</a>
-                    </p>
-                    <p class="product-card__price text-center">
-                      <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
-                    </p>
-                    <form method="get" action="javascript:void(0)">
-                      <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                      <button type="submit" class="btn btn-lg btn-primary px-2 w-100">Add To Cart</button>
-                    </form>
+                </form>
+              </div>
+            </div>
+            <div class="bg-white product-card px-1 py-2 d-flex flex-column h-100">
+              <figure class="m-0">
+                <img class="grid-view-item__image lazyload w-100"
+                alt="Image Alt"
+                src="https://via.placeholder.com/243x243"
+                data-src="https://via.placeholder.com/243x243"
+                data-widths="[370,270,160]"
+                data-sizes="auto"
+                data-image>
+              </figure>
+              <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
+                <p class="mb-1 d-flex justify-content-center align-items-center">
+                  <span class="review-stars">
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                  </span>
+                  <span>(42)</span>
+                </p>
+                <p class="product-card__title text-center">
+                  <a href="#" class="text-color-black text-decoration-none">Miracle Hair</a>
+                </p>
+                <p class="product-card__price text-center">
+                  <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
+                </p>
+                <form method="get" action="javascript:void(0)" >
+                  <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
+                  <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Style</button>
+                  <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
+                    <div class="shop-swatch text-center w-100 py-2">
+                      <label class="mb-2"><strong>Style: </strong><span class="shade_name">Girl Print: Limited edition!</span></label>
+                      <ul class="list-unstyled item-swatch d-flex justify-content-center">
+                        <li class=" item available active col-3" data-available="available">
+                          <span data-id="32068891607075" data-val="Girl Print" class="style-girl-print"></span>
+                        </li>
+                        <li class=" item available col-3" data-available="available">
+                          <span data-id="32068891639843" data-val="Print Leaf" class="style-leaf-print"></span>
+                        </li>
+                      </ul>
+                    </div>
+                    <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
+                      Add To Cart
+                    </button>
                   </div>
-                </div>
-              </li>
-              <li class="carousel-item position-relative">
-                <div class="carousel-item__child bg-white product-card col-10 col-md-3 px-1 py-2 d-flex">
-                  <figure class="m-0">
-                    <img class="grid-view-item__image lazyload w-100"
-                    alt="Image Alt"
-                    src="https://via.placeholder.com/243x243"
-                    data-src="https://via.placeholder.com/243x243"
-                    data-widths="[370,270,160]"
-                    data-sizes="auto"
-                    data-image>
-                  </figure>
-                  <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
-                    <p class="mb-1 d-flex justify-content-center align-items-center">
-                      <span class="review-stars">
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                      </span>
-                      <span>(42)</span>
-                    </p>
+                </form>
+              </div>
+            </div>
+            <div class="bg-white product-card px-1 py-2 d-flex flex-column h-100">
+              <figure class="m-0">
+                <img class="grid-view-item__image lazyload w-100"
+                alt="Image Alt"
+                src="https://via.placeholder.com/243x243"
+                data-src="https://via.placeholder.com/243x243"
+                data-widths="[370,270,160]"
+                data-sizes="auto"
+                data-image>
+              </figure>
+              <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
+                <p class="mb-1 d-flex justify-content-center align-items-center">
+                  <span class="review-stars">
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                  </span>
+                  <span>(42)</span>
+                </p>
+                <p class="product-card__title text-center">
+                  <a href="#" class="text-color-black text-decoration-none">Sunny Honey Bali Bronzing Bundle 1</a>
+                </p>
+                <p class="product-card__price text-center">
+                  <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
+                </p>
+                <form method="get" action="javascript:void(0)">
+                  <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
+                  <button type="submit" class="btn btn-lg btn-primary px-2 w-100">Add To Cart</button>
+                </form>
+              </div>
+            </div>
 
-                    <p class="product-card__title text-center">
-                      <a href="#" class="text-color-black text-decoration-none">Miracle Hair 3</a>
-                    </p>
-                    <p class="product-card__price text-center">
-                      <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
-                    </p>
-                    <form method="get" action="javascript:void(0)">
-                      <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                      <button type="submit" class="btn btn-lg btn-primary px-2 w-100">Add To Cart</button>
-                    </form>
+            <div class="bg-white product-card px-1 py-2 d-flex flex-column h-100">
+              <div class="product-card__badge" data-badge="bronzing-self-tanner-drops">
+                <picture>
+                  <source srcset="https://via.placeholder.com/90x90/F3436C" media="(min-width: 992px)"/>
+                  <source srcset="https://via.placeholder.com/66x66/F3436C"/>
+                  <img class="img-fluid w-100 rounded-circle" src="https://via.placeholder.com/66x66/F3436C"/>
+                </picture>
+              </div>
+              <figure class="m-0">
+                <img class="grid-view-item__image lazyload w-100"
+                alt="Image Alt"
+                src="https://via.placeholder.com/243x243"
+                data-src="https://via.placeholder.com/243x243"
+                data-widths="[370,270,160]"
+                data-sizes="auto"
+                data-image>
+              </figure>
+              <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
+                <p class="mb-1 d-flex justify-content-center align-items-center">
+                  <span class="review-stars">
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                  </span>
+                  <span>(42)</span>
+                </p>
+                <p class="product-card__title text-center">
+                  <a href="#" class="text-color-black text-decoration-none">Like a Virgin Hair Masque 2</a>
+                </p>
+                <p class="product-card__price text-center">
+                  <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
+                </p>
+                <form method="get" action="javascript:void(0)" >
+                  <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
+                  <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Shade</button>
+                  <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
+                    <div class="shop-swatch text-center w-100 py-2">
+                      <label class="mb-2"><strong>Shade: </strong><span class="shade_name">Dark</span></label>
+                      <ul class="list-unstyled item-swatch d-flex justify-content-center">
+                        <li class="item available col-3" data-available="available">
+                          <span data-id="32068891541539" data-val="Medium" class="shade-medium"></span>
+                        </li>
+                        <li class=" item available active col-3" data-available="available">
+                          <span data-id="32068891607075" data-val="Dark" class="shade-dark"></span>
+                        </li>
+                        <li class=" item available col-3" data-available="available">
+                          <span data-id="32068891639843" data-val="Ultra Dark" class="shade-ultra-dark"></span>
+                        </li>
+                      </ul>
+                    </div>
+                    <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
+                      Add To Cart
+                    </button>
                   </div>
-                </div>
-              </li>
-              <li class="carousel-item position-relative">
-                <div class="carousel-item__child bg-white product-card col-10 col-md-3 px-1 py-2 d-flex">
-                  <figure class="m-0">
-                    <img class="grid-view-item__image lazyload w-100"
-                    alt="Image Alt"
-                    src="https://via.placeholder.com/243x243"
-                    data-src="https://via.placeholder.com/243x243"
-                    data-widths="[370,270,160]"
-                    data-sizes="auto"
-                    data-image>
-                  </figure>
-                  <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
-                    <p class="mb-1 d-flex justify-content-center align-items-center">
-                      <span class="review-stars">
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                      </span>
-                      <span>(42)</span>
-                    </p>
-                    <p class="product-card__title text-center">
-                      <a href="#" class="text-color-black text-decoration-none">Sunny Honey Bali Bronzing Bundle 4</a>
-                    </p>
-
-                    <p class="product-card__price text-center">
-                      <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
-                    </p>
-                    <form method="get" action="javascript:void(0)">
-                      <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                      <button type="submit" class="btn btn-lg btn-primary px-2 w-100">Add To Cart</button>
-                    </form>
+                </form>
+              </div>
+            </div>
+            <div class="bg-white product-card px-1 py-2 d-flex flex-column h-100">
+              <figure class="m-0">
+                <img class="grid-view-item__image lazyload w-100"
+                alt="Image Alt"
+                src="https://via.placeholder.com/243x243"
+                data-src="https://via.placeholder.com/243x243"
+                data-widths="[370,270,160]"
+                data-sizes="auto"
+                data-image>
+              </figure>
+              <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
+                <p class="mb-1 d-flex justify-content-center align-items-center">
+                  <span class="review-stars">
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                  </span>
+                  <span>(42)</span>
+                </p>
+                <p class="product-card__title text-center">
+                  <a href="#" class="text-color-black text-decoration-none">Miracle Hair</a>
+                </p>
+                <p class="product-card__price text-center">
+                  <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
+                </p>
+                <form method="get" action="javascript:void(0)" >
+                  <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
+                  <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Style</button>
+                  <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
+                    <div class="shop-swatch text-center w-100 py-2">
+                      <label class="mb-2"><strong>Style: </strong><span class="shade_name">Girl Print: Limited edition!</span></label>
+                      <ul class="list-unstyled item-swatch d-flex justify-content-center">
+                        <li class=" item available active col-3" data-available="available">
+                          <span data-id="32068891607075" data-val="Girl Print" class="style-girl-print"></span>
+                        </li>
+                        <li class=" item available col-3" data-available="available">
+                          <span data-id="32068891639843" data-val="Print Leaf" class="style-leaf-print"></span>
+                        </li>
+                      </ul>
+                    </div>
+                    <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
+                      Add To Cart
+                    </button>
                   </div>
-                </div>
-              </li>
-              <li class="carousel-item position-relative">
-                <div class="carousel-item__child bg-white product-card col-10 col-md-3 px-1 py-2 d-flex">
-                  <figure class="m-0">
-                    <img class="grid-view-item__image lazyload w-100"
-                    alt="Image Alt"
-                    src="https://via.placeholder.com/243x243"
-                    data-src="https://via.placeholder.com/243x243"
-                    data-widths="[370,270,160]"
-                    data-sizes="auto"
-                    data-image>
-                  </figure>
-                  <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
+                </form>
+              </div>
+            </div>
 
-                    <p class="mb-1 d-flex justify-content-center align-items-center">
-                      <span class="review-stars">
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                      </span>
-                      <span>(42)</span>
-                    </p>
-                    <p class="product-card__title text-center">
-                      <a href="#" class="text-color-black text-decoration-none">Like a Virgin Hair Masque 5</a>
-                    </p>
-                    <p class="product-card__price text-center">
-                      <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
-                    </p>
-                    <form method="get" action="javascript:void(0)">
-                      <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                      <button type="submit" class="btn btn-lg btn-primary px-2 w-100">Add To Cart</button>
-                    </form>
-                  </div>
-                </div>
-              </li>
-              <li class="carousel-item position-relative">
-                <div class="carousel-item__child bg-white product-card col-10 col-md-3 px-1 py-2 d-flex">
-                  <figure class="m-0">
-                    <img class="grid-view-item__image lazyload w-100"
-                    alt="Image Alt"
-                    src="https://via.placeholder.com/243x243"
-                    data-src="https://via.placeholder.com/243x243"
-                    data-widths="[370,270,160]"
-                    data-sizes="auto"
-                    data-image>
-                  </figure>
-                  <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
-                    <p class="mb-1 d-flex justify-content-center align-items-center">
-                      <span class="review-stars">
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                      </span>
-                      <span>(42)</span>
-                    </p>
-
-                    <p class="product-card__title text-center">
-                      <a href="#" class="text-color-black text-decoration-none">Miracle Hair 6</a>
-                    </p>
-                    <p class="product-card__price text-center">
-                      <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
-                    </p>
-                    <form method="get" action="javascript:void(0)">
-                      <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                      <button type="submit" class="btn btn-lg btn-primary px-2 w-100">Add To Cart</button>
-                    </form>
-                  </div>
-                </div>
-              </li>
-            </ul>
-
-            <a class="carousel-control carousel-control-prev carousel-control--background carousel-control--right-lg" href="#carousel-new" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon sni sni__chevron-prev justify-content-center align-items-center mr-sm-2 mr-lg-0" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control carousel-control-next carousel-control--background carousel-control--right-lg" href="#carousel-new" role="button" data-slide="next">
-              <span class="carousel-control-next-icon sni sni__chevron-next justify-content-center align-items-center ml-sm-2 ml-lg-0" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
           </div>
         </div>
         <div class="tab-pane fade show active" id="bestsellers" role="tabpanel" aria-labelledby="bestsellers-tab">
-          <div id="carousel-bestsellers" class="carousel slide carousel--multiple-items">
-            <ul class="carousel-inner pl-lg-2 pr-lg-2 pl-sm-0">
-              <li class="carousel-item active">
-                <div class="carousel-item__child bg-white product-card col-10 col-md-3 px-1 py-2 d-flex">
-                  <figure class="m-0">
-                    <img class="grid-view-item__image lazyload w-100"
-                    alt="Image Alt"
-                    src="https://via.placeholder.com/243x243"
-                    data-src="https://via.placeholder.com/243x243"
-                    data-widths="[370,270,160]"
-                    data-sizes="auto"
-                    data-image>
-                  </figure>
-                  <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
-                    <p class="mb-1 d-flex justify-content-center align-items-center">
-                      <span class="review-stars">
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                      </span>
-                      <span>(42)</span>
-                    </p>
-                    <p class="product-card__title text-center">
-                      <a href="#" class="text-color-black text-decoration-none">Sunny Honey Bali Bronzing Bundle 1</a>
-                    </p>
-                    <p class="product-card__price text-center">
-                      <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
-                    </p>
-                    <form method="get" action="javascript:void(0)">
-                      <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                      <button type="submit" class="btn btn-lg btn-primary px-2 w-100">Add To Cart</button>
-                    </form>
+          <div id="carousel-bestsellers" class="owl-carousel owl-flex">
+            <div class="bg-white product-card px-1 py-2 d-flex flex-column h-100">
+              <figure class="m-0">
+                <img class="grid-view-item__image lazyload w-100"
+                alt="Image Alt"
+                src="https://via.placeholder.com/243x243"
+                data-src="https://via.placeholder.com/243x243"
+                data-widths="[370,270,160]"
+                data-sizes="auto"
+                data-image>
+              </figure>
+              <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
+                <p class="mb-1 d-flex justify-content-center align-items-center">
+                  <span class="review-stars">
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                  </span>
+                  <span>(42)</span>
+                </p>
+                <p class="product-card__title text-center">
+                  <a href="#" class="text-color-black text-decoration-none">Sunny Honey Bali Bronzing Bundle 1</a>
+                </p>
+                <p class="product-card__price text-center">
+                  <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
+                </p>
+                <form method="get" action="javascript:void(0)">
+                  <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
+                  <button type="submit" class="btn btn-lg btn-primary px-2 w-100">Add To Cart</button>
+                </form>
+              </div>
+            </div>
+
+            <div class="bg-white product-card px-1 py-2 d-flex flex-column h-100">
+              <div class="product-card__badge" data-badge="bronzing-self-tanner-drops">
+                <picture>
+                  <source srcset="https://via.placeholder.com/90x90/F3436C" media="(min-width: 992px)"/>
+                  <source srcset="https://via.placeholder.com/66x66/F3436C"/>
+                  <img class="img-fluid w-100 rounded-circle" src="https://via.placeholder.com/66x66/F3436C"/>
+                </picture>
+              </div>
+              <figure class="m-0">
+                <img class="grid-view-item__image lazyload w-100"
+                alt="Image Alt"
+                src="https://via.placeholder.com/243x243"
+                data-src="https://via.placeholder.com/243x243"
+                data-widths="[370,270,160]"
+                data-sizes="auto"
+                data-image>
+              </figure>
+              <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
+                <p class="mb-1 d-flex justify-content-center align-items-center">
+                  <span class="review-stars">
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                  </span>
+                  <span>(42)</span>
+                </p>
+                <p class="product-card__title text-center">
+                  <a href="#" class="text-color-black text-decoration-none">Like a Virgin Hair Masque 2</a>
+                </p>
+                <p class="product-card__price text-center">
+                  <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
+                </p>
+                <form method="get" action="javascript:void(0)" >
+                  <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
+                  <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Shade</button>
+                  <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
+                    <div class="shop-swatch text-center w-100 py-2">
+                      <label class="mb-2"><strong>Shade: </strong><span class="shade_name">Dark</span></label>
+                      <ul class="list-unstyled item-swatch d-flex justify-content-center">
+                        <li class="item available col-3" data-available="available">
+                          <span data-id="32068891541539" data-val="Medium" class="shade-medium"></span>
+                        </li>
+                        <li class=" item available active col-3" data-available="available">
+                          <span data-id="32068891607075" data-val="Dark" class="shade-dark"></span>
+                        </li>
+                        <li class=" item available col-3" data-available="available">
+                          <span data-id="32068891639843" data-val="Ultra Dark" class="shade-ultra-dark"></span>
+                        </li>
+                      </ul>
+                    </div>
+                    <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
+                      Add To Cart
+                    </button>
                   </div>
-                </div>
-              </li>
-              <li class="carousel-item position-relative">
-                <div class="carousel-item__child bg-white product-card col-10 col-md-3 px-1 py-2 d-flex">
-                  <div class="product-card__badge" data-badge="bronzing-self-tanner-drops">
-                    <picture>
-                      <source srcset="https://via.placeholder.com/90x90/F3436C" media="(min-width: 992px)"/>
-                      <source srcset="https://via.placeholder.com/66x66/F3436C"/>
-                      <img class="img-fluid w-100 rounded-circle" src="https://via.placeholder.com/66x66/F3436C"/>
-                    </picture>
+                </form>
+              </div>
+            </div>
+            <div class="bg-white product-card px-1 py-2 d-flex flex-column h-100">
+              <figure class="m-0">
+                <img class="grid-view-item__image lazyload w-100"
+                alt="Image Alt"
+                src="https://via.placeholder.com/243x243"
+                data-src="https://via.placeholder.com/243x243"
+                data-widths="[370,270,160]"
+                data-sizes="auto"
+                data-image>
+              </figure>
+              <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
+                <p class="mb-1 d-flex justify-content-center align-items-center">
+                  <span class="review-stars">
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                  </span>
+                  <span>(42)</span>
+                </p>
+                <p class="product-card__title text-center">
+                  <a href="#" class="text-color-black text-decoration-none">Miracle Hair</a>
+                </p>
+                <p class="product-card__price text-center">
+                  <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
+                </p>
+                <form method="get" action="javascript:void(0)" >
+                  <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
+                  <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Style</button>
+                  <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
+                    <div class="shop-swatch text-center w-100 py-2">
+                      <label class="mb-2"><strong>Style: </strong><span class="shade_name">Girl Print: Limited edition!</span></label>
+                      <ul class="list-unstyled item-swatch d-flex justify-content-center">
+                        <li class=" item available active col-3" data-available="available">
+                          <span data-id="32068891607075" data-val="Girl Print" class="style-girl-print"></span>
+                        </li>
+                        <li class=" item available col-3" data-available="available">
+                          <span data-id="32068891639843" data-val="Print Leaf" class="style-leaf-print"></span>
+                        </li>
+                      </ul>
+                    </div>
+                    <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
+                      Add To Cart
+                    </button>
                   </div>
-                  <figure class="m-0">
-                    <img class="grid-view-item__image lazyload w-100"
-                    alt="Image Alt"
-                    src="https://via.placeholder.com/243x243"
-                    data-src="https://via.placeholder.com/243x243"
-                    data-widths="[370,270,160]"
-                    data-sizes="auto"
-                    data-image>
-                  </figure>
-                  <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
-                    <p class="mb-1 d-flex justify-content-center align-items-center">
-                      <span class="review-stars">
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                      </span>
-                      <span>(42)</span>
-                    </p>
-                    <p class="product-card__title text-center">
-                      <a href="#" class="text-color-black text-decoration-none">Like a Virgin Hair Masque 2</a>
-                    </p>
-                    <p class="product-card__price text-center">
-                      <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
-                    </p>
-                    <form method="get" action="javascript:void(0)">
-                      <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                      <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Shade</button>
-                      <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
-                        <div class="shop-swatch text-center w-100 py-2">
-                          <label class="mb-2"><strong>Shade: </strong><span class="shade_name">Dark</span></label>
-                          <ul class="list-unstyled item-swatch d-flex justify-content-center">
-                            <li class="item available col-3" data-available="available">
-                              <span data-id="32068891541539" data-val="Medium" class="shade-medium"></span>
-                            </li>
-                            <li class=" item available active col-3" data-available="available">
-                              <span data-id="32068891607075" data-val="Dark" class="shade-dark"></span>
-                            </li>
-                            <li class=" item available col-3" data-available="available">
-                              <span data-id="32068891639843" data-val="Ultra Dark" class="shade-ultra-dark"></span>
-                            </li>
-                          </ul>
-                        </div>
-                        <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
-                          Add To Cart
-                        </button>
-                      </div>
-                    </form>
+                </form>
+              </div>
+            </div>
+            <div class="bg-white product-card px-1 py-2 d-flex flex-column h-100">
+              <figure class="m-0">
+                <img class="grid-view-item__image lazyload w-100"
+                alt="Image Alt"
+                src="https://via.placeholder.com/243x243"
+                data-src="https://via.placeholder.com/243x243"
+                data-widths="[370,270,160]"
+                data-sizes="auto"
+                data-image>
+              </figure>
+              <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
+                <p class="mb-1 d-flex justify-content-center align-items-center">
+                  <span class="review-stars">
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                  </span>
+                  <span>(42)</span>
+                </p>
+                <p class="product-card__title text-center">
+                  <a href="#" class="text-color-black text-decoration-none">Sunny Honey Bali Bronzing Bundle 1</a>
+                </p>
+                <p class="product-card__price text-center">
+                  <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
+                </p>
+                <form method="get" action="javascript:void(0)">
+                  <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
+                  <button type="submit" class="btn btn-lg btn-primary px-2 w-100">Add To Cart</button>
+                </form>
+              </div>
+            </div>
+
+            <div class="bg-white product-card px-1 py-2 d-flex flex-column h-100">
+              <div class="product-card__badge" data-badge="bronzing-self-tanner-drops">
+                <picture>
+                  <source srcset="https://via.placeholder.com/90x90/F3436C" media="(min-width: 992px)"/>
+                  <source srcset="https://via.placeholder.com/66x66/F3436C"/>
+                  <img class="img-fluid w-100 rounded-circle" src="https://via.placeholder.com/66x66/F3436C"/>
+                </picture>
+              </div>
+              <figure class="m-0">
+                <img class="grid-view-item__image lazyload w-100"
+                alt="Image Alt"
+                src="https://via.placeholder.com/243x243"
+                data-src="https://via.placeholder.com/243x243"
+                data-widths="[370,270,160]"
+                data-sizes="auto"
+                data-image>
+              </figure>
+              <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
+                <p class="mb-1 d-flex justify-content-center align-items-center">
+                  <span class="review-stars">
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                  </span>
+                  <span>(42)</span>
+                </p>
+                <p class="product-card__title text-center">
+                  <a href="#" class="text-color-black text-decoration-none">Like a Virgin Hair Masque 2</a>
+                </p>
+                <p class="product-card__price text-center">
+                  <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
+                </p>
+                <form method="get" action="javascript:void(0)" >
+                  <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
+                  <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Shade</button>
+                  <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
+                    <div class="shop-swatch text-center w-100 py-2">
+                      <label class="mb-2"><strong>Shade: </strong><span class="shade_name">Dark</span></label>
+                      <ul class="list-unstyled item-swatch d-flex justify-content-center">
+                        <li class="item available col-3" data-available="available">
+                          <span data-id="32068891541539" data-val="Medium" class="shade-medium"></span>
+                        </li>
+                        <li class=" item available active col-3" data-available="available">
+                          <span data-id="32068891607075" data-val="Dark" class="shade-dark"></span>
+                        </li>
+                        <li class=" item available col-3" data-available="available">
+                          <span data-id="32068891639843" data-val="Ultra Dark" class="shade-ultra-dark"></span>
+                        </li>
+                      </ul>
+                    </div>
+                    <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
+                      Add To Cart
+                    </button>
                   </div>
-                </div>
-              </li>
-              <li class="carousel-item position-relative">
-                <div class="carousel-item__child bg-white product-card col-10 col-md-3 px-1 py-2 d-flex">
-                  <figure class="m-0">
-                    <img class="grid-view-item__image lazyload w-100"
-                    alt="Image Alt"
-                    src="https://via.placeholder.com/243x243"
-                    data-src="https://via.placeholder.com/243x243"
-                    data-widths="[370,270,160]"
-                    data-sizes="auto"
-                    data-image>
-                  </figure>
-                  <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
-                    <p class="mb-1 d-flex justify-content-center align-items-center">
-                      <span class="review-stars">
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                      </span>
-                      <span>(42)</span>
-                    </p>
-                    <p class="product-card__title text-center">
-                      <a href="#" class="text-color-black text-decoration-none">Miracle Hair</a>
-                    </p>
-                    <p class="product-card__price text-center">
-                      <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
-                    </p>
-                    <form method="get" action="javascript:void(0)" >
-                      <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                      <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Style</button>
-                      <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
-                        <div class="shop-swatch text-center w-100 py-2">
-                          <label class="mb-2"><strong>Style: </strong><span class="shade_name">Girl Print: Limited edition!</span></label>
-                          <ul class="list-unstyled item-swatch d-flex justify-content-center">
-                            <li class=" item available active col-3" data-available="available">
-                              <span data-id="32068891607075" data-val="Girl Print: Limited edition!" class="style-girl-print"></span>
-                            </li>
-                            <li class=" item available col-3" data-available="available">
-                              <span data-id="32068891639843" data-val="Print Leaf" class="style-leaf-print"></span>
-                            </li>
-                          </ul>
-                        </div>
-                        <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
-                          Add To Cart
-                        </button>
-                      </div>
-                    </form>
+                </form>
+              </div>
+            </div>
+            <div class="bg-white product-card px-1 py-2 d-flex flex-column h-100">
+              <figure class="m-0">
+                <img class="grid-view-item__image lazyload w-100"
+                alt="Image Alt"
+                src="https://via.placeholder.com/243x243"
+                data-src="https://via.placeholder.com/243x243"
+                data-widths="[370,270,160]"
+                data-sizes="auto"
+                data-image>
+              </figure>
+              <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
+                <p class="mb-1 d-flex justify-content-center align-items-center">
+                  <span class="review-stars">
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                  </span>
+                  <span>(42)</span>
+                </p>
+                <p class="product-card__title text-center">
+                  <a href="#" class="text-color-black text-decoration-none">Miracle Hair</a>
+                </p>
+                <p class="product-card__price text-center">
+                  <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
+                </p>
+                <form method="get" action="javascript:void(0)" >
+                  <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
+                  <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Style</button>
+                  <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
+                    <div class="shop-swatch text-center w-100 py-2">
+                      <label class="mb-2"><strong>Style: </strong><span class="shade_name">Girl Print: Limited edition!</span></label>
+                      <ul class="list-unstyled item-swatch d-flex justify-content-center">
+                        <li class=" item available active col-3" data-available="available">
+                          <span data-id="32068891607075" data-val="Girl Print" class="style-girl-print"></span>
+                        </li>
+                        <li class=" item available col-3" data-available="available">
+                          <span data-id="32068891639843" data-val="Print Leaf" class="style-leaf-print"></span>
+                        </li>
+                      </ul>
+                    </div>
+                    <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
+                      Add To Cart
+                    </button>
                   </div>
-                </div>
-              </li>
-              <li class="carousel-item position-relative">
-                <div class="carousel-item__child bg-white product-card col-10 col-md-3 px-1 py-2 d-flex">
-                  <figure class="m-0">
-                    <img class="grid-view-item__image lazyload w-100"
-                    alt="Image Alt"
-                    src="https://via.placeholder.com/243x243"
-                    data-src="https://via.placeholder.com/243x243"
-                    data-widths="[370,270,160]"
-                    data-sizes="auto"
-                    data-image>
-                  </figure>
-                  <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
-                    <p class="mb-1 d-flex justify-content-center align-items-center">
-                      <span class="review-stars">
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                      </span>
-                      <span>(42)</span>
-                    </p>
-                    <p class="product-card__title text-center">
-                      <a href="#" class="text-color-black text-decoration-none">Sunny Honey Bali Bronzing Bundle 4</a>
-                    </p>
-                    <p class="product-card__price text-center">
-                      <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
-                    </p>
-                    <form method="get" action="javascript:void(0)">
-                      <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                      <button type="submit" class="btn btn-lg btn-primary px-2 w-100">Add To Cart</button>
-                    </form>
-                  </div>
-                </div>
-              </li>
-              <li class="carousel-item position-relative">
-                <div class="carousel-item__child bg-white product-card col-10 col-md-3 px-1 py-2 d-flex">
-                  <figure class="m-0">
-                    <img class="grid-view-item__image lazyload w-100"
-                    alt="Image Alt"
-                    src="https://via.placeholder.com/243x243"
-                    data-src="https://via.placeholder.com/243x243"
-                    data-widths="[370,270,160]"
-                    data-sizes="auto"
-                    data-image>
-                  </figure>
-                  <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
-                    <p class="mb-1 d-flex justify-content-center align-items-center">
-                      <span class="review-stars">
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                      </span>
-                      <span>(42)</span>
-                    </p>
-                    <p class="product-card__title text-center">
-                      <a href="#" class="text-color-black text-decoration-none">Like a Virgin Hair Masque 5</a>
-                    </p>
-                    <p class="product-card__price text-center">
-                      <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
-                    </p>
-                    <form method="get" action="javascript:void(0)">
-                      <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                      <button type="submit" class="btn btn-lg btn-primary px-2 w-100">Add To Cart</button>
-                    </form>
-                  </div>
-                </div>
-              </li>
-              <li class="carousel-item position-relative">
-                <div class="carousel-item__child bg-white product-card col-10 col-md-3 px-1 py-2 d-flex">
-                  <figure class="m-0">
-                    <img class="grid-view-item__image lazyload w-100"
-                    alt="Image Alt"
-                    src="https://via.placeholder.com/243x243"
-                    data-src="https://via.placeholder.com/243x243"
-                    data-widths="[370,270,160]"
-                    data-sizes="auto"
-                    data-image>
-                  </figure>
-                  <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
-                    <p class="mb-1 d-flex justify-content-center align-items-center">
-                      <span class="review-stars">
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                      </span>
-                      <span>(42)</span>
-                    </p>
-                    <p class="product-card__title text-center">
-                      <a href="#" class="text-color-black text-decoration-none">Miracle Hair 6</a>
-                    </p>
-                    <p class="product-card__price text-center">
-                      <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
-                    </p>
-                    <form method="get" action="javascript:void(0)">
-                      <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                      <button type="submit" class="btn btn-lg btn-primary px-2 w-100">Add To Cart</button>
-                    </form>
-                  </div>
-                </div>
-              </li>
-            </ul>
-            <a class="carousel-control carousel-control-prev carousel-control--background carousel-control--right-lg" href="#carousel-bestsellers" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon sni sni__chevron-prev justify-content-center align-items-center mr-sm-2 mr-lg-0" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control carousel-control-next carousel-control--background carousel-control--right-lg" href="#carousel-bestsellers" role="button" data-slide="next">
-              <span class="carousel-control-next-icon sni sni__chevron-next justify-content-center align-items-center ml-sm-2 ml-lg-0" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
         <div class="tab-pane fade" id="value-sets" role="tabpanel" aria-labelledby="value-sets-tab">
-          <div id="carousel-value-sets" class="carousel slide carousel--multiple-items">
-            <ul class="carousel-inner pl-lg-2 pr-lg-2 pl-sm-0">
-              <li class="carousel-item active">
-                <div class="carousel-item__child bg-white product-card col-10 col-md-3 px-1 py-2 d-flex">
-                  <figure class="m-0">
-                    <img class="grid-view-item__image lazyload w-100"
-                    alt="Image Alt"
-                    src="https://via.placeholder.com/243x243"
-                    data-src="https://via.placeholder.com/243x243"
-                    data-widths="[370,270,160]"
-                    data-sizes="auto"
-                    data-image>
-                  </figure>
-                  <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
+          <div id="carousel-value-sets" class="owl-carousel owl-flex">
+            <div class="bg-white product-card px-1 py-2 d-flex flex-column h-100">
+              <figure class="m-0">
+                <img class="grid-view-item__image lazyload w-100"
+                alt="Image Alt"
+                src="https://via.placeholder.com/243x243"
+                data-src="https://via.placeholder.com/243x243"
+                data-widths="[370,270,160]"
+                data-sizes="auto"
+                data-image>
+              </figure>
+              <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
+                <p class="mb-1 d-flex justify-content-center align-items-center">
+                  <span class="review-stars">
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                  </span>
+                  <span>(42)</span>
+                </p>
+                <p class="product-card__title text-center">
+                  <a href="#" class="text-color-black text-decoration-none">Sunny Honey Bali Bronzing Bundle 1</a>
+                </p>
+                <p class="product-card__price text-center">
+                  <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
+                </p>
+                <form method="get" action="javascript:void(0)">
+                  <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
+                  <button type="submit" class="btn btn-lg btn-primary px-2 w-100">Add To Cart</button>
+                </form>
+              </div>
+            </div>
 
-                    <p class="mb-1 d-flex justify-content-center align-items-center">
-                      <span class="review-stars">
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                      </span>
-                      <span>(42)</span>
-                    </p>
-                    <p class="product-card__title text-center">
-                      <a href="#" class="text-color-black text-decoration-none">Sunny Honey Bali Bronzing Bundle 1</a>
-                    </p>
-                    <p class="product-card__price text-center">
-                      <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
-                    </p>
-                    <form method="get" action="javascript:void(0)">
-                      <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                      <button type="submit" class="btn btn-lg btn-primary px-2 w-100">Add To Cart</button>
-                    </form>
+            <div class="bg-white product-card px-1 py-2 d-flex flex-column h-100">
+              <div class="product-card__badge" data-badge="bronzing-self-tanner-drops">
+                <picture>
+                  <source srcset="https://via.placeholder.com/90x90/F3436C" media="(min-width: 992px)"/>
+                  <source srcset="https://via.placeholder.com/66x66/F3436C"/>
+                  <img class="img-fluid w-100 rounded-circle" src="https://via.placeholder.com/66x66/F3436C"/>
+                </picture>
+              </div>
+              <figure class="m-0">
+                <img class="grid-view-item__image lazyload w-100"
+                alt="Image Alt"
+                src="https://via.placeholder.com/243x243"
+                data-src="https://via.placeholder.com/243x243"
+                data-widths="[370,270,160]"
+                data-sizes="auto"
+                data-image>
+              </figure>
+              <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
+                <p class="mb-1 d-flex justify-content-center align-items-center">
+                  <span class="review-stars">
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                  </span>
+                  <span>(42)</span>
+                </p>
+                <p class="product-card__title text-center">
+                  <a href="#" class="text-color-black text-decoration-none">Like a Virgin Hair Masque 2</a>
+                </p>
+                <p class="product-card__price text-center">
+                  <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
+                </p>
+                <form method="get" action="javascript:void(0)" >
+                  <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
+                  <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Shade</button>
+                  <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
+                    <div class="shop-swatch text-center w-100 py-2">
+                      <label class="mb-2"><strong>Shade: </strong><span class="shade_name">Dark</span></label>
+                      <ul class="list-unstyled item-swatch d-flex justify-content-center">
+                        <li class="item available col-3" data-available="available">
+                          <span data-id="32068891541539" data-val="Medium" class="shade-medium"></span>
+                        </li>
+                        <li class=" item available active col-3" data-available="available">
+                          <span data-id="32068891607075" data-val="Dark" class="shade-dark"></span>
+                        </li>
+                        <li class=" item available col-3" data-available="available">
+                          <span data-id="32068891639843" data-val="Ultra Dark" class="shade-ultra-dark"></span>
+                        </li>
+                      </ul>
+                    </div>
+                    <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
+                      Add To Cart
+                    </button>
                   </div>
-                </div>
-              </li>
-              <li class="carousel-item position-relative">
-                <div class="carousel-item__child bg-white product-card col-10 col-md-3 px-1 py-2 d-flex">
-                  <figure class="m-0">
-                    <img class="grid-view-item__image lazyload w-100"
-                    alt="Image Alt"
-                    src="https://via.placeholder.com/243x243"
-                    data-src="https://via.placeholder.com/243x243"
-                    data-widths="[370,270,160]"
-                    data-sizes="auto"
-                    data-image>
-                  </figure>
-                  <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
-                    <p class="mb-1 d-flex justify-content-center align-items-center">
-                      <span class="review-stars">
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                      </span>
-                      <span>(42)</span>
-                    </p>
-
-                    <p class="product-card__title text-center">
-                      <a href="#" class="text-color-black text-decoration-none">Like a Virgin Hair Masque 2</a>
-                    </p>
-                    <p class="product-card__price text-center">
-                      <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
-                    </p>
-                    <form method="get" action="javascript:void(0)">
-                      <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                      <button type="submit" class="btn btn-lg btn-primary px-2 w-100">Add To Cart</button>
-                    </form>
+                </form>
+              </div>
+            </div>
+            <div class="bg-white product-card px-1 py-2 d-flex flex-column h-100">
+              <figure class="m-0">
+                <img class="grid-view-item__image lazyload w-100"
+                alt="Image Alt"
+                src="https://via.placeholder.com/243x243"
+                data-src="https://via.placeholder.com/243x243"
+                data-widths="[370,270,160]"
+                data-sizes="auto"
+                data-image>
+              </figure>
+              <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
+                <p class="mb-1 d-flex justify-content-center align-items-center">
+                  <span class="review-stars">
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                  </span>
+                  <span>(42)</span>
+                </p>
+                <p class="product-card__title text-center">
+                  <a href="#" class="text-color-black text-decoration-none">Miracle Hair</a>
+                </p>
+                <p class="product-card__price text-center">
+                  <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
+                </p>
+                <form method="get" action="javascript:void(0)" >
+                  <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
+                  <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Style</button>
+                  <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
+                    <div class="shop-swatch text-center w-100 py-2">
+                      <label class="mb-2"><strong>Style: </strong><span class="shade_name">Girl Print: Limited edition!</span></label>
+                      <ul class="list-unstyled item-swatch d-flex justify-content-center">
+                        <li class=" item available active col-3" data-available="available">
+                          <span data-id="32068891607075" data-val="Girl Print" class="style-girl-print"></span>
+                        </li>
+                        <li class=" item available col-3" data-available="available">
+                          <span data-id="32068891639843" data-val="Print Leaf" class="style-leaf-print"></span>
+                        </li>
+                      </ul>
+                    </div>
+                    <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
+                      Add To Cart
+                    </button>
                   </div>
-                </div>
-              </li>
-              <li class="carousel-item position-relative">
-                <div class="carousel-item__child bg-white product-card col-10 col-md-3 px-1 py-2 d-flex">
-                  <figure class="m-0">
-                    <img class="grid-view-item__image lazyload w-100"
-                    alt="Image Alt"
-                    src="https://via.placeholder.com/243x243"
-                    data-src="https://via.placeholder.com/243x243"
-                    data-widths="[370,270,160]"
-                    data-sizes="auto"
-                    data-image>
-                  </figure>
-                  <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
-                    <p class="mb-1 d-flex justify-content-center align-items-center">
-                      <span class="review-stars">
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                      </span>
-                      <span>(42)</span>
-                    </p>
+                </form>
+              </div>
+            </div>
+            <div class="bg-white product-card px-1 py-2 d-flex flex-column h-100">
+              <figure class="m-0">
+                <img class="grid-view-item__image lazyload w-100"
+                alt="Image Alt"
+                src="https://via.placeholder.com/243x243"
+                data-src="https://via.placeholder.com/243x243"
+                data-widths="[370,270,160]"
+                data-sizes="auto"
+                data-image>
+              </figure>
+              <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
+                <p class="mb-1 d-flex justify-content-center align-items-center">
+                  <span class="review-stars">
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                  </span>
+                  <span>(42)</span>
+                </p>
+                <p class="product-card__title text-center">
+                  <a href="#" class="text-color-black text-decoration-none">Sunny Honey Bali Bronzing Bundle 1</a>
+                </p>
+                <p class="product-card__price text-center">
+                  <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
+                </p>
+                <form method="get" action="javascript:void(0)">
+                  <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
+                  <button type="submit" class="btn btn-lg btn-primary px-2 w-100">Add To Cart</button>
+                </form>
+              </div>
+            </div>
 
-                    <p class="product-card__title text-center">
-                      <a href="#" class="text-color-black text-decoration-none">Miracle Hair 3</a>
-                    </p>
-                    <p class="product-card__price text-center">
-                      <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
-                    </p>
-                    <form method="get" action="javascript:void(0)">
-                      <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                      <button type="submit" class="btn btn-lg btn-primary px-2 w-100">Add To Cart</button>
-                    </form>
+            <div class="bg-white product-card px-1 py-2 d-flex flex-column h-100">
+              <div class="product-card__badge" data-badge="bronzing-self-tanner-drops">
+                <picture>
+                  <source srcset="https://via.placeholder.com/90x90/F3436C" media="(min-width: 992px)"/>
+                  <source srcset="https://via.placeholder.com/66x66/F3436C"/>
+                  <img class="img-fluid w-100 rounded-circle" src="https://via.placeholder.com/66x66/F3436C"/>
+                </picture>
+              </div>
+              <figure class="m-0">
+                <img class="grid-view-item__image lazyload w-100"
+                alt="Image Alt"
+                src="https://via.placeholder.com/243x243"
+                data-src="https://via.placeholder.com/243x243"
+                data-widths="[370,270,160]"
+                data-sizes="auto"
+                data-image>
+              </figure>
+              <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
+                <p class="mb-1 d-flex justify-content-center align-items-center">
+                  <span class="review-stars">
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                  </span>
+                  <span>(42)</span>
+                </p>
+                <p class="product-card__title text-center">
+                  <a href="#" class="text-color-black text-decoration-none">Like a Virgin Hair Masque 2</a>
+                </p>
+                <p class="product-card__price text-center">
+                  <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
+                </p>
+                <form method="get" action="javascript:void(0)" >
+                  <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
+                  <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Shade</button>
+                  <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
+                    <div class="shop-swatch text-center w-100 py-2">
+                      <label class="mb-2"><strong>Shade: </strong><span class="shade_name">Dark</span></label>
+                      <ul class="list-unstyled item-swatch d-flex justify-content-center">
+                        <li class="item available col-3" data-available="available">
+                          <span data-id="32068891541539" data-val="Medium" class="shade-medium"></span>
+                        </li>
+                        <li class=" item available active col-3" data-available="available">
+                          <span data-id="32068891607075" data-val="Dark" class="shade-dark"></span>
+                        </li>
+                        <li class=" item available col-3" data-available="available">
+                          <span data-id="32068891639843" data-val="Ultra Dark" class="shade-ultra-dark"></span>
+                        </li>
+                      </ul>
+                    </div>
+                    <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
+                      Add To Cart
+                    </button>
                   </div>
-                </div>
-              </li>
-              <li class="carousel-item position-relative">
-                <div class="carousel-item__child bg-white product-card col-10 col-md-3 px-1 py-2 d-flex">
-                  <figure class="m-0">
-                    <img class="grid-view-item__image lazyload w-100"
-                    alt="Image Alt"
-                    src="https://via.placeholder.com/243x243"
-                    data-src="https://via.placeholder.com/243x243"
-                    data-widths="[370,270,160]"
-                    data-sizes="auto"
-                    data-image>
-                  </figure>
-                  <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
-                    <p class="mb-1 d-flex justify-content-center align-items-center">
-                      <span class="review-stars">
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                      </span>
-                      <span>(42)</span>
-                    </p>
-
-                    <p class="product-card__title text-center">
-                      <a href="#" class="text-color-black text-decoration-none">Sunny Honey Bali Bronzing Bundle 4</a>
-                    </p>
-
-                    <p class="product-card__price text-center">
-                      <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
-                    </p>
-                    <form method="get" action="javascript:void(0)">
-                      <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                      <button type="submit" class="btn btn-lg btn-primary px-2 w-100">Add To Cart</button>
-                    </form>
+                </form>
+              </div>
+            </div>
+            <div class="bg-white product-card px-1 py-2 d-flex flex-column h-100">
+              <figure class="m-0">
+                <img class="grid-view-item__image lazyload w-100"
+                alt="Image Alt"
+                src="https://via.placeholder.com/243x243"
+                data-src="https://via.placeholder.com/243x243"
+                data-widths="[370,270,160]"
+                data-sizes="auto"
+                data-image>
+              </figure>
+              <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
+                <p class="mb-1 d-flex justify-content-center align-items-center">
+                  <span class="review-stars">
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                  </span>
+                  <span>(42)</span>
+                </p>
+                <p class="product-card__title text-center">
+                  <a href="#" class="text-color-black text-decoration-none">Miracle Hair</a>
+                </p>
+                <p class="product-card__price text-center">
+                  <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
+                </p>
+                <form method="get" action="javascript:void(0)" >
+                  <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
+                  <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Style</button>
+                  <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
+                    <div class="shop-swatch text-center w-100 py-2">
+                      <label class="mb-2"><strong>Style: </strong><span class="shade_name">Girl Print: Limited edition!</span></label>
+                      <ul class="list-unstyled item-swatch d-flex justify-content-center">
+                        <li class=" item available active col-3" data-available="available">
+                          <span data-id="32068891607075" data-val="Girl Print" class="style-girl-print"></span>
+                        </li>
+                        <li class=" item available col-3" data-available="available">
+                          <span data-id="32068891639843" data-val="Print Leaf" class="style-leaf-print"></span>
+                        </li>
+                      </ul>
+                    </div>
+                    <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
+                      Add To Cart
+                    </button>
                   </div>
-                </div>
-              </li>
-              <li class="carousel-item position-relative">
-                <div class="carousel-item__child bg-white product-card col-10 col-md-3 px-1 py-2 d-flex">
-                  <figure class="m-0">
-                    <img class="grid-view-item__image lazyload w-100"
-                    alt="Image Alt"
-                    src="https://via.placeholder.com/243x243"
-                    data-src="https://via.placeholder.com/243x243"
-                    data-widths="[370,270,160]"
-                    data-sizes="auto"
-                    data-image>
-                  </figure>
-                  <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
-                    <p class="mb-1 d-flex justify-content-center align-items-center">
-                      <span class="review-stars">
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                      </span>
-                      <span>(42)</span>
-                    </p>
-
-                    <p class="product-card__title text-center">
-                      <a href="#" class="text-color-black text-decoration-none">Like a Virgin Hair Masque 5</a>
-                    </p>
-                    <p class="product-card__price text-center">
-                      <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
-                    </p>
-                    <form method="get" action="javascript:void(0)">
-                      <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                      <button type="submit" class="btn btn-lg btn-primary px-2 w-100">Add To Cart</button>
-                    </form>
-                  </div>
-                </div>
-              </li>
-              <li class="carousel-item position-relative">
-                <div class="carousel-item__child bg-white product-card col-10 col-md-3 px-1 py-2 d-flex">
-                  <figure class="m-0">
-                    <img class="grid-view-item__image lazyload w-100"
-                    alt="Image Alt"
-                    src="https://via.placeholder.com/243x243"
-                    data-src="https://via.placeholder.com/243x243"
-                    data-widths="[370,270,160]"
-                    data-sizes="auto"
-                    data-image>
-                  </figure>
-                  <div class="px-2 pt-2 pb-0 d-flex h-100 flex-column position-relative">
-                    <p class="mb-1 d-flex justify-content-center align-items-center">
-                      <span class="review-stars">
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                      </span>
-                      <span>(42)</span>
-                    </p>
-
-                    <p class="product-card__title text-center">
-                      <a href="#" class="text-color-black text-decoration-none">Miracle Hair 6</a>
-                    </p>
-                    <p class="product-card__price text-center">
-                      <span class="price crossed text-line-through pr-1">$34.90</span> <span class="price pl-1">$34.90</span>
-                    </p>
-                    <form method="get" action="javascript:void(0)">
-                      <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                      <button type="submit" class="btn btn-lg btn-primary px-2 w-100">Add To Cart</button>
-                    </form>
-                  </div>
-                </div>
-              </li>
-            </ul>
-
-            <a class="carousel-control carousel-control-prev carousel-control--background carousel-control--right-lg" href="#carousel-value-sets" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon sni sni__chevron-prev justify-content-center align-items-center mr-sm-2 mr-lg-0" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control carousel-control-next carousel-control--background carousel-control--right-lg" href="#carousel-value-sets" role="button" data-slide="next">
-              <span class="carousel-control-next-icon sni sni__chevron-next justify-content-center align-items-center ml-sm-2 ml-lg-0" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <a href="#" class="btn btn-lg btn-outline-primary mb-2">Shop All</a>
+      <a href="#" class="btn btn-lg btn-outline-primary mt-4">Shop All</a>
     </section>
     <!-- Playground section -->
-    <section>
+    <section class="pt-7">
       <div class="white-wrapper wrap-block pt-md-7 pb-md-7 pt-0 pb-0 pb-1 pb-md-4">
-        <div class="sections-heading col col-lg-6 col-md-10 col-sm-10 col-12 text-center p-0 mx-auto pb-1">
-          <p class="h2 mb-1 d-none d-md-block">Discover the Coco &amp; Eve playground</p>
-          <p class="h2 mb-1 d-block d-md-none">The Coco &amp; Eve playground</p>
+        <div class="col col-lg-6 col-md-10 col-sm-10 col-12 text-center p-0 mx-auto pb-1">
+          <p class="h1 mb-1 d-none d-md-block">Discover the Coco &amp; Eve playground</p>
+          <p class="h1 mb-1 d-block d-md-none">The Coco &amp; Eve playground</p>
           <div class="rte col_sec_des pt-1">
             <p><strong>We're totally coconuts about beauty!</strong></p>
             <p>Which is why we have combined powerful &amp; tropical ingredients into different ranges to provide amazing results and make your life feel like a constant holiday. <br>18 beauty awards. 100% vegan. Cruelty free.</p>
@@ -835,17 +963,17 @@
         </div>
         <div class="container">
           <div class="collection-list float-md-left position-relative text-center col-md-4 px-sm-0 pt-sm-1 p-md-2">
-            <a href="#" class="text-decoration-none text-white d-flex flex-column h-100">
+            <a href="#" class="text-decoration-none text-white d-flex flex-sm-row flex-md-column h-100 align-items-center">
               <figure class="position-relative d-md-flex">
-                <picture class="d-block position-relative">
+                <picture class="d-block position-relative w-100">
                   <source srcset="https://via.placeholder.com/379x379" media="(min-width: 992px)"/>
                   <source srcset="https://via.placeholder.com/345x150.jpg/EFADBA"/>
                   <img class="img-fluid w-100" alt="/" src="https://via.placeholder.com/345x150.jpg/EFADBA"/>
                 </picture>
-                <figcaption class="d-flex  align-items-center px-sm-2">
-                  <p class="mb-0 h2 mt-md-auto">Hair</p>
+                <figcaption class="d-flex align-items-center px-sm-2 justify-content-between">
+                  <p class="mb-0 h1 mt-md-auto">Hair</p>
                   <p class="d-sm-none d-md-block mb-md-2 mt-md-auto">Explore our award-winning Like a Virgin hair range</p>
-                  <a href="#" class="svg-btn d-inline-block d-md-none">
+                  <a href="#" class="d-inline-block d-md-none text-decoration-none text-white h2 mb-0">
                     <i class="sni sni__chevron-next"></i>
                   </a>
                 </figcaption>
@@ -854,17 +982,17 @@
             <a href="#" class="btn btn-primary btn-lg d-none d-md-inline-block mt-1">Shop Hair</a>
           </div>
           <div class="collection-list float-md-left position-relative text-center col-md-4 px-sm-0 p-md-2">
-            <a href="#" class="text-decoration-none text-white d-flex flex-column h-100">
+            <a href="#" class="text-decoration-none text-white d-flex flex-sm-row flex-md-column h-100 align-items-center">
               <figure class="position-relative d-md-flex">
-                <picture class="d-block position-relative">
+                <picture class="d-block position-relative w-100">
                   <source srcset="https://via.placeholder.com/379x379" media="(min-width: 992px)"/>
                   <source srcset="https://via.placeholder.com/345x150.jpg/EFADBA"/>
                   <img class="img-fluid w-100" alt="/" src="https://via.placeholder.com/345x150.jpg/EFADBA"/>
                 </picture>
-                <figcaption class="d-flex  align-items-center px-sm-2">
-                  <p class="mb-0 h2 mt-md-auto">Body</p>
+                <figcaption class="d-flex  align-items-center px-sm-2 justify-content-between">
+                  <p class="mb-0 h1 mt-md-auto">Body</p>
                   <p class="d-sm-none d-md-block mb-md-2 mt-md-auto">Explore our award-winning Like a Virgin hair range</p>
-                  <a href="#" class="svg-btn d-inline-block d-md-none">
+                  <a href="#" class="d-inline-block d-md-none text-decoration-none text-white h2 mb-0">
                     <i class="sni sni__chevron-next"></i>
                   </a>
                 </figcaption>
@@ -873,18 +1001,18 @@
             <a href="#" class="btn btn-primary btn-lg d-none d-md-inline-block mt-1">Shop Hair</a>
           </div>
           <div class="collection-list float-md-left position-relative text-center col-md-4 px-sm-0 p-md-2">
-            <a href="#" class="text-decoration-none text-white d-flex flex-column h-100">
+            <a href="#" class="text-decoration-none text-white d-flex flex-sm-row flex-md-column h-100 align-items-center">
               <figure class="position-relative d-md-flex">
 
-                <picture class="d-block position-relative">
+                <picture class="d-block position-relative w-100">
                   <source srcset="https://via.placeholder.com/379x379" media="(min-width: 992px)"/>
                   <source srcset="https://via.placeholder.com/345x150.jpg/EFADBA"/>
                   <img class="img-fluid w-100" alt="/" src="https://via.placeholder.com/345x150.jpg/EFADBA"/>
                 </picture>
-                <figcaption class="d-flex  align-items-center px-sm-2">
-                  <p class="mb-0 h2 mt-md-auto">Tan</p>
+                <figcaption class="d-flex  align-items-center px-sm-2 justify-content-between">
+                  <p class="mb-0 h1 mt-md-auto">Tan</p>
                   <p class="d-sm-none d-md-block mb-md-2 mt-md-auto">Explore our award-winning Like a Virgin hair range</p>
-                  <a href="#" class="svg-btn d-inline-block d-md-none">
+                  <a href="#" class="d-inline-block d-md-none text-decoration-none text-white h2 mb-0">
                     <i class="sni sni__chevron-next"></i>
                   </a>
                 </figcaption>
@@ -940,8 +1068,8 @@
     <!-- Testimonials section-->
     <section class="white-wrapper wrap-block pt-6 pb-6 text-center">
       <div class="container">
-        <div class="sections-heading col col-lg-8 col-md-9 col-sm-9 col-9 mx-auto">
-          <p class="h2">Beauty editors love us</p>
+        <div class=" col col-lg-8 col-md-9 col-sm-9 col-9 mx-auto">
+          <p class="h1">Beauty editors love us</p>
         </div>
         <div class="list-logo d-flex justify-content-center text-center col col-lg-11 col-md-11 col-sm-12 col-12 d-flex flex-row flex-wrap align-items-center mx-auto">
           <div class="col col-md-2 col-sm-4 col-4 pt-3 pb-3">
@@ -986,7 +1114,7 @@
     <!-- real results section -->
     <section class="real-results pt-4 text-center pb-4 bg-yellow-light pt-4">
       <div class="container px-2 text-center">
-        <p class="pb-2 mb-0 h2 sections-heading">Real Results</p>
+        <p class="pb-2 mb-0 h1 ">Real Results</p>
         <ul class="nav nav-fill mb-md-7 mb-5 col-md-5 px-0 mx-auto d-sm-none d-md-flex" role="tablist">
           <li class="nav-item w-auto">
             <a class="nav-link text-decoration-none" data-toggle="tab" href="#tan" role="tab" aria-controls="tan">Tan</a>
@@ -1010,705 +1138,602 @@
       </div>
       <div class="tab-content container px-sm-0">
         <div class="tab-pane fade" id="tan" role="tabpanel" aria-labelledby="tan-tab">
-          <div id="carousel-tan" class="carousel slide carousel--multiple-items">
-            <ul class="carousel-inner pl-lg-2 pr-lg-2 pl-sm-0">
-              <li class="carousel-item active">
-                <div class="carousel-item__child review-item col-md-3 d-inline-block align-top rounded-bottom">
-                  <figure class="w-100 m-0">
-                    <picture class="d-block position-relative">
-                      <source srcset="https://via.placeholder.com/570x340" media="(min-width: 992px)"/>
-                      <source srcset="https://via.placeholder.com/276x197.jpg/EFADBA"/>
-                      <img class="img-fluid w-100" alt="/" src="https://via.placeholder.com/276x197.jpg/EFADBA">
-                    </picture>
-                  </figure>
-                  <div class="review-item__content bg-white rounded-bottom">
-                    <div class="d-flex justify-content-between align-items-center">
-                      <span class="review-stars">
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                      </span>
-                      <span class="badge badge-purple mb-1 mt-1">Tan</span>
-                    </div>
-                    <p>
-                      <strong>Product:&nbsp;</strong>
-                      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-                        Bali Bronzing Foam (Dark)
-                      </a>
-                    </p>
-                    <p>"I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼"</p>
-                    <p class="text-underline">@kaylaazjones</p>
-                  </div>
+          <div id="carousel-tan" class="owl-carousel owl-flex">
+            <div class="review-item d-inline-block align-top rounded-bottom">
+              <figure class="w-100 m-0">
+                <picture class="d-block position-relative">
+                  <source srcset="https://via.placeholder.com/570x340" media="(min-width: 992px)"/>
+                  <source srcset="https://via.placeholder.com/276x197.jpg/EFADBA"/>
+                  <img class="img-fluid w-100" alt="/" src="https://via.placeholder.com/276x197.jpg/EFADBA">
+                </picture>
+              </figure>
+              <div class="review-item__content bg-white rounded-bottom">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="review-stars">
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                  </span>
+                  <span class="badge badge-blue mb-1 mt-1">Body</span>
                 </div>
-              </li>
-              <li class="carousel-item">
-                <div class="carousel-item__child review-item col-md-3 d-inline-block align-top rounded-bottom">
-                  <figure class="w-100 m-0">
-                    <picture class="d-block position-relative">
-                      <source srcset="https://via.placeholder.com/570x340" media="(min-width: 992px)"/>
-                      <source srcset="https://via.placeholder.com/276x197.jpg/EFADBA"/>
-                      <img class="img-fluid w-100" alt="/" src="https://via.placeholder.com/276x197.jpg/EFADBA">
-                    </picture>
-                  </figure>
-                  <div class="review-item__content bg-white rounded-bottom">
-                    <div class="d-flex justify-content-between align-items-center">
-                      <span class="review-stars">
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                      </span>
-                      <span class="badge badge-secondary mb-1 mt-1">Hair</span>
-                    </div>
-                    <p>
-                      <strong>Product:&nbsp;</strong>
-                      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-                        Bali Bronzing Foam (Dark)
-                      </a>
-                    </p>
-                    <p>"I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼"</p>
-                    <p class="text-underline">@kaylaazjones</p>
-                  </div>
+                <p>
+                  <strong>Product:&nbsp;</strong>
+                  <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
+                    Bali Bronzing Foam (Dark)
+                  </a>
+                </p>
+                <p>"I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼"</p>
+                <p class="text-underline">@kaylaazjones</p>
+              </div>
+            </div>
+            <div class="review-item d-inline-block align-top rounded-bottom">
+              <figure class="w-100 m-0">
+                <picture class="d-block position-relative">
+                  <source srcset="https://via.placeholder.com/570x340" media="(min-width: 992px)"/>
+                  <source srcset="https://via.placeholder.com/276x197.jpg/EFADBA"/>
+                  <img class="img-fluid w-100" alt="/" src="https://via.placeholder.com/276x197.jpg/EFADBA">
+                </picture>
+              </figure>
+              <div class="review-item__content bg-white rounded-bottom">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="review-stars">
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                  </span>
+                  <span class="badge badge-blue mb-1 mt-1">Body</span>
                 </div>
-              </li>
-              <li class="carousel-item">
-                <div class="carousel-item__child review-item col-md-3 d-inline-block align-top rounded-bottom">
-                  <figure class="w-100 m-0">
-                    <picture class="d-block position-relative">
-                      <source srcset="https://via.placeholder.com/570x340" media="(min-width: 992px)"/>
-                      <source srcset="https://via.placeholder.com/276x197.jpg/EFADBA"/>
-                      <img class="img-fluid w-100" alt="/" src="https://via.placeholder.com/276x197.jpg/EFADBA">
-                    </picture>
-                  </figure>
-                  <div class="review-item__content bg-white rounded-bottom">
-                    <div class="d-flex justify-content-between align-items-center">
-                      <span class="review-stars">
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                      </span>
-                      <span class="badge badge-blue mb-1 mt-1">Body</span>
-                    </div>
-                    <p>
-                      <strong>Product:&nbsp;</strong>
-                      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-                        Bali Bronzing Foam (Dark)
-                      </a>
-                    </p>
-                    <p>"I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼"</p>
-                    <p class="text-underline">@kaylaazjones</p>
-                  </div>
+                <p>
+                  <strong>Product:&nbsp;</strong>
+                  <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
+                    Bali Bronzing Foam (Dark)
+                  </a>
+                </p>
+                <p>"I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼"</p>
+                <p class="text-underline">@kaylaazjones</p>
+              </div>
+            </div>
+            <div class="review-item d-inline-block align-top rounded-bottom">
+              <figure class="w-100 m-0">
+                <picture class="d-block position-relative">
+                  <source srcset="https://via.placeholder.com/570x340" media="(min-width: 992px)"/>
+                  <source srcset="https://via.placeholder.com/276x197.jpg/EFADBA"/>
+                  <img class="img-fluid w-100" alt="/" src="https://via.placeholder.com/276x197.jpg/EFADBA">
+                </picture>
+              </figure>
+              <div class="review-item__content bg-white rounded-bottom">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="review-stars">
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                  </span>
+                  <span class="badge badge-blue mb-1 mt-1">Body</span>
                 </div>
+                <p>
+                  <strong>Product:&nbsp;</strong>
+                  <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
+                    Bali Bronzing Foam (Dark)
+                  </a>
+                </p>
+                <p>"I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼"</p>
+                <p class="text-underline">@kaylaazjones</p>
+              </div>
+            </div>
+            <div class="review-item d-inline-block align-top rounded-bottom">
+              <figure class="w-100 m-0">
+                <picture class="d-block position-relative">
+                  <source srcset="https://via.placeholder.com/570x340" media="(min-width: 992px)"/>
+                  <source srcset="https://via.placeholder.com/276x197.jpg/EFADBA"/>
+                  <img class="img-fluid w-100" alt="/" src="https://via.placeholder.com/276x197.jpg/EFADBA">
+                </picture>
+              </figure>
+              <div class="review-item__content bg-white rounded-bottom">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="review-stars">
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                  </span>
+                  <span class="badge badge-blue mb-1 mt-1">Body</span>
+                </div>
+                <p>
+                  <strong>Product:&nbsp;</strong>
+                  <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
+                    Bali Bronzing Foam (Dark)
+                  </a>
+                </p>
+                <p>"I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼"</p>
+                <p class="text-underline">@kaylaazjones</p>
+              </div>
+            </div>
+            <div class="review-item d-inline-block align-top rounded-bottom">
+              <figure class="w-100 m-0">
+                <picture class="d-block position-relative">
+                  <source srcset="https://via.placeholder.com/570x340" media="(min-width: 992px)"/>
+                  <source srcset="https://via.placeholder.com/276x197.jpg/EFADBA"/>
+                  <img class="img-fluid w-100" alt="/" src="https://via.placeholder.com/276x197.jpg/EFADBA">
+                </picture>
+              </figure>
+              <div class="review-item__content bg-white rounded-bottom">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="review-stars">
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                  </span>
+                  <span class="badge badge-blue mb-1 mt-1">Body</span>
+                </div>
+                <p>
+                  <strong>Product:&nbsp;</strong>
+                  <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
+                    Bali Bronzing Foam (Dark)
+                  </a>
+                </p>
+                <p>"I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼"</p>
+                <p class="text-underline">@kaylaazjones</p>
+              </div>
+            </div>
 
-              </li>
-              <li class="carousel-item">
-                <div class="carousel-item__child review-item col-md-3 d-inline-block align-top rounded-bottom">
-                  <figure class="w-100 m-0">
-                    <picture class="d-block position-relative">
-                      <source srcset="https://via.placeholder.com/570x340" media="(min-width: 992px)"/>
-                      <source srcset="https://via.placeholder.com/276x197.jpg/EFADBA"/>
-                      <img class="img-fluid w-100" alt="/" src="https://via.placeholder.com/276x197.jpg/EFADBA">
-                    </picture>
-                  </figure>
-                  <div class="review-item__content bg-white rounded-bottom">
-                    <div class="d-flex justify-content-between align-items-center">
-                      <span class="review-stars">
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                      </span>
-                      <span class="badge badge-blue mb-1 mt-1">Body</span>
-                    </div>
-                    <p>
-                      <strong>Product:&nbsp;</strong>
-                      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-                        Bali Bronzing Foam (Dark)
-                      </a>
-                    </p>
-                    <p>"I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼"</p>
-                    <p class="text-underline">@kaylaazjones</p>
-                  </div>
-                </div>
 
-              </li>
-              <li class="carousel-item">
-                <div class="carousel-item__child review-item col-md-3 d-inline-block align-top rounded-bottom">
-                  <figure class="w-100 m-0">
-                    <picture class="d-block position-relative">
-                      <source srcset="https://via.placeholder.com/570x340" media="(min-width: 992px)"/>
-                      <source srcset="https://via.placeholder.com/276x197.jpg/EFADBA"/>
-                      <img class="img-fluid w-100" alt="/" src="https://via.placeholder.com/276x197.jpg/EFADBA">
-                    </picture>
-                  </figure>
-                  <div class="review-item__content bg-white rounded-bottom">
-                    <div class="d-flex justify-content-between align-items-center">
-                      <span class="review-stars">
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                      </span>
-                      <span class="badge badge-blue mb-1 mt-1">Body</span>
-                    </div>
-                    <p>
-                      <strong>Product:&nbsp;</strong>
-                      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-                        Bali Bronzing Foam (Dark)
-                      </a>
-                    </p>
-                    <p>"I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼"</p>
-                    <p class="text-underline">@kaylaazjones</p>
-                  </div>
-                </div>
-
-              </li>
-              <li class="carousel-item">
-              </li>
-            </ul>
-
-            <a class="carousel-control carousel-control-prev carousel-control--background carousel-control--right-lg" href="#carousel-tan" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon sni sni__chevron-prev justify-content-center align-items-center mr-sm-2 mr-lg-0" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control carousel-control-next carousel-control--background carousel-control--right-lg" href="#carousel-tan" role="button" data-slide="next">
-              <span class="carousel-control-next-icon sni sni__chevron-next justify-content-center align-items-center ml-sm-2 ml-lg-0" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
           </div>
         </div>
         <div class="tab-pane fade" id="hair" role="tabpanel" aria-labelledby="hair-tab">
-          <div id="carousel-hair" class="carousel slide carousel--multiple-items">
-            <ul class="carousel-inner pl-lg-2 pr-lg-2 pl-sm-0">
-              <li class="carousel-item active">
-                <div class="carousel-item__child review-item col-md-3 d-inline-block align-top rounded-bottom">
-                  <figure class="w-100 m-0">
-                    <picture class="d-block position-relative">
-                      <source srcset="https://via.placeholder.com/570x340" media="(min-width: 992px)"/>
-                      <source srcset="https://via.placeholder.com/276x197.jpg/EFADBA"/>
-                      <img class="img-fluid w-100" alt="/" src="https://via.placeholder.com/276x197.jpg/EFADBA">
-                    </picture>
-                  </figure>
-                  <div class="review-item__content bg-white rounded-bottom">
-                    <div class="d-flex justify-content-between align-items-center">
-                      <span class="review-stars">
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                      </span>
-                      <span class="badge badge-blue mb-1 mt-1">Body</span>
-                    </div>
-                    <p>
-                      <strong>Product:&nbsp;</strong>
-                      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-                        Bali Bronzing Foam (Dark)
-                      </a>
-                    </p>
-                    <p>"I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼"</p>
-                    <p class="text-underline">@kaylaazjones</p>
-                  </div>
+          <div id="carousel-hair" class="owl-carousel owl-flex">
+            <div class="review-item d-inline-block align-top rounded-bottom">
+              <figure class="w-100 m-0">
+                <picture class="d-block position-relative">
+                  <source srcset="https://via.placeholder.com/570x340" media="(min-width: 992px)"/>
+                  <source srcset="https://via.placeholder.com/276x197.jpg/EFADBA"/>
+                  <img class="img-fluid w-100" alt="/" src="https://via.placeholder.com/276x197.jpg/EFADBA">
+                </picture>
+              </figure>
+              <div class="review-item__content bg-white rounded-bottom">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="review-stars">
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                  </span>
+                  <span class="badge badge-blue mb-1 mt-1">Body</span>
                 </div>
-              </li>
-              <li class="carousel-item">
-                <div class="carousel-item__child review-item col-md-3 d-inline-block align-top rounded-bottom">
-                  <figure class="w-100 m-0">
-                    <picture class="d-block position-relative">
-                      <source srcset="https://via.placeholder.com/570x340" media="(min-width: 992px)"/>
-                      <source srcset="https://via.placeholder.com/276x197.jpg/EFADBA"/>
-                      <img class="img-fluid w-100" alt="/" src="https://via.placeholder.com/276x197.jpg/EFADBA">
-                    </picture>
-                  </figure>
-                  <div class="review-item__content bg-white rounded-bottom">
-                    <div class="d-flex justify-content-between align-items-center">
-                      <span class="review-stars">
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                      </span>
-                      <span class="badge badge-blue mb-1 mt-1">Body</span>
-                    </div>
-                    <p>
-                      <strong>Product:&nbsp;</strong>
-                      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-                        Bali Bronzing Foam (Dark)
-                      </a>
-                    </p>
-                    <p>"I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼"</p>
-                    <p class="text-underline">@kaylaazjones</p>
-                  </div>
+                <p>
+                  <strong>Product:&nbsp;</strong>
+                  <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
+                    Bali Bronzing Foam (Dark)
+                  </a>
+                </p>
+                <p>"I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼"</p>
+                <p class="text-underline">@kaylaazjones</p>
+              </div>
+            </div>
+            <div class="review-item d-inline-block align-top rounded-bottom">
+              <figure class="w-100 m-0">
+                <picture class="d-block position-relative">
+                  <source srcset="https://via.placeholder.com/570x340" media="(min-width: 992px)"/>
+                  <source srcset="https://via.placeholder.com/276x197.jpg/EFADBA"/>
+                  <img class="img-fluid w-100" alt="/" src="https://via.placeholder.com/276x197.jpg/EFADBA">
+                </picture>
+              </figure>
+              <div class="review-item__content bg-white rounded-bottom">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="review-stars">
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                  </span>
+                  <span class="badge badge-blue mb-1 mt-1">Body</span>
                 </div>
-
-              </li>
-              <li class="carousel-item">
-                <div class="carousel-item__child review-item col-md-3 d-inline-block align-top rounded-bottom">
-                  <figure class="w-100 m-0">
-                    <picture class="d-block position-relative">
-                      <source srcset="https://via.placeholder.com/570x340" media="(min-width: 992px)"/>
-                      <source srcset="https://via.placeholder.com/276x197.jpg/EFADBA"/>
-                      <img class="img-fluid w-100" alt="/" src="https://via.placeholder.com/276x197.jpg/EFADBA">
-                    </picture>
-                  </figure>
-                  <div class="review-item__content bg-white rounded-bottom">
-                    <div class="d-flex justify-content-between align-items-center">
-                      <span class="review-stars">
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                      </span>
-                      <span class="badge badge-blue mb-1 mt-1">Body</span>
-                    </div>
-                    <p>
-                      <strong>Product:&nbsp;</strong>
-                      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-                        Bali Bronzing Foam (Dark)
-                      </a>
-                    </p>
-                    <p>"I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼"</p>
-                    <p class="text-underline">@kaylaazjones</p>
-                  </div>
+                <p>
+                  <strong>Product:&nbsp;</strong>
+                  <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
+                    Bali Bronzing Foam (Dark)
+                  </a>
+                </p>
+                <p>"I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼"</p>
+                <p class="text-underline">@kaylaazjones</p>
+              </div>
+            </div>
+            <div class="review-item d-inline-block align-top rounded-bottom">
+              <figure class="w-100 m-0">
+                <picture class="d-block position-relative">
+                  <source srcset="https://via.placeholder.com/570x340" media="(min-width: 992px)"/>
+                  <source srcset="https://via.placeholder.com/276x197.jpg/EFADBA"/>
+                  <img class="img-fluid w-100" alt="/" src="https://via.placeholder.com/276x197.jpg/EFADBA">
+                </picture>
+              </figure>
+              <div class="review-item__content bg-white rounded-bottom">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="review-stars">
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                  </span>
+                  <span class="badge badge-blue mb-1 mt-1">Body</span>
                 </div>
-
-              </li>
-              <li class="carousel-item">
-                <div class="carousel-item__child review-item col-md-3 d-inline-block align-top rounded-bottom">
-                  <figure class="w-100 m-0">
-                    <picture class="d-block position-relative">
-                      <source srcset="https://via.placeholder.com/570x340" media="(min-width: 992px)"/>
-                      <source srcset="https://via.placeholder.com/276x197.jpg/EFADBA"/>
-                      <img class="img-fluid w-100" alt="/" src="https://via.placeholder.com/276x197.jpg/EFADBA">
-                    </picture>
-                  </figure>
-                  <div class="review-item__content bg-white rounded-bottom">
-                    <div class="d-flex justify-content-between align-items-center">
-                      <span class="review-stars">
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                      </span>
-                      <span class="badge badge-blue mb-1 mt-1">Body</span>
-                    </div>
-                    <p>
-                      <strong>Product:&nbsp;</strong>
-                      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-                        Bali Bronzing Foam (Dark)
-                      </a>
-                    </p>
-                    <p>"I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼"</p>
-                    <p class="text-underline">@kaylaazjones</p>
-                  </div>
+                <p>
+                  <strong>Product:&nbsp;</strong>
+                  <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
+                    Bali Bronzing Foam (Dark)
+                  </a>
+                </p>
+                <p>"I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼"</p>
+                <p class="text-underline">@kaylaazjones</p>
+              </div>
+            </div>
+            <div class="review-item d-inline-block align-top rounded-bottom">
+              <figure class="w-100 m-0">
+                <picture class="d-block position-relative">
+                  <source srcset="https://via.placeholder.com/570x340" media="(min-width: 992px)"/>
+                  <source srcset="https://via.placeholder.com/276x197.jpg/EFADBA"/>
+                  <img class="img-fluid w-100" alt="/" src="https://via.placeholder.com/276x197.jpg/EFADBA">
+                </picture>
+              </figure>
+              <div class="review-item__content bg-white rounded-bottom">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="review-stars">
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                  </span>
+                  <span class="badge badge-blue mb-1 mt-1">Body</span>
                 </div>
-
-              </li>
-              <li class="carousel-item">
-                <div class="carousel-item__child review-item col-md-3 d-inline-block align-top rounded-bottom">
-                  <figure class="w-100 m-0">
-                    <picture class="d-block position-relative">
-                      <source srcset="https://via.placeholder.com/570x340" media="(min-width: 992px)"/>
-                      <source srcset="https://via.placeholder.com/276x197.jpg/EFADBA"/>
-                      <img class="img-fluid w-100" alt="/" src="https://via.placeholder.com/276x197.jpg/EFADBA">
-                    </picture>
-                  </figure>
-                  <div class="review-item__content bg-white rounded-bottom">
-                    <div class="d-flex justify-content-between align-items-center">
-                      <span class="review-stars">
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                      </span>
-                      <span class="badge badge-blue mb-1 mt-1">Body</span>
-                    </div>
-                    <p>
-                      <strong>Product:&nbsp;</strong>
-                      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-                        Bali Bronzing Foam (Dark)
-                      </a>
-                    </p>
-                    <p>"I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼"</p>
-                    <p class="text-underline">@kaylaazjones</p>
-                  </div>
+                <p>
+                  <strong>Product:&nbsp;</strong>
+                  <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
+                    Bali Bronzing Foam (Dark)
+                  </a>
+                </p>
+                <p>"I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼"</p>
+                <p class="text-underline">@kaylaazjones</p>
+              </div>
+            </div>
+            <div class="review-item d-inline-block align-top rounded-bottom">
+              <figure class="w-100 m-0">
+                <picture class="d-block position-relative">
+                  <source srcset="https://via.placeholder.com/570x340" media="(min-width: 992px)"/>
+                  <source srcset="https://via.placeholder.com/276x197.jpg/EFADBA"/>
+                  <img class="img-fluid w-100" alt="/" src="https://via.placeholder.com/276x197.jpg/EFADBA">
+                </picture>
+              </figure>
+              <div class="review-item__content bg-white rounded-bottom">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="review-stars">
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                  </span>
+                  <span class="badge badge-blue mb-1 mt-1">Body</span>
                 </div>
-
-              </li>
-              <li class="carousel-item">
-              </li>
-            </ul>
-            <a class="carousel-control carousel-control-prev carousel-control--background carousel-control--right-lg" href="#carousel-hair" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon sni sni__chevron-prev justify-content-center align-items-center mr-sm-2 mr-lg-0" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control carousel-control-next carousel-control--background carousel-control--right-lg" href="#carousel-hair" role="button" data-slide="next">
-              <span class="carousel-control-next-icon sni sni__chevron-next justify-content-center align-items-center ml-sm-2 ml-lg-0" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
+                <p>
+                  <strong>Product:&nbsp;</strong>
+                  <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
+                    Bali Bronzing Foam (Dark)
+                  </a>
+                </p>
+                <p>"I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼"</p>
+                <p class="text-underline">@kaylaazjones</p>
+              </div>
+            </div>
           </div>
         </div>
         <div class="tab-pane fade" id="body" role="tabpanel" aria-labelledby="body-tab">
-          <div id="carousel-body" class="carousel slide carousel--multiple-items">
-            <ul class="carousel-inner pl-lg-2 pr-lg-2 pl-sm-0">
-              <li class="carousel-item active">
-                <div class="carousel-item__child review-item col-md-3 d-inline-block align-top rounded-bottom">
-                  <figure class="w-100 m-0">
-                    <picture class="d-block position-relative">
-                      <source srcset="https://via.placeholder.com/570x340" media="(min-width: 992px)"/>
-                      <source srcset="https://via.placeholder.com/276x197.jpg/EFADBA"/>
-                      <img class="img-fluid w-100" alt="/" src="https://via.placeholder.com/276x197.jpg/EFADBA">
-                    </picture>
-                  </figure>
-                  <div class="review-item__content bg-white rounded-bottom">
-                    <div class="d-flex justify-content-between align-items-center">
-                      <span class="review-stars">
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                      </span>
-                      <span class="badge badge-blue mb-1 mt-1">Body</span>
-                    </div>
-                    <p>
-                      <strong>Product:&nbsp;</strong>
-                      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-                        Bali Bronzing Foam (Dark)
-                      </a>
-                    </p>
-                    <p>"I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼"</p>
-                    <p class="text-underline">@kaylaazjones</p>
-                  </div>
+          <div id="carousel-body" class="owl-carousel owl-flex">
+            <div class="review-item d-inline-block align-top rounded-bottom">
+              <figure class="w-100 m-0">
+                <picture class="d-block position-relative">
+                  <source srcset="https://via.placeholder.com/570x340" media="(min-width: 992px)"/>
+                  <source srcset="https://via.placeholder.com/276x197.jpg/EFADBA"/>
+                  <img class="img-fluid w-100" alt="/" src="https://via.placeholder.com/276x197.jpg/EFADBA">
+                </picture>
+              </figure>
+              <div class="review-item__content bg-white rounded-bottom">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="review-stars">
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                  </span>
+                  <span class="badge badge-blue mb-1 mt-1">Body</span>
                 </div>
-              </li>
-              <li class="carousel-item">
-                <div class="carousel-item__child review-item col-md-3 d-inline-block align-top rounded-bottom">
-                  <figure class="w-100 m-0">
-                    <picture class="d-block position-relative">
-                      <source srcset="https://via.placeholder.com/570x340" media="(min-width: 992px)"/>
-                      <source srcset="https://via.placeholder.com/276x197.jpg/EFADBA"/>
-                      <img class="img-fluid w-100" alt="/" src="https://via.placeholder.com/276x197.jpg/EFADBA">
-                    </picture>
-                  </figure>
-                  <div class="review-item__content bg-white rounded-bottom">
-                    <div class="d-flex justify-content-between align-items-center">
-                      <span class="review-stars">
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                      </span>
-                      <span class="badge badge-blue mb-1 mt-1">Body</span>
-                    </div>
-                    <p>
-                      <strong>Product:&nbsp;</strong>
-                      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-                        Bali Bronzing Foam (Dark)
-                      </a>
-                    </p>
-                    <p>"I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼"</p>
-                    <p class="text-underline">@kaylaazjones</p>
-                  </div>
+                <p>
+                  <strong>Product:&nbsp;</strong>
+                  <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
+                    Bali Bronzing Foam (Dark)
+                  </a>
+                </p>
+                <p>"I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼"</p>
+                <p class="text-underline">@kaylaazjones</p>
+              </div>
+            </div>
+            <div class="review-item d-inline-block align-top rounded-bottom">
+              <figure class="w-100 m-0">
+                <picture class="d-block position-relative">
+                  <source srcset="https://via.placeholder.com/570x340" media="(min-width: 992px)"/>
+                  <source srcset="https://via.placeholder.com/276x197.jpg/EFADBA"/>
+                  <img class="img-fluid w-100" alt="/" src="https://via.placeholder.com/276x197.jpg/EFADBA">
+                </picture>
+              </figure>
+              <div class="review-item__content bg-white rounded-bottom">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="review-stars">
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                  </span>
+                  <span class="badge badge-blue mb-1 mt-1">Body</span>
                 </div>
-
-              </li>
-              <li class="carousel-item">
-                <div class="carousel-item__child review-item col-md-3 d-inline-block align-top rounded-bottom">
-                  <figure class="w-100 m-0">
-                    <picture class="d-block position-relative">
-                      <source srcset="https://via.placeholder.com/570x340" media="(min-width: 992px)"/>
-                      <source srcset="https://via.placeholder.com/276x197.jpg/EFADBA"/>
-                      <img class="img-fluid w-100" alt="/" src="https://via.placeholder.com/276x197.jpg/EFADBA">
-                    </picture>
-                  </figure>
-                  <div class="review-item__content bg-white rounded-bottom">
-                    <div class="d-flex justify-content-between align-items-center">
-                      <span class="review-stars">
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                      </span>
-                      <span class="badge badge-blue mb-1 mt-1">Body</span>
-                    </div>
-                    <p>
-                      <strong>Product:&nbsp;</strong>
-                      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-                        Bali Bronzing Foam (Dark)
-                      </a>
-                    </p>
-                    <p>"I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼"</p>
-                    <p class="text-underline">@kaylaazjones</p>
-                  </div>
+                <p>
+                  <strong>Product:&nbsp;</strong>
+                  <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
+                    Bali Bronzing Foam (Dark)
+                  </a>
+                </p>
+                <p>"I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼"</p>
+                <p class="text-underline">@kaylaazjones</p>
+              </div>
+            </div>
+            <div class="review-item d-inline-block align-top rounded-bottom">
+              <figure class="w-100 m-0">
+                <picture class="d-block position-relative">
+                  <source srcset="https://via.placeholder.com/570x340" media="(min-width: 992px)"/>
+                  <source srcset="https://via.placeholder.com/276x197.jpg/EFADBA"/>
+                  <img class="img-fluid w-100" alt="/" src="https://via.placeholder.com/276x197.jpg/EFADBA">
+                </picture>
+              </figure>
+              <div class="review-item__content bg-white rounded-bottom">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="review-stars">
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                  </span>
+                  <span class="badge badge-blue mb-1 mt-1">Body</span>
                 </div>
-
-              </li>
-              <li class="carousel-item">
-                <div class="carousel-item__child review-item col-md-3 d-inline-block align-top rounded-bottom">
-                  <figure class="w-100 m-0">
-                    <picture class="d-block position-relative">
-                      <source srcset="https://via.placeholder.com/570x340" media="(min-width: 992px)"/>
-                      <source srcset="https://via.placeholder.com/276x197.jpg/EFADBA"/>
-                      <img class="img-fluid w-100" alt="/" src="https://via.placeholder.com/276x197.jpg/EFADBA">
-                    </picture>
-                  </figure>
-                  <div class="review-item__content bg-white rounded-bottom">
-                    <div class="d-flex justify-content-between align-items-center">
-                      <span class="review-stars">
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                      </span>
-                      <span class="badge badge-blue mb-1 mt-1">Body</span>
-                    </div>
-                    <p>
-                      <strong>Product:&nbsp;</strong>
-                      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-                        Bali Bronzing Foam (Dark)
-                      </a>
-                    </p>
-                    <p>"I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼"</p>
-                    <p class="text-underline">@kaylaazjones</p>
-                  </div>
+                <p>
+                  <strong>Product:&nbsp;</strong>
+                  <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
+                    Bali Bronzing Foam (Dark)
+                  </a>
+                </p>
+                <p>"I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼"</p>
+                <p class="text-underline">@kaylaazjones</p>
+              </div>
+            </div>
+            <div class="review-item d-inline-block align-top rounded-bottom">
+              <figure class="w-100 m-0">
+                <picture class="d-block position-relative">
+                  <source srcset="https://via.placeholder.com/570x340" media="(min-width: 992px)"/>
+                  <source srcset="https://via.placeholder.com/276x197.jpg/EFADBA"/>
+                  <img class="img-fluid w-100" alt="/" src="https://via.placeholder.com/276x197.jpg/EFADBA">
+                </picture>
+              </figure>
+              <div class="review-item__content bg-white rounded-bottom">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="review-stars">
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                  </span>
+                  <span class="badge badge-blue mb-1 mt-1">Body</span>
                 </div>
-
-              </li>
-              <li class="carousel-item">
-                <div class="carousel-item__child review-item col-md-3 d-inline-block align-top rounded-bottom">
-                  <figure class="w-100 m-0">
-                    <picture class="d-block position-relative">
-                      <source srcset="https://via.placeholder.com/570x340" media="(min-width: 992px)"/>
-                      <source srcset="https://via.placeholder.com/276x197.jpg/EFADBA"/>
-                      <img class="img-fluid w-100" alt="/" src="https://via.placeholder.com/276x197.jpg/EFADBA">
-                    </picture>
-                  </figure>
-                  <div class="review-item__content bg-white rounded-bottom">
-                    <div class="d-flex justify-content-between align-items-center">
-                      <span class="review-stars">
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                      </span>
-                      <span class="badge badge-blue mb-1 mt-1">Body</span>
-                    </div>
-                    <p>
-                      <strong>Product:&nbsp;</strong>
-                      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-                        Bali Bronzing Foam (Dark)
-                      </a>
-                    </p>
-                    <p>"I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼"</p>
-                    <p class="text-underline">@kaylaazjones</p>
-                  </div>
+                <p>
+                  <strong>Product:&nbsp;</strong>
+                  <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
+                    Bali Bronzing Foam (Dark)
+                  </a>
+                </p>
+                <p>"I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼"</p>
+                <p class="text-underline">@kaylaazjones</p>
+              </div>
+            </div>
+            <div class="review-item d-inline-block align-top rounded-bottom">
+              <figure class="w-100 m-0">
+                <picture class="d-block position-relative">
+                  <source srcset="https://via.placeholder.com/570x340" media="(min-width: 992px)"/>
+                  <source srcset="https://via.placeholder.com/276x197.jpg/EFADBA"/>
+                  <img class="img-fluid w-100" alt="/" src="https://via.placeholder.com/276x197.jpg/EFADBA">
+                </picture>
+              </figure>
+              <div class="review-item__content bg-white rounded-bottom">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="review-stars">
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                  </span>
+                  <span class="badge badge-blue mb-1 mt-1">Body</span>
                 </div>
-
-              </li>
-              <li class="carousel-item">
-              </li>
-            </ul>
-
-            <a class="carousel-control carousel-control-prev carousel-control--background carousel-control--right-lg" href="#carousel-body" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon sni sni__chevron-prev justify-content-center align-items-center mr-sm-2 mr-lg-0" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control carousel-control-next carousel-control--background carousel-control--right-lg" href="#carousel-body" role="button" data-slide="next">
-              <span class="carousel-control-next-icon sni sni__chevron-next justify-content-center align-items-center ml-sm-2 ml-lg-0" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
+                <p>
+                  <strong>Product:&nbsp;</strong>
+                  <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
+                    Bali Bronzing Foam (Dark)
+                  </a>
+                </p>
+                <p>"I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼"</p>
+                <p class="text-underline">@kaylaazjones</p>
+              </div>
+            </div>
           </div>
         </div>
         <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
-          <div id="carousel-all" class="carousel slide carousel--multiple-items">
-            <ul class="carousel-inner pl-lg-2 pr-lg-2 pl-sm-0">
-              <li class="carousel-item active">
-                <div class="carousel-item__child review-item col-md-3 d-inline-block align-top rounded-bottom">
-                  <figure class="w-100 m-0">
-                    <picture class="d-block position-relative">
-                      <source srcset="https://via.placeholder.com/570x340" media="(min-width: 992px)"/>
-                      <source srcset="https://via.placeholder.com/276x197.jpg/EFADBA"/>
-                      <img class="img-fluid w-100" alt="/" src="https://via.placeholder.com/276x197.jpg/EFADBA">
-                    </picture>
-                  </figure>
-                  <div class="review-item__content bg-white rounded-bottom">
-                    <div class="d-flex justify-content-between align-items-center">
-                      <span class="review-stars">
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                      </span>
-                      <span class="badge badge-secondary mb-1 mt-1">Hair</span>
-                    </div>
-                    <p>
-                      <strong>Product:&nbsp;</strong>
-                      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-                        Bali Bronzing Foam (Dark)
-                      </a>
-                    </p>
-                    <p>"I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼"</p>
-                    <p class="text-underline">@kaylaazjones</p>
-                  </div>
+          <div id="carousel-all" class="owl-carousel owl-flex">
+            <div class="review-item d-inline-block align-top rounded-bottom">
+              <figure class="w-100 m-0">
+                <picture class="d-block position-relative">
+                  <source srcset="https://via.placeholder.com/570x340" media="(min-width: 992px)"/>
+                  <source srcset="https://via.placeholder.com/276x197.jpg/EFADBA"/>
+                  <img class="img-fluid w-100" alt="/" src="https://via.placeholder.com/276x197.jpg/EFADBA">
+                </picture>
+              </figure>
+              <div class="review-item__content bg-white rounded-bottom">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="review-stars">
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                  </span>
+                  <span class="badge badge-blue mb-1 mt-1">Body</span>
                 </div>
-              </li>
-              <li class="carousel-item">
-                <div class="carousel-item__child review-item col-md-3 d-inline-block align-top rounded-bottom">
-                  <figure class="w-100 m-0">
-                    <picture class="d-block position-relative">
-                      <source srcset="https://via.placeholder.com/570x340" media="(min-width: 992px)"/>
-                      <source srcset="https://via.placeholder.com/276x197.jpg/EFADBA"/>
-                      <img class="img-fluid w-100" alt="/" src="https://via.placeholder.com/276x197.jpg/EFADBA">
-                    </picture>
-                  </figure>
-                  <div class="review-item__content bg-white rounded-bottom">
-                    <div class="d-flex justify-content-between align-items-center">
-                      <span class="review-stars">
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                      </span>
-                      <span class="badge badge-purple mb-1 mt-1">Tan</span>
-                    </div>
-                    <p>
-                      <strong>Product:&nbsp;</strong>
-                      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-                        Bali Bronzing Foam (Dark)
-                      </a>
-                    </p>
-                    <p>"I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼"</p>
-                    <p class="text-underline">@kaylaazjones</p>
-                  </div>
+                <p>
+                  <strong>Product:&nbsp;</strong>
+                  <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
+                    Bali Bronzing Foam (Dark)
+                  </a>
+                </p>
+                <p>"I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼"</p>
+                <p class="text-underline">@kaylaazjones</p>
+              </div>
+            </div>
+            <div class="review-item d-inline-block align-top rounded-bottom">
+              <figure class="w-100 m-0">
+                <picture class="d-block position-relative">
+                  <source srcset="https://via.placeholder.com/570x340" media="(min-width: 992px)"/>
+                  <source srcset="https://via.placeholder.com/276x197.jpg/EFADBA"/>
+                  <img class="img-fluid w-100" alt="/" src="https://via.placeholder.com/276x197.jpg/EFADBA">
+                </picture>
+              </figure>
+              <div class="review-item__content bg-white rounded-bottom">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="review-stars">
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                  </span>
+                  <span class="badge badge-blue mb-1 mt-1">Body</span>
                 </div>
-
-              </li>
-              <li class="carousel-item">
-                <div class="carousel-item__child review-item col-md-3 d-inline-block align-top rounded-bottom">
-                  <figure class="w-100 m-0">
-                    <picture class="d-block position-relative">
-                      <source srcset="https://via.placeholder.com/570x340" media="(min-width: 992px)"/>
-                      <source srcset="https://via.placeholder.com/276x197.jpg/EFADBA"/>
-                      <img class="img-fluid w-100" alt="/" src="https://via.placeholder.com/276x197.jpg/EFADBA">
-                    </picture>
-                  </figure>
-                  <div class="review-item__content bg-white rounded-bottom">
-                    <div class="d-flex justify-content-between align-items-center">
-                      <span class="review-stars">
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                      </span>
-                      <span class="badge badge-blue mb-1 mt-1">Body</span>
-                    </div>
-                    <p>
-                      <strong>Product:&nbsp;</strong>
-                      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-                        Bali Bronzing Foam (Dark)
-                      </a>
-                    </p>
-                    <p>"I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼"</p>
-                    <p class="text-underline">@kaylaazjones</p>
-                  </div>
+                <p>
+                  <strong>Product:&nbsp;</strong>
+                  <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
+                    Bali Bronzing Foam (Dark)
+                  </a>
+                </p>
+                <p>"I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼"</p>
+                <p class="text-underline">@kaylaazjones</p>
+              </div>
+            </div>
+            <div class="review-item d-inline-block align-top rounded-bottom">
+              <figure class="w-100 m-0">
+                <picture class="d-block position-relative">
+                  <source srcset="https://via.placeholder.com/570x340" media="(min-width: 992px)"/>
+                  <source srcset="https://via.placeholder.com/276x197.jpg/EFADBA"/>
+                  <img class="img-fluid w-100" alt="/" src="https://via.placeholder.com/276x197.jpg/EFADBA">
+                </picture>
+              </figure>
+              <div class="review-item__content bg-white rounded-bottom">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="review-stars">
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                  </span>
+                  <span class="badge badge-blue mb-1 mt-1">Body</span>
                 </div>
-
-              </li>
-              <li class="carousel-item">
-                <div class="carousel-item__child review-item col-md-3 d-inline-block align-top rounded-bottom">
-                  <figure class="w-100 m-0">
-                    <picture class="d-block position-relative">
-                      <source srcset="https://via.placeholder.com/570x340" media="(min-width: 992px)"/>
-                      <source srcset="https://via.placeholder.com/276x197.jpg/EFADBA"/>
-                      <img class="img-fluid w-100" alt="/" src="https://via.placeholder.com/276x197.jpg/EFADBA">
-                    </picture>
-                  </figure>
-                  <div class="review-item__content bg-white rounded-bottom">
-                    <div class="d-flex justify-content-between align-items-center">
-                      <span class="review-stars">
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                      </span>
-                      <span class="badge badge-blue mb-1 mt-1">Body</span>
-                    </div>
-                    <p>
-                      <strong>Product:&nbsp;</strong>
-                      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-                        Bali Bronzing Foam (Dark)
-                      </a>
-                    </p>
-                    <p>"I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼"</p>
-                    <p class="text-underline">@kaylaazjones</p>
-                  </div>
+                <p>
+                  <strong>Product:&nbsp;</strong>
+                  <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
+                    Bali Bronzing Foam (Dark)
+                  </a>
+                </p>
+                <p>"I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼"</p>
+                <p class="text-underline">@kaylaazjones</p>
+              </div>
+            </div>
+            <div class="review-item d-inline-block align-top rounded-bottom">
+              <figure class="w-100 m-0">
+                <picture class="d-block position-relative">
+                  <source srcset="https://via.placeholder.com/570x340" media="(min-width: 992px)"/>
+                  <source srcset="https://via.placeholder.com/276x197.jpg/EFADBA"/>
+                  <img class="img-fluid w-100" alt="/" src="https://via.placeholder.com/276x197.jpg/EFADBA">
+                </picture>
+              </figure>
+              <div class="review-item__content bg-white rounded-bottom">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="review-stars">
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                  </span>
+                  <span class="badge badge-blue mb-1 mt-1">Body</span>
                 </div>
-
-              </li>
-              <li class="carousel-item">
-                <div class="carousel-item__child review-item col-md-3 d-inline-block align-top rounded-bottom">
-                  <figure class="w-100 m-0">
-                    <picture class="d-block position-relative">
-                      <source srcset="https://via.placeholder.com/570x340" media="(min-width: 992px)"/>
-                      <source srcset="https://via.placeholder.com/276x197.jpg/EFADBA"/>
-                      <img class="img-fluid w-100" alt="/" src="https://via.placeholder.com/276x197.jpg/EFADBA">
-                    </picture>
-                  </figure>
-                  <div class="review-item__content bg-white rounded-bottom">
-                    <div class="d-flex justify-content-between align-items-center">
-                      <span class="review-stars">
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                        <i class="sni sni__star star-primary"></i>
-                      </span>
-                      <span class="badge badge-blue mb-1 mt-1">Body</span>
-                    </div>
-                    <p>
-                      <strong>Product:&nbsp;</strong>
-                      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-                        Bali Bronzing Foam (Dark)
-                      </a>
-                    </p>
-                    <p>"I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼"</p>
-                    <p class="text-underline">@kaylaazjones</p>
-                  </div>
+                <p>
+                  <strong>Product:&nbsp;</strong>
+                  <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
+                    Bali Bronzing Foam (Dark)
+                  </a>
+                </p>
+                <p>"I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼"</p>
+                <p class="text-underline">@kaylaazjones</p>
+              </div>
+            </div>
+            <div class="review-item d-inline-block align-top rounded-bottom">
+              <figure class="w-100 m-0">
+                <picture class="d-block position-relative">
+                  <source srcset="https://via.placeholder.com/570x340" media="(min-width: 992px)"/>
+                  <source srcset="https://via.placeholder.com/276x197.jpg/EFADBA"/>
+                  <img class="img-fluid w-100" alt="/" src="https://via.placeholder.com/276x197.jpg/EFADBA">
+                </picture>
+              </figure>
+              <div class="review-item__content bg-white rounded-bottom">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="review-stars">
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                    <i class="sni sni__star star-primary"></i>
+                  </span>
+                  <span class="badge badge-blue mb-1 mt-1">Body</span>
                 </div>
+                <p>
+                  <strong>Product:&nbsp;</strong>
+                  <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
+                    Bali Bronzing Foam (Dark)
+                  </a>
+                </p>
+                <p>"I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼"</p>
+                <p class="text-underline">@kaylaazjones</p>
+              </div>
+            </div>
 
-              </li>
-              <li class="carousel-item">
-              </li>
-            </ul>
-
-            <a class="carousel-control carousel-control-prev carousel-control--background carousel-control--right-lg" href="#carousel-all" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon sni sni__chevron-prev justify-content-center align-items-center mr-sm-2 mr-lg-0" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control carousel-control-next carousel-control--background carousel-control--right-lg" href="#carousel-all" role="button" data-slide="next">
-              <span class="carousel-control-next-icon sni sni__chevron-next justify-content-center align-items-center ml-sm-2 ml-lg-0" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
           </div>
         </div>
       </div>
@@ -1716,8 +1741,8 @@
     </section>
     <!-- instagram section -->
     <section class="instagram pt-4 text-center pb-1 bg-primary-light">
-      <div class="sections-heading col-lg-8 col-md-9 col-sm-10 col-12 text-center mx-auto pb-4">
-        <p class="h2">Get social with us</p>
+      <div class=" col-lg-8 col-md-9 col-sm-10 col-12 text-center mx-auto pb-4">
+        <p class="h1">Get social with us</p>
         <div class="rte">
           <p class="h4">
             <a href="#" target="_blank" class="text-dark text-underline">@cocoandeve</a>

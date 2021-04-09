@@ -3,35 +3,34 @@
 
 <head>
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="/cocoandeve-styleguides/css/owl.carousel.css">
   <link rel="stylesheet" href="/cocoandeve-styleguides/css/main.critical.css">
   <link rel="stylesheet" href="/cocoandeve-styleguides/css/main.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="/cocoandeve-styleguides/js/bootstrap.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.0/lazysizes.min.js" integrity="sha512-JrL1wXR0TeToerkl6TPDUa9132S3PB1UeNpZRHmCe6TxS43PFJUcEYUhjJb/i63rSd+uRvpzlcGOtvC/rDQcDg==" crossorigin="anonymous"></script>
+  <script src="/cocoandeve-styleguides/js/owl.carousel.min.js"></script>
+  <script src="/cocoandeve-styleguides/js/hero-banner.js"></script>
 </head>
 
 <body>
   <div class="container">
     <h1>Hero Banner</h1>
   </div>
-  <section id="hero-carousel" class="carousel slide hero-carousel" >
+  <section id="hero-carousel" class="hero-carousel position-relative" >
     <ol class="carousel-indicators text-right d-block">
-      <li data-target="#hero-carousel" data-slide-to="0" class="rounded-circle active d-inline-block"></li>
-      <li data-target="#hero-carousel" data-slide-to="1" class="rounded-circle d-inline-block"></li>
+      <li class="rounded-circle active d-inline-block"></li>
+      <li class="rounded-circle d-inline-block"></li>
     </ol>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
+    <div class="owl-carousel">
+      <div class="item active">
         <a href="#">
           <picture>
-            <source media="(min-width: 991px)" data-srcset="https://via.placeholder.com/1280x489.jpg/EFADBA"/>
-            <source data-srcset="https://via.placeholder.com/375x419.jpg/EFADBA"/>
+            <source class="owl-lazy" media="(min-width: 991px)" data-srcset="https://via.placeholder.com/1280x489.jpg/EFADBA"/>
+            <source class="owl-lazy" data-srcset="https://via.placeholder.com/375x419.jpg/EFADBA"/>
             <img
-            class="w-100 lazyload"
+            class="w-100 owl-lazy"
             src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
             data-src="https://via.placeholder.com/375x419.jpg/EFADBA"
-            data-widths="[720, 900, 1080, 1296, 1512, 1728, 2048]"
-            data-sizes="auto"
-            loading="lazy"
             alt="Slide 01"/>
           </picture>
         </a>
@@ -43,18 +42,15 @@
           </div>
         </div>
       </div>
-      <div class="carousel-item">
+      <div class="item">
         <a href="#">
           <picture>
-            <source media="(min-width: 991px)" data-srcset="https://via.placeholder.com/1280x489.jpg/2596be"/>
-            <source data-srcset="https://via.placeholder.com/375x419.jpg/2596be"/>
+            <source class="owl-lazy" media="(min-width: 991px)" data-srcset="https://via.placeholder.com/1280x489.jpg/2596be"/>
+            <source class="owl-lazy" data-srcset="https://via.placeholder.com/375x419.jpg/2596be"/>
             <img
-            class="w-100 lazyload"
+            class="w-100 owl-lazy"
             src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
             data-src="https://via.placeholder.com/375x419.jpg/2596be"
-            data-widths="[720, 900, 1080, 1296, 1512, 1728, 2048]"
-            data-sizes="auto"
-            loading="lazy"
             alt="Slide 01"/>
           </picture>
         </a>

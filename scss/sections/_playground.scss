@@ -1,20 +1,15 @@
-.sections-heading {
-  .col_sec_des {
-    line-height: $line-height-xl;
+.col_sec_des {
+  line-height: $line-height-xl;
 
-    @include media-breakpoint-up(lg) {
-      font-size: $h4-font-size-lg;
-    }
+  @include media-breakpoint-up(lg) {
+    font-size: $h4-font-size-lg;
   }
 }
-
 
 .collection-list {
 
   figcaption {
     bottom: 50%;
-    padding: 10px 40px 10px 20px;
-    text-align: left;
     transform: translateY(50%);
     -webkit-transform: translateY(50%);
     -moz-transform: translateY(50%);
@@ -25,7 +20,6 @@
     margin: 0 auto;
     left: 0;
     right: 0;
-    text-align: center;
     padding: 0;
     top: 0;
 
@@ -36,23 +30,13 @@
       max-width: calc-em(292);
     }
 
-    .h2 {
+    .h1 {
       text-shadow: 0 0 calc-em(24) rgba(0, 48, 45, 0.25);
       font-size: $h1-font-size-xl;
     }
 
     p.d-md-block {
       font-size: $h4-font-size-lg;
-    }
-
-    .svg-btn {
-      position: absolute;
-      right: 0;
-      top: 32%;
-      right: calc-em(15/2);
-      margin-top: -calc-em(30);
-      font-size: $h2-font-size-lg;
-      color: white;
     }
   }
 }
