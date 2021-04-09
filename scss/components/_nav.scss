@@ -60,12 +60,14 @@
     }
 
     .nav-item {
+      padding-left: $grid-gutter-width / 2;
+      padding-right: $grid-gutter-width / 2;
 
-      &:first-child .nav-link {
+      &:first-child {
         padding-left: 0;
       }
 
-      &:last-child .nav-link {
+      &:last-child {
         padding-right: 0;
       }
     }
