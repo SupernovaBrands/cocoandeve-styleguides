@@ -251,4 +251,5 @@ $(document).ready(function () {
 		}
 		lastScrollTop = scrollTop;
 	});
+
 });
