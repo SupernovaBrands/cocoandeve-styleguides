@@ -106,8 +106,8 @@ $(document).ready(function () {
 	});
 
 	// video carousel
-	if ($('.carousel--centered').length > 0) {
-		$('.carousel--centered').each(function () {
+	if ($('.how-to').length > 0) {
+		$('.how-to').each(function () {
 			if ($(this).find('.carousel-item').length > 1) {
 				const loop = $(this).find('.carousel-item').length > 5;
 				// hide prev/next nav when no item prev class on page load
@@ -237,5 +237,33 @@ $(document).ready(function () {
 				$(this).parents('.search-box').addClass('d-none');
 			});
 		}
+	}
+
+	// Article Proggress Bar
+	let proggreeBar = $('.reading-proggress-bar');
+
+	if (proggreeBar.length) {
+		let body = document.body,
+		    html = document.documentElement;
+
+		let height = Math.max(
+		    body.scrollHeight,
+		    body.offsetHeight,
+		    html.clientHeight,
+		    html.scrollHeight,
+		    html.offsetHeight
+		);
+
+
+		const setProgress = () => {
+		    let scrollFromTop = (html.scrollTop || body.scrollTop) + html.clientHeight;
+		    let width = (scrollFromTop / height) * 100 + '%';
+		    console.log(width)
+		    proggreeBar.find('.reading-proggress-bar__proggress').css('width',width)
+		};
+
+		window.addEventListener('scroll', setProgress);
+
+		setProgress();
 	}
 });

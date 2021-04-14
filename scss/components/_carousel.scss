@@ -30,9 +30,24 @@
 }
 
 .carousel-indicators {
+  li {
+    border: 2px solid white;
+    opacity: 1;
+    width: .75em;
+    height: .75em;
+    background: none;
+
+    &.active {
+      background: white;
+    }
+  }
   &--primary {
     li {
-      background-color: $primary;
+      border-color: $primary;
+
+      &.active {
+        background-color: $primary;
+      }
     }
   }
 }
@@ -74,7 +89,7 @@
     overflow: visible;
 
     @include media-breakpoint-up(lg) {
-      transform: translateX(25%);
+      transform: translateX(29%);
     }
   }
 
