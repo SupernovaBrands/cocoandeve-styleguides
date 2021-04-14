@@ -64,6 +64,7 @@
         top: 0;
         right: 0;
         left: 0;
+        box-shadow: 0 calc-em(4) calc-em(5) 0 rgba(0, 0, 0, .06);
         @include media-breakpoint-down(md) {
             align-items: flex-start;
         }
@@ -202,6 +203,7 @@
     transition: opacity .1s linear;
     left: 0;
     visibility: hidden;
+    box-shadow: 0 calc-em(4) calc-em(5) 0 rgba(0, 0, 0, .06);
 
     &:before {
         content: '';
