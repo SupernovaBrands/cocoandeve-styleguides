@@ -4467,21 +4467,21 @@ input[type="button"].btn-block {
 }
 
 .nav-tabs {
-  border-bottom: 1px solid #dee2e6;
+  border-bottom: 0.0625em solid black;
 }
 
 .nav-tabs .nav-item {
-  margin-bottom: -1px;
+  margin-bottom: -0.0625em;
 }
 
 .nav-tabs .nav-link {
-  border: 1px solid transparent;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
+  border: 0.0625em solid transparent;
+  border-top-left-radius: 0.375em;
+  border-top-right-radius: 0.375em;
 }
 
 .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
-  border-color: #e9ecef #e9ecef #dee2e6;
+  border-color: black;
 }
 
 .nav-tabs .nav-link.disabled {
@@ -4492,13 +4492,13 @@ input[type="button"].btn-block {
 
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-  color: #495057;
-  background-color: #fff;
-  border-color: #dee2e6 #dee2e6 #fff;
+  color: white;
+  background-color: #F3436C;
+  border-color: black;
 }
 
 .nav-tabs .dropdown-menu {
-  margin-top: -1px;
+  margin-top: -0.0625em;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }

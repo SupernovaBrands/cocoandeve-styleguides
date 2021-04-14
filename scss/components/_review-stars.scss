@@ -3,8 +3,8 @@
     display: inline-block;
     font-size: calc-em(20);
   }
-}
 
-.star-primary {
-  color: $primary;
+  &--primary {
+    color: $primary;
+  }
 }

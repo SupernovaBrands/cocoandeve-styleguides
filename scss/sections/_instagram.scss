@@ -1,5 +1,26 @@
-.instagram-wrap {
-  figure {
-    margin: calc-em(5);
-  }
+.instagram {
+	&--feed {
+		&__left {
+			@include media-breakpoint-up(lg) {
+				margin-left: calc-em(15);
+				margin-right: calc-em(-20);
+			}
+		}
+
+		picture {
+			margin: 0px;
+			display: inline-block;
+			position: relative;
+			border: 6px solid transparent;
+			width: 100%;
+
+			img {
+				width: 100%;
+				max-width: 100%;
+				-o-object-fit: cover;
+				object-fit: cover;
+				height: 100%;
+			}
+		}
+	}
 }
