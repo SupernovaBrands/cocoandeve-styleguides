@@ -317,8 +317,20 @@
   }
 }
 
+.carousel--centered-four-items .carousel-item-next--out.carousel-item-left {
+  transform: translateX(300%);
+}
+
 .carousel--centered-four-items .carousel-item-prev--out:nth-last-child(2) {
   opacity: 1;
+}
+
+.carousel--centered-four-items .carousel-item-prev--out.carousel-item-right {
+  transform: translateX(-300%);
+}
+
+.carousel--centered-four-items .carousel-item-prev--out.carousel-item-left {
+  transform: translateX(-100%);
 }
 
 .carousel--centered-four-items .carousel-control--background.carousel-control-prev:before {

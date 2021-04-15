@@ -102,9 +102,23 @@
     }
   }
 
+  .carousel-item-next--out {
+    &.carousel-item-left {
+      transform: translateX(300%);
+    }
+  }
+
   .carousel-item-prev--out {
     &:nth-last-child(2) {
       opacity: 1;
+    }
+
+    &.carousel-item-right {
+      transform: translateX(-300%);
+    }
+
+    &.carousel-item-left {
+      transform: translateX(-100%);
     }
   }
 
