@@ -444,18 +444,21 @@
 }
 
 .tooltip {
-  left: 0;
-  right: 0;
+  left: -7.5px;
+  right: -7.5px;
   top: 100%;
   transform: translateY(-100%);
   transition: all 0.4s ease-in-out;
   visibility: hidden;
+  width: auto;
 }
 
 @media (min-width: 992px) {
   .tooltip {
     left: auto;
+    right: 0;
     margin-right: 15px;
+    width: 100%;
   }
 }
 
