@@ -422,19 +422,6 @@
   background-color: #F3436C;
 }
 
-<<<<<<< HEAD:css/main.css
-.reading-proggress-bar {
-  background-color: #E0F0E9;
-  content: ' ';
-  height: 0.25em;
-  top: 0;
-  z-index: 1020;
-}
-
-.reading-proggress-bar__proggress {
-  background-color: #00635B;
-  height: 100%;
-=======
 .swatch {
   flex-shrink: 0;
   width: 2em;
@@ -483,6 +470,19 @@
   background-image: url("/cocoandeve-styleguides/images/eyemask-leaf-pink.svg");
 }
 
+.reading-proggress-bar {
+  background-color: #E0F0E9;
+  content: ' ';
+  height: 0.25em;
+  top: 0;
+  z-index: 1020;
+}
+
+.reading-proggress-bar__proggress {
+  background-color: #00635B;
+  height: 100%;
+}
+
 .card {
   border-left: none;
   border-right: none;
@@ -501,18 +501,21 @@
 }
 
 .tooltip {
-  left: 0;
-  right: 0;
+  left: -7.5px;
+  right: -7.5px;
   top: 100%;
   transform: translateY(-100%);
   transition: all 0.4s ease-in-out;
   visibility: hidden;
+  width: auto;
 }
 
 @media (min-width: 992px) {
   .tooltip {
     left: auto;
+    right: 0;
     margin-right: 15px;
+    width: 100%;
   }
 }
 
@@ -547,7 +550,6 @@
 .announcement-bar a {
   color: #00635B;
   font-size: 1.125em;
->>>>>>> master:dist/css/main.css
 }
 
 .upsell {
@@ -2093,14 +2095,14 @@ footer hr {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto auto auto;
-  grid-template-areas: "newsletter newsletter" "aboutus helplinks" "support followus" "currency item";
+  grid-template-areas: "newsletter newsletter" "aboutus helplinks" "support followus" "currency item";
 }
 
 @media (min-width: 992px) {
   .footer-grid {
     grid-template-columns: 2fr 1fr 1fr 1fr;
     grid-template-rows: auto auto;
-    grid-template-areas: "newsletter aboutus helplinks support" "newsletter followus currency item";
+    grid-template-areas: "newsletter aboutus helplinks support" "newsletter followus currency item";
     grid-column-gap: 30px;
   }
 }
@@ -2145,7 +2147,7 @@ footer hr {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto auto;
-    grid-template-areas: "post1 post1 search" "post1 post1 sidebar" "post2 post3 sidebar";
+    grid-template-areas: "post1 post1 search" "post1 post1 sidebar" "post2 post3 sidebar";
   }
 }
 
@@ -2174,7 +2176,7 @@ footer hr {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: auto auto;
-    grid-template-areas: "content sidebar" "comment sidebar";
+    grid-template-areas: "content sidebar" "comment sidebar";
   }
 }
 
