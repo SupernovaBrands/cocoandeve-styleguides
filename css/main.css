@@ -195,8 +195,6 @@
 .carousel-indicators li {
   border: 2px solid white;
   opacity: 1;
-  width: .75em;
-  height: .75em;
   background: none;
 }
 
@@ -421,6 +419,7 @@
 
 .how-to .carousel--centered {
   overflow: hidden;
+  position: initial;
 }
 
 @media (min-width: 992px) {
@@ -440,7 +439,7 @@
 @media (min-width: 992px) {
   .how-to .carousel-control-prev,
   .how-to .carousel-control-next {
-    width: 14%;
+    width: 13%;
   }
 }
 

@@ -33,14 +33,13 @@
   li {
     border: 2px solid white;
     opacity: 1;
-    width: .75em;
-    height: .75em;
     background: none;
 
     &.active {
       background: white;
     }
   }
+
   &--primary {
     li {
       border-color: $primary;

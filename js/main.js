@@ -106,8 +106,8 @@ $(document).ready(function () {
 	});
 
 	// video carousel
-	if ($('.how-to').length > 0) {
-		$('.how-to').each(function () {
+	if ($('.carousel--centered').length > 0) {
+		$('.carousel--centered').each(function () {
 			if ($(this).find('.carousel-item').length > 1) {
 				const loop = $(this).find('.carousel-item').length > 5;
 				// hide prev/next nav when no item prev class on page load
