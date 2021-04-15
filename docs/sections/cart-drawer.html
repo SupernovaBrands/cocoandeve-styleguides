@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Cart Drawer | Coco &amp; Eve Style Guides</title>
+
+	<link rel="stylesheet" href="/cocoandeve-styleguides/dist/css/main.critical.css">
+	<link rel="stylesheet" href="/cocoandeve-styleguides/dist/css/main.css">
+</head>
+
+<body class="mobile-wrapper">
+	<div class="container mt-4">
+		<h1>Cart Drawer</h1>
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart-drawer">Open modal</button>
+		<p class="mt-2">Item Count: <span class="cart-drawer__count">0</span></p>
+		<div class="row mb-2">
+			<div class="col-12 col-lg-4 mb-1">
+				<select id="product-select" class="form-control"></select>
+			</div>
+			<div class="col-12 col-lg-4">
+				<button  id="product-add" type="button" class="btn btn-primary">Add Product</button>
+			</div>
+		</div>
+		<p>Products are copied from Dev store</p>
+		<p>"Beauty Sleep Pillow Case - Pink" will give auto discount code "TESTAUTO"</p>
+		<p>Valid discount code: "VALID", "MINIMAL50"</p>
+		<p>No GWP type discount</p>
+		<p>Free shipping minimal purchase is $70.00</p>
+		<p>Manual GWP minimal purchase is $30.00</p>
+		<p>
+			Item with preorder note: Like A Virgin Hair Masque, Bronzing Face Drops, Deluxe Exfoliating Mitt
+		</p>
+		<p>
+			Upsell 1: require Bronzing Face Drops, show Glow Essentials Bundle<br>
+			Upsell 2: disabled<br>
+			Upsell 3: require Like A Virgin Hair Masque, show Healthy Hair Bundle<br>
+			Upsell 4: require Sunny Honey Bali Bronzing Foam, show Get Glossy & Glowy Kit<br>
+		</p>
+	</div>
+
+	<div class="modal fade cart-drawer" id="cart-drawer" tabindex="-1" aria-hidden="true"></div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="/cocoandeve-styleguides/dist/js/bootstrap.js"></script>
+	<script src="/cocoandeve-styleguides/dist/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+.tooltip {
+    left: -($grid-gutter-width / 2);
+    right: -($grid-gutter-width / 2);
+    top: 100%;
+    transform: translateY(-100%);
+    transition: all 0.4s ease-in-out;
+    visibility: hidden;
+    width: auto;
+    @include media-breakpoint-up(lg) {
+        left: auto;
+        right: 0;
+        margin-right: $grid-gutter-width;
+        width: 100%;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        border-style: solid;
+        border-width: 0 calc-em(11) calc-em(11) calc-em(11);
+        border-color: transparent transparent $primary transparent;
+        top: 0;
+        right: calc-em(10, 16);
+        transform: translateY(-90%);
+    }
+
+    &:after {
+        position: absolute;
+        right: calc-em(10, 20);
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: calc-em(24);
+    }
+
+    &.show {
+        transform: translateY(0);
+        visibility: visible;
+    }
+}

@@ -1,0 +1,30 @@
+.btn {
+
+	&.sni-after:after {
+		font-size: calc-em(12);
+		padding-left: calc-em(6);
+	}
+
+	.input-group-sm > .input-group-prepend > &,
+	.input-group-sm > .input-group-append > &,
+	&-sm {
+		padding-left: $btn-padding-x-sm;
+		padding-right: $btn-padding-x-sm;
+	}
+
+	&-lg {
+		border-width: $btn-border-width-lg;
+	}
+
+	&-primary {
+		&:hover,
+		&:focus,
+		&.focus,
+		&:not(:disabled):not(.disabled):active,
+		&:not(:disabled):not(.disabled).active,
+		.show>&.dropdown-toggle {
+			background-color: $primary-dark;
+			border-color: $primary-dark;
+		}
+	}
+}

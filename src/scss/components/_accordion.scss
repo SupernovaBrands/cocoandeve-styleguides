@@ -1,0 +1,18 @@
+.card {
+    border-left: none;
+    border-right: none;
+}
+
+.card-header {
+    &:before {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        font-size: calc-em(13);
+        transform: translateY(-50%) rotate(180deg);
+    }
+
+    &.collapsed:before {
+        transform: translateY(-50%);
+    }
+}

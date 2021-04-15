@@ -1,0 +1,229 @@
+.offcanvas-active {
+    overflow: hidden;
+}
+
+.main-header {
+    z-index: $zindex-sticky;
+
+    .offcanvas-active & {
+        height: 100%;
+    }
+
+    .hair {
+        color: $secondary;
+
+        &:is(a) {
+            border-bottom: calc-em(5, 48) solid $secondary;
+        }
+
+        &:hover {
+            color: $secondary;
+            text-decoration: none;
+        }
+    }
+
+    .tan {
+        color: $sh-purple;
+
+        &:is(a) {
+            border-bottom: calc-em(5, 48) solid $sh-purple;
+        }
+
+        &:hover {
+            color: $sh-purple;
+            text-decoration: none;
+        }
+    }
+
+    .body {
+        color: $bali-bod-blue;
+
+        &:is(a) {
+            border-bottom: calc-em(5, 48) solid $bali-bod-blue;
+        }
+
+        &:hover {
+            color: $bali-bod-blue;
+            text-decoration: none;
+        }
+    }
+
+    .bundles {
+
+        &:is(a) {
+            border-bottom: calc-em(5, 48) solid $body-color;
+        }
+
+        &:hover {
+            color: $body-color;
+            text-decoration: none;
+        }
+    }
+
+    &.position-fixed {
+        top: 0;
+        right: 0;
+        left: 0;
+        box-shadow: 0 calc-em(4) calc-em(5) 0 rgba(0, 0, 0, .06);
+        @include media-breakpoint-down(md) {
+            align-items: flex-start;
+        }
+    }
+
+    &.scrolled-down {
+        transform: translateY(-100%);
+        transition: all 0.1s ease-in-out;
+    }
+
+    &.scrolled-up {
+        transform: translateY(0);
+        transition: all 0.4s ease-in-out;
+    }
+
+    @include media-breakpoint-down(lg) {
+        //992 - 1259 screen width
+        .h4 {
+            font-size: calc-em(16);
+        }
+    }
+}
+
+.mobile-nav {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .2s linear;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    visibility: hidden;
+
+    //overlay close icon
+    &:before {
+        position: absolute;
+        right: 12.5%;
+        top: calc-em(35);
+        font-size: calc-em(20);
+        color: #fff;
+    }
+
+    &__menu {
+        padding-left: $grid-gutter-width;
+        padding-right: $grid-gutter-width;
+        transform: translateX(-100%);
+        transition: transform .1s ease-in-out;
+        overflow-y: auto;
+
+        .card {
+            border: none;
+        }
+
+        .card-header {
+            border-bottom: none;
+        }
+
+        .card-body--border{
+
+            &:before {
+                content: '';
+                border-top: calc-em(5) solid $gray-500;
+                display: block;
+                margin-top: calc-em(10);
+                padding-top: calc-em(10);
+            }
+
+            &-hair:before {
+                border-color: $secondary-light;
+            }
+
+            &-tan:before {
+                border-color: $sh-purple-light;
+            }
+
+            &-body:before {
+                border-color: $bali-bod-blue-light;
+            }
+        }
+
+        a:not(.btn) {
+            color: $body-color;
+        }
+
+        img {
+            border-radius: calc-em(6);
+        }
+    }
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
+
+        .mobile-nav__menu {
+            transform: translateX(0);
+        }
+    }
+}
+
+.navbar-toggler {
+
+    span {
+        width: calc-em(25, 20);
+        height: 2px;
+        background-color: $body-color;
+        position: relative;
+
+        &::before,
+        &::after {
+            content: '';
+            height: 2px;
+            background: $body-color;
+            position: absolute;
+            left: 0;
+        }
+
+        &::before {
+            width: calc-em(21, 20);
+            top: -(calc-em(8, 20));
+        }
+
+        &::after {
+            width: calc-em(19, 20);
+            top: calc-em(8, 20);
+        }
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.mega-menu {
+    opacity: 0;
+    transition: opacity .1s linear;
+    left: 0;
+    visibility: hidden;
+    top: 90%;
+    box-shadow: 0 calc-em(4) calc-em(5) 0 rgba(0, 0, 0, .06);
+
+    &:before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: $grid-gutter-width;
+        transform: translateY(-50%);
+    }
+
+    .nav-item--mega-menu:hover & {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    a {
+        color: $body-color;
+
+        &:hover {
+            color: $primary;
+        }
+    }
+}
