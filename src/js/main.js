@@ -222,6 +222,53 @@ $(document).ready(function () {
 		});
 	}
 
+	//mobile menu toggle
+	function mobileMenuToggler() {
+		$('.mobile-nav').toggleClass('show');
+		$('body').toggleClass('offcanvas-active');
+	}
+
+	$('.navbar-toggler').on('click', function(){
+		mobileMenuToggler();
+	});
+
+	$('.mobile-nav').click(function(e){
+		if (e.target !== e.currentTarget) return;
+		mobileMenuToggler();
+	});
+
+	// header navbar detect scroll top or down
+	var lastScrollTop, scrollTop = 0;
+	var navbarEl = $('.main-header');
+	var announceBar = $('.announcement-bar');
+	var navbarHeight = navbarEl.height();
+
+	$(window).on('scroll', function() {
+		navbarEl.addClass('position-fixed');
+		scrollTop = $(this).scrollTop();
+		if (scrollTop < lastScrollTop) {
+			navbarEl.removeClass('scrolled-down').addClass('scrolled-up');
+			if (scrollTop <= 0) {
+				//remove scrolled up for mobile menu show properly
+				navbarEl.removeClass('position-fixed').removeClass('scrolled-up');
+				if (announceBar.length > 0) {
+					announceBar.removeClass('d-none');
+				}
+			}
+		} else {
+			if (scrollTop <= 0) {
+				//safari fix bounce effect
+				navbarEl.removeClass('position-fixed').removeClass('scrolled-up');
+			} else {
+				navbarEl.removeClass('scrolled-up').addClass('scrolled-down');
+				if (announceBar.length > 0 && scrollTop > navbarHeight) {
+					announceBar.addClass('d-none');
+				}
+			}
+		}
+		lastScrollTop = scrollTop;
+	});
+
 	// Cart drawer
 	$('.manual-gwp__item .btn').on('click', function () {
 		if ($(this).hasClass('btn-primary')) {
