@@ -1974,8 +1974,54 @@ footer hr {
   grid-area: sidebar;
 }
 
-.article__content img, .article__content iframe {
-  max-width: 100%;
+.page-banner-image {
+  padding: 100px;
+}
+
+.page-banner-image h1 {
+  color: white;
+}
+
+.page-banner-text-overlap__text-content {
+  background: white;
+  margin-top: -7em;
+}
+
+@media (min-width: 992px) {
+  .page-banner-text-overlap__text-content {
+    margin-right: -40%;
+  }
+}
+
+@media (min-width: 992px) {
+  .page-banner-text-overlap__text-content--reverse {
+    margin-left: -40%;
+    margin-right: auto;
+  }
+}
+
+.page-video-banner img {
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .page-video-banner img {
+    width: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .page-video-banner .container {
+    position: absolute;
+  }
+}
+
+.carousel--col-2 .carousel-inner {
+  transform: translateX(41.66%);
+}
+
+.carousel-inner .carousel .col-lg-2 {
+  border: 1px solid red;
 }
 
 /*# sourceMappingURL=main.css.map */

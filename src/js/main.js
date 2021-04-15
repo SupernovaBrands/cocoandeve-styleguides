@@ -234,4 +234,14 @@ $(document).ready(function () {
 			$(this).text('Remove');
 		}
 	});
+
+	// Award Carousel 
+	var awardCarousel = $('#awardCarousel');
+	if (awardCarousel.length > 0) {
+		awardCarousel.each(function () {
+			if ($(this).find('.carousel-item').length > 1) {
+				$(this).find('.carousel-item').addClass('d-block')
+			}
+		})
+	}
 });

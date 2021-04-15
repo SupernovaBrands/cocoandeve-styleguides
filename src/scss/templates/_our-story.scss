@@ -1,0 +1,58 @@
+.page-banner-image {
+  padding:100px;
+  h1 {
+    color: white;
+  }
+}
+
+.page-banner-text-overlap {
+  &__text-content {
+    background: white;
+    margin-top: -7em;
+
+    @include media-breakpoint-up(lg) {
+      margin-right: -40%;
+    }
+
+    &--reverse {
+      @include media-breakpoint-up(lg) {
+        margin-left: -40%;
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+.page-video-banner {
+  img {
+    width: 100%;
+
+    @include media-breakpoint-up(lg) {
+      width: auto;
+    }
+  }
+
+  .container {
+    @include media-breakpoint-up(lg) {
+      position: absolute;
+    }
+  }
+}
+
+.page-award-slider {
+
+}
+
+.carousel {
+  &--col-2 {
+    .carousel-inner {
+      transform: translateX(41.66%);
+    }
+  }
+
+  .col-lg-2 {
+    .carousel-inner & {
+      border:1px solid red;
+    }
+  }
+}
