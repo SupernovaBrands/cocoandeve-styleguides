@@ -1,0 +1,65 @@
+footer {
+  background-color: $secondary;
+  color: $white;
+
+  a {
+    color: $white;
+
+    &:hover {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+
+  .sni {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  hr {
+    border-color: $white;
+  }
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas: "newsletter newsletter"
+      "aboutus helplinks"
+      "support followus"
+      "currency item";
+
+  @include media-breakpoint-up(lg) {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "newsletter aboutus helplinks support"
+        "newsletter followus currency item";
+    grid-column-gap: $grid-gutter-width-lg;
+  }
+
+  &__newsletter {
+    grid-area: newsletter;
+  }
+
+  &__about-us {
+    grid-area: aboutus;
+  }
+
+  &__help-links {
+    grid-area: helplinks;
+  }
+
+   &__followus {
+    grid-area: followus;
+  }
+
+  &__currency {
+    grid-area: currency;
+  }
+
+  &__support {
+    grid-area: support;
+  }
+}

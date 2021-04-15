@@ -1,0 +1,183 @@
+// Grid
+$grid-gutter-width: 15px;
+$grid-gutter-width-lg: 30px;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 375px,
+  md: 768px,
+  lg: 992px,
+  xl: 1260px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px
+);
+
+$spacer: calc-em(20);
+$spacers: (
+  1: $spacer * 0.5,
+  2: $spacer * 1,
+  3: $spacer * 1.5,
+  4: $spacer * 2,
+  5: $spacer * 2.5,
+);
+
+// Typography
+$font-family-sans-serif: "sofia-pro", "Helvetica Neue", Arial, sans-serif;
+
+$line-height-base: calc-em(20, $context: 16, $unit: 1);
+$line-height-lg: $line-height-base;
+$line-height-sm: calc-em(17, $context: 14, $unit: 1);
+
+$headings-font-weight: 700;
+$headings-line-height: $line-height-base;
+
+$font-size-base: calc-em(16);
+$font-size-xs: calc-em(12);
+$h1-font-size: calc-em(24);
+$h2-font-size: calc-em(24);
+$h3-font-size: calc-em(18);
+$h4-font-size: calc-em(16);
+
+$h1-font-size-lg: calc-em(36);
+$h2-font-size-lg: calc-em(32);
+$h3-font-size-lg: calc-em(24);
+$h4-font-size-lg: calc-em(20);
+
+// Colors
+$primary: #F3436C;
+$primary-light: #F5DADF;
+$primary-dark: #B22D4B;
+$secondary: #00635B;
+$secondary-light: #E0F0E9;
+$sh-purple: #993366;
+$sh-purple-light: #FFCCFF;
+$bali-bod-blue: #213E7B;
+$bali-bod-blue-light: #bec5d8;
+$sh-orange: #FF9900;
+$sh-orange-light: #FFFFCC;
+
+$theme-colors: (
+  'primary': $primary,
+  'secondary': $secondary,
+);
+
+
+$body-color: #151515;
+
+$gray-100: #FAF9F9;
+$gray-400: #D0D0D0;
+$gray-500: #A3A3A3;
+$gray-600: #4E4E4E;
+$gray-900: $body-color;
+$text-muted: $gray-500;
+
+// Forms
+$form-group-margin-bottom: map-get($spacers, 1);
+$input-color: $body-color;
+$input-placeholder-color: $gray-500;
+$input-btn-focus-color: transparent;
+$input-focus-border-color: $gray-400;
+$input-disabled-bg: $gray-100;
+$input-disabled-color: $gray-400;
+$custom-control-gutter: .5em;
+$custom-control-indicator-size: 1em;
+
+$input-padding-y: calc-em(28 / 2);
+$input-padding-x: 1em;
+$custom-select-indicator-padding: 1em;
+
+$input-padding-y-sm: calc-em(15 / 2, 14);
+$input-padding-x-sm: calc-em(6, 14);
+
+$search-icon-padding-y-sm: calc-em(6, 14);
+$input-border-radius-sm: calc-em(18, 14);
+
+// Nav
+$nav-link-padding-y: calc-em(12/2);
+$nav-link-padding-x: calc-em(12/2);
+$nav-link-padding-y-lg: calc-em(24/2);
+$nav-link-padding-x-lg: calc-em(24/2);
+
+// Buttons
+$btn-hover-darken: 23.5%;
+$btn-font-weight: 700;
+$btn-padding-y: calc-em(9);
+$btn-padding-x: calc-em(28);
+$btn-padding-x-icon: calc-em(20);
+
+$btn-font-size-lg: 1em;
+$btn-line-height-lg: $line-height-base;
+$btn-border-radius-lg: calc-em(8, $unit: 1rem);
+$btn-border-width-lg: 2px;
+$btn-padding-y-lg: calc-em(26 / 2);
+$btn-padding-x-lg: calc-em(54);
+
+$btn-padding-y-sm: calc-em(15 / 2, 14);
+$btn-padding-x-sm: calc-em(28, 14);
+
+// HR
+$hr-border-color: $gray-600;
+
+// Carousels
+$carousel-indicator-width: calc-em(12);
+$carousel-indicator-height: calc-em(12);
+$carousel-control-color: $primary;
+$carousel-control-prev-icon-bg: none;
+$carousel-control-next-icon-bg: none;
+
+// Upsell
+$upsell-padding-y: calc-em(10);
+$upsell-padding-x: calc-em(15);
+$upsell-padding-y-lg: calc-em(10);
+$upsell-padding-x-lg: calc-em(10);
+
+// Video Carousel
+$carousel-control-opacity: 1;
+$carousel-control-hover-opacity: 1;
+
+// Breadcrumb
+$breadcrumb-bg: white;
+$breadcrumb-divider-color: $body-color;
+$breadcrumb-active-color: $body-color;
+$breadcrumb-divider: quote(">");
+$breadcrumb-item-padding: calc-em(5);
+$breadcrumb-font-size: calc-em(12);
+$breadcrumb-padding-x: 0;
+
+// Social Icon
+$icon-primary-font-size: calc-em(30);
+
+// Alert
+$alert-padding-x: 1.25em;
+
+// Interactions
+$hover-transition-timing: 0.15s ease-in-out;
+
+// accordion
+$card-border-radius: 0;
+$card-border-color: $gray-500;
+$card-cap-bg: transparent;
+
+// navbar
+$navbar-nav-link-padding-x: 0;
+$navbar-padding-y: 0;
+$navbar-padding-x: calc-em(15 / 2, 16);
+$navbar-toggler-padding-x: 0;
+
+//navbar brand
+$navbar-brand-padding-y: calc-em(10, 16);
+
+// dropdown
+$dropdown-border-width: 0;
+
+// tooltip
+$tooltip-opacity: 1;
+
+// Cart Drawer
+// To be above zendesk help
+$zindex-cartdrawer: 9999991;
