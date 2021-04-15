@@ -2,10 +2,10 @@ $supernova-icon-font: "supernova-icon";
 
 @font-face {
 	font-family: $supernova-icon-font;
-	src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?feb07ab5bbf2a396c7cbacb81a2ce2b5#supernova-icon") format("svg"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?feb07ab5bbf2a396c7cbacb81a2ce2b5") format("truetype"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff?feb07ab5bbf2a396c7cbacb81a2ce2b5") format("woff"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?feb07ab5bbf2a396c7cbacb81a2ce2b5") format("woff2");
+	src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?4045388c928e281b4aa2a8a23041cc44#supernova-icon") format("svg"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?4045388c928e281b4aa2a8a23041cc44") format("truetype"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.woff?4045388c928e281b4aa2a8a23041cc44") format("woff"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?4045388c928e281b4aa2a8a23041cc44") format("woff2");
 }
 
 .sni,
@@ -29,28 +29,27 @@ $supernova-icon-map: (
 	"account": "\f101",
 	"awards": "\f102",
 	"cart": "\f103",
-	"chevron-down-lg": "\f104",
-	"chevron-down": "\f105",
-	"chevron-next": "\f106",
-	"chevron-prev": "\f107",
-	"close-circle": "\f108",
-	"close": "\f109",
-	"delivery": "\f10a",
-	"facebook-square": "\f10b",
-	"instagram": "\f10c",
-	"logo": "\f10d",
-	"minus": "\f10e",
-	"moneyback": "\f10f",
-	"palm-tree": "\f110",
-	"pinterest-square": "\f111",
-	"play": "\f112",
-	"plus-circle": "\f113",
-	"plus": "\f114",
-	"search": "\f115",
-	"tiktok": "\f116",
-	"trash": "\f117",
-	"twitter-square": "\f118",
-	"youtube": "\f119",
+	"chevron-down": "\f104",
+	"chevron-next": "\f105",
+	"chevron-prev": "\f106",
+	"close-circle": "\f107",
+	"close": "\f108",
+	"delivery": "\f109",
+	"facebook-square": "\f10a",
+	"instagram": "\f10b",
+	"logo": "\f10c",
+	"minus": "\f10d",
+	"moneyback": "\f10e",
+	"palm-tree": "\f10f",
+	"pinterest-square": "\f110",
+	"play": "\f111",
+	"plus-circle": "\f112",
+	"plus": "\f113",
+	"search": "\f114",
+	"tiktok": "\f115",
+	"trash": "\f116",
+	"twitter-square": "\f117",
+	"youtube": "\f118",
 );
 
 .sni.sni__account:before,
@@ -64,10 +63,6 @@ $supernova-icon-map: (
 .sni.sni__cart:before,
 .sni-after.sni__cart:after {
 	content: map-get($supernova-icon-map, "cart");
-}
-.sni.sni__chevron-down-lg:before,
-.sni-after.sni__chevron-down-lg:after {
-	content: map-get($supernova-icon-map, "chevron-down-lg");
 }
 .sni.sni__chevron-down:before,
 .sni-after.sni__chevron-down:after {
