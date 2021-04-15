@@ -404,6 +404,20 @@
   color: #F3436C;
 }
 
+.trustpilot-stars--secondary {
+  color: #00B67A;
+}
+
+.trustpilot-stars--secondary i.sni__star {
+  font-size: 1em;
+}
+
+.trustpilot-stars--secondary i.sni__star-box,
+.trustpilot-stars--secondary i.sni__star {
+  margin: 0 0.0625em;
+  font-size: 1.5em;
+}
+
 .nav-tabs {
   border-bottom: none;
 }
@@ -2385,8 +2399,8 @@ a.shade-medium:focus, a.shade-medium.focus {
   font-size: 1.25em;
 }
 
-.services-list i.sni {
-  font-size: 2em;
+.services-list__icon {
+  font-size: 2.25em;
 }
 
 .services-list__items {
@@ -2397,33 +2411,16 @@ a.shade-medium:focus, a.shade-medium.focus {
   line-height: 1.5em;
 }
 
-.trustpilot-stars .h4 {
-  color: #A3A3A3;
+.trustpilot-stars {
+  font-size: 1em;
 }
 
 .trustpilot-stars .h3 {
   font-size: 1.25em;
 }
 
-.trustpilot-stars .brand {
-  font-size: 1em;
-}
-
-.trustpilot-stars__icons i.sni__star-box,
-.trustpilot-stars__icons i.sni__star {
-  color: #00B67A;
-  margin: 0 0.0625em;
-  font-size: 1.5em;
-}
-
-.trustpilot-stars__icons i.sni__star {
-  font-size: 1em;
-}
-
-@media (min-width: 992px) {
-  .trustpilot-stars__icons i.sni__star {
-    font-size: 1.125em;
-  }
+.text-gray {
+  color: #A3A3A3;
 }
 
 .list-logo img {
