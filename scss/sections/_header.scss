@@ -203,6 +203,7 @@
     transition: opacity .1s linear;
     left: 0;
     visibility: hidden;
+    top: 90%;
     box-shadow: 0 calc-em(4) calc-em(5) 0 rgba(0, 0, 0, .06);
 
     &:before {
@@ -215,7 +216,6 @@
 
     .nav-item--mega-menu:hover & {
         opacity: 1;
-        top: 90%;
         visibility: visible;
     }
 
