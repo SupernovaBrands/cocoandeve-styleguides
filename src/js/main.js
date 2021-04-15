@@ -240,7 +240,6 @@ $(document).ready(function () {
 	if (awardCarousel.length > 0) {
 		awardCarousel.each(function () {
 			if ($(this).find('.carousel-item').length > 1) {
-				$(this).find('.carousel-item').addClass('d-block')
 			}
 		})
 	}

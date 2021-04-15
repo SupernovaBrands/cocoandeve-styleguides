@@ -76,6 +76,12 @@
     @include media-breakpoint-up(lg) {
       transform: translateX(25%);
     }
+
+    &--lg-2 {
+      @include media-breakpoint-up(lg) {
+        transform: translateX(41%);
+      }
+    }
   }
 
   .carousel-item-prev--out {

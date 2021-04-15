@@ -1,5 +1,4 @@
-.page-banner-image {
-  padding:100px;
+.page-banner-image {  
   h1 {
     color: white;
   }
@@ -24,6 +23,7 @@
 }
 
 .page-video-banner {
+  background-color: #f6e4ef;
   img {
     width: 100%;
 
@@ -40,19 +40,41 @@
 }
 
 .page-award-slider {
+  background-color: #f9eeca;
 
-}
-
-.carousel {
-  &--col-2 {
-    .carousel-inner {
-      transform: translateX(41.66%);
+  p {
+    @include media-breakpoint-up(lg) {
+      max-width: 42%
     }
   }
 
-  .col-lg-2 {
-    .carousel-inner & {
-      border:1px solid red;
+  .carousel {
+    overflow: hidden;
+  }
+
+  .carousel-item:nth-child(odd) {
+    margin-top: 5em;
+  }
+
+  .carousel-control-prev, .carousel-control-next {
+    width: auto;
+
+    &:before {
+      width: 3.125em;
+      height: 6.25em;
+      box-shadow: 0 4px 4px #cbcbcb;
+    }
+  }
+
+  .carousel-control-prev {
+    &:before {
+      border-radius: 0 9.375em 9.375em 0;
+    }
+  }
+
+  .carousel-control-next {
+    &:before {
+      border-radius: 9.375em 0 0 9.375em;
     }
   }
 }

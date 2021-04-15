@@ -265,6 +265,12 @@
   }
 }
 
+@media (min-width: 992px) {
+  .carousel--centered .carousel-inner--lg-2 {
+    transform: translateX(41%);
+  }
+}
+
 .carousel--centered .carousel-item-prev--out {
   transform: translateX(-200%);
   display: block;
@@ -1974,10 +1980,6 @@ footer hr {
   grid-area: sidebar;
 }
 
-.page-banner-image {
-  padding: 100px;
-}
-
 .page-banner-image h1 {
   color: white;
 }
@@ -2000,6 +2002,10 @@ footer hr {
   }
 }
 
+.page-video-banner {
+  background-color: #f6e4ef;
+}
+
 .page-video-banner img {
   width: 100%;
 }
@@ -2016,12 +2022,40 @@ footer hr {
   }
 }
 
-.carousel--col-2 .carousel-inner {
-  transform: translateX(41.66%);
+.page-award-slider {
+  background-color: #f9eeca;
 }
 
-.carousel-inner .carousel .col-lg-2 {
-  border: 1px solid red;
+@media (min-width: 992px) {
+  .page-award-slider p {
+    max-width: 42%;
+  }
+}
+
+.page-award-slider .carousel {
+  overflow: hidden;
+}
+
+.page-award-slider .carousel-item:nth-child(odd) {
+  margin-top: 5em;
+}
+
+.page-award-slider .carousel-control-prev, .page-award-slider .carousel-control-next {
+  width: auto;
+}
+
+.page-award-slider .carousel-control-prev:before, .page-award-slider .carousel-control-next:before {
+  width: 3.125em;
+  height: 6.25em;
+  box-shadow: 0 4px 4px #cbcbcb;
+}
+
+.page-award-slider .carousel-control-prev:before {
+  border-radius: 0 9.375em 9.375em 0;
+}
+
+.page-award-slider .carousel-control-next:before {
+  border-radius: 9.375em 0 0 9.375em;
 }
 
 /*# sourceMappingURL=main.css.map */
