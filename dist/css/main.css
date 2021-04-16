@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @font-face {
   font-family: "supernova-icon";
-  src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?feb07ab5bbf2a396c7cbacb81a2ce2b5#supernova-icon") format("svg"), url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?feb07ab5bbf2a396c7cbacb81a2ce2b5") format("truetype"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff?feb07ab5bbf2a396c7cbacb81a2ce2b5") format("woff"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?feb07ab5bbf2a396c7cbacb81a2ce2b5") format("woff2");
+  src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?7bc14a5ef3b0bd4a4b83fbe18de17248#supernova-icon") format("svg"), url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?7bc14a5ef3b0bd4a4b83fbe18de17248") format("truetype"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff?7bc14a5ef3b0bd4a4b83fbe18de17248") format("woff"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?7bc14a5ef3b0bd4a4b83fbe18de17248") format("woff2");
 }
 
 .sni,
@@ -36,23 +36,23 @@
   content: "";
 }
 
-.sni.sni__chevron-down-lg:before,
-.sni-after.sni__chevron-down-lg:after {
-  content: "";
-}
-
 .sni.sni__chevron-down:before,
 .sni-after.sni__chevron-down:after {
-  content: "";
+  content: "";
 }
 
 .sni.sni__chevron-next:before,
 .sni-after.sni__chevron-next:after {
-  content: "";
+  content: "";
 }
 
 .sni.sni__chevron-prev:before,
 .sni-after.sni__chevron-prev:after {
+  content: "";
+}
+
+.sni.sni__chevron-up:before,
+.sni-after.sni__chevron-up:after {
   content: "";
 }
 
@@ -435,7 +435,7 @@
   position: absolute;
   right: 0;
   top: 50%;
-  font-size: 0.8125em;
+  font-size: 1.625em;
   transform: translateY(-50%) rotate(180deg);
 }
 
