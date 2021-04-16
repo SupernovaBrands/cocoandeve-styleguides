@@ -2126,4 +2126,17 @@ footer hr {
   max-width: 100%;
 }
 
+.stockist figure a {
+  background-color: #E0F0E9;
+  border-radius: 0.375em;
+}
+
+.stockist a {
+  color: #151515;
+}
+
+.stockist a:hover {
+  color: #F3436C;
+}
+
 /*# sourceMappingURL=main.css.map */
