@@ -181,3 +181,11 @@ $tooltip-opacity: 1;
 // Cart Drawer
 // To be above zendesk help
 $zindex-cartdrawer: 9999991;
+
+// stockist
+$custom-select-border-radius: calc-em(6, 20);
+$custom-select-border-color: #000;
+$custom-select-focus-border-color: #000;
+$custom-select-padding-y: calc-em(12, 20);
+$custom-select-padding-x: calc-em(12, 20);
+$custom-select-height: calc-em(50, 20);
