@@ -1,0 +1,10 @@
+.review-stars {
+  .sni__star {
+    display: inline-block;
+    font-size: calc-em(20);
+  }
+
+  &--primary {
+    color: $primary;
+  }
+}

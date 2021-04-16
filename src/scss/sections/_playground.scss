@@ -1,0 +1,42 @@
+.col_sec_des {
+  line-height: $line-height-xl;
+
+  @include media-breakpoint-up(lg) {
+    font-size: $h4-font-size-lg;
+  }
+}
+
+.collection-list {
+
+  figcaption {
+    bottom: 50%;
+    transform: translateY(50%);
+    -webkit-transform: translateY(50%);
+    -moz-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    -o-transform: translateY(50%);
+    width: 100%;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    padding: 0;
+    top: 0;
+
+    @include media-breakpoint-up(lg) {
+      top: -50%;
+      bottom: 0;
+      height: 100%;
+      max-width: calc-em(292);
+    }
+
+    .h1 {
+      text-shadow: 0 0 calc-em(24) rgba(0, 48, 45, 0.25);
+      font-size: $h1-font-size-xl;
+    }
+
+    p.d-md-block {
+      font-size: $h4-font-size-lg;
+    }
+  }
+}

@@ -125,102 +125,216 @@ $(document).ready(function () {
 
 	// video carousel
 	if ($('.carousel--centered').length > 0) {
-		$('.carousel--centered').each(function () {
-			if ($(this).find('.carousel-item').length > 1) {
-				const loop = $(this).find('.carousel-item').length > 5;
-				// hide prev/next nav when no item prev class on page load
-				if ($(this).find('.carousel-item-prev').length === 0) {
-					$(this).find('a[data-slide="prev"]').addClass('d-none');
-				}
+    $('.carousel--centered').each(function () {
+      var _this = this;
 
-				if ($(this).find('.carousel-item-next').length === 0) {
-					$(this).find('a[data-slide="next"]').addClass('d-none');
-				}
+      if ($(this).find('.carousel-item').length > 1) {
+        const loop = $(this).find('.carousel-item').length > 5;
+        const fourItems = $(this).hasClass('carousel--centered-four-items');
 
-				$(this).on('slide.bs.carousel', function (e) {
-					$(this).find('a[data-slide]').removeClass('d-none');
-					if (e.direction === 'left') {
-						$(this).find('.carousel-item-prev').addClass('carousel-item-prev').addClass('carousel-item-prev--out');
-						if ($(this).find('.carousel-item-next').next().length > 0) {
-							$(this).find('.carousel-item-next').next()
-								.addClass('carousel-item-next')
-								.removeClass('carousel-item-prev--out carousel-item-next--out');
-						} else if (loop) {
-							$(this).find('.carousel-item').first()
-								.addClass('carousel-item-next')
-								.removeClass('carousel-item-prev--out carousel-item-next--out');
-							$(this).find('.carousel-item').first().next()
-								.addClass('carousel-item-next--out')
-								.removeClass('carousel-item-prev--out');
-						}
-					} else {
-						$(this).find('.carousel-item-next').addClass('carousel-item-next').addClass('carousel-item-next--out');
-						if ($(this).find('.carousel-item-prev').prev().length > 0) {
-							$(this).find('.carousel-item-prev').prev()
-								.addClass('carousel-item-prev')
-								.removeClass('carousel-item-prev--out carousel-item-next--out');
-						} else if (loop) {
-							$(this).find('.carousel-item').last()
-								.addClass('carousel-item-prev')
-								.removeClass('carousel-item-prev--out carousel-item-next--out');
-							$(this).find('.carousel-item').last().prev()
-								.addClass('carousel-item-prev--out')
-								.removeClass('carousel-item-next--out');
-						}
-					}
-				});
+        // hide prev/next nav when no item prev class on page load
+        if ($(this).find('.carousel-item-prev').length === 0) {
+          $(this).find('a[data-slide="prev"]').addClass('d-none');
+        }
 
-				let currentIndex;
-				let prevSlide;
-				let nextSlide;
-				let prev2Slide;
-				let next2Slide;
-				let carouselLength;
-				$(this).on('slid.bs.carousel', function () {
-					carouselLength = $(this).find('.carousel-item').length;
-					currentIndex = $(this).find('.carousel-item.active').index();
+        if ($(this).find('.carousel-item-next').length === 0) {
+          $(this).find('a[data-slide="next"]').addClass('d-none');
+        }
 
-					if (loop) {
-						prevSlide = $(this).find('.carousel-item').eq(currentIndex > 0 ? currentIndex - 1 : carouselLength - 1);
-						nextSlide = $(this).find('.carousel-item').eq(currentIndex < (carouselLength - 1) ? currentIndex + 1 : 0);
-						prev2Slide = $(this).find('.carousel-item').eq(currentIndex - 2 + (currentIndex < 1 ? carouselLength : 0));
-						next2Slide = $(this).find('.carousel-item').eq(currentIndex + 2 - (currentIndex > (carouselLength - 2) ? carouselLength : 0));
+        $(this).on('slide.bs.carousel', function (e) {
+          $(this).find('a[data-slide]').removeClass('d-none');
+          if (e.direction === 'left') {
+            if (!fourItems || window.innerWidth < screenLG) {
+              $(this).find('.carousel-item-prev').addClass('carousel-item-prev').addClass('carousel-item-prev--out');
 
-						prevSlide.addClass('carousel-item-prev');
-						$(this).find('.carousel-item').not(prevSlide).removeClass('carousel-item-prev');
-						nextSlide.addClass('carousel-item-next');
-						$(this).find('.carousel-item').not(nextSlide).removeClass('carousel-item-next');
-						prev2Slide.addClass('carousel-item-prev--out');
-						$(this).find('.carousel-item').not(prev2Slide).removeClass('carousel-item-prev--out');
-						next2Slide.addClass('carousel-item-next--out');
-						$(this).find('.carousel-item').not(next2Slide).removeClass('carousel-item-next--out');
-					} else {
-						prevSlide = $(this).find('.carousel-item').eq(currentIndex).prev();
-						nextSlide = $(this).find('.carousel-item').eq(currentIndex).next();
+              if ($(this).find('.carousel-item-next').next().length > 0) {
+                $(this).find('.carousel-item-next').next()
+                .addClass('carousel-item-next')
+                .removeClass('carousel-item-prev--out carousel-item-next--out');
+              } else if (loop) {
+                $(this).find('.carousel-item').first()
+                .addClass('carousel-item-next')
+                .removeClass('carousel-item-prev--out carousel-item-next--out');
+                $(this).find('.carousel-item').first().next()
+                .addClass('carousel-item-next--out')
+                .removeClass('carousel-item-prev--out');
+              }
+            } else {
+              // Behaviour desktop carousel with 4 items left direction
+              // current active element was changed to the next element so need to replace this element as prev
+              var preActive = $(this).find(".carousel-item.active");
+              var currentPrev = $(this).find(".carousel-item-prev--out");
+              // removing all class unneeded before transition
+              $(this).find(".carousel-item.carousel-item-prev--out, .carousel-item.carousel-item-next--out").removeClass('carousel-item-prev--out carousel-item-next--out carousel-item-right carousel-item-left');
 
-						$(this).find('.carousel-item-prev').removeClass('carousel-item-prev');
-						$(this).find('.carousel-item-next').removeClass('carousel-item-next');
+              currentPrev.addClass('carousel-item-prev--out carousel-item-right');
 
-						if (prevSlide.length > 0) {
-							prevSlide.addClass('carousel-item-prev');
-							prevSlide.removeClass('carousel-item-prev--out');
-						} else {
-							$(this).find('a[data-slide="prev"]').addClass('d-none');
-						}
+              // remove class after transition bootstrap default transition is 0.6s
+              setTimeout(function(){
+                currentPrev.removeClass('carousel-item-prev--out carousel-item-right');
+              }, 600);
 
-						if (nextSlide.length > 0) {
-							nextSlide.addClass('carousel-item-next');
-							nextSlide.removeClass('carousel-item-next--out');
-						} else {
-							$(this).find('a[data-slide="next"]').addClass('d-none');
-						}
-					}
-				});
-			} else {
-				$(this).find('a[data-slide]').addClass('d-none');
-			}
-		});
-	}
+              preActive.removeClass('carousel-item-prev carousel-item-prev--out').addClass('carousel-item-prev');
+
+              // handle detection previous element
+              if (preActive.prev().length > 0){
+                preActive.prev().removeClass('carousel-item-prev carousel-item-prev--out').addClass('carousel-item-prev--out');
+              } else {
+                $(this).find(".carousel-item").last().removeClass('carousel-item-prev carousel-item-prev--out').addClass('carousel-item-prev--out');
+              }
+
+              // handle detection next element
+              preActive.next().removeClass('carousel-item-next--out carousel-item-prev--out');
+
+              // checking for next 2 level, tried with nextAll(':lt(2)') doesn't work properly
+              if (preActive.next().next().length > 0){
+                preActive.next().next().removeClass('carousel-item-next--out carousel-item-prev carousel-item-next carousel-item-prev--out').addClass('carousel-item-next');
+
+                // checking for next 3 level, tried with nextAll(':lt(3)') doesn't work properly
+                if (preActive.next().next().next().length > 0) {
+                  preActive.next().next().next().removeClass('carousel-item-next--out carousel-item-prev carousel-item-next carousel-item-prev--out').addClass('carousel-item-next--out carousel-item-left');
+                } else {
+                  $(this).find(".carousel-item").first().removeClass('carousel-item-next--out carousel-item-prev carousel-item-next carousel-item-prev--out').addClass('carousel-item-next--out carousel-item-left');
+                }
+              } else if (preActive.next().length > 0) {
+                $(this).find(".carousel-item").first().removeClass('carousel-item-next--out carousel-item-prev carousel-item-next carousel-item-prev--out').addClass('carousel-item-next');
+                $(this).find(".carousel-item").first().next().removeClass('carousel-item-next--out carousel-item-prev carousel-item-next carousel-item-prev--out').addClass('carousel-item-next--out carousel-item-left');
+              } else {
+                $(this).find(".carousel-item").first().next().removeClass('carousel-item-next--out carousel-item-prev carousel-item-next carousel-item-prev--out').addClass('carousel-item-next');
+                $(this).find(".carousel-item").first().next().next().removeClass('carousel-item-next--out carousel-item-prev carousel-item-next carousel-item-prev--out').addClass('carousel-item-next--out carousel-item-left');
+              }
+
+              // removing carousel-item-right class after transition invoked, remove from slide.bs.carousel event too late
+              setTimeout(function(){
+                $(_this).find(".carousel-item-next--out.carousel-item-left, .carousel-item-next--out.carousel-item-right").removeClass('carousel-item-left carousel-item-right');
+              }, 1);
+            }
+          } else {
+            if (!fourItems || window.innerWidth < screenLG) {
+             $(this).find('.carousel-item-next').addClass('carousel-item-next').addClass('carousel-item-next--out');
+             if ($(this).find('.carousel-item-prev').prev().length > 0) {
+              $(this).find('.carousel-item-prev').prev()
+              .addClass('carousel-item-prev')
+              .removeClass('carousel-item-prev--out carousel-item-next--out');
+            } else if (loop) {
+              $(this).find('.carousel-item').last()
+              .addClass('carousel-item-prev')
+              .removeClass('carousel-item-prev--out carousel-item-next--out');
+              $(this).find('.carousel-item').last().prev()
+              .addClass('carousel-item-prev--out')
+              .removeClass('carousel-item-next--out');
+            }
+          } else {
+              // Behaviour desktop carousel with 4 items left direction
+              // current active element was changed to the next element so need to replace this element as prev
+              var preActive = $(this).find(".carousel-item.active");
+              var currentNext = $(this).find(".carousel-item-next--out");
+              // removing all class unneeded before transition
+              $(this).find(".carousel-item.carousel-item-prev--out, .carousel-item.carousel-item-next--out").removeClass('carousel-item-prev--out carousel-item-next--out carousel-item-right carousel-item-left');
+
+              currentNext.addClass('carousel-item-next--out carousel-item-left');
+
+              // remove class after transition bootstrap default transition is 0.6s
+              setTimeout(function(){
+                currentNext.removeClass('carousel-item-next--out carousel-item-left');
+              }, 600);
+
+              preActive.removeClass('carousel-item-next carousel-item-next--out').addClass('carousel-item-next');
+
+              // handle detection next element
+              if (preActive.next().length > 0){
+                preActive.next().removeClass('carousel-item-next carousel-item-next--out').addClass('carousel-item-next--out');
+              } else {
+                $(this).find(".carousel-item").first().removeClass('carousel-item-next carousel-item-next--out').addClass('carousel-item-next--out');
+              }
+
+              // handle detection prev element
+              preActive.prev().removeClass('carousel-item-prev--out carousel-item-next--out');
+
+              if (preActive.prev().prev().length > 0){
+                preActive.prev().prev().removeClass('carousel-item-next--out carousel-item-prev carousel-item-next carousel-item-prev--out').addClass('carousel-item-prev');
+
+                if (preActive.prev().prev().prev().length > 0) {
+                  preActive.prev().prev().prev().removeClass('carousel-item-next--out carousel-item-prev carousel-item-next carousel-item-prev--out').addClass('carousel-item-prev--out carousel-item-right');
+                } else {
+                  $(this).find(".carousel-item").last().removeClass('carousel-item-next--out carousel-item-prev carousel-item-next carousel-item-prev--out').addClass('carousel-item-prev--out carousel-item-right');
+                }
+              } else if (preActive.prev().length > 0) {
+                $(this).find(".carousel-item").last().removeClass('carousel-item-next--out carousel-item-prev carousel-item-next carousel-item-prev--out').addClass('carousel-item-prev');
+                $(this).find(".carousel-item").last().prev().removeClass('carousel-item-next--out carousel-item-prev carousel-item-next carousel-item-prev--out').addClass('carousel-item-prev--out carousel-item-right');
+              } else {
+                $(this).find(".carousel-item").last().prev().removeClass('carousel-item-next--out carousel-item-prev carousel-item-next carousel-item-prev--out').addClass('carousel-item-prev');
+                $(this).find(".carousel-item").last().prev().prev().removeClass('carousel-item-next--out carousel-item-prev carousel-item-next carousel-item-prev--out').addClass('carousel-item-prev--out carousel-item-right');
+              }
+
+              // removing carousel-item-right class after transition invoked, remove from slide.bs.carousel event too late
+              setTimeout(function(){
+                $(_this).find(".carousel-item-prev--out.carousel-item-right, .carousel-item-next--out.carousel-item-right").removeClass('carousel-item-left carousel-item-right');
+              }, 1);
+            }
+          }
+        });
+
+        let currentIndex;
+        let prevSlide;
+        let nextSlide;
+        let prev2Slide;
+        let next2Slide;
+        let carouselLength;
+
+        $(this).on('slid.bs.carousel', function () {
+          if (fourItems && window.innerWidth >= screenLG) {
+            // don't need to customisation for desktop for 4 items box as already handled on slide.bs.carousel
+            return;
+          }
+
+          carouselLength = $(this).find('.carousel-item').length;
+          currentIndex = $(this).find('.carousel-item.active').index();
+
+          if (loop) {
+            prevSlide = $(this).find('.carousel-item').eq(currentIndex > 0 ? currentIndex - 1 : carouselLength - 1);
+            nextSlide = $(this).find('.carousel-item').eq(currentIndex < (carouselLength - 1) ? currentIndex + 1 : 0);
+            prev2Slide = $(this).find('.carousel-item').eq(currentIndex - 2 + (currentIndex < 1 ? carouselLength : 0));
+            next2Slide = $(this).find('.carousel-item').eq(currentIndex + 2 - (currentIndex > (carouselLength - 2) ? carouselLength : 0));
+
+            prevSlide.addClass('carousel-item-prev');
+            $(this).find('.carousel-item').not(prevSlide).removeClass('carousel-item-prev');
+            nextSlide.addClass('carousel-item-next');
+            $(this).find('.carousel-item').not(nextSlide).removeClass('carousel-item-next');
+            prev2Slide.addClass('carousel-item-prev--out');
+            $(this).find('.carousel-item').not(prev2Slide).removeClass('carousel-item-prev--out');
+            next2Slide.addClass('carousel-item-next--out');
+            $(this).find('.carousel-item').not(next2Slide).removeClass('carousel-item-next--out');
+            if (!next2Slide.length) {
+              $(this).find('.carousel-item:first-child').addClass('carousel-item-next--out');
+            }
+          } else {
+            prevSlide = $(this).find('.carousel-item').eq(currentIndex).prev();
+            nextSlide = $(this).find('.carousel-item').eq(currentIndex).next();
+
+            $(this).find('.carousel-item-prev').removeClass('carousel-item-prev');
+            $(this).find('.carousel-item-next').removeClass('carousel-item-next');
+
+            if (prevSlide.length > 0) {
+              prevSlide.addClass('carousel-item-prev');
+              prevSlide.removeClass('carousel-item-prev--out');
+            } else {
+              $(this).find('a[data-slide="prev"]').addClass('d-none');
+            }
+
+            if (nextSlide.length > 0) {
+              nextSlide.addClass('carousel-item-next');
+              nextSlide.removeClass('carousel-item-next--out');
+            } else {
+              $(this).find('a[data-slide="next"]').addClass('d-none');
+            }
+          }
+        });
+      } else {
+        $(this).find('a[data-slide]').addClass('d-none');
+      }
+    });
+  }
 
 	//mobile menu toggle
 	function mobileMenuToggler() {
