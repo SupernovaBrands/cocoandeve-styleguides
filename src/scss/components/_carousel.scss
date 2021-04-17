@@ -90,5 +90,151 @@
     transform: translateX(200%);
     display: block;
   }
+}
 
+%transform-negative {
+  position: relative;
+  transform: translate3d(-100%, 0, 0);
+  visibility: visible;
+}
+
+%transform-positive {
+  position: relative;
+  transform: translate3d(100%, 0, 0);
+  visibility: visible;
+  display: block;
+}
+
+.carousel--loop {
+  .carousel-inner {
+    .carousel-item {
+      margin-right: 0;  // reset carousel item margin to makes it display in the default position
+    }
+
+    .carousel-item-next,
+    .carousel-item-prev {
+      position: relative;
+      transform: translate3d(0, 0, 0);
+    }
+
+    .carousel-item-prev:not(.carousel-item-right) {
+      transform: translateX(-100%);
+    }
+
+    .active.carousel-item-left + .carousel-item-next.carousel-item-left {
+      @extend %transform-negative;
+    }
+
+    .active.carousel-item-right + .carousel-item-prev.carousel-item-right {
+      @extend %transform-positive;
+    }
+
+    @include carousel-item-level('.active', '.carousel-item', 5) {
+      display: block;
+    }
+
+    @include carousel-item-level('.carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)', '.carousel-item:not(.carousel-item--last)', 5) {
+      transition: none;
+    }
+
+    @include carousel-item-level('.carousel-item-next.carousel-item-left', '.carousel-item', 5, false) {
+      @extend %transform-negative;
+    }
+
+    @include carousel-item-level('.carousel-item-prev.carousel-item-right', '.carousel-item', 5, false) {
+      @extend %transform-positive;
+    }
+
+    /* farthest right hidden item must be abso position for animations */
+    .carousel-item-prev.carousel-item-right {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      display: block;
+      visibility: visible;
+    }
+  }
+
+  &--centered {
+    overflow: hidden;
+    .carousel-inner {
+      overflow: visible;
+      transform: translateX(-62.5%);
+
+      @include media-breakpoint-up(md) {
+        transform: translateX(-12.5%);
+
+        .active + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+          display: block;
+        }
+
+        .carousel-item {
+          &--last {
+            transform: translate3d(100%, 0, 0);
+          }
+        }
+      }
+    }
+  }
+}
+
+.carousel-control {
+  &--loop {
+    &.carousel-control-prev {
+      &:before {
+        left: 0;
+        border-radius: 0 calc-em(150) calc-em(150) 0;
+      }
+    }
+
+    &.carousel-control-next {
+      &:before {
+        right: 0;
+        border-radius: calc-em(150) 0 0 calc-em(150);
+      }
+    }
+
+    &.carousel-control-prev,
+    &.carousel-control-next {
+      top: 0;
+      width: calc-em(50);
+      @include media-breakpoint-up(lg) {
+        width: calc-em(100);
+      }
+
+      &:before {
+        width: 100%;
+        height: calc-em(100);
+        box-shadow: 0 calc-em(4) calc-em(4) rgba(0,0,0, .2);
+        color: black;
+        opacity: .9;
+        @include media-breakpoint-up(lg) {
+          width: 100%;
+          border-radius: 50%;
+        }
+      }
+
+      span {
+        font-size: calc-em(26);
+        color: black;
+      }
+    }
+  }
+}
+
+.carousel-loop-centered {
+  .carousel-control {
+    &.carousel-control-prev {
+      @include media-breakpoint-up(lg) {
+        left: -2%;
+      }
+    }
+
+    &.carousel-control-next {
+      @include media-breakpoint-up(lg) {
+        right: -2%;
+      }
+    }
+  }
 }
