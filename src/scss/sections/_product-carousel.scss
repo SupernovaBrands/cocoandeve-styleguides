@@ -1,22 +1,22 @@
-.product-carousel {  
+.product-carousel {
   .shop-all {
     min-width: calc-em(154);
     @include media-breakpoint-up(lg) {
-      min-width: calc-em(216); 
+      min-width: calc-em(216);
     }
   }
 
   .tab-content, & {
     overflow: hidden;
   }
+
+  .carousel {
+    padding-top: map-get($spacers, 2);
+  }
 }
 
 .product-card {
   min-height: calc-em(533);
-  padding-top: map-get($spacers, 1);
-  @include media-breakpoint-up(lg) {
-    padding-top: map-get($spacers, 2);
-  }
 
   &__title {
     font-size: calc-em(22);
@@ -41,7 +41,7 @@
     width: calc-em(66);
     height: calc-em(66);
     right: 0;
-    top: 0;
+    top: calc-em(-10);
 
     @include media-breakpoint-up(lg) {
       width: calc-em(90);
@@ -52,7 +52,7 @@
   .review-stars {
     margin-right: calc-em(5);
     line-height: calc-em(15);
-    
+
     i {
       @include font-size($font-size-base);
 

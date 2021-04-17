@@ -2,10 +2,10 @@ $supernova-icon-font: "supernova-icon";
 
 @font-face {
 	font-family: $supernova-icon-font;
-	src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?4045388c928e281b4aa2a8a23041cc44#supernova-icon") format("svg"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?4045388c928e281b4aa2a8a23041cc44") format("truetype"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff?4045388c928e281b4aa2a8a23041cc44") format("woff"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?4045388c928e281b4aa2a8a23041cc44") format("woff2");
+	src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?fbffa0b8f643e5eb1492b7dcc8eb59e9#supernova-icon") format("svg"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?fbffa0b8f643e5eb1492b7dcc8eb59e9") format("truetype"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.woff?fbffa0b8f643e5eb1492b7dcc8eb59e9") format("woff"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?fbffa0b8f643e5eb1492b7dcc8eb59e9") format("woff2");
 }
 
 .sni,
@@ -36,20 +36,25 @@ $supernova-icon-map: (
 	"close": "\f108",
 	"delivery": "\f109",
 	"facebook-square": "\f10a",
-	"instagram": "\f10b",
-	"logo": "\f10c",
-	"minus": "\f10d",
-	"moneyback": "\f10e",
-	"palm-tree": "\f10f",
-	"pinterest-square": "\f110",
-	"play": "\f111",
-	"plus-circle": "\f112",
-	"plus": "\f113",
-	"search": "\f114",
-	"tiktok": "\f115",
-	"trash": "\f116",
-	"twitter-square": "\f117",
-	"youtube": "\f118",
+	"fast-delivery": "\f10b",
+	"guarantee": "\f10c",
+	"instagram": "\f10d",
+	"logo": "\f10e",
+	"minus": "\f10f",
+	"moneyback": "\f110",
+	"palm-tree": "\f111",
+	"pinterest-square": "\f112",
+	"play": "\f113",
+	"plus-circle": "\f114",
+	"plus": "\f115",
+	"search": "\f116",
+	"star-box": "\f117",
+	"star": "\f118",
+	"tiktok": "\f119",
+	"trash": "\f11a",
+	"twitter-square": "\f11b",
+	"winner-award": "\f11c",
+	"youtube": "\f11d",
 );
 
 .sni.sni__account:before,
@@ -92,6 +97,14 @@ $supernova-icon-map: (
 .sni-after.sni__facebook-square:after {
 	content: map-get($supernova-icon-map, "facebook-square");
 }
+.sni.sni__fast-delivery:before,
+.sni-after.sni__fast-delivery:after {
+	content: map-get($supernova-icon-map, "fast-delivery");
+}
+.sni.sni__guarantee:before,
+.sni-after.sni__guarantee:after {
+	content: map-get($supernova-icon-map, "guarantee");
+}
 .sni.sni__instagram:before,
 .sni-after.sni__instagram:after {
 	content: map-get($supernova-icon-map, "instagram");
@@ -132,6 +145,14 @@ $supernova-icon-map: (
 .sni-after.sni__search:after {
 	content: map-get($supernova-icon-map, "search");
 }
+.sni.sni__star-box:before,
+.sni-after.sni__star-box:after {
+	content: map-get($supernova-icon-map, "star-box");
+}
+.sni.sni__star:before,
+.sni-after.sni__star:after {
+	content: map-get($supernova-icon-map, "star");
+}
 .sni.sni__tiktok:before,
 .sni-after.sni__tiktok:after {
 	content: map-get($supernova-icon-map, "tiktok");
@@ -143,6 +164,10 @@ $supernova-icon-map: (
 .sni.sni__twitter-square:before,
 .sni-after.sni__twitter-square:after {
 	content: map-get($supernova-icon-map, "twitter-square");
+}
+.sni.sni__winner-award:before,
+.sni-after.sni__winner-award:after {
+	content: map-get($supernova-icon-map, "winner-award");
 }
 .sni.sni__youtube:before,
 .sni-after.sni__youtube:after {

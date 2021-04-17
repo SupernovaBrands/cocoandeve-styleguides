@@ -8,10 +8,10 @@
 		}
 
 		picture {
-			margin: 0px;
+			margin: 0;
 			display: inline-block;
 			position: relative;
-			border: 6px solid transparent;
+			border: calc-em(5) solid transparent;
 			width: 100%;
 
 			img {
