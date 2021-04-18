@@ -281,4 +281,66 @@ $(document).ready(function () {
 			$(this).text('Remove');
 		}
 	});
+
+	// Nav Category Sticky on Scroll
+	const navSticky = $('.nav-category--sticky');
+	var scrollTop = 0;
+	$(window).on('scroll', function() {		
+		scrollTop = $(this).scrollTop();
+		console.log(scrollTop)
+		if (scrollTop > 100) {
+			navSticky.addClass('active');
+		} else {
+			navSticky.removeClass('active');
+		}
+	})
+
+	const navCategory = $('.nav-category');
+	if (navCategory.length > 0) {
+		const linkSearch = navCategory.find('.link-search');
+		if (linkSearch) {
+			linkSearch.on('click', function (e) {
+				e.preventDefault();
+				if ($(this).hasClass('opened')) {
+					$(this).removeClass('opened').addClass('text-primary');
+					navCategory.find('.search-box').addClass('d-none');
+				} else {
+					$(this).addClass('opened').removeClass('text-primary');
+					navCategory.find('.search-box').removeClass('d-none');
+				}
+			});
+			navCategory.find('.search-box__close').on('click', function () {
+				linkSearch.removeClass('opened').addClass('text-primary');
+				$(this).parents('.search-box').addClass('d-none');
+			});
+		}
+	}
+
+	// Article Proggress Bar
+	let proggreeBar = $('.reading-proggress-bar');
+
+	if (proggreeBar.length) {
+		let body = document.body,
+		    html = document.documentElement;
+
+		let height = Math.max(
+		    body.scrollHeight,
+		    body.offsetHeight,
+		    html.clientHeight,
+		    html.scrollHeight,
+		    html.offsetHeight
+		);
+
+
+		const setProgress = () => {
+		    let scrollFromTop = (html.scrollTop || body.scrollTop) + html.clientHeight;
+		    let width = (scrollFromTop / height) * 100 + '%';
+		    console.log(width)
+		    proggreeBar.find('.reading-proggress-bar__proggress').css('width',width)
+		};
+
+		window.addEventListener('scroll', setProgress);
+
+		setProgress();
+	}
 });

@@ -1,22 +1,31 @@
 .how-to {
-    background-color: $primary-light;
+	background-color: $primary-light;
 
-    .carousel--centered {
-        overflow-x: hidden;
+	.carousel--centered {
+    overflow: hidden;
+    position: initial;
+
+    @include media-breakpoint-up(lg) {
+      max-width: 64em;
+      margin: 0 auto;
     }
+  }
 
-    .carousel-control-next {
-        background: linear-gradient(270deg, $primary-light 0%, $primary-light 10%, rgba(255, 255, 255, 0) 99%, rgba(255, 255, 255, 0) 100%);
-    }
+	.carousel-control-prev,
+	.carousel-control-next {
+		color: $primary;
+		font-size: calc-em(20, 16);
+		width: 16%;
 
-    .carousel-control-prev {
-        background: linear-gradient(90deg, $primary-light 0%, $primary-light 10%, rgba(255, 255, 255, 0) 99%, rgba(255, 255, 255, 0) 100%);
-    }
+		@include media-breakpoint-up(lg) {
+			width: 13%;
+		}
+	}
 
-    .carousel-control-prev,
-    .carousel-control-next {
-        color: $primary;
-        font-size: calc-em(20, 16);
-    }
-
+	.carousel-control--background {
+		&:before {
+			width: 2em;
+			height: 2em;
+		}
+	}
 }

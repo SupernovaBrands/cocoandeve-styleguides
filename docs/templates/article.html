@@ -13,37 +13,67 @@
 <body>
 	<div class="mobile-wrapper">
 		<div class="container mt-4">
+			<div class="reading-proggress-bar position-fixed d-lg-none no-gutters__in-container w-100">
+				<div class="reading-proggress-bar__proggress"></div>
+			</div>
+		<div class="text-center nav-category nav-category--pink nav-category--sticky d-lg-none no-gutters__in-container w-100 position-fixed p-2">
+		<ul class="nav justify-content-center align-items-center">
+			<li class="nav-item">
+				<a href="#" class="nav-link active pb-0 pt-0">ALL</a>
+			</li>
+			<li class="nav-item">
+				<a href="#" class="nav-link pb-0 pt-0 text-uppercase">HAIR</a>
+			</li>
+			<li class="nav-item">
+				<a href="#" class="nav-link pb-0 pt-0 text-uppercase">TAN</a>
+			</li>
+			<li class="nav-item">
+				<a href="#" class="nav-link pb-0 pt-0 text-uppercase">BODY</a>
+			</li>
+			<li class="nav-item">
+				<a href="#" class="nav-link pb-0 pt-0 text-uppercase">HOW TO'S</a>
+			</li>
+			<li class="nav-item d-lg-none">
+				<a href="#" class="nav-link pb-0 pt-0 link-search sni sni__search text-primary text-uppercase"></a>
+			</li>
+		</ul>
+		<div class="search-box input-group input-group-sm d-lg-none d-none mt-2">
+			<div class="input-group-prepend">
+				<span class="input-group-text search-box__icon">
+					<i class="sni sni__search"></i>
+				</span>
+			</div>
+			<input type="text" class="form-control" id="exampleSearch" placeholder="Search">
+			<div class="input-group-append">
+				<a class="input-group-text search-box__close align-items-center" href="#" role="button">
+				<i class="sni sni__close"></i>
+				</a>
+			</div>
+			<div class="input-group-append">
+				<button class="search-box-btn btn btn-primary" type="submit">Search</button>
+			</div>
+		</div>
+	</div>
+	
 			<nav aria-label="breadcrumb">
 				<ol class="breadcrumb mb-0">
 					<li class="breadcrumb-item">
-						<a class="text-underline breadcrumb-item__link" href="/cocoandeve-styleguides/docs/templates/blog.html">Blog</a>
+						<a class="text-underline breadcrumb-item__link" href="/cocoandeve-styleguides/docs/templates/blog.html">Home</a>
 					</li>
-					<li class="breadcrumb-item active" aria-current="page">The 5 Rules of Hair Masking</li>
+					<li class="breadcrumb-item">
+						<a class="text-underline breadcrumb-item__link" href="/cocoandeve-styleguides/docs/templates/blog.html">Category</a>
+					</li>
+					<li class="breadcrumb-item active d-block" aria-current="page">The 5 Rules of Hair Masking The 5 Rules of Hair Masking</li>
 				</ol>
 			</nav>
 
 			<div class="blog-post-grid row mt-2 mt-lg-3 mb-4">
 				<div class="blog-post-grid__content col-12 d-lg-block">
-					<div class="text-center mb-1">23 April, 2020</div>
 					<h1 class="text-center">The 5 Rules of Hair Masking</h1>
 					<picture class="d-block mt-2 mb-1 no-gutters__in-container">
 						<source srcset="https://via.placeholder.com/1540x800.jpg/EFADBA" media="(min-width: 992px)" />
 						<img class="w-100" src="https://via.placeholder.com/750x446.jpg/EFADBA">
 					</picture>
-					<ul class="list-inline text-center mb-1 mt-1">
-						<li class="list-inline-item">
-							<a href="#"
-								class="text-decoration-none sni sni__twitter-square text-primary social-icon-primary"></a>
-						</li>
-						<li class="list-inline-item">
-							<a href="#"
-								class="text-decoration-none sni sni__facebook-square text-primary social-icon-primary"></a>
-						</li>
-						<li class="list-inline-item">
-							<a href="#"
-								class="text-decoration-none sni sni__pinterest-square text-primary social-icon-primary"></a>
-						</li>
-					</ul>
 					<div class="article__content">
 						<div class="text-center mb-3 mx-3 mb-lg-4">Super popular in recent years, and a lifesaver for stressed tresses during lockdown(!), hair masking is everyone’s favourite #selfcaresunday ritual.</div>
 						<h3 class="mb-1">1. Do it often, but not too often</h3>
@@ -66,6 +96,19 @@
 						<p class="mb-3">A hair masque is not the same as shampoo or conditioner – it needs a bit more time to penetrate the strands and repair from the inside out. So, for silky soft results, apply your hair masque to towel dried hair and leave on for a minimum of 5 to 10 minutes before rinsing. Leave it longer if you have time on your hands.</p>
 						<p class="mb-3">Got thirsty hair in dire need of some serious TLC? You can also apply our nourishing fig and coconut masque to dry hair and let it soak in for at least 20 mins. Or for butter-soft results, pop on a shower cap, silk scarf or our super-cute, static-free Microfibre Hair Towel Wrap and sleep in your hair masque overnight!</p>
 					</div>
+					
+					<div class="mb-1">23 April, 2020</div>
+					<ul class="list-inline mb-4 mt-1">
+						<li class="list-inline-item">
+							<a href="#" class="text-decoration-none sni sni__twitter-square text-primary social-icon-primary"></a>
+						</li>
+						<li class="list-inline-item">
+							<a href="#" class="text-decoration-none sni sni__facebook-square text-primary social-icon-primary"></a>
+						</li>
+						<li class="list-inline-item">
+							<a href="#" class="text-decoration-none sni sni__pinterest-square text-primary social-icon-primary"></a>
+						</li>
+					</ul>
 				</div>
 
 				<div class="blog-post-grid__sidebar col-12 d-lg-flex mt-2 mt-lg-0 mb-3 mb-lg-0 sticky-bottom__container">
@@ -222,6 +265,7 @@
 	</div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="/cocoandeve-styleguides/dist/js/bootstrap.js"></script>
 	<script src="/cocoandeve-styleguides/dist/js/main.js"></script>
 </body>
 
