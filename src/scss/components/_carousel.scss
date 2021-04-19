@@ -90,30 +90,6 @@
   }
 }
 
-// .carousel--centered {
-//   .carousel-inner {
-//     transform: translateX(12.5%);
-//     overflow: visible;
-
-//     @include media-breakpoint-up(lg) {
-//       transform: translateX(25%);
-//     }
-//   }
-
-//   .carousel-item-prev--out {
-//     transform: translateX(-200%);
-//     display: block;
-//     &:nth-last-child(2) {
-//       opacity: 0;
-//     }
-//   }
-
-//   .carousel-item-next--out {
-//     transform: translateX(200%);
-//     display: block;
-//   }
-// }
-
 %transform-negative {
   position: relative;
   transform: translate3d(-100%, 0, 0);
