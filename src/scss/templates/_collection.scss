@@ -1,40 +1,40 @@
 .collection-header {
-  background-color: white;
+	background-color: white;
 
-  @include media-breakpoint-down(md) {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
+	@include media-breakpoint-down(md) {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
 
-  @include media-breakpoint-up(lg) {
-    margin-right: -40%;
-  }
+	@include media-breakpoint-up(lg) {
+		margin-right: -40%;
+	}
 }
 
 .collection-sidebar {
-  background-color: $gray-100;
-  
-  a {
-    color: $body-color;
+	background-color: $gray-100;
+	
+	a {
+		color: $body-color;
 
-    &.active {
-      color: $primary;
-    }
-  }
+		&.active {
+			color: $primary;
+		}
+	}
 }
 
 .collection-grid {
-  &__select {
-    width: 100%;
-    appearance: none;
-    background-image: url('https://cdn.shopify.com/s/files/1/0286/1327/9779/t/29/assets/select-arrow.png?v=9487355171690857461');
-    background-position: center right calc-em(10);
-    background-repeat: no-repeat;
-    background-size: 1rem;
+	&__select {
+		width: 100%;
+		appearance: none;
+		background-image: url('https://cdn.shopify.com/s/files/1/0286/1327/9779/t/29/assets/select-arrow.png?v=9487355171690857461');
+		background-position: center right calc-em(10);
+		background-repeat: no-repeat;
+		background-size: 1rem;
 
-    @include media-breakpoint-up(lg) {
-      width: auto;
-    }
-  }
+		@include media-breakpoint-up(lg) {
+			width: auto;
+		}
+	}
 }
