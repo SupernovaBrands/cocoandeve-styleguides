@@ -235,7 +235,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_globals__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/globals */ \"./src/js/modules/globals.js\");\n/* harmony import */ var _modules_globals__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_globals__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var _components_cart__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/cart */ \"./src/js/components/cart.jsx\");\n\n\n\n\n\nif ($('#cart-drawer').length > 0) {\n  react_dom__WEBPACK_IMPORTED_MODULE_2__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_components_cart__WEBPACK_IMPORTED_MODULE_3__.default, {}, null), document.querySelector('#cart-drawer'));\n}\n\nvar navCategory = $('.nav-category');\n\nif (navCategory.length > 0) {\n  __webpack_require__.e(/*! import() | nav-category */ \"nav-category\").then(__webpack_require__.t.bind(__webpack_require__, /*! ./modules/nav-category */ \"./src/js/modules/nav-category.js\", 23));\n}\n\n$(document).ready(function () {\n  var screenLG = 992;\n\n  window.showGrid = function () {\n    jQuery('body').append('<style type=\"text/css\">.gridoverlay{position:fixed;top:0;left:50%;transform:translateX(-50%);z-index:9999}.gridoverlay .col{height:100vh}.gridoverlay .col:before{content:\"\";display:block;background-color:rgba(0,123,255,0.3);height:100%}</style><div class=\"container gridoverlay\"><div class=\"row\"><div class=\"col\"></div><div class=\"col\"></div><div class=\"col\"></div><div class=\"col\"></div><div class=\"col d-none d-lg-block\"></div><div class=\"col d-none d-lg-block\"></div><div class=\"col d-none d-lg-block\"></div><div class=\"col d-none d-lg-block\"></div><div class=\"col d-none d-lg-block\"></div><div class=\"col d-none d-lg-block\"></div><div class=\"col d-none d-lg-block\"></div><div class=\"col d-none d-lg-block\"></div></div></div>');\n  };\n\n  if (/[?&]?show-grid=true[&]?/.test(window.location.search)) {\n    window.showGrid();\n  }\n\n  var scrollToElement = function scrollToElement(targetSelector) {\n    $('html, body').animate({\n      scrollTop: $(targetSelector).offset().top - 70\n    }, 600);\n  };\n\n  $('.scroll-to-element').on('click', function (e) {\n    e.preventDefault();\n    scrollToElement($(this).attr('href'));\n  });\n\n  if (window.location.hash === '#how-to' && $('#blog__how-to').length > 0) {\n    scrollToElement('#blog__how-to');\n  } // Search boxes\n\n\n  var searchBox = $('.search-box');\n\n  if (searchBox.length > 0) {\n    searchBox.find('input').on('keyup', function () {\n      var parent = $(this).parents('.search-box');\n\n      if ($(this).val() !== '' && !parent.hasClass('search-box--filled')) {\n        parent.addClass('search-box--filled');\n      } else if ($(this).val() === '') {\n        parent.removeClass('search-box--filled');\n      }\n    });\n    searchBox.find('.search-box__close').on('click', function (e) {\n      e.preventDefault();\n      var parent = $(this).parents('.search-box');\n      var input = parent.find('input');\n      input.val('');\n      parent.removeClass('search-box--filled');\n    });\n  }\n\n  var sidebarCarousel = $('.carousel--sidebar');\n\n  if (sidebarCarousel.length > 0) {\n    if (window.innerWidth < screenLG) {\n      sidebarCarousel.addClass('carousel');\n    }\n\n    $(window).on('resize', function () {\n      if (window.innerWidth >= screenLG) {\n        sidebarCarousel.removeClass('carousel');\n      } else {\n        sidebarCarousel.addClass('carousel');\n      }\n    });\n  } // video modal\n  // Gets the video src from the data-src on each button\n\n\n  var $videoSrc;\n\n  if ($('.video-card').length > 0) {\n    $('.video-card picture').on('click', function () {\n      $videoSrc = $(this).data('src');\n    });\n  }\n\n  var toggleHTMLVideo = function toggleHTMLVideo(videoEl, show, source) {\n    if (show) {\n      videoEl.find('source').attr('src', source);\n      videoEl.get(0).load();\n      videoEl.get(0).play();\n      videoEl.removeClass('d-none');\n    } else {\n      videoEl.find('source').attr('src', '');\n      videoEl.get(0).load();\n      videoEl.get(0).pause();\n      videoEl.addClass('d-none');\n    }\n  };\n\n  var toggleiFrameVideo = function toggleiFrameVideo(iframeEl, show, source) {\n    if (show) {\n      iframeEl.attr('src', source).removeClass('d-none');\n    } else {\n      iframeEl.attr('src', '').addClass('d-none');\n    }\n  };\n\n  $('#videoCardModal').on('shown.bs.modal', function () {\n    // set the video src to autoplay and not to show related video.\n    if ($videoSrc.includes('.mp4')) {\n      toggleiFrameVideo($(this).find('iframe'), false);\n      toggleHTMLVideo($(this).find('video'), true, $videoSrc);\n    } else {\n      toggleHTMLVideo($(this).find('video'), false);\n      toggleiFrameVideo($(this).find('iframe'), true, $videoSrc);\n    }\n  }); // stop playing the youtube video when I close the modal\n\n  $('#videoCardModal').on('hide.bs.modal', function () {\n    toggleHTMLVideo($(this).find('video'), false);\n    toggleiFrameVideo($(this).find('iframe'), false);\n  }); // video carousel\n\n  if ($('.carousel--centered').length > 0) {\n    $('.carousel--centered').each(function () {\n      if ($(this).find('.carousel-item').length > 1) {\n        var loop = $(this).find('.carousel-item').length > 5; // hide prev/next nav when no item prev class on page load\n\n        if ($(this).find('.carousel-item-prev').length === 0) {\n          $(this).find('a[data-slide=\"prev\"]').addClass('d-none');\n        }\n\n        if ($(this).find('.carousel-item-next').length === 0) {\n          $(this).find('a[data-slide=\"next\"]').addClass('d-none');\n        }\n\n        $(this).on('slide.bs.carousel', function (e) {\n          $(this).find('a[data-slide]').removeClass('d-none');\n\n          if (e.direction === 'left') {\n            $(this).find('.carousel-item-prev').addClass('carousel-item-prev').addClass('carousel-item-prev--out');\n\n            if ($(this).find('.carousel-item-next').next().length > 0) {\n              $(this).find('.carousel-item-next').next().addClass('carousel-item-next').removeClass('carousel-item-prev--out carousel-item-next--out');\n            } else if (loop) {\n              $(this).find('.carousel-item').first().addClass('carousel-item-next').removeClass('carousel-item-prev--out carousel-item-next--out');\n              $(this).find('.carousel-item').first().next().addClass('carousel-item-next--out').removeClass('carousel-item-prev--out');\n            }\n          } else {\n            $(this).find('.carousel-item-next').addClass('carousel-item-next').addClass('carousel-item-next--out');\n\n            if ($(this).find('.carousel-item-prev').prev().length > 0) {\n              $(this).find('.carousel-item-prev').prev().addClass('carousel-item-prev').removeClass('carousel-item-prev--out carousel-item-next--out');\n            } else if (loop) {\n              $(this).find('.carousel-item').last().addClass('carousel-item-prev').removeClass('carousel-item-prev--out carousel-item-next--out');\n              $(this).find('.carousel-item').last().prev().addClass('carousel-item-prev--out').removeClass('carousel-item-next--out');\n            }\n          }\n        });\n        var currentIndex;\n        var prevSlide;\n        var nextSlide;\n        var prev2Slide;\n        var next2Slide;\n        var carouselLength;\n        $(this).on('slid.bs.carousel', function () {\n          carouselLength = $(this).find('.carousel-item').length;\n          currentIndex = $(this).find('.carousel-item.active').index();\n\n          if (loop) {\n            prevSlide = $(this).find('.carousel-item').eq(currentIndex > 0 ? currentIndex - 1 : carouselLength - 1);\n            nextSlide = $(this).find('.carousel-item').eq(currentIndex < carouselLength - 1 ? currentIndex + 1 : 0);\n            prev2Slide = $(this).find('.carousel-item').eq(currentIndex - 2 + (currentIndex < 1 ? carouselLength : 0));\n            next2Slide = $(this).find('.carousel-item').eq(currentIndex + 2 - (currentIndex > carouselLength - 2 ? carouselLength : 0));\n            prevSlide.addClass('carousel-item-prev');\n            $(this).find('.carousel-item').not(prevSlide).removeClass('carousel-item-prev');\n            nextSlide.addClass('carousel-item-next');\n            $(this).find('.carousel-item').not(nextSlide).removeClass('carousel-item-next');\n            prev2Slide.addClass('carousel-item-prev--out');\n            $(this).find('.carousel-item').not(prev2Slide).removeClass('carousel-item-prev--out');\n            next2Slide.addClass('carousel-item-next--out');\n            $(this).find('.carousel-item').not(next2Slide).removeClass('carousel-item-next--out');\n          } else {\n            prevSlide = $(this).find('.carousel-item').eq(currentIndex).prev();\n            nextSlide = $(this).find('.carousel-item').eq(currentIndex).next();\n            $(this).find('.carousel-item-prev').removeClass('carousel-item-prev');\n            $(this).find('.carousel-item-next').removeClass('carousel-item-next');\n\n            if (prevSlide.length > 0) {\n              prevSlide.addClass('carousel-item-prev');\n              prevSlide.removeClass('carousel-item-prev--out');\n            } else {\n              $(this).find('a[data-slide=\"prev\"]').addClass('d-none');\n            }\n\n            if (nextSlide.length > 0) {\n              nextSlide.addClass('carousel-item-next');\n              nextSlide.removeClass('carousel-item-next--out');\n            } else {\n              $(this).find('a[data-slide=\"next\"]').addClass('d-none');\n            }\n          }\n        });\n      } else {\n        $(this).find('a[data-slide]').addClass('d-none');\n      }\n    });\n  } //mobile menu toggle\n\n\n  function mobileMenuToggler() {\n    $('.mobile-nav').toggleClass('show');\n    $('body').toggleClass('offcanvas-active');\n  }\n\n  $('.navbar-toggler').on('click', function () {\n    mobileMenuToggler();\n  });\n  $('.mobile-nav').click(function (e) {\n    if (e.target !== e.currentTarget) return;\n    mobileMenuToggler();\n  }); // header navbar detect scroll top or down\n\n  var lastScrollTop,\n      scrollTop = 0;\n  var navbarEl = $('.main-header');\n  var announceBar = $('.announcement-bar');\n  var navbarHeight = navbarEl.height();\n  $(window).on('scroll', function () {\n    navbarEl.addClass('position-fixed');\n    scrollTop = $(this).scrollTop();\n\n    if (scrollTop < lastScrollTop) {\n      navbarEl.removeClass('scrolled-down').addClass('scrolled-up');\n\n      if (scrollTop <= 0) {\n        //remove scrolled up for mobile menu show properly\n        navbarEl.removeClass('position-fixed').removeClass('scrolled-up');\n\n        if (announceBar.length > 0) {\n          announceBar.removeClass('d-none');\n        }\n      }\n    } else {\n      if (scrollTop <= 0) {\n        //safari fix bounce effect\n        navbarEl.removeClass('position-fixed').removeClass('scrolled-up');\n      } else {\n        navbarEl.removeClass('scrolled-up').addClass('scrolled-down');\n\n        if (announceBar.length > 0 && scrollTop > navbarHeight) {\n          announceBar.addClass('d-none');\n        }\n      }\n    }\n\n    lastScrollTop = scrollTop;\n  }); // Cart drawer\n\n  $('.manual-gwp__item .btn').on('click', function () {\n    if ($(this).hasClass('btn-primary')) {\n      $(this).removeClass('btn-primary');\n      $(this).addClass('btn-outline-primary');\n      $(this).text('Add');\n    } else {\n      $(this).addClass('btn-primary');\n      $(this).removeClass('btn-outline-primary');\n      $(this).text('Remove');\n    }\n  }); // Nav Category Sticky on Scroll\n\n  var navSticky = $('.nav-category--sticky');\n  var scrollTop = 0;\n  $(window).on('scroll', function () {\n    scrollTop = $(this).scrollTop();\n    console.log(scrollTop);\n\n    if (scrollTop > 100) {\n      navSticky.addClass('active');\n    } else {\n      navSticky.removeClass('active');\n    }\n  });\n  var navCategory = $('.nav-category');\n\n  if (navCategory.length > 0) {\n    var linkSearch = navCategory.find('.link-search');\n\n    if (linkSearch) {\n      linkSearch.on('click', function (e) {\n        e.preventDefault();\n\n        if ($(this).hasClass('opened')) {\n          $(this).removeClass('opened').addClass('text-primary');\n          navCategory.find('.search-box').addClass('d-none');\n        } else {\n          $(this).addClass('opened').removeClass('text-primary');\n          navCategory.find('.search-box').removeClass('d-none');\n        }\n      });\n      navCategory.find('.search-box__close').on('click', function () {\n        linkSearch.removeClass('opened').addClass('text-primary');\n        $(this).parents('.search-box').addClass('d-none');\n      });\n    }\n  } // Article Proggress Bar\n\n\n  var proggreeBar = $('.reading-proggress-bar');\n\n  if (proggreeBar.length) {\n    var body = document.body,\n        html = document.documentElement;\n    var height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);\n\n    var setProgress = function setProgress() {\n      var scrollFromTop = (html.scrollTop || body.scrollTop) + html.clientHeight;\n      var width = scrollFromTop / height * 100 + '%';\n      console.log(width);\n      proggreeBar.find('.reading-proggress-bar__proggress').css('width', width);\n    };\n\n    window.addEventListener('scroll', setProgress);\n    setProgress();\n  }\n});\n\n//# sourceURL=webpack://cocoandeve-styleguides/./src/js/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_globals__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/globals */ \"./src/js/modules/globals.js\");\n/* harmony import */ var _modules_globals__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_globals__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var _components_cart__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/cart */ \"./src/js/components/cart.jsx\");\n\n\n\n\n\nif ($('#cart-drawer').length > 0) {\n  react_dom__WEBPACK_IMPORTED_MODULE_2__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_components_cart__WEBPACK_IMPORTED_MODULE_3__.default, {}, null), document.querySelector('#cart-drawer'));\n}\n\n$(document).ready(function () {\n  var screenLG = 992;\n\n  window.showGrid = function () {\n    jQuery('body').append('<style type=\"text/css\">.gridoverlay{position:fixed;top:0;left:50%;transform:translateX(-50%);z-index:9999}.gridoverlay .col{height:100vh}.gridoverlay .col:before{content:\"\";display:block;background-color:rgba(0,123,255,0.3);height:100%}</style><div class=\"container gridoverlay\"><div class=\"row\"><div class=\"col\"></div><div class=\"col\"></div><div class=\"col\"></div><div class=\"col\"></div><div class=\"col d-none d-lg-block\"></div><div class=\"col d-none d-lg-block\"></div><div class=\"col d-none d-lg-block\"></div><div class=\"col d-none d-lg-block\"></div><div class=\"col d-none d-lg-block\"></div><div class=\"col d-none d-lg-block\"></div><div class=\"col d-none d-lg-block\"></div><div class=\"col d-none d-lg-block\"></div></div></div>');\n  };\n\n  if (/[?&]?show-grid=true[&]?/.test(window.location.search)) {\n    window.showGrid();\n  }\n\n  var scrollToElement = function scrollToElement(targetSelector) {\n    $('html, body').animate({\n      scrollTop: $(targetSelector).offset().top - 70\n    }, 600);\n  };\n\n  $('.scroll-to-element').on('click', function (e) {\n    e.preventDefault();\n    scrollToElement($(this).attr('href'));\n  });\n\n  if (window.location.hash === '#how-to' && $('#blog__how-to').length > 0) {\n    scrollToElement('#blog__how-to');\n  } // Search boxes\n\n\n  var searchBox = $('.search-box');\n\n  if (searchBox.length > 0) {\n    searchBox.find('input').on('keyup', function () {\n      var parent = $(this).parents('.search-box');\n\n      if ($(this).val() !== '' && !parent.hasClass('search-box--filled')) {\n        parent.addClass('search-box--filled');\n      } else if ($(this).val() === '') {\n        parent.removeClass('search-box--filled');\n      }\n    });\n    searchBox.find('.search-box__close').on('click', function (e) {\n      e.preventDefault();\n      var parent = $(this).parents('.search-box');\n      var input = parent.find('input');\n      input.val('');\n      parent.removeClass('search-box--filled');\n    });\n  }\n\n  var sidebarCarousel = $('.carousel--sidebar');\n\n  if (sidebarCarousel.length > 0) {\n    if (window.innerWidth < screenLG) {\n      sidebarCarousel.addClass('carousel');\n    }\n\n    $(window).on('resize', function () {\n      if (window.innerWidth >= screenLG) {\n        sidebarCarousel.removeClass('carousel');\n      } else {\n        sidebarCarousel.addClass('carousel');\n      }\n    });\n  } // video modal\n  // Gets the video src from the data-src on each button\n\n\n  var $videoSrc;\n\n  if ($('.video-card').length > 0) {\n    $('.video-card picture').on('click', function () {\n      $videoSrc = $(this).data('src');\n    });\n  }\n\n  var toggleHTMLVideo = function toggleHTMLVideo(videoEl, show, source) {\n    if (show) {\n      videoEl.find('source').attr('src', source);\n      videoEl.get(0).load();\n      videoEl.get(0).play();\n      videoEl.removeClass('d-none');\n    } else {\n      videoEl.find('source').attr('src', '');\n      videoEl.get(0).load();\n      videoEl.get(0).pause();\n      videoEl.addClass('d-none');\n    }\n  };\n\n  var toggleiFrameVideo = function toggleiFrameVideo(iframeEl, show, source) {\n    if (show) {\n      iframeEl.attr('src', source).removeClass('d-none');\n    } else {\n      iframeEl.attr('src', '').addClass('d-none');\n    }\n  };\n\n  $('#videoCardModal').on('shown.bs.modal', function () {\n    // set the video src to autoplay and not to show related video.\n    if ($videoSrc.includes('.mp4')) {\n      toggleiFrameVideo($(this).find('iframe'), false);\n      toggleHTMLVideo($(this).find('video'), true, $videoSrc);\n    } else {\n      toggleHTMLVideo($(this).find('video'), false);\n      toggleiFrameVideo($(this).find('iframe'), true, $videoSrc);\n    }\n  }); // stop playing the youtube video when I close the modal\n\n  $('#videoCardModal').on('hide.bs.modal', function () {\n    toggleHTMLVideo($(this).find('video'), false);\n    toggleiFrameVideo($(this).find('iframe'), false);\n  }); // video carousel\n\n  if ($('.carousel--centered').length > 0) {\n    $('.carousel--centered').each(function () {\n      if ($(this).find('.carousel-item').length > 1) {\n        var loop = $(this).find('.carousel-item').length > 5; // hide prev/next nav when no item prev class on page load\n\n        if ($(this).find('.carousel-item-prev').length === 0) {\n          $(this).find('a[data-slide=\"prev\"]').addClass('d-none');\n        }\n\n        if ($(this).find('.carousel-item-next').length === 0) {\n          $(this).find('a[data-slide=\"next\"]').addClass('d-none');\n        }\n\n        $(this).on('slide.bs.carousel', function (e) {\n          $(this).find('a[data-slide]').removeClass('d-none');\n\n          if (e.direction === 'left') {\n            $(this).find('.carousel-item-prev').addClass('carousel-item-prev').addClass('carousel-item-prev--out');\n\n            if ($(this).find('.carousel-item-next').next().length > 0) {\n              $(this).find('.carousel-item-next').next().addClass('carousel-item-next').removeClass('carousel-item-prev--out carousel-item-next--out');\n            } else if (loop) {\n              $(this).find('.carousel-item').first().addClass('carousel-item-next').removeClass('carousel-item-prev--out carousel-item-next--out');\n              $(this).find('.carousel-item').first().next().addClass('carousel-item-next--out').removeClass('carousel-item-prev--out');\n            }\n          } else {\n            $(this).find('.carousel-item-next').addClass('carousel-item-next').addClass('carousel-item-next--out');\n\n            if ($(this).find('.carousel-item-prev').prev().length > 0) {\n              $(this).find('.carousel-item-prev').prev().addClass('carousel-item-prev').removeClass('carousel-item-prev--out carousel-item-next--out');\n            } else if (loop) {\n              $(this).find('.carousel-item').last().addClass('carousel-item-prev').removeClass('carousel-item-prev--out carousel-item-next--out');\n              $(this).find('.carousel-item').last().prev().addClass('carousel-item-prev--out').removeClass('carousel-item-next--out');\n            }\n          }\n        });\n        var currentIndex;\n        var prevSlide;\n        var nextSlide;\n        var prev2Slide;\n        var next2Slide;\n        var carouselLength;\n        $(this).on('slid.bs.carousel', function () {\n          carouselLength = $(this).find('.carousel-item').length;\n          currentIndex = $(this).find('.carousel-item.active').index();\n\n          if (loop) {\n            prevSlide = $(this).find('.carousel-item').eq(currentIndex > 0 ? currentIndex - 1 : carouselLength - 1);\n            nextSlide = $(this).find('.carousel-item').eq(currentIndex < carouselLength - 1 ? currentIndex + 1 : 0);\n            prev2Slide = $(this).find('.carousel-item').eq(currentIndex - 2 + (currentIndex < 1 ? carouselLength : 0));\n            next2Slide = $(this).find('.carousel-item').eq(currentIndex + 2 - (currentIndex > carouselLength - 2 ? carouselLength : 0));\n            prevSlide.addClass('carousel-item-prev');\n            $(this).find('.carousel-item').not(prevSlide).removeClass('carousel-item-prev');\n            nextSlide.addClass('carousel-item-next');\n            $(this).find('.carousel-item').not(nextSlide).removeClass('carousel-item-next');\n            prev2Slide.addClass('carousel-item-prev--out');\n            $(this).find('.carousel-item').not(prev2Slide).removeClass('carousel-item-prev--out');\n            next2Slide.addClass('carousel-item-next--out');\n            $(this).find('.carousel-item').not(next2Slide).removeClass('carousel-item-next--out');\n          } else {\n            prevSlide = $(this).find('.carousel-item').eq(currentIndex).prev();\n            nextSlide = $(this).find('.carousel-item').eq(currentIndex).next();\n            $(this).find('.carousel-item-prev').removeClass('carousel-item-prev');\n            $(this).find('.carousel-item-next').removeClass('carousel-item-next');\n\n            if (prevSlide.length > 0) {\n              prevSlide.addClass('carousel-item-prev');\n              prevSlide.removeClass('carousel-item-prev--out');\n            } else {\n              $(this).find('a[data-slide=\"prev\"]').addClass('d-none');\n            }\n\n            if (nextSlide.length > 0) {\n              nextSlide.addClass('carousel-item-next');\n              nextSlide.removeClass('carousel-item-next--out');\n            } else {\n              $(this).find('a[data-slide=\"next\"]').addClass('d-none');\n            }\n          }\n        });\n      } else {\n        $(this).find('a[data-slide]').addClass('d-none');\n      }\n    });\n  } //mobile menu toggle\n\n\n  function mobileMenuToggler() {\n    $('.mobile-nav').toggleClass('show');\n    $('body').toggleClass('offcanvas-active');\n  }\n\n  $('.navbar-toggler').on('click', function () {\n    mobileMenuToggler();\n  });\n  $('.mobile-nav').click(function (e) {\n    if (e.target !== e.currentTarget) return;\n    mobileMenuToggler();\n  }); // header navbar detect scroll top or down\n\n  var lastScrollTop,\n      scrollTop = 0;\n  var navbarEl = $('.main-header');\n  var announceBar = $('.announcement-bar');\n  var navbarHeight = navbarEl.height();\n  $(window).on('scroll', function () {\n    navbarEl.addClass('position-fixed');\n    scrollTop = $(this).scrollTop();\n\n    if (scrollTop < lastScrollTop) {\n      navbarEl.removeClass('scrolled-down').addClass('scrolled-up');\n\n      if (scrollTop <= 0) {\n        //remove scrolled up for mobile menu show properly\n        navbarEl.removeClass('position-fixed').removeClass('scrolled-up');\n\n        if (announceBar.length > 0) {\n          announceBar.removeClass('d-none');\n        }\n      }\n    } else {\n      if (scrollTop <= 0) {\n        //safari fix bounce effect\n        navbarEl.removeClass('position-fixed').removeClass('scrolled-up');\n      } else {\n        navbarEl.removeClass('scrolled-up').addClass('scrolled-down');\n\n        if (announceBar.length > 0 && scrollTop > navbarHeight) {\n          announceBar.addClass('d-none');\n        }\n      }\n    }\n\n    lastScrollTop = scrollTop;\n  }); // Cart drawer\n\n  $('.manual-gwp__item .btn').on('click', function () {\n    if ($(this).hasClass('btn-primary')) {\n      $(this).removeClass('btn-primary');\n      $(this).addClass('btn-outline-primary');\n      $(this).text('Add');\n    } else {\n      $(this).addClass('btn-primary');\n      $(this).removeClass('btn-outline-primary');\n      $(this).text('Remove');\n    }\n  }); // Nav Category Sticky on Scroll\n\n  var navSticky = $('.nav-blog--sticky');\n  var scrollTop = 0;\n  $(window).on('scroll', function () {\n    scrollTop = $(this).scrollTop();\n    console.log(scrollTop);\n\n    if (scrollTop > 100) {\n      navSticky.addClass('active');\n    } else {\n      navSticky.removeClass('active');\n    }\n  });\n  var navCategory = $('.nav-blog');\n\n  if (navCategory.length > 0) {\n    var linkSearch = navCategory.find('.link-search');\n\n    if (linkSearch) {\n      linkSearch.on('click', function (e) {\n        e.preventDefault();\n\n        if ($(this).hasClass('opened')) {\n          $(this).removeClass('opened').addClass('text-primary');\n          navCategory.find('.search-box').addClass('d-none');\n        } else {\n          $(this).addClass('opened').removeClass('text-primary');\n          navCategory.find('.search-box').removeClass('d-none');\n        }\n      });\n      navCategory.find('.search-box__close').on('click', function () {\n        linkSearch.removeClass('opened').addClass('text-primary');\n        $(this).parents('.search-box').addClass('d-none');\n      });\n    }\n  } // Article Proggress Bar\n\n\n  var proggreeBar = $('.reading-proggress-bar');\n\n  if (proggreeBar.length) {\n    var body = document.body,\n        html = document.documentElement;\n    var height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);\n\n    var setProgress = function setProgress() {\n      var scrollFromTop = (html.scrollTop || body.scrollTop) + html.clientHeight;\n      var width = scrollFromTop / height * 100 + '%';\n      console.log(width);\n      proggreeBar.find('.reading-proggress-bar__proggress').css('width', width);\n    };\n\n    window.addEventListener('scroll', setProgress);\n    setProgress();\n  }\n});\n\n//# sourceURL=webpack://cocoandeve-styleguides/./src/js/main.js?");
 
 /***/ }),
 
@@ -493,9 +493,6 @@ eval("module.exports = JSON.parse('[{\"id\":4625694621731,\"title\":\"2-way Scal
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = __webpack_modules__;
-/******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
@@ -506,36 +503,6 @@ eval("module.exports = JSON.parse('[{\"id\":4625694621731,\"title\":\"2-way Scal
 /******/ 				() => (module);
 /******/ 			__webpack_require__.d(getter, { a: getter });
 /******/ 			return getter;
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/create fake namespace object */
-/******/ 	(() => {
-/******/ 		var getProto = Object.getPrototypeOf ? (obj) => (Object.getPrototypeOf(obj)) : (obj) => (obj.__proto__);
-/******/ 		var leafPrototypes;
-/******/ 		// create a fake namespace object
-/******/ 		// mode & 1: value is a module id, require it
-/******/ 		// mode & 2: merge all properties of value into the ns
-/******/ 		// mode & 4: return value when already ns object
-/******/ 		// mode & 16: return value when it's Promise-like
-/******/ 		// mode & 8|1: behave like require
-/******/ 		__webpack_require__.t = function(value, mode) {
-/******/ 			if(mode & 1) value = this(value);
-/******/ 			if(mode & 8) return value;
-/******/ 			if(typeof value === 'object' && value) {
-/******/ 				if((mode & 4) && value.__esModule) return value;
-/******/ 				if((mode & 16) && typeof value.then === 'function') return value;
-/******/ 			}
-/******/ 			var ns = Object.create(null);
-/******/ 			__webpack_require__.r(ns);
-/******/ 			var def = {};
-/******/ 			leafPrototypes = leafPrototypes || [null, getProto({}), getProto([]), getProto(getProto)];
-/******/ 			for(var current = mode & 2 && value; typeof current == 'object' && !~leafPrototypes.indexOf(current); current = getProto(current)) {
-/******/ 				Object.getOwnPropertyNames(current).forEach((key) => (def[key] = () => (value[key])));
-/******/ 			}
-/******/ 			def['default'] = () => (value);
-/******/ 			__webpack_require__.d(ns, def);
-/******/ 			return ns;
 /******/ 		};
 /******/ 	})();
 /******/ 	
@@ -551,89 +518,9 @@ eval("module.exports = JSON.parse('[{\"id\":4625694621731,\"title\":\"2-way Scal
 /******/ 		};
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/ensure chunk */
-/******/ 	(() => {
-/******/ 		__webpack_require__.f = {};
-/******/ 		// This file contains only the entry chunk.
-/******/ 		// The chunk loading function for additional chunks
-/******/ 		__webpack_require__.e = (chunkId) => {
-/******/ 			return Promise.all(Object.keys(__webpack_require__.f).reduce((promises, key) => {
-/******/ 				__webpack_require__.f[key](chunkId, promises);
-/******/ 				return promises;
-/******/ 			}, []));
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/get javascript chunk filename */
-/******/ 	(() => {
-/******/ 		// This function allow to reference async chunks
-/******/ 		__webpack_require__.u = (chunkId) => {
-/******/ 			// return url for filenames based on template
-/******/ 			return "chunk." + chunkId + ".js?h=" + "44deaed68e8472f5d45f" + "";
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/global */
-/******/ 	(() => {
-/******/ 		__webpack_require__.g = (function() {
-/******/ 			if (typeof globalThis === 'object') return globalThis;
-/******/ 			try {
-/******/ 				return this || new Function('return this')();
-/******/ 			} catch (e) {
-/******/ 				if (typeof window === 'object') return window;
-/******/ 			}
-/******/ 		})();
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/load script */
-/******/ 	(() => {
-/******/ 		var inProgress = {};
-/******/ 		var dataWebpackPrefix = "cocoandeve-styleguides:";
-/******/ 		// loadScript function to load a script via script tag
-/******/ 		__webpack_require__.l = (url, done, key, chunkId) => {
-/******/ 			if(inProgress[url]) { inProgress[url].push(done); return; }
-/******/ 			var script, needAttach;
-/******/ 			if(key !== undefined) {
-/******/ 				var scripts = document.getElementsByTagName("script");
-/******/ 				for(var i = 0; i < scripts.length; i++) {
-/******/ 					var s = scripts[i];
-/******/ 					if(s.getAttribute("src") == url || s.getAttribute("data-webpack") == dataWebpackPrefix + key) { script = s; break; }
-/******/ 				}
-/******/ 			}
-/******/ 			if(!script) {
-/******/ 				needAttach = true;
-/******/ 				script = document.createElement('script');
-/******/ 		
-/******/ 				script.charset = 'utf-8';
-/******/ 				script.timeout = 120;
-/******/ 				if (__webpack_require__.nc) {
-/******/ 					script.setAttribute("nonce", __webpack_require__.nc);
-/******/ 				}
-/******/ 				script.setAttribute("data-webpack", dataWebpackPrefix + key);
-/******/ 				script.src = url;
-/******/ 			}
-/******/ 			inProgress[url] = [done];
-/******/ 			var onScriptComplete = (prev, event) => {
-/******/ 				// avoid mem leaks in IE.
-/******/ 				script.onerror = script.onload = null;
-/******/ 				clearTimeout(timeout);
-/******/ 				var doneFns = inProgress[url];
-/******/ 				delete inProgress[url];
-/******/ 				script.parentNode && script.parentNode.removeChild(script);
-/******/ 				doneFns && doneFns.forEach((fn) => (fn(event)));
-/******/ 				if(prev) return prev(event);
-/******/ 			}
-/******/ 			;
-/******/ 			var timeout = setTimeout(onScriptComplete.bind(null, undefined, { type: 'timeout', target: script }), 120000);
-/******/ 			script.onerror = onScriptComplete.bind(null, script.onerror);
-/******/ 			script.onload = onScriptComplete.bind(null, script.onload);
-/******/ 			needAttach && document.head.appendChild(script);
-/******/ 		};
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
@@ -645,114 +532,6 @@ eval("module.exports = JSON.parse('[{\"id\":4625694621731,\"title\":\"2-way Scal
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/publicPath */
-/******/ 	(() => {
-/******/ 		var scriptUrl;
-/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
-/******/ 		var document = __webpack_require__.g.document;
-/******/ 		if (!scriptUrl && document) {
-/******/ 			if (document.currentScript)
-/******/ 				scriptUrl = document.currentScript.src
-/******/ 			if (!scriptUrl) {
-/******/ 				var scripts = document.getElementsByTagName("script");
-/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
-/******/ 			}
-/******/ 		}
-/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
-/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
-/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
-/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
-/******/ 		__webpack_require__.p = scriptUrl;
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/jsonp chunk loading */
-/******/ 	(() => {
-/******/ 		// no baseURI
-/******/ 		
-/******/ 		// object to store loaded and loading chunks
-/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
-/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
-/******/ 		var installedChunks = {
-/******/ 			"main": 0
-/******/ 		};
-/******/ 		
-/******/ 		__webpack_require__.f.j = (chunkId, promises) => {
-/******/ 				// JSONP chunk loading for javascript
-/******/ 				var installedChunkData = __webpack_require__.o(installedChunks, chunkId) ? installedChunks[chunkId] : undefined;
-/******/ 				if(installedChunkData !== 0) { // 0 means "already installed".
-/******/ 		
-/******/ 					// a Promise means "currently loading".
-/******/ 					if(installedChunkData) {
-/******/ 						promises.push(installedChunkData[2]);
-/******/ 					} else {
-/******/ 						if(true) { // all chunks have JS
-/******/ 							// setup Promise in chunk cache
-/******/ 							var promise = new Promise((resolve, reject) => (installedChunkData = installedChunks[chunkId] = [resolve, reject]));
-/******/ 							promises.push(installedChunkData[2] = promise);
-/******/ 		
-/******/ 							// start chunk loading
-/******/ 							var url = __webpack_require__.p + __webpack_require__.u(chunkId);
-/******/ 							// create error before stack unwound to get useful stacktrace later
-/******/ 							var error = new Error();
-/******/ 							var loadingEnded = (event) => {
-/******/ 								if(__webpack_require__.o(installedChunks, chunkId)) {
-/******/ 									installedChunkData = installedChunks[chunkId];
-/******/ 									if(installedChunkData !== 0) installedChunks[chunkId] = undefined;
-/******/ 									if(installedChunkData) {
-/******/ 										var errorType = event && (event.type === 'load' ? 'missing' : event.type);
-/******/ 										var realSrc = event && event.target && event.target.src;
-/******/ 										error.message = 'Loading chunk ' + chunkId + ' failed.\n(' + errorType + ': ' + realSrc + ')';
-/******/ 										error.name = 'ChunkLoadError';
-/******/ 										error.type = errorType;
-/******/ 										error.request = realSrc;
-/******/ 										installedChunkData[1](error);
-/******/ 									}
-/******/ 								}
-/******/ 							};
-/******/ 							__webpack_require__.l(url, loadingEnded, "chunk-" + chunkId, chunkId);
-/******/ 						} else installedChunks[chunkId] = 0;
-/******/ 					}
-/******/ 				}
-/******/ 		};
-/******/ 		
-/******/ 		// no prefetching
-/******/ 		
-/******/ 		// no preloaded
-/******/ 		
-/******/ 		// no HMR
-/******/ 		
-/******/ 		// no HMR manifest
-/******/ 		
-/******/ 		// no on chunks loaded
-/******/ 		
-/******/ 		// install a JSONP callback for chunk loading
-/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
-/******/ 			var [chunkIds, moreModules, runtime] = data;
-/******/ 			// add "moreModules" to the modules object,
-/******/ 			// then flag all "chunkIds" as loaded and fire callback
-/******/ 			var moduleId, chunkId, i = 0;
-/******/ 			for(moduleId in moreModules) {
-/******/ 				if(__webpack_require__.o(moreModules, moduleId)) {
-/******/ 					__webpack_require__.m[moduleId] = moreModules[moduleId];
-/******/ 				}
-/******/ 			}
-/******/ 			if(runtime) runtime(__webpack_require__);
-/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
-/******/ 			for(;i < chunkIds.length; i++) {
-/******/ 				chunkId = chunkIds[i];
-/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
-/******/ 					installedChunks[chunkId][0]();
-/******/ 				}
-/******/ 				installedChunks[chunkIds[i]] = 0;
-/******/ 			}
-/******/ 		
-/******/ 		}
-/******/ 		
-/******/ 		var chunkLoadingGlobal = self["webpackChunkcocoandeve_styleguides"] = self["webpackChunkcocoandeve_styleguides"] || [];
-/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
-/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	})();
 /******/ 	
 /************************************************************************/

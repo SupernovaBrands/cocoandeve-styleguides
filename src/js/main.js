@@ -11,11 +11,6 @@ if ($('#cart-drawer').length > 0) {
 	);
 }
 
-const navCategory = $('.nav-category');
-if (navCategory.length > 0) {
-	import(/* webpackChunkName: 'nav-category' */ '~mod/nav-category');
-}
-
 $(document).ready(function () {
 	const screenLG = 992;
 
@@ -283,7 +278,7 @@ $(document).ready(function () {
 	});
 
 	// Nav Category Sticky on Scroll
-	const navSticky = $('.nav-category--sticky');
+	const navSticky = $('.nav-blog--sticky');
 	var scrollTop = 0;
 	$(window).on('scroll', function() {		
 		scrollTop = $(this).scrollTop();
@@ -295,7 +290,7 @@ $(document).ready(function () {
 		}
 	})
 
-	const navCategory = $('.nav-category');
+	const navCategory = $('.nav-blog');
 	if (navCategory.length > 0) {
 		const linkSearch = navCategory.find('.link-search');
 		if (linkSearch) {
