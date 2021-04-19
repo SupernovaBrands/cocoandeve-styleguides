@@ -35,7 +35,7 @@ $(document).ready(function () {
   			itemsPerSlide = 2;
   		}
 
-      if ($(this).hasClass('carousel--centered')) {
+      if ($(this).find('.carousel--centered').length > 0) {
         // add 1 element for negative offset of carousel inner
         idx += 1;
       }
@@ -52,7 +52,7 @@ $(document).ready(function () {
       }
 
       // special case for carousel centered we would need plus 1, as we have negative offset x on carousle-inner
-      if ($(this).hasClass('carousel--centered')) {
+      if ($(this).find('.carousel--centered').length > 0) {
         if (e.direction == 'right') {
           $(this).find(`.carousel-item:nth-child(${$(this).find('.carousel-item.active').index() + 1 + itemsPerSlide})`).addClass('carousel-item--last');
         }
