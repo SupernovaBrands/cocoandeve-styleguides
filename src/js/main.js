@@ -19,8 +19,11 @@ if (navCategory.length > 0) {
 $(document).ready(function () {
 	const screenLG = 992;
 
-
+  // carousel components with multiple items
   if ($('.carousel--loop').length > 0) {
+
+    // moving element carousel item depending of items per slide
+    // triggered by bootstrap carousel slide event (when transition started)
   	$('.carousel--loop').on('slide.bs.carousel', function (e) {
   		var $e = $(e.relatedTarget);
   		var idx = $e.index();
@@ -48,6 +51,7 @@ $(document).ready(function () {
         }
       }
 
+      // special case for carousel centered we would need plus 1, as we have negative offset x on carousle-inner
       if ($(this).hasClass('carousel--centered')) {
         if (e.direction == 'right') {
           $(this).find(`.carousel-item:nth-child(${$(this).find('.carousel-item.active').index() + 1 + itemsPerSlide})`).addClass('carousel-item--last');
