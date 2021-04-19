@@ -379,9 +379,21 @@
   border-radius: 0 9.375em 9.375em 0;
 }
 
+@media (min-width: 992px) {
+  .carousel-control--loop.carousel-control-prev.floating-out-left {
+    left: -2%;
+  }
+}
+
 .carousel-control--loop.carousel-control-next:before {
   right: 0;
   border-radius: 9.375em 0 0 9.375em;
+}
+
+@media (min-width: 992px) {
+  .carousel-control--loop.carousel-control-next.floating-out-right {
+    right: -2%;
+  }
 }
 
 .carousel-control--loop.carousel-control-prev, .carousel-control--loop.carousel-control-next {
@@ -413,18 +425,6 @@
 .carousel-control--loop.carousel-control-prev span, .carousel-control--loop.carousel-control-next span {
   font-size: 1.625em;
   color: black;
-}
-
-@media (min-width: 992px) {
-  .carousel-loop-centered .carousel-control.carousel-control-prev {
-    left: -2%;
-  }
-}
-
-@media (min-width: 992px) {
-  .carousel-loop-centered .carousel-control.carousel-control-next {
-    right: -2%;
-  }
 }
 
 .nav-link {

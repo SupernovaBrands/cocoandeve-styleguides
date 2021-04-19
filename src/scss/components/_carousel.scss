@@ -186,12 +186,24 @@
         left: 0;
         border-radius: 0 calc-em(150) calc-em(150) 0;
       }
+
+      &.floating-out-left {
+        @include media-breakpoint-up(lg) {
+          left: -2%;
+        }
+      }
     }
 
     &.carousel-control-next {
       &:before {
         right: 0;
         border-radius: calc-em(150) 0 0 calc-em(150);
+      }
+
+      &.floating-out-right {
+        @include media-breakpoint-up(lg) {
+          right: -2%;
+        }
       }
     }
 
@@ -218,22 +230,6 @@
       span {
         font-size: calc-em(26);
         color: black;
-      }
-    }
-  }
-}
-
-.carousel-loop-centered {
-  .carousel-control {
-    &.carousel-control-prev {
-      @include media-breakpoint-up(lg) {
-        left: -2%;
-      }
-    }
-
-    &.carousel-control-next {
-      @include media-breakpoint-up(lg) {
-        right: -2%;
       }
     }
   }
