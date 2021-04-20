@@ -38,6 +38,11 @@ $(document).ready(function () {
       if ($(this).find('.carousel--centered').length > 0) {
         // add 1 element for negative offset of carousel inner
         idx += 1;
+
+        // special case for carousel centered we would need plus 1, as we have negative offset x on carousle-inner
+        if (e.direction == 'right') {
+          $(this).find(`.carousel-item:nth-child(${$(this).find('.carousel-item.active').index() + 1 + itemsPerSlide})`).addClass('carousel-item--last');
+        }
       }
 
       if (idx >= totalItems-(itemsPerSlide-1)) {
@@ -48,13 +53,6 @@ $(document).ready(function () {
           } else {
             $(this).find('.carousel-item').eq(0).appendTo($(this).find('.carousel-inner'));
           }
-        }
-      }
-
-      // special case for carousel centered we would need plus 1, as we have negative offset x on carousle-inner
-      if ($(this).find('.carousel--centered').length > 0) {
-        if (e.direction == 'right') {
-          $(this).find(`.carousel-item:nth-child(${$(this).find('.carousel-item.active').index() + 1 + itemsPerSlide})`).addClass('carousel-item--last');
         }
       }
     });
