@@ -182,10 +182,8 @@ $tooltip-opacity: 1;
 // To be above zendesk help
 $zindex-cartdrawer: 9999991;
 
-// stockist
-$custom-select-border-radius: calc-em(6, 20);
-$custom-select-border-color: #000;
-$custom-select-focus-border-color: #000;
-$custom-select-padding-y: calc-em(12, 20);
-$custom-select-padding-x: calc-em(12, 20);
-$custom-select-height: calc-em(50, 20);
+// Select
+$custom-select-indicator: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22.6 22.6'><path d='M1.9 5.4l9.4 9.4 9.4-9.4 1.9 1.9-11.3 11.3L0 7.3l1.9-1.9z'/></svg>");
+$custom-select-bg-size: calc-em(16) calc-em(9);
+$custom-select-disabled-bg: $gray-100;
+$custom-select-disabled-color: $gray-400;
