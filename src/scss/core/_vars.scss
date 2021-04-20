@@ -181,3 +181,9 @@ $tooltip-opacity: 1;
 // Cart Drawer
 // To be above zendesk help
 $zindex-cartdrawer: 9999991;
+
+// Select
+$custom-select-indicator: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22.6 22.6'><path d='M1.9 5.4l9.4 9.4 9.4-9.4 1.9 1.9-11.3 11.3L0 7.3l1.9-1.9z'/></svg>");
+$custom-select-bg-size: calc-em(16) calc-em(9);
+$custom-select-disabled-bg: $gray-100;
+$custom-select-disabled-color: $gray-400;

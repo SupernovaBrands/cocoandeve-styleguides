@@ -2156,21 +2156,4 @@ footer hr {
   color: #F3436C;
 }
 
-.collection-grid__select {
-  width: 100%;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background-image: url("https://cdn.shopify.com/s/files/1/0286/1327/9779/t/29/assets/select-arrow.png?v=9487355171690857461");
-  background-position: center right 0.625em;
-  background-repeat: no-repeat;
-  background-size: 1rem;
-}
-
-@media (min-width: 992px) {
-  .collection-grid__select {
-    width: auto;
-  }
-}
-
 /*# sourceMappingURL=main.css.map */

@@ -23,18 +23,3 @@
 		}
 	}
 }
-
-.collection-grid {
-	&__select {
-		width: 100%;
-		appearance: none;
-		background-image: url('https://cdn.shopify.com/s/files/1/0286/1327/9779/t/29/assets/select-arrow.png?v=9487355171690857461');
-		background-position: center right calc-em(10);
-		background-repeat: no-repeat;
-		background-size: 1rem;
-
-		@include media-breakpoint-up(lg) {
-			width: auto;
-		}
-	}
-}
