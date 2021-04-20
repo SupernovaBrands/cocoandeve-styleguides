@@ -16,52 +16,12 @@ if (navCategory.length > 0) {
 	import(/* webpackChunkName: 'nav-category' */ '~mod/nav-category');
 }
 
+const carouselLoop = $(".carousel--loop");
+if (carouselLoop.length > 0) {
+  import(/* webpackChunkName: 'carousel-loop' */ '~mod/carousel-loop');
+}
+
 $(document).ready(function () {
-	const screenLG = 992;
-
-  // carousel components with multiple items
-  if ($('.carousel--loop').length > 0) {
-
-    // moving element carousel item depending of items per slide
-    // triggered by bootstrap carousel slide event (when transition started)
-  	$('.carousel--loop').on('slide.bs.carousel', function (e) {
-  		var $e = $(e.relatedTarget);
-  		var idx = $e.index();
-  		var itemsPerSlide = $(this).data('slide-number') ? $(this).data('slide-number') : 3;
-  		var totalItems = $(this).find('.carousel-item').length;
-
-  		if (screenLG > window.innerWidth) {
-  			// set 1 for mobile
-  			itemsPerSlide = 2;
-  		}
-
-      if ($(this).find('.carousel--centered').length > 0) {
-        // add 1 element for negative offset of carousel inner
-        idx += 1;
-
-        // special case for carousel centered we would need plus 1, as we have negative offset x on carousle-inner
-        if (e.direction == 'right') {
-          $(this).find(`.carousel-item:nth-child(${$(this).find('.carousel-item.active').index() + 1 + itemsPerSlide})`).addClass('carousel-item--last');
-        }
-      }
-
-      if (idx >= totalItems-(itemsPerSlide-1)) {
-        var it = itemsPerSlide - (totalItems - idx);
-        for (var i=0; i<it; i++) {
-          if (e.direction=="left") {
-            $(this).find('.carousel-item').eq(i).appendTo($(this).find('.carousel-inner'));
-          } else {
-            $(this).find('.carousel-item').eq(0).appendTo($(this).find('.carousel-inner'));
-          }
-        }
-      }
-    });
-
-    $(".carousel--loop").on('slid.bs.carousel', function(e) {
-      $(this).find(".carousel-item--last").removeClass('carousel-item--last');
-    });
-  }
-
   window.showGrid = function () {
     jQuery('body').append('<style type="text/css">.gridoverlay{position:fixed;top:0;left:50%;transform:translateX(-50%);z-index:9999}.gridoverlay .col{height:100vh}.gridoverlay .col:before{content:"";display:block;background-color:rgba(0,123,255,0.3);height:100%}</style><div class="container gridoverlay"><div class="row"><div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div></div></div>');
   };

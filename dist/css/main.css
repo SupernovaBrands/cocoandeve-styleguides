@@ -219,6 +219,19 @@
   font-size: 1.875em;
 }
 
+.carousel--loop .active.carousel-item-left + .carousel-item-next.carousel-item-left, .carousel--loop .carousel-item-next.carousel-item-left + .carousel-item, .carousel--loop .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item, .carousel--loop .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item, .carousel--loop .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+  position: relative;
+  transform: translate3d(-100%, 0, 0);
+  visibility: visible;
+}
+
+.carousel--loop .active.carousel-item-right + .carousel-item-prev.carousel-item-right, .carousel--loop .carousel-item-prev.carousel-item-right + .carousel-item, .carousel--loop .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item, .carousel--loop .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item, .carousel--loop .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+  position: relative;
+  transform: translate3d(100%, 0, 0);
+  visibility: visible;
+  display: block;
+}
+
 .carousel--fixed-height {
   overflow: hidden;
   height: 11.875em;
@@ -246,6 +259,58 @@
   .carousel--sidebar .carousel-item {
     display: block;
     float: none;
+  }
+}
+
+.carousel--loop .carousel-item {
+  margin-right: 0;
+}
+
+.carousel--loop .carousel-item-next,
+.carousel--loop .carousel-item-prev {
+  position: relative;
+  transform: translate3d(0, 0, 0);
+}
+
+.carousel--loop .carousel-item-prev:not(.carousel-item-right) {
+  transform: translateX(-100%);
+}
+
+.carousel--loop .active, .carousel--loop .active + .carousel-item, .carousel--loop .active + .carousel-item + .carousel-item, .carousel--loop .active + .carousel-item + .carousel-item + .carousel-item, .carousel--loop .active + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+  display: block;
+}
+
+.carousel--loop .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left), .carousel--loop .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item:not(.carousel-item--last), .carousel--loop .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item:not(.carousel-item--last) + .carousel-item:not(.carousel-item--last), .carousel--loop .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item:not(.carousel-item--last) + .carousel-item:not(.carousel-item--last) + .carousel-item:not(.carousel-item--last), .carousel--loop .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item:not(.carousel-item--last) + .carousel-item:not(.carousel-item--last) + .carousel-item:not(.carousel-item--last) + .carousel-item:not(.carousel-item--last) {
+  transition: none;
+}
+
+.carousel--loop .carousel-item-prev.carousel-item-right {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: block;
+  visibility: visible;
+}
+
+.carousel--centered {
+  overflow: hidden;
+}
+
+.carousel--centered .carousel-inner {
+  overflow: visible;
+  transform: translateX(-62.5%);
+}
+
+@media (min-width: 768px) {
+  .carousel--centered .carousel-inner {
+    transform: translateX(-12.5%);
+  }
+  .carousel--centered .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+    display: block;
+  }
+  .carousel--centered .carousel-inner .carousel-item--last {
+    transform: translate3d(100%, 0, 0);
   }
 }
 
@@ -343,71 +408,6 @@
   .carousel-control--loop.carousel-control-next.floating-out-right {
     right: -2%;
   }
-}
-
-.carousel--centered {
-  overflow: hidden;
-}
-
-.carousel--centered .carousel-inner {
-  overflow: visible;
-  transform: translateX(-62.5%);
-}
-
-@media (min-width: 768px) {
-  .carousel--centered .carousel-inner {
-    transform: translateX(-12.5%);
-  }
-  .carousel--centered .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
-    display: block;
-  }
-  .carousel--centered .carousel-inner .carousel-item--last {
-    transform: translate3d(100%, 0, 0);
-  }
-}
-
-.carousel--loop .active.carousel-item-left + .carousel-item-next.carousel-item-left, .carousel--loop .carousel-item-next.carousel-item-left + .carousel-item, .carousel--loop .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item, .carousel--loop .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item, .carousel--loop .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
-  position: relative;
-  transform: translate3d(-100%, 0, 0);
-  visibility: visible;
-}
-
-.carousel--loop .active.carousel-item-right + .carousel-item-prev.carousel-item-right, .carousel--loop .carousel-item-prev.carousel-item-right + .carousel-item, .carousel--loop .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item, .carousel--loop .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item, .carousel--loop .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
-  position: relative;
-  transform: translate3d(100%, 0, 0);
-  visibility: visible;
-  display: block;
-}
-
-.carousel--loop .carousel-item {
-  margin-right: 0;
-}
-
-.carousel--loop .carousel-item-next,
-.carousel--loop .carousel-item-prev {
-  position: relative;
-  transform: translate3d(0, 0, 0);
-}
-
-.carousel--loop .carousel-item-prev:not(.carousel-item-right) {
-  transform: translateX(-100%);
-}
-
-.carousel--loop .active, .carousel--loop .active + .carousel-item, .carousel--loop .active + .carousel-item + .carousel-item, .carousel--loop .active + .carousel-item + .carousel-item + .carousel-item, .carousel--loop .active + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
-  display: block;
-}
-
-.carousel--loop .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left), .carousel--loop .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item:not(.carousel-item--last), .carousel--loop .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item:not(.carousel-item--last) + .carousel-item:not(.carousel-item--last), .carousel--loop .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item:not(.carousel-item--last) + .carousel-item:not(.carousel-item--last) + .carousel-item:not(.carousel-item--last), .carousel--loop .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item:not(.carousel-item--last) + .carousel-item:not(.carousel-item--last) + .carousel-item:not(.carousel-item--last) + .carousel-item:not(.carousel-item--last) {
-  transition: none;
-}
-
-.carousel--loop .carousel-item-prev.carousel-item-right {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  display: block;
-  visibility: visible;
 }
 
 .nav-link {
