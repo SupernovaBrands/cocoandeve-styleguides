@@ -324,7 +324,7 @@
 
 @media (min-width: 992px) {
   .carousel-control--loop.carousel-control-prev.floating-out-left {
-    left: -3%;
+    left: -2%;
   }
 }
 
@@ -341,7 +341,7 @@
 
 @media (min-width: 992px) {
   .carousel-control--loop.carousel-control-next.floating-out-right {
-    right: -3%;
+    right: -2%;
   }
 }
 

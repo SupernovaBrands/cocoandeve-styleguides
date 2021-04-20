@@ -109,7 +109,7 @@
 
       &.floating-out-left {
         @include media-breakpoint-up(lg) {
-          left: -3%;
+          left: -2%;
         }
       }
     }
@@ -127,7 +127,7 @@
       &.floating-out-right {
 
         @include media-breakpoint-up(lg) {
-          right: -3%;
+          right: -2%;
         }
       }
     }
