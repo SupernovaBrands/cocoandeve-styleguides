@@ -54,10 +54,18 @@ $primary-light: #F5DADF;
 $primary-dark: #B22D4B;
 $secondary: #00635B;
 $secondary-light: #E0F0E9;
+$sh-purple: #993366;
+$sh-purple-light: #FFCCFF;
+$bali-bod-blue: #213E7B;
+$bali-bod-blue-light: #bec5d8;
+$sh-orange: #FF9900;
+$sh-orange-light: #FFFFCC;
+
 $theme-colors: (
   'primary': $primary,
   'secondary': $secondary,
 );
+
 
 $body-color: #151515;
 
@@ -149,6 +157,26 @@ $alert-padding-x: 1.25em;
 
 // Interactions
 $hover-transition-timing: 0.15s ease-in-out;
+
+// accordion
+$card-border-radius: 0;
+$card-border-color: $gray-500;
+$card-cap-bg: transparent;
+
+// navbar
+$navbar-nav-link-padding-x: 0;
+$navbar-padding-y: 0;
+$navbar-padding-x: calc-em(15 / 2, 16);
+$navbar-toggler-padding-x: 0;
+
+//navbar brand
+$navbar-brand-padding-y: calc-em(10, 16);
+
+// dropdown
+$dropdown-border-width: 0;
+
+// tooltip
+$tooltip-opacity: 1;
 
 // Cart Drawer
 // To be above zendesk help

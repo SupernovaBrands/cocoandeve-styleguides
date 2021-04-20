@@ -1,5 +1,6 @@
 @import 'core/functions';
 @import 'core/vars';
+@import 'mixins/carousel';
 
 @import 'bootstrap/functions';
 @import 'bootstrap/variables';
@@ -15,6 +16,10 @@
 @import 'components/nav';
 @import 'components/dropdown';
 @import 'components/swatch';
+
+@import 'components/accordion';
+@import 'components/tooltip';
+@import 'components/announcement-bar';
 
 @import 'compounds/upsell';
 @import 'compounds/post-card';
