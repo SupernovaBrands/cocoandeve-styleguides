@@ -9927,6 +9927,13 @@ button.bg-primary-light:focus {
   border-bottom-left-radius: 0 !important;
 }
 
+@media (min-width: 992px) {
+  .position-lg-sticky {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+  }
+}
+
 .form-control:disabled::-moz-placeholder, .form-control[readonly]::-moz-placeholder {
   color: #D0D0D0;
 }

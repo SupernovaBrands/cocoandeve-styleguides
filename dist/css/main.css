@@ -228,7 +228,7 @@
   content: '/';
 }
 
-.social-icon-primary {
+.social-icon {
   font-size: 1.875em;
 }
 
@@ -2155,6 +2155,7 @@ footer hr {
 
 .blog-grid__sidebar {
   grid-area: sidebar;
+  top: 0;
 }
 
 @media (min-width: 992px) {
