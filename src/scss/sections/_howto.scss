@@ -2,14 +2,13 @@
 	background-color: $primary-light;
 
 	.carousel--centered {
-    overflow: hidden;
-    position: initial;
+        position: initial;
 
-    @include media-breakpoint-up(lg) {
-      max-width: 64em;
-      margin: 0 auto;
+        @include media-breakpoint-up(lg) {
+            max-width: 64em;
+            margin: 0 auto;
+        }
     }
-  }
 
 	.carousel-control-prev,
 	.carousel-control-next {
@@ -28,4 +27,12 @@
 			height: 2em;
 		}
 	}
+
+    .carousel-inner {
+        transform: translateX(-60.5%);
+
+        @include media-breakpoint-up(md) {
+            transform: translateX(-24.5%);
+        }
+    }
 }
