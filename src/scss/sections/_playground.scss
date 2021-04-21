@@ -7,14 +7,11 @@
 }
 
 .collection-list {
+  text-align: center;
 
   figcaption {
     bottom: 50%;
     transform: translateY(50%);
-    -webkit-transform: translateY(50%);
-    -moz-transform: translateY(50%);
-    -ms-transform: translateY(50%);
-    -o-transform: translateY(50%);
     width: 100%;
     position: absolute;
     margin: 0 auto;
@@ -33,6 +30,10 @@
     .h1 {
       text-shadow: 0 0 calc-em(24) rgba(0, 48, 45, 0.25);
       font-size: $h1-font-size-xl;
+    }
+
+    i.sni {
+      font-size: $h2-font-size-lg;
     }
 
     p.d-md-block {

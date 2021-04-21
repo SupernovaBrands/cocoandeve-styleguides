@@ -6,11 +6,7 @@
     }
   }
 
-  .tab-content, & {
-    overflow: hidden;
-  }
-
-  .carousel {
+  .carousel--centered {
     padding-top: map-get($spacers, 2);
   }
 }
@@ -40,8 +36,8 @@
     position: absolute;
     width: calc-em(66);
     height: calc-em(66);
-    right: 0;
-    top: calc-em(-10);
+    right: calc-em(-5);
+    top: calc-em(-20);
 
     @include media-breakpoint-up(lg) {
       width: calc-em(90);

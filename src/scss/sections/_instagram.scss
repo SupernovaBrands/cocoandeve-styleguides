@@ -1,5 +1,12 @@
 .instagram {
 	&--feed {
+		overflow: hidden;
+		padding: calc-em(5);
+
+		@include media-breakpoint-up(lg) {
+      padding: calc-em(5) 0;
+    }
+
 		&__left {
 			@include media-breakpoint-up(lg) {
 				margin-left: calc-em(15);

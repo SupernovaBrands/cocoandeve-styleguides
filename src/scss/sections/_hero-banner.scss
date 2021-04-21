@@ -1,4 +1,11 @@
 .hero-carousel {
+
+  .offcanvas-active & {
+    .carousel {
+      z-index: -1;
+    }
+  }
+
   .carousel-indicators {
     position: absolute;
     left: 0;

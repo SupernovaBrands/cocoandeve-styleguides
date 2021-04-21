@@ -12,46 +12,6 @@
   .form-select {
     max-width: 30vw;
   }
-
-  .tab-content, & {
-    overflow: hidden;
-  }
-
-  .review-item {
-    &__content {
-      background: white;
-    }
-  }
-
-  .carousel-inner {
-    @include media-breakpoint-down(lg) {
-      transform: translateX(12.5%);
-    }
-  }
-
-  .carousel-control {
-    &--background {
-      &.carousel-control-prev {
-        @include media-breakpoint-up(lg) {
-          left: 1%;
-        }
-      }
-      &.carousel-control-next {
-        @include media-breakpoint-up(lg) {
-          right: 1%;
-        }
-      }
-      &.carousel-control-prev,
-      &.carousel-control-next {
-        top: -20%;
-        &:before {
-          @include media-breakpoint-down(lg) {
-            background-color: $primary-light;
-          }
-        }
-      }
-    }
-  }
 }
 
 .form-select {

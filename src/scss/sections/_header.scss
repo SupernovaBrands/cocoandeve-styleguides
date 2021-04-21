@@ -88,6 +88,10 @@
     }
 }
 
+.nav-ranges {
+    border-top: 1px solid $primary-light;
+}
+
 .mobile-nav {
     top: 0;
     bottom: 0;
@@ -217,6 +221,7 @@
     .nav-item--mega-menu:hover & {
         opacity: 1;
         visibility: visible;
+        z-index: $zindex-sticky;
     }
 
     a {
