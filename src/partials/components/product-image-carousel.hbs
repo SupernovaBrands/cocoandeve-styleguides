@@ -1,0 +1,24 @@
+<div class="product-image-carousel__container col-12 col-lg-6 order-lg-2">
+	<figure id="product-image-carousel{{#if num}}{{num}}{{/if}}" class="product-image-carousel carousel slide mb-1 no-gutters__in-container" data-ride="carousel"  data-interval="false">
+		<div class="carousel-inner">
+			{{#times 8}}
+			<div class="carousel-item {{#if @first}}active{{/if}}">
+				<img class="img-fluid" src="https://via.placeholder.com/750x750/EFADBA?text={{@index}}"
+					alt="Slide {{@index}}">
+			</div>
+			{{/times}}
+		</div>
+	</figure>
+</div>
+
+<div id="product-image-carousel__indicator{{#if num}}{{num}}{{/if}}" class="product-image-carousel__indicator col-12 col-lg-1 order-lg-1">
+	<div class="row">
+		{{#times 8}}
+		<div class="product-image-carousel__indicator__item {{#if @first}}active{{/if}} col-12 mb-1" data-target="#product-image-carousel{{#if num}}{{num}}{{/if}}" data-index="{{@index}}">
+			<button class="btn-unstyled">
+				<img class="img-fluid mx-auto d-block" src="https://via.placeholder.com/150x150/EFADBA?text={{@index}}" alt="Slide {{@index}}">
+			</button>
+		</div>
+		{{/times}}
+	</div>
+</div>

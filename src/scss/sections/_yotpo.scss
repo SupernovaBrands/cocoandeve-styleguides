@@ -1,0 +1,108 @@
+.yotpo {
+	.yotpo-icon-star,
+	.yotpo-icon-half-star,
+	.yotpo-icon-empty-star,
+	.yotpo-icon-circle-checkmark,
+	.yotpo-icon-fine-tune,
+	.yotpo-user-name,
+	.yotpo-read-more,
+	a {
+		color: $primary !important;
+	}
+
+	div, span, p, a, img, i, strong, sup, ul, li, form, label {
+		font-family: $font-family-sans-serif;
+		font-size: $font-size-base;
+		line-height: $line-height-base;
+		color: $body-color;
+	}
+
+	&.yotpo-main-widget {
+		padding: 0 $grid-gutter-width;
+
+		.promoted-products-box,
+		.yotpo-label-container,
+		.new-yotpo-small-box,
+		.yotpo-syndication-reference,
+		.yotpo-icon-seperator {
+			display: none !important;
+		}
+
+		.bottom-line-items {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			margin-bottom: 0;
+			text-align: left;
+			.avg-score {
+				order: 2;
+				padding: 0;
+				margin-left: map-get($spacers, 1);
+				&:after {
+					content: '\a0stars';
+				}
+			}
+			.rating-stars-container {
+				line-height: $line-height-base;
+				margin-left: 0;
+			}
+			.rating-stars-container,
+			.avg-score {
+				font-size: $h2-font-size !important;
+				height: auto;
+				line-height: $line-height-base;
+				@include media-breakpoint-up(lg) {
+					font-size: $h2-font-size-lg !important;
+				}
+			}
+			.yotpo-icon {
+				font-size: $font-size-base !important;
+			}
+			.reviews-qa-labels-container {
+				position: static;
+				order: 3;
+				width: 100%;
+				margin: map-get($spacers, 1) 0 0;
+				padding: 0;
+				text-decoration: underline;
+				line-height: $line-height-base;
+				height: auto;
+			}
+		}
+
+		.write-question-review-buttons-container {
+			text-align: left;
+			float: none;
+		}
+
+		.yotpo-reviews-header,
+		.yotpo-reviews-filters,
+		.yotpo-regular-box {
+			margin: 0;
+		}
+
+		.yotpo-icon-profile {
+			background: $primary !important;
+		}
+		.yotpo-user-letter {
+			line-height: 1;
+		}
+
+		.write-review-wrapper .yotpo-regular-box {
+			border-top: none;
+		}
+		.write-review .connect-wrapper {
+			padding-left: 0;
+			.form-element {
+				width: 100%;
+				padding: 0;
+			}
+			.name-input .y-label {
+				padding-top: 0;
+			}
+		}
+		.form-group {
+			margin-bottom: 0 !important;
+		}
+	}
+}

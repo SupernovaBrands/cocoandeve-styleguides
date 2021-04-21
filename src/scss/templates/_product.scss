@@ -1,0 +1,22 @@
+.product-info-tab {
+	.nav-item {
+		flex: 1 0 0;
+	}
+
+	.nav-link {
+		&.active {
+			box-shadow: 0 -2px 0 0 inset $primary;
+		}
+	}
+}
+
+.pdp-banner {
+	&__content {
+		@include media-breakpoint-up(lg) {
+			max-width: map-get($container-max-widths, lg) / 2;
+		}
+		@include media-breakpoint-up(xl) {
+			max-width: map-get($container-max-widths, xl) / 2;
+		}
+	}
+}

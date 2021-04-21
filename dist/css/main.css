@@ -9,6 +9,7 @@
   display: flex;
 }
 
+.sni-text,
 .sni:before,
 .sni-after:after {
   font-family: supernova-icon !important;
@@ -410,6 +411,39 @@
   }
 }
 
+.result-carousel {
+  overflow: hidden;
+}
+
+@media (min-width: 992px) {
+  .product-image-carousel__container, .product-image-carousel__indicator {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 1.875em;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .product-image-carousel__indicator__item {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
+
+.product-variant .custom-control-label {
+  padding-left: 3.75em;
+}
+
+.product-variant .custom-control-label::before {
+  top: 50%;
+  left: 1.25em;
+  transform: translateY(-50%);
+}
+
+.product-variant .custom-control-input:checked ~ .custom-control-label {
+  border-color: #F3436C !important;
+}
+
 .nav-link {
   color: #151515;
 }
@@ -654,7 +688,7 @@
   }
 }
 
-.upsell .sni {
+.upsell .sni, .upsell .sni-text {
   font-size: 1.875em;
   color: #F3436C;
   transition: color 0.15s ease-in-out;
@@ -673,6 +707,24 @@
   margin-top: 0.16667em;
   text-decoration: underline;
   color: #151515;
+}
+
+.product-upsell picture {
+  width: 5.625em;
+}
+
+.product-upsell a {
+  width: 5em;
+}
+
+@media (min-width: 992px) {
+  .product-upsell a {
+    width: 8.75em;
+  }
+}
+
+.product-upsell__atc-text {
+  margin-top: 0.25em;
 }
 
 .post-card h3 {
@@ -2174,6 +2226,26 @@ footer hr {
 @media (min-width: 992px) {
   .sidebar {
     padding: 2.5em 1.5625em;
+  }
+}
+
+.product-info-tab .nav-item {
+  flex: 1 0 0;
+}
+
+.product-info-tab .nav-link.active {
+  box-shadow: 0 -2px 0 0 inset #F3436C;
+}
+
+@media (min-width: 992px) {
+  .pdp-banner__content {
+    max-width: 480px;
+  }
+}
+
+@media (min-width: 1260px) {
+  .pdp-banner__content {
+    max-width: 600px;
   }
 }
 

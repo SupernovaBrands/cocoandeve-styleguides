@@ -31,3 +31,24 @@ h4, .h4 {
 		color: $primary;
 	}
 }
+
+.text-lg {
+	@include font-size($font-size-lg);
+}
+.text-sm {
+	@include font-size($font-size-sm);
+}
+.text-xs {
+	@include font-size($font-size-xs);
+}
+@include media-breakpoint-up(lg) {
+	.text-lg-lg {
+		@include font-size($font-size-lg);
+	}
+	.text-sm-lg {
+		@include font-size($font-size-sm);
+	}
+	.text-xs-lg {
+		@include font-size($font-size-xs);
+	}
+}

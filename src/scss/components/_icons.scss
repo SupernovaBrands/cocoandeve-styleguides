@@ -2,10 +2,10 @@ $supernova-icon-font: "supernova-icon";
 
 @font-face {
 	font-family: $supernova-icon-font;
-	src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?7bc14a5ef3b0bd4a4b83fbe18de17248#supernova-icon") format("svg"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?7bc14a5ef3b0bd4a4b83fbe18de17248") format("truetype"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff?7bc14a5ef3b0bd4a4b83fbe18de17248") format("woff"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?7bc14a5ef3b0bd4a4b83fbe18de17248") format("woff2");
+	src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?dbc185e1eb7d9c7ce1da2615ab054fb4#supernova-icon") format("svg"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?dbc185e1eb7d9c7ce1da2615ab054fb4") format("truetype"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.woff?dbc185e1eb7d9c7ce1da2615ab054fb4") format("woff"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?dbc185e1eb7d9c7ce1da2615ab054fb4") format("woff2");
 }
 
 .sni,
@@ -13,6 +13,7 @@ url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?7bc14a5ef3b0bd4a4b83fbe1
 	display: flex;
 }
 
+.sni-text,
 .sni:before,
 .sni-after:after {
 	font-family: supernova-icon !important;
@@ -29,28 +30,29 @@ $supernova-icon-map: (
 	"account": "\f101",
 	"awards": "\f102",
 	"cart": "\f103",
-	"chevron-down": "\f104",
-	"chevron-next": "\f105",
-	"chevron-prev": "\f106",
-	"chevron-up": "\f107",
-	"close-circle": "\f108",
-	"close": "\f109",
-	"delivery": "\f10a",
-	"facebook-square": "\f10b",
-	"instagram": "\f10c",
-	"logo": "\f10d",
-	"minus": "\f10e",
-	"moneyback": "\f10f",
-	"palm-tree": "\f110",
-	"pinterest-square": "\f111",
-	"play": "\f112",
-	"plus-circle": "\f113",
-	"plus": "\f114",
-	"search": "\f115",
-	"tiktok": "\f116",
-	"trash": "\f117",
-	"twitter-square": "\f118",
-	"youtube": "\f119",
+	"check": "\f104",
+	"chevron-down": "\f105",
+	"chevron-next": "\f106",
+	"chevron-prev": "\f107",
+	"chevron-up": "\f108",
+	"close-circle": "\f109",
+	"close": "\f10a",
+	"delivery": "\f10b",
+	"facebook-square": "\f10c",
+	"instagram": "\f10d",
+	"logo": "\f10e",
+	"minus": "\f10f",
+	"moneyback": "\f110",
+	"palm-tree": "\f111",
+	"pinterest-square": "\f112",
+	"play": "\f113",
+	"plus-circle": "\f114",
+	"plus": "\f115",
+	"search": "\f116",
+	"tiktok": "\f117",
+	"trash": "\f118",
+	"twitter-square": "\f119",
+	"youtube": "\f11a",
 );
 
 .sni.sni__account:before,
@@ -64,6 +66,10 @@ $supernova-icon-map: (
 .sni.sni__cart:before,
 .sni-after.sni__cart:after {
 	content: map-get($supernova-icon-map, "cart");
+}
+.sni.sni__check:before,
+.sni-after.sni__check:after {
+	content: map-get($supernova-icon-map, "check");
 }
 .sni.sni__chevron-down:before,
 .sni-after.sni__chevron-down:after {

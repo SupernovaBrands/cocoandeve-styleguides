@@ -24,6 +24,7 @@ $spacers: (
   3: $spacer * 1.5,
   4: $spacer * 2,
   5: $spacer * 2.5,
+  g: $grid-gutter-width,
 );
 
 // Typography
@@ -85,7 +86,7 @@ $input-focus-border-color: $gray-400;
 $input-disabled-bg: $gray-100;
 $input-disabled-color: $gray-400;
 $custom-control-gutter: .5em;
-$custom-control-indicator-size: 1em;
+$custom-control-indicator-size: calc-em(20);
 
 $input-padding-y: calc-em(28 / 2);
 $input-padding-x: 1em;
