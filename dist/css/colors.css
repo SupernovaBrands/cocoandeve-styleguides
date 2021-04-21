@@ -110,6 +110,30 @@ h4, .h4 {
   color: #F3436C;
 }
 
+.text-lg {
+  font-size: 1.25em;
+}
+
+.text-sm {
+  font-size: 0.875em;
+}
+
+.text-xs {
+  font-size: 0.75em;
+}
+
+@media (min-width: 992px) {
+  .text-lg-lg {
+    font-size: 1.25em;
+  }
+  .text-sm-lg {
+    font-size: 0.875em;
+  }
+  .text-xs-lg {
+    font-size: 0.75em;
+  }
+}
+
 @media (max-width: 991.98px) {
   .mobile-wrapper {
     padding-right: 7.5px;
@@ -118,7 +142,7 @@ h4, .h4 {
 }
 
 @media (min-width: 992px) {
-  .container {
+  .container, .container-fluid {
     padding-right: 15px;
     padding-left: 15px;
   }
