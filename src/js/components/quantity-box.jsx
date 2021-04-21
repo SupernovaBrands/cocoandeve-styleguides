@@ -116,5 +116,9 @@ QuantityBox.propTypes = {
 	editable: PropTypes.bool.isRequired,
 	name: PropTypes.string.isRequired,
 	quantity: PropTypes.number.isRequired,
-	onChangeQuantity: PropTypes.func.isRequired,
+	onChangeQuantity: PropTypes.func,
+};
+
+QuantityBox.defaultProps = {
+	onChangeQuantity: () => {},
 };

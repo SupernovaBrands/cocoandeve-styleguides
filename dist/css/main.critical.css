@@ -10239,6 +10239,10 @@ header.stickywrap:not(.stickyHeader):not(.stickyHeaderOnTop) .cart-bubble-div.mo
   }
 }
 
+.nav-ranges {
+  border-top: 1px solid #F5DADF;
+}
+
 .mobile-nav {
   top: 0;
   bottom: 0;
