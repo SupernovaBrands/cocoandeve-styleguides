@@ -2,10 +2,10 @@ $supernova-icon-font: "supernova-icon";
 
 @font-face {
 	font-family: $supernova-icon-font;
-	src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?dbc185e1eb7d9c7ce1da2615ab054fb4#supernova-icon") format("svg"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?dbc185e1eb7d9c7ce1da2615ab054fb4") format("truetype"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff?dbc185e1eb7d9c7ce1da2615ab054fb4") format("woff"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?dbc185e1eb7d9c7ce1da2615ab054fb4") format("woff2");
+	src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?6918cb5658a789d7527c271781108218#supernova-icon") format("svg"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?6918cb5658a789d7527c271781108218") format("truetype"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.woff?6918cb5658a789d7527c271781108218") format("woff"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?6918cb5658a789d7527c271781108218") format("woff2");
 }
 
 .sni,
@@ -28,36 +28,51 @@ url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?dbc185e1eb7d9c7ce1da2615
 
 $supernova-icon-map: (
 	"account": "\f101",
-	"awards": "\f102",
-	"cart": "\f103",
-	"check": "\f104",
-	"chevron-down": "\f105",
-	"chevron-next": "\f106",
-	"chevron-prev": "\f107",
-	"chevron-up": "\f108",
-	"close-circle": "\f109",
-	"close": "\f10a",
-	"delivery": "\f10b",
-	"facebook-square": "\f10c",
-	"instagram": "\f10d",
-	"logo": "\f10e",
-	"minus": "\f10f",
-	"moneyback": "\f110",
-	"palm-tree": "\f111",
-	"pinterest-square": "\f112",
-	"play": "\f113",
-	"plus-circle": "\f114",
-	"plus": "\f115",
-	"search": "\f116",
-	"tiktok": "\f117",
-	"trash": "\f118",
-	"twitter-square": "\f119",
-	"youtube": "\f11a",
+	"alcohol-free": "\f102",
+	"awards": "\f103",
+	"cart": "\f104",
+	"check": "\f105",
+	"chevron-down": "\f106",
+	"chevron-next": "\f107",
+	"chevron-prev": "\f108",
+	"chevron-up": "\f109",
+	"close-circle": "\f10a",
+	"close": "\f10b",
+	"cruelty-free": "\f10c",
+	"delivery": "\f10d",
+	"dimethicone-free": "\f10e",
+	"ethicaly": "\f10f",
+	"facebook-square": "\f110",
+	"gluten": "\f111",
+	"instagram": "\f112",
+	"logo": "\f113",
+	"mineral-oil": "\f114",
+	"minus": "\f115",
+	"moneyback": "\f116",
+	"natural-dha": "\f117",
+	"palm-tree": "\f118",
+	"paraben-free": "\f119",
+	"peta": "\f11a",
+	"pinterest-square": "\f11b",
+	"play": "\f11c",
+	"plus-circle": "\f11d",
+	"plus": "\f11e",
+	"search": "\f11f",
+	"tiktok": "\f120",
+	"toxin-free": "\f121",
+	"trash": "\f122",
+	"twitter-square": "\f123",
+	"vegan": "\f124",
+	"youtube": "\f125",
 );
 
 .sni.sni__account:before,
 .sni-after.sni__account:after {
 	content: map-get($supernova-icon-map, "account");
+}
+.sni.sni__alcohol-free:before,
+.sni-after.sni__alcohol-free:after {
+	content: map-get($supernova-icon-map, "alcohol-free");
 }
 .sni.sni__awards:before,
 .sni-after.sni__awards:after {
@@ -95,13 +110,29 @@ $supernova-icon-map: (
 .sni-after.sni__close:after {
 	content: map-get($supernova-icon-map, "close");
 }
+.sni.sni__cruelty-free:before,
+.sni-after.sni__cruelty-free:after {
+	content: map-get($supernova-icon-map, "cruelty-free");
+}
 .sni.sni__delivery:before,
 .sni-after.sni__delivery:after {
 	content: map-get($supernova-icon-map, "delivery");
 }
+.sni.sni__dimethicone-free:before,
+.sni-after.sni__dimethicone-free:after {
+	content: map-get($supernova-icon-map, "dimethicone-free");
+}
+.sni.sni__ethicaly:before,
+.sni-after.sni__ethicaly:after {
+	content: map-get($supernova-icon-map, "ethicaly");
+}
 .sni.sni__facebook-square:before,
 .sni-after.sni__facebook-square:after {
 	content: map-get($supernova-icon-map, "facebook-square");
+}
+.sni.sni__gluten:before,
+.sni-after.sni__gluten:after {
+	content: map-get($supernova-icon-map, "gluten");
 }
 .sni.sni__instagram:before,
 .sni-after.sni__instagram:after {
@@ -111,6 +142,10 @@ $supernova-icon-map: (
 .sni-after.sni__logo:after {
 	content: map-get($supernova-icon-map, "logo");
 }
+.sni.sni__mineral-oil:before,
+.sni-after.sni__mineral-oil:after {
+	content: map-get($supernova-icon-map, "mineral-oil");
+}
 .sni.sni__minus:before,
 .sni-after.sni__minus:after {
 	content: map-get($supernova-icon-map, "minus");
@@ -119,9 +154,21 @@ $supernova-icon-map: (
 .sni-after.sni__moneyback:after {
 	content: map-get($supernova-icon-map, "moneyback");
 }
+.sni.sni__natural-dha:before,
+.sni-after.sni__natural-dha:after {
+	content: map-get($supernova-icon-map, "natural-dha");
+}
 .sni.sni__palm-tree:before,
 .sni-after.sni__palm-tree:after {
 	content: map-get($supernova-icon-map, "palm-tree");
+}
+.sni.sni__paraben-free:before,
+.sni-after.sni__paraben-free:after {
+	content: map-get($supernova-icon-map, "paraben-free");
+}
+.sni.sni__peta:before,
+.sni-after.sni__peta:after {
+	content: map-get($supernova-icon-map, "peta");
 }
 .sni.sni__pinterest-square:before,
 .sni-after.sni__pinterest-square:after {
@@ -147,6 +194,10 @@ $supernova-icon-map: (
 .sni-after.sni__tiktok:after {
 	content: map-get($supernova-icon-map, "tiktok");
 }
+.sni.sni__toxin-free:before,
+.sni-after.sni__toxin-free:after {
+	content: map-get($supernova-icon-map, "toxin-free");
+}
 .sni.sni__trash:before,
 .sni-after.sni__trash:after {
 	content: map-get($supernova-icon-map, "trash");
@@ -154,6 +205,10 @@ $supernova-icon-map: (
 .sni.sni__twitter-square:before,
 .sni-after.sni__twitter-square:after {
 	content: map-get($supernova-icon-map, "twitter-square");
+}
+.sni.sni__vegan:before,
+.sni-after.sni__vegan:after {
+	content: map-get($supernova-icon-map, "vegan");
 }
 .sni.sni__youtube:before,
 .sni-after.sni__youtube:after {
