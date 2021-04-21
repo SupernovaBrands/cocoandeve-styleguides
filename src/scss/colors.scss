@@ -1,7 +1,9 @@
 @import 'core/functions';
 @import 'core/vars';
 
-@import 'bootstrap/bootstrap';
+@import 'bootstrap/functions';
+@import 'bootstrap/variables';
+@import 'bootstrap/mixins';
 
 @import 'core/fonts';
 @import 'core/type';
