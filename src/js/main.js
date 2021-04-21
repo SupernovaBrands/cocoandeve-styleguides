@@ -3,6 +3,7 @@ import '~mod/globals';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Cart from '~comp/cart';
+import QuantityBox from '~comp/quantity-box';
 
 if ($('#cart-drawer').length > 0) {
 	ReactDOM.render(
@@ -10,6 +11,14 @@ if ($('#cart-drawer').length > 0) {
 		document.querySelector('#cart-drawer'),
 		);
 }
+
+const qtyBoxes = document.querySelectorAll('.react-quantity-box');
+qtyBoxes.forEach((el) => {
+	ReactDOM.render(
+		React.createElement(QuantityBox, { name: 'quantity', quantity: 1, editable: true }, null),
+		el,
+	);
+});
 
 const navCategory = $('.nav-category');
 if (navCategory.length > 0) {
@@ -272,18 +281,5 @@ $(document).ready(function () {
 			}
 		}
 		lastScrollTop = scrollTop;
-	});
-
-	// Cart drawer
-	$('.manual-gwp__item .btn').on('click', function () {
-		if ($(this).hasClass('btn-primary')) {
-			$(this).removeClass('btn-primary');
-			$(this).addClass('btn-outline-primary');
-			$(this).text('Add');
-		} else {
-			$(this).addClass('btn-primary');
-			$(this).removeClass('btn-outline-primary');
-			$(this).text('Remove');
-		}
 	});
 });

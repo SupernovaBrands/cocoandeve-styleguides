@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{{> html-head title="Grid" }}
+
+		<style type="text/css">
+			.col {
+				height: 100vh;
+			}
+			.col:before {
+				content: "";
+				display: block;
+				background-color: rgba(0,123,255,0.5);
+				height: 100%;
+			}
+		</style>
+	</head>
+	<body class="mobile-wrapper">
+		<h1>GRID</h1>
+		<div class="container">
+			<div class="row">
+				<div class="col"></div>
+				<div class="col"></div>
+				<div class="col"></div>
+				<div class="col"></div>
+				<div class="col d-none d-lg-block"></div>
+				<div class="col d-none d-lg-block"></div>
+				<div class="col d-none d-lg-block"></div>
+				<div class="col d-none d-lg-block"></div>
+				<div class="col d-none d-lg-block"></div>
+				<div class="col d-none d-lg-block"></div>
+				<div class="col d-none d-lg-block"></div>
+				<div class="col d-none d-lg-block"></div>
+			</div>
+		</div>
+	</body>
+</html>
