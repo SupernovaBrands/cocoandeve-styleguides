@@ -1,0 +1,25 @@
+.services-list {
+  &__icon {
+    @include font-size($h1-font-size-lg);
+  }
+
+  &__items {
+    border-bottom: calc-em(1) solid $secondary;
+
+    .title {
+      line-height: calc-em(24);
+    }
+  }
+}
+
+.trustpilot-stars {
+  @include font-size($font-size-base);
+
+  .h3 {
+    @include font-size($h4-font-size-lg);
+  }
+}
+
+.text-gray {
+  color: $gray-500;
+}

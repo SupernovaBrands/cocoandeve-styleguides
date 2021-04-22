@@ -95,10 +95,10 @@
 
     .carousel-inner {
       overflow: visible;
-      transform: translateX(-62.5%);
+      transform: translateX(-60.5%);
 
       @include media-breakpoint-up(md) {
-        transform: translateX(-12.5%);
+        transform: translateX(-11.5%);
 
         .active + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
           display: block;

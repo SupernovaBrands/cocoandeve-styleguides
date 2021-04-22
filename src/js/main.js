@@ -307,4 +307,26 @@ $(document).ready(function () {
 		});
 	}
 
+  // Change tab by select on real result sections
+  if ($("select[data-toggle='tab']").length > 0) {
+    $("select[data-toggle='tab']").on('change', function(){
+      var targetTab = $(this).val();
+      $(".real-results .tab-pane").removeClass('show active');
+      $(`#${targetTab}[role='tabpanel']`).addClass('show active');
+    });
+  }
+
+  // handle swatch selection on product carousel
+  if ($(".item-swatch .item span").length > 0) {
+    $(".item-swatch .item span").click(function(){
+      var parent =$(this).parent();
+      var form = $(this).parents('form');
+      if (parent.data('available') == 'available') {
+        form.find('.item').removeClass('active');
+        form.find('input[name="id"]').val($(this).data('id'));
+        parent.addClass('active');
+        form.find('.shop-swatch label span').text($(this).data('val'));
+      }
+    });
+  }
 });

@@ -16,13 +16,17 @@
 @import 'components/nav';
 @import 'components/dropdown';
 @import 'components/swatch';
-
+@import 'components/badge';
+@import 'components/review-stars';
+@import 'components/trustpilot-stars';
+@import 'components/tabs';
 @import 'components/accordion';
 @import 'components/tooltip';
 @import 'components/announcement-bar';
 
 @import 'compounds/upsell';
 @import 'compounds/post-card';
+@import 'compounds/result_card';
 
 @import 'sections/cart-drawer';
 @import 'sections/howto';
@@ -30,6 +34,13 @@
 @import 'sections/product-waitlist';
 @import 'sections/footer';
 @import 'sections/sidebar';
+@import 'sections/hero-banner';
+@import 'sections/product-carousel';
+@import 'sections/playground';
+@import 'sections/services';
+@import 'sections/testimonials';
+@import 'sections/real-results';
+@import 'sections/instagram';
 
 @import 'templates/blog';
 @import 'templates/stockist';
