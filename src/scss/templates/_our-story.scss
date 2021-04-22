@@ -1,0 +1,54 @@
+.page-banner-image {  
+	h1 {
+		color: white;
+	}
+}
+
+.page-banner-text-overlap {
+	&__text-content {
+		background: white;
+		margin-top: -7em;
+
+		@include media-breakpoint-up(lg) {
+			margin-right: -40%;
+		}
+
+		&--reverse {
+			@include media-breakpoint-up(lg) {
+				margin-left: -40%;
+				margin-right: auto;
+			}
+		}
+	}
+}
+
+.page-video-banner {
+	background-color: #f6e4ef;
+	img {
+		width: 100%;
+
+		@include media-breakpoint-up(lg) {
+			width: auto;
+		}
+	}
+
+	.container {
+		@include media-breakpoint-up(lg) {
+			position: absolute;
+		}
+	}
+}
+
+.page-award-slider {
+	background-color: #f9eeca;
+
+	p {
+		@include media-breakpoint-up(lg) {
+			max-width: 42%
+		}
+	}
+
+	.carousel-item:nth-child(odd) {
+		margin-top: 5em;
+	}
+}
