@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {{> html-head title="Tooltip" }}
+</head>
+
+<body>
+    <div class="container mt-4">
+        <div class="col-12">
+            <div class="no-gutters__in-container">
+                <h1>Tooltip</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container position-relative">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Header Menu</a>
+            </li>
+        </ul>
+        <div class="col-lg-4 flex-column tooltip bg-primary text-white sni-after sni__close-circle text-center py-2 show">
+            Item added to cart
+            <a href="#" class="text-white text-underline">Proceed to checkout</a>
+        </div>
+    </div>
+
+    {{> js jquery=true bootstrap=true main=true }}
+</body>
+
+</html>

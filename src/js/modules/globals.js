@@ -4,6 +4,7 @@ window.assetUrl = function (filename) {
 	return `/images/${filename}`;
 };
 
+window.screenLG = 992;
 window.tStrings = {
 	addToCart: 'Add To Cart',
 	soldOut: 'Out of stock',

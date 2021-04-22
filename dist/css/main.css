@@ -219,6 +219,19 @@
   font-size: 1.875em;
 }
 
+.carousel--loop .active.carousel-item-left + .carousel-item-next.carousel-item-left, .carousel--loop .carousel-item-next.carousel-item-left + .carousel-item, .carousel--loop .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item, .carousel--loop .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item, .carousel--loop .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+  position: relative;
+  transform: translate3d(-100%, 0, 0);
+  visibility: visible;
+}
+
+.carousel--loop .active.carousel-item-right + .carousel-item-prev.carousel-item-right, .carousel--loop .carousel-item-prev.carousel-item-right + .carousel-item, .carousel--loop .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item, .carousel--loop .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item, .carousel--loop .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+  position: relative;
+  transform: translate3d(100%, 0, 0);
+  visibility: visible;
+  display: block;
+}
+
 .carousel--fixed-height {
   overflow: hidden;
   height: 11.875em;
@@ -246,6 +259,58 @@
   .carousel--sidebar .carousel-item {
     display: block;
     float: none;
+  }
+}
+
+.carousel--loop .carousel-item {
+  margin-right: 0;
+}
+
+.carousel--loop .carousel-item-next,
+.carousel--loop .carousel-item-prev {
+  position: relative;
+  transform: translate3d(0, 0, 0);
+}
+
+.carousel--loop .carousel-item-prev:not(.carousel-item-right) {
+  transform: translateX(-100%);
+}
+
+.carousel--loop .active, .carousel--loop .active + .carousel-item, .carousel--loop .active + .carousel-item + .carousel-item, .carousel--loop .active + .carousel-item + .carousel-item + .carousel-item, .carousel--loop .active + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+  display: block;
+}
+
+.carousel--loop .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left), .carousel--loop .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item:not(.carousel-item--last), .carousel--loop .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item:not(.carousel-item--last) + .carousel-item:not(.carousel-item--last), .carousel--loop .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item:not(.carousel-item--last) + .carousel-item:not(.carousel-item--last) + .carousel-item:not(.carousel-item--last), .carousel--loop .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item:not(.carousel-item--last) + .carousel-item:not(.carousel-item--last) + .carousel-item:not(.carousel-item--last) + .carousel-item:not(.carousel-item--last) {
+  transition: none;
+}
+
+.carousel--loop .carousel-item-prev.carousel-item-right {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: block;
+  visibility: visible;
+}
+
+.carousel--centered {
+  overflow: hidden;
+}
+
+.carousel--centered .carousel-inner {
+  overflow: visible;
+  transform: translateX(-62.5%);
+}
+
+@media (min-width: 768px) {
+  .carousel--centered .carousel-inner {
+    transform: translateX(-12.5%);
+  }
+  .carousel--centered .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+    display: block;
+  }
+  .carousel--centered .carousel-inner .carousel-item--last {
+    transform: translate3d(100%, 0, 0);
   }
 }
 
@@ -280,29 +345,69 @@
   }
 }
 
-.carousel--centered .carousel-inner {
-  transform: translateX(12.5%);
-  overflow: visible;
+.carousel-control--loop.carousel-control-prev, .carousel-control--loop.carousel-control-next {
+  top: 0;
+  width: 3.125em;
 }
 
 @media (min-width: 992px) {
-  .carousel--centered .carousel-inner {
-    transform: translateX(25%);
+  .carousel-control--loop.carousel-control-prev, .carousel-control--loop.carousel-control-next {
+    width: 6.25em;
   }
 }
 
-.carousel--centered .carousel-item-prev--out {
-  transform: translateX(-200%);
-  display: block;
+.carousel-control--loop.carousel-control-prev:before, .carousel-control--loop.carousel-control-next:before {
+  width: 100%;
+  height: 6.25em;
+  box-shadow: 0 0.25em 0.25em rgba(0, 0, 0, 0.2);
+  color: black;
+  opacity: .9;
 }
 
-.carousel--centered .carousel-item-prev--out:nth-last-child(2) {
-  opacity: 0;
+@media (min-width: 992px) {
+  .carousel-control--loop.carousel-control-prev:before, .carousel-control--loop.carousel-control-next:before {
+    width: 100%;
+    border-radius: 50%;
+  }
 }
 
-.carousel--centered .carousel-item-next--out {
-  transform: translateX(200%);
-  display: block;
+.carousel-control--loop.carousel-control-prev span, .carousel-control--loop.carousel-control-next span {
+  font-size: 1.625em;
+  color: black;
+}
+
+.carousel-control--loop.carousel-control-prev:before {
+  left: 0;
+  border-radius: 0 9.375em 9.375em 0;
+}
+
+@media (min-width: 992px) {
+  .carousel-control--loop.carousel-control-prev:before {
+    border-radius: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .carousel-control--loop.carousel-control-prev.floating-out-left {
+    left: -2%;
+  }
+}
+
+.carousel-control--loop.carousel-control-next:before {
+  right: 0;
+  border-radius: 9.375em 0 0 9.375em;
+}
+
+@media (min-width: 992px) {
+  .carousel-control--loop.carousel-control-next:before {
+    border-radius: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .carousel-control--loop.carousel-control-next.floating-out-right {
+    right: -2%;
+  }
 }
 
 .nav-link {
@@ -2025,14 +2130,14 @@ footer hr {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto auto auto;
-  grid-template-areas: "newsletter newsletter" "aboutus helplinks" "support followus" "currency item";
+  grid-template-areas: "newsletter newsletter" "aboutus helplinks" "support followus" "currency item";
 }
 
 @media (min-width: 992px) {
   .footer-grid {
     grid-template-columns: 2fr 1fr 1fr 1fr;
     grid-template-rows: auto auto;
-    grid-template-areas: "newsletter aboutus helplinks support" "newsletter followus currency item";
+    grid-template-areas: "newsletter aboutus helplinks support" "newsletter followus currency item";
     grid-column-gap: 30px;
   }
 }
@@ -2077,7 +2182,7 @@ footer hr {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto auto;
-    grid-template-areas: "post1 post1 search" "post1 post1 sidebar" "post2 post3 sidebar";
+    grid-template-areas: "post1 post1 search" "post1 post1 sidebar" "post2 post3 sidebar";
   }
 }
 
@@ -2106,7 +2211,7 @@ footer hr {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: auto auto;
-    grid-template-areas: "content sidebar" "comment sidebar";
+    grid-template-areas: "content sidebar" "comment sidebar";
   }
 }
 

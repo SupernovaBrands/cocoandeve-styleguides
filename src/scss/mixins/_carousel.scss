@@ -1,0 +1,21 @@
+@mixin carousel-item-level($el_start, $el_assign, $count, $include_first_parent: true){
+  $result: ();
+
+  @for $i from 0 to $count{
+    @if($i == 0) {
+      @if($include_first_parent) {
+        $result: append($result, $el_start, "comma");
+      }
+    } @else {
+      $assignPlus: $el_start;
+      @for $x from 0 to $i{
+        $assignPlus: $assignPlus + "+" + $el_assign;
+      }
+      $result: append($result, $assignPlus, "comma");
+    }
+  }
+
+  #{$result} {
+    @content
+  }
+}

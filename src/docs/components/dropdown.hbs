@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {{> html-head title="Dropdown" }}
+</head>
+
+<body class="mobile-wrapper">
+  <div class="container mt-4">
+    <h1>Dropdown</h1>
+    <div class="row">
+      <div class="dropdown">
+        <a class="dropdown-toggle font-weight-bold" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          US (USD)
+        </a>
+        <div class="dropdown-menu p-0" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item pt-1 pb-1 active" href="#">United Kingdom (GBP)</a>
+          <a class="dropdown-item pt-1 pb-1" href="#">USA (USD)</a>
+          <a class="dropdown-item pt-1 pb-1" href="#">Canada (CAD)</a>
+          <a class="dropdown-item pt-1 pb-1" href="#">Australia (AUD)</a>
+          <a class="dropdown-item pt-1 pb-1" href="#">Europe (EUR)</a>
+          <a class="dropdown-item pt-1 pb-1" href="#">Rest of the World (USD)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{> js jquery=true popper=true bootstrap=true main=true }}
+</body>
+</html>

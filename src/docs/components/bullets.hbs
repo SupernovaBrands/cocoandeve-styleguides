@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {{> html-head title="Bullets" }}
+    </head>
+    <body>
+        <div class="container">
+            <h1>CAROUSEL BULLETS</h1>
+            <div class="position-relative mb-3">
+                <ol class="carousel-indicators carousel-indicators--primary">
+                    <li data-target="#carouselndicators" data-slide-to="0" class="active rounded-circle border-0"></li>
+                    <li data-target="#carouselIndicators" data-slide-to="1" class="rounded-circle border-0"></li>
+                    <li data-target="#carouselIndicators" data-slide-to="2" class="rounded-circle border-0"></li>
+                </ol>
+            </div>
+
+            <h1>CAROUSEL BULLETS WHITE</h1>
+            <div class="position-relative mb-3">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselndicators" data-slide-to="0" class="active rounded-circle border-0"></li>
+                    <li data-target="#carouselIndicators" data-slide-to="1" class="rounded-circle border-0"></li>
+                    <li data-target="#carouselIndicators" data-slide-to="2" class="rounded-circle border-0"></li>
+                </ol>
+            </div>
+        </div>
+
+        {{> js jquery=true bootstrap=true main=true }}
+    </body>
+</html>

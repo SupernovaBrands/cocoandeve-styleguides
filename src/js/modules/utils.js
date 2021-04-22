@@ -1,4 +1,4 @@
-/* global tSettings assetUrl */
+/* global tSettings */
 
 export const get = (obj, path, defValue) => {
 	if (!path) return undefined;
@@ -6,6 +6,14 @@ export const get = (obj, path, defValue) => {
 	return (
 		pathArray.reduce((prevObj, key) => prevObj && prevObj[key], obj) || defValue
 	);
+};
+
+export const waitFor = (condition, cb) => {
+	if (typeof condition === 'function' && typeof cb === 'function') {
+		setTimeout(() => {
+			if (condition()) { cb(); } else { waitFor(condition, cb); }
+		}, 200);
+	}
 };
 
 export const kebabCase = (text) => (typeof text === 'string' ? text.match(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)
