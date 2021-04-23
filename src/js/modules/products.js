@@ -19,6 +19,26 @@ $('.product-image-carousel__indicator__item').on('click', function () {
 	}
 });
 
+$('.product-image-carousel__indicator').on('slide.bs.carousel', function (e) {
+	const $e = $(e.relatedTarget);
+	const index = $e.index();
+	const totalItems = $(this).find('.carousel-item').length;
+
+	const prevButton = $(this).children('button.sni__chevron-up');
+	const nextButton = $(this).children('button.sni__chevron-down');
+
+	if (index === 0) {
+		prevButton.attr('disabled', 'disabled');
+	} else {
+		prevButton.removeAttr('disabled');
+	}
+	if (index + 5 === totalItems) {
+		nextButton.attr('disabled', 'disabled');
+	} else {
+		nextButton.removeAttr('disabled');
+	}
+});
+
 if ($('.product-collapse__toggle').length > 0) {
 	const handleToggle = function (open, el) {
 		const toggle = el.siblings('.product-collapse__toggle');

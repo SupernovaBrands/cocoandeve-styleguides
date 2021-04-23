@@ -11,11 +11,13 @@
 	</figure>
 </div>
 
-<div id="product-image-carousel__indicator{{#if num}}{{num}}{{/if}}" class="product-image-carousel__indicator col-12 col-lg-1 order-lg-1 carousel slide carousel--loop carousel--vertical mb-1" data-slide-number="5" data-ride="carousel" data-interval="false">
-	<button class="carousel-indicator btn-unstyled d-none d-lg-flex mx-auto mb-1 text-center sni sni__chevron-up" href="#product-image-carousel__indicator{{#if num}}{{num}}{{/if}}" data-slide="prev" aria-hidden="true">
+<div id="product-image-carousel__indicator{{#if num}}{{num}}{{/if}}" class="product-image-carousel__indicator col-12 col-lg-1 order-lg-1 carousel slide carousel--loop mb-1" {{#if (gt totalSlide 5)}}data-slide-number="5" data-ride="carousel" data-interval="false"{{/if}}>
+	{{#if (gt totalSlide 5)}}
+	<button class="carousel-indicator btn-unstyled d-none d-lg-flex mx-auto mb-1 text-center sni sni__chevron-up" href="#product-image-carousel__indicator{{#if num}}{{num}}{{/if}}" data-slide="prev" aria-hidden="true" disabled>
 	</button>
+	{{/if}}
 
-	<div class="carousel-inner d-flex flex-nowrap flex-lg-column">
+	<div class="carousel-inner d-flex flex-nowrap flex-lg-column {{#if (gt totalSlide 5)}}{{else}}justify-content-center justify-content-lg-start{{/if}}">
 		{{#times totalSlide}}
 		<div class="product-image-carousel__indicator__item carousel-item {{#if @first}}active{{/if}} col-12 px-lg-0 pb-lg-2" data-target="#product-image-carousel{{#if num}}{{num}}{{/if}}" data-index="{{@index}}">
 			<button class="btn-unstyled border d-block {{#if @first}}border-primary{{else}}border-white{{/if}}">
@@ -25,6 +27,8 @@
 		{{/times}}
 	</div>
 
+	{{#if (gt totalSlide 5)}}
 	<button class="carousel-indicator btn-unstyled d-none d-lg-flex mx-auto mt-1 text-center sni sni__chevron-down" href="#product-image-carousel__indicator{{#if num}}{{num}}{{/if}}" data-slide="next" aria-hidden="true">
 	</button>
+	{{/if}}
 </div>

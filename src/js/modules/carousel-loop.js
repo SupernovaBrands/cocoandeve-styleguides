@@ -19,7 +19,7 @@ $(document).ready(function () {
 				// add 1 element for negative offset of carousel inner
 				idx += 1;
 
-				// special case for carousel centered we would need plus 1, as we have negative offset x on carousle-inner
+				// special case for carousel centered we would need plus 1, as we have negative offset x on carousel-inner
 				if (e.direction === 'right') {
 					$(this).find(`.carousel-item:nth-child(${$(this).find('.carousel-item.active').index() + 1 + itemsPerSlide})`).addClass('carousel-item--last');
 				}

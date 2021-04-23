@@ -41,6 +41,7 @@ const titleCase = (str) => {
 const hbsHelpers = {
 	titleCase,
 	eq: (a, b) => a === b,
+	gt: (a, b) => a > b,
 	times: (n, block) => {
 		let accum = '';
 		for (let i = 1; i <= n; i += 1) {
