@@ -82,10 +82,10 @@
 					<a class="nav-link h4 m-0 text-uppercase font-weight-bold" href="#">Track My Order</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link h4 m-0 text-uppercase font-weight-bold sni sni__cart" href="#">Cart (10)</a>
+					<a class="nav-link h4 m-0 text-uppercase font-weight-bold sni sni__cart" data-toggle="modal" data-target="#cart-drawer" role="button">Cart (<span class="cart-drawer__count">0</span>)</a>
 				</li>
 			</ul>
-			<a href="#" class="nav-link sni sni__cart px-0 d-lg-none"></a>
+			<a class="nav-link sni sni__cart px-0 d-lg-none" data-toggle="modal" data-target="#cart-drawer" role="button"></a>
 			<div class="col-lg-4 flex-column tooltip bg-primary text-white sni-after sni__close-circle text-center py-2">
 				Item added to cart
 				<a href="#" class="text-white text-underline">Proceed to checkout</a>
@@ -228,3 +228,5 @@
 		</ul>
 	</nav>
 </header>
+
+<div class="modal fade cart-drawer" id="cart-drawer" tabindex="-1" aria-hidden="true"></div>

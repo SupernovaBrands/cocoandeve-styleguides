@@ -9,6 +9,17 @@
 	background-position: center;
 	background-size: 2em 2em;
 
+	.custom-radio & {
+		&::before,
+		&::after {
+			content: none;
+		}
+	}
+
+	.custom-control-input:checked ~ & {
+		border-color: $primary;
+	}
+
 	&:focus {
 		outline: none; // to remove focus border on button
 	}

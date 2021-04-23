@@ -1,3 +1,5 @@
+import snCart from '~mod/sn-cart';
+
 $('.product-image-carousel__indicator__item').on('click', function () {
 	const carousel = $(this).data('target');
 	const selectedIndex = $(this).data('index');
@@ -52,3 +54,26 @@ if ($('.product-collapse__toggle').length > 0) {
 		.on('show.bs.collapse', function () { handleToggle(true, $(this)); })
 		.on('hide.bs.collapse', function () { handleToggle(false, $(this)); });
 }
+
+$('.product-form').on('submit', function (e) {
+	e.preventDefault();
+	const data = $(this).find('.product-data').text().split('::')
+		.map((t) => {
+			const splits = t.split('|');
+			const result = { id: splits.pop() };
+			splits.forEach((element, index) => {
+				result[`option${index + 1}`] = element;
+			});
+			return result;
+		});
+
+	const option1 = $(this).find('input[name="product-variant"]:checked').val();
+	const option2 = $(this).find('input[name="product-color"]:checked').val();
+	const quantity = parseInt($(this).find('input[name="quantity"]').val(), 10);
+
+	const selected = data.find((d) => d.option1 === option1 && d.option2 === option2);
+
+	if (selected) {
+		snCart.addItem(parseInt(selected.id, 10), quantity);
+	}
+});

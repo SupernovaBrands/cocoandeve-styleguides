@@ -22,20 +22,31 @@
 				</div>
 				<h1>Sunny Honey Bali Bronzing Foam</h1>
 				<h3>Anti-cellulite, anti-aging self tan</h3>
-				<form>
-					<div>
-						<button class="swatch mr-1 my-1 medium" type="button" tabIndex="-1" aria-label="Medium"></button>
-						<button class="swatch mr-1 my-1 dark" type="button" tabIndex="-1" aria-label="Dark"></button>
-						<button class="swatch mr-1 my-1 ultra-dark" type="button" tabIndex="-1" aria-label="Ultra Dark"></button>
-						<p class="font-size-sm"><b>Medium</b> - Subtle glow, lighter skin tones</p>
+				<form class="product-form">
+					<div class="d-none product-data" aria-hidden="true">1-x-sunny-honey-bali-bronzing-foam|medium|32068891541539::1-x-sunny-honey-bali-bronzing-foam|dark|32068891607075::1-x-sunny-honey-bali-bronzing-foam|ultra-dark|32068891639843::1-x-sunny-honey-bali-bronzing-bundle|medium|32068892295203::1-x-sunny-honey-bali-bronzing-bundle|dark|32068892327971::1-x-sunny-honey-bali-bronzing-bundle|ultra-dark|32068892360739</div>
+
+					<div class="d-flex flex-wrap">
+						<div class="custom-radio mr-2 my-1">
+							<input id="color-medium" type="radio" name="product-color" value="medium" class="custom-control-input" checked />
+							<label for="color-medium" class="custom-control-label swatch medium"></label>
+						</div>
+						<div class="custom-radio mr-2 my-1">
+							<input id="color-dark" type="radio" name="product-color" value="dark" class="custom-control-input" />
+							<label for="color-dark" class="custom-control-label swatch dark"></label>
+						</div>
+						<div class="custom-radio mr-2 my-1">
+							<input id="color-ultra-dark" type="radio" name="product-color" value="ultra-dark" class="custom-control-input" />
+							<label for="color-ultra-dark" class="custom-control-label swatch ultra-dark"></label>
+						</div>
+						<p class="font-size-sm w-100"><b>Medium</b> - Subtle glow, lighter skin tones</p>
 					</div>
 
-					{{> components/product-variant name="product-variant" value="1" checked=true class="mb-2"}}
-					{{> components/product-variant name="product-variant" value="2" compare=true class="mb-2"}}
+					{{> components/product-variant name="product-variant" title="1x Sunny Honey Bali Bronzing Foam" value="1-x-sunny-honey-bali-bronzing-foam" checked=true class="mb-2"}}
+					{{> components/product-variant name="product-variant" title="1x Sunny Honey Bali Bronzing Bundle" value="1-x-sunny-honey-bali-bronzing-bundle" compare=true class="mb-2"}}
 
 					<div class="d-flex mb-3">
 						<div class="react-quantity-box"></div>
-						<button class="btn btn-lg btn-primary btn-block ml-1 ml-lg-3">Add to Cart</button>
+						<button class="btn btn-lg btn-primary btn-block ml-1 ml-lg-3" type="submit">Add to Cart</button>
 					</div>
 				</form>
 
