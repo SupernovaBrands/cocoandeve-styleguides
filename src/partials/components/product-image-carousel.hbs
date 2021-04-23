@@ -1,7 +1,7 @@
 <div class="product-image-carousel__container col-12 col-lg-6 order-lg-2">
-	<figure id="product-image-carousel{{#if num}}{{num}}{{/if}}" class="product-image-carousel carousel slide mb-1 no-gutters__in-container" data-ride="carousel"  data-interval="false">
+	<figure id="product-image-carousel{{#if num}}{{num}}{{/if}}" class="product-image-carousel carousel slide mb-1 no-gutters__in-container" data-ride="carousel" data-interval="false" data-indicator="#product-image-carousel__indicator{{#if num}}{{num}}{{/if}}">
 		<div class="carousel-inner">
-			{{#times 8}}
+			{{#times totalSlide}}
 			<div class="carousel-item {{#if @first}}active{{/if}}">
 				<img class="img-fluid" src="https://via.placeholder.com/750x750/EFADBA?text={{@index}}"
 					alt="Slide {{@index}}">
@@ -11,14 +11,20 @@
 	</figure>
 </div>
 
-<div id="product-image-carousel__indicator{{#if num}}{{num}}{{/if}}" class="product-image-carousel__indicator col-12 col-lg-1 order-lg-1">
-	<div class="row">
-		{{#times 8}}
-		<div class="product-image-carousel__indicator__item {{#if @first}}active{{/if}} col-12 mb-1" data-target="#product-image-carousel{{#if num}}{{num}}{{/if}}" data-index="{{@index}}">
-			<button class="btn-unstyled">
+<div id="product-image-carousel__indicator{{#if num}}{{num}}{{/if}}" class="product-image-carousel__indicator col-12 col-lg-1 order-lg-1 carousel slide carousel--loop carousel--vertical mb-1" data-slide-number="5" data-ride="carousel" data-interval="false">
+	<button class="carousel-indicator btn-unstyled d-none d-lg-flex mx-auto mb-1 text-center sni sni__chevron-up" href="#product-image-carousel__indicator{{#if num}}{{num}}{{/if}}" data-slide="prev" aria-hidden="true">
+	</button>
+
+	<div class="carousel-inner d-flex flex-nowrap flex-lg-column">
+		{{#times totalSlide}}
+		<div class="product-image-carousel__indicator__item carousel-item {{#if @first}}active{{/if}} col-12 px-lg-0 pb-lg-2" data-target="#product-image-carousel{{#if num}}{{num}}{{/if}}" data-index="{{@index}}">
+			<button class="btn-unstyled border d-block {{#if @first}}border-primary{{else}}border-white{{/if}}">
 				<img class="img-fluid mx-auto d-block" src="https://via.placeholder.com/150x150/EFADBA?text={{@index}}" alt="Slide {{@index}}">
 			</button>
 		</div>
 		{{/times}}
 	</div>
+
+	<button class="carousel-indicator btn-unstyled d-none d-lg-flex mx-auto mt-1 text-center sni sni__chevron-down" href="#product-image-carousel__indicator{{#if num}}{{num}}{{/if}}" data-slide="next" aria-hidden="true">
+	</button>
 </div>

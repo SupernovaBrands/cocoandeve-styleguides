@@ -29,9 +29,9 @@ $(document).ready(function () {
 				const it = itemsPerSlide - (totalItems - idx);
 				for (let i = 0; i < it; i += 1) {
 					if (e.direction === 'left') {
-						$(this).find('.carousel-item').eq(i).appendTo($(this).find('.carousel-inner'));
+						$(this).find('.carousel-inner').append($(this).find('.carousel-item').eq(0).detach());
 					} else {
-						$(this).find('.carousel-item').eq(0).appendTo($(this).find('.carousel-inner'));
+						$(this).find('.carousel-inner').append($(this).find('.carousel-item').eq(totalItems - 1).detach());
 					}
 				}
 			}
