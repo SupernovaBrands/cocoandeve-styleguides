@@ -8,7 +8,13 @@
 	.close {
 		top: 0;
 		right: 0;
+		font-size: $font-size-base;
 		outline: none;
+		opacity: 1;
+	}
+
+	.progress {
+		height: calc-em(5, 16);
 	}
 
 	hr {
@@ -38,52 +44,38 @@
 		font-size: calc-em(50);
 		margin-bottom: map-get($spacers, 1) / 2;
 	}
-}
 
-.cart-item {
-	h4 {
-		font-size: calc-em(20);
-	}
-
-	&__remove {
-		font-size: calc-em(24);
+	.modal-footer > * {
+		margin: 0;
 	}
 }
 
 .manual-gwp {
 	&__container {
-		overflow: auto hidden;
-		scrollbar-width: thin;
-
-		&::-webkit-scrollbar {
-			height: 5px;
-			width: 10px;
-			overflow: visible;
-			-webkit-appearance: none;
-			-webkit-overflow-scrolling: touch;
-		}
-
-		&::-webkit-scrollbar-track {
-			background: $gray-400;
-		}
-
-		&::-webkit-scrollbar-thumb {
-			background: $gray-600;
-		}
+		overflow: hidden;
+		scroll-behavior: smooth;
 	}
 
+	&__left,
+	&__right {
+		font-size: calc-em(24);
+		top: 0;
+	}
+	&__left { right: calc-em(48, 24); }
+	&__right { right: calc-em(12, 24); }
+
 	&__item {
-		flex: 0 0 27.5%;
-		width: 27.5%;
+		flex: 0 0 calc-em(96);
+		width: calc-em(96);
+
+		picture {
+			padding: 0 $grid-gutter-width / 2;
+		}
 
 		figcaption {
 			font-size: $font-size-xs;
 			background: $gray-200;
 			padding: map-get($spacers, 1) / 2;
-		}
-
-		p {
-			font-size: $font-size-xs;
 		}
 	}
 }
