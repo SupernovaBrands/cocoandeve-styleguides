@@ -23,3 +23,11 @@
 		}
 	}
 }
+
+.collection-grid {
+	select {
+		@include media-breakpoint-up(lg) {
+			width: auto;
+		}
+	}
+}
