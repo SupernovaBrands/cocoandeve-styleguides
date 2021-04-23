@@ -22,29 +22,44 @@
 				</div>
 				<h1>Sunny Honey Bali Bronzing Foam</h1>
 				<h3>Anti-cellulite, anti-aging self tan</h3>
+
 				<form class="product-form">
 					<div class="d-none product-data" aria-hidden="true">1-x-sunny-honey-bali-bronzing-foam|medium|32068891541539::1-x-sunny-honey-bali-bronzing-foam|dark|32068891607075::1-x-sunny-honey-bali-bronzing-foam|ultra-dark|32068891639843::1-x-sunny-honey-bali-bronzing-bundle|medium|32068892295203::1-x-sunny-honey-bali-bronzing-bundle|dark|32068892327971::1-x-sunny-honey-bali-bronzing-bundle|ultra-dark|32068892360739</div>
 
-					<div class="d-flex flex-wrap">
+					<div class="product-swatch-desktop d-flex flex-wrap">
 						<div class="custom-radio mr-2 my-1">
-							<input id="color-medium" type="radio" name="product-color" value="medium" class="custom-control-input" checked />
+							<input id="color-medium" type="radio" name="product-color" value="medium" class="custom-control-input d-none" checked />
 							<label for="color-medium" class="custom-control-label swatch medium"></label>
 						</div>
 						<div class="custom-radio mr-2 my-1">
-							<input id="color-dark" type="radio" name="product-color" value="dark" class="custom-control-input" />
+							<input id="color-dark" type="radio" name="product-color" value="dark" class="custom-control-input d-none" />
 							<label for="color-dark" class="custom-control-label swatch dark"></label>
 						</div>
 						<div class="custom-radio mr-2 my-1">
-							<input id="color-ultra-dark" type="radio" name="product-color" value="ultra-dark" class="custom-control-input" />
+							<input id="color-ultra-dark" type="radio" name="product-color" value="ultra-dark" class="custom-control-input d-none" />
 							<label for="color-ultra-dark" class="custom-control-label swatch ultra-dark"></label>
 						</div>
 						<p class="font-size-sm w-100"><b>Medium</b> - Subtle glow, lighter skin tones</p>
 					</div>
 
+					<div class="product-swatch-mobile fixed-bottom d-lg-none mx-g mb-2">
+						<div id="product-swatch-mobile-4543113265187" class="product-swatch-mobile__collapse position-relative collapse bg-white border border-primary border-bottom-0 rounded-top">
+							<button class="close position-absolute sni sni__close font-size-xs" data-toggle="collapse" data-target="#product-swatch-mobile-4543113265187" aria-label="close"></button>
+							<div class="d-flex flex-wrap justify-content-center p-g">
+								<label for="color-medium" class="custom-control-label swatch medium mr-2 my-1 border-primary"></label>
+								<label for="color-dark" class="custom-control-label swatch dark mr-2 my-1"></label>
+								<label for="color-ultra-dark" class="custom-control-label swatch ultra-dark my-1"></label>
+								<p class="font-size-sm text-center w-100"><b>Medium</b> - Subtle glow, lighter skin tones</p>
+							</div>
+						</div>
+						<button class="btn btn-lg btn-primary btn-block d-lg-none m-0" type="button" data-toggle="collapse" data-target="#product-swatch-mobile-4543113265187">Select Shade</button>
+						<button class="btn btn-lg btn-primary btn-block d-none m-0" type="submit">Add to Cart</button>
+					</div>
+
 					{{> components/product-variant name="product-variant" title="1x Sunny Honey Bali Bronzing Foam" value="1-x-sunny-honey-bali-bronzing-foam" checked=true class="mb-2"}}
 					{{> components/product-variant name="product-variant" title="1x Sunny Honey Bali Bronzing Bundle" value="1-x-sunny-honey-bali-bronzing-bundle" compare=true class="mb-2"}}
 
-					<div class="d-flex mb-3">
+					<div class="d-flex mb-3 product-swatch-mobile__trigger">
 						<div class="react-quantity-box"></div>
 						<button class="btn btn-lg btn-primary btn-block ml-1 ml-lg-3" type="submit">Add to Cart</button>
 					</div>

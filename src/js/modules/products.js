@@ -77,3 +77,24 @@ $('.product-form').on('submit', function (e) {
 		snCart.addItem(parseInt(selected.id, 10), quantity);
 	}
 });
+
+$('.product-swatch-desktop .swatch').on('click', function () {
+	const attrFor = $(this).attr('for');
+	$('.product-swatch-mobile .swatch').removeClass('border-primary');
+	$(`.product-swatch-mobile .swatch[for=${attrFor}]`).addClass('border-primary');
+});
+
+$('.product-swatch-mobile .swatch').on('click', function () {
+	$(this).siblings('.swatch').removeClass('border-primary');
+	$(this).addClass('border-primary');
+});
+
+$('.product-swatch-mobile__collapse')
+	.on('show.bs.collapse', function () {
+		$(this).siblings('button[type=submit]').removeClass('d-none');
+		$(this).siblings('button[type=button]').addClass('d-none');
+	})
+	.on('hide.bs.collapse', function () {
+		$(this).siblings('button[type=submit]').addClass('d-none');
+		$(this).siblings('button[type=button]').removeClass('d-none');
+	});
