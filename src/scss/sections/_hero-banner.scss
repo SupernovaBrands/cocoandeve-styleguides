@@ -46,11 +46,6 @@
 
     &__title {
       font-weight: $btn-font-weight;
-      @include font-size($h2-font-size-lg);
-
-      @include media-breakpoint-up(lg) {
-        @include font-size($h1-font-size-xl);
-      }
     }
 
     .h4 {
