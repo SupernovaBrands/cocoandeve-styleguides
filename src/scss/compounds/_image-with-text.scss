@@ -1,17 +1,17 @@
 .image-with-text {
-  &__text-content {
-    background: white;
-    margin-top: -7em;
+	&__text-content {
+		background: white;
+		margin-top: -7em;
 
-    @include media-breakpoint-up(lg) {
-      margin-right: -40%;
-    }
+		@include media-breakpoint-up(lg) {
+			margin-right: -40%;
+		}
 
-    &--reverse {
-      @include media-breakpoint-up(lg) {
-        margin-left: -40%;
-        margin-right: auto;
-      }
-    }
-  }
+		&--reverse {
+			@include media-breakpoint-up(lg) {
+				margin-left: -40%;
+				margin-right: auto;
+			}
+		}
+	}
 }

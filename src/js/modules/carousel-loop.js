@@ -24,7 +24,6 @@ $(document).ready(function () {
           $(this).find(`.carousel-item:nth-child(${$(this).find('.carousel-item.active').index() + 1 + itemsPerSlide})`).addClass('carousel-item--last');
         }
       }
-
       if (idx >= totalItems-(itemsPerSlide-1)) {
         var it = itemsPerSlide - (totalItems - idx);
         for (var i=0; i<it; i++) {
