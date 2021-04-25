@@ -21,6 +21,34 @@
         border-radius: calc-em(10, 16);
     }
 
+    &__icon-left {
+        &:before {
+            left: calc-em(20, 36);
+            right: auto;
+        }
+    }
+
+    &__icon-white {
+        &:before {
+            color: #fff !important;
+        }
+    }
+
+    &--play-caption {
+        figcaption {
+            position: absolute;
+            top: auto;
+            bottom: calc-em(14, 16);
+            left: calc-em(40, 16);
+            font-size: calc-em(26, 16);
+
+            @include media-breakpoint-up(lg) {
+                font-size: calc-em(44, 16);
+                left: calc-em(40, 16);
+                bottom: calc-em(14, 16);
+            }
+        }
+    }
 }
 
 .video-modal {

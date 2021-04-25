@@ -6,7 +6,7 @@
 </head>
 <body>
 	<div class="page-banner-image container-fluid d-flex position-relative justify-content-center align-items-center p-0">
-		<h1 class="text-center position-absolute m-1">In a (coco) nutshell? We promise unBALIevably good hair and skin</h1>
+		<h1 class="text-center position-absolute m-1 hero-font-size">In a (coco) nutshell? We promise unBALIevably good hair and skin</h1>
 		<picture>
 			<source srcset="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/shutterstock_1458899696_1_5ae92fef-fad3-4f5d-9535-56a20209de68_1920X.jpg?v=1590066988" media="(min-width: 992px)" />
 			<img src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/Screen_Shot_2021-04-14_at_19.10.49.png?v=1618402274" class="w-100">
@@ -18,7 +18,7 @@
 		<p>Hiking up a volcano at dawn one day, an idea took root. What if she could bottle that Bali magic, with beauty products that combined luscious tropical ingredients with serious science?</p>
 		<p>Doing some digging, Emily discovered Bali really is Eden for beauty lovers, with an endless bounty of skin-and-hair-loving fruits and plants. The jewel in the crown? Raw virgin coconuts – with Indonesia being the world’s largest producer of this nourishing, revitalising superfruit.</p>
 		<p>With the final seed planted and the hero ingredient chosen, Coco & Eve was born!</p>
-		<div class="page-banner-text-overlap mobile-wrapper row position-relative align-items-center mb-lg-2 mt-5">
+		<div class="image-with-text mobile-wrapper row position-relative align-items-center mb-lg-2 mt-5">
 			<div class="col-12 col-lg-8 order-lg-last">
 				<figure class="no-gutters__in-container">
 					<picture>
@@ -28,13 +28,13 @@
 				</figure>
 			</div>
 			<div class="col-12 col-lg-4">
-				<div class="page-banner-text-overlap__text-content text-left mt-lg-0 p-2 pt-lg-3 pb-lg-3 pr-lg-3 ">
+				<div class="image-with-text__text-content text-left mt-lg-0 p-2 pt-lg-3 pb-lg-3 pr-lg-3 ">
 					<h1>We've spent years testing, developing and perfecting our formulas</h1>
 					<p>We’re passionate about our customers, so we never use drying and damaging sulfates, phthalates or parabens, (unlike 98.9% of beauty products!). We also love our furry friends, so Coco & Eve is proudly 100% vegan and cruelty-free.</p>
 				</div>
 			</div>
 		</div>
-		<div class="page-banner-text-overlap mobile-wrapper row flex-row-reverse position-relative align-items-center mb-lg-2 mt-5">
+		<div class="image-with-text mobile-wrapper row flex-row-reverse position-relative align-items-center mb-lg-2 mt-5">
 			<div class="col-12 col-lg-8 order-lg-last">
 				<figure class="no-gutters__in-container">
 					<picture>
@@ -44,7 +44,7 @@
 				</figure>
 			</div>
 			<div class="col-12 col-lg-4">
-				<div class="page-banner-text-overlap__text-content page-banner-text-overlap__text-content--reverse text-left mt-lg-0 p-2 pt-lg-3 pb-lg-3 pl-lg-3">
+				<div class="image-with-text__text-content image-with-text__text-content--reverse text-left mt-lg-0 p-2 pt-lg-3 pb-lg-3 pl-lg-3">
 					<h1>We've spent years testing, developing and perfecting our formulas</h1>
 					<p>We’re passionate about our customers, so we never use drying and damaging sulfates, phthalates or parabens, (unlike 98.9% of beauty products!). We also love our furry friends, so Coco & Eve is proudly 100% vegan and cruelty-free.</p>
 				</div>
@@ -95,14 +95,25 @@
 			</a>
 		</div>
 	</div>
-	<div class="page-video-banner container-fluid justify-content-center d-lg-flex align-items-center p-0">
-		<img src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/AboutUs_banner05_DT_2x_eb45c1bd-6215-4dcf-8ded-c38f6931fe96_800x.jpg?v=1590061791" class="ml-auto">
+
+	<div class="page-video-banner container-fluid justify-content-center d-lg-flex align-items-center p-0 position-relative">
+    <figure class="video-card video-card--play-caption ml-auto col-lg-7 p-0 position-relative mb-0">
+      <picture class=" sni sni__play video-card__icon-left video-card__icon-white position-relative" data-toggle="modal" data-src="https://www.youtube.com/embed/xwAfY_vdE9I" data-target="#videoCardModal">
+        <source srcset="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/AboutUs_banner05_DT_2x_eb45c1bd-6215-4dcf-8ded-c38f6931fe96_800x.jpg?v=1590061791" media="(min-width: 992px)">
+    		<img src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/AboutUs_banner05_DT_2x_eb45c1bd-6215-4dcf-8ded-c38f6931fe96_800x.jpg?v=1590061791" class="w-100 rounded-0">
+      </picture>
+      <figcaption>
+        <span class="text-white">Play Video</span>
+      </figcaption>
+    </figure>
 		<div class="container">
-			<div class="col-lg-5 pt-5 pb-5">
-				<h4>Behind the scenes</h4>
-				<h2>Take a sneak peak at our last shoot for Glow Figure!</h2>
-			</div>
+      <div class="row">
+  			<div class="col-lg-5 col-md-4 pt-5 pb-5">
+  				<h4>Behind the scenes</h4>
+  				<h2>Take a sneak peak at our last shoot for Glow Figure!</h2>
+  			</div>
+      </div>
 		</div>
 	</div>
-	{{> js jquery=true popper=false bootstrap=false main=true }}
+	{{> js jquery=true bootstrap=false main=true }}
 </body>

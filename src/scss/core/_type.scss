@@ -31,3 +31,11 @@ h4, .h4 {
 		color: $primary;
 	}
 }
+
+.hero-font-size {
+  @include font-size($hero-banner-font-size);
+
+  @include media-breakpoint-up(lg) {
+    @include font-size($hero-banner-font-size-lg);
+  }
+}
