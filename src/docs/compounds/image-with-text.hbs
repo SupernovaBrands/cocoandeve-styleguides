@@ -5,25 +5,25 @@
 	{{> html-head title="Image With Text" }}
 </head>
 
-<body class="mobile-wrapper">
+<body>
 	<div class="container mt-4">
 		<h1>Image With Text</h1>
-		<div class="image-with-text mobile-wrapper row position-relative align-items-center mb-lg-2 mt-5">
+		<figure class="image-with-text mobile-wrapper row position-relative align-items-center mb-lg-2 mt-5">
 			<div class="col-12 col-lg-8 order-lg-last">
-				<figure class="no-gutters__in-container">
+				<div class="no-gutters__in-container">
 					<picture>
 						<source srcset="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/AboutUs_banner03_DT_2x_dcddf728-2bc3-4e2b-9f01-4fb0b3366751_400x.jpg?v=1590061764" media="(min-width: 992px)" />
 						<img src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/AboutUs_banner03_DT_2x_1000x_a2009ba0-e16e-404e-9e49-f2c1572890ab.jpg?v=1618403172" class="w-100">
 					</picture>
-				</figure>
+				</div>
 			</div>
-			<div class="col-12 col-lg-4">
+			<figcaption class="col-12 col-lg-4">
 				<div class="image-with-text__text-content text-left mt-lg-0 p-2 pt-lg-3 pb-lg-3 pr-lg-3 ">
 					<h1>We've spent years testing, developing and perfecting our formulas</h1>
 					<p>We’re passionate about our customers, so we never use drying and damaging sulfates, phthalates or parabens, (unlike 98.9% of beauty products!). We also love our furry friends, so Coco & Eve is proudly 100% vegan and cruelty-free.</p>
 				</div>
-			</div>
-		</div>
+			</figcaption>
+		</figure>
 	</div>
 
 	{{> js jquery=true popper=false bootstrap=false main=true }}
