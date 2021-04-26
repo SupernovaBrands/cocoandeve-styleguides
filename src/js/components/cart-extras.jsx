@@ -1,4 +1,4 @@
-/* global tSettings tStrings assetUrl */
+/* global tSettings assetUrl */
 
 import React from 'react';
 

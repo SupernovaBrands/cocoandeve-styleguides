@@ -23,7 +23,6 @@ export default class CartUpsell extends React.Component {
 
 	render() {
 		const { upsell, onAddUpsell } = this.props;
-		console.log('upsell', upsell);
 		return (
 			<div className="mt-2">
 				<p className="text-center bg-primary-light m-0 py-1">{tSettings.upsell_header_title}</p>
@@ -68,33 +67,6 @@ export default class CartUpsell extends React.Component {
 							</figcaption>
 						</figure>
 					</div>
-					// <div key={item.replaceToId} className="cart-bundle-product">
-					// 	<div className="cart-bundle-product-left">
-					// 	</div>
-					// 	<div className="cart-bundle-product-right">
-					// 		<h4><a href={item.url}>{item.settings.bundle_ad_product_name}</a></h4>
-
-					// 		{item.option1 && (
-					// 			<em className={kebabCase(item.option1)}>{`${item.optLabel} : ${item.option1}`}</em>
-					// 		)}
-					// 		{item.option2 && (
-					// 			<em className={kebabCase(item.option1)}>{`${item.optLabel} : ${item.option2}`}</em>
-					// 		)}
-
-					// 		<p dangerouslySetInnerHTML={{ __html: item.settings.bundle_ad_product_desc }} />
-
-					// 		<div className="cart-bundle-product-price">
-					// 			{item.comparePrice > 0 && (
-					// 				<span className="shop-old-price">{formatMoney(item.comparePrice)}</span>
-					// 			)}
-					// 			<span>{formatMoney(item.price)}</span>
-					// 		</div>
-					// 		<button type="button" className={`btn btn-primary btn-border ${this.state.isLoading === item.targetId ? 'btn-loading' : ''}`} onClick={(e) => onAddUpsell(item, e)}>
-					// 			{item.settings.bundle_txt_button}
-					// 		</button>
-					// 	</div>
-
-					// </div>
 				))}
 			</div>
 		);

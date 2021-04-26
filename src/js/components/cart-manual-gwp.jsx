@@ -10,7 +10,6 @@ export default class CartManualGwp extends React.Component {
 		const el = this.scrollRef;
 		const left = el.scrollLeft;
 		const offset = direction === 'left' ? -116 : 116;
-		// $(el).animate('');
 		el.scrollTo({ left: left + offset });
 	}
 

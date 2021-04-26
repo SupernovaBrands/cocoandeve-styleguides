@@ -270,13 +270,10 @@ export default class Cart extends React.Component {
 				const setting = settings[i];
 				const prerequisite = setting.when_contain_product.split(',').map((v) => parseInt(v, 10));
 				const upsellVariants = setting.replace_product_bundle.split(',').map((v) => parseInt(v, 10));
-				console.log('prerequisite upsellVariants', prerequisite, upsellVariants);
 				const intersect = intersectTwo(prerequisite, variantIds);
-				console.log('intersect', intersect);
 				if (intersect.length > 0) {
 					// eslint-disable-next-line no-await-in-loop
 					const productData = await snCart.getProductInfo(setting.product_handle);
-					console.log('here productData', productData);
 					const targetId = intersect[0];
 					const replaceToId = upsellVariants[prerequisite.indexOf(targetId)];
 					const upsellItemInCart = upsellVariants.filter((value) => variantIds.includes(value));
@@ -302,8 +299,6 @@ export default class Cart extends React.Component {
 				}
 			}
 		}
-
-		console.log('here', upsellItems);
 
 		return (upsellItems.length > 0) ? upsellItems : false;
 	}

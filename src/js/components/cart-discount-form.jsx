@@ -100,6 +100,7 @@ CartDiscountForm.propTypes = {
 	isAutoDiscount: PropTypes.bool.isRequired,
 	loading: PropTypes.bool.isRequired,
 	error: PropTypes.string.isRequired,
+	errorExtra: PropTypes.bool.isRequired,
 	onApply: PropTypes.func.isRequired,
 	onRemove: PropTypes.func.isRequired,
 };

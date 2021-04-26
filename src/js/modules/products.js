@@ -5,7 +5,6 @@ import {
 $('.product-image-carousel__indicator__item').on('click', function () {
 	const carousel = $(this).data('target');
 	const index = $(this).data('index');
-	console.log('here', carousel, index);
 	$(carousel).carousel(index - 1);
 });
 
