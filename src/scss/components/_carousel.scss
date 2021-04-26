@@ -93,8 +93,8 @@
 			.col-md-3 {
 				@include media-breakpoint-up(lg) {
 					flex: 0 0 20%;
-    			max-width: 20%;
-    		}
+					max-width: 20%;
+				}
 			}
 		}
 	}
@@ -123,6 +123,10 @@
 	}
 
 	&--centered-mobile {
+		@include media-breakpoint-down(sm) {
+			overflow: hidden;
+		}
+
 		.carousel-inner {
 			@include media-breakpoint-down(sm) {
 				overflow: visible;
