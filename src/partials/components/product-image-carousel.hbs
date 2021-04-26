@@ -2,10 +2,7 @@
 	<figure id="product-image-carousel{{#if num}}{{num}}{{/if}}" class="product-image-carousel carousel slide mb-1 no-gutters__in-container" data-ride="carousel" data-interval="false" data-indicator="#product-image-carousel__indicator{{#if num}}{{num}}{{/if}}">
 		<div class="carousel-inner">
 			{{#times totalSlide}}
-			<div class="carousel-item {{#if @first}}active{{/if}}">
-				<img class="img-fluid" src="https://via.placeholder.com/750x750/EFADBA?text={{@index}}"
-					alt="Slide {{@index}}">
-			</div>
+			<img class="carousel-item {{#if @first}}active{{/if}}" src="https://via.placeholder.com/750x750/EFADBA?text={{@index}}" alt="Slide {{@index}}">
 			{{/times}}
 		</div>
 	</figure>

@@ -29,13 +29,15 @@
 	}
 }
 
-.pdp-banner {
-	&__content {
-		@include media-breakpoint-up(lg) {
-			max-width: map-get($container-max-widths, lg) / 2;
-		}
-		@include media-breakpoint-up(xl) {
-			max-width: map-get($container-max-widths, xl) / 2;
+#product-proudtobe {
+	li {
+		&:before {
+			display: flex;
+			justify-content: center;
+			flex-shrink: 0;
+			font-size: calc-em(40);
+			width: 1.2em;
+			margin-right: 0.2em;
 		}
 	}
 }

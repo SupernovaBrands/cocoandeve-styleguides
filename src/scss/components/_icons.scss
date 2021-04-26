@@ -2,10 +2,10 @@ $supernova-icon-font: "supernova-icon";
 
 @font-face {
 	font-family: $supernova-icon-font;
-	src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?8c881db79d0a74ddbad2ff9840b5e83d#supernova-icon") format("svg"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?8c881db79d0a74ddbad2ff9840b5e83d") format("truetype"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff?8c881db79d0a74ddbad2ff9840b5e83d") format("woff"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?8c881db79d0a74ddbad2ff9840b5e83d") format("woff2");
+	src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?b6044b6091e8236d5fe5d432466cc3f9#supernova-icon") format("svg"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?b6044b6091e8236d5fe5d432466cc3f9") format("truetype"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.woff?b6044b6091e8236d5fe5d432466cc3f9") format("woff"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?b6044b6091e8236d5fe5d432466cc3f9") format("woff2");
 }
 
 .sni,
@@ -42,7 +42,7 @@ $supernova-icon-map: (
 	"cruelty-free": "\f10d",
 	"delivery": "\f10e",
 	"dimethicone-free": "\f10f",
-	"ethicaly": "\f110",
+	"ethically": "\f110",
 	"facebook-square": "\f111",
 	"gluten": "\f112",
 	"instagram": "\f113",
@@ -127,9 +127,9 @@ $supernova-icon-map: (
 .sni-after.sni__dimethicone-free:after {
 	content: map-get($supernova-icon-map, "dimethicone-free");
 }
-.sni.sni__ethicaly:before,
-.sni-after.sni__ethicaly:after {
-	content: map-get($supernova-icon-map, "ethicaly");
+.sni.sni__ethically:before,
+.sni-after.sni__ethically:after {
+	content: map-get($supernova-icon-map, "ethically");
 }
 .sni.sni__facebook-square:before,
 .sni-after.sni__facebook-square:after {
