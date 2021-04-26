@@ -1,10 +1,13 @@
 .review-stars {
-  .sni__star {
-    display: inline-block;
-    font-size: calc-em(20);
-  }
+  color: $primary;
+  @include font-size($h3-font-size);
 
-  &--primary {
-    color: $primary;
+  &--secondary {
+    color: $green-light;
+    @include font-size($h3-font-size);
+
+    .sni__star-box {
+      margin: 0 calc-em(1);
+    }
   }
 }

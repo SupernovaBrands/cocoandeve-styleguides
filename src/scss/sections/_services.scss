@@ -11,15 +11,3 @@
     }
   }
 }
-
-.trustpilot-stars {
-  @include font-size($font-size-base);
-
-  .h3 {
-    @include font-size($h4-font-size-lg);
-  }
-}
-
-.text-gray {
-  color: $gray-500;
-}

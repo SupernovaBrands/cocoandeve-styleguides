@@ -1,10 +1,9 @@
 .review-item {
   img {
-    border-radius: calc-em(6) calc-em(6) 0 0;
+    border-radius: $badge-border-radius $badge-border-radius 0 0;
   }
 
   &__content {
-    padding: calc-em(20) calc-em(12) calc-em(15);
-    background: white;
+    padding: map-get($spacers, 2);
   }
 }

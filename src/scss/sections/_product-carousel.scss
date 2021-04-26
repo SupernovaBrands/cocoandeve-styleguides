@@ -1,61 +1,9 @@
-.product-carousel {
-  .shop-all {
-    min-width: calc-em(154);
-    @include media-breakpoint-up(lg) {
-      min-width: calc-em(216);
-    }
-  }
-
-  .carousel--centered {
-    padding-top: map-get($spacers, 2);
-  }
-}
-
 .product-card {
-  min-height: calc-em(533);
 
   &__title {
-    font-size: calc-em(22);
     padding: 0;
     margin-top: auto;
     min-height: calc-em(54);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  &__price {
-    margin-top: auto;
-
-    .price {
-      font-size: calc-em(22);
-    }
-  }
-
-  &__badge {
-    position: absolute;
-    width: calc-em(66);
-    height: calc-em(66);
-    right: calc-em(-5);
-    top: calc-em(-20);
-
-    @include media-breakpoint-up(lg) {
-      width: calc-em(90);
-      height: calc-em(90);
-    }
-  }
-
-  .review-stars {
-    margin-right: calc-em(5);
-    line-height: calc-em(15);
-
-    i {
-      @include font-size($font-size-base);
-
-      @include media-breakpoint-up(lg) {
-        @include font-size($h3-font-size);
-      }
-    }
   }
 
   .shop-overlay {
@@ -80,17 +28,10 @@
       display: flex;
     }
   }
-
-  .btn {
-    max-width: calc-em(165);
-    @include media-breakpoint-up(lg) {
-      max-width: 100%;
-    }
-  }
 }
 
-.item-swatch {
-  .item {
+.variant-swatch {
+  &__item {
     &.active {
       span {
         &::before {
@@ -109,14 +50,12 @@
 
       &::before {
         content: '';
-        width: auto;
-        height: auto;
         position: absolute;
         top: calc-em(-4);
         left: calc-em(-4);
         right: calc-em(-4);
         bottom: calc-em(-4);
-        border: calc-em(1) solid #7b7b7b;
+        border: calc-em(1) solid $gray-500;
         border-radius: 50%;
       }
     }

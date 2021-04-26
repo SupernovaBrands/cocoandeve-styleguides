@@ -2,10 +2,10 @@ $supernova-icon-font: "supernova-icon";
 
 @font-face {
 	font-family: $supernova-icon-font;
-	src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?3ca3f43a2e8d23265214925fced2b53e#supernova-icon") format("svg"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?3ca3f43a2e8d23265214925fced2b53e") format("truetype"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff?3ca3f43a2e8d23265214925fced2b53e") format("woff"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?3ca3f43a2e8d23265214925fced2b53e") format("woff2");
+	src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?7922174ee8a1b6b9122d9029fa3820fb#supernova-icon") format("svg"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?7922174ee8a1b6b9122d9029fa3820fb") format("truetype"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.woff?7922174ee8a1b6b9122d9029fa3820fb") format("woff"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?7922174ee8a1b6b9122d9029fa3820fb") format("woff2");
 }
 
 .sni,
@@ -39,24 +39,26 @@ $supernova-icon-map: (
 	"delivery": "\f10a",
 	"facebook-square": "\f10b",
 	"fast-delivery": "\f10c",
-	"guarantee": "\f10d",
-	"instagram": "\f10e",
-	"logo": "\f10f",
-	"minus": "\f110",
-	"moneyback": "\f111",
-	"palm-tree": "\f112",
-	"pinterest-square": "\f113",
-	"play": "\f114",
-	"plus-circle": "\f115",
-	"plus": "\f116",
-	"search": "\f117",
-	"star-box": "\f118",
-	"star": "\f119",
-	"tiktok": "\f11a",
-	"trash": "\f11b",
-	"twitter-square": "\f11c",
-	"winner-award": "\f11d",
-	"youtube": "\f11e",
+	"five-stars-box": "\f10d",
+	"five-stars": "\f10e",
+	"guarantee": "\f10f",
+	"instagram": "\f110",
+	"logo": "\f111",
+	"minus": "\f112",
+	"moneyback": "\f113",
+	"palm-tree": "\f114",
+	"pinterest-square": "\f115",
+	"play": "\f116",
+	"plus-circle": "\f117",
+	"plus": "\f118",
+	"search": "\f119",
+	"star-box": "\f11a",
+	"star": "\f11b",
+	"tiktok": "\f11c",
+	"trash": "\f11d",
+	"twitter-square": "\f11e",
+	"winner-award": "\f11f",
+	"youtube": "\f120",
 );
 
 .sni.sni__account:before,
@@ -106,6 +108,14 @@ $supernova-icon-map: (
 .sni.sni__fast-delivery:before,
 .sni-after.sni__fast-delivery:after {
 	content: map-get($supernova-icon-map, "fast-delivery");
+}
+.sni.sni__five-stars-box:before,
+.sni-after.sni__five-stars-box:after {
+	content: map-get($supernova-icon-map, "five-stars-box");
+}
+.sni.sni__five-stars:before,
+.sni-after.sni__five-stars:after {
+	content: map-get($supernova-icon-map, "five-stars");
 }
 .sni.sni__guarantee:before,
 .sni-after.sni__guarantee:after {

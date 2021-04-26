@@ -1,16 +1,17 @@
 .nav-tabs {
-  border-bottom: none; 
+  border-bottom: none;
 
   .nav-item {
     .nav-link {
       border: $nav-tabs-border-width solid $nav-tabs-border-color;
       border-radius: 0;
       border-right: 0;
-      padding: $nav-tabs-link-padding-y $nav-tabs-link-padding-x;
+      padding: $nav-link-padding-y $nav-link-padding-x;
 
       @include media-breakpoint-up(lg) {
-        @include font-size($h4-font-size-lg);        
+        @include font-size($h4-font-size-lg);
       }
+
       &.active {
         color: white;
       }
@@ -26,21 +27,19 @@
       .nav-link {
         border-radius: 0 $nav-tabs-border-radius $nav-tabs-border-radius 0;
         border-right: $nav-tabs-border-width solid $nav-tabs-border-color;
-      } 
+      }
     }
   }
 }
 
 .nav-tabs-product {
-  max-width: calc-em(510);
-  .nav-item {
-    width: 33.33%;
+  .nav-link {
+    width: calc-em(120);
   }
 }
 
 .nav-tabs-real-results {
-  max-width: calc-em(410);
-  .nav-item {
-    width: 25%;
+  .nav-link {
+    width: calc-em(90);
   }
 }

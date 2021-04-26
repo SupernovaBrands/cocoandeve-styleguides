@@ -7,8 +7,8 @@
 
 <body>
   <section class="product-carousel pt-4 text-center pb-4">
-    <div class="container px-2">
-      <ul class="nav nav-tabs mx-auto nav-tabs-product text-center mb-3" role="tablist">
+    <div class="container">
+      <ul class="nav nav-tabs mx-auto nav-tabs-product text-center mb-5 justify-content-center" role="tablist">
         <li class="nav-item">
           <a class="nav-link text-decoration-none" data-toggle="tab" href="#new" role="tab" aria-controls="new">New</a>
         </li>
@@ -20,10 +20,10 @@
         </li>
       </ul>
     </div>
-    <div class="tab-content container px-sm-0">
+    <div class="tab-content container px-sm-0 px-md-2">
       <div class="tab-pane fade show" id="new" role="tabpanel" aria-labelledby="new-tab">
         <div id="carousel-new" class="carousel slide carousel--loop" data-slide-number="4">
-          <div class="carousel--centered">
+          <div class="carousel--centered pt-2">
             <div class="carousel-inner row flex-nowrap" role="listbox">
               <div class="carousel-item col-9 col-md-3 active product-card">
                 <picture class="m-0">
@@ -34,40 +34,36 @@
                 </picture>
                 <div class="pt-2 pb-0 position-relative px-2">
                   <p class="mb-1 d-flex justify-content-center align-items-center">
-                    <span class="review-stars review-stars--primary">
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
+                    <span class="review-stars">
+                      <i class="sni sni__five-stars"></i>
                     </span>
                     <span>(42)</span>
                   </p>
-                  <p class="product-card__title text-center">
+                  <p class="product-card__title text-center d-flex align-items-center justify-content-center h4">
                     <a href="#" class="text-dark text-decoration-none">Like a Virgin Hair Masque 2</a>
                   </p>
                   <p class="product-card__price text-center">
-                    <span class="text-linethrough price">$34.90</span> <span class="text-primary price">$34.90</span>
+                    <span class="text-linethrough h4">$34.90</span> <span class="text-primary h4">$34.90</span>
                   </p>
                   <form method="get" action="javascript:void(0)" >
                     <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                    <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Shade</button>
+                    <button type="button" class="btn btn-lg btn-primary btn-choose">Choose Shade</button>
                     <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
                       <div class="shop-swatch text-center w-100 py-2">
                         <label class="mb-2"><strong>Shade: </strong><span class="shade_name">Dark</span></label>
-                        <ul class="list-unstyled item-swatch d-flex justify-content-center">
-                          <li class="item available col-3" data-available="available">
+                        <ul class="list-unstyled variant-swatch d-flex justify-content-center">
+                          <li class="variant-swatch__item available col-3" data-available="available">
                             <span data-id="32068891541539" data-val="Medium" class="shade-medium"></span>
                           </li>
-                          <li class=" item available active col-3" data-available="available">
+                          <li class=" variant-swatch__item available active col-3" data-available="available">
                             <span data-id="32068891607075" data-val="Dark" class="shade-dark"></span>
                           </li>
-                          <li class=" item available col-3" data-available="available">
+                          <li class=" variant-swatch__item available col-3" data-available="available">
                             <span data-id="32068891639843" data-val="Ultra Dark" class="shade-ultra-dark"></span>
                           </li>
                         </ul>
                       </div>
-                      <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
+                      <button type="submit" class="btn btn-lg btn-primary">
                         Add To Cart
                       </button>
                     </div>
@@ -83,37 +79,34 @@
                 </picture>
                 <div class="pt-2 pb-0 position-relative px-2">
                   <p class="mb-1 d-flex justify-content-center align-items-center">
-                    <span class="review-stars review-stars--primary">
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
+                    <span class="review-stars">
+                      <i class="sni sni__five-stars"></i>
                     </span>
+
                     <span>(42)</span>
                   </p>
-                  <p class="product-card__title text-center">
+                  <p class="product-card__title text-center h4">
                     <a href="#" class="text-dark text-decoration-none">Miracle Hair</a>
                   </p>
                   <p class="product-card__price text-center">
-                    <span class="text-linethrough price">$34.90</span> <span class="text-primary price">$34.90</span>
+                    <span class="text-linethrough h4">$34.90</span> <span class="text-primary h4">$34.90</span>
                   </p>
                   <form method="get" action="javascript:void(0)" >
                     <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                    <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Style</button>
+                    <button type="button" class="btn btn-lg btn-primary btn-choose">Choose Style</button>
                     <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
                       <div class="shop-swatch text-center w-100 py-2">
                         <label class="mb-2"><strong>Style: </strong><span class="shade_name">Girl Print: Limited edition!</span></label>
-                        <ul class="list-unstyled item-swatch d-flex justify-content-center">
-                          <li class=" item available active col-3" data-available="available">
+                        <ul class="list-unstyled variant-swatch d-flex justify-content-center">
+                          <li class=" variant-swatch__item available active col-3" data-available="available">
                             <span data-id="32068891607075" data-val="Girl Print" class="style-girl-print"></span>
                           </li>
-                          <li class=" item available col-3" data-available="available">
+                          <li class=" variant-swatch__item available col-3" data-available="available">
                             <span data-id="32068891639843" data-val="Print Leaf" class="style-leaf-print"></span>
                           </li>
                         </ul>
                       </div>
-                      <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
+                      <button type="submit" class="btn btn-lg btn-primary">
                         Add To Cart
                       </button>
                     </div>
@@ -129,40 +122,37 @@
                 </picture>
                 <div class="pt-2 pb-0 position-relative px-2">
                   <p class="mb-1 d-flex justify-content-center align-items-center">
-                    <span class="review-stars review-stars--primary">
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
+                    <span class="review-stars">
+                      <i class="sni sni__five-stars"></i>
                     </span>
+
                     <span>(42)</span>
                   </p>
-                  <p class="product-card__title text-center">
+                  <p class="product-card__title text-center h4">
                     <a href="#" class="text-dark text-decoration-none">Like a Virgin Hair Masque 2</a>
                   </p>
                   <p class="product-card__price text-center">
-                    <span class="text-linethrough price">$34.90</span> <span class="text-primary price">$34.90</span>
+                    <span class="text-linethrough h4">$34.90</span> <span class="text-primary h4">$34.90</span>
                   </p>
                   <form method="get" action="javascript:void(0)" >
                     <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                    <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Shade</button>
+                    <button type="button" class="btn btn-lg btn-primary btn-choose">Choose Shade</button>
                     <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
                       <div class="shop-swatch text-center w-100 py-2">
                         <label class="mb-2"><strong>Shade: </strong><span class="shade_name">Dark</span></label>
-                        <ul class="list-unstyled item-swatch d-flex justify-content-center">
-                          <li class="item available col-3" data-available="available">
+                        <ul class="list-unstyled variant-swatch d-flex justify-content-center">
+                          <li class="variant-swatch__item available col-3" data-available="available">
                             <span data-id="32068891541539" data-val="Medium" class="shade-medium"></span>
                           </li>
-                          <li class=" item available active col-3" data-available="available">
+                          <li class=" variant-swatch__item available active col-3" data-available="available">
                             <span data-id="32068891607075" data-val="Dark" class="shade-dark"></span>
                           </li>
-                          <li class=" item available col-3" data-available="available">
+                          <li class=" variant-swatch__item available col-3" data-available="available">
                             <span data-id="32068891639843" data-val="Ultra Dark" class="shade-ultra-dark"></span>
                           </li>
                         </ul>
                       </div>
-                      <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
+                      <button type="submit" class="btn btn-lg btn-primary">
                         Add To Cart
                       </button>
                     </div>
@@ -178,40 +168,37 @@
                 </picture>
                 <div class="pt-2 pb-0 position-relative px-2">
                   <p class="mb-1 d-flex justify-content-center align-items-center">
-                    <span class="review-stars review-stars--primary">
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
+                    <span class="review-stars">
+                      <i class="sni sni__five-stars"></i>
                     </span>
+
                     <span>(42)</span>
                   </p>
-                  <p class="product-card__title text-center">
+                  <p class="product-card__title text-center h4">
                     <a href="#" class="text-dark text-decoration-none">Like a Virgin Hair Masque 2</a>
                   </p>
                   <p class="product-card__price text-center">
-                    <span class="text-linethrough price">$34.90</span> <span class="text-primary price">$34.90</span>
+                    <span class="text-linethrough h4">$34.90</span> <span class="text-primary h4">$34.90</span>
                   </p>
                   <form method="get" action="javascript:void(0)" >
                     <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                    <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Shade</button>
+                    <button type="button" class="btn btn-lg btn-primary btn-choose">Choose Shade</button>
                     <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
                       <div class="shop-swatch text-center w-100 py-2">
                         <label class="mb-2"><strong>Shade: </strong><span class="shade_name">Dark</span></label>
-                        <ul class="list-unstyled item-swatch d-flex justify-content-center">
-                          <li class="item available col-3" data-available="available">
+                        <ul class="list-unstyled variant-swatch d-flex justify-content-center">
+                          <li class="variant-swatch__item available col-3" data-available="available">
                             <span data-id="32068891541539" data-val="Medium" class="shade-medium"></span>
                           </li>
-                          <li class=" item available active col-3" data-available="available">
+                          <li class=" variant-swatch__item available active col-3" data-available="available">
                             <span data-id="32068891607075" data-val="Dark" class="shade-dark"></span>
                           </li>
-                          <li class=" item available col-3" data-available="available">
+                          <li class=" variant-swatch__item available col-3" data-available="available">
                             <span data-id="32068891639843" data-val="Ultra Dark" class="shade-ultra-dark"></span>
                           </li>
                         </ul>
                       </div>
-                      <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
+                      <button type="submit" class="btn btn-lg btn-primary">
                         Add To Cart
                       </button>
                     </div>
@@ -227,40 +214,37 @@
                 </picture>
                 <div class="pt-2 pb-0 position-relative px-2">
                   <p class="mb-1 d-flex justify-content-center align-items-center">
-                    <span class="review-stars review-stars--primary">
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
+                    <span class="review-stars">
+                      <i class="sni sni__five-stars"></i>
                     </span>
+
                     <span>(42)</span>
                   </p>
-                  <p class="product-card__title text-center">
+                  <p class="product-card__title text-center h4">
                     <a href="#" class="text-dark text-decoration-none">Like a Virgin Hair Masque 2</a>
                   </p>
                   <p class="product-card__price text-center">
-                    <span class="text-linethrough price">$34.90</span> <span class="text-primary price">$34.90</span>
+                    <span class="text-linethrough h4">$34.90</span> <span class="text-primary h4">$34.90</span>
                   </p>
                   <form method="get" action="javascript:void(0)" >
                     <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                    <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Shade</button>
+                    <button type="button" class="btn btn-lg btn-primary btn-choose">Choose Shade</button>
                     <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
                       <div class="shop-swatch text-center w-100 py-2">
                         <label class="mb-2"><strong>Shade: </strong><span class="shade_name">Dark</span></label>
-                        <ul class="list-unstyled item-swatch d-flex justify-content-center">
-                          <li class="item available col-3" data-available="available">
+                        <ul class="list-unstyled variant-swatch d-flex justify-content-center">
+                          <li class="variant-swatch__item available col-3" data-available="available">
                             <span data-id="32068891541539" data-val="Medium" class="shade-medium"></span>
                           </li>
-                          <li class=" item available active col-3" data-available="available">
+                          <li class=" variant-swatch__item available active col-3" data-available="available">
                             <span data-id="32068891607075" data-val="Dark" class="shade-dark"></span>
                           </li>
-                          <li class=" item available col-3" data-available="available">
+                          <li class=" variant-swatch__item available col-3" data-available="available">
                             <span data-id="32068891639843" data-val="Ultra Dark" class="shade-ultra-dark"></span>
                           </li>
                         </ul>
                       </div>
-                      <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
+                      <button type="submit" class="btn btn-lg btn-primary">
                         Add To Cart
                       </button>
                     </div>
@@ -268,7 +252,7 @@
                 </div>
               </div>
               <div class="carousel-item col-9 col-md-3 product-card">
-                <div class="product-card__badge" data-badge="bronzing-self-tanner-drops">
+                <div class="circle-badge position-absolute">
                   <picture>
                     <source srcset="https://via.placeholder.com/90x90/F3436C" media="(min-width: 992px)"/>
                     <source srcset="https://via.placeholder.com/66x66/F3436C"/>
@@ -283,40 +267,37 @@
                 </picture>
                 <div class="pt-2 pb-0 position-relative px-2">
                   <p class="mb-1 d-flex justify-content-center align-items-center">
-                    <span class="review-stars review-stars--primary">
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
+                    <span class="review-stars">
+                      <i class="sni sni__five-stars"></i>
                     </span>
+
                     <span>(42)</span>
                   </p>
-                  <p class="product-card__title text-center">
+                  <p class="product-card__title text-center h4">
                     <a href="#" class="text-dark text-decoration-none">Like a Virgin Hair Masque 2</a>
                   </p>
                   <p class="product-card__price text-center">
-                    <span class="text-linethrough price">$34.90</span> <span class="text-primary price">$34.90</span>
+                    <span class="text-linethrough h4">$34.90</span> <span class="text-primary h4">$34.90</span>
                   </p>
                   <form method="get" action="javascript:void(0)" >
                     <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                    <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Shade</button>
+                    <button type="button" class="btn btn-lg btn-primary btn-choose">Choose Shade</button>
                     <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
                       <div class="shop-swatch text-center w-100 py-2">
                         <label class="mb-2"><strong>Shade: </strong><span class="shade_name">Dark</span></label>
-                        <ul class="list-unstyled item-swatch d-flex justify-content-center">
-                          <li class="item available col-3" data-available="available">
+                        <ul class="list-unstyled variant-swatch d-flex justify-content-center">
+                          <li class="variant-swatch__item available col-3" data-available="available">
                             <span data-id="32068891541539" data-val="Medium" class="shade-medium"></span>
                           </li>
-                          <li class=" item available active col-3" data-available="available">
+                          <li class=" variant-swatch__item available active col-3" data-available="available">
                             <span data-id="32068891607075" data-val="Dark" class="shade-dark"></span>
                           </li>
-                          <li class=" item available col-3" data-available="available">
+                          <li class=" variant-swatch__item available col-3" data-available="available">
                             <span data-id="32068891639843" data-val="Ultra Dark" class="shade-ultra-dark"></span>
                           </li>
                         </ul>
                       </div>
-                      <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
+                      <button type="submit" class="btn btn-lg btn-primary">
                         Add To Cart
                       </button>
                     </div>
@@ -324,7 +305,7 @@
                 </div>
               </div>
               <div class="carousel-item col-9 col-md-3 product-card">
-                <div class="product-card__badge" data-badge="bronzing-self-tanner-drops">
+                <div class="circle-badge position-absolute">
                   <picture>
                     <source srcset="https://via.placeholder.com/90x90/F3436C" media="(min-width: 992px)"/>
                     <source srcset="https://via.placeholder.com/66x66/F3436C"/>
@@ -339,40 +320,37 @@
                 </picture>
                 <div class="pt-2 pb-0 position-relative px-2">
                   <p class="mb-1 d-flex justify-content-center align-items-center">
-                    <span class="review-stars review-stars--primary">
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
+                    <span class="review-stars">
+                      <i class="sni sni__five-stars"></i>
                     </span>
+
                     <span>(42)</span>
                   </p>
-                  <p class="product-card__title text-center">
+                  <p class="product-card__title text-center h4">
                     <a href="#" class="text-dark text-decoration-none">Like a Virgin Hair Masque 2</a>
                   </p>
                   <p class="product-card__price text-center">
-                    <span class="text-linethrough price">$34.90</span> <span class="text-primary price">$34.90</span>
+                    <span class="text-linethrough h4">$34.90</span> <span class="text-primary h4">$34.90</span>
                   </p>
                   <form method="get" action="javascript:void(0)" >
                     <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                    <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Shade</button>
+                    <button type="button" class="btn btn-lg btn-primary btn-choose">Choose Shade</button>
                     <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
                       <div class="shop-swatch text-center w-100 py-2">
                         <label class="mb-2"><strong>Shade: </strong><span class="shade_name">Dark</span></label>
-                        <ul class="list-unstyled item-swatch d-flex justify-content-center">
-                          <li class="item available col-3" data-available="available">
+                        <ul class="list-unstyled variant-swatch d-flex justify-content-center">
+                          <li class="variant-swatch__item available col-3" data-available="available">
                             <span data-id="32068891541539" data-val="Medium" class="shade-medium"></span>
                           </li>
-                          <li class=" item available active col-3" data-available="available">
+                          <li class=" variant-swatch__item available active col-3" data-available="available">
                             <span data-id="32068891607075" data-val="Dark" class="shade-dark"></span>
                           </li>
-                          <li class=" item available col-3" data-available="available">
+                          <li class=" variant-swatch__item available col-3" data-available="available">
                             <span data-id="32068891639843" data-val="Ultra Dark" class="shade-ultra-dark"></span>
                           </li>
                         </ul>
                       </div>
-                      <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
+                      <button type="submit" class="btn btn-lg btn-primary">
                         Add To Cart
                       </button>
                     </div>
@@ -393,7 +371,7 @@
       </div>
       <div class="tab-pane fade show active " id="bestsellers" role="tabpanel" aria-labelledby="bestsellers-tab">
         <div id="carousel-bestsellers" class="carousel slide carousel--loop" data-slide-number="4">
-          <div class="carousel--centered">
+          <div class="carousel--centered pt-2">
             <div class="carousel-inner row flex-nowrap" role="listbox">
               <div class="carousel-item col-9 col-md-3 active product-card">
                 <picture class="m-0">
@@ -404,40 +382,37 @@
                 </picture>
                 <div class="pt-2 pb-0 position-relative px-2">
                   <p class="mb-1 d-flex justify-content-center align-items-center">
-                    <span class="review-stars review-stars--primary">
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
+                    <span class="review-stars">
+                      <i class="sni sni__five-stars"></i>
                     </span>
+
                     <span>(42)</span>
                   </p>
-                  <p class="product-card__title text-center">
+                  <p class="product-card__title text-center h4">
                     <a href="#" class="text-dark text-decoration-none">Like a Virgin Hair Masque 2</a>
                   </p>
                   <p class="product-card__price text-center">
-                    <span class="text-linethrough price">$34.90</span> <span class="text-primary price">$34.90</span>
+                    <span class="text-linethrough h4">$34.90</span> <span class="text-primary h4">$34.90</span>
                   </p>
                   <form method="get" action="javascript:void(0)" >
                     <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                    <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Shade</button>
+                    <button type="button" class="btn btn-lg btn-primary btn-choose">Choose Shade</button>
                     <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
                       <div class="shop-swatch text-center w-100 py-2">
                         <label class="mb-2"><strong>Shade: </strong><span class="shade_name">Dark</span></label>
-                        <ul class="list-unstyled item-swatch d-flex justify-content-center">
-                          <li class="item available col-3" data-available="available">
+                        <ul class="list-unstyled variant-swatch d-flex justify-content-center">
+                          <li class="variant-swatch__item available col-3" data-available="available">
                             <span data-id="32068891541539" data-val="Medium" class="shade-medium"></span>
                           </li>
-                          <li class=" item available active col-3" data-available="available">
+                          <li class=" variant-swatch__item available active col-3" data-available="available">
                             <span data-id="32068891607075" data-val="Dark" class="shade-dark"></span>
                           </li>
-                          <li class=" item available col-3" data-available="available">
+                          <li class=" variant-swatch__item available col-3" data-available="available">
                             <span data-id="32068891639843" data-val="Ultra Dark" class="shade-ultra-dark"></span>
                           </li>
                         </ul>
                       </div>
-                      <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
+                      <button type="submit" class="btn btn-lg btn-primary">
                         Add To Cart
                       </button>
                     </div>
@@ -453,37 +428,34 @@
                 </picture>
                 <div class="pt-2 pb-0 position-relative px-2">
                   <p class="mb-1 d-flex justify-content-center align-items-center">
-                    <span class="review-stars review-stars--primary">
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
+                    <span class="review-stars">
+                      <i class="sni sni__five-stars"></i>
                     </span>
+
                     <span>(42)</span>
                   </p>
-                  <p class="product-card__title text-center">
+                  <p class="product-card__title text-center h4">
                     <a href="#" class="text-dark text-decoration-none">Miracle Hair</a>
                   </p>
                   <p class="product-card__price text-center">
-                    <span class="text-linethrough price">$34.90</span> <span class="text-primary price">$34.90</span>
+                    <span class="text-linethrough h4">$34.90</span> <span class="text-primary h4">$34.90</span>
                   </p>
                   <form method="get" action="javascript:void(0)" >
                     <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                    <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Style</button>
+                    <button type="button" class="btn btn-lg btn-primary btn-choose">Choose Style</button>
                     <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
                       <div class="shop-swatch text-center w-100 py-2">
                         <label class="mb-2"><strong>Style: </strong><span class="shade_name">Girl Print: Limited edition!</span></label>
-                        <ul class="list-unstyled item-swatch d-flex justify-content-center">
-                          <li class=" item available active col-3" data-available="available">
+                        <ul class="list-unstyled variant-swatch d-flex justify-content-center">
+                          <li class=" variant-swatch__item available active col-3" data-available="available">
                             <span data-id="32068891607075" data-val="Girl Print" class="style-girl-print"></span>
                           </li>
-                          <li class=" item available col-3" data-available="available">
+                          <li class=" variant-swatch__item available col-3" data-available="available">
                             <span data-id="32068891639843" data-val="Print Leaf" class="style-leaf-print"></span>
                           </li>
                         </ul>
                       </div>
-                      <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
+                      <button type="submit" class="btn btn-lg btn-primary">
                         Add To Cart
                       </button>
                     </div>
@@ -499,40 +471,37 @@
                 </picture>
                 <div class="pt-2 pb-0 position-relative px-2">
                   <p class="mb-1 d-flex justify-content-center align-items-center">
-                    <span class="review-stars review-stars--primary">
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
+                    <span class="review-stars">
+                      <i class="sni sni__five-stars"></i>
                     </span>
+
                     <span>(42)</span>
                   </p>
-                  <p class="product-card__title text-center">
+                  <p class="product-card__title text-center h4">
                     <a href="#" class="text-dark text-decoration-none">Like a Virgin Hair Masque 2</a>
                   </p>
                   <p class="product-card__price text-center">
-                    <span class="text-linethrough price">$34.90</span> <span class="text-primary price">$34.90</span>
+                    <span class="text-linethrough h4">$34.90</span> <span class="text-primary h4">$34.90</span>
                   </p>
                   <form method="get" action="javascript:void(0)" >
                     <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                    <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Shade</button>
+                    <button type="button" class="btn btn-lg btn-primary btn-choose">Choose Shade</button>
                     <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
                       <div class="shop-swatch text-center w-100 py-2">
                         <label class="mb-2"><strong>Shade: </strong><span class="shade_name">Dark</span></label>
-                        <ul class="list-unstyled item-swatch d-flex justify-content-center">
-                          <li class="item available col-3" data-available="available">
+                        <ul class="list-unstyled variant-swatch d-flex justify-content-center">
+                          <li class="variant-swatch__item available col-3" data-available="available">
                             <span data-id="32068891541539" data-val="Medium" class="shade-medium"></span>
                           </li>
-                          <li class=" item available active col-3" data-available="available">
+                          <li class=" variant-swatch__item available active col-3" data-available="available">
                             <span data-id="32068891607075" data-val="Dark" class="shade-dark"></span>
                           </li>
-                          <li class=" item available col-3" data-available="available">
+                          <li class=" variant-swatch__item available col-3" data-available="available">
                             <span data-id="32068891639843" data-val="Ultra Dark" class="shade-ultra-dark"></span>
                           </li>
                         </ul>
                       </div>
-                      <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
+                      <button type="submit" class="btn btn-lg btn-primary">
                         Add To Cart
                       </button>
                     </div>
@@ -548,40 +517,37 @@
                 </picture>
                 <div class="pt-2 pb-0 position-relative px-2">
                   <p class="mb-1 d-flex justify-content-center align-items-center">
-                    <span class="review-stars review-stars--primary">
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
+                    <span class="review-stars">
+                      <i class="sni sni__five-stars"></i>
                     </span>
+
                     <span>(42)</span>
                   </p>
-                  <p class="product-card__title text-center">
+                  <p class="product-card__title text-center h4">
                     <a href="#" class="text-dark text-decoration-none">Like a Virgin Hair Masque 2</a>
                   </p>
                   <p class="product-card__price text-center">
-                    <span class="text-linethrough price">$34.90</span> <span class="text-primary price">$34.90</span>
+                    <span class="text-linethrough h4">$34.90</span> <span class="text-primary h4">$34.90</span>
                   </p>
                   <form method="get" action="javascript:void(0)" >
                     <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                    <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Shade</button>
+                    <button type="button" class="btn btn-lg btn-primary btn-choose">Choose Shade</button>
                     <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
                       <div class="shop-swatch text-center w-100 py-2">
                         <label class="mb-2"><strong>Shade: </strong><span class="shade_name">Dark</span></label>
-                        <ul class="list-unstyled item-swatch d-flex justify-content-center">
-                          <li class="item available col-3" data-available="available">
+                        <ul class="list-unstyled variant-swatch d-flex justify-content-center">
+                          <li class="variant-swatch__item available col-3" data-available="available">
                             <span data-id="32068891541539" data-val="Medium" class="shade-medium"></span>
                           </li>
-                          <li class=" item available active col-3" data-available="available">
+                          <li class=" variant-swatch__item available active col-3" data-available="available">
                             <span data-id="32068891607075" data-val="Dark" class="shade-dark"></span>
                           </li>
-                          <li class=" item available col-3" data-available="available">
+                          <li class=" variant-swatch__item available col-3" data-available="available">
                             <span data-id="32068891639843" data-val="Ultra Dark" class="shade-ultra-dark"></span>
                           </li>
                         </ul>
                       </div>
-                      <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
+                      <button type="submit" class="btn btn-lg btn-primary">
                         Add To Cart
                       </button>
                     </div>
@@ -597,40 +563,37 @@
                 </picture>
                 <div class="pt-2 pb-0 position-relative px-2">
                   <p class="mb-1 d-flex justify-content-center align-items-center">
-                    <span class="review-stars review-stars--primary">
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
+                    <span class="review-stars">
+                      <i class="sni sni__five-stars"></i>
                     </span>
+
                     <span>(42)</span>
                   </p>
-                  <p class="product-card__title text-center">
+                  <p class="product-card__title text-center h4">
                     <a href="#" class="text-dark text-decoration-none">Like a Virgin Hair Masque 2</a>
                   </p>
                   <p class="product-card__price text-center">
-                    <span class="text-linethrough price">$34.90</span> <span class="text-primary price">$34.90</span>
+                    <span class="text-linethrough h4">$34.90</span> <span class="text-primary h4">$34.90</span>
                   </p>
                   <form method="get" action="javascript:void(0)" >
                     <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                    <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Shade</button>
+                    <button type="button" class="btn btn-lg btn-primary btn-choose">Choose Shade</button>
                     <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
                       <div class="shop-swatch text-center w-100 py-2">
                         <label class="mb-2"><strong>Shade: </strong><span class="shade_name">Dark</span></label>
-                        <ul class="list-unstyled item-swatch d-flex justify-content-center">
-                          <li class="item available col-3" data-available="available">
+                        <ul class="list-unstyled variant-swatch d-flex justify-content-center">
+                          <li class="variant-swatch__item available col-3" data-available="available">
                             <span data-id="32068891541539" data-val="Medium" class="shade-medium"></span>
                           </li>
-                          <li class=" item available active col-3" data-available="available">
+                          <li class=" variant-swatch__item available active col-3" data-available="available">
                             <span data-id="32068891607075" data-val="Dark" class="shade-dark"></span>
                           </li>
-                          <li class=" item available col-3" data-available="available">
+                          <li class=" variant-swatch__item available col-3" data-available="available">
                             <span data-id="32068891639843" data-val="Ultra Dark" class="shade-ultra-dark"></span>
                           </li>
                         </ul>
                       </div>
-                      <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
+                      <button type="submit" class="btn btn-lg btn-primary">
                         Add To Cart
                       </button>
                     </div>
@@ -638,7 +601,7 @@
                 </div>
               </div>
               <div class="carousel-item col-9 col-md-3 product-card">
-                <div class="product-card__badge" data-badge="bronzing-self-tanner-drops">
+                <div class="circle-badge position-absolute">
                   <picture>
                     <source srcset="https://via.placeholder.com/90x90/F3436C" media="(min-width: 992px)"/>
                     <source srcset="https://via.placeholder.com/66x66/F3436C"/>
@@ -653,40 +616,37 @@
                 </picture>
                 <div class="pt-2 pb-0 position-relative px-2">
                   <p class="mb-1 d-flex justify-content-center align-items-center">
-                    <span class="review-stars review-stars--primary">
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
+                    <span class="review-stars">
+                      <i class="sni sni__five-stars"></i>
                     </span>
+
                     <span>(42)</span>
                   </p>
-                  <p class="product-card__title text-center">
+                  <p class="product-card__title text-center h4">
                     <a href="#" class="text-dark text-decoration-none">Like a Virgin Hair Masque 2</a>
                   </p>
                   <p class="product-card__price text-center">
-                    <span class="text-linethrough price">$34.90</span> <span class="text-primary price">$34.90</span>
+                    <span class="text-linethrough h4">$34.90</span> <span class="text-primary h4">$34.90</span>
                   </p>
                   <form method="get" action="javascript:void(0)" >
                     <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                    <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Shade</button>
+                    <button type="button" class="btn btn-lg btn-primary btn-choose">Choose Shade</button>
                     <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
                       <div class="shop-swatch text-center w-100 py-2">
                         <label class="mb-2"><strong>Shade: </strong><span class="shade_name">Dark</span></label>
-                        <ul class="list-unstyled item-swatch d-flex justify-content-center">
-                          <li class="item available col-3" data-available="available">
+                        <ul class="list-unstyled variant-swatch d-flex justify-content-center">
+                          <li class="variant-swatch__item available col-3" data-available="available">
                             <span data-id="32068891541539" data-val="Medium" class="shade-medium"></span>
                           </li>
-                          <li class=" item available active col-3" data-available="available">
+                          <li class=" variant-swatch__item available active col-3" data-available="available">
                             <span data-id="32068891607075" data-val="Dark" class="shade-dark"></span>
                           </li>
-                          <li class=" item available col-3" data-available="available">
+                          <li class=" variant-swatch__item available col-3" data-available="available">
                             <span data-id="32068891639843" data-val="Ultra Dark" class="shade-ultra-dark"></span>
                           </li>
                         </ul>
                       </div>
-                      <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
+                      <button type="submit" class="btn btn-lg btn-primary">
                         Add To Cart
                       </button>
                     </div>
@@ -694,7 +654,7 @@
                 </div>
               </div>
               <div class="carousel-item col-9 col-md-3 product-card">
-                <div class="product-card__badge" data-badge="bronzing-self-tanner-drops">
+                <div class="circle-badge position-absolute">
                   <picture>
                     <source srcset="https://via.placeholder.com/90x90/F3436C" media="(min-width: 992px)"/>
                     <source srcset="https://via.placeholder.com/66x66/F3436C"/>
@@ -709,40 +669,37 @@
                 </picture>
                 <div class="pt-2 pb-0 position-relative px-2">
                   <p class="mb-1 d-flex justify-content-center align-items-center">
-                    <span class="review-stars review-stars--primary">
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
-                      <i class="sni sni__star"></i>
+                    <span class="review-stars">
+                      <i class="sni sni__five-stars"></i>
                     </span>
+
                     <span>(42)</span>
                   </p>
-                  <p class="product-card__title text-center">
+                  <p class="product-card__title text-center h4">
                     <a href="#" class="text-dark text-decoration-none">Like a Virgin Hair Masque 2</a>
                   </p>
                   <p class="product-card__price text-center">
-                    <span class="text-linethrough price">$34.90</span> <span class="text-primary price">$34.90</span>
+                    <span class="text-linethrough h4">$34.90</span> <span class="text-primary h4">$34.90</span>
                   </p>
                   <form method="get" action="javascript:void(0)" >
                     <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                    <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Shade</button>
+                    <button type="button" class="btn btn-lg btn-primary btn-choose">Choose Shade</button>
                     <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
                       <div class="shop-swatch text-center w-100 py-2">
                         <label class="mb-2"><strong>Shade: </strong><span class="shade_name">Dark</span></label>
-                        <ul class="list-unstyled item-swatch d-flex justify-content-center">
-                          <li class="item available col-3" data-available="available">
+                        <ul class="list-unstyled variant-swatch d-flex justify-content-center">
+                          <li class="variant-swatch__item available col-3" data-available="available">
                             <span data-id="32068891541539" data-val="Medium" class="shade-medium"></span>
                           </li>
-                          <li class=" item available active col-3" data-available="available">
+                          <li class=" variant-swatch__item available active col-3" data-available="available">
                             <span data-id="32068891607075" data-val="Dark" class="shade-dark"></span>
                           </li>
-                          <li class=" item available col-3" data-available="available">
+                          <li class=" variant-swatch__item available col-3" data-available="available">
                             <span data-id="32068891639843" data-val="Ultra Dark" class="shade-ultra-dark"></span>
                           </li>
                         </ul>
                       </div>
-                      <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
+                      <button type="submit" class="btn btn-lg btn-primary">
                         Add To Cart
                       </button>
                     </div>
@@ -763,7 +720,7 @@
       </div>
       <div class="tab-pane fade" id="value-sets" role="tabpanel" aria-labelledby="value-sets-tab">
        <div id="carousel-value-sets" class="carousel slide carousel--loop" data-slide-number="4">
-        <div class="carousel--centered">
+        <div class="carousel--centered pt-2">
           <div class="carousel-inner row flex-nowrap" role="listbox">
             <div class="carousel-item col-9 col-md-3 active product-card">
               <picture class="m-0">
@@ -774,40 +731,36 @@
               </picture>
               <div class="pt-2 pb-0 position-relative px-2">
                 <p class="mb-1 d-flex justify-content-center align-items-center">
-                  <span class="review-stars review-stars--primary">
-                    <i class="sni sni__star"></i>
-                    <i class="sni sni__star"></i>
-                    <i class="sni sni__star"></i>
-                    <i class="sni sni__star"></i>
-                    <i class="sni sni__star"></i>
+                  <span class="review-stars">
+                    <i class="sni sni__five-stars"></i>
                   </span>
                   <span>(42)</span>
                 </p>
-                <p class="product-card__title text-center">
+                <p class="product-card__title text-center h4">
                   <a href="#" class="text-dark text-decoration-none">Like a Virgin Hair Masque 2</a>
                 </p>
                 <p class="product-card__price text-center">
-                  <span class="text-linethrough price">$34.90</span> <span class="text-primary price">$34.90</span>
+                  <span class="text-linethrough h4">$34.90</span> <span class="text-primary h4">$34.90</span>
                 </p>
                 <form method="get" action="javascript:void(0)" >
                   <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                  <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Shade</button>
+                  <button type="button" class="btn btn-lg btn-primary btn-choose">Choose Shade</button>
                   <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
                     <div class="shop-swatch text-center w-100 py-2">
                       <label class="mb-2"><strong>Shade: </strong><span class="shade_name">Dark</span></label>
-                      <ul class="list-unstyled item-swatch d-flex justify-content-center">
-                        <li class="item available col-3" data-available="available">
+                      <ul class="list-unstyled variant-swatch d-flex justify-content-center">
+                        <li class="variant-swatch__item available col-3" data-available="available">
                           <span data-id="32068891541539" data-val="Medium" class="shade-medium"></span>
                         </li>
-                        <li class=" item available active col-3" data-available="available">
+                        <li class=" variant-swatch__item available active col-3" data-available="available">
                           <span data-id="32068891607075" data-val="Dark" class="shade-dark"></span>
                         </li>
-                        <li class=" item available col-3" data-available="available">
+                        <li class=" variant-swatch__item available col-3" data-available="available">
                           <span data-id="32068891639843" data-val="Ultra Dark" class="shade-ultra-dark"></span>
                         </li>
                       </ul>
                     </div>
-                    <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
+                    <button type="submit" class="btn btn-lg btn-primary">
                       Add To Cart
                     </button>
                   </div>
@@ -823,37 +776,33 @@
               </picture>
               <div class="pt-2 pb-0 position-relative px-2">
                 <p class="mb-1 d-flex justify-content-center align-items-center">
-                  <span class="review-stars review-stars--primary">
-                    <i class="sni sni__star"></i>
-                    <i class="sni sni__star"></i>
-                    <i class="sni sni__star"></i>
-                    <i class="sni sni__star"></i>
-                    <i class="sni sni__star"></i>
+                  <span class="review-stars">
+                    <i class="sni sni__five-stars"></i>
                   </span>
                   <span>(42)</span>
                 </p>
-                <p class="product-card__title text-center">
+                <p class="product-card__title text-center h4">
                   <a href="#" class="text-dark text-decoration-none">Miracle Hair</a>
                 </p>
                 <p class="product-card__price text-center">
-                  <span class="text-linethrough price">$34.90</span> <span class="text-primary price">$34.90</span>
+                  <span class="text-linethrough h4">$34.90</span> <span class="text-primary h4">$34.90</span>
                 </p>
                 <form method="get" action="javascript:void(0)" >
                   <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                  <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Style</button>
+                  <button type="button" class="btn btn-lg btn-primary btn-choose">Choose Style</button>
                   <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
                     <div class="shop-swatch text-center w-100 py-2">
                       <label class="mb-2"><strong>Style: </strong><span class="shade_name">Girl Print: Limited edition!</span></label>
-                      <ul class="list-unstyled item-swatch d-flex justify-content-center">
-                        <li class=" item available active col-3" data-available="available">
+                      <ul class="list-unstyled variant-swatch d-flex justify-content-center">
+                        <li class=" variant-swatch__item available active col-3" data-available="available">
                           <span data-id="32068891607075" data-val="Girl Print" class="style-girl-print"></span>
                         </li>
-                        <li class=" item available col-3" data-available="available">
+                        <li class=" variant-swatch__item available col-3" data-available="available">
                           <span data-id="32068891639843" data-val="Print Leaf" class="style-leaf-print"></span>
                         </li>
                       </ul>
                     </div>
-                    <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
+                    <button type="submit" class="btn btn-lg btn-primary">
                       Add To Cart
                     </button>
                   </div>
@@ -869,40 +818,36 @@
               </picture>
               <div class="pt-2 pb-0 position-relative px-2">
                 <p class="mb-1 d-flex justify-content-center align-items-center">
-                  <span class="review-stars review-stars--primary">
-                    <i class="sni sni__star"></i>
-                    <i class="sni sni__star"></i>
-                    <i class="sni sni__star"></i>
-                    <i class="sni sni__star"></i>
-                    <i class="sni sni__star"></i>
+                  <span class="review-stars">
+                    <i class="sni sni__five-stars"></i>
                   </span>
                   <span>(42)</span>
                 </p>
-                <p class="product-card__title text-center">
+                <p class="product-card__title text-center h4">
                   <a href="#" class="text-dark text-decoration-none">Like a Virgin Hair Masque 2</a>
                 </p>
                 <p class="product-card__price text-center">
-                  <span class="text-linethrough price">$34.90</span> <span class="text-primary price">$34.90</span>
+                  <span class="text-linethrough h4">$34.90</span> <span class="text-primary h4">$34.90</span>
                 </p>
                 <form method="get" action="javascript:void(0)" >
                   <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                  <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Shade</button>
+                  <button type="button" class="btn btn-lg btn-primary btn-choose">Choose Shade</button>
                   <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
                     <div class="shop-swatch text-center w-100 py-2">
                       <label class="mb-2"><strong>Shade: </strong><span class="shade_name">Dark</span></label>
-                      <ul class="list-unstyled item-swatch d-flex justify-content-center">
-                        <li class="item available col-3" data-available="available">
+                      <ul class="list-unstyled variant-swatch d-flex justify-content-center">
+                        <li class="variant-swatch__item available col-3" data-available="available">
                           <span data-id="32068891541539" data-val="Medium" class="shade-medium"></span>
                         </li>
-                        <li class=" item available active col-3" data-available="available">
+                        <li class=" variant-swatch__item available active col-3" data-available="available">
                           <span data-id="32068891607075" data-val="Dark" class="shade-dark"></span>
                         </li>
-                        <li class=" item available col-3" data-available="available">
+                        <li class=" variant-swatch__item available col-3" data-available="available">
                           <span data-id="32068891639843" data-val="Ultra Dark" class="shade-ultra-dark"></span>
                         </li>
                       </ul>
                     </div>
-                    <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
+                    <button type="submit" class="btn btn-lg btn-primary">
                       Add To Cart
                     </button>
                   </div>
@@ -918,40 +863,36 @@
               </picture>
               <div class="pt-2 pb-0 position-relative px-2">
                 <p class="mb-1 d-flex justify-content-center align-items-center">
-                  <span class="review-stars review-stars--primary">
-                    <i class="sni sni__star"></i>
-                    <i class="sni sni__star"></i>
-                    <i class="sni sni__star"></i>
-                    <i class="sni sni__star"></i>
-                    <i class="sni sni__star"></i>
+                  <span class="review-stars">
+                    <i class="sni sni__five-stars"></i>
                   </span>
                   <span>(42)</span>
                 </p>
-                <p class="product-card__title text-center">
+                <p class="product-card__title text-center h4">
                   <a href="#" class="text-dark text-decoration-none">Like a Virgin Hair Masque 2</a>
                 </p>
                 <p class="product-card__price text-center">
-                  <span class="text-linethrough price">$34.90</span> <span class="text-primary price">$34.90</span>
+                  <span class="text-linethrough h4">$34.90</span> <span class="text-primary h4">$34.90</span>
                 </p>
                 <form method="get" action="javascript:void(0)" >
                   <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                  <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Shade</button>
+                  <button type="button" class="btn btn-lg btn-primary btn-choose">Choose Shade</button>
                   <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
                     <div class="shop-swatch text-center w-100 py-2">
                       <label class="mb-2"><strong>Shade: </strong><span class="shade_name">Dark</span></label>
-                      <ul class="list-unstyled item-swatch d-flex justify-content-center">
-                        <li class="item available col-3" data-available="available">
+                      <ul class="list-unstyled variant-swatch d-flex justify-content-center">
+                        <li class="variant-swatch__item available col-3" data-available="available">
                           <span data-id="32068891541539" data-val="Medium" class="shade-medium"></span>
                         </li>
-                        <li class=" item available active col-3" data-available="available">
+                        <li class=" variant-swatch__item available active col-3" data-available="available">
                           <span data-id="32068891607075" data-val="Dark" class="shade-dark"></span>
                         </li>
-                        <li class=" item available col-3" data-available="available">
+                        <li class=" variant-swatch__item available col-3" data-available="available">
                           <span data-id="32068891639843" data-val="Ultra Dark" class="shade-ultra-dark"></span>
                         </li>
                       </ul>
                     </div>
-                    <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
+                    <button type="submit" class="btn btn-lg btn-primary">
                       Add To Cart
                     </button>
                   </div>
@@ -967,40 +908,36 @@
               </picture>
               <div class="pt-2 pb-0 position-relative px-2">
                 <p class="mb-1 d-flex justify-content-center align-items-center">
-                  <span class="review-stars review-stars--primary">
-                    <i class="sni sni__star"></i>
-                    <i class="sni sni__star"></i>
-                    <i class="sni sni__star"></i>
-                    <i class="sni sni__star"></i>
-                    <i class="sni sni__star"></i>
+                  <span class="review-stars">
+                    <i class="sni sni__five-stars"></i>
                   </span>
                   <span>(42)</span>
                 </p>
-                <p class="product-card__title text-center">
+                <p class="product-card__title text-center h4">
                   <a href="#" class="text-dark text-decoration-none">Like a Virgin Hair Masque 2</a>
                 </p>
                 <p class="product-card__price text-center">
-                  <span class="text-linethrough price">$34.90</span> <span class="text-primary price">$34.90</span>
+                  <span class="text-linethrough h4">$34.90</span> <span class="text-primary h4">$34.90</span>
                 </p>
                 <form method="get" action="javascript:void(0)" >
                   <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                  <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Shade</button>
+                  <button type="button" class="btn btn-lg btn-primary btn-choose">Choose Shade</button>
                   <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
                     <div class="shop-swatch text-center w-100 py-2">
                       <label class="mb-2"><strong>Shade: </strong><span class="shade_name">Dark</span></label>
-                      <ul class="list-unstyled item-swatch d-flex justify-content-center">
-                        <li class="item available col-3" data-available="available">
+                      <ul class="list-unstyled variant-swatch d-flex justify-content-center">
+                        <li class="variant-swatch__item available col-3" data-available="available">
                           <span data-id="32068891541539" data-val="Medium" class="shade-medium"></span>
                         </li>
-                        <li class=" item available active col-3" data-available="available">
+                        <li class=" variant-swatch__item available active col-3" data-available="available">
                           <span data-id="32068891607075" data-val="Dark" class="shade-dark"></span>
                         </li>
-                        <li class=" item available col-3" data-available="available">
+                        <li class=" variant-swatch__item available col-3" data-available="available">
                           <span data-id="32068891639843" data-val="Ultra Dark" class="shade-ultra-dark"></span>
                         </li>
                       </ul>
                     </div>
-                    <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
+                    <button type="submit" class="btn btn-lg btn-primary">
                       Add To Cart
                     </button>
                   </div>
@@ -1008,7 +945,7 @@
               </div>
             </div>
             <div class="carousel-item col-9 col-md-3 product-card">
-              <div class="product-card__badge" data-badge="bronzing-self-tanner-drops">
+              <div class="circle-badge position-absolute">
                 <picture>
                   <source srcset="https://via.placeholder.com/90x90/F3436C" media="(min-width: 992px)"/>
                   <source srcset="https://via.placeholder.com/66x66/F3436C"/>
@@ -1023,40 +960,36 @@
               </picture>
               <div class="pt-2 pb-0 position-relative px-2">
                 <p class="mb-1 d-flex justify-content-center align-items-center">
-                  <span class="review-stars review-stars--primary">
-                    <i class="sni sni__star"></i>
-                    <i class="sni sni__star"></i>
-                    <i class="sni sni__star"></i>
-                    <i class="sni sni__star"></i>
-                    <i class="sni sni__star"></i>
+                  <span class="review-stars">
+                    <i class="sni sni__five-stars"></i>
                   </span>
                   <span>(42)</span>
                 </p>
-                <p class="product-card__title text-center">
+                <p class="product-card__title text-center h4">
                   <a href="#" class="text-dark text-decoration-none">Like a Virgin Hair Masque 2</a>
                 </p>
                 <p class="product-card__price text-center">
-                  <span class="text-linethrough price">$34.90</span> <span class="text-primary price">$34.90</span>
+                  <span class="text-linethrough h4">$34.90</span> <span class="text-primary h4">$34.90</span>
                 </p>
                 <form method="get" action="javascript:void(0)" >
                   <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                  <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Shade</button>
+                  <button type="button" class="btn btn-lg btn-primary btn-choose">Choose Shade</button>
                   <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
                     <div class="shop-swatch text-center w-100 py-2">
                       <label class="mb-2"><strong>Shade: </strong><span class="shade_name">Dark</span></label>
-                      <ul class="list-unstyled item-swatch d-flex justify-content-center">
-                        <li class="item available col-3" data-available="available">
+                      <ul class="list-unstyled variant-swatch d-flex justify-content-center">
+                        <li class="variant-swatch__item available col-3" data-available="available">
                           <span data-id="32068891541539" data-val="Medium" class="shade-medium"></span>
                         </li>
-                        <li class=" item available active col-3" data-available="available">
+                        <li class=" variant-swatch__item available active col-3" data-available="available">
                           <span data-id="32068891607075" data-val="Dark" class="shade-dark"></span>
                         </li>
-                        <li class=" item available col-3" data-available="available">
+                        <li class=" variant-swatch__item available col-3" data-available="available">
                           <span data-id="32068891639843" data-val="Ultra Dark" class="shade-ultra-dark"></span>
                         </li>
                       </ul>
                     </div>
-                    <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
+                    <button type="submit" class="btn btn-lg btn-primary">
                       Add To Cart
                     </button>
                   </div>
@@ -1064,7 +997,7 @@
               </div>
             </div>
             <div class="carousel-item col-9 col-md-3 product-card">
-              <div class="product-card__badge" data-badge="bronzing-self-tanner-drops">
+              <div class="circle-badge position-absolute">
                 <picture>
                   <source srcset="https://via.placeholder.com/90x90/F3436C" media="(min-width: 992px)"/>
                   <source srcset="https://via.placeholder.com/66x66/F3436C"/>
@@ -1079,40 +1012,36 @@
               </picture>
               <div class="pt-2 pb-0 position-relative px-2">
                 <p class="mb-1 d-flex justify-content-center align-items-center">
-                  <span class="review-stars review-stars--primary">
-                    <i class="sni sni__star"></i>
-                    <i class="sni sni__star"></i>
-                    <i class="sni sni__star"></i>
-                    <i class="sni sni__star"></i>
-                    <i class="sni sni__star"></i>
+                  <span class="review-stars">
+                    <i class="sni sni__five-stars"></i>
                   </span>
                   <span>(42)</span>
                 </p>
-                <p class="product-card__title text-center">
+                <p class="product-card__title text-center h4">
                   <a href="#" class="text-dark text-decoration-none">Like a Virgin Hair Masque 2</a>
                 </p>
                 <p class="product-card__price text-center">
-                  <span class="text-linethrough price">$34.90</span> <span class="text-primary price">$34.90</span>
+                  <span class="text-linethrough h4">$34.90</span> <span class="text-primary h4">$34.90</span>
                 </p>
                 <form method="get" action="javascript:void(0)" >
                   <input type="hidden" name="id" value="xxxxx" tabindex="0"/>
-                  <button type="button" class="btn btn-lg btn-primary px-2 w-100 btn-choose">Choose Shade</button>
+                  <button type="button" class="btn btn-lg btn-primary btn-choose">Choose Shade</button>
                   <div class="shop-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2">
                     <div class="shop-swatch text-center w-100 py-2">
                       <label class="mb-2"><strong>Shade: </strong><span class="shade_name">Dark</span></label>
-                      <ul class="list-unstyled item-swatch d-flex justify-content-center">
-                        <li class="item available col-3" data-available="available">
+                      <ul class="list-unstyled variant-swatch d-flex justify-content-center">
+                        <li class="variant-swatch__item available col-3" data-available="available">
                           <span data-id="32068891541539" data-val="Medium" class="shade-medium"></span>
                         </li>
-                        <li class=" item available active col-3" data-available="available">
+                        <li class=" variant-swatch__item available active col-3" data-available="available">
                           <span data-id="32068891607075" data-val="Dark" class="shade-dark"></span>
                         </li>
-                        <li class=" item available col-3" data-available="available">
+                        <li class=" variant-swatch__item available col-3" data-available="available">
                           <span data-id="32068891639843" data-val="Ultra Dark" class="shade-ultra-dark"></span>
                         </li>
                       </ul>
                     </div>
-                    <button type="submit" class="btn btn-lg btn-primary px-2 w-100">
+                    <button type="submit" class="btn btn-lg btn-primary">
                       Add To Cart
                     </button>
                   </div>
@@ -1131,7 +1060,7 @@
         </a>
       </div>
     </div>
-    <a href="#" class="btn btn-lg btn-outline-primary mt-sm-2 mt-md-4 shop-all">Shop All</a>
+    <a href="#" class="btn btn-lg btn-outline-primary mt-sm-2 mt-md-4">Shop All</a>
   </section>
   {{> js jquery=true popper=false bootstrap=true main=true }}
 </body>

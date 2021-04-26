@@ -212,6 +212,8 @@ $badge-font-size: 1em;
 $badge-padding-y: 0;
 $badge-padding-x: calc-em(10);
 $badge-border-radius: calc-em(6);
+$badge-circle-width: calc-em(66);
+$badge-circle-height: calc-em(66);
 
 // Nav Tabs
 $nav-tabs-link-active-bg: $primary;
@@ -221,6 +223,3 @@ $nav-tabs-border-radius: calc-em(6);
 $nav-tabs-border-color: black;
 $nav-tabs-link-hover-border-color: black;
 $nav-tabs-link-active-border-color: black;
-
-$nav-tabs-link-padding-y: calc-em(10);
-$nav-tabs-link-padding-x: calc-em(16);

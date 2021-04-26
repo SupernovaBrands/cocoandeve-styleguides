@@ -2,3 +2,15 @@
   min-width: calc-em(54);
   line-height: $line-height-base;
 }
+
+.circle-badge {
+  width: $badge-circle-width;
+  height: $badge-circle-height;
+  right: calc-em(-5);
+  top: calc-em(-20);
+
+  @include media-breakpoint-up(lg) {
+    width: calc-em(90);
+    height: calc-em(90);
+  }
+}

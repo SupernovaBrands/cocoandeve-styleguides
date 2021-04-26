@@ -1,11 +1,4 @@
 .hero-carousel {
-
-  .offcanvas-active & {
-    .carousel {
-      z-index: -1;
-    }
-  }
-
   .carousel-indicators {
     position: absolute;
     left: 0;
@@ -31,42 +24,6 @@
       &.active {
         background-color: white;
       }
-    }
-  }
-
-  .carousel-caption {
-    right: 0%;
-    top: 50%;
-    left: 0%;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-
-    &__title {
-      font-weight: $btn-font-weight;
-      @include font-size($h2-font-size-lg);
-
-      @include media-breakpoint-up(lg) {
-        @include font-size($h1-font-size-xl);
-      }
-    }
-
-    .h4 {
-      margin: 0 0 calc-em(20);
-      max-width: calc-em(207);
-
-      @include media-breakpoint-up(lg) {
-        max-width: calc-em(575);
-        margin: 0 0 calc-em(37);
-      }
-    }
-
-    .btn {
-      min-width: calc-em(154);
-      border-radius: calc-em(6);
-      padding: calc-em(11) calc-em(30) calc-em(15);
     }
   }
 }
