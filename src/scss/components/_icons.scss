@@ -2,10 +2,10 @@ $supernova-icon-font: "supernova-icon";
 
 @font-face {
 	font-family: $supernova-icon-font;
-	src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?7bc14a5ef3b0bd4a4b83fbe18de17248#supernova-icon") format("svg"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?7bc14a5ef3b0bd4a4b83fbe18de17248") format("truetype"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff?7bc14a5ef3b0bd4a4b83fbe18de17248") format("woff"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?7bc14a5ef3b0bd4a4b83fbe18de17248") format("woff2");
+	src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?3aa5655c39ef1e96f0f77d9c1a29f2cf#supernova-icon") format("svg"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?3aa5655c39ef1e96f0f77d9c1a29f2cf") format("truetype"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.woff?3aa5655c39ef1e96f0f77d9c1a29f2cf") format("woff"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?3aa5655c39ef1e96f0f77d9c1a29f2cf") format("woff2");
 }
 
 .sni,
@@ -13,6 +13,7 @@ url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?7bc14a5ef3b0bd4a4b83fbe1
 	display: flex;
 }
 
+.sni-text,
 .sni:before,
 .sni-after:after {
 	font-family: supernova-icon !important;
@@ -47,10 +48,11 @@ $supernova-icon-map: (
 	"plus-circle": "\f113",
 	"plus": "\f114",
 	"search": "\f115",
-	"tiktok": "\f116",
-	"trash": "\f117",
-	"twitter-square": "\f118",
-	"youtube": "\f119",
+	"tag": "\f116",
+	"tiktok": "\f117",
+	"trash": "\f118",
+	"twitter-square": "\f119",
+	"youtube": "\f11a",
 );
 
 .sni.sni__account:before,
@@ -136,6 +138,10 @@ $supernova-icon-map: (
 .sni.sni__search:before,
 .sni-after.sni__search:after {
 	content: map-get($supernova-icon-map, "search");
+}
+.sni.sni__tag:before,
+.sni-after.sni__tag:after {
+	content: map-get($supernova-icon-map, "tag");
 }
 .sni.sni__tiktok:before,
 .sni-after.sni__tiktok:after {

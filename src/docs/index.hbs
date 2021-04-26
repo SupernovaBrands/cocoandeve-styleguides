@@ -15,7 +15,7 @@
 		<h1>Coco &amp; Eve Style Guide</h1>
 		<div class="row mt-3">
 			{{#each folders as |folder|}}
-			<div class="col-12 col-lg-6 mb-3 d-flex flex-column">
+			<div class="col-12 col-lg-6 mb-3 d-flex flex-column align-items-start">
 				<h2>{{titleCase folder}}</h2>
 				{{#with (lookup ../filenames folder) as |names|}}
 				{{#each names as |file|}}
