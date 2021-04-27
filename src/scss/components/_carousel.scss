@@ -90,7 +90,7 @@
 		}
 
 		&[data-slide-number="5"] {
-			.col-md-3 {
+			.carousel-item {
 				@include media-breakpoint-up(lg) {
 					flex: 0 0 20%;
 					max-width: 20%;
