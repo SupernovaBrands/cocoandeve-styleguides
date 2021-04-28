@@ -8,6 +8,7 @@
     "start": "gulp",
     "build": "gulp build",
     "watch": "gulp watch",
+    "lint": "eslint .",
     "server": "gulp server"
   },
   "repository": {
@@ -46,6 +47,7 @@
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^3.0.0",
+    "husky": "^6.0.0",
     "webpack": "^5.28.0"
   },
   "dependencies": {
