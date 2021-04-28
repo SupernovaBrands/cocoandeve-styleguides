@@ -346,7 +346,7 @@ export default class Cart extends React.Component {
 
 		// to set custom code error message from theme settings when disccode is match
 		const customCodes = tSettings.custom_codes_code.toUpperCase();
-		if (!data.valid && data.discode && data.discode.toUpperCase() == customCodes && tSettings.enable_custom_codes) {
+		if (!data.valid && data.discode && data.discode.toUpperCase() === customCodes && tSettings.enable_custom_codes) {
 			error = tSettings.custom_error_codes_msg;
 		}
 
@@ -582,21 +582,11 @@ export default class Cart extends React.Component {
 					</div>
 
 					{!loadingInit && (
-						<div className="modal-footer justify-content-start">
-							<div className="row">
+						<div className="modal-footer">
+							<div className="row w-100">
 								<span className="col-8 font-size-lg font-weight-bold">{tStrings.cart_total}</span>
 								<span className="col-4 font-size-lg font-weight-bold text-right">{formatMoney(totalPrice)}</span>
-								<div className="col-6 my-1">
-									<button
-										type="button"
-										className="btn btn-lg btn-block btn-primary px-1"
-										disabled={loadingDiscount || manualGwp.loading}
-										onClick={this.submitForm}
-									>
-										afterpay
-									</button>
-								</div>
-								<div className="col-6 my-1">
+								<div className="col-12 my-1">
 									<button
 										type="button"
 										className="btn btn-lg btn-block btn-primary px-1"
