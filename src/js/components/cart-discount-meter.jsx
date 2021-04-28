@@ -20,7 +20,7 @@ const CartDiscountMeter = (props) => {
 
 	return (
 		<>
-			<h4>{text}</h4>
+			<p className="mb-1">{text}</p>
 			<div className="progress mb-3">
 				<div
 					className="progress-bar"

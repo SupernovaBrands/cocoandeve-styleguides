@@ -1,4 +1,4 @@
-/* global tSettings tStrings assetUrl */
+/* global tSettings assetUrl */
 
 import React from 'react';
 
@@ -19,10 +19,6 @@ const CartExtras = () => (
 				<img className="d-block mx-auto my-2" src={tSettings.cart_payment_icons} width="240" height="98" alt="Payments" />
 			)}
 		</a>
-
-		{tStrings.cart_question && (
-			<div className="my-4 text-center" dangerouslySetInnerHTML={{ __html: tStrings.cart_question }} />
-		)}
 	</>
 );
 

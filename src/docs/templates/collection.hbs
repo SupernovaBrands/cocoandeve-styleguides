@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	{{> html-head title="Collection" }}
+</head>
+
+<body>
+	<div class="container mt-4">
+    <figure class="image-with-text mobile-wrapper row position-relative align-items-center mb-lg-2 mt-5">
+      <div class="col-12 col-lg-8 order-lg-last">
+        <div class="no-gutters__in-container">
+          <picture>
+            <source srcset="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/EUBF_desk_coll_6dcd5236-f00e-438f-9f82-49e405b3240d_791X398.jpg?v=1606285880" media="(min-width: 992px)" />
+            <img src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/EUBF_mob_coll_706c1f00-877d-44cd-a23e-db861fd1574a_800x.jpg" class="w-100">
+          </picture>
+        </div>
+      </div>
+      <figcaption class="col-12 col-lg-4">
+        <div class="image-with-text__text-content text-left mt-lg-0 p-2 pt-lg-3 pb-lg-3 pr-lg-3 ">
+          <h1>Shop All</h1>
+          <p>Explore award-winning Bali Beauty! Shop Coco & Eve hair, body, tan and gifts. Fast worldwide delivery, unBALIevable results!</p>
+        </div>
+      </figcaption>
+    </figure>
+		<div class="row">
+			<aside class="col-3 d-none d-lg-block">
+				<ul class="list-unstyled collection-sidebar p-3">
+					<li class="mb-1"><a href="javascript:void(0)" class="font-weight-bold">Filter By</a></li>
+					<li class="mb-1"><a href="javascript:void(0)">Tan</a></li>
+					<li class="mb-1"><a href="javascript:void(0)">Hair</a></li>
+					<li class="mb-1"><a href="javascript:void(0)" class="active">Body</a></li>
+					<li class="mb-1"><a href="javascript:void(0)">Kits & Gift</a></li>
+					<li class="mb-1"><a href="javascript:void(0)">All Accesories</a></li>
+					<li><a href="javascript:void(0)">Shop All</a></li>
+				</ul>
+			</aside>
+			<div class="col-12 col-lg-9">
+				<div class="row collection-grid">
+					<div class="col-6 d-lg-none">
+						<select class="p-1 rounded mb-2 custom-select">
+							<option>Filter by</option>
+							<option value="tan">Tan</option>
+							<option value="hair">Hair</option>
+							<option value="body">Body</option>
+							<option value="kits-gifts">Kit & Gifts</option>
+							<option value="all-accesories">All Accesories</option>
+							<option value="all">Shop All</option>
+						</select>
+					</div>
+					<div class="col-6 col-lg-5 d-lg-flex align-items-center justify-content-end">
+						<span class="d-none d-lg-inline-block font-weight-bold mr-lg-1">Sort By</span>
+						<select class="p-1 rounded mb-2 mb-lg-0 custom-select">
+							<option value="Manual">Featured</option>
+							<option value="best-selling">Best Selling</option>
+							<option value="title-ascending">Alphabetically, A-Z</option>
+							<option value="title-descending">Alphabetically, Z-A</option>
+							<option value="price-ascending">Price, low to high</option>
+							<option value="price-descending">Price, high to low</option>
+							<option value="created-ascending">Date, old to new</option>
+							<option value="created-descending">Date, new to old</option>
+						</select>
+					</div>
+					<h2 class="col-12 col-lg-7 order-lg-first">Shop All</h2>
+					<div class="col-12"><hr class=" mt-0"></div>
+					<div class="col-6 col-lg-4">
+						Product Card
+					</div>
+					<div class="col-6 col-lg-4">
+						Product Card
+					</div>
+					<div class="col-6 col-lg-4">
+						Product Card
+					</div>
+					<div class="col-6 col-lg-4">
+						Product Card
+					</div>
+					<div class="col-6 col-lg-4">
+						Product Card
+					</div>
+					<div class="col-6 col-lg-4">
+						Product Card
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{{> js jquery=true main=true }}
+</body>
+</html>

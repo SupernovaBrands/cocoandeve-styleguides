@@ -6,8 +6,8 @@
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<title>Coco &amp; Eve Style Guides</title>
 
-	<link rel="stylesheet" href="/cocoandeve-styleguides/dist/css/main.critical.css">
-	<link rel="stylesheet" href="/cocoandeve-styleguides/dist/css/main.css">
+	<link rel="stylesheet" href="/cocoandeve-styleguides/css/main.critical.css">
+	<link rel="stylesheet" href="/cocoandeve-styleguides/css/main.css">
 </head>
 
 <body class="mobile-wrapper">
@@ -15,11 +15,11 @@
 		<h1>Coco &amp; Eve Style Guide</h1>
 		<div class="row mt-3">
 			{{#each folders as |folder|}}
-			<div class="col-12 col-lg-6 mb-3 d-flex flex-column">
+			<div class="col-12 col-lg-6 mb-3 d-flex flex-column align-items-start">
 				<h2>{{titleCase folder}}</h2>
 				{{#with (lookup ../filenames folder) as |names|}}
 				{{#each names as |file|}}
-				<a href="docs/{{lookup file 'path'}}">{{lookup file 'name'}}</a>
+				<a href="{{lookup file 'path'}}">{{lookup file 'name'}}</a>
 				{{/each}}
 				{{/with}}
 			</div>

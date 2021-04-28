@@ -1,3 +1,5 @@
+/* global screenLG */
+
 $(document).ready(function () {
 	if ($('.carousel--loop').length > 0) {
 		// moving element carousel item depending of items per slide
@@ -8,7 +10,7 @@ $(document).ready(function () {
 			let itemsPerSlide = $(this).data('slide-number') ? $(this).data('slide-number') : 3;
 			const totalItems = $(this).find('.carousel-item').length;
 
-			if (window.screenLG > window.innerWidth) {
+			if (screenLG > window.innerWidth) {
 				// set 1 for mobile
 				itemsPerSlide = 2;
 			}

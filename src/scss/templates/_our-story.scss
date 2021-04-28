@@ -1,0 +1,26 @@
+.page-banner-image {  
+	h1 {
+		color: white;
+	}
+}
+
+.page-video-banner {
+	background-color: #f6e4ef;
+	img {
+		width: 100%;
+
+		@include media-breakpoint-up(lg) {
+			width: auto;
+		}
+	}
+
+	.container {
+		@include media-breakpoint-up(lg) {
+			position: absolute;
+		}
+	}
+}
+
+.page-award-slider {
+	background-color: #f9eeca;
+}

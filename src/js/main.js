@@ -1,3 +1,5 @@
+/* global screenLG */
+
 import '~mod/globals';
 
 import React from 'react';
@@ -9,7 +11,7 @@ if ($('#cart-drawer').length > 0) {
 	ReactDOM.render(
 		React.createElement(Cart, {}, null),
 		document.querySelector('#cart-drawer'),
-		);
+	);
 }
 
 const qtyBoxes = document.querySelectorAll('.react-quantity-box');
@@ -25,32 +27,32 @@ if (navCategory.length > 0) {
 	import(/* webpackChunkName: 'nav-category' */ '~mod/nav-category');
 }
 
-const carouselLoop = $(".carousel--loop");
+const carouselLoop = $('.carousel--loop');
 if (carouselLoop.length > 0) {
-  import(/* webpackChunkName: 'carousel-loop' */ '~mod/carousel-loop');
+	import(/* webpackChunkName: 'carousel-loop' */ '~mod/carousel-loop');
 }
 
 $(document).ready(function () {
-  window.showGrid = function () {
-    jQuery('body').append('<style type="text/css">.gridoverlay{position:fixed;top:0;left:50%;transform:translateX(-50%);z-index:9999}.gridoverlay .col{height:100vh}.gridoverlay .col:before{content:"";display:block;background-color:rgba(0,123,255,0.3);height:100%}</style><div class="container gridoverlay"><div class="row"><div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div></div></div>');
-  };
+	window.showGrid = function () {
+		jQuery('body').append('<style type="text/css">.gridoverlay{position:fixed;top:0;left:50%;transform:translateX(-50%);z-index:9999}.gridoverlay .col{height:100vh}.gridoverlay .col:before{content:"";display:block;background-color:rgba(0,123,255,0.3);height:100%}</style><div class="container gridoverlay"><div class="row"><div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div></div></div>');
+	};
 
-  if (/[?&]?show-grid=true[&]?/.test(window.location.search)) {
-    window.showGrid();
-  }
+	if (/[?&]?show-grid=true[&]?/.test(window.location.search)) {
+		window.showGrid();
+	}
 
-  const scrollToElement = (targetSelector) => {
-    $('html, body').animate({ scrollTop: $(targetSelector).offset().top - 70 }, 600);
-  };
+	const scrollToElement = (targetSelector) => {
+		$('html, body').animate({ scrollTop: $(targetSelector).offset().top - 70 }, 600);
+	};
 
-  $('.scroll-to-element').on('click', function (e) {
-    e.preventDefault();
-    scrollToElement($(this).attr('href'));
-  });
+	$('.scroll-to-element').on('click', function (e) {
+		e.preventDefault();
+		scrollToElement($(this).attr('href'));
+	});
 
-  if (window.location.hash === '#how-to' && $('#blog__how-to').length > 0) {
-    scrollToElement('#blog__how-to');
-  }
+	if (window.location.hash === '#how-to' && $('#blog__how-to').length > 0) {
+		scrollToElement('#blog__how-to');
+	}
 
 	// Search boxes
 	const searchBox = $('.search-box');
@@ -138,146 +140,145 @@ $(document).ready(function () {
 	// video carousel
 	if ($('.carousel--centered').length > 0) {
 		$('.carousel--centered').each(function () {
-      if (!$(this).hasClass('carousel--loop')) {
-  			if ($(this).find('.carousel-item').length > 1) {
-  				const loop = $(this).find('.carousel-item').length > 5;
-  				// hide prev/next nav when no item prev class on page load
-  				if ($(this).find('.carousel-item-prev').length === 0) {
-  					$(this).find('a[data-slide="prev"]').addClass('d-none');
-  				}
+			if (!$(this).hasClass('carousel--loop')) {
+				if ($(this).find('.carousel-item').length > 1) {
+					const loop = $(this).find('.carousel-item').length > 5;
+					// hide prev/next nav when no item prev class on page load
+					if ($(this).find('.carousel-item-prev').length === 0) {
+						$(this).find('a[data-slide="prev"]').addClass('d-none');
+					}
 
-  				if ($(this).find('.carousel-item-next').length === 0) {
-  					$(this).find('a[data-slide="next"]').addClass('d-none');
-  				}
+					if ($(this).find('.carousel-item-next').length === 0) {
+						$(this).find('a[data-slide="next"]').addClass('d-none');
+					}
 
-  				$(this).on('slide.bs.carousel', function (e) {
-  					$(this).find('a[data-slide]').removeClass('d-none');
-  					if (e.direction === 'left') {
-  						$(this).find('.carousel-item-prev').addClass('carousel-item-prev').addClass('carousel-item-prev--out');
-  						if ($(this).find('.carousel-item-next').next().length > 0) {
-  							$(this).find('.carousel-item-next').next()
-  							.addClass('carousel-item-next')
-  							.removeClass('carousel-item-prev--out carousel-item-next--out');
-  						} else if (loop) {
-  							$(this).find('.carousel-item').first()
-  							.addClass('carousel-item-next')
-  							.removeClass('carousel-item-prev--out carousel-item-next--out');
-  							$(this).find('.carousel-item').first().next()
-  							.addClass('carousel-item-next--out')
-  							.removeClass('carousel-item-prev--out');
-  						}
-  					} else {
-  						$(this).find('.carousel-item-next').addClass('carousel-item-next').addClass('carousel-item-next--out');
-  						if ($(this).find('.carousel-item-prev').prev().length > 0) {
-  							$(this).find('.carousel-item-prev').prev()
-  							.addClass('carousel-item-prev')
-  							.removeClass('carousel-item-prev--out carousel-item-next--out');
-  						} else if (loop) {
-  							$(this).find('.carousel-item').last()
-  							.addClass('carousel-item-prev')
-  							.removeClass('carousel-item-prev--out carousel-item-next--out');
-  							$(this).find('.carousel-item').last().prev()
-  							.addClass('carousel-item-prev--out')
-  							.removeClass('carousel-item-next--out');
-  						}
-  					}
-  				});
+					$(this).on('slide.bs.carousel', function (e) {
+						$(this).find('a[data-slide]').removeClass('d-none');
+						if (e.direction === 'left') {
+							$(this).find('.carousel-item-prev').addClass('carousel-item-prev').addClass('carousel-item-prev--out');
+							if ($(this).find('.carousel-item-next').next().length > 0) {
+								$(this).find('.carousel-item-next').next()
+								.addClass('carousel-item-next')
+								.removeClass('carousel-item-prev--out carousel-item-next--out');
+							} else if (loop) {
+								$(this).find('.carousel-item').first()
+								.addClass('carousel-item-next')
+								.removeClass('carousel-item-prev--out carousel-item-next--out');
+								$(this).find('.carousel-item').first().next()
+								.addClass('carousel-item-next--out')
+								.removeClass('carousel-item-prev--out');
+							}
+						} else {
+							$(this).find('.carousel-item-next').addClass('carousel-item-next').addClass('carousel-item-next--out');
+							if ($(this).find('.carousel-item-prev').prev().length > 0) {
+								$(this).find('.carousel-item-prev').prev()
+								.addClass('carousel-item-prev')
+								.removeClass('carousel-item-prev--out carousel-item-next--out');
+							} else if (loop) {
+								$(this).find('.carousel-item').last()
+								.addClass('carousel-item-prev')
+								.removeClass('carousel-item-prev--out carousel-item-next--out');
+								$(this).find('.carousel-item').last().prev()
+								.addClass('carousel-item-prev--out')
+								.removeClass('carousel-item-next--out');
+							}
+						}
+					});
 
-  				let currentIndex;
-  				let prevSlide;
-  				let nextSlide;
-  				let prev2Slide;
-  				let next2Slide;
-  				let carouselLength;
-  				$(this).on('slid.bs.carousel', function () {
-  					carouselLength = $(this).find('.carousel-item').length;
-  					currentIndex = $(this).find('.carousel-item.active').index();
+					let currentIndex;
+					let prevSlide;
+					let nextSlide;
+					let prev2Slide;
+					let next2Slide;
+					let carouselLength;
+					$(this).on('slid.bs.carousel', function () {
+						carouselLength = $(this).find('.carousel-item').length;
+						currentIndex = $(this).find('.carousel-item.active').index();
 
-  					if (loop) {
-  						prevSlide = $(this).find('.carousel-item').eq(currentIndex > 0 ? currentIndex - 1 : carouselLength - 1);
-  						nextSlide = $(this).find('.carousel-item').eq(currentIndex < (carouselLength - 1) ? currentIndex + 1 : 0);
-  						prev2Slide = $(this).find('.carousel-item').eq(currentIndex - 2 + (currentIndex < 1 ? carouselLength : 0));
-  						next2Slide = $(this).find('.carousel-item').eq(currentIndex + 2 - (currentIndex > (carouselLength - 2) ? carouselLength : 0));
+						if (loop) {
+							prevSlide = $(this).find('.carousel-item').eq(currentIndex > 0 ? currentIndex - 1 : carouselLength - 1);
+							nextSlide = $(this).find('.carousel-item').eq(currentIndex < (carouselLength - 1) ? currentIndex + 1 : 0);
+							prev2Slide = $(this).find('.carousel-item').eq(currentIndex - 2 + (currentIndex < 1 ? carouselLength : 0));
+							next2Slide = $(this).find('.carousel-item').eq(currentIndex + 2 - (currentIndex > (carouselLength - 2) ? carouselLength : 0));
 
-  						prevSlide.addClass('carousel-item-prev');
-  						$(this).find('.carousel-item').not(prevSlide).removeClass('carousel-item-prev');
-  						nextSlide.addClass('carousel-item-next');
-  						$(this).find('.carousel-item').not(nextSlide).removeClass('carousel-item-next');
-  						prev2Slide.addClass('carousel-item-prev--out');
-  						$(this).find('.carousel-item').not(prev2Slide).removeClass('carousel-item-prev--out');
-  						next2Slide.addClass('carousel-item-next--out');
-  						$(this).find('.carousel-item').not(next2Slide).removeClass('carousel-item-next--out');
-  					} else {
-  						prevSlide = $(this).find('.carousel-item').eq(currentIndex).prev();
-  						nextSlide = $(this).find('.carousel-item').eq(currentIndex).next();
+							prevSlide.addClass('carousel-item-prev');
+							$(this).find('.carousel-item').not(prevSlide).removeClass('carousel-item-prev');
+							nextSlide.addClass('carousel-item-next');
+							$(this).find('.carousel-item').not(nextSlide).removeClass('carousel-item-next');
+							prev2Slide.addClass('carousel-item-prev--out');
+							$(this).find('.carousel-item').not(prev2Slide).removeClass('carousel-item-prev--out');
+							next2Slide.addClass('carousel-item-next--out');
+							$(this).find('.carousel-item').not(next2Slide).removeClass('carousel-item-next--out');
+						} else {
+							prevSlide = $(this).find('.carousel-item').eq(currentIndex).prev();
+							nextSlide = $(this).find('.carousel-item').eq(currentIndex).next();
 
-  						$(this).find('.carousel-item-prev').removeClass('carousel-item-prev');
-  						$(this).find('.carousel-item-next').removeClass('carousel-item-next');
+							$(this).find('.carousel-item-prev').removeClass('carousel-item-prev');
+							$(this).find('.carousel-item-next').removeClass('carousel-item-next');
 
-  						if (prevSlide.length > 0) {
-  							prevSlide.addClass('carousel-item-prev');
-  							prevSlide.removeClass('carousel-item-prev--out');
-  						} else {
-  							$(this).find('a[data-slide="prev"]').addClass('d-none');
-  						}
+							if (prevSlide.length > 0) {
+								prevSlide.addClass('carousel-item-prev');
+								prevSlide.removeClass('carousel-item-prev--out');
+							} else {
+								$(this).find('a[data-slide="prev"]').addClass('d-none');
+							}
 
-  						if (nextSlide.length > 0) {
-  							nextSlide.addClass('carousel-item-next');
-  							nextSlide.removeClass('carousel-item-next--out');
-  						} else {
-  							$(this).find('a[data-slide="next"]').addClass('d-none');
-  						}
-  					}
-  				});
-  			} else {
-  				$(this).find('a[data-slide]').addClass('d-none');
-  			}
-      }
+							if (nextSlide.length > 0) {
+								nextSlide.addClass('carousel-item-next');
+								nextSlide.removeClass('carousel-item-next--out');
+							} else {
+								$(this).find('a[data-slide="next"]').addClass('d-none');
+							}
+						}
+					});
+				} else {
+					$(this).find('a[data-slide]').addClass('d-none');
+				}
+			}
 		});
-  }
+	}
 
-	//mobile menu toggle
+	// mobile menu toggle
 	function mobileMenuToggler() {
 		$('.mobile-nav').toggleClass('show');
 		$('body').toggleClass('offcanvas-active');
 	}
 
-	$('.navbar-toggler').on('click', function(){
+	$('.navbar-toggler').on('click', function () {
 		mobileMenuToggler();
 	});
 
-	$('.mobile-nav').click(function(e){
+	$('.mobile-nav').click(function (e) {
 		if (e.target !== e.currentTarget) return;
 		mobileMenuToggler();
 	});
 
 	// header navbar detect scroll top or down
-	var lastScrollTop, scrollTop = 0;
-	var navbarEl = $('.main-header');
-	var announceBar = $('.announcement-bar');
-	var navbarHeight = navbarEl.height();
+	let lastScrollTop; let
+		scrollTop = 0;
+	const navbarEl = $('.main-header');
+	const announceBar = $('.announcement-bar');
+	const navbarHeight = navbarEl.height();
 
-	$(window).on('scroll', function() {
+	$(window).on('scroll', function () {
 		navbarEl.addClass('position-fixed');
 		scrollTop = $(this).scrollTop();
 		if (scrollTop < lastScrollTop) {
 			navbarEl.removeClass('scrolled-down').addClass('scrolled-up');
 			if (scrollTop <= 0) {
-				//remove scrolled up for mobile menu show properly
+				// remove scrolled up for mobile menu show properly
 				navbarEl.removeClass('position-fixed').removeClass('scrolled-up');
 				if (announceBar.length > 0) {
 					announceBar.removeClass('d-none');
 				}
 			}
+		} else if (scrollTop <= 0) {
+			// safari fix bounce effect
+			navbarEl.removeClass('position-fixed').removeClass('scrolled-up');
 		} else {
-			if (scrollTop <= 0) {
-				//safari fix bounce effect
-				navbarEl.removeClass('position-fixed').removeClass('scrolled-up');
-			} else {
-				navbarEl.removeClass('scrolled-up').addClass('scrolled-down');
-				if (announceBar.length > 0 && scrollTop > navbarHeight) {
-					announceBar.addClass('d-none');
-				}
+			navbarEl.removeClass('scrolled-up').addClass('scrolled-down');
+			if (announceBar.length > 0 && scrollTop > navbarHeight) {
+				announceBar.addClass('d-none');
 			}
 		}
 		lastScrollTop = scrollTop;
@@ -298,32 +299,32 @@ $(document).ready(function () {
 
 	if ($('.stockist').length > 0) {
 		const stockistPlace = $('.stockist__select').val();
-		$('.stockist figure[data-toggle="' + stockistPlace + '"]').removeClass('d-none');
+		$(`.stockist figure[data-toggle="${stockistPlace}"]`).removeClass('d-none');
 		$('.stockist__select').on('change', function () {
-			let selectedPlace = $(this).find('option:selected').text();
+			const selectedPlace = $(this).find('option:selected').text();
 			$('.stockist__location').html(selectedPlace);
 			$('.stockist figure').addClass('d-none');
-			$('.stockist figure[data-toggle="' + $(this).val() + '"]').removeClass('d-none');
+			$(`.stockist figure[data-toggle="${$(this).val()}"]`).removeClass('d-none');
 		});
 	}
 
-  // Change tab by select on real result sections
-  $("select[data-toggle='tab']").on('change', function () {
-    const targetTab = $(this).val();
-    $('.real-results .tab-pane').removeClass('show active');
-    $(`#${targetTab}[role='tabpanel']`).addClass('show active');
-  });
+	// Change tab by select on real result sections
+	$("select[data-toggle='tab']").on('change', function () {
+		const targetTab = $(this).val();
+		$('.real-results .tab-pane').removeClass('show active');
+		$(`#${targetTab}[role='tabpanel']`).addClass('show active');
+	});
 
-  // handle swatch selection on product carousel
-  $('.variant-swatch .variant-swatch__item span').click(function () {
-    const parent = $(this).parent();
-    const form = $(this).parents('form');
+	// handle swatch selection on product carousel
+	$('.variant-swatch .variant-swatch__item span').click(function () {
+		const parent = $(this).parent();
+		const form = $(this).parents('form');
 
-    if (parent.data('available') === 'available') {
-      form.find('.variant-swatch__item').removeClass('active');
-      form.find('input[name="id"]').val($(this).data('id'));
-      parent.addClass('active');
-      form.find('.shop-swatch label span').text($(this).data('val'));
-    }
-  });
+		if (parent.data('available') === 'available') {
+			form.find('.variant-swatch__item').removeClass('active');
+			form.find('input[name="id"]').val($(this).data('id'));
+			parent.addClass('active');
+			form.find('.shop-swatch label span').text($(this).data('val'));
+		}
+	});
 });

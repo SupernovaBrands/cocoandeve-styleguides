@@ -1,6 +1,4 @@
 .col_sec_des {
-  line-height: $line-height-xl;
-
   @include media-breakpoint-up(lg) {
     font-size: $h4-font-size-lg;
   }
@@ -12,7 +10,6 @@
 
     .h1 {
       text-shadow: 0 0 calc-em(24) rgba(0, 48, 45, 0.25);
-      font-size: $h1-font-size-xl;
     }
   }
 }
