@@ -1,220 +1,242 @@
 %transform-negative {
-  position: relative;
-  transform: translate3d(-100%, 0, 0);
-  visibility: visible;
+	position: relative;
+	transform: translate3d(-100%, 0, 0);
+	visibility: visible;
 }
 
 %transform-positive {
-  position: relative;
-  transform: translate3d(100%, 0, 0);
-  visibility: visible;
-  display: block;
+	position: relative;
+	transform: translate3d(100%, 0, 0);
+	visibility: visible;
+	display: block;
 }
 
 .carousel {
-  &--fixed-height {
-    overflow: hidden;
-    height: 11.875em;
+	&--fixed-height {
+		overflow: hidden;
+		height: 11.875em;
 
-    @include media-breakpoint-up(lg) {
-      height: 25em;
-    }
+		@include media-breakpoint-up(lg) {
+			height: 25em;
+		}
 
-    .carousel-inner,
-    .carousel-item,
-    figure,
-    img {
-      height: 100%;
-    }
+		.carousel-inner,
+		.carousel-item,
+		figure,
+		img {
+			height: 100%;
+		}
 
-    img {
-      object-fit: cover;
-    }
-  }
+		img {
+			object-fit: cover;
+		}
+	}
 
-  &--sidebar {
-    .carousel-item {
-      @include media-breakpoint-up(lg) {
-        display: block;
-        float: none;
-      }
-    }
-  }
+	&--sidebar {
+		.carousel-item {
+			@include media-breakpoint-up(lg) {
+				display: block;
+				float: none;
+			}
+		}
+	}
 
-  &--loop {
-    .carousel-item {
-      margin-right: 0;
-    }
+	&--loop {
+		.carousel-item {
+			margin-right: 0;
+		}
 
-    .carousel-item-next,
-    .carousel-item-prev {
-      position: relative;
-      transform: translate3d(0, 0, 0);
-    }
+		.carousel-item-next,
+		.carousel-item-prev {
+			position: relative;
+			transform: translate3d(0, 0, 0);
+		}
 
-    .carousel-item-prev:not(.carousel-item-right) {
-      transform: translateX(-100%);
-    }
+		.carousel-item-prev:not(.carousel-item-right) {
+			transform: translateX(-100%);
+		}
 
-    .active.carousel-item-left + .carousel-item-next.carousel-item-left {
-      @extend %transform-negative;
-    }
+		.active.carousel-item-left + .carousel-item-next.carousel-item-left {
+			@extend %transform-negative;
+		}
 
-    .active.carousel-item-right + .carousel-item-prev.carousel-item-right {
-      @extend %transform-positive;
-    }
+		.active.carousel-item-right + .carousel-item-prev.carousel-item-right {
+			@extend %transform-positive;
+		}
 
-    @include carousel-item-level('.active', '.carousel-item', 5) {
-      display: block;
-    }
+		@include carousel-item-level('.active', '.carousel-item', 7) {
+			display: block;
+		}
 
-    @include carousel-item-level('.carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)', '.carousel-item:not(.carousel-item--last)', 5) {
-      transition: none;
-    }
+		@include carousel-item-level('.carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)', '.carousel-item:not(.carousel-item--last)', 7) {
+			transition: none;
+		}
 
-    @include carousel-item-level('.carousel-item-next.carousel-item-left', '.carousel-item', 5, false) {
-      @extend %transform-negative;
-    }
+		@include carousel-item-level('.carousel-item-next.carousel-item-left', '.carousel-item', 7, false) {
+			@extend %transform-negative;
+		}
 
-    @include carousel-item-level('.carousel-item-prev.carousel-item-right', '.carousel-item', 5, false) {
-      @extend %transform-positive;
-    }
+		@include carousel-item-level('.carousel-item-prev.carousel-item-right', '.carousel-item', 7, false) {
+			@extend %transform-positive;
+		}
 
-    .carousel-item-prev.carousel-item-right {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      display: block;
-      visibility: visible;
-    }
-  }
+		.carousel-item-prev.carousel-item-right {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+			display: block;
+			visibility: visible;
+		}
 
-  &--centered {
-    overflow: hidden;
+		&[data-slide-number="5"] {
+			.carousel-item {
+				@include media-breakpoint-up(lg) {
+					flex: 0 0 20%;
+					max-width: 20%;
+				}
+			}
+		}
+	}
 
-    .carousel-inner {
-      overflow: visible;
-      transform: translateX(-62.5%);
+	&--centered {
+		overflow: hidden;
 
-      @include media-breakpoint-up(md) {
-        transform: translateX(-12.5%);
+		.carousel-inner {
+			overflow: visible;
+			transform: translateX(-62.5%);
 
-        .active + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
-          display: block;
-        }
+			@include media-breakpoint-up(md) {
+				transform: translateX(-12.5%);
 
-        .carousel-item {
-          &--last {
-            transform: translate3d(100%, 0, 0);
-          }
-        }
-      }
-    }
-  }
+				.active + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+					display: block;
+				}
+
+				.carousel-item {
+					&--last {
+						transform: translate3d(100%, 0, 0);
+					}
+				}
+			}
+		}
+	}
+
+	&--centered-mobile {
+		@include media-breakpoint-down(sm) {
+			overflow: hidden;
+		}
+
+		.carousel-inner {
+			@include media-breakpoint-down(sm) {
+				overflow: visible;
+				transform: translateX(-62.5%);
+			}
+		}
+	}
 }
 
 .carousel-indicators {
-  &--primary {
-    li {
-      background-color: $primary;
-    }
-  }
+	&--primary {
+		li {
+			background-color: $primary;
+		}
+	}
 }
 
 .carousel-control {
-  &--background {
-    &:before {
-      content: " ";
-      background-color: $white;
-      width: 2.5em;
-      height: 2.5em;
-      position: absolute;
-      z-index: -1;
-    }
-  }
+	&--background {
+		&:before {
+			content: " ";
+			background-color: $white;
+			width: 2.5em;
+			height: 2.5em;
+			position: absolute;
+			z-index: -1;
+		}
+	}
 
-  &--right-lg {
-    @include media-breakpoint-up(lg) {
-      width: 2.5em;
-      height: 2.5em;
-      top: auto;
-      bottom: 1em;
-      margin: auto;
-      right: 1.5em;
-    }
+	&--right-lg {
+		@include media-breakpoint-up(lg) {
+			width: 2.5em;
+			height: 2.5em;
+			top: auto;
+			bottom: 1em;
+			margin: auto;
+			right: 1.5em;
+		}
 
-    &.carousel-control-prev {
-      @include media-breakpoint-up(lg) {
-        right: 5em;
-        left: auto;
-      }
-    }
-  }
+		&.carousel-control-prev {
+			@include media-breakpoint-up(lg) {
+				right: 5em;
+				left: auto;
+			}
+		}
+	}
 
-  &--loop {
+	&--loop {
 
-    &.carousel-control-prev,
-    &.carousel-control-next {
-      top: 0;
-      width: calc-em(50);
+		&.carousel-control-prev,
+		&.carousel-control-next {
+			top: 0;
+			width: calc-em(50);
 
-      @include media-breakpoint-up(lg) {
-        width: calc-em(100);
-      }
+			@include media-breakpoint-up(lg) {
+				width: calc-em(100);
+			}
 
-      &:before {
-        width: 100%;
-        height: calc-em(100);
-        box-shadow: 0 calc-em(4) calc-em(4) rgba(0,0,0, .2);
-        color: black;
-        opacity: .9;
+			&:before {
+				width: 100%;
+				height: calc-em(100);
+				box-shadow: 0 calc-em(4) calc-em(4) rgba(0,0,0, .2);
+				color: black;
+				opacity: .9;
 
-        @include media-breakpoint-up(lg) {
-          width: 100%;
-          border-radius: 50%;
-        }
-      }
+				@include media-breakpoint-up(lg) {
+					width: 100%;
+					border-radius: 50%;
+				}
+			}
 
-      span {
-        font-size: calc-em(26);
-        color: black;
-      }
-    }
+			span {
+				font-size: calc-em(26);
+				color: black;
+			}
+		}
 
-    &.carousel-control-prev {
-      &:before {
-        left: 0;
-        border-radius: 0 calc-em(150) calc-em(150) 0;
+		&.carousel-control-prev {
+			&:before {
+				left: 0;
+				border-radius: 0 calc-em(150) calc-em(150) 0;
 
-        @include media-breakpoint-up(lg) {
-          border-radius: 50%;
-        }
-      }
+				@include media-breakpoint-up(lg) {
+					border-radius: 50%;
+				}
+			}
 
-      &.floating-out-left {
-        @include media-breakpoint-up(lg) {
-          left: -2%;
-        }
-      }
-    }
+			&.floating-out-left {
+				@include media-breakpoint-up(lg) {
+					left: -2%;
+				}
+			}
+		}
 
-    &.carousel-control-next {
-      &:before {
-        right: 0;
-        border-radius: calc-em(150) 0 0 calc-em(150);
+		&.carousel-control-next {
+			&:before {
+				right: 0;
+				border-radius: calc-em(150) 0 0 calc-em(150);
 
-        @include media-breakpoint-up(lg) {
-          border-radius: 50%;
-        }
-      }
+				@include media-breakpoint-up(lg) {
+					border-radius: 50%;
+				}
+			}
 
-      &.floating-out-right {
+			&.floating-out-right {
 
-        @include media-breakpoint-up(lg) {
-          right: -2%;
-        }
-      }
-    }
-  }
+				@include media-breakpoint-up(lg) {
+					right: -2%;
+				}
+			}
+		}
+	}
 }
