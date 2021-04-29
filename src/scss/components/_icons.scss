@@ -2,10 +2,10 @@ $supernova-icon-font: "supernova-icon";
 
 @font-face {
 	font-family: $supernova-icon-font;
-	src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?3aa5655c39ef1e96f0f77d9c1a29f2cf#supernova-icon") format("svg"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?3aa5655c39ef1e96f0f77d9c1a29f2cf") format("truetype"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff?3aa5655c39ef1e96f0f77d9c1a29f2cf") format("woff"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?3aa5655c39ef1e96f0f77d9c1a29f2cf") format("woff2");
+	src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?2c8d9584796ca3be7732582284f84565#supernova-icon") format("svg"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?2c8d9584796ca3be7732582284f84565") format("truetype"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.woff?2c8d9584796ca3be7732582284f84565") format("woff"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?2c8d9584796ca3be7732582284f84565") format("woff2");
 }
 
 .sni,
@@ -28,36 +28,53 @@ url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?3aa5655c39ef1e96f0f77d9c
 
 $supernova-icon-map: (
 	"account": "\f101",
-	"awards": "\f102",
-	"cart": "\f103",
-	"chevron-down": "\f104",
-	"chevron-next": "\f105",
-	"chevron-prev": "\f106",
-	"chevron-up": "\f107",
-	"close-circle": "\f108",
-	"close": "\f109",
-	"delivery": "\f10a",
-	"facebook-square": "\f10b",
-	"instagram": "\f10c",
-	"logo": "\f10d",
-	"minus": "\f10e",
-	"moneyback": "\f10f",
-	"palm-tree": "\f110",
-	"pinterest-square": "\f111",
-	"play": "\f112",
-	"plus-circle": "\f113",
-	"plus": "\f114",
-	"search": "\f115",
-	"tag": "\f116",
-	"tiktok": "\f117",
-	"trash": "\f118",
-	"twitter-square": "\f119",
-	"youtube": "\f11a",
+	"alcohol-free": "\f102",
+	"awards": "\f103",
+	"cart": "\f104",
+	"check-circle": "\f105",
+	"check": "\f106",
+	"chevron-down": "\f107",
+	"chevron-next": "\f108",
+	"chevron-prev": "\f109",
+	"chevron-up": "\f10a",
+	"close-circle": "\f10b",
+	"close": "\f10c",
+	"cruelty-free": "\f10d",
+	"delivery": "\f10e",
+	"dimethicone-free": "\f10f",
+	"ethically": "\f110",
+	"facebook-square": "\f111",
+	"gluten": "\f112",
+	"instagram": "\f113",
+	"logo": "\f114",
+	"mineral-oil": "\f115",
+	"minus": "\f116",
+	"moneyback": "\f117",
+	"natural-dha": "\f118",
+	"palm-tree": "\f119",
+	"paraben-free": "\f11a",
+	"peta": "\f11b",
+	"pinterest-square": "\f11c",
+	"play": "\f11d",
+	"plus-circle": "\f11e",
+	"plus": "\f11f",
+	"search": "\f120",
+	"tag": "\f121",
+	"tiktok": "\f122",
+	"toxin-free": "\f123",
+	"trash": "\f124",
+	"twitter-square": "\f125",
+	"vegan": "\f126",
+	"youtube": "\f127",
 );
 
 .sni.sni__account:before,
 .sni-after.sni__account:after {
 	content: map-get($supernova-icon-map, "account");
+}
+.sni.sni__alcohol-free:before,
+.sni-after.sni__alcohol-free:after {
+	content: map-get($supernova-icon-map, "alcohol-free");
 }
 .sni.sni__awards:before,
 .sni-after.sni__awards:after {
@@ -66,6 +83,14 @@ $supernova-icon-map: (
 .sni.sni__cart:before,
 .sni-after.sni__cart:after {
 	content: map-get($supernova-icon-map, "cart");
+}
+.sni.sni__check-circle:before,
+.sni-after.sni__check-circle:after {
+	content: map-get($supernova-icon-map, "check-circle");
+}
+.sni.sni__check:before,
+.sni-after.sni__check:after {
+	content: map-get($supernova-icon-map, "check");
 }
 .sni.sni__chevron-down:before,
 .sni-after.sni__chevron-down:after {
@@ -91,13 +116,29 @@ $supernova-icon-map: (
 .sni-after.sni__close:after {
 	content: map-get($supernova-icon-map, "close");
 }
+.sni.sni__cruelty-free:before,
+.sni-after.sni__cruelty-free:after {
+	content: map-get($supernova-icon-map, "cruelty-free");
+}
 .sni.sni__delivery:before,
 .sni-after.sni__delivery:after {
 	content: map-get($supernova-icon-map, "delivery");
 }
+.sni.sni__dimethicone-free:before,
+.sni-after.sni__dimethicone-free:after {
+	content: map-get($supernova-icon-map, "dimethicone-free");
+}
+.sni.sni__ethically:before,
+.sni-after.sni__ethically:after {
+	content: map-get($supernova-icon-map, "ethically");
+}
 .sni.sni__facebook-square:before,
 .sni-after.sni__facebook-square:after {
 	content: map-get($supernova-icon-map, "facebook-square");
+}
+.sni.sni__gluten:before,
+.sni-after.sni__gluten:after {
+	content: map-get($supernova-icon-map, "gluten");
 }
 .sni.sni__instagram:before,
 .sni-after.sni__instagram:after {
@@ -107,6 +148,10 @@ $supernova-icon-map: (
 .sni-after.sni__logo:after {
 	content: map-get($supernova-icon-map, "logo");
 }
+.sni.sni__mineral-oil:before,
+.sni-after.sni__mineral-oil:after {
+	content: map-get($supernova-icon-map, "mineral-oil");
+}
 .sni.sni__minus:before,
 .sni-after.sni__minus:after {
 	content: map-get($supernova-icon-map, "minus");
@@ -115,9 +160,21 @@ $supernova-icon-map: (
 .sni-after.sni__moneyback:after {
 	content: map-get($supernova-icon-map, "moneyback");
 }
+.sni.sni__natural-dha:before,
+.sni-after.sni__natural-dha:after {
+	content: map-get($supernova-icon-map, "natural-dha");
+}
 .sni.sni__palm-tree:before,
 .sni-after.sni__palm-tree:after {
 	content: map-get($supernova-icon-map, "palm-tree");
+}
+.sni.sni__paraben-free:before,
+.sni-after.sni__paraben-free:after {
+	content: map-get($supernova-icon-map, "paraben-free");
+}
+.sni.sni__peta:before,
+.sni-after.sni__peta:after {
+	content: map-get($supernova-icon-map, "peta");
 }
 .sni.sni__pinterest-square:before,
 .sni-after.sni__pinterest-square:after {
@@ -147,6 +204,10 @@ $supernova-icon-map: (
 .sni-after.sni__tiktok:after {
 	content: map-get($supernova-icon-map, "tiktok");
 }
+.sni.sni__toxin-free:before,
+.sni-after.sni__toxin-free:after {
+	content: map-get($supernova-icon-map, "toxin-free");
+}
 .sni.sni__trash:before,
 .sni-after.sni__trash:after {
 	content: map-get($supernova-icon-map, "trash");
@@ -154,6 +215,10 @@ $supernova-icon-map: (
 .sni.sni__twitter-square:before,
 .sni-after.sni__twitter-square:after {
 	content: map-get($supernova-icon-map, "twitter-square");
+}
+.sni.sni__vegan:before,
+.sni-after.sni__vegan:after {
+	content: map-get($supernova-icon-map, "vegan");
 }
 .sni.sni__youtube:before,
 .sni-after.sni__youtube:after {
