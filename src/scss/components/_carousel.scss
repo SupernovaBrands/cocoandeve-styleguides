@@ -64,7 +64,7 @@
 			@extend %transform-positive;
 		}
 
-		@include carousel-item-level('.active', '.carousel-item', 7) {
+		@include carousel-item-level('.carousel-item.active', '.carousel-item', 7) {
 			display: block;
 		}
 
@@ -104,10 +104,10 @@
 
 		.carousel-inner {
 			overflow: visible;
-			transform: translateX(-62.5%);
+			transform: translateX(-60.5%);
 
 			@include media-breakpoint-up(md) {
-				transform: translateX(-12.5%);
+				transform: translateX(-11.5%);
 
 				.active + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
 					display: block;
@@ -130,7 +130,7 @@
 		.carousel-inner {
 			@include media-breakpoint-down(sm) {
 				overflow: visible;
-				transform: translateX(-62.5%);
+				transform: translateX(-60.5%);
 			}
 		}
 	}

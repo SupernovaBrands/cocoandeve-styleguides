@@ -1,0 +1,74 @@
+.product-card {
+
+  &__title {
+    min-height: calc-em(54);
+  }
+
+  .swatch-overlay {
+    width: 100%;
+    height: 100%;
+    display: none;
+    bottom: 0;
+    left: 0;
+    padding-bottom: calc-em(58);
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, white 100%);
+    visibility: visible;
+    transition: all 300ms ease-in-out;
+
+    &:hover {
+      display: flex;
+    }
+  }
+
+  .btn-choose:hover {
+    + .swatch-overlay  {
+      display: flex;
+    }
+  }
+}
+
+.variant-swatch {
+  &__item {
+    &.active {
+      span {
+        &::before {
+          border-color: $primary;
+        }
+      }
+    }
+
+    span {
+      width: calc-em(32);
+      height: calc-em(32);
+      border-radius: 50%;
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: calc-em(-4);
+        left: calc-em(-4);
+        right: calc-em(-4);
+        bottom: calc-em(-4);
+        border: calc-em(1) solid $gray-500;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+@each $color, $value in $shade-colors {
+  .shade-#{$color} {
+    @include badge-variant($value);
+  }
+}
+
+.style-girl-print {
+  background-image: url("../images/eyemask-leaf-pink.svg");
+}
+
+.style-leaf-print {
+  background-image: url("../images/eyemask-leaf-green.svg");
+}

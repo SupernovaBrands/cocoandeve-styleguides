@@ -307,4 +307,24 @@ $(document).ready(function () {
 			$(`.stockist figure[data-toggle="${$(this).val()}"]`).removeClass('d-none');
 		});
 	}
+
+	// Change tab by select on real result sections
+	$("select[data-toggle='tab']").on('change', function () {
+		const targetTab = $(this).val();
+		$('.real-results .tab-pane').removeClass('show active');
+		$(`#${targetTab}[role='tabpanel']`).addClass('show active');
+	});
+
+	// handle swatch selection on product carousel
+	$('.variant-swatch .variant-swatch__item span').click(function () {
+		const parent = $(this).parent();
+		const form = $(this).parents('form');
+
+		if (parent.data('available') === 'available') {
+			form.find('.variant-swatch__item').removeClass('active');
+			form.find('input[name="id"]').val($(this).data('id'));
+			parent.addClass('active');
+			form.find('span[data-swatch-label]').text($(this).data('val'));
+		}
+	});
 });
