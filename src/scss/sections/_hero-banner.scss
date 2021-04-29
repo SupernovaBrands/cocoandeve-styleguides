@@ -1,0 +1,29 @@
+.hero-carousel {
+  .carousel-indicators {
+    position: absolute;
+    left: 0;
+    bottom: calc-em(20);
+    margin: 0 auto;
+    padding: 0 calc-em(11);
+    max-width: calc-em(1080);
+
+    @include media-breakpoint-up(lg) {
+      bottom: calc-em(48);
+    }
+
+    li {
+      cursor: pointer;
+      opacity: 1;
+      transition: opacity 0.6s ease;
+      width: $font-size-base;
+      height: $font-size-base;
+      background-color: transparent;
+      border: calc-em(2) solid white;
+      box-sizing: border-box;
+
+      &.active {
+        background-color: white;
+      }
+    }
+  }
+}

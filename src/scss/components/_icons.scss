@@ -2,17 +2,10 @@ $supernova-icon-font: "supernova-icon";
 
 @font-face {
 	font-family: $supernova-icon-font;
-<<<<<<< HEAD
-	src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?3aa5655c39ef1e96f0f77d9c1a29f2cf#supernova-icon") format("svg"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?3aa5655c39ef1e96f0f77d9c1a29f2cf") format("truetype"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff?3aa5655c39ef1e96f0f77d9c1a29f2cf") format("woff"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?3aa5655c39ef1e96f0f77d9c1a29f2cf") format("woff2");
-=======
 	src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?1e3cea51978a3553311571d8ca112444#supernova-icon") format("svg"),
 url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?1e3cea51978a3553311571d8ca112444") format("truetype"),
 url("/cocoandeve-styleguides/fonts/supernova-icon.woff?1e3cea51978a3553311571d8ca112444") format("woff"),
 url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?1e3cea51978a3553311571d8ca112444") format("woff2");
->>>>>>> 813fda6... remove unused class and html adjustment
 }
 
 .sni,
@@ -45,23 +38,6 @@ $supernova-icon-map: (
 	"close": "\f109",
 	"delivery": "\f10a",
 	"facebook-square": "\f10b",
-<<<<<<< HEAD
-	"instagram": "\f10c",
-	"logo": "\f10d",
-	"minus": "\f10e",
-	"moneyback": "\f10f",
-	"palm-tree": "\f110",
-	"pinterest-square": "\f111",
-	"play": "\f112",
-	"plus-circle": "\f113",
-	"plus": "\f114",
-	"search": "\f115",
-	"tag": "\f116",
-	"tiktok": "\f117",
-	"trash": "\f118",
-	"twitter-square": "\f119",
-	"youtube": "\f11a",
-=======
 	"fast-delivery": "\f10c",
 	"five-stars-box": "\f10d",
 	"five-stars": "\f10e",
@@ -83,7 +59,6 @@ $supernova-icon-map: (
 	"twitter-square": "\f11e",
 	"winner-award": "\f11f",
 	"youtube": "\f120",
->>>>>>> 813fda6... remove unused class and html adjustment
 );
 
 .sni.sni__account:before,
@@ -130,6 +105,22 @@ $supernova-icon-map: (
 .sni-after.sni__facebook-square:after {
 	content: map-get($supernova-icon-map, "facebook-square");
 }
+.sni.sni__fast-delivery:before,
+.sni-after.sni__fast-delivery:after {
+	content: map-get($supernova-icon-map, "fast-delivery");
+}
+.sni.sni__five-stars-box:before,
+.sni-after.sni__five-stars-box:after {
+	content: map-get($supernova-icon-map, "five-stars-box");
+}
+.sni.sni__five-stars:before,
+.sni-after.sni__five-stars:after {
+	content: map-get($supernova-icon-map, "five-stars");
+}
+.sni.sni__guarantee:before,
+.sni-after.sni__guarantee:after {
+	content: map-get($supernova-icon-map, "guarantee");
+}
 .sni.sni__instagram:before,
 .sni-after.sni__instagram:after {
 	content: map-get($supernova-icon-map, "instagram");
@@ -170,13 +161,10 @@ $supernova-icon-map: (
 .sni-after.sni__search:after {
 	content: map-get($supernova-icon-map, "search");
 }
-<<<<<<< HEAD
-=======
 .sni.sni__star:before,
 .sni-after.sni__star:after {
 	content: map-get($supernova-icon-map, "star");
 }
->>>>>>> 813fda6... remove unused class and html adjustment
 .sni.sni__tag:before,
 .sni-after.sni__tag:after {
 	content: map-get($supernova-icon-map, "tag");
@@ -192,6 +180,10 @@ $supernova-icon-map: (
 .sni.sni__twitter-square:before,
 .sni-after.sni__twitter-square:after {
 	content: map-get($supernova-icon-map, "twitter-square");
+}
+.sni.sni__winner-award:before,
+.sni-after.sni__winner-award:after {
+	content: map-get($supernova-icon-map, "winner-award");
 }
 .sni.sni__youtube:before,
 .sni-after.sni__youtube:after {
