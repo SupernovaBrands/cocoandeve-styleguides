@@ -37,3 +37,11 @@
 .font-size-xs {
 	font-size: $font-size-xs !important;
 }
+
+.hero-font-size {
+  @include font-size($hero-banner-font-size);
+
+  @include media-breakpoint-up(lg) {
+    @include font-size($hero-banner-font-size-lg);
+  }
+}

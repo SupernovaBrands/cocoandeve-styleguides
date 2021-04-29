@@ -20,6 +20,14 @@
 		border-color: $primary;
 	}
 
+	&.small {
+		width: calc-em(10);
+		height: calc-em(10);
+		box-shadow: none;
+		border: none;
+		background-size: calc-em(10) calc-em(10);
+	}
+
 	&:focus {
 		outline: none; // to remove focus border on button
 	}

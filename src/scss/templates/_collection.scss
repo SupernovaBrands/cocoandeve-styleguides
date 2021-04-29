@@ -1,0 +1,19 @@
+.collection-sidebar {
+	background-color: $gray-100;
+	
+	a {
+		color: $body-color;
+
+		&.active {
+			color: $primary;
+		}
+	}
+}
+
+.collection-grid {
+	select {
+		@include media-breakpoint-up(lg) {
+			width: auto;
+		}
+	}
+}

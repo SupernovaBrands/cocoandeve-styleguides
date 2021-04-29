@@ -15,14 +15,18 @@ const webpack = require('webpack');
 const webpackConfig = require('./webpack.config.js');
 
 const cssDir = 'dist/css';
+const jsDir = 'dist/js';
+const fontsDir = 'dist/fonts';
 
 const files = {
 	index: ['src/docs/index.hbs'],
 	hbs: ['src/docs/**/*.hbs', '!src/docs/index.hbs'],
 	partials: ['src/partials/**/*.hbs'],
 	js: ['dist/js/**/*'],
+	vendorJs: ['src/js/vendor/*'],
 	allScss: ['src/scss/**/*'],
 	scss: ['src/scss/*.scss'],
+	fonts: ['fonts/*.svg', 'fonts/*.ttf', 'fonts/*.woff', 'fonts/*.woff2'],
 };
 
 function errorHandler(err) {
@@ -76,17 +80,21 @@ const indexFile = () => {
 	return src(files.index)
 		.pipe(handlebars(result, { helpers: hbsHelpers }))
 		.pipe(rename({ extname: '.html' }))
-		.pipe(dest('.'))
+		.pipe(dest('dist'))
 		.pipe(browserSync.stream());
 };
 
 const hbsFiles = () => src(files.hbs)
 	.pipe(handlebars({}, { batch: ['src/partials'], helpers: hbsHelpers }))
 	.pipe(rename({ extname: '.html' }))
-	.pipe(dest('docs'))
+	.pipe(dest('dist'))
 	.pipe(browserSync.stream());
 
 const jsFiles = () => src(files.js)
+	.pipe(browserSync.stream());
+
+const vendorJsFiles = () => src(files.vendorJs)
+	.pipe(dest(jsDir))
 	.pipe(browserSync.stream());
 
 const scssFiles = () => src(files.scss)
@@ -95,6 +103,10 @@ const scssFiles = () => src(files.scss)
 	.pipe(autoprefixer())
 	.pipe(sourcemaps.write('.'))
 	.pipe(dest(cssDir))
+	.pipe(browserSync.stream());
+
+const fontsFiles = () => src(files.fonts)
+	.pipe(dest(fontsDir))
 	.pipe(browserSync.stream());
 
 const webpackBuild = (isWatch = false) => () => new Promise((resolve, reject) => {
@@ -112,15 +124,19 @@ const webpackBuild = (isWatch = false) => () => new Promise((resolve, reject) =>
 const watchFiles = (done) => {
 	watch(files.allScss, parallel(scssFiles));
 	watch(files.index, parallel(indexFile));
-	watch(files.hbs, parallel(hbsFiles));
+	watch(files.hbs, parallel(hbsFiles))
+		.on('add', indexFile)
+		.on('unlink', indexFile);
 	watch(files.partials, parallel(hbsFiles));
 	watch(files.js, parallel(jsFiles));
+	watch(files.vendorJs, parallel(vendorJsFiles));
+	watch(files.fonts, parallel(fontsFiles));
 	done();
 };
 
 const initServer = (done) => {
 	browserSync.init({
-		server: true,
+		server: './dist',
 		port: 8080,
 		middleware: [
 			function (req, res, next) {
@@ -135,7 +151,7 @@ const initServer = (done) => {
 	done();
 };
 
-const clean = () => del([cssDir]);
+const clean = () => del(['dist']);
 
 task(clean);
 task(indexFile);
@@ -145,10 +161,10 @@ task('webpack', webpackBuild());
 task('webpackWatch', webpackBuild(true));
 task(
 	'build',
-	parallel(indexFile, hbsFiles, scssFiles, 'webpack'),
+	parallel(indexFile, hbsFiles, vendorJsFiles, scssFiles, fontsFiles, 'webpack'),
 );
 task('watch', series(
-	parallel(indexFile, hbsFiles, scssFiles, 'webpackWatch'),
+	parallel(indexFile, hbsFiles, vendorJsFiles, scssFiles, fontsFiles, 'webpackWatch'),
 	watchFiles,
 ));
 task('default', series('clean', 'watch', 'initServer'));

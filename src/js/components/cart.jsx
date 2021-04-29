@@ -86,6 +86,7 @@ export default class Cart extends React.Component {
 
 		let count = 0;
 		let manualGwpCount = 0;
+		let comparePriceDiff = 0;
 		for (let i = 0; i < items.length; i += 1) {
 			// eslint-disable-next-line no-await-in-loop
 			items[i].models = await this.getItemModels(items[i]);
@@ -93,18 +94,24 @@ export default class Cart extends React.Component {
 				manualGwpCount += items[i].quantity;
 			} else {
 				count += items[i].quantity;
+				comparePriceDiff += items[i].models.comparePriceDiff;
 			}
 		}
 		models.itemCount = count;
 		models.manualGwpCount = manualGwpCount;
+		models.comparePriceDiff = comparePriceDiff;
 		$('.cart-drawer__count').text(count);
 
 		models.upsellData = await this.getUpsell(items);
 
 		models.totalPrice = cart.items_subtotal_price;
+		models.subtotalPrice = models.totalPrice + comparePriceDiff;
 
 		await snCart.checkAppliedDiscount(cart).then((discountData) => {
-			models.discountData = this.getDiscountDataDisplay(discountData);
+			models.discountData = this.getDiscountDataDisplay({
+				...discountData,
+				errorExtra: this.getDiscountErrorExtra(discountData),
+			});
 
 			if (models.discountData.amount > 0) {
 				models.totalPrice -= models.discountData.amount;
@@ -158,6 +165,7 @@ export default class Cart extends React.Component {
 		};
 
 		models.url = models.free ? undefined : item.url;
+		models.comparePriceDiff = models.comparePrice > 0 ? models.comparePrice - item.original_price : 0;
 
 		models.properties = {};
 		if (item.properties) {
@@ -169,15 +177,16 @@ export default class Cart extends React.Component {
 		}
 
 		if (models.color) {
-			models.colorHandle = kebabCase(models.color);
+			models.variantHandle = kebabCase(models.color);
 			models.variantOptions = await this.getColorOptions(item.handle, item.variant_options);
+			models.variantType = 'Shade';
+			models.variantTitle = models.color;
 		}
 
 		if (models.style) {
-			const handle = kebabCase(models.style);
-			const label = handle.includes('leaf-print') || handle.includes('girl-print') ? 'Hair Wrap' : 'Style';
-			models.styleHandle = handle;
-			models.styleTitle = label;
+			models.variantHandle = kebabCase(models.style);
+			models.variantType = 'Style';
+			models.variantTitle = models.style;
 		}
 
 		return models;
@@ -204,7 +213,7 @@ export default class Cart extends React.Component {
 					id: variant.id,
 					available: variant.available,
 					color: variant[option],
-					colorHandle: kebabCase(variant[option]),
+					variantHandle: kebabCase(variant[option]),
 				});
 			}
 		});
@@ -217,8 +226,46 @@ export default class Cart extends React.Component {
 	async getUpsell(items) {
 		const settings = tSettings.cartUpsell;
 		const variantIds = items.map((item) => item.id);
+		const autoUpsell = tSettings.upsell_auto;
+		const upsellCollections = tSettings.cartUpsellCollection;
+		const maxUpsells = tSettings.upsell_max_item;
 		let upsell = false;
-		if (settings.length > 0) {
+		const upsellItems = [];
+
+		if (autoUpsell && upsellCollections.length > 0) {
+			const handles = items.map((item) => item.handle);
+			let maxItem = 0;
+			for (let i = 0; i < upsellCollections.length; i += 1) {
+				const targetId = upsellCollections[i].target_id;
+				// eslint-disable-next-line no-await-in-loop
+				const productData = await snCart.getProductInfo(upsellCollections[i].handle);
+				if (handles.indexOf(upsellCollections[i].handle) < 0) {
+					upsell = {
+						targetId,
+						replaceToId: targetId,
+						productTitle: upsellCollections[i].title,
+						url: upsellCollections[i].url,
+						price: productData.prices[targetId],
+						comparePrice: productData.comparePrices[targetId],
+						settings: {
+							bundle_txt_button: tSettings.upsell_btn_label,
+							bundle_ad_product_name: upsellCollections[i].title,
+							bundle_ad_product_desc: upsellCollections[i].variant_title,
+							bundle_front_image_200: upsellCollections[i].bundle_front_image_200,
+							bundle_front_image: upsellCollections[i].bundle_front_image,
+						},
+						option1: false,
+						option2: false,
+					};
+					upsellItems.push(upsell);
+					maxItem += 1;
+				}
+
+				if (maxItem >= maxUpsells) {
+					break;
+				}
+			}
+		} else if (settings.length > 0) {
 			for (let i = 0; i < settings.length; i += 1) {
 				const setting = settings[i];
 				const prerequisite = setting.when_contain_product.split(',').map((v) => parseInt(v, 10));
@@ -229,31 +276,62 @@ export default class Cart extends React.Component {
 					const productData = await snCart.getProductInfo(setting.product_handle);
 					const targetId = intersect[0];
 					const replaceToId = upsellVariants[prerequisite.indexOf(targetId)];
-					upsell = {
-						targetId,
-						replaceToId,
-						productTitle: productData.product.title,
-						url: productData.product.url,
-						price: productData.prices[replaceToId],
-						comparePrice: productData.comparePrices[replaceToId],
-						settings: setting,
-					};
-					break;
+					const upsellItemInCart = upsellVariants.filter((value) => variantIds.includes(value));
+					const productVariants = productData.product.variants.filter((value) => value.id === replaceToId);
+					const option1 = productVariants.length > 0 && tSettings.upsell_shade.split(',').includes(productVariants[0].option1) ? productVariants[0].option1 : false;
+					const option2 = productVariants.length > 0 && tSettings.upsell_shade.split(',').includes(productVariants[0].option2) ? productVariants[0].option2 : false;
+
+					if (productData.product.available && upsellItemInCart.length <= 0) {
+						upsell = {
+							targetId,
+							replaceToId,
+							productTitle: productData.product.title,
+							url: productData.product.url,
+							price: productData.prices[replaceToId],
+							comparePrice: productData.comparePrices[replaceToId],
+							settings: setting,
+							option1,
+							option2,
+							optLabel: tSettings.upsell_shade_label,
+						};
+						upsellItems.push(upsell);
+					}
 				}
 			}
 		}
-		return upsell;
+
+		return (upsellItems.length > 0) ? upsellItems : false;
 	}
 
 	/* -------------------
 		Discounts
 	------------------- */
+	getDiscountErrorExtra(data = {}) {
+		// to show error when items is not valid but discount applied
+		const { cart } = snCart;
+		const { items } = cart;
+
+		let isItemsInCart = false;
+		for (let i = 0; i < items.length; i += 1) {
+			if (tSettings.custom_error_handles.includes(items[i].handle)) {
+				isItemsInCart = true;
+				break;
+			}
+		}
+
+		if (tSettings.enable_custom_codes && isItemsInCart && isSameText(data.code, tSettings.custom_codes_code)) {
+			return true;
+		}
+
+		return false;
+	}
+
 	getDiscountDataDisplay(data = {}) {
 		let error = '';
 		if (data.reason) {
 			switch (data.reason) {
 				case 'purchase':
-					error = `${tStrings.discount_min_spend} ${formatMoney(data.minPurchase)}`;
+					error = `${tStrings.discount_min_spend} ${formatMoney(data.minPurchase, $('#shop_currency_val').text())}`;
 					break;
 				case 'product':
 					error = tStrings.discount_error;
@@ -265,12 +343,24 @@ export default class Cart extends React.Component {
 		} else if (data.error) {
 			error = data.error;
 		}
+
+		// to set custom code error message from theme settings when disccode is match
+		const customCodes = tSettings.custom_codes_code.toUpperCase();
+		if (!data.valid && data.discode && data.discode.toUpperCase() === customCodes && tSettings.enable_custom_codes) {
+			error = tSettings.custom_error_codes_msg;
+		}
+
+		if (data.reason && data.reason === 'product' && data.code && data.code.toUpperCase() === customCodes && tSettings.enable_custom_codes) {
+			error = tSettings.custom_error_codes_msg;
+		}
+
 		return {
 			applied: data.valid === true && data.code && data.code !== '' && !error,
 			code: !error ? (data.code || '').toUpperCase() : '',
 			isAuto: !!data.isAuto,
 			amount: data.discount < 0 ? (data.discount * -1) : (data.discount || 0),
 			error,
+			errorExtra: data.errorExtra ? data.errorExtra : false,
 		};
 	}
 
@@ -299,10 +389,9 @@ export default class Cart extends React.Component {
 
 	onAddUpsell = (upsell) => {
 		if (upsell.upgrade_bundle_method === 'replace') {
-			snCart.replaceItem(upsell.targetId, upsell.replaceToId, 1);
-		} else {
-			snCart.addItem(upsell.replaceToId, 1);
+			return snCart.replaceItem(upsell.targetId, upsell.replaceToId, 1);
 		}
+		return snCart.addItem(upsell.replaceToId, 1);
 	}
 
 	onApplyDiscountCode = (code) => {
@@ -370,7 +459,9 @@ export default class Cart extends React.Component {
 			loadingInit,
 			isLastStockKey,
 			itemCount,
+			subtotalPrice,
 			totalPrice,
+			comparePriceDiff,
 			loadingDiscount,
 			discountData,
 			manualGwp,
@@ -384,8 +475,8 @@ export default class Cart extends React.Component {
 				<div className="modal-content vh-100 mh-100 border-0 rounded-0">
 					<div className="modal-body mobile-wrapper pt-0 px-lg-0">
 						<div className="container d-flex flex-column align-items-stretch text-center pt-2">
-							<h2>{tStrings.cart_drawer_title}</h2>
-							<button type="button" className="close m-0 p-1 position-absolute" data-dismiss="modal" aria-label="Close">
+							<h4 className="font-size-lg">{tStrings.cart_drawer_title}</h4>
+							<button type="button" className="close text-body m-0 p-2 position-absolute" data-dismiss="modal" aria-label="Close">
 								<span className="sni sni__close" aria-hidden="true" />
 							</button>
 
@@ -442,14 +533,27 @@ export default class Cart extends React.Component {
 									/>
 								)}
 
+								<hr />
+								<CartDiscountForm
+									isApplied={discountData.applied}
+									code={discountData.code}
+									isAutoDiscount={discountData.isAuto}
+									loading={loadingDiscount}
+									error={discountData.error}
+									errorExtra={discountData.errorExtra}
+									onApply={this.onApplyDiscountCode}
+									onRemove={this.onRemoveDiscountCode}
+								/>
+								<hr />
+
 								<div className="row">
 									<h4 className="col-8 font-weight-bold">{tStrings.cart_subtotal}</h4>
-									<h4 className="col-4 text-right">{formatMoney(cart.items_subtotal_price)}</h4>
+									<h4 className="col-4 text-right">{formatMoney(subtotalPrice)}</h4>
 
-									{shippingData.show && (
+									{comparePriceDiff > 0 && (
 										<>
-											<h4 className="col-8">{tStrings.cart_shipping}</h4>
-											<h4 className="col-4 text-right text-primary">{shippingData.amount > 0 ? formatMoney(shippingData.amount) : 'Free'}</h4>
+											<h4 className="col-8">Bundle Discount</h4>
+											<h4 className="col-4 text-right">{`-${formatMoney(comparePriceDiff)}`}</h4>
 										</>
 									)}
 
@@ -459,23 +563,15 @@ export default class Cart extends React.Component {
 											<h4 className="col-4 text-right">{`-${formatMoney(discountData.amount)}`}</h4>
 										</>
 									)}
+
+									{shippingData.show && (
+										<>
+											<h4 className="col-8">{tStrings.cart_shipping}</h4>
+											<h4 className="col-4 text-right text-primary">{shippingData.amount > 0 ? formatMoney(shippingData.amount) : 'Free'}</h4>
+										</>
+									)}
 								</div>
 
-								<CartDiscountForm
-									isApplied={discountData.applied}
-									code={discountData.code}
-									isAutoDiscount={discountData.isAuto}
-									loading={loadingDiscount}
-									error={discountData.error}
-									onApply={this.onApplyDiscountCode}
-									onRemove={this.onRemoveDiscountCode}
-								/>
-								<hr />
-
-								<div className="row">
-									<h2 className="col-8 m-0">{tStrings.cart_total}</h2>
-									<h2 className="col-4 text-right m-0">{formatMoney(totalPrice)}</h2>
-								</div>
 								<hr />
 
 								{upsellData && (<CartUpsell upsell={upsellData} onAddUpsell={this.onAddUpsell} />)}
@@ -487,14 +583,21 @@ export default class Cart extends React.Component {
 
 					{!loadingInit && (
 						<div className="modal-footer">
-							<button
-								type="button"
-								className="btn btn-lg btn-block btn-primary"
-								disabled={loadingDiscount || manualGwp.loading}
-								onClick={this.submitForm}
-							>
-								{tStrings.cart_checkout}
-							</button>
+							<div className="row w-100">
+								<span className="col-8 font-size-lg font-weight-bold">{tStrings.cart_total}</span>
+								<span className="col-4 font-size-lg font-weight-bold text-right">{formatMoney(totalPrice)}</span>
+								<div className="col-12 my-1">
+									<button
+										type="button"
+										className="btn btn-lg btn-block btn-primary px-1"
+										disabled={loadingDiscount || manualGwp.loading}
+										onClick={this.submitForm}
+									>
+										{tStrings.cart_checkout}
+									</button>
+								</div>
+							</div>
+							<p className="col-12 text-center">*Shipping and taxes calculated at checkout</p>
 						</div>
 					)}
 				</div>

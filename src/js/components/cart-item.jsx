@@ -1,4 +1,4 @@
-/* global Shopify tStrings */
+/* global tStrings */
 
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -21,27 +21,12 @@ export default class CartItem extends React.Component {
 		}
 	}
 
-	componentDidMount() {
-		const optionsEl = document.getElementById(`cart-item__variants__${this.props.item.id}`);
-		if (optionsEl) {
-			$(optionsEl)
-				.on('show.bs.collapse', this.toggleVariantEdit)
-				.on('hidden.bs.collapse', this.toggleVariantEdit);
-		}
-	}
-
-	componentWillUnmount() {
-		const optionsEl = document.getElementById(`cart-item__variants__${this.props.item.id}`);
-		if (optionsEl) {
-			$(optionsEl)
-				.off('show.bs.collapse', this.toggleVariantEdit)
-				.off('hidden.bs.collapse', this.toggleVariantEdit);
-		}
-	}
-
 	onSelectVariant(opt) {
-		if (opt.available && opt.id !== this.state.selectedVariant.id) {
-			this.setState({ selectedVariant: opt });
+		if (opt.available) {
+			this.setState({
+				selectedVariant: opt,
+				editingVariant: opt.id !== this.props.item.id,
+			});
 		}
 	}
 
@@ -49,21 +34,17 @@ export default class CartItem extends React.Component {
 		this.props.onRemoveItem(this.props.item);
 	}
 
-	toggleVariantEdit = () => {
-		if (this.state.editingVariant) {
-			this.setState({ editingVariant: false }, () => {
-				this.props.onChangeVariant(this.props.item, this.state.selectedVariant.id);
-			});
-		} else {
-			this.setState({ editingVariant: true });
-		}
+	onChangeVariant = () => {
+		this.setState({ editingVariant: false }, () => {
+			this.props.onChangeVariant(this.props.item, this.state.selectedVariant.id);
+		});
 	}
 
 	render() {
 		const { item } = this.props;
+		const { editingVariant } = this.state;
 		const { models } = item;
-		const showColor = models.color && models.variantOptions.length > 1;
-		const showColorOptions = showColor && !models.isFree;
+		const showVariantOptions = models.variantOptions && models.variantOptions.length > 1 && !models.isFree;
 		return (
 			<li className="cart-item border-bottom">
 				<figure className="row py-2 mb-0 align-items-start">
@@ -71,7 +52,7 @@ export default class CartItem extends React.Component {
 						condition={!models.isFree}
 						wrapper={(children) => <a href={item.url} className="col-3">{children}</a>}
 					>
-						<picture className={models.isFree ? '' : 'col-3'}>
+						<picture className={models.isFree ? 'col-3' : ''}>
 							<img src={models.image} className="w-100" alt={item.product_title} />
 						</picture>
 					</ConditionWrapper>
@@ -88,35 +69,31 @@ export default class CartItem extends React.Component {
 							{!models.isFree && (<button className="cart-item__remove btn-unstyled sni sni__trash" type="button" aria-label="Remove" onClick={this.onRemoveItem} />)}
 						</div>
 
-						{showColor && (
-							<div className="d-flex flex-wrap mb-1 align-items-center">
-								<i className={`swatch ${models.colorHandle}`} />
-								<i className="ml-1 mr-1">{models.color}</i>
-								{showColorOptions && (
-									<a className="cart-item__edit" data-toggle="collapse" href={`#cart-item__variants__${item.id}`} role="button" aria-expanded="false" aria-controls={`cart-item__variants__${item.id}`}>{this.state.editingVariant ? 'Done' : 'Edit'}</a>
+						{models.variantTitle && (
+							<div className="mb-1">
+								<p className="d-flex mb-1">
+									{`${models.variantType}: ${models.variantTitle}`}
+									{editingVariant && (
+										<>
+											<span className="mx-1">-</span>
+											<button type="button" className="btn btn-link p-0 border-0" onClick={this.onChangeVariant}>Update</button>
+										</>
+									)}
+								</p>
+								{!showVariantOptions && (
+									<i className={`d-block swatch ${models.variantHandle}`} />
 								)}
-							</div>
-						)}
-						{showColorOptions && (
-							<div className="cart-item__variants collapse border-top border-bottom mb-1" id={`cart-item__variants__${item.id}`}>
-								{this.state.variantOptions.map((option) => (
+								{showVariantOptions && this.state.variantOptions.map((option) => (
 									<button
 										key={option.id}
-										className={`swatch mr-2 my-1 ${option.colorHandle} ${option.id === this.state.selectedVariant.id && 'border-primary'}`}
+										className={`swatch mr-2 ${option.variantHandle} ${option.id === this.state.selectedVariant.id && 'border-primary'}`}
 										type="button"
 										tabIndex="-1"
 										disabled={!option.available}
-										aria-label={option.colorHandle}
+										aria-label={option.variantHandle}
 										onClick={() => this.onSelectVariant(option)}
 									/>
 								))}
-							</div>
-						)}
-
-						{models.style && (
-							<div className="d-flex mb-1 align-items-center">
-								<span className="mr-1">{`${models.styleTitle}: ${models.style}`}</span>
-								<i className={`swatch ${models.styleHandle}`} />
 							</div>
 						)}
 
@@ -132,7 +109,7 @@ export default class CartItem extends React.Component {
 							<div className="d-flex flex-column text-right">
 								{models.comparePrice > 0 && (
 									<span className="text-linethrough">{formatMoney(models.comparePrice)}</span>)}
-								<span className="text-primary">{formatMoney(item.original_price)}</span>
+								<span className="font-weight-bold">{formatMoney(item.original_price)}</span>
 							</div>
 						</div>
 

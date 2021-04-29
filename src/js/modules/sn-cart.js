@@ -18,23 +18,29 @@ const varIdtoHandle = {};
 products.forEach((product) => {
 	const prices = {};
 	const comparePrices = {};
+	// eslint-disable-next-line no-param-reassign
+	product.available = false;
 	product.variants.forEach((variant) => {
-		prices[variant.id] = variant.price ? parseFloat(variant.price) * 100 : 0;
-		comparePrices[variant.id] = variant.compare_at_price ? parseFloat(variant.compare_at_price) : 0;
-		comparePrices[variant.id] = variant.compare_at_price ? parseFloat(variant.compare_at_price) : 0;
+		prices[variant.id] = typeof variant.price === 'string' ? parseInt(variant.price.replace('.', ''), 10) : 0;
+		comparePrices[variant.id] = typeof variant.compare_at_price === 'string' ? parseInt(variant.compare_at_price.replace('.', ''), 10) : 0;
 		productQuantities[variant.id] = variant.inventory_quantity;
 		varIdtoHandle[variant.id] = product.handle;
 		// eslint-disable-next-line no-param-reassign
 		variant.available = variant.inventory_quantity > 0;
+		// eslint-disable-next-line no-param-reassign
+		product.available = product.available || variant.available;
 
-		if (product.product_type === 'HERO') {
-			if ((product.title.toLowerCase().includes('bundle') && variant.title.toLowerCase().includes('bundle'))
-				|| (!product.title.toLowerCase().includes('bundle') && !variant.title.toLowerCase().includes('bundle'))) {
-				let option = variant.title.split('/').pop().trim();
+		if (product.product_type === 'HERO' || product.product_type === 'BUNDLE') {
+			if (!(!product.title.toLowerCase().includes('bundle') && variant.title.toLowerCase().includes('bundle'))) {
+				const splits = variant.title.split('/');
+				let option = splits.pop().trim();
 				if (option.toLowerCase().includes('default')) {
 					option = '';
 				} else {
 					option = ` - ${option}`;
+				}
+				if (splits.length && splits[0].toLowerCase().includes('besties')) {
+					option = ` - Besties ${option}`;
 				}
 				$('#product-select').append(`<option value="${variant.id}">${product.title}${option}</option>`);
 			}
@@ -282,5 +288,9 @@ window.snCart = snCart;
 $('#product-add').on('click', function () {
 	snCart.addItem(parseInt($('#product-select').val(), 10), 1);
 });
+
+snCart.addItem(32346434732067, 1);
+snCart.addItem(32068891541539, 1);
+snCart.addItem(32068893048867, 1);
 
 export default snCart;
