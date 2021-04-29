@@ -6,6 +6,12 @@
       border: $nav-tabs-border-width solid $nav-tabs-border-color;
       border-radius: 0;
       border-right: 0;
+      padding: 0;
+      line-height: calc-em(40);
+
+      @include media-breakpoint-up(lg) {
+        line-height: calc-em(46);
+      }
 
       &.active {
         color: white;

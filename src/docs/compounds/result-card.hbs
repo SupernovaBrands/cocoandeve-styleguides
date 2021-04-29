@@ -2,29 +2,24 @@
 <html>
 
 <head>
-  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link rel="stylesheet" href="/cocoandeve-styleguides/dist/css/main.critical.css">
-  <link rel="stylesheet" href="/cocoandeve-styleguides/dist/css/main.css">
-  <title>Result Card | Coco &amp; Eve Style Guides</title>
+  {{> html-head title="Result Card" }}
 </head>
 
 <body>
   <div class="container">
     <h1>Result Card</h1>
     <div class="row">
-      <div class="review-item col-md-3 bg-white">
+      <div class="result-card col-md-3">
         <picture>
           <source srcset="https://via.placeholder.com/570x340" media="(min-width: 992px)"/>
           <source srcset="https://via.placeholder.com/276x197.jpg/EFADBA"/>
           <img class="w-100" alt="/" src="https://via.placeholder.com/276x197.jpg/EFADBA">
         </picture>
-        <div class="review-item__content bg-white">
-          <div class="d-flex justify-content-between align-items-center">
-            <span class="review-stars">
-              <i class="sni sni__five-stars"></i>
-            </span>
+        <div class="p-2 bg-white">
+          <p class="d-flex justify-content-between align-items-center mb-0">
+            <i class="sni sni__five-stars text-primary h4 mb-0"></i>
             <span class="badge badge-blue mb-1 mt-1">Body</span>
-          </div>
+          </p>
           <p>
             <strong>Product:&nbsp;</strong>
             <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">

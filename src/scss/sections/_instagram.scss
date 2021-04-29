@@ -2,10 +2,9 @@
   &--feed {
     picture {
       img {
-        width: 100%;
         object-fit: cover;
         max-height: calc-em(173);
-        padding: calc-em(3);
+        padding: calc-em(6);
 
         &.img-big {
           max-height: calc-em(173*2);

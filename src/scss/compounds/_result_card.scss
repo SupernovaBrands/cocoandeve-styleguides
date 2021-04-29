@@ -1,9 +1,5 @@
-.review-item {
+.result-card {
   img {
     border-radius: $badge-border-radius $badge-border-radius 0 0;
-  }
-
-  &__content {
-    padding: map-get($spacers, 2);
   }
 }

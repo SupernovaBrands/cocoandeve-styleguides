@@ -324,7 +324,7 @@ $(document).ready(function () {
 			form.find('.variant-swatch__item').removeClass('active');
 			form.find('input[name="id"]').val($(this).data('id'));
 			parent.addClass('active');
-			form.find('.shop-swatch label span').text($(this).data('val'));
+			form.find('span[data-swatch-label]').text($(this).data('val'));
 		}
 	});
 });
