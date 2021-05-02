@@ -1,0 +1,89 @@
+@font-face {
+  font-family: yotpo-widget-font;
+  src: url('//staticw2.yotpo.com/assets/yotpo-widget-font.eot?version=2020-11-11_14-27-34');
+  src: url('//staticw2.yotpo.com/assets/yotpo-widget-font.eot?version=2020-11-11_14-27-34#iefix') format("embedded-opentype"),
+  url('//staticw2.yotpo.com/assets/yotpo-widget-font.woff?version=2020-11-11_14-27-34') format("woff"),
+  url('//staticw2.yotpo.com/assets/yotpo-widget-font.ttf?version=2020-11-11_14-27-34') format("truetype"),
+  url('//staticw2.yotpo.com/assets/yotpo-widget-font.svg?version=2020-11-11_14-27-34') format("svg");
+  font-weight: 400;
+  font-style: normal
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: yotpo-widget-font;
+    src: url('//staticw2.yotpo.com/assets/yotpo-widget-font.svg?version=2020-11-11_14-27-34') format("svg");
+  }
+}
+
+.yotpo {
+  .standalone-bottomline.star-clickable,
+  .standalone-bottomline .star-clickable {
+    cursor: pointer;
+    display: flex;
+    margin: 0 auto;
+    float: none;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .yotpo-icon,
+  .yotpo-icon:after,
+  .yotpo-icon:before {
+    font-family: yotpo-widget-font!important;
+  }
+
+  span {
+    font-family: Open Sans;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-style: normal!important;
+    font-size: 14px;
+    line-height: 17px;
+    color: #6a6c77;
+    border: none;
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .yotpo-icon {
+    speak: none;
+    font-size: 17.5px;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    width: auto!important;
+    background: 0 0;
+    height: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: $primary;
+  }
+
+  .yotpo-icon-default-star:before,
+  .yotpo-icon-star:before {
+    content: "\e60e";
+  }
+
+  .yotpo-stars {
+    margin-right: calc-em(5);
+  }
+}
+
+.yotpo-display-wrapper {
+  visibility: visible!important;
+}
+
+.reviews__count {
+  display: none;
+}
+
+.text-m {
+  color: black;
+}

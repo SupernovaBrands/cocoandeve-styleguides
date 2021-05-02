@@ -142,6 +142,16 @@
 			background-color: $primary;
 		}
 	}
+
+	&--right {
+		justify-content: flex-end;
+		li {
+			&:not(.active) {
+				background: transparent;
+				opacity: 1;
+			}
+		}
+	}
 }
 
 .carousel-control {

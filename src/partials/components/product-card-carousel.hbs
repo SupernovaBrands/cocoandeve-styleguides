@@ -1,0 +1,85 @@
+<div class="carousel-item col-9 col-md-3 {{active}} product-card">
+  <picture class="m-0">
+    <source srcset="https://via.placeholder.com/243x243"/>
+    <img class="w-100"
+    alt="Image Alt"
+    src="https://via.placeholder.com/243x243">
+  </picture>
+  <div class="pt-2 pb-0 position-relative px-2">
+    <p class="mb-0 d-flex justify-content-center">
+      <div class="yotpo bottomLine new-yotpo-snippet" data-product-id="1621251129453" data-yotpo-element-id="3">
+        <div class="yotpo-display-wrapper" style="">
+          <div class="standalone-bottomline" data-source="offload" tabindex="-1" style="visibility: visible;">
+            <div class="yotpo-bottomline pull-left star-clickable" tabindex="0">
+              <span class="yotpo-stars">
+                <span class="yotpo-icon yotpo-icon-star rating-star pull-left"></span>
+                <span class="yotpo-icon yotpo-icon-star rating-star pull-left"></span>
+                <span class="yotpo-icon yotpo-icon-star rating-star pull-left"></span>
+                <span class="yotpo-icon yotpo-icon-star rating-star pull-left"></span>
+                <span class="yotpo-icon yotpo-icon-star rating-star pull-left"></span>
+                <span class="sr-only">4.9/5 Stars</span>
+              </span>
+              <span class="reviews__count">4.9/5</span>
+              <a href="javascript:void(0)" class="text-m" aria-label="3131 reviews" tabindex="0" style="display: inline;">(3131)</a>
+              <div class="yotpo-clr"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </p>
+    <p class="product-card__title d-flex flex-column justify-content-center h4 h-100">
+      <a href="#" class="text-dark text-decoration-none">{{title}}</a>
+    </p>
+    <p class="text-center">
+      {{#if compare_price }}<span class="text-linethrough h4 m-1">{{compare_price}}</span>{{/if}}<span class="text-primary h4">{{price}}</span>
+    </p>
+    {{#if swatch }}
+      {{#if swatch_shade }}
+        <button type="button" class="btn btn-lg btn-primary btn-choose">Choose Shade</button>
+        <div class="swatch-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2 position-absolute">
+          <div class="text-center w-100 py-2">
+            <label class="mb-2"><strong>Shade: </strong><span data-swatch-label>Dark</span></label>
+            <ul class="list-unstyled variant-swatch d-flex justify-content-center">
+              <li class="variant-swatch__item available col-3" data-available="available">
+                <span data-id="32068891541539" data-val="Medium" class="shade-medium"></span>
+              </li>
+              <li class="variant-swatch__item available active col-3" data-available="available">
+                <span data-id="32068891607075" data-val="Dark" class="shade-dark"></span>
+              </li>
+              <li class="variant-swatch__item available col-3" data-available="available">
+                <span data-id="32068891639843" data-val="Ultra Dark" class="shade-ultra-dark"></span>
+              </li>
+            </ul>
+          </div>
+          <button type="button" class="btn btn-lg btn-primary add-to-cart">
+            Add To Cart
+          </button>
+        </div>
+      {{/if}}
+
+      {{#if swatch_style }}
+        <button type="button" class="btn btn-lg btn-primary btn-choose">Choose Style</button>
+        <div class="swatch-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2 position-absolute">
+          <div class="text-center w-100 py-2">
+            <label class="mb-2"><strong>Style: </strong><span data-swatch-label>Girl Print: Limited edition!</span></label>
+            <ul class="list-unstyled variant-swatch d-flex justify-content-center">
+              <li class="variant-swatch__item available active col-3" data-available="available">
+                <span data-id="32068891607075" data-val="Girl Print" class="style-girl-print"></span>
+              </li>
+              <li class="variant-swatch__item available col-3" data-available="available">
+                <span data-id="32068891639843" data-val="Print Leaf" class="style-leaf-print"></span>
+              </li>
+            </ul>
+          </div>
+          <button type="button" class="btn btn-lg btn-primary add-to-cart">
+            Add To Cart
+          </button>
+        </div>
+      {{/if}}
+    {{ else }}
+    <button type="button" class="btn btn-lg btn-primary add-to-cart">
+      Add To Cart
+    </button>
+    {{/if}}
+  </div>
+</div>
