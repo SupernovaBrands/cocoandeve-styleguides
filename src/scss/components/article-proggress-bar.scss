@@ -1,0 +1,12 @@
+.reading-proggress-bar {
+	background-color: $secondary-light;
+	content: ' ';
+	height: calc-em(4);
+	top: 0;
+	z-index: $zindex-sticky;
+
+	&__proggress {
+		background-color: $secondary;
+		height: 100%;
+	}
+}

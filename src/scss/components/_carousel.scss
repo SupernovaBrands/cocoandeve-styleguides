@@ -120,6 +120,16 @@
 				}
 			}
 		}
+
+    [data-slide-number="3"] & {
+      .carousel-inner {
+        transform: translateX(-60.6%);
+
+        @include media-breakpoint-up(lg) {
+          transform: translateX(-10.5%);
+        }
+      }
+    }
 	}
 
 	&--centered-mobile {
