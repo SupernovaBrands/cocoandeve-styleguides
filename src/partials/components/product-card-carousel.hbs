@@ -35,7 +35,7 @@
     </p>
     {{#if swatch }}
       {{#if swatch_shade }}
-        <button type="button" class="btn btn-lg btn-primary btn-choose">Choose Shade</button>
+        <button type="button" class="btn btn-lg btn-primary btn-choose btn-block">Choose Shade</button>
         <div class="swatch-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2 position-absolute">
           <div class="text-center w-100 py-2">
             <label class="mb-2"><strong>Shade: </strong><span data-swatch-label>Dark</span></label>
@@ -51,14 +51,14 @@
               </li>
             </ul>
           </div>
-          <button type="button" class="btn btn-lg btn-primary add-to-cart">
+          <button type="button" class="btn btn-lg btn-primary btn-block add-to-cart">
             Add To Cart
           </button>
         </div>
       {{/if}}
 
       {{#if swatch_style }}
-        <button type="button" class="btn btn-lg btn-primary btn-choose">Choose Style</button>
+        <button type="button" class="btn btn-lg btn-primary btn-choose btn-block">Choose Style</button>
         <div class="swatch-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2 position-absolute">
           <div class="text-center w-100 py-2">
             <label class="mb-2"><strong>Style: </strong><span data-swatch-label>Girl Print: Limited edition!</span></label>
@@ -71,13 +71,13 @@
               </li>
             </ul>
           </div>
-          <button type="button" class="btn btn-lg btn-primary add-to-cart">
+          <button type="button" class="btn btn-lg btn-primary add-to-cart btn-block">
             Add To Cart
           </button>
         </div>
       {{/if}}
     {{ else }}
-    <button type="button" class="btn btn-lg btn-primary add-to-cart">
+    <button type="button" class="btn btn-lg btn-primary add-to-cart btn-block">
       Add To Cart
     </button>
     {{/if}}
