@@ -16,7 +16,7 @@
   }
 
   .btn-choose:hover + .swatch-overlay,
-  & .swatch-overlay:hover {
+  .swatch-overlay:hover {
     visibility: visible;
     opacity: 1;
   }

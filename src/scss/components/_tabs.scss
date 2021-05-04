@@ -31,16 +31,16 @@
       }
     }
   }
-}
 
-.nav-tabs-product {
-  .nav-link {
-    width: calc-em(120);
+  &--product {
+    .nav-link {
+      width: calc-em(120);
+    }
   }
-}
 
-.nav-tabs-real-results {
-  .nav-link {
-    width: calc-em(90);
+  &--real-results {
+    .nav-link {
+      width: calc-em(90);
+    }
   }
 }

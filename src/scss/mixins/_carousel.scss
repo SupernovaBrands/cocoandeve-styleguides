@@ -19,3 +19,11 @@
     @content
   }
 }
+
+@mixin make-carousel-centered($size, $columns: $grid-columns) {
+  $sizecol: percentage($size/$grid-columns);
+  $gutterpercentage: 2; // 1% left and 1% right
+  $calculation: abs(abs($sizecol - ((100 - $sizecol) / 2)) - $gutterpercentage);
+
+  transform: translateX(-#{$calculation});
+}

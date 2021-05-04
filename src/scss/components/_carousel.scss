@@ -104,11 +104,8 @@
 
 		.carousel-inner {
 			overflow: visible;
-			transform: translateX(-60.5%);
 
 			@include media-breakpoint-up(md) {
-				transform: translateX(-11.5%);
-
 				.active + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
 					display: block;
 				}
@@ -119,6 +116,22 @@
 					}
 				}
 			}
+		}
+
+		@each $breakpoint in map-keys($grid-breakpoints) {
+		  $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+		  @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+		    @if $grid-columns > 0 {
+		      @for $i from 1 through $grid-columns {
+		        &#{$infix}-#{$i} {
+		          .carousel-inner {
+		            @include make-carousel-centered($i, $grid-columns);
+		          }
+		        }
+		      }
+		    }
+		  }
 		}
 	}
 
