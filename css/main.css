@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @font-face {
   font-family: "supernova-icon";
-  src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?3aa5655c39ef1e96f0f77d9c1a29f2cf#supernova-icon") format("svg"), url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?3aa5655c39ef1e96f0f77d9c1a29f2cf") format("truetype"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff?3aa5655c39ef1e96f0f77d9c1a29f2cf") format("woff"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?3aa5655c39ef1e96f0f77d9c1a29f2cf") format("woff2");
+  src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?522284be440c980b235f8485fbb89ea1#supernova-icon") format("svg"), url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?522284be440c980b235f8485fbb89ea1") format("truetype"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff?522284be440c980b235f8485fbb89ea1") format("woff"), url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?522284be440c980b235f8485fbb89ea1") format("woff2");
 }
 
 .sni,
@@ -57,99 +57,109 @@
   content: "";
 }
 
+.sni.sni__circle-tick:before,
+.sni-after.sni__circle-tick:after {
+  content: "";
+}
+
 .sni.sni__close-circle:before,
 .sni-after.sni__close-circle:after {
-  content: "";
+  content: "";
 }
 
 .sni.sni__close:before,
 .sni-after.sni__close:after {
-  content: "";
+  content: "";
 }
 
 .sni.sni__delivery:before,
 .sni-after.sni__delivery:after {
-  content: "";
+  content: "";
 }
 
 .sni.sni__facebook-square:before,
 .sni-after.sni__facebook-square:after {
-  content: "";
+  content: "";
 }
 
 .sni.sni__instagram:before,
 .sni-after.sni__instagram:after {
-  content: "";
+  content: "";
+}
+
+.sni.sni__loading:before,
+.sni-after.sni__loading:after {
+  content: "";
 }
 
 .sni.sni__logo:before,
 .sni-after.sni__logo:after {
-  content: "";
+  content: "";
 }
 
 .sni.sni__minus:before,
 .sni-after.sni__minus:after {
-  content: "";
+  content: "";
 }
 
 .sni.sni__moneyback:before,
 .sni-after.sni__moneyback:after {
-  content: "";
+  content: "";
 }
 
 .sni.sni__palm-tree:before,
 .sni-after.sni__palm-tree:after {
-  content: "";
+  content: "";
 }
 
 .sni.sni__pinterest-square:before,
 .sni-after.sni__pinterest-square:after {
-  content: "";
+  content: "";
 }
 
 .sni.sni__play:before,
 .sni-after.sni__play:after {
-  content: "";
+  content: "";
 }
 
 .sni.sni__plus-circle:before,
 .sni-after.sni__plus-circle:after {
-  content: "";
+  content: "";
 }
 
 .sni.sni__plus:before,
 .sni-after.sni__plus:after {
-  content: "";
+  content: "";
 }
 
 .sni.sni__search:before,
 .sni-after.sni__search:after {
-  content: "";
+  content: "";
 }
 
 .sni.sni__tag:before,
 .sni-after.sni__tag:after {
-  content: "";
+  content: "";
 }
 
 .sni.sni__tiktok:before,
 .sni-after.sni__tiktok:after {
-  content: "";
+  content: "";
 }
 
 .sni.sni__trash:before,
 .sni-after.sni__trash:after {
-  content: "";
+  content: "";
 }
 
 .sni.sni__twitter-square:before,
 .sni-after.sni__twitter-square:after {
-  content: "";
+  content: "";
 }
 
 .sni.sni__youtube:before,
 .sni-after.sni__youtube:after {
-  content: "";
+  content: "";
 }
 
 .btn.sni-after:after {
