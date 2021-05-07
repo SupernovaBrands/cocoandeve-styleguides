@@ -102,14 +102,12 @@
 	&--centered {
 		overflow: hidden;
 
-
 		.carousel-inner {
 			overflow: visible;
-			@include make-carousel-centered(9, $grid-columns);
+			@include make-carousel-centered(9, $grid-columns, $grid-gutter-width);
 
 			@include media-breakpoint-up(md) {
-
-  			@include make-carousel-centered(3, $grid-columns);
+  			@include make-carousel-centered(3, $grid-columns, $grid-gutter-width-lg);
 
 				.active + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
 					display: block;
