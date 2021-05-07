@@ -1,36 +1,57 @@
 .how-to {
 
 	.carousel--loop {
-		margin: 0 auto;
-		width: 84%;
+		overflow: hidden;
+	}
 
+	.carousel--centered {
 		@include media-breakpoint-up(lg) {
-			width: 80%;
+			margin-left: -$grid-gutter-width;
+    	margin-right: -$grid-gutter-width;
 		}
 	}
 
 	.carousel-control-prev,
 	.carousel-control-next {
-		width: 0;
-		margin-top: 3.2em;
+		width: 10%;
+		background-color: $primary-light;
 
 		@include media-breakpoint-up(lg) {
 			margin-top: -1.5em;
 		}
 	}
 
+	.carousel-control-prev {
+		&:before,
+		.sni {
+			margin-top: -7em;
+			margin-right: -2em;
+
+			@include media-breakpoint-up(lg) {
+				margin-right: -7em;
+				margin-top: -4.5em;
+			}
+		}
+	}
+
+	.carousel-control-next {
+		&:before,
+		.sni {
+			margin-top: -7em;
+			margin-left: -2em;
+
+			@include media-breakpoint-up(lg) {
+				margin-left: -7em;
+				margin-top: -4.5em;
+			}
+		}
+	}
+
 	.carousel-inner {
-		transform: translateX(-60.1%);
+		transform: translateX(-23%);
 
 		@include media-breakpoint-up(lg) {
-			transform: translateX(-8.5%);
-		}
-
-		.carousel-item {
-			@include media-breakpoint-up(lg) {
-				flex: 0 0 40%;
-				max-width: 40%;
-			}
+			transform: translateX(1.25%);
 		}
 	}
 }
