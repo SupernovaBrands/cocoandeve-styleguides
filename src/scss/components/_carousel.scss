@@ -117,22 +117,6 @@
 				}
 			}
 		}
-
-		@each $breakpoint in map-keys($grid-breakpoints) {
-		  $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
-
-		  @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
-		    @if $grid-columns > 0 {
-		      @for $i from 1 through $grid-columns {
-		        &#{$infix}-#{$i} {
-		          .carousel-inner {
-		            @include make-carousel-centered($i, $grid-columns);
-		          }
-		        }
-		      }
-		    }
-		  }
-		}
 	}
 
 	&--centered-mobile {
@@ -145,6 +129,21 @@
 				overflow: visible;
 				transform: translateX(-60.5%);
 			}
+		}
+	}
+}
+
+.carousel--centered-9 {
+	.carousel-inner {
+		@include make-carousel-centered(9, $grid-columns);
+	}
+}
+
+.carousel--centered-md-3 {
+	.carousel-inner {
+
+		@include media-breakpoint-up(md) {
+			@include make-carousel-centered(3, $grid-columns);
 		}
 	}
 }

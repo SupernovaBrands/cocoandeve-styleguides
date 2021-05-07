@@ -1,6 +1,6 @@
 $(document).ready(function () {
 	// handle swatch selection on product carousel
-	if ($('.variant-swatch .variant-swatch__item span')) {
+	if ($('.variant-swatch .variant-swatch__item span').length > 0) {
 		$('.variant-swatch .variant-swatch__item span').click(function () {
 			const parent = $(this).parent();
 			const mainParent = $(this).parents('.swatch-overlay');
