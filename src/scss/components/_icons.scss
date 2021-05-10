@@ -2,10 +2,10 @@ $supernova-icon-font: "supernova-icon";
 
 @font-face {
 	font-family: $supernova-icon-font;
-	src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?1e3cea51978a3553311571d8ca112444#supernova-icon") format("svg"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?1e3cea51978a3553311571d8ca112444") format("truetype"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff?1e3cea51978a3553311571d8ca112444") format("woff"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?1e3cea51978a3553311571d8ca112444") format("woff2");
+	src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?781f3d74a4651dfcd9f67e8d9571f7d5#supernova-icon") format("svg"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?781f3d74a4651dfcd9f67e8d9571f7d5") format("truetype"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.woff?781f3d74a4651dfcd9f67e8d9571f7d5") format("woff"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?781f3d74a4651dfcd9f67e8d9571f7d5") format("woff2");
 }
 
 .sni,
@@ -52,13 +52,14 @@ $supernova-icon-map: (
 	"plus-circle": "\f117",
 	"plus": "\f118",
 	"search": "\f119",
-	"star": "\f11a",
-	"tag": "\f11b",
-	"tiktok": "\f11c",
-	"trash": "\f11d",
-	"twitter-square": "\f11e",
-	"winner-award": "\f11f",
-	"youtube": "\f120",
+	"star-box": "\f11a",
+	"star": "\f11b",
+	"tag": "\f11c",
+	"tiktok": "\f11d",
+	"trash": "\f11e",
+	"twitter-square": "\f11f",
+	"winner-award": "\f120",
+	"youtube": "\f121",
 );
 
 .sni.sni__account:before,
@@ -160,6 +161,10 @@ $supernova-icon-map: (
 .sni.sni__search:before,
 .sni-after.sni__search:after {
 	content: map-get($supernova-icon-map, "search");
+}
+.sni.sni__star-box:before,
+.sni-after.sni__star-box:after {
+	content: map-get($supernova-icon-map, "star-box");
 }
 .sni.sni__star:before,
 .sni-after.sni__star:after {
