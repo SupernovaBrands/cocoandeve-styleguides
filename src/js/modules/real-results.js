@@ -1,45 +1,24 @@
 $(document).ready(function () {
 	// function filter results card based of data attribute category
 	const filterResults = (category) => {
-		// create temporary element only once time
-		if ($('#temporaryResults').length === 0) {
-			$('<div id="temporaryResults" class="d-none"></div>').appendTo('#real-results');
-			// adding index for each element
-			$('#real-results .carousel-item').each(function (index, element) {
-				$(element).attr('data-index', index + 1);
-			});
-		}
+		const $realResults = $('#real-results');
+		$realResults.find('.nav-link.active').removeClass('active');
+		$realResults.find(`.nav-link[href='${category}']`).addClass('active');
 
-		$('#real-results .nav-link').removeClass('active');
-		$(`#real-results .nav-link[href='${category}']`).addClass('active');
-
-		// remove class carousel item active
-		$('#real-results .carousel-item.active').removeClass('active');
+		// remove current active class on carousel item
+		$realResults.find('.result-card.active').removeClass('active');
 
 		if (category === '#all') {
-			$('#temporaryResults .carousel-item').appendTo('#real-results .carousel-inner');
-			// sorting element for all selection after element filtered per category
-			const sorted = $('#real-results .carousel-inner .carousel-item').sort(function (a, b) {
-				const contentA = parseInt($(a).data('index'), 10);
-				const contentB = parseInt($(b).data('index'), 10);
-				let sorting = 0;
-
-				if (contentA < contentB) {
-					sorting = -1;
-				} else if (contentA > contentB) {
-					sorting = 1;
-				}
-				return sorting;
-			});
-			$(sorted).appendTo('#real-results .carousel-inner');
-			// $('#real-results .carousel-inner').html(sorted);
+			$realResults.find('.result-card.d-none').removeClass('d-none').addClass('carousel-item');
+			$realResults.find('.result-card').first().addClass('active');
 		} else {
-			$('#temporaryResults .carousel-item').appendTo('#real-results .carousel-inner');
-			$(`#real-results .carousel-item[data-category!='${category}']`).appendTo('#temporaryResults');
-		}
+			$realResults.find('.result-card.d-none').removeClass('d-none').addClass('carousel-item');
+			$realResults.find(`.result-card[data-category!='${category}']`).addClass('d-none').removeClass('carousel-item');
 
-		// add Class active for element filtered
-		$('#real-results .carousel-item:first-child').addClass('active');
+			// make all active carousel items nears
+			$realResults.find(".result-card:not('.d-none')").appendTo('#real-results .carousel-inner');
+			$realResults.find(`.result-card[data-category='${category}']`).first().addClass('active');
+		}
 	};
 
 	// Change tab by select on real result sections

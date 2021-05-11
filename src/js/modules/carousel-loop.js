@@ -10,6 +10,11 @@ $(document).ready(function () {
 			let itemsPerSlide = $(this).data('slide-number') ? $(this).data('slide-number') : 3;
 			const totalItems = $(this).find('.carousel-item').length;
 
+			// handling fix index for carousel when carousel-inner has elements with d-none
+			if (totalItems < idx) {
+				idx -= $('.carousel-inner .d-none').length;
+			}
+
 			if (screenLG > window.innerWidth) {
 				// set 1 for mobile
 				itemsPerSlide = 2;
@@ -24,8 +29,10 @@ $(document).ready(function () {
 					$(this).find(`.carousel-item:nth-child(${$(this).find('.carousel-item.active').index() + 1 + itemsPerSlide})`).addClass('carousel-item--last');
 				}
 			}
+
 			if (idx >= totalItems - (itemsPerSlide - 1)) {
 				const it = itemsPerSlide - (totalItems - idx);
+
 				for (let i = 0; i < it; i += 1) {
 					if (e.direction === 'left') {
 						$(this).find('.carousel-item').eq(i).appendTo($(this).find('.carousel-inner'));
