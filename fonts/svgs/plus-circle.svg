@@ -1,1 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><circle cx="15" cy="15" r="15" fill="#f4436c"/><path d="M22.2 14.2h-6.4V7.8c0-.4-.4-.8-.8-.8s-.8.4-.8.8v6.4H7.8c-.4 0-.8.4-.8.8s.4.8.8.8h6.4v6.4c0 .4.4.8.8.8s.8-.4.8-.8v-6.4h6.4c.4 0 .8-.4.8-.8s-.4-.8-.8-.8z" fill="#fff"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30">
+  <defs>
+    <style>
+      .a{fill:#f4436c;}.b{fill:#fff;}
+    </style>
+  </defs>
+  <g transform="translate(.448)">
+    <circle class="a" cx="15" cy="15" r="15" transform="translate(-.448)"/>
+    <g transform="translate(6.552 7)">
+      <rect class="b" width="16" height="1.6" rx=".8" transform="rotate(90 4.4 4.4)"/>
+      <rect class="b" width="16" height="1.6" rx=".8" transform="translate(0 7.2)"/>
+    </g>
+  </g>
+</svg>
