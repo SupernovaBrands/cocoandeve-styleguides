@@ -1,3 +1,10 @@
 @function calc-em($pixels, $context: 16, $unit: 1em) {
 	@return $pixels / $context * $unit;
 }
+
+@function asset-url($filename) {
+	@return '/cocoandeve-styleguides/images/'+$filename;
+
+	// For Shopify
+	// @return "{{ '" + $filename + "' | asset_url }}";
+}

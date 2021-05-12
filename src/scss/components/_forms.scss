@@ -92,3 +92,14 @@
 		color: transparent;
 	}
 }
+
+.custom-radio {
+	.custom-control-input:checked ~ .custom-control-label {
+		&::before {
+			box-shadow: inset 0px 0px 0px 2px #fff;
+		}
+		&::after {
+			background-image: none;
+		}
+	}
+}

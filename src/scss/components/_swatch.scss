@@ -9,6 +9,17 @@
 	background-position: center;
 	background-size: 2em 2em;
 
+	&.custom-control-label {
+		&::before,
+		&::after {
+			content: none;
+		}
+	}
+
+	.custom-control-input:checked ~ & {
+		border-color: $primary;
+	}
+
 	&.small {
 		width: calc-em(10);
 		height: calc-em(10);
@@ -37,16 +48,16 @@
 	}
 
 	&.girl-print-limited-edition {
-		background-image: url("/cocoandeve-styleguides/images/hairwrap-girl-print.png");
+		background-image: url(asset-url('hairwrap-girl-print.png'));
 	}
 	&.leaf-print {
-		background-image: url("/cocoandeve-styleguides/images/hairwrap-leaf-print.png");
+		background-image: url(asset-url('hairwrap-leaf-print.png'));
 	}
 	&.green,
 	&.grun {
-		background-image: url("/cocoandeve-styleguides/images/eyemask-leaf-green.svg");
+		background-image: url(asset-url('eyemask-leaf-green.svg'));
 	}
 	&.pink {
-		background-image: url("/cocoandeve-styleguides/images/eyemask-leaf-pink.svg");
+		background-image: url(asset-url('eyemask-leaf-pink.svg'));
 	}
 }

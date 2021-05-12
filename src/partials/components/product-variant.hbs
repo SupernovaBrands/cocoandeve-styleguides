@@ -1,0 +1,14 @@
+<div class="product-variant custom-radio w-100 {{ class }}">
+	<input id="{{name}}-{{value}}" class="custom-control-input" type="radio" name="{{name}}" value="{{value}}" {{#if checked}}checked{{/if}}/>
+	<label for="{{name}}-{{value}}" class="custom-control-label w-100 border py-2 pr-2 rounded">
+		<p class="mb-0 font-weight-bold">{{title}}</p>
+		<p class="mb-0 font-size-sm">1x Masque + Brush</p>
+		<p class="mb-0 font-size-sm font-weight-bold">
+			<span class="text-primary">$44.90</span>
+			{{#if compare}}
+			<span class="text-linethrough text-muted">$89.80</span>
+			<span class="text-primary">(SAVE 30%)</span>
+			{{/if}}
+		</p>
+	</label>
+</div>

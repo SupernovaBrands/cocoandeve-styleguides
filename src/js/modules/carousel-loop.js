@@ -24,7 +24,7 @@ $(document).ready(function () {
 				// add 1 element for negative offset of carousel inner
 				idx += 1;
 
-				// special case for carousel centered we would need plus 1, as we have negative offset x on carousle-inner
+				// special case for carousel centered we would need plus 1, as we have negative offset x on carousel-inner
 				if (e.direction === 'right') {
 					$(this).find(`.carousel-item:nth-child(${$(this).find('.carousel-item.active').index() + 1 + itemsPerSlide})`).addClass('carousel-item--last');
 				}
@@ -35,9 +35,9 @@ $(document).ready(function () {
 
 				for (let i = 0; i < it; i += 1) {
 					if (e.direction === 'left') {
-						$(this).find('.carousel-item').eq(i).appendTo($(this).find('.carousel-inner'));
+						$(this).find('.carousel-inner').append($(this).find('.carousel-item').eq(0).detach());
 					} else {
-						$(this).find('.carousel-item').eq(0).appendTo($(this).find('.carousel-inner'));
+						$(this).find('.carousel-inner').append($(this).find('.carousel-item').eq(totalItems - 1).detach());
 					}
 				}
 			}

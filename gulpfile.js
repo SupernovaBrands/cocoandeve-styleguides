@@ -27,8 +27,15 @@ const files = {
 	vendorJs: ['src/js/vendor/*'],
 	allScss: ['src/scss/**/*'],
 	scss: ['src/scss/*.scss'],
-	fonts: ['fonts/*.svg', 'fonts/*.ttf', 'fonts/*.woff', 'fonts/*.woff2'],
-	images: ['images/*'],
+	static: [
+		// fonts
+		'fonts/*.svg',
+		'fonts/*.ttf',
+		'fonts/*.woff',
+		'fonts/*.woff2',
+		// images
+		'images/*',
+	],
 };
 
 function errorHandler(err) {
@@ -48,6 +55,7 @@ const hbsHelpers = {
 	titleCase,
 	eq: (a, b) => a === b,
 	gt: (a, b) => a > b,
+	minus: (a, b) => a - b,
 	times: (n, block) => {
 		let accum = '';
 		for (let i = 1; i <= n; i += 1) {
@@ -58,6 +66,12 @@ const hbsHelpers = {
 		}
 		return accum;
 	},
+};
+
+const hbsVars = {
+	imageUrl: '/cocoandeve-styleguides/images',
+	jsUrl: '/cocoandeve-styleguides/js',
+	cssUrl: '/cocoandeve-styleguides/css',
 };
 
 const indexFile = () => {
@@ -76,6 +90,7 @@ const indexFile = () => {
 	const core = 'Core & Components';
 	folders.splice(0, 2, core);
 	const result = {
+		...hbsVars,
 		folders,
 		filenames: { [core]: [...filenames.core, ...filenames.components], ...filenames },
 	};
@@ -87,7 +102,7 @@ const indexFile = () => {
 };
 
 const hbsFiles = () => src(files.hbs)
-	.pipe(handlebars({}, { batch: ['src/partials'], helpers: hbsHelpers }))
+	.pipe(handlebars(hbsVars, { batch: ['src/partials'], helpers: hbsHelpers }))
 	.pipe(rename({ extname: '.html' }))
 	.pipe(dest('dist'))
 	.pipe(browserSync.stream());
@@ -107,8 +122,8 @@ const scssFiles = () => src(files.scss)
 	.pipe(dest(cssDir))
 	.pipe(browserSync.stream());
 
-const fontsFiles = () => src(files.fonts)
-	.pipe(dest(fontsDir))
+const staticFiles = () => src(files.static, { base: '.' })
+	.pipe(dest('dist'))
 	.pipe(browserSync.stream());
 
 const imagesFiles = () => src(files.images)
@@ -128,16 +143,15 @@ const webpackBuild = (isWatch = false) => () => new Promise((resolve, reject) =>
 });
 
 const watchFiles = (done) => {
-	watch(files.allScss, parallel(scssFiles));
-	watch(files.index, parallel(indexFile));
-	watch(files.hbs, parallel(hbsFiles))
-		.on('add', indexFile)
-		.on('unlink', indexFile);
-	watch(files.partials, parallel(hbsFiles));
-	watch(files.js, parallel(jsFiles));
-	watch(files.vendorJs, parallel(vendorJsFiles));
-	watch(files.fonts, parallel(fontsFiles));
-	watch(files.images, parallel(imagesFiles));
+	watch(files.allScss, series(scssFiles));
+	watch(files.index, series(indexFile));
+	watch(files.hbs, series(hbsFiles))
+		.on('add', series(indexFile))
+		.on('unlink', series(indexFile));
+	watch(files.partials, series(hbsFiles));
+	watch(files.js, series(jsFiles));
+	watch(files.vendorJs, series(vendorJsFiles));
+	watch(files.static, series(staticFiles));
 	done();
 };
 
@@ -168,10 +182,10 @@ task('webpack', webpackBuild());
 task('webpackWatch', webpackBuild(true));
 task(
 	'build',
-	parallel(indexFile, hbsFiles, vendorJsFiles, scssFiles, fontsFiles, imagesFiles, 'webpack'),
+	parallel(indexFile, hbsFiles, vendorJsFiles, staticFiles, scssFiles, 'webpack'),
 );
 task('watch', series(
-	parallel(indexFile, hbsFiles, vendorJsFiles, scssFiles, fontsFiles, imagesFiles, 'webpackWatch'),
+	parallel(indexFile, hbsFiles, vendorJsFiles, staticFiles, scssFiles, 'webpackWatch'),
 	watchFiles,
 ));
 task('default', series('clean', 'watch', 'initServer'));

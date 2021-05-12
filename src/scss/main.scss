@@ -13,6 +13,9 @@
 @import 'components/breadcrumb';
 @import 'components/social-icons';
 @import 'components/carousel';
+@import 'components/product-image-carousel';
+@import 'components/product-variant';
+@import 'components/list';
 @import 'components/nav';
 @import 'components/dropdown';
 @import 'components/swatch';
@@ -40,6 +43,7 @@
 @import 'sections/testimonials';
 @import 'sections/instagram';
 
+@import 'templates/product';
 @import 'templates/blog';
 @import 'templates/stockist';
 @import 'templates/collection';
