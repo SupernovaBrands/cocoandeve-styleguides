@@ -107,11 +107,15 @@
 }
 
 .font-size-lg {
-  font-size: 1.25em;
+  font-size: 1.25em !important;
+}
+
+.font-size-sm {
+  font-size: 0.875em !important;
 }
 
 .font-size-xs {
-  font-size: 0.75em;
+  font-size: 0.75em !important;
 }
 
 .hero-font-size {
@@ -132,7 +136,7 @@
 }
 
 @media (min-width: 992px) {
-  .container {
+  .container, .container-fluid {
     padding-right: 15px;
     padding-left: 15px;
   }
@@ -151,6 +155,18 @@
   .no-gutters__in-container {
     margin-right: -15px;
     margin-left: -15px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container__w-50 {
+    max-width: 480px;
+  }
+}
+
+@media (min-width: 1260px) {
+  .container__w-50 {
+    max-width: 600px;
   }
 }
 
