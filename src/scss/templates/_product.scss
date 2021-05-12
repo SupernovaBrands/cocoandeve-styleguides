@@ -1,0 +1,43 @@
+.product-swatch-mobile {
+	transform: translateY(150%);
+	transition: transform .1s ease-in-out;
+
+	&.show {
+		transform: translateY(0);
+	}
+
+	&__collapse {
+		bottom: -8px;
+		z-index: -1;
+	}
+
+	.close {
+		top: 1em;
+		right: 1em;
+	}
+}
+
+.product-info-tab {
+	.nav-item {
+		flex: 1 0 0;
+	}
+
+	.nav-link {
+		&.active {
+			box-shadow: 0 -2px 0 0 inset $primary;
+		}
+	}
+}
+
+#product-proudtobe {
+	li {
+		&:before {
+			display: flex;
+			justify-content: center;
+			flex-shrink: 0;
+			font-size: calc-em(40);
+			width: 1.2em;
+			margin-right: 0.2em;
+		}
+	}
+}

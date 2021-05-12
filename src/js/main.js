@@ -32,6 +32,15 @@ if (carouselLoop.length > 0) {
 	import(/* webpackChunkName: 'carousel-loop' */ '~mod/carousel-loop');
 }
 
+if ($('body').hasClass('template-product')) {
+	import(/* webpackChunkName: 'products' */ '~mod/products');
+}
+
+const yotpo = $('.yotpo');
+if (yotpo.length > 0) {
+	import(/* webpackChunkName: 'yotpo' */ '~mod/yotpo');
+}
+
 $(document).ready(function () {
 	window.showGrid = function () {
 		jQuery('body').append('<style type="text/css">.gridoverlay{position:fixed;top:0;left:50%;transform:translateX(-50%);z-index:9999}.gridoverlay .col{height:100vh}.gridoverlay .col:before{content:"";display:block;background-color:rgba(0,123,255,0.3);height:100%}</style><div class="container gridoverlay"><div class="row"><div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div></div></div>');
@@ -140,7 +149,7 @@ $(document).ready(function () {
 	// video carousel
 	if ($('.carousel--centered').length > 0) {
 		$('.carousel--centered').each(function () {
-			if (!$(this).hasClass('carousel--loop')) {
+			if ($(this).hasClass('carousel') || !$(this).parent('.carousel').hasClass('carousel--loop')) {
 				if ($(this).find('.carousel-item').length > 1) {
 					const loop = $(this).find('.carousel-item').length > 5;
 					// hide prev/next nav when no item prev class on page load
@@ -158,29 +167,29 @@ $(document).ready(function () {
 							$(this).find('.carousel-item-prev').addClass('carousel-item-prev').addClass('carousel-item-prev--out');
 							if ($(this).find('.carousel-item-next').next().length > 0) {
 								$(this).find('.carousel-item-next').next()
-								.addClass('carousel-item-next')
-								.removeClass('carousel-item-prev--out carousel-item-next--out');
+									.addClass('carousel-item-next')
+									.removeClass('carousel-item-prev--out carousel-item-next--out');
 							} else if (loop) {
 								$(this).find('.carousel-item').first()
-								.addClass('carousel-item-next')
-								.removeClass('carousel-item-prev--out carousel-item-next--out');
+									.addClass('carousel-item-next')
+									.removeClass('carousel-item-prev--out carousel-item-next--out');
 								$(this).find('.carousel-item').first().next()
-								.addClass('carousel-item-next--out')
-								.removeClass('carousel-item-prev--out');
+									.addClass('carousel-item-next--out')
+									.removeClass('carousel-item-prev--out');
 							}
 						} else {
 							$(this).find('.carousel-item-next').addClass('carousel-item-next').addClass('carousel-item-next--out');
 							if ($(this).find('.carousel-item-prev').prev().length > 0) {
 								$(this).find('.carousel-item-prev').prev()
-								.addClass('carousel-item-prev')
-								.removeClass('carousel-item-prev--out carousel-item-next--out');
+									.addClass('carousel-item-prev')
+									.removeClass('carousel-item-prev--out carousel-item-next--out');
 							} else if (loop) {
 								$(this).find('.carousel-item').last()
-								.addClass('carousel-item-prev')
-								.removeClass('carousel-item-prev--out carousel-item-next--out');
+									.addClass('carousel-item-prev')
+									.removeClass('carousel-item-prev--out carousel-item-next--out');
 								$(this).find('.carousel-item').last().prev()
-								.addClass('carousel-item-prev--out')
-								.removeClass('carousel-item-next--out');
+									.addClass('carousel-item-prev--out')
+									.removeClass('carousel-item-next--out');
 							}
 						}
 					});
@@ -260,6 +269,9 @@ $(document).ready(function () {
 	const announceBar = $('.announcement-bar');
 	const navbarHeight = navbarEl.height();
 
+	const productSwatchMobile = $('.product-swatch-mobile');
+	const productSwatchTrigger = $('.product-swatch-mobile__trigger');
+
 	$(window).on('scroll', function () {
 		navbarEl.addClass('position-fixed');
 		scrollTop = $(this).scrollTop();
@@ -282,6 +294,15 @@ $(document).ready(function () {
 			}
 		}
 		lastScrollTop = scrollTop;
+
+		if (window.innerWidth < screenLG) {
+			const overSwatch = scrollTop > productSwatchTrigger.offset().top;
+			if (overSwatch && !productSwatchMobile.hasClass('show')) {
+				productSwatchMobile.addClass('show');
+			} else if (!overSwatch && productSwatchMobile.hasClass('show')) {
+				productSwatchMobile.removeClass('show');
+			}
+		}
 	});
 
 	// Cart drawer

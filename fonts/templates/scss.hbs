@@ -1,8 +1,10 @@
 ${{ name }}-font: "{{ name }}";
 
+${{ name }}-asset: {{{ fontSrc }}} !default;
+
 @font-face {
 	font-family: ${{ name }}-font;
-	src: {{{ fontSrc }}};
+	src: ${{ name }}-asset;
 }
 
 {{ selector }},

@@ -1,0 +1,7 @@
+.list-check {
+	::marker {
+		font-family: $supernova-icon-font;
+		content: "#{map-get($supernova-icon-map, "check")}   ";
+		color: $primary;
+	}
+}

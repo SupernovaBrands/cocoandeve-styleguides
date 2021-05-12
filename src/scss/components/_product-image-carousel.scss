@@ -1,0 +1,16 @@
+.product-image-carousel {
+	@include media-breakpoint-up(lg) {
+		&__container, &__indicator {
+			position: sticky;
+			top: map-get($spacers, 3);
+		}
+	}
+
+	&__indicator {
+		&__item {
+			@include media-breakpoint-down(md) {
+				@include make-col(1, 5);
+			}
+		}
+	}
+}

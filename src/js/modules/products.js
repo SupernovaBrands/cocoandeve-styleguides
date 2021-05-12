@@ -1,36 +1,45 @@
-import {
-	waitFor,
-} from '~mod/utils';
+import snCart from '~mod/sn-cart';
 
 $('.product-image-carousel__indicator__item').on('click', function () {
 	const carousel = $(this).data('target');
-	const index = $(this).data('index');
-	$(carousel).carousel(index - 1);
+	const selectedIndex = $(this).data('index');
+	$(carousel).carousel(selectedIndex - 1);
+	$('.product-image-carousel__indicator__item button').removeClass('border-primary').addClass('border-white');
+	$(this).find('button').addClass('border-primary').removeClass('border-white');
+
+	const parent = $(this).closest('.carousel');
+	const index = $(this).index();
+	const active = parent.find('.active').index();
+	const total = parent.find('.carousel-item').length;
+	if (total > 5) {
+		if ((index - active === 4) && (index < total - 1)) {
+			$(parent).carousel(active + 1);
+		}
+		if (index === active && active !== 0) {
+			$(parent).carousel(active - 1);
+		}
+	}
 });
 
-if ($('.yotpo-main-widget').length > 0) {
-	waitFor(() => window.yotpo !== undefined, () => {
-		const title = $('.yotpo-main-widget').siblings('h2').detach();
-		$('.yotpo-main-widget .font-color-gray-darker').removeClass('font-color-gray-darker');
-		$('.write-review-button .yotpo-icon').remove();
-		$('.write-review-button').addClass('btn btn-lg btn-primary').removeClass('yotpo-default-button yotpo-icon-btn write-question-review-button write-button write-review-button');
-		$('.write-question-review-button-text').addClass('text-white');
-		$('.write-question-button').addClass('d-none');
+$('.product-image-carousel__indicator').on('slide.bs.carousel', function (e) {
+	const $e = $(e.relatedTarget);
+	const index = $e.index();
+	const totalItems = $(this).find('.carousel-item').length;
 
-		$('.main-widget').addClass('row');
-		$('.bottom-line-items-container')
-			.closest('.yotpo-display-wrapper')
-			.addClass('col-12 col-lg-5 px-lg-g')
-			.prepend(title)
-			.append($('.write-question-review-buttons-container').detach())
-			.append($('.write-review-wrapper.write-form').closest('form').detach());
+	const prevButton = $(this).children('button.sni__chevron-up');
+	const nextButton = $(this).children('button.sni__chevron-down');
 
-		$('.yotpo-nav-content').addClass('col-12 col-lg-7 px-lg-g');
-
-		$('.write-review-wrapper.write-form .yotpo-default-button')
-			.addClass('bg-primary rounded');
-	});
-}
+	if (index === 0) {
+		prevButton.attr('disabled', 'disabled');
+	} else {
+		prevButton.removeAttr('disabled');
+	}
+	if (index + 5 === totalItems) {
+		nextButton.attr('disabled', 'disabled');
+	} else {
+		nextButton.removeAttr('disabled');
+	}
+});
 
 if ($('.product-collapse__toggle').length > 0) {
 	const handleToggle = function (open, el) {
@@ -45,3 +54,47 @@ if ($('.product-collapse__toggle').length > 0) {
 		.on('show.bs.collapse', function () { handleToggle(true, $(this)); })
 		.on('hide.bs.collapse', function () { handleToggle(false, $(this)); });
 }
+
+$('.product-form').on('submit', function (e) {
+	e.preventDefault();
+	const data = $(this).find('.product-data').text().split('::')
+		.map((t) => {
+			const splits = t.split('|');
+			const result = { id: splits.pop() };
+			splits.forEach((element, index) => {
+				result[`option${index + 1}`] = element;
+			});
+			return result;
+		});
+
+	const option1 = $(this).find('input[name="product-variant"]:checked').val();
+	const option2 = $(this).find('input[name="product-color"]:checked').val();
+	const quantity = parseInt($(this).find('input[name="quantity"]').val(), 10);
+
+	const selected = data.find((d) => d.option1 === option1 && d.option2 === option2);
+
+	if (selected) {
+		snCart.addItem(parseInt(selected.id, 10), quantity);
+	}
+});
+
+$('.product-swatch-desktop .swatch').on('click', function () {
+	const attrFor = $(this).attr('for');
+	$('.product-swatch-mobile .swatch').removeClass('border-primary');
+	$(`.product-swatch-mobile .swatch[for=${attrFor}]`).addClass('border-primary');
+});
+
+$('.product-swatch-mobile .swatch').on('click', function () {
+	$(this).siblings('.swatch').removeClass('border-primary');
+	$(this).addClass('border-primary');
+});
+
+$('.product-swatch-mobile__collapse')
+	.on('show.bs.collapse', function () {
+		$(this).siblings('button[type=submit]').removeClass('d-none');
+		$(this).siblings('button[type=button]').addClass('d-none');
+	})
+	.on('hide.bs.collapse', function () {
+		$(this).siblings('button[type=submit]').addClass('d-none');
+		$(this).siblings('button[type=button]').removeClass('d-none');
+	});
