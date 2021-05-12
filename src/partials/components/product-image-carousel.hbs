@@ -16,7 +16,7 @@
 
 	<div class="carousel-inner d-flex flex-nowrap flex-lg-column {{#if (gt totalSlide 5)}}{{else}}justify-content-center justify-content-lg-start{{/if}}">
 		{{#times totalSlide}}
-		<div class="product-image-carousel__indicator__item carousel-item {{#if @first}}active{{/if}} col-12 px-lg-0 pb-lg-2" data-target="#product-image-carousel{{#if num}}{{num}}{{/if}}" data-index="{{@index}}">
+		<div class="product-image-carousel__indicator__item carousel-item {{#if @first}}active{{/if}} col-12 px-lg-0 pb-lg-2 mw-100" data-target="#product-image-carousel{{#if num}}{{num}}{{/if}}" data-index="{{@index}}">
 			<button class="btn-unstyled border d-block {{#if @first}}border-primary{{else}}border-white{{/if}}">
 				<img class="img-fluid mx-auto d-block" src="https://via.placeholder.com/150x150/EFADBA?text={{@index}}" alt="Slide {{@index}}">
 			</button>
