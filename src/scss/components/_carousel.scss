@@ -191,34 +191,24 @@
 
 		&.carousel-control-prev,
 		&.carousel-control-next {
-			top: 0;
-			width: calc-em(50);
-
-			@include media-breakpoint-up(lg) {
-				width: calc-em(100);
-			}
-
-			&:before {
-				width: 100%;
-				height: calc-em(100);
+			span[class*=carousel-control] {
+				width: calc-em(30);
+				height: calc-em(60);
 				box-shadow: 0 calc-em(4) calc-em(4) rgba(0,0,0, .2);
 				color: black;
 				opacity: .9;
+        font-size: calc-em(26);
+        color: black;
 
 				@include media-breakpoint-up(lg) {
-					width: 100%;
 					border-radius: 50%;
+          width: calc-em(60);
 				}
-			}
-
-			span {
-				font-size: calc-em(26);
-				color: black;
 			}
 		}
 
 		&.carousel-control-prev {
-			&:before {
+			span[class*=carousel-control] {
 				left: 0;
 				border-radius: 0 calc-em(150) calc-em(150) 0;
 
@@ -235,7 +225,7 @@
 		}
 
 		&.carousel-control-next {
-			&:before {
+			span[class*=carousel-control] {
 				right: 0;
 				border-radius: calc-em(150) 0 0 calc-em(150);
 
@@ -245,7 +235,6 @@
 			}
 
 			&.floating-out-right {
-
 				@include media-breakpoint-up(lg) {
 					right: -2%;
 				}

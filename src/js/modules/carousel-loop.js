@@ -35,9 +35,9 @@ $(document).ready(function () {
 
 				for (let i = 0; i < it; i += 1) {
 					if (e.direction === 'left') {
-						$(this).find('.carousel-inner').append($(this).find('.carousel-item').eq(0).detach());
+						$(this).find('.carousel-item').eq(i).appendTo($(this).find('.carousel-inner'));
 					} else {
-						$(this).find('.carousel-inner').append($(this).find('.carousel-item').eq(totalItems - 1).detach());
+						$(this).find('.carousel-item').eq(0).appendTo($(this).find('.carousel-inner'));
 					}
 				}
 			}
