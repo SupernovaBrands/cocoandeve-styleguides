@@ -5,3 +5,7 @@
     }
   }
 }
+
+.playground-font-size {
+  @include font-size($hero-banner-font-size-lg);
+}
