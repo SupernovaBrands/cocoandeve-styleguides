@@ -134,10 +134,6 @@
             margin-top: calc-em(10);
         }
 
-        a:not(.btn) {
-            color: $body-color;
-        }
-
         li {
             padding-top: calc-em(5);
             padding-bottom: calc-em(5);
@@ -153,6 +149,10 @@
 
         hr {
             border-color: $gray-400;
+        }
+
+        a:not(.btn) {
+            color: $body-color;
         }
 
         img {
