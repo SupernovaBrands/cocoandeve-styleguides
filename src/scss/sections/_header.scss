@@ -121,6 +121,8 @@
 
         .card {
             border: none;
+            padding-top: calc-em(5);
+            padding-bottom: calc-em(5);
         }
 
         .card-header {
@@ -131,23 +133,12 @@
 
             &:before {
                 content: '';
-                border-top: calc-em(5) solid $gray-500;
+                border-top: calc-em(1) solid $gray-100;
                 display: block;
                 margin-top: calc-em(10);
                 padding-top: calc-em(10);
             }
 
-            &-hair:before {
-                border-color: $secondary-light;
-            }
-
-            &-tan:before {
-                border-color: $sh-purple-light;
-            }
-
-            &-body:before {
-                border-color: $bali-bod-blue-light;
-            }
         }
 
         a:not(.btn) {
