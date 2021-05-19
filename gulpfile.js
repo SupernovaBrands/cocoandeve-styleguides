@@ -17,8 +17,6 @@ const webpackConfig = require('./webpack.config.js');
 
 const cssDir = 'dist/css';
 const jsDir = 'dist/js';
-const imagesDir = 'dist/images';
-const fontsDir = 'dist/fonts';
 
 const files = {
 	index: ['src/docs/index.hbs'],
