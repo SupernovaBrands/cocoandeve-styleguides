@@ -121,28 +121,38 @@
 
         .card {
             border: none;
-            padding-top: calc-em(5);
-            padding-bottom: calc-em(5);
         }
 
         .card-header {
             border-bottom: none;
         }
 
-        .card-body--border{
-
-            &:before {
-                content: '';
-                border-top: calc-em(1) solid $gray-100;
-                display: block;
-                margin-top: calc-em(10);
-                padding-top: calc-em(10);
-            }
-
+        .card-body:before{
+            content: '';
+            border-top: calc-em(1) solid $gray-100;
+            display: block;
+            margin-top: calc-em(10);
         }
 
         a:not(.btn) {
             color: $body-color;
+        }
+
+        li {
+            padding-top: calc-em(5);
+            padding-bottom: calc-em(5);
+        }
+
+        select {
+            border-radius: 0;
+            border-left: none;
+            border-right: none;
+            background-position-x: right;
+            background-size: calc-em(10, 16);
+        }
+
+        hr {
+            border-color: $gray-400;
         }
 
         img {
