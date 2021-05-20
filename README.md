@@ -23,6 +23,10 @@ See the [Handlebars Helpers](#handlebars-helpers) below for custom helpers
 - `src/partials` is the components or sections. Similar to Shopify theme snippets.
 - `src/docs` is the pages. Similar to Shopify theme templates.
 
+## Critical CSS
+Run `npm run critical` after building the files.
+The critical css will be created from html in `dist/templates/` folder and outputed in `dist/critical/` folder.
+
 ## Images
 Can use https://placeholder.com/ for placeholder images. i.e:
 - 150x150: `https://via.placeholder.com/150`

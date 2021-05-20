@@ -24,6 +24,7 @@ $spacers: (
   3: $spacer * 1.5,
   4: $spacer * 2,
   5: $spacer * 2.5,
+  g: $grid-gutter-width,
 );
 
 // Typography
@@ -89,7 +90,7 @@ $input-focus-border-color: $gray-400;
 $input-disabled-bg: $gray-100;
 $input-disabled-color: $gray-400;
 $custom-control-gutter: .5em;
-$custom-control-indicator-size: 1em;
+$custom-control-indicator-size: calc-em(20);
 
 $input-padding-y: calc-em(28 / 2);
 $input-padding-x: 1em;
@@ -185,6 +186,13 @@ $tooltip-opacity: 1;
 // Cart Drawer
 // To be above zendesk help
 $zindex-cartdrawer: 9999991;
+
+// Icons
+// Uncoment in shopify;
+// $supernova-icon-asset: url("{{ 'supernova-icon.svg' | asset_url }}#supernova-icon") format("svg"),
+//   url("{{ 'supernova-icon.ttf' | asset_url }}") format("truetype"),
+//   url("{{ 'supernova-icon.woff' | asset_url }}") format("woff"),
+//   url("{{ 'supernova-icon.woff2' | asset_url }}") format("woff2");
 
 // Select
 $custom-select-indicator: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22.6 22.6'><path d='M1.9 5.4l9.4 9.4 9.4-9.4 1.9 1.9-11.3 11.3L0 7.3l1.9-1.9z'/></svg>");

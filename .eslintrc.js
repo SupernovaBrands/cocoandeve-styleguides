@@ -17,15 +17,15 @@ module.exports = {
 	},
 	rules: {
 		indent: [
-			1,
+			2,
 			'tab',
 			{
 				SwitchCase: 1,
 				VariableDeclarator: 1,
 			},
 		],
-		'react/jsx-indent': [1, 'tab'],
-		'react/jsx-indent-props': [1, 'tab'],
+		'react/jsx-indent': [2, 'tab'],
+		'react/jsx-indent-props': [2, 'tab'],
 		'no-tabs': 0,
 		'max-len': [
 			2,

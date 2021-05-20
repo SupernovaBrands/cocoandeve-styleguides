@@ -1,0 +1,14 @@
+.product-variant {
+	.custom-control-label {
+		padding-left: calc-em(60);
+		&::before {
+			top: 50%;
+			left: calc-em(20);
+			transform: translateY(-50%);
+		}
+	}
+
+	.custom-control-input:checked~.custom-control-label {
+		border-color: $primary !important;
+	}
+}

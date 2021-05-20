@@ -1,11 +1,13 @@
 $supernova-icon-font: "supernova-icon";
 
+$supernova-icon-asset: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?0c66ef51596d11ea9d7da542e521a4bb#supernova-icon") format("svg"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?0c66ef51596d11ea9d7da542e521a4bb") format("truetype"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.woff?0c66ef51596d11ea9d7da542e521a4bb") format("woff"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?0c66ef51596d11ea9d7da542e521a4bb") format("woff2") !default;
+
 @font-face {
 	font-family: $supernova-icon-font;
-	src: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?3aa5655c39ef1e96f0f77d9c1a29f2cf#supernova-icon") format("svg"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?3aa5655c39ef1e96f0f77d9c1a29f2cf") format("truetype"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff?3aa5655c39ef1e96f0f77d9c1a29f2cf") format("woff"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?3aa5655c39ef1e96f0f77d9c1a29f2cf") format("woff2");
+	src: $supernova-icon-asset;
 }
 
 .sni,
@@ -28,36 +30,55 @@ url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?3aa5655c39ef1e96f0f77d9c
 
 $supernova-icon-map: (
 	"account": "\f101",
-	"awards": "\f102",
-	"cart": "\f103",
-	"chevron-down": "\f104",
-	"chevron-next": "\f105",
-	"chevron-prev": "\f106",
-	"chevron-up": "\f107",
-	"close-circle": "\f108",
-	"close": "\f109",
-	"delivery": "\f10a",
-	"facebook-square": "\f10b",
-	"instagram": "\f10c",
-	"logo": "\f10d",
-	"minus": "\f10e",
-	"moneyback": "\f10f",
-	"palm-tree": "\f110",
-	"pinterest-square": "\f111",
-	"play": "\f112",
-	"plus-circle": "\f113",
-	"plus": "\f114",
-	"search": "\f115",
-	"tag": "\f116",
-	"tiktok": "\f117",
-	"trash": "\f118",
-	"twitter-square": "\f119",
-	"youtube": "\f11a",
+	"alcohol-free": "\f102",
+	"awards": "\f103",
+	"cart": "\f104",
+	"check-circle": "\f105",
+	"check": "\f106",
+	"chevron-down": "\f107",
+	"chevron-next": "\f108",
+	"chevron-prev": "\f109",
+	"chevron-up": "\f10a",
+	"circle-tick": "\f10b",
+	"close-circle": "\f10c",
+	"close": "\f10d",
+	"cruelty-free": "\f10e",
+	"delivery": "\f10f",
+	"dimethicone-free": "\f110",
+	"ethically": "\f111",
+	"facebook-square": "\f112",
+	"gluten": "\f113",
+	"instagram": "\f114",
+	"loading": "\f115",
+	"logo": "\f116",
+	"mineral-oil": "\f117",
+	"minus": "\f118",
+	"moneyback": "\f119",
+	"natural-dha": "\f11a",
+	"palm-tree": "\f11b",
+	"paraben-free": "\f11c",
+	"peta": "\f11d",
+	"pinterest-square": "\f11e",
+	"play": "\f11f",
+	"plus-circle": "\f120",
+	"plus": "\f121",
+	"search": "\f122",
+	"tag": "\f123",
+	"tiktok": "\f124",
+	"toxin-free": "\f125",
+	"trash": "\f126",
+	"twitter-square": "\f127",
+	"vegan": "\f128",
+	"youtube": "\f129",
 );
 
 .sni.sni__account:before,
 .sni-after.sni__account:after {
 	content: map-get($supernova-icon-map, "account");
+}
+.sni.sni__alcohol-free:before,
+.sni-after.sni__alcohol-free:after {
+	content: map-get($supernova-icon-map, "alcohol-free");
 }
 .sni.sni__awards:before,
 .sni-after.sni__awards:after {
@@ -66,6 +87,14 @@ $supernova-icon-map: (
 .sni.sni__cart:before,
 .sni-after.sni__cart:after {
 	content: map-get($supernova-icon-map, "cart");
+}
+.sni.sni__check-circle:before,
+.sni-after.sni__check-circle:after {
+	content: map-get($supernova-icon-map, "check-circle");
+}
+.sni.sni__check:before,
+.sni-after.sni__check:after {
+	content: map-get($supernova-icon-map, "check");
 }
 .sni.sni__chevron-down:before,
 .sni-after.sni__chevron-down:after {
@@ -83,6 +112,10 @@ $supernova-icon-map: (
 .sni-after.sni__chevron-up:after {
 	content: map-get($supernova-icon-map, "chevron-up");
 }
+.sni.sni__circle-tick:before,
+.sni-after.sni__circle-tick:after {
+	content: map-get($supernova-icon-map, "circle-tick");
+}
 .sni.sni__close-circle:before,
 .sni-after.sni__close-circle:after {
 	content: map-get($supernova-icon-map, "close-circle");
@@ -91,21 +124,45 @@ $supernova-icon-map: (
 .sni-after.sni__close:after {
 	content: map-get($supernova-icon-map, "close");
 }
+.sni.sni__cruelty-free:before,
+.sni-after.sni__cruelty-free:after {
+	content: map-get($supernova-icon-map, "cruelty-free");
+}
 .sni.sni__delivery:before,
 .sni-after.sni__delivery:after {
 	content: map-get($supernova-icon-map, "delivery");
+}
+.sni.sni__dimethicone-free:before,
+.sni-after.sni__dimethicone-free:after {
+	content: map-get($supernova-icon-map, "dimethicone-free");
+}
+.sni.sni__ethically:before,
+.sni-after.sni__ethically:after {
+	content: map-get($supernova-icon-map, "ethically");
 }
 .sni.sni__facebook-square:before,
 .sni-after.sni__facebook-square:after {
 	content: map-get($supernova-icon-map, "facebook-square");
 }
+.sni.sni__gluten:before,
+.sni-after.sni__gluten:after {
+	content: map-get($supernova-icon-map, "gluten");
+}
 .sni.sni__instagram:before,
 .sni-after.sni__instagram:after {
 	content: map-get($supernova-icon-map, "instagram");
 }
+.sni.sni__loading:before,
+.sni-after.sni__loading:after {
+	content: map-get($supernova-icon-map, "loading");
+}
 .sni.sni__logo:before,
 .sni-after.sni__logo:after {
 	content: map-get($supernova-icon-map, "logo");
+}
+.sni.sni__mineral-oil:before,
+.sni-after.sni__mineral-oil:after {
+	content: map-get($supernova-icon-map, "mineral-oil");
 }
 .sni.sni__minus:before,
 .sni-after.sni__minus:after {
@@ -115,9 +172,21 @@ $supernova-icon-map: (
 .sni-after.sni__moneyback:after {
 	content: map-get($supernova-icon-map, "moneyback");
 }
+.sni.sni__natural-dha:before,
+.sni-after.sni__natural-dha:after {
+	content: map-get($supernova-icon-map, "natural-dha");
+}
 .sni.sni__palm-tree:before,
 .sni-after.sni__palm-tree:after {
 	content: map-get($supernova-icon-map, "palm-tree");
+}
+.sni.sni__paraben-free:before,
+.sni-after.sni__paraben-free:after {
+	content: map-get($supernova-icon-map, "paraben-free");
+}
+.sni.sni__peta:before,
+.sni-after.sni__peta:after {
+	content: map-get($supernova-icon-map, "peta");
 }
 .sni.sni__pinterest-square:before,
 .sni-after.sni__pinterest-square:after {
@@ -147,6 +216,10 @@ $supernova-icon-map: (
 .sni-after.sni__tiktok:after {
 	content: map-get($supernova-icon-map, "tiktok");
 }
+.sni.sni__toxin-free:before,
+.sni-after.sni__toxin-free:after {
+	content: map-get($supernova-icon-map, "toxin-free");
+}
 .sni.sni__trash:before,
 .sni-after.sni__trash:after {
 	content: map-get($supernova-icon-map, "trash");
@@ -154,6 +227,10 @@ $supernova-icon-map: (
 .sni.sni__twitter-square:before,
 .sni-after.sni__twitter-square:after {
 	content: map-get($supernova-icon-map, "twitter-square");
+}
+.sni.sni__vegan:before,
+.sni-after.sni__vegan:after {
+	content: map-get($supernova-icon-map, "vegan");
 }
 .sni.sni__youtube:before,
 .sni-after.sni__youtube:after {

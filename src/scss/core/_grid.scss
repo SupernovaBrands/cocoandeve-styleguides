@@ -6,7 +6,7 @@
 }
 
 @include media-breakpoint-up(lg) {
-	.container {
+	.container, .container-fluid {
 		padding-right: $grid-gutter-width;
 		padding-left: $grid-gutter-width;
 	}
@@ -30,4 +30,14 @@
       margin-left: -$grid-gutter-width;
     }
   }
+}
+
+.container__w-50 {
+	@include media-breakpoint-up(lg) {
+		max-width: map-get($container-max-widths, lg) / 2;
+	}
+
+	@include media-breakpoint-up(xl) {
+		max-width: map-get($container-max-widths, xl) / 2;
+	}
 }

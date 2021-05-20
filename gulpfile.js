@@ -8,6 +8,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
 const handlebars = require('gulp-compile-handlebars');
 const rename = require('gulp-rename');
+const critical = require('critical').stream;
 const fs = require('fs');
 const path = require('path');
 
@@ -16,7 +17,6 @@ const webpackConfig = require('./webpack.config.js');
 
 const cssDir = 'dist/css';
 const jsDir = 'dist/js';
-const fontsDir = 'dist/fonts';
 
 const files = {
 	index: ['src/docs/index.hbs'],
@@ -26,7 +26,15 @@ const files = {
 	vendorJs: ['src/js/vendor/*'],
 	allScss: ['src/scss/**/*'],
 	scss: ['src/scss/*.scss'],
-	fonts: ['fonts/*.svg', 'fonts/*.ttf', 'fonts/*.woff', 'fonts/*.woff2'],
+	static: [
+		// fonts
+		'fonts/*.svg',
+		'fonts/*.ttf',
+		'fonts/*.woff',
+		'fonts/*.woff2',
+		// images
+		'images/*',
+	],
 };
 
 function errorHandler(err) {
@@ -46,6 +54,7 @@ const hbsHelpers = {
 	titleCase,
 	eq: (a, b) => a === b,
 	gt: (a, b) => a > b,
+	minus: (a, b) => a - b,
 	times: (n, block) => {
 		let accum = '';
 		for (let i = 1; i <= n; i += 1) {
@@ -58,7 +67,13 @@ const hbsHelpers = {
 	},
 };
 
-const indexFile = () => {
+const hbsVars = {
+	imageUrl: '/cocoandeve-styleguides/images',
+	jsUrl: '/cocoandeve-styleguides/js',
+	cssUrl: '/cocoandeve-styleguides/css',
+};
+
+const indexFile = function () {
 	const base = 'src/docs';
 	const folders = ['core', 'components', 'compounds', 'sections', 'templates'];
 	const filenames = {};
@@ -74,6 +89,7 @@ const indexFile = () => {
 	const core = 'Core & Components';
 	folders.splice(0, 2, core);
 	const result = {
+		...hbsVars,
 		folders,
 		filenames: { [core]: [...filenames.core, ...filenames.components], ...filenames },
 	};
@@ -84,57 +100,93 @@ const indexFile = () => {
 		.pipe(browserSync.stream());
 };
 
-const hbsFiles = () => src(files.hbs)
-	.pipe(handlebars({}, { batch: ['src/partials'], helpers: hbsHelpers }))
-	.pipe(rename({ extname: '.html' }))
-	.pipe(dest('dist'))
-	.pipe(browserSync.stream());
+const hbsFiles = function () {
+	return src(files.hbs)
+		.pipe(handlebars(hbsVars, { batch: ['src/partials'], helpers: hbsHelpers }))
+		.pipe(rename({ extname: '.html' }))
+		.pipe(dest('dist'))
+		.pipe(browserSync.stream());
+};
 
-const jsFiles = () => src(files.js)
-	.pipe(browserSync.stream());
+const jsFiles = function () {
+	return src(files.js)
+		.pipe(browserSync.stream());
+};
 
-const vendorJsFiles = () => src(files.vendorJs)
-	.pipe(dest(jsDir))
-	.pipe(browserSync.stream());
+const vendorJsFiles = function () {
+	return src(files.vendorJs)
+		.pipe(dest(jsDir))
+		.pipe(browserSync.stream());
+};
 
-const scssFiles = () => src(files.scss)
-	.pipe(sourcemaps.init())
-	.pipe(sass({ outputStyle: 'expanded' }).on('error', errorHandler))
-	.pipe(autoprefixer())
-	.pipe(sourcemaps.write('.'))
-	.pipe(dest(cssDir))
-	.pipe(browserSync.stream());
+const scssFiles = function () {
+	return src(files.scss)
+		.pipe(sourcemaps.init())
+		.pipe(sass({ outputStyle: 'compressed' }).on('error', errorHandler))
+		.pipe(autoprefixer())
+		.pipe(sourcemaps.write('.'))
+		.pipe(dest(cssDir))
+		.pipe(browserSync.stream());
+};
 
-const fontsFiles = () => src(files.fonts)
-	.pipe(dest(fontsDir))
-	.pipe(browserSync.stream());
+const staticFiles = function () {
+	return src(files.static, { base: '.' })
+		.pipe(dest('dist'))
+		.pipe(browserSync.stream());
+};
 
-const webpackBuild = (isWatch = false) => () => new Promise((resolve, reject) => {
-	webpack({ ...webpackConfig, watch: isWatch }, (err, stats) => {
-		if (err) {
-			return reject(err);
-		}
-		if (stats.hasErrors()) {
-			return reject(new Error(stats.compilation.errors.join('\n')));
-		}
-		return resolve();
+const criticalCss = function () {
+	return src(['dist/templates/*.html'])
+		.pipe(
+			critical({
+				base: 'dist/',
+				css: ['css/main.css'],
+				dimensions: [
+					{
+						height: 667,
+						width: 375,
+					},
+					{
+						height: 948,
+						width: 1440,
+					},
+				],
+			}),
+		)
+		.on('error', (err) => {
+			console.error(err.message);
+		})
+		.pipe(dest('dist/critical'));
+};
+
+const webpackBuild = (isWatch = false) => function () {
+	return new Promise((resolve, reject) => {
+		webpack({ ...webpackConfig, watch: isWatch }, (err, stats) => {
+			if (err) {
+				return reject(err);
+			}
+			if (stats.hasErrors()) {
+				return reject(new Error(stats.compilation.errors.join('\n')));
+			}
+			return resolve();
+		});
 	});
-});
+};
 
-const watchFiles = (done) => {
-	watch(files.allScss, parallel(scssFiles));
-	watch(files.index, parallel(indexFile));
-	watch(files.hbs, parallel(hbsFiles))
+const watchFiles = function (done) {
+	watch(files.allScss, scssFiles);
+	watch(files.index, indexFile);
+	watch(files.hbs, hbsFiles)
 		.on('add', indexFile)
 		.on('unlink', indexFile);
-	watch(files.partials, parallel(hbsFiles));
-	watch(files.js, parallel(jsFiles));
-	watch(files.vendorJs, parallel(vendorJsFiles));
-	watch(files.fonts, parallel(fontsFiles));
+	watch(files.partials, hbsFiles);
+	watch(files.js, jsFiles);
+	watch(files.vendorJs, vendorJsFiles);
+	watch(files.static, staticFiles);
 	done();
 };
 
-const initServer = (done) => {
+const initServer = function (done) {
 	browserSync.init({
 		server: './dist',
 		port: 8080,
@@ -157,14 +209,15 @@ task(clean);
 task(indexFile);
 task(scssFiles);
 task(initServer);
+task(criticalCss);
 task('webpack', webpackBuild());
 task('webpackWatch', webpackBuild(true));
 task(
 	'build',
-	parallel(indexFile, hbsFiles, vendorJsFiles, scssFiles, fontsFiles, 'webpack'),
+	parallel(indexFile, hbsFiles, vendorJsFiles, staticFiles, scssFiles, 'webpack'),
 );
 task('watch', series(
-	parallel(indexFile, hbsFiles, vendorJsFiles, scssFiles, fontsFiles, 'webpackWatch'),
+	parallel(indexFile, hbsFiles, vendorJsFiles, staticFiles, scssFiles, 'webpackWatch'),
 	watchFiles,
 ));
 task('default', series('clean', 'watch', 'initServer'));
