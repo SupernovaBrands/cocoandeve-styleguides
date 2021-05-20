@@ -27,6 +27,7 @@
 	&__sidebar {
 		grid-area: sidebar;
 		top: 0;
+    z-index: $zindex-dropdown;
 	}
 }
 
