@@ -84,75 +84,74 @@
   }
 
   @include media-breakpoint-down(lg) {
-        //992 - 1259 screen width
-        .h4 {
-          font-size: calc-em(16);
-        }
-      }
+    //992 - 1259 screen width
+    .h4 {
+      font-size: calc-em(16);
+    }
+  }
+}
+
+.nav-ranges {
+  border-top: 1px solid $primary-light;
+}
+
+.mobile-nav {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity .2s linear;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  visibility: hidden;
+
+  //overlay close icon
+  &:before {
+    position: absolute;
+    right: 12.5%;
+    top: calc-em(28);
+    font-size: calc-em(20);
+    color: #fff;
+  }
+
+  &__menu {
+    padding-left: $grid-gutter-width;
+    padding-right: $grid-gutter-width;
+    transform: translateX(-100%);
+    transition: transform .1s ease-in-out;
+    overflow-y: auto;
+
+    .card {
+      border: none;
     }
 
-    .nav-ranges {
-      border-top: 1px solid $primary-light;
+    .card-header {
+      border-bottom: none;
     }
 
-    .mobile-nav {
-      top: 0;
-      bottom: 0;
-      left: 0;
-      opacity: 0;
-      transition: opacity .2s linear;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.6);
-      visibility: hidden;
-
-    //overlay close icon
-    &:before {
-      position: absolute;
-      right: 12.5%;
-      top: calc-em(28);
-      font-size: calc-em(20);
-      color: #fff;
+    .card-body:before{
+      content: '';
+      border-top: calc-em(1) solid $gray-100;
+      display: block;
+      margin-top: calc-em(10);
     }
 
-    &__menu {
-      padding-left: $grid-gutter-width;
-      padding-right: $grid-gutter-width;
-      transform: translateX(-100%);
-      transition: transform .1s ease-in-out;
-      overflow-y: auto;
+    li {
+      padding-top: calc-em(5);
+      padding-bottom: calc-em(5);
+    }
 
-      .card-body:before{
-        content: '';
-        border-top: calc-em(1) solid $gray-100;
-        display: block;
-        margin-top: calc-em(10);
-      }
+    select {
+      border-radius: 0;
+      border-left: none;
+      border-right: none;
+      background-position-x: right;
+      background-size: calc-em(10, 16);
+    }
 
-      li {
-        padding-top: calc-em(5);
-        padding-bottom: calc-em(5);
-      }
-
-      select {
-        border-radius: 0;
-        border-left: none;
-        border-right: none;
-        background-position-x: right;
-        background-size: calc-em(10, 16);
-      }
-
-      hr {
-        border-color: $gray-400;
-      }
-
-      &-tan:before {
-        border-color: $sh-purple-light;
-      }
-
-      &-body:before {
-        border-color: $bali-bod-blue-light;
-      }
+    hr {
+      border-color: $gray-400;
     }
 
     a:not(.btn) {
