@@ -16,7 +16,7 @@
 				<a href="#">Up to 25% off + Free Gift worth $25.40</a>
 			</div>
 		</div>
-		<nav class="bg-white navbar navbar-expand-lg justify-content-between">
+		<nav class="bg-white navbar navbar-expand-lg">
 	
 			<div class="container">
 				<button class="navbar-toggler" type="button">
@@ -97,7 +97,9 @@
 						<a class="nav-link h4 m-0 text-uppercase font-weight-bold sni sni__cart" data-toggle="modal" data-target="#cart-drawer" role="button">Cart (<span class="cart-drawer__count">0</span>)</a>
 					</li>
 				</ul>
-				<a class="nav-link sni sni__cart px-0 d-lg-none" data-toggle="modal" data-target="#cart-drawer" role="button"></a>
+				<a class="nav-link justify-content-end font-weight-bold sni sni__cart px-0 d-lg-none" data-toggle="modal" data-target="#cart-drawer" role="button">
+					(<span class="cart-drawer__count"></span>)
+				</a>
 				<div class="col-lg-4 flex-column tooltip bg-primary text-white sni-after sni__close-circle text-center py-2">
 					Item added to cart
 					<a href="#" class="text-white text-underline">Proceed to checkout</a>
@@ -110,113 +112,104 @@
 		<nav class="mobile-nav position-fixed d-lg-none sni sni__close">
 			<ul id="mobileMenu" class="mobile-nav__menu accordion position-fixed h-100 col-9 bg-white list-unstyled py-2 mb-0"
 				role="tablist" aria-multiselectable="true">
-				<li class="py-1">
+				<li class="mb-1">
 					<a href="#" class="btn btn-primary btn-block">Shop All</a>
 				</li>
-				<li class="card py-1">
+				<li class="card">
 					<figure id="headingHair" class="media card-header position-relative collapsed sni sni__chevron-down p-0"
 						data-toggle="collapse" data-target="#hairCare" aria-expanded="false" aria-controls="hairCare">
-						<img src="https://via.placeholder.com/50x50/EFADBA" alt="Generic placeholder image">
-						<figcaption class="media-body ml-1 hair">
-							Haircare
-							<h5 class="h1 m-0">Like A Virgin</h5>
+						<img src="https://via.placeholder.com/40x40/EFADBA" alt="Generic placeholder image">
+						<figcaption class="media-body ml-1">
+							<small>Haircare</small>
+							<h4 class="m-0">Like a Virgin</h4>
 						</figcaption>
 					</figure>
-					<ul id="hairCare" class="collapse list-unstyled card-body card-body--border card-body--border-hair p-0"
+					<ul id="hairCare" class="collapse list-unstyled card-body p-0"
 						role="tabpanel" aria-labelledby="headingHair" data-parent="#mobileMenu">
-						<li class="px-2 py-1"><a href="#">Nourishing Hair Masque </a></li>
-						<li class="px-2 py-1"><a href="#">Hair Kits & Gifts</a></li>
-						<li class="px-2 py-1"><a href="#"><strong>Shop All Hair</strong></a></li>
+						<li><a href="#">Nourishing Hair Masque</a></li>
+						<li><a href="#">Hair Heroes Gift Set</a></li>
+						<li><a href="#">That's A Wrap Bundle</a></li>
+						<li><a href="#">Microfibre Hair Towel Wrap</a></li>
+						<li><a href="#">Moisture Boost Shower Cap</a></li>
+						<li><a href="#">Hair Kits & Gifts</a></li>
+						<li><a href="#"><strong>Shop All Hair</strong></a></li>
 					</ul>
 				</li>
-				<li class="card py-1">
+				<li class="card">
 					<figure id="headingSkin" class="media card-header position-relative collapsed sni sni__chevron-down p-0"
 						data-toggle="collapse" data-target="#skinCare" aria-expanded="false" aria-controls="skinCare">
-						<img src="https://via.placeholder.com/50x50/EFADBA" alt="Generic placeholder image">
-						<figcaption class="media-body ml-1 tan">
-							Self Tanner
-							<h5 class="h1 m-0">Sunny Honey</h5>
+						<img src="https://via.placeholder.com/40x40/EFADBA" alt="Generic placeholder image">
+						<figcaption class="media-body ml-1">
+							<small>Self Tanner</small>
+							<h4 class="m-0">Sunny Honey</h4>
 						</figcaption>
 					</figure>
-					<ul id="skinCare" class="collapse list-unstyled card-body card-body--border card-body--border-tan p-0"
+					<ul id="skinCare" class="collapse list-unstyled card-body p-0"
 						role="tabpanel" aria-labelledby="headingSkin" data-parent="#mobileMenu">
-						<li class="px-2 py-1"><a href="#">Nourishing Hair Masque </a></li>
-						<li class="px-2 py-1"><a href="#">Hair Kits & Gifts</a></li>
-						<li class="px-2 py-1"><a href="#"><strong>Shop All Hair</strong></a></li>
+						<li><a href="#">Bali Bronzing Bundle</a></li>
+						<li><a href="#">Bali Bronzing Foam</a></li>
+						<li><a href="#">Bronzing Face Drops</a></li>
+						<li><a href="#">Self Tan Travel Kit</a></li>
+						<li><a href="#">Deluxe Vegan Kabuki Brush</a></li>
+						<li><a href="#">Soft Velvet Tanning Mitt</a></li>
+						<li><a href="#"><strong>Shop All Tan</strong></a></li>
 					</ul>
 				</li>
-				<li class="card py-1">
+				<li class="card">
 					<figure id="headingBody" class="media card-header position-relative collapsed sni sni__chevron-down p-0"
 						data-toggle="collapse" data-target="#bodyCare" aria-expanded="false" aria-controls="bodyCare">
-						<img src="https://via.placeholder.com/50x50/EFADBA" alt="Generic placeholder image">
-						<figcaption class="media-body ml-1 body">
-							Bodycare
-							<h5 class="h1 m-0">Glow Figure</h5>
+						<img src="https://via.placeholder.com/40x40/EFADBA" alt="Generic placeholder image">
+						<figcaption class="media-body ml-1">
+							<small>Bodycare</small>
+							<h4 class="m-0">Glow Figure</h4>
 						</figcaption>
 					</figure>
-					<ul id="bodyCare" class="collapse list-unstyled card-body card-body--border card-body--border-body p-0"
+					<ul id="bodyCare" class="collapse list-unstyled card-body p-0"
 						role="tabpanel" aria-labelledby="headingTwo" data-parent="#mobileMenu">
-						<li class="px-2 py-1"><a href="#">Nourishing Hair Masque </a></li>
-						<li class="px-2 py-1"><a href="#">Hair Kits & Gifts</a></li>
-						<li class="px-2 py-1"><a href="#"><strong>Shop All Hair</strong></a></li>
+						<li><a href="#">Bali Bod Bundle</a></li>
+						<li><a href="#">Bali Buffing Sugar</a></li>
+						<li><a href="#">Body Moisture Whip</a></li>
+						<li><a href="#">Bounce Body Masque</a></li>
+						<li><a href="#">Jelly Massage Mitt</a></li>
+						<li><a href="#">Smooth-on Shell Scoop</a></li>
+						<li><a href="#"><strong>Shop All Body</strong></a></li>
 					</ul>
 				</li>
-				<li class="card py-1">
+				<li class="card">
 					<figure id="headingBundles" class="media card-header position-relative collapsed sni sni__chevron-down p-0"
 						data-toggle="collapse" data-target="#collapseBundle" aria-expanded="false" aria-controls="collapseBundle">
-						<img src="https://via.placeholder.com/50x50/EFADBA" alt="Generic placeholder image">
+						<img src="https://via.placeholder.com/40x40/EFADBA" alt="Generic placeholder image">
 						<figcaption class="media-body ml-1">
-							Bundles
-							<h5 class="h1 m-0">Value Kits</h5>
+							<small>Bundles</small>
+							<h4 class="m-0">Value Kits</h4>
 						</figcaption>
 					</figure>
-					<ul id="collapseBundle" class="collapse list-unstyled card-body card-body--border p-0" role="tabpanel"
+					<ul id="collapseBundle" class="collapse list-unstyled card-body p-0" role="tabpanel"
 						aria-labelledby="headingBundles" data-parent="#mobileMenu">
-						<li class="px-2 py-1"><a href="#">Nourishing Hair Masque </a></li>
-						<li class="px-2 py-1"><a href="#">Hair Kits & Gifts</a></li>
-						<li class="px-2 py-1"><a href="#"><strong>Shop All Hair</strong></a></li>
+						<li><a href="#">Hair Heroes Gift Set</a></li>
+						<li><a href="#">Bali Bod Bundle</a></li>
+						<li><a href="#">Taste of the Tropics Kit</a></li>
+						<li><a href="#">Mini Mask Duo</a></li>
+						<li><a href="#">Shop all Products</a></li>
+						<li><a href="#">Shop all Kits & Gifts</a></li>
 					</ul>
 				</li>
-				<li class="py-1">
-					<h5 class="h1 m-0"><a href="#">My Account</a></h5>
-				</li>
-				<li class="py-1">
-					<h5 class="h1 m-0"><a href="#">Blog</a></h5>
-				</li>
-				<li class="py-1">
-					<h5 class="h1 m-0"><a href="#">Track My Order</a></h5>
-				</li>
-				<li class="py-1">
-					<h5 class="h1 m-0"><a href="#">FAQ</a></h5>
-				</li>
-				<li class="py-1">
-					<h5 class="h1 m-0"><a href="#">Result IRL</a></h5>
-				</li>
-				<li class="card py-1">
-					<div class="card-header position-relative collapsed sni sni__chevron-down p-0" id="headingInfo"
-						data-toggle="collapse" data-target="#collapseInfo" aria-expanded="false" aria-controls="collapseInfo">
-						<h5 class="h1 m-0">Info</h5>
-					</div>
-					<ul id="collapseInfo" class="collapse card-body pt-1 pb-0 list-unstyled" role="tabpanel"
-						aria-labelledby="headingInfo" data-parent="#mobileMenu">
-						<li class="py-1"><a href="#">Shipping & Refund</a></li>
-						<li class="py-1"><a href="#">Contact Us</a></li>
-					</ul>
-				</li>
-				<li class="card py-1">
-					<div class="card-header position-relative collapsed sni sni__chevron-down p-0" id="headingCurrency"
-						data-toggle="collapse" data-target="#currencySwitcher" aria-expanded="false" aria-controls="currencySwitcher">
-						<h5 class="h1 m-0">US (USD)</h5>
-					</div>
-					<ul id="currencySwitcher" class="collapse card-body pt-1 pb-0 list-unstyled" role="tabpanel"
-						aria-labelledby="headingCurrency" data-parent="#mobileMenu">
-						<li class="py-1"><a href="#">United Kingdom (GBP)</a></li>
-						<li class="py-1"><a href="#">USA (USD)</a></li>
-						<li class="py-1"><a href="#">Canada (CAD)</a></li>
-						<li class="py-1"><a href="#">Australia (AUD)</a></li>
-						<li class="py-1"><a href="#">Europe (EUR)</a></li>
-						<li class="py-1"><a href="#">Rest of the World (USD)</a></li>
-					</ul>
+				<li><hr class="my-1 mx-0" ></li>
+				<li><a href="#">My Account</a></li>
+				<li><a href="#">Track My Order</a></li>
+				<li><a href="#">Blog</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">Result IRL</a></li>
+				<li><a href="#">Contact Us</a></li>
+				<li>
+					<select class="custom-select font-weight-bold my-1 px-0 h-auto">
+						<option selected="">USA (USD)</option>
+						<option value="">United Kingdom (GBP)</option>
+						<option value="">Canada (CAD)</option>
+						<option value="">Australia (AUD)</option>
+						<option value="">Europe (EUR)</option>
+						<option value="">Rest of the World (USD)</option>
+					</select>
 				</li>
 			</ul>
 		</nav>
