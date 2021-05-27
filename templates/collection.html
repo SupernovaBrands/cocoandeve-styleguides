@@ -10,8 +10,233 @@
 </head>
 
 <body>
+  <header class="main-header">
+  	<div class="announcement-bar bg-primary-light w-100">
+  		<div class="container text-center font-weight-bold">
+  			<a href="#">Up to 25% off + Free Gift worth $25.40</a>
+  		</div>
+  	</div>
+  	<nav class="bg-white navbar navbar-expand-lg">
+  
+  		<div class="container">
+  			<button class="navbar-toggler" type="button">
+  				<span class="d-block"></span>
+  			</button>
+  
+  			<ul class="navbar-nav align-items-center d-none d-lg-flex">
+  				<li class="nav-item nav-item--mega-menu">
+  					<a href="#" class="btn btn-primary align-items-center mr-1 sni-after sni__chevron-down">Shop</a>
+  					<div class="mega-menu position-absolute bg-white w-100">
+  						<div class="container">
+  							<div class="row flex-grow-1 py-1">
+  								<div class="col-3">
+  									<h5 class="h1 mb-1"><a href="#" class="hair">Hair</a></h5>
+  									<ul class="list-unstyled">
+  										<li><a href="#">Nourishing Hair Masque</a></li>
+  										<li><a href="#">Hair Kits & Gifts</a></li>
+  									</ul>
+  								</div>
+  								<div class="col-3">
+  									<h5 class="h1 mb-1"><a href="#" class="tan">Tan</a></h5>
+  									<ul class="list-unstyled">
+  										<li><a href="#">Bali Bronzing Foam</a></li>
+  										<li><a href="#">Bali Bronzing Bundle</a></li>
+  										<li><a href="#">Deluxe Exfoliating Mitt</a></li>
+  										<li><a href="#">Deluxe Vegan Kabuki Brush</a></li>
+  										<li><a href="#">Velvet Tanning Mitt</a></li>
+  										<li><a href="#">Deluxe Travel Tan Kit</a></li>
+  									</ul>
+  								</div>
+  								<div class="col-3">
+  									<h5 class="h1 mb-1"><a href="#" class="body">Body</a></h5>
+  									<ul class="list-unstyled">
+  										<li><a href="#">Bali Buffing Sugar</a></li>
+  										<li><a href="#">Bounce Body Masque</a></li>
+  										<li><a href="#">Body Moisture Whip</a></li>
+  										<li><a href="#">Bali Bod Bundle</a></li>
+  										<li><a href="#">Jelly Massage Mitt</a></li>
+  										<li><a href="#">Smooth-on Shell Scoop</a></li>
+  									</ul>
+  								</div>
+  								<div class="col-3">
+  									<h5 class="h1 mb-1"><a href="#" class="bundles">Bundles</a></h5>
+  									<ul class="list-unstyled">
+  										<li><a href="#">Nourishing Hair Masque</a></li>
+  										<li><a href="#">Hair Kits & Gifts</a></li>
+  									</ul>
+  								</div>
+  							</div>
+  							<div class="row pt-1 pb-2">
+  								<a href="#" class="col-3"><img class="w-100" src="//via.placeholder.com/290x190/EFADBA"></a>
+  								<a href="#" class="col-3"><img class="w-100" src="//via.placeholder.com/290x190/EFADBA"></a>
+  								<a href="#" class="col-3"><img class="w-100" src="//via.placeholder.com/290x190/EFADBA"></a>
+  								<a href="#" class="col-3"><img class="w-100" src="//via.placeholder.com/290x190/EFADBA"></a>
+  							</div>
+  						</div>
+  					</div>
+  				</li>
+  				<li class="nav-item">
+  					<a class="nav-link h4 m-0 text-uppercase font-weight-bold" href="#">Blog</a>
+  				</li>
+  				<li class="nav-item">
+  					<a class="nav-link h4 m-0 text-uppercase font-weight-bold" href="#">FAQ</a>
+  				</li>
+  				<li class="nav-item">
+  					<a class="nav-link h4 m-0 text-uppercase font-weight-bold" href="#">Results IRL</a>
+  				</li>
+  			</ul>
+  			<a href="#" class="navbar-brand mx-0 sni sni__logo"></a>
+  			<ul class="navbar-nav d-none d-lg-flex justify-content-end">
+  				<li class="nav-item">
+  					<a class="nav-link h4 m-0 text-uppercase font-weight-bold sni sni__account" href="#">Account</a>
+  				</li>
+  				<li class="nav-item">
+  					<a class="nav-link h4 m-0 text-uppercase font-weight-bold" href="#">Track My Order</a>
+  				</li>
+  				<li class="nav-item">
+  					<a class="nav-link h4 m-0 text-uppercase font-weight-bold sni sni__cart" data-toggle="modal" data-target="#cart-drawer" role="button">Cart (<span class="cart-drawer__count">0</span>)</a>
+  				</li>
+  			</ul>
+  			<a class="nav-link justify-content-end font-weight-bold sni sni__cart px-0 d-lg-none" data-toggle="modal" data-target="#cart-drawer" role="button">
+  				(<span class="cart-drawer__count"></span>)
+  			</a>
+  			<div class="col-lg-4 flex-column tooltip bg-primary text-white sni-after sni__close-circle text-center py-2">
+  				Item added to cart
+  				<a href="#" class="text-white text-underline">Proceed to checkout</a>
+  			</div>
+  		</div>
+  
+  
+  	</nav>
+  
+  	<nav class="mobile-nav position-fixed d-lg-none sni sni__close">
+  		<ul id="mobileMenu" class="mobile-nav__menu accordion position-fixed h-100 col-9 bg-white list-unstyled py-2 mb-0"
+  			role="tablist" aria-multiselectable="true">
+  			<li class="mb-1">
+  				<a href="#" class="btn btn-primary btn-block">Shop All</a>
+  			</li>
+  			<li class="card">
+  				<figure id="headingHair" class="media card-header position-relative collapsed sni sni__chevron-down p-0"
+  					data-toggle="collapse" data-target="#hairCare" aria-expanded="false" aria-controls="hairCare">
+  					<img src="https://via.placeholder.com/40x40/EFADBA" alt="Generic placeholder image">
+  					<figcaption class="media-body ml-1">
+  						<small>Haircare</small>
+  						<h4 class="m-0">Like a Virgin</h4>
+  					</figcaption>
+  				</figure>
+  				<ul id="hairCare" class="collapse list-unstyled card-body p-0"
+  					role="tabpanel" aria-labelledby="headingHair" data-parent="#mobileMenu">
+  					<li><a href="#">Nourishing Hair Masque</a></li>
+  					<li><a href="#">Hair Heroes Gift Set</a></li>
+  					<li><a href="#">That's A Wrap Bundle</a></li>
+  					<li><a href="#">Microfibre Hair Towel Wrap</a></li>
+  					<li><a href="#">Moisture Boost Shower Cap</a></li>
+  					<li><a href="#">Hair Kits & Gifts</a></li>
+  					<li><a href="#"><strong>Shop All Hair</strong></a></li>
+  				</ul>
+  			</li>
+  			<li class="card">
+  				<figure id="headingSkin" class="media card-header position-relative collapsed sni sni__chevron-down p-0"
+  					data-toggle="collapse" data-target="#skinCare" aria-expanded="false" aria-controls="skinCare">
+  					<img src="https://via.placeholder.com/40x40/EFADBA" alt="Generic placeholder image">
+  					<figcaption class="media-body ml-1">
+  						<small>Self Tanner</small>
+  						<h4 class="m-0">Sunny Honey</h4>
+  					</figcaption>
+  				</figure>
+  				<ul id="skinCare" class="collapse list-unstyled card-body p-0"
+  					role="tabpanel" aria-labelledby="headingSkin" data-parent="#mobileMenu">
+  					<li><a href="#">Bali Bronzing Bundle</a></li>
+  					<li><a href="#">Bali Bronzing Foam</a></li>
+  					<li><a href="#">Bronzing Face Drops</a></li>
+  					<li><a href="#">Self Tan Travel Kit</a></li>
+  					<li><a href="#">Deluxe Vegan Kabuki Brush</a></li>
+  					<li><a href="#">Soft Velvet Tanning Mitt</a></li>
+  					<li><a href="#"><strong>Shop All Tan</strong></a></li>
+  				</ul>
+  			</li>
+  			<li class="card">
+  				<figure id="headingBody" class="media card-header position-relative collapsed sni sni__chevron-down p-0"
+  					data-toggle="collapse" data-target="#bodyCare" aria-expanded="false" aria-controls="bodyCare">
+  					<img src="https://via.placeholder.com/40x40/EFADBA" alt="Generic placeholder image">
+  					<figcaption class="media-body ml-1">
+  						<small>Bodycare</small>
+  						<h4 class="m-0">Glow Figure</h4>
+  					</figcaption>
+  				</figure>
+  				<ul id="bodyCare" class="collapse list-unstyled card-body p-0"
+  					role="tabpanel" aria-labelledby="headingTwo" data-parent="#mobileMenu">
+  					<li><a href="#">Bali Bod Bundle</a></li>
+  					<li><a href="#">Bali Buffing Sugar</a></li>
+  					<li><a href="#">Body Moisture Whip</a></li>
+  					<li><a href="#">Bounce Body Masque</a></li>
+  					<li><a href="#">Jelly Massage Mitt</a></li>
+  					<li><a href="#">Smooth-on Shell Scoop</a></li>
+  					<li><a href="#"><strong>Shop All Body</strong></a></li>
+  				</ul>
+  			</li>
+  			<li class="card">
+  				<figure id="headingBundles" class="media card-header position-relative collapsed sni sni__chevron-down p-0"
+  					data-toggle="collapse" data-target="#collapseBundle" aria-expanded="false" aria-controls="collapseBundle">
+  					<img src="https://via.placeholder.com/40x40/EFADBA" alt="Generic placeholder image">
+  					<figcaption class="media-body ml-1">
+  						<small>Bundles</small>
+  						<h4 class="m-0">Value Kits</h4>
+  					</figcaption>
+  				</figure>
+  				<ul id="collapseBundle" class="collapse list-unstyled card-body p-0" role="tabpanel"
+  					aria-labelledby="headingBundles" data-parent="#mobileMenu">
+  					<li><a href="#">Hair Heroes Gift Set</a></li>
+  					<li><a href="#">Bali Bod Bundle</a></li>
+  					<li><a href="#">Taste of the Tropics Kit</a></li>
+  					<li><a href="#">Mini Mask Duo</a></li>
+  					<li><a href="#">Shop all Products</a></li>
+  					<li><a href="#">Shop all Kits & Gifts</a></li>
+  				</ul>
+  			</li>
+  			<li><hr class="my-1 mx-0" ></li>
+  			<li><a href="#">My Account</a></li>
+  			<li><a href="#">Track My Order</a></li>
+  			<li><a href="#">Blog</a></li>
+  			<li><a href="#">FAQ</a></li>
+  			<li><a href="#">Result IRL</a></li>
+  			<li><a href="#">Contact Us</a></li>
+  			<li>
+  				<select class="custom-select font-weight-bold my-1 px-0 h-auto">
+  					<option selected="">USA (USD)</option>
+  					<option value="">United Kingdom (GBP)</option>
+  					<option value="">Canada (CAD)</option>
+  					<option value="">Australia (AUD)</option>
+  					<option value="">Europe (EUR)</option>
+  					<option value="">Rest of the World (USD)</option>
+  				</select>
+  			</li>
+  		</ul>
+  	</nav>
+  	<nav class="text-center nav-ranges p-1 bg-white d-lg-none">
+  		<ul class="nav justify-content-center">
+  			<li class="nav-item">
+  				<a href="#" class="nav-link pb-0 pt-0 "><b>Shop All</b></a>
+  			</li>
+  			<li class="nav-item">
+  				<a href="#" class="nav-link pb-0 pt-0"><b>Hair</b></a>
+  			</li>
+  			<li class="nav-item">
+  				<a href="#" class="nav-link pb-0 pt-0"><b>Tan</b></a>
+  			</li>
+  			<li class="nav-item">
+  				<a href="#" class="nav-link pb-0 pt-0"><b>Body</b></a>
+  			</li>
+  			<li class="nav-item">
+  				<a href="#" class="nav-link pb-0 pt-0"><b>Value Kits</b></a>
+  			</li>
+  		</ul>
+  	</nav>
+  </header>
+  
+  <div class="modal fade cart-drawer" id="cart-drawer" tabindex="-1" aria-hidden="true"></div>
 	<div class="container mt-4">
-    <figure class="image-with-text mobile-wrapper row position-relative align-items-center mb-lg-2 mt-5">
+    <figure class="imagewtext mobile-wrapper row position-relative align-items-center mb-lg-2 mt-5">
       <div class="col-12 col-lg-8 order-lg-last">
         <div class="no-gutters__in-container">
           <picture>
@@ -21,7 +246,7 @@
         </div>
       </div>
       <figcaption class="col-12 col-lg-4">
-        <div class="image-with-text__text-content text-left mt-lg-0 p-2 pt-lg-3 pb-lg-3 pr-lg-3 ">
+        <div class="imagewtext__content text-left mt-lg-0 p-2 pt-lg-3 pb-lg-3 pr-lg-3 ">
           <h1>Shop All</h1>
           <p>Explore award-winning Bali Beauty! Shop Coco & Eve hair, body, tan and gifts. Fast worldwide delivery, unBALIevable results!</p>
         </div>
@@ -89,6 +314,84 @@
 			</div>
 		</div>
 	</div>
+  <footer class="pt-md-6 pb-md-6 pt-2 pt-lg-4 pb-1 mobile-wrapper">
+  	<div class="container">
+  		<div class="footer-grid">
+  			<div class="footer-grid__newsletter">
+  				<h5 class="h2">Newsletter</h5>
+  				<p>Receive exclusive offers, promotions and beauty tips via email.</p>
+  				<form>
+  					<div class="input-group mb-3">
+  						<input type="email" class="form-control" placeholder="Enter your email" aria-label="Enter your email">
+  						<div class="input-group-append">
+  							<button class="btn btn-primary" type="submit">Subscribe</button>
+  						</div>
+  					</div>
+  				</form>
+  				<p>You can unsubscribe at any time. Please read our <a href="/pages/privacy-policy-new"
+  						title="Privacy Policy"><u>Privacy Policy</u></a> for more information about how we use your data.</p>
+  			</div>
+  			<div class="footer-grid__about-us">
+  				<h5 class="h2">About Us</h5>
+  				<ul class="list-unstyled">
+  					<li><a href="">Our Story</a></li>
+  					<li><a href="">Stockist</a></li>
+  					<li><a href="">Affiliates</a></li>
+  					<li><a href="">Blog</a></li>
+  				</ul>
+  			</div>
+  			<div class="footer-grid__help-links">
+  				<h5 class="h2">Help</h5>
+  				<ul class="list-unstyled">
+  					<li><a href="">Track My Order</a></li>
+  					<li><a href="">FAQ</a></li>
+  					<li><a href="">Shipping & Refund</a></li>
+  					<li><a href="">Contact Us</a></li>
+  					<li><a href="">Terms & Conditions</a></li>
+  					<li><a href="">Privacy Policy</a></li>
+  				</ul>
+  			</div>
+  			<div class="footer-grid__support">
+  				<h5 class="h2">Support</h5>
+  				<p>Got a question? Contact us <a href=""><u>here</u></a></p>
+  			</div>
+  			<div class="footer-grid__follow-us">
+  				<h2>Follow Us</h2>
+  				<a href="https://www.instagram.com/cocoandeve/" class="sni sni__instagram d-inline pr-1" target="_blank">
+  				</a>
+  				<a href="https://www.facebook.com/cocoandeve" class="sni sni__facebook-square d-inline pr-1" target="_blank">
+  				</a>
+  				<a href="https://www.pinterest.com/cocoeve0497/_shop/" class="sni sni__pinterest-square d-inline pr-1"
+  					target="_blank">
+  				</a>
+  				<a href="https://www.youtube.com/channel/UCVd0r8NG3Q5E9DMppEYBabA" class="sni sni__youtube d-inline pr-1"
+  					target="_blank">
+  				</a>
+  				<a href="https://www.tiktok.com/@coco_and_eve" class="sni sni__tiktok d-inline pr-1" target="_blank">
+  				</a>
+  			</div>
+  			<div class="footer-grid__currency">
+  				<h5 class="h2">Currency</h5>
+  				<div class="dropdown">
+  					<a class="dropdown-toggle font-weight-bold" href="#" role="button" id="dropdownMenuLink"
+  						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  						US (USD)
+  					</a>
+  					<div class="dropdown-menu p-0" aria-labelledby="dropdownMenuLink">
+  						<a class="dropdown-item pt-1 pb-1 active" href="#">United Kingdom (GBP)</a>
+  						<a class="dropdown-item pt-1 pb-1" href="#">USA (USD)</a>
+  						<a class="dropdown-item pt-1 pb-1" href="#">Canada (CAD)</a>
+  						<a class="dropdown-item pt-1 pb-1" href="#">Australia (AUD)</a>
+  						<a class="dropdown-item pt-1 pb-1" href="#">Europe (EUR)</a>
+  						<a class="dropdown-item pt-1 pb-1" href="#">Rest of the World (USD)</a>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  		<hr>
+  		<p class="text-center">© 2021 Coco&Eve <i class="sni sni__palm-tree d-inline"></i></p>
+  	</div>
+  </footer>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	
 	
