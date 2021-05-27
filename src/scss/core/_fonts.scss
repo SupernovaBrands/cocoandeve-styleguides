@@ -1,8 +1,7 @@
 @font-face {
 	font-family: "sofia-pro";
-	src: url(asset-url('SofiaPro-Bold.woff2')) format('woff2'),
-		url(asset-url('SofiaPro-Bold.woff')) format('woff'),
-		url(asset-url('SofiaPro-Bold.eot')) format('opentype');
+	src: url("https://use.typekit.net/af/30420e/00000000000000003b9b1a9e/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),
+	url("https://use.typekit.net/af/30420e/00000000000000003b9b1a9e/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff");
 	font-display: swap;
 	font-style: normal;
 	font-weight: 700;
@@ -10,9 +9,8 @@
 
 @font-face {
 	font-family: "sofia-pro";
-	src: url(asset-url('SofiaPro-Regular.woff2')) format('woff2'),
-		url(asset-url('SofiaPro-Regular.woff')) format('woff'),
-		url(asset-url('SofiaPro-Regular.eot')) format('opentype');
+	src: url("https://use.typekit.net/af/5855b2/00000000000000003b9b1a98/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),
+	url("https://use.typekit.net/af/5855b2/00000000000000003b9b1a98/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff");
 	font-display: swap;
 	font-style: normal;
 	font-weight: 400;
@@ -20,11 +18,9 @@
 
 @font-face {
 	font-family: "sofia-pro";
-	src: url(asset-url('SofiaProLight.woff2')) format('woff2'),
-	url(asset-url('SofiaProLight.woff')) format('woff'),
-	url(asset-url('SofiaProLight.eot')) format('opentype');
+	src: url("https://use.typekit.net/af/572508/00000000000000003b9b1a96/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff2"),
+	url("https://use.typekit.net/af/572508/00000000000000003b9b1a96/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff");
 	font-display: swap;
 	font-style: normal;
 	font-weight: 300;
 }
-
