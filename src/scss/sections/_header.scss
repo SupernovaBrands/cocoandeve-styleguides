@@ -102,6 +102,7 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     visibility: hidden;
+    z-index: $zindex-sticky;
 
     //overlay close icon
     &:before {
@@ -211,6 +212,7 @@
     visibility: hidden;
     top: 90%;
     box-shadow: 0 calc-em(4) calc-em(5) 0 rgba(0, 0, 0, .06);
+    z-index: $zindex-sticky;
 
     &:before {
         content: '';

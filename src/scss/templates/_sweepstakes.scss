@@ -1,0 +1,54 @@
+.sweepstakes {
+
+    &__country-label {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        &:after {
+            font-size: calc-em(10, 16);
+            margin-left: calc-em(10, 16);
+        }
+    }
+
+    &__checkbox {
+        width: calc-em(19, 16);
+        height: calc-em(19, 16);
+        border-radius: calc-em(3, 16);
+        color: $primary;
+
+        &:before {
+            font-size: calc-em(11, 16)
+        }
+    }
+
+    &__thank-you,
+    form {
+        border-radius: calc-em(5, 16);
+    }
+
+    .input-group-addon + input{
+        flex-basis: 60%;
+
+        @include media-breakpoint-up(xl) {
+            flex-basis: 65%;
+        }
+    }
+
+    li {
+        padding-top: calc-em(5, 16);
+        padding-bottom: calc-em(5, 16);
+        align-items: center;
+
+        &:before {
+            color: $primary;
+            margin-right: calc-em(5, 16);
+            font-size: calc-em(12, 16);
+        }
+    }
+
+    select {
+        opacity: 0;
+    }
+
+}

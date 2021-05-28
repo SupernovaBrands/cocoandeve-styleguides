@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	{{> html-head title="Sweepstakes" }}
+</head>
+
+<body>
+    {{> sections/header}}
+    <section class="sweepstakes bg-primary-light">
+        <div class="container">
+            <figure class="row m-0 align-items-center">
+                <picture class="col-lg-7 order-lg-2">
+                    <source srcset="https://via.placeholder.com/457x406/F5DADF.jpg" media="(min-width: 992px)" />
+                    <img src="https://via.placeholder.com/457x406.jpg/F5DADF" class="w-100">
+                </picture>
+                <figcaption class="px-0 col-lg-5 order-lg-1 my-lg-4">
+                    <form action="" class="px-4 py-3 bg-white text-center sweepstakes__form">
+                        <h1 class="text-secondary">Coco & Eve Sweepstakes</h1>
+                        <p>Add in your email or mobile number to win your fave Coco and Eve products.</p>
+                        <ul class="d-inline-block list-unstyled text-left">
+                            <li class="sni sni__check">First prize is $300 worth of products</li>
+                            <li class="sni sni__check">Second prize is $200 worth of products</li>
+                            <li class="sni sni__check">Third prize is $100 worth of products</li>
+                        </ul>
+                        <div class="input-group form-group">
+                            <input id="sweepstakes__email" class="form-control" type="email" placeholder="Type email here">
+                        </div>
+
+                        <div class="input-group form-group font-size-sm justify-content-center">- or -</div>
+                        <div class="input-group form-group">
+                            <label for="sweepstakes__country" class="input-group-addon form-control">
+                                <span class="position-absolute bg-white sweepstakes__country-label sni-after sni__chevron-down align-items-center">+65</span>
+                                <select id="sweepstakes__country" class="custom-select">
+                                    <option value="" disabled="">Select Country</option>
+                                    <option value="KH" data-code="855">Cambodia</option>
+                                    <option value="HK" data-code="852">Hong Kong</option>
+                                    <option value="IL" data-code="972">Israel</option>
+                                    <option value="JP" data-code="81">Japan</option>
+                                    <option value="KR" data-code="82">South Korea</option>
+                                    <option value="LA" data-code="856">Laos</option>
+                                    <option value="MO" data-code="853">Macau</option>
+                                    <option value="MY" data-code="60">Malaysia</option>
+                                    <option value="MV" data-code="960">Maldives</option>
+                                    <option value="MM" data-code="95">Myanmar</option>
+                                    <option value="PG" data-code="675">Papua New Guinea</option>
+                                    <option value="PH" data-code="63">Philippines</option>
+                                    <option value="RE" data-code="262">Réunion</option>
+                                    <option value="RU" data-code="7">Russia</option>
+                                    <option value="SG" data-code="65" selected="">Singapore</option>
+                                    <option value="LK" data-code="94">Sri Lanka</option>
+                                    <option value="TW" data-code="886">Taiwan</option>
+                                    <option value="TR" data-code="90">Turkey</option>
+                                    <option value="VN" data-code="84">Vietnam</option>
+                                </select>
+                            </label>
+                            <input id="sweepstakes__phone" class="form-control" type="phone" placeholder="Phone number">
+                            <div class="d-none input-error phone-error font-size-xs text-primary mb-2"></div>
+                        </div>
+
+                        <div class="d-flex form-check form-group align-items-center justify-content-center">
+                            <!--input id="sweepstakes__toc" type="checkbox" class="form-check-input"-->
+                            <div id="sweepstakes__toc" class="d-inline-flex justify-content-center align-items-center mr-1 border sweepstakes__checkbox sni"></div>
+                            <label class="form-check-label font-size-sm">I agree to <a href="#">Privacy Policy & ToS</a></label>
+                        </div>
+                        <div class="d-none input-error toc-error font-size-xs text-primary mb-2">You have not agreed to the Privacy Policy & ToS</div>
+                        <div class="form-group">
+                            <button id="sweepstakes__submit" type="submit" class="btn btn-lg btn-primary btn-block">Sign me up!</button>
+                        </div>
+                    </form>
+                    <div class="d-none sweepstakes__thank-you px-4 py-3 bg-white text-center">
+                        <h2 class="h1 text-secondary">Thank you!</h2>
+                        <p>Your entry has been registered! Head to Coco & Eve and do some shopping while you wait ;)</p>
+                        <a href="#" class="btn btn-lg btn-primary btn-block">Shop Coco & Eve</a>
+                    </div>
+                    <p class="font-size-sm text-white m-0 mt-2 mb-2 mb-lg-0">*Customers who sign up to our sweepstakes through SMS or email address will be given a chance to be one of three to win up to $300 USD worth of products. Contest winners will be notified via SMS or email. Sweepstakes will run from March 16, 2021 12:00am PST to March 22, 2021 11:59pm PST. Sweepstakes prizes cannot be used in conjunction with any other code, offer or promotion. Coco & Eve reserves the right to cancel or alter any promotion without prior notice. In the event of any dispute, the decision of Coco & Eve is final.</p>
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+
+    {{> sections/footer}}
+
+    {{> js jquery=true bootstrap=true main=true }}
+</body>
+</html>
