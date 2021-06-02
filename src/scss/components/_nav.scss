@@ -18,15 +18,17 @@
 		}
 	}
 
-	@include media-breakpoint-down(sm) {
-		&.sni__cart {
-			font-size: calc-em(20, 16);
+  @include media-breakpoint-down(md) {
+    &.sni__cart {
+      font-size: calc-em(20, 16);
+      flex-basis: 20%;
 
-			&:before {
-				font-size: calc-em(20);
-			}
-		}
-	}
+      &:before {
+        font-size: calc-em(20);
+        margin-right: calc-em(3, 16);
+      }
+    }
+  }
 }
 
 .navbar-brand {

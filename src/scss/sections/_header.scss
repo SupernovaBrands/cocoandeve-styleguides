@@ -103,14 +103,14 @@
 	background-color: rgba(0, 0, 0, 0.6);
 	visibility: hidden;
 
-	//overlay close icon
-	&:before {
-		position: absolute;
-		right: 12.5%;
-		top: calc-em(35);
-		font-size: calc-em(20);
-		color: #fff;
-	}
+    //overlay close icon
+    &:before {
+        position: absolute;
+        right: 12.5%;
+        top: calc-em(28);
+        font-size: calc-em(20);
+        color: #fff;
+    }
 
 	&__menu {
 		padding-left: $grid-gutter-width;
@@ -127,28 +127,29 @@
 			border-bottom: none;
 		}
 
-		.card-body--border{
+        .card-body:before{
+            content: '';
+            border-top: calc-em(1) solid $gray-100;
+            display: block;
+            margin-top: calc-em(10);
+        }
 
-			&:before {
-				content: '';
-				border-top: calc-em(5) solid $gray-500;
-				display: block;
-				margin-top: calc-em(10);
-				padding-top: calc-em(10);
-			}
+        li {
+            padding-top: calc-em(5);
+            padding-bottom: calc-em(5);
+        }
 
-			&-hair:before {
-				border-color: $secondary-light;
-			}
+        select {
+            border-radius: 0;
+            border-left: none;
+            border-right: none;
+            background-position-x: right;
+            background-size: calc-em(10, 16);
+        }
 
-			&-tan:before {
-				border-color: $sh-purple-light;
-			}
-
-			&-body:before {
-				border-color: $bali-bod-blue-light;
-			}
-		}
+        hr {
+            border-color: $gray-400;
+        }
 
 		a:not(.btn) {
 			color: $body-color;
@@ -170,6 +171,7 @@
 }
 
 .navbar-toggler {
+    flex-basis: 20%;
 
 	span {
 		width: calc-em(25, 20);
