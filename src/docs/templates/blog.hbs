@@ -6,6 +6,7 @@
 </head>
 
 <body class="mobile-wrapper">
+	{{> sections/header}}
 	<div class="container mt-4">
 		<h1 class="text-center mb-0">COCO AND EVE JOURNAL</h1>
 		<ul class="mt-1 mb-2 nav nav-category justify-content-center align-items-center">
@@ -59,56 +60,9 @@
 			</div>
 
 			<article class="blog-grid__post1 post-card col-12 d-lg-block mb-4 mb-lg-3">
-				<figure id="carouselWithGroupedControls" class="carousel carousel--fixed-height slide mb-2 no-gutters__in-container" data-ride="carousel">
-					<ol class="carousel-indicators">
-						<li data-target="#carouselWithGroupedControls" data-slide-to="0" class="active rounded-circle border-0"></li>
-						<li data-target="#carouselWithGroupedControls" data-slide-to="1" class="rounded-circle border-0"></li>
-						<li data-target="#carouselWithGroupedControls" data-slide-to="2" class="rounded-circle border-0"></li>
-					</ol>
-					<div class="carousel-inner">
-						<div class="carousel-item active">
-							<figure class="mb-0">
-								<a href="/cocoandeve-styleguides/templates/article.html" class="hover-overlay d-block h-100">
-									<picture>
-										<source srcset="https://via.placeholder.com/770x400.jpg/EFADBA" media="(min-width: 992px)" />
-										<img src="https://via.placeholder.com/375x190.jpg/EFADBA" class="w-100">
-									</picture>
-								</a>
-							</figure>
-						</div>
-						<div class="carousel-item">
-							<figure class="mb-0">
-								<a href="/cocoandeve-styleguides/templates/article.html" class="hover-overlay d-block h-100">
-									<picture>
-										<source srcset="https://via.placeholder.com/400x770.jpg/EFADBA" media="(min-width: 992px)" />
-										<img src="https://via.placeholder.com/190x375.jpg/EFADBA" class="w-100">
-									</picture>
-								</a>
-							</figure>
-						</div>
-						<div class="carousel-item">
-							<figure class="mb-0">
-								<a href="/cocoandeve-styleguides/templates/article.html" class="hover-overlay d-block h-100">
-									<picture>
-										<source srcset="https://via.placeholder.com/770x400.jpg/EFADBA" media="(min-width: 992px)" />
-										<img src="https://via.placeholder.com/375x190.jpg/EFADBA" class="w-100">
-									</picture>
-								</a>
-							</figure>
-						</div>
-					</div>
-
-					<a class="carousel-control carousel-control-prev carousel-control--background carousel-control--right-lg"
-						href="#carouselWithGroupedControls" role="button" data-slide="prev">
-						<span class="carousel-control-prev-icon sni sni__chevron-prev justify-content-center align-items-center"
-							aria-hidden="true"></span>
-						<span class="sr-only">Previous</span>
-					</a>
-					<a class="carousel-control carousel-control-next carousel-control--background carousel-control--right-lg"
-						href="#carouselWithGroupedControls" role="button" data-slide="next">
-						<span class="carousel-control-next-icon sni sni__chevron-next justify-content-center align-items-center"
-							aria-hidden="true"></span>
-						<span class="sr-only">Next</span>
+				<figure class="mb-2 no-gutters__in-container">
+					<a href="/cocoandeve-styleguides/templates/article.html" class="hover-overlay d-block">
+						<img src="https://via.placeholder.com/375x190.jpg/EFADBA" class="w-100">
 					</a>
 				</figure>
 				<time class="d-block mb-1">04 May, 2020</time>
@@ -171,101 +125,97 @@
 			</article>
 		</div>
 
-		<div class="row mb-4">
-			<div id="blog__how-to" class="col-12">
-				<section class="how-to bg-primary-light py-2 no-gutters__in-container">
-					<div id="carouselVideo4" class="carousel slide carousel--loop" data-slide-number="3" data-interval="false">
-						<h2 class="text-center h1 py-2 py-lg-1 mb-0">The Ultimate “HOW TO”s</h2>
-						<div class="carousel--centered">
-							<div class="carousel-inner row flex-nowrap" role="listbox">
-								<figure class="video-card mb-0 px-md-2 carousel-item col-9 col-md-6 active">
-									<picture class="d-block position-relative sni sni__play" data-toggle="modal" data-src="https://www.youtube.com/embed/xwAfY_vdE9I" data-target="#videoCardModal">
-										<source srcset="https://via.placeholder.com/570x340?text=1" media="(min-width: 992px)">
-										<source srcset="https://via.placeholder.com/275x164?text=1">
-										<img src="https://via.placeholder.com/275x164?text=1" alt="Placeholder" class="d-block w-100">
-									</picture>
-									<figcaption class="text-center mt-2">
-										<h3>Multi-masking #selfcaresunday with Janet Amrani</h3>
-									</figcaption>
-								</figure>
-								<figure class="video-card mb-0 px-md-2 carousel-item col-9 col-md-6">
-									<picture class="d-block position-relative sni sni__play" data-toggle="modal" data-src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/TAN_HOW_TO_BONNIE_LR.mp4?v=1610351992" data-target="#videoCardModal">
-										<source srcset="https://via.placeholder.com/570x340?text=2" media="(min-width: 992px)">
-										<source srcset="https://via.placeholder.com/275x164?text=2">
-										<img src="https://via.placeholder.com/275x164?text=2" alt="Placeholder" class="d-block w-100">
-									</picture>
-									<figcaption class="text-center mt-2">
-										<h3>Multi-masking #selfcaresunday with Janet Amrani</h3>
-									</figcaption>
-								</figure>
-								<figure class="video-card mb-0 px-md-2 carousel-item col-9 col-md-6">
-									<picture class="d-block position-relative sni sni__play" data-toggle="modal" data-src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/TAN_HOW_TO_BONNIE_LR.mp4?v=1610351992" data-target="#videoCardModal">
-										<source srcset="https://via.placeholder.com/570x340?text=3" media="(min-width: 992px)">
-										<source srcset="https://via.placeholder.com/275x164?text=3">
-										<img src="https://via.placeholder.com/275x164?text=3" alt="Placeholder" class="d-block w-100">
-									</picture>
-									<figcaption class="text-center mt-2">
-										<h3>Multi-masking #selfcaresunday with Janet Amrani</h3>
-									</figcaption>
-								</figure>
-								<figure class="video-card mb-0 px-md-2 carousel-item col-9 col-md-6">
-									<picture class="d-block position-relative sni sni__play" data-toggle="modal" data-src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/TAN_HOW_TO_BONNIE_LR.mp4?v=1610351992" data-target="#videoCardModal">
-										<source srcset="https://via.placeholder.com/570x340?text=4" media="(min-width: 992px)">
-										<source srcset="https://via.placeholder.com/275x164?text=4">
-										<img src="https://via.placeholder.com/275x164?text=4" alt="Placeholder" class="d-block w-100">
-									</picture>
-									<figcaption class="text-center mt-2">
-										<h3>Multi-masking #selfcaresunday with Janet Amrani</h3>
-									</figcaption>
-								</figure>
-								<figure class="video-card mb-0 px-md-2 carousel-item col-9 col-md-6">
-									<picture class="d-block position-relative sni sni__play" data-toggle="modal" data-src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/TAN_HOW_TO_BONNIE_LR.mp4?v=1610351992" data-target="#videoCardModal">
-										<source srcset="https://via.placeholder.com/570x340?text=5" media="(min-width: 992px)">
-										<source srcset="https://via.placeholder.com/275x164?text=5">
-										<img src="https://via.placeholder.com/275x164?text=5" alt="Placeholder" class="d-block w-100">
-									</picture>
-									<figcaption class="text-center mt-2">
-										<h3>Multi-masking #selfcaresunday with Janet Amrani</h3>
-									</figcaption>
-								</figure>
-								<figure class="video-card mb-0 px-md-2 carousel-item col-9 col-md-6">
-									<picture class="d-block position-relative sni sni__play" data-toggle="modal" data-src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/TAN_HOW_TO_BONNIE_LR.mp4?v=1610351992" data-target="#videoCardModal">
-										<source srcset="https://via.placeholder.com/570x340?text=6" media="(min-width: 992px)">
-										<source srcset="https://via.placeholder.com/275x164?text=6">
-										<img src="https://via.placeholder.com/275x164?text=6" alt="Placeholder" class="d-block w-100">
-									</picture>
-									<figcaption class="text-center mt-2">
-										<h3>Multi-masking #selfcaresunday with Janet Amrani</h3>
-									</figcaption>
-								</figure>
-							</div>
-            			</div>
+		<section class="how-to bg-primary-light py-2 no-gutters__in-container mb-5">
+			<h2 class="text-center h1 py-2 py-lg-1 mb-0">The Ultimate “HOW TO”s</h2>
+			<div id="carouselLoopCentered" class="carousel slide carousel--loop" data-slide-number="2">
+				<div class="carousel--centered">
+					<div class="carousel-inner row flex-nowrap" role="listbox">
+						<figure class="video-card mb-0 carousel-item col-6 col-lg-4 active">
+							<picture class="d-block position-relative sni sni__play" data-toggle="modal" data-src="https://www.youtube.com/embed/xwAfY_vdE9I" data-target="#videoCardModal">
+								<source srcset="https://via.placeholder.com/340x340?text=1" media="(min-width: 992px)">
+								<source srcset="https://via.placeholder.com/340x340?text=1">
+								<img src="https://via.placeholder.com/275x275?text=1" alt="Placeholder" class="d-block w-100">
+							</picture>
+							<figcaption class="text-center mt-2">
+								<h3>Multi-masking #selfcaresunday with Janet Amrani</h3>
+							</figcaption>
+						</figure>
+						<figure class="video-card mb-0 carousel-item col-6 col-lg-4">
+							<picture class="d-block position-relative sni sni__play" data-toggle="modal" data-src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/TAN_HOW_TO_BONNIE_LR.mp4?v=1610351992" data-target="#videoCardModal">
+								<source srcset="https://via.placeholder.com/340x340?text=2" media="(min-width: 992px)">
+								<source srcset="https://via.placeholder.com/340x340?text=2">
+								<img src="https://via.placeholder.com/275x164?text=2" alt="Placeholder" class="d-block w-100">
+							</picture>
+							<figcaption class="text-center mt-2">
+								<h3>Multi-masking #selfcaresunday with Janet Amrani</h3>
+							</figcaption>
+						</figure>
+						<figure class="video-card mb-0 carousel-item col-6 col-lg-4">
+							<picture class="d-block position-relative sni sni__play" data-toggle="modal" data-src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/TAN_HOW_TO_BONNIE_LR.mp4?v=1610351992" data-target="#videoCardModal">
+								<source srcset="https://via.placeholder.com/340x340?text=3" media="(min-width: 992px)">
+								<source srcset="https://via.placeholder.com/340x340?text=3">
+								<img src="https://via.placeholder.com/275x164?text=3" alt="Placeholder" class="d-block w-100">
+							</picture>
+							<figcaption class="text-center mt-2">
+								<h3>Multi-masking #selfcaresunday with Janet Amrani</h3>
+							</figcaption>
+						</figure>
+						<figure class="video-card mb-0 carousel-item col-6 col-lg-4">
+							<picture class="d-block position-relative sni sni__play" data-toggle="modal" data-src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/TAN_HOW_TO_BONNIE_LR.mp4?v=1610351992" data-target="#videoCardModal">
+								<source srcset="https://via.placeholder.com/340x340?text=4" media="(min-width: 992px)">
+								<source srcset="https://via.placeholder.com/340x340?text=4">
+								<img src="https://via.placeholder.com/275x164?text=4" alt="Placeholder" class="d-block w-100">
+							</picture>
+							<figcaption class="text-center mt-2">
+								<h3>Multi-masking #selfcaresunday with Janet Amrani</h3>
+							</figcaption>
+						</figure>
+						<figure class="video-card mb-0 carousel-item col-6 col-lg-4">
+							<picture class="d-block position-relative sni sni__play" data-toggle="modal" data-src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/TAN_HOW_TO_BONNIE_LR.mp4?v=1610351992" data-target="#videoCardModal">
+								<source srcset="https://via.placeholder.com/340x340?text=5" media="(min-width: 992px)">
+								<source srcset="https://via.placeholder.com/340x340?text=5">
+								<img src="https://via.placeholder.com/275x164?text=5" alt="Placeholder" class="d-block w-100">
+							</picture>
+							<figcaption class="text-center mt-2">
+								<h3>Multi-masking #selfcaresunday with Janet Amrani</h3>
+							</figcaption>
+						</figure>
+						<figure class="video-card mb-0 carousel-item col-6 col-lg-4">
+							<picture class="d-block position-relative sni sni__play" data-toggle="modal" data-src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/TAN_HOW_TO_BONNIE_LR.mp4?v=1610351992" data-target="#videoCardModal">
+								<source srcset="https://via.placeholder.com/340x340?text=6" media="(min-width: 992px)">
+								<source srcset="https://via.placeholder.com/340x340?text=6">
+								<img src="https://via.placeholder.com/275x164?text=6" alt="Placeholder" class="d-block w-100">
+							</picture>
+							<figcaption class="text-center mt-2">
+								<h3>Multi-masking #selfcaresunday with Janet Amrani</h3>
+							</figcaption>
+						</figure>
+					</div>
+				</div>
 
-						<a class="carousel-control carousel-control-prev text-primary carousel-control--background" href="#carouselVideo4" role="button" data-slide="prev">
-							<span class="carousel-control-prev-icon sni sni__chevron-prev justify-content-center align-items-center" aria-hidden="true"></span>
-							<span class="sr-only">Previous</span>
-						</a>
-						<a class="carousel-control carousel-control-next text-primary carousel-control--background" href="#carouselVideo4" role="button" data-slide="next">
-							<span class="carousel-control-next-icon sni sni__chevron-next justify-content-center align-items-center" aria-hidden="true"></span>
-							<span class="sr-only">Next</span>
-						</a>
+				<a class="carousel-control carousel-control-prev text-primary carousel-control--background" href="#carouselLoopCentered" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon sni sni__chevron-prev justify-content-center align-items-center" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control carousel-control-next text-primary carousel-control--background" href="#carouselLoopCentered" role="button" data-slide="next">
+					<span class="carousel-control-next-icon sni sni__chevron-next justify-content-center align-items-center" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+		</section>
+		<div class="modal fade" id="videoCardModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel"
+			aria-hidden="true">
+			<div class="modal-dialog modal-lg modal-dialog-centered video-modal" role="document">
+				<div class="modal-content">
+					<div class="modal-body video-modal--body embed-responsive embed-responsive-16by9">
+						<!-- 16:9 aspect ratio -->
+						<video controls>
+							<source src="" type="video/mp4">
+						</video>
+						<iframe class="d-none embed-responsive-item" src=""></iframe>
 					</div>
-				</section>
-				<div class="modal fade" id="videoCardModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel"
-					aria-hidden="true">
-					<div class="modal-dialog modal-lg modal-dialog-centered video-modal" role="document">
-						<div class="modal-content">
-							<div class="modal-body video-modal--body embed-responsive embed-responsive-16by9">
-								<!-- 16:9 aspect ratio -->
-								<video controls>
-									<source src="" type="video/mp4">
-								</video>
-								<iframe class="d-none embed-responsive-item" src=""></iframe>
-							</div>
-							<button type="button" class="close position-absolute sni sni__close video-modal--icon" data-dismiss="modal"
-								aria-label="Close"></button>
-						</div>
-					</div>
+					<button type="button" class="close position-absolute sni sni__close video-modal--icon" data-dismiss="modal"
+						aria-label="Close"></button>
 				</div>
 			</div>
 		</div>
@@ -309,7 +259,10 @@
 			</li>
 		</ul>
 	</div>
-
+	<div class="w-100 text-center">
+		<a href="javascript:void(0);" class="btn btn-lg btn-outline-primary mb-4">Load more posts</a>
+	</div>
+	{{> sections/footer}}
 	{{> js jquery=true bootstrap=true main=true }}
 </body>
 

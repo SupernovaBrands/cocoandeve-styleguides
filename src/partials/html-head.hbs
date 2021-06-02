@@ -1,3 +1,8 @@
 {{> html-head-meta}}
 
+{{#if maincss}}
+<link rel="stylesheet" href="{{ cssUrl }}/{{maincss}}.css">
+<link rel="stylesheet" href="{{ cssUrl }}/yotpo_stars.css">
+{{else}}
 <link rel="stylesheet" href="{{ cssUrl }}/main.css">
+{{/if}}
