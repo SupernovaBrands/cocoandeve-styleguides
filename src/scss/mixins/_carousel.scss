@@ -19,3 +19,9 @@
     @content
   }
 }
+
+@mixin make-carousel-centered($size, $columns: $grid-columns) {
+  $sizecol: percentage($size/$grid-columns);
+  $calculation: abs(abs($sizecol -((100 - $sizecol) / 2)));
+  transform: translateX(-#{$calculation});
+}

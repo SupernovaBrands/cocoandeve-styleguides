@@ -23,6 +23,9 @@
 @import 'components/nav';
 @import 'components/dropdown';
 @import 'components/swatch';
+@import 'components/badge';
+@import 'components/review-stars';
+@import 'components/tabs';
 
 @import 'components/accordion';
 @import 'components/tooltip';
@@ -33,6 +36,8 @@
 @import 'compounds/upsell';
 @import 'compounds/post-card';
 @import 'compounds/image-with-text';
+@import 'compounds/result-card';
+@import 'compounds/product-card';
 
 @import 'sections/header';
 @import 'sections/cart-drawer';
@@ -41,6 +46,9 @@
 @import 'sections/product-waitlist';
 @import 'sections/footer';
 @import 'sections/sidebar';
+@import 'sections/playground';
+@import 'sections/testimonials';
+@import 'sections/instagram';
 
 @import 'templates/product';
 @import 'templates/blog';
