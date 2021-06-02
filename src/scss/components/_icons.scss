@@ -1,9 +1,8 @@
 $supernova-icon-font: "supernova-icon";
 
-$supernova-icon-asset: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?a9d5f66479c7193e032686fdeed79eb7#supernova-icon") format("svg"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?a9d5f66479c7193e032686fdeed79eb7") format("truetype"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff?a9d5f66479c7193e032686fdeed79eb7") format("woff"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?a9d5f66479c7193e032686fdeed79eb7") format("woff2") !default;
+$supernova-icon-asset: url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?e2d1abebd90993bd058536163f8d6d8d") format("woff2"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.woff?e2d1abebd90993bd058536163f8d6d8d") format("woff"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.svg?e2d1abebd90993bd058536163f8d6d8d#supernova-icon") format("svg") !default;
 
 @font-face {
 	font-family: $supernova-icon-font;
@@ -54,29 +53,28 @@ $supernova-icon-map: (
 	"guarantee": "\f117",
 	"instagram": "\f118",
 	"loading": "\f119",
-	"logo": "\f11a",
-	"mineral-oil": "\f11b",
-	"minus": "\f11c",
-	"moneyback": "\f11d",
-	"natural-dha": "\f11e",
-	"palm-tree": "\f11f",
-	"paraben-free": "\f120",
-	"peta": "\f121",
-	"pinterest-square": "\f122",
-	"play": "\f123",
-	"plus-circle": "\f124",
-	"plus": "\f125",
-	"search": "\f126",
-	"star-box": "\f127",
-	"star": "\f128",
-	"tag": "\f129",
-	"tiktok": "\f12a",
-	"toxin-free": "\f12b",
-	"trash": "\f12c",
-	"twitter-square": "\f12d",
-	"vegan": "\f12e",
-	"winner-award": "\f12f",
-	"youtube": "\f130",
+	"mineral-oil": "\f11a",
+	"minus": "\f11b",
+	"moneyback": "\f11c",
+	"natural-dha": "\f11d",
+	"palm-tree": "\f11e",
+	"paraben-free": "\f11f",
+	"peta": "\f120",
+	"pinterest-square": "\f121",
+	"play": "\f122",
+	"plus-circle": "\f123",
+	"plus": "\f124",
+	"search": "\f125",
+	"star-box": "\f126",
+	"star": "\f127",
+	"tag": "\f128",
+	"tiktok": "\f129",
+	"toxin-free": "\f12a",
+	"trash": "\f12b",
+	"twitter-square": "\f12c",
+	"vegan": "\f12d",
+	"winner-award": "\f12e",
+	"youtube": "\f12f",
 );
 
 .sni.sni__account:before,
@@ -178,10 +176,6 @@ $supernova-icon-map: (
 .sni.sni__loading:before,
 .sni-after.sni__loading:after {
 	content: map-get($supernova-icon-map, "loading");
-}
-.sni.sni__logo:before,
-.sni-after.sni__logo:after {
-	content: map-get($supernova-icon-map, "logo");
 }
 .sni.sni__mineral-oil:before,
 .sni-after.sni__mineral-oil:after {

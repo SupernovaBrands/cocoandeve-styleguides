@@ -10,8 +10,8 @@
 }
 
 @function font-url($filename) {
-  @return '/cocoandeve-styleguides/fonts/'+$filename;
+	@return '/cocoandeve-styleguides/fonts/'+$filename;
 
-  // For Shopify
-  // @return "{{ '" + $filename + "' | asset_url }}";
+	// For Shopify
+	// @return "{{ '" + $filename + "' | asset_url }}";
 }

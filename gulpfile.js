@@ -9,6 +9,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const handlebars = require('gulp-compile-handlebars');
 const rename = require('gulp-rename');
 const critical = require('critical').stream;
+const cleancss = require('gulp-clean-css');
 const fs = require('fs');
 const path = require('path');
 
@@ -24,8 +25,9 @@ const files = {
 	partials: ['src/partials/**/*.hbs'],
 	js: ['dist/js/**/*'],
 	vendorJs: ['src/js/vendor/*'],
-	allScss: ['src/scss/**/*'],
+	allScss: ['src/scss/**/*', '!src/scss/critical-css/*.scss'],
 	scss: ['src/scss/*.scss'],
+	criticalScss: ['src/scss/critical-css/*.scss'],
 	static: [
 		// fonts
 		'fonts/*.svg',
@@ -71,11 +73,12 @@ const hbsVars = {
 	imageUrl: '/cocoandeve-styleguides/images',
 	jsUrl: '/cocoandeve-styleguides/js',
 	cssUrl: '/cocoandeve-styleguides/css',
+	criticalUrl: '/cocoandeve-styleguides/critical-css',
 };
 
 const indexFile = function () {
 	const base = 'src/docs';
-	const folders = ['core', 'components', 'compounds', 'sections', 'templates'];
+	const folders = ['core', 'components', 'compounds', 'sections', 'templates', 'criticals'];
 	const filenames = {};
 	folders.forEach((f) => {
 		const names = fs.readdirSync(`${base}/${f}`)
@@ -129,14 +132,26 @@ const scssFiles = function () {
 		.pipe(browserSync.stream());
 };
 
+const criticalFiles = function () {
+	return src(files.criticalScss)
+		.pipe(sass({ outputStyle: 'compressed' }).on('error', errorHandler))
+		.pipe(cleancss({
+			format: 'keep-breaks',
+			level: 2,
+		}))
+		.pipe(dest('src/critical-css'))
+		.pipe(dest('dist/critical-css'))
+		.pipe(browserSync.stream());
+};
+
 const staticFiles = function () {
 	return src(files.static, { base: '.' })
 		.pipe(dest('dist'))
 		.pipe(browserSync.stream());
 };
 
-const criticalCss = function () {
-	return src(['dist/templates/*.html'])
+const extractCriticalCss = function () {
+	return src(['dist/criticals/*.html', '!dist/criticals/header.html'])
 		.pipe(
 			critical({
 				base: 'dist/',
@@ -151,12 +166,22 @@ const criticalCss = function () {
 						width: 1440,
 					},
 				],
+				minify: false,
+				ignore: {
+					atrule: ['@font-face'],
+					rule: [/:root/],
+				},
 			}),
 		)
+		.pipe(cleancss({
+			format: 'keep-breaks',
+			level: 2,
+		}))
+		.pipe(rename({ extname: '.scss' }))
 		.on('error', (err) => {
 			console.error(err.message);
 		})
-		.pipe(dest('dist/critical'));
+		.pipe(dest('src/scss/critical-css'));
 };
 
 const webpackBuild = (isWatch = false) => function () {
@@ -183,6 +208,7 @@ const watchFiles = function (done) {
 	watch(files.js, jsFiles);
 	watch(files.vendorJs, vendorJsFiles);
 	watch(files.static, staticFiles);
+	watch(files.criticalScss, criticalFiles);
 	done();
 };
 
@@ -209,15 +235,15 @@ task(clean);
 task(indexFile);
 task(scssFiles);
 task(initServer);
-task(criticalCss);
+task(extractCriticalCss);
 task('webpack', webpackBuild());
 task('webpackWatch', webpackBuild(true));
 task(
 	'build',
-	parallel(indexFile, hbsFiles, vendorJsFiles, staticFiles, scssFiles, 'webpack'),
+	parallel(indexFile, hbsFiles, vendorJsFiles, staticFiles, scssFiles, criticalFiles, 'webpack'),
 );
 task('watch', series(
-	parallel(indexFile, hbsFiles, vendorJsFiles, staticFiles, scssFiles, 'webpackWatch'),
+	parallel(indexFile, hbsFiles, vendorJsFiles, staticFiles, scssFiles, criticalFiles, 'webpackWatch'),
 	watchFiles,
 ));
 task('default', series('clean', 'watch', 'initServer'));
