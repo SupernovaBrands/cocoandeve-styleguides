@@ -399,14 +399,22 @@ $(document).ready(function () {
 		setProgress();
 	}
 
+	//custom checkbox
+	if ($('.custom-checkbox')) {
+		$('.custom-checkbox').on('click', function() {
+			$(this).toggleClass('sni__check').toggleClass('checked');
+		});
+	}
+
+	//sweepstakes page
 	if ($('.sweepstakes').length > 0) {
-		$('.sweepstakes__form').on('submit', function(){
+		$('#sweepstakes__form').on('submit', function(){
 			const el = $(this);
 			const email = el.find('#sweepstakes__email').val() || '';
 			const country = el.find('#sweepstakes__country').val() || '';
 			const phoneNum = el.find('#sweepstakes__phone').val() || '';
 
-			const tocAgree = el.find('#sweepstakes__toc').hasClass('sni__check');
+			const tocAgree = el.find('#sweepstakes__toc').hasClass('checked');
 			const emailValid = email != '' && window.validateEmail(email);
 			const countryValid = country != '';
 			const phoneValid = phoneNum != '' && window.validatePhone(phoneNum);
@@ -432,6 +440,7 @@ $(document).ready(function () {
 			$('.sweepstakes__thank-you').removeClass('d-none');
 			$(this).addClass('d-none');
 			return false;
+			//proceed ajax call to bluecore
 		});
 
 		$('.sweepstakes select').on('change', function () {
@@ -439,8 +448,5 @@ $(document).ready(function () {
 			$('.sweepstakes__country-label').html(`+${code}`);
 		});
 
-		$('.sweepstakes__checkbox').on('click', function() {
-			$(this).toggleClass('sni__check');
-		});
 	}
 });

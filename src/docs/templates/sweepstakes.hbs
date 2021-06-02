@@ -9,19 +9,19 @@
     {{> sections/header}}
     <section class="sweepstakes bg-primary-light">
         <div class="container">
-            <figure class="row m-0 align-items-center">
+            <div class="row m-0 align-items-center">
                 <picture class="col-lg-7 order-lg-2">
                     <source srcset="https://via.placeholder.com/457x406/F5DADF.jpg" media="(min-width: 992px)" />
                     <img src="https://via.placeholder.com/457x406.jpg/F5DADF" class="w-100">
                 </picture>
-                <figcaption class="px-0 col-lg-5 order-lg-1 my-lg-4">
-                    <form action="" class="px-4 py-3 bg-white text-center sweepstakes__form">
+                <div class="px-0 col-lg-5 order-lg-1 my-lg-4">
+                    <form id="sweepstakes__form" class="px-4 py-3 bg-white text-center rounded">
                         <h1 class="text-secondary">Coco & Eve Sweepstakes</h1>
                         <p>Add in your email or mobile number to win your fave Coco and Eve products.</p>
-                        <ul class="d-inline-block list-unstyled text-left">
-                            <li class="sni sni__check">First prize is $300 worth of products</li>
-                            <li class="sni sni__check">Second prize is $200 worth of products</li>
-                            <li class="sni sni__check">Third prize is $100 worth of products</li>
+                        <ul class="d-inline-block list-check text-left">
+                            <li>First prize is $300 worth of products</li>
+                            <li>Second prize is $200 worth of products</li>
+                            <li>Third prize is $100 worth of products</li>
                         </ul>
                         <div class="input-group form-group">
                             <input id="sweepstakes__email" class="form-control" type="email" placeholder="Type email here">
@@ -59,22 +59,23 @@
                         </div>
 
                         <div class="d-flex form-check form-group align-items-center justify-content-center my-2">
-                            <div id="sweepstakes__toc" class="d-inline-flex justify-content-center align-items-center mr-1 border sweepstakes__checkbox sni"></div>
+                            <div id="sweepstakes__toc" class="custom-checkbox text-primary justify-content-center align-items-center mr-1 sni border rounded"></div>
                             <label class="form-check-label font-size-sm">I agree to <a href="#">Privacy Policy & ToS</a></label>
                         </div>
+                        <p class="font-size-xs">By signing up, you agree to receive exclusive offers via email or automated marketing SMS (4/mth). Msg &amp; data rates may apply. Consent not required for purchase. Opt out any time.</p>
                         <div class="d-none input-error toc-error font-size-xs text-primary mb-2">You have not agreed to the Privacy Policy & ToS</div>
                         <div class="form-group">
                             <button id="sweepstakes__submit" type="submit" class="btn btn-lg btn-primary btn-block">Sign me up!</button>
                         </div>
                     </form>
-                    <div class="d-none sweepstakes__thank-you px-4 py-3 bg-white text-center">
+                    <div class="d-none sweepstakes__thank-you px-4 py-3 bg-white text-center rounded">
                         <h2 class="h1 text-secondary">Thank you!</h2>
                         <p>Your entry has been registered! Head to Coco & Eve and do some shopping while you wait ;)</p>
                         <a href="#" class="btn btn-lg btn-primary btn-block">Shop Coco & Eve</a>
                     </div>
-                    <p class="font-size-sm text-white m-0 mt-2 mb-2 mb-lg-0">*Customers who sign up to our sweepstakes through SMS or email address will be given a chance to be one of three to win up to $300 USD worth of products. Contest winners will be notified via SMS or email. Sweepstakes will run from March 16, 2021 12:00am PST to March 22, 2021 11:59pm PST. Sweepstakes prizes cannot be used in conjunction with any other code, offer or promotion. Coco & Eve reserves the right to cancel or alter any promotion without prior notice. In the event of any dispute, the decision of Coco & Eve is final.</p>
-                </figcaption>
-            </figure>
+                    <p class="font-size-xs text-white m-0 mt-2 mb-2 mb-lg-0">*Customers who sign up to our sweepstakes through SMS or email address will be given a chance to be one of three to win up to $1000 USD worth of products including our product launch. Contest winners will be notified via SMS or email. Sweepstakes will run from June 1, 2021 12:00am PST to June 11, 2021 11:59pm PST. Sweepstakes prizes cannot be used in conjunction with any other code, offer or promotion. Coco & Eve reserves the right to cancel or alter any promotion without prior notice. In the event of any dispute, the decision of Coco & Eve is final.</p>
+                </div>
+            </div>
         </div>
     </section>
 
