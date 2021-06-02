@@ -8,8 +8,6 @@ a{color:#f3436c;text-decoration:none;background-color:transparent}
 svg{overflow:hidden;vertical-align:middle}
 button{border-radius:0;margin:0;font-family:inherit;font-size:inherit;line-height:inherit;overflow:visible;text-transform:none}
 [type=button],button{-webkit-appearance:button}
-[type=button]::-moz-focus-inner,button::-moz-focus-inner{padding:0;border-style:none}
-::-webkit-file-upload-button{font:inherit;-webkit-appearance:button}
 .h4{margin-bottom:.625em;font-weight:700;line-height:1.25;font-size:1em}
 .container{width:100%;padding-right:7.5px;padding-left:7.5px;margin-right:auto;margin-left:auto}
 @media (min-width:375px){
@@ -57,7 +55,6 @@ button{border-radius:0;margin:0;font-family:inherit;font-size:inherit;line-heigh
 .text-uppercase{text-transform:uppercase!important}
 .font-weight-bold{font-weight:700!important}
 .bg-primary-light{background-color:#f5dadf!important}
-.sni,.sni-after{display:flex}
 .sni-after:after,.sni:before{font-family:supernova-icon!important;font-style:normal;font-weight:400!important;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .sni.sni__account:before{content:""}
 .sni.sni__cart:before{content:""}
@@ -73,7 +70,6 @@ button{border-radius:0;margin:0;font-family:inherit;font-size:inherit;line-heigh
 .nav-link.sni__cart{font-size:1.25em;flex-basis:20%}
 .nav-link.sni__cart:before{font-size:1.25em;margin-right:.1875em}
 }
-.navbar-brand:before{font-size:1.7em}
 @media (min-width:1260px){
 .container{max-width:1200px}
 .navbar-brand:before{font-size:2.05em}
