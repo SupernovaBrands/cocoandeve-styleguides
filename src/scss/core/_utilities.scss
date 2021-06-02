@@ -48,3 +48,9 @@
 	border-top-left-radius: 0 !important;
 	border-bottom-left-radius: 0 !important;
 }
+
+@include media-breakpoint-up(lg) {
+	.position-lg-sticky { 
+		position: sticky !important;
+	}
+}
