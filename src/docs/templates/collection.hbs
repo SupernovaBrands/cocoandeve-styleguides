@@ -6,8 +6,9 @@
 </head>
 
 <body>
+  {{> sections/header}}
 	<div class="container mt-4">
-    <figure class="image-with-text mobile-wrapper row position-relative align-items-center mb-lg-2 mt-5">
+    <figure class="imagewtext mobile-wrapper row position-relative align-items-center mb-lg-2 mt-5">
       <div class="col-12 col-lg-8 order-lg-last">
         <div class="no-gutters__in-container">
           <picture>
@@ -17,7 +18,7 @@
         </div>
       </div>
       <figcaption class="col-12 col-lg-4">
-        <div class="image-with-text__text-content text-left mt-lg-0 p-2 pt-lg-3 pb-lg-3 pr-lg-3 ">
+        <div class="imagewtext__content text-left mt-lg-0 p-2 pt-lg-3 pb-lg-3 pr-lg-3 ">
           <h1>Shop All</h1>
           <p>Explore award-winning Bali Beauty! Shop Coco & Eve hair, body, tan and gifts. Fast worldwide delivery, unBALIevable results!</p>
         </div>
@@ -85,6 +86,7 @@
 			</div>
 		</div>
 	</div>
+  {{> sections/footer}}
 	{{> js jquery=true main=true }}
 </body>
 </html>

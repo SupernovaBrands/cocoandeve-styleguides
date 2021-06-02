@@ -1,0 +1,46 @@
+.nav-tabs {
+  border-bottom: none;
+
+  .nav-link {
+    border: $nav-tabs-border-width solid $nav-tabs-border-color;
+    border-radius: 0;
+    border-right: 0;
+    padding: 0;
+    line-height: calc-em(40, $context: 16, $unit: 1);
+
+    @include media-breakpoint-up(lg) {
+      line-height: calc-em(46, $context: 20, $unit: 1);
+    }
+
+    &.active {
+      color: white;
+    }
+  }
+
+  .nav-item {
+    &:first-child {
+      .nav-link {
+        border-radius: $nav-tabs-border-radius 0 0 $nav-tabs-border-radius;
+      }
+    }
+
+    &:last-child {
+      .nav-link {
+        border-radius: 0 $nav-tabs-border-radius $nav-tabs-border-radius 0;
+        border-right: $nav-tabs-border-width solid $nav-tabs-border-color;
+      }
+    }
+  }
+
+  &--product {
+    .nav-link {
+      width: calc-em(120);
+    }
+  }
+
+  &--real-results {
+    .nav-link {
+      width: calc-em(90);
+    }
+  }
+}
