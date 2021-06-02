@@ -5,7 +5,7 @@
         margin-left: calc-em(10, 16);
     }
 
-    .input-group-addon + input{
+    .input-group-addon + input {
         flex-basis: 55%;
 
         @include media-breakpoint-up(xl) {
