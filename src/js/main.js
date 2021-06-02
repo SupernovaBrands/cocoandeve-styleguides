@@ -343,14 +343,14 @@ $(document).ready(function () {
 	// Nav Category Sticky on Scroll
 	const navSticky = $('.nav-blog--sticky');
 	if (navSticky.length > 0) {
-		$(window).on('scroll', function() {
+		$(window).on('scroll', function () {
 			scrollTop = $(this).scrollTop();
 			if (scrollTop > 100) {
 				navSticky.addClass('active');
 			} else {
 				navSticky.removeClass('active');
 			}
-		})
+		});
 	}
 
 	const navBlog = $('.nav-blog');
@@ -375,25 +375,23 @@ $(document).ready(function () {
 	}
 
 	// Article Proggress Bar
-	let proggreeBar = $('.reading-proggress-bar');
+	const proggreeBar = $('.reading-proggress-bar');
 	if (proggreeBar.length) {
-		let body = document.body,
-			html = document.documentElement;
+		const { body, documentElement: html } = document;
 
-		let height = Math.max(
+		const height = Math.max(
 			body.scrollHeight,
 			body.offsetHeight,
 			html.clientHeight,
 			html.scrollHeight,
-			html.offsetHeight
+			html.offsetHeight,
 		);
 
-
 		const setProgress = () => {
-			let scrollFromTop = (html.scrollTop || body.scrollTop) + html.clientHeight;
-			let width = (scrollFromTop / height) * 100 + '%';
-			console.log(width)
-			proggreeBar.find('.reading-proggress-bar__proggress').css('width',width)
+			const scrollFromTop = (html.scrollTop || body.scrollTop) + html.clientHeight;
+			const width = `${(scrollFromTop / height) * 100}%`;
+			console.log(width);
+			proggreeBar.find('.reading-proggress-bar__proggress').css('width', width);
 		};
 
 		window.addEventListener('scroll', setProgress);
