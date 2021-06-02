@@ -1,9 +1,8 @@
 $supernova-icon-font: "supernova-icon";
 
-$supernova-icon-asset: url("/cocoandeve-styleguides/fonts/supernova-icon.svg?871ad22a5e39f6bf571a9909082a43fc#supernova-icon") format("svg"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.ttf?871ad22a5e39f6bf571a9909082a43fc") format("truetype"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff?871ad22a5e39f6bf571a9909082a43fc") format("woff"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?871ad22a5e39f6bf571a9909082a43fc") format("woff2") !default;
+$supernova-icon-asset: url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?f97350398f88ba95e05c6d3ce4c5ffdc") format("woff2"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.woff?f97350398f88ba95e05c6d3ce4c5ffdc") format("woff"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.svg?f97350398f88ba95e05c6d3ce4c5ffdc#supernova-icon") format("svg") !default;
 
 @font-face {
 	font-family: $supernova-icon-font;
@@ -50,26 +49,25 @@ $supernova-icon-map: (
 	"gluten": "\f113",
 	"instagram": "\f114",
 	"loading": "\f115",
-	"logo": "\f116",
-	"mineral-oil": "\f117",
-	"minus": "\f118",
-	"moneyback": "\f119",
-	"natural-dha": "\f11a",
-	"palm-tree": "\f11b",
-	"paraben-free": "\f11c",
-	"peta": "\f11d",
-	"pinterest-square": "\f11e",
-	"play": "\f11f",
-	"plus-circle": "\f120",
-	"plus": "\f121",
-	"search": "\f122",
-	"tag": "\f123",
-	"tiktok": "\f124",
-	"toxin-free": "\f125",
-	"trash": "\f126",
-	"twitter-square": "\f127",
-	"vegan": "\f128",
-	"youtube": "\f129",
+	"mineral-oil": "\f116",
+	"minus": "\f117",
+	"moneyback": "\f118",
+	"natural-dha": "\f119",
+	"palm-tree": "\f11a",
+	"paraben-free": "\f11b",
+	"peta": "\f11c",
+	"pinterest-square": "\f11d",
+	"play": "\f11e",
+	"plus-circle": "\f11f",
+	"plus": "\f120",
+	"search": "\f121",
+	"tag": "\f122",
+	"tiktok": "\f123",
+	"toxin-free": "\f124",
+	"trash": "\f125",
+	"twitter-square": "\f126",
+	"vegan": "\f127",
+	"youtube": "\f128",
 );
 
 .sni.sni__account:before,
@@ -155,10 +153,6 @@ $supernova-icon-map: (
 .sni.sni__loading:before,
 .sni-after.sni__loading:after {
 	content: map-get($supernova-icon-map, "loading");
-}
-.sni.sni__logo:before,
-.sni-after.sni__logo:after {
-	content: map-get($supernova-icon-map, "logo");
 }
 .sni.sni__mineral-oil:before,
 .sni-after.sni__mineral-oil:after {

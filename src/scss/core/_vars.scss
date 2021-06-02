@@ -188,11 +188,9 @@ $tooltip-opacity: 1;
 $zindex-cartdrawer: 9999991;
 
 // Icons
-// Uncoment in shopify;
-// $supernova-icon-asset: url("{{ 'supernova-icon.svg' | asset_url }}#supernova-icon") format("svg"),
-//   url("{{ 'supernova-icon.ttf' | asset_url }}") format("truetype"),
-//   url("{{ 'supernova-icon.woff' | asset_url }}") format("woff"),
-//   url("{{ 'supernova-icon.woff2' | asset_url }}") format("woff2");
+$supernova-icon-asset: url(font-url('supernova-icon.woff2')) format("woff2"),
+url(font-url('supernova-icon.woff')) format("woff"),
+url(font-url('supernova-icon.svg')) format("svg");
 
 // Select
 $custom-select-indicator: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22.6 22.6'><path d='M1.9 5.4l9.4 9.4 9.4-9.4 1.9 1.9-11.3 11.3L0 7.3l1.9-1.9z'/></svg>");
