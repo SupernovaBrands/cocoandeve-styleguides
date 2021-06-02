@@ -5,16 +5,6 @@
         margin-left: calc-em(10, 16);
     }
 
-    &__checkbox {
-        width: calc-em(19, 16);
-        height: calc-em(19, 16);
-        color: $primary;
-
-        &:before {
-            font-size: calc-em(11, 16)
-        }
-    }
-
     .input-group-addon + input{
         flex-basis: 55%;
 
