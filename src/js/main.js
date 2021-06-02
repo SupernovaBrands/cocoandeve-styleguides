@@ -32,6 +32,16 @@ if (carouselLoop.length > 0) {
 	import(/* webpackChunkName: 'carousel-loop' */ '~mod/carousel-loop');
 }
 
+const variantSwatch = $('.product-card');
+if (variantSwatch.length > 0) {
+	import(/* webpackChunkName: 'carousel-loop' */ '~mod/product-card');
+}
+
+const realResults = $('#real-results');
+if (realResults.length > 0) {
+	import(/* webpackChunkName: 'carousel-loop' */ '~mod/real-results');
+}
+
 if ($('body').hasClass('template-product')) {
 	import(/* webpackChunkName: 'products' */ '~mod/products');
 }
