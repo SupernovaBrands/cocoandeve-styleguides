@@ -137,7 +137,7 @@ const criticalFiles = function () {
 		.pipe(sass({ outputStyle: 'compressed' }).on('error', errorHandler))
 		.pipe(cleancss({
 			format: 'keep-breaks',
-			level: { 2: { all: true } },
+			level: 2,
 		}))
 		.pipe(dest('src/critical-css'))
 		.pipe(dest('dist/critical-css'))
@@ -151,7 +151,7 @@ const staticFiles = function () {
 };
 
 const extractCriticalCss = function () {
-	return src(['dist/criticals/*.html'])
+	return src(['dist/criticals/*.html', '!dist/criticals/header.html'])
 		.pipe(
 			critical({
 				base: 'dist/',
