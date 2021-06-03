@@ -14,11 +14,10 @@
 	}
 
 	&__title {
-		margin-bottom: calc-em(7);
-		@include media-breakpoint-up(lg) {
-			margin-bottom: calc-em(2);
-		}
-	}
+    margin-top: auto;
+    font-weight: 600;
+    color: $body-color;
+  }
 
 	&__price {
 		@include media-breakpoint-down(md) {
@@ -32,12 +31,27 @@
 		}
 	}
 
+  &__add {
+    width: 3.68em;
+  }
+
+  &__spinner {
+    display: none;
+    width: 3.68em
+  }
+
+  &__remove {
+    display: none;
+    width: 3.68em
+  }
+
 	figcaption {
-		margin-left: calc-em(27);
-		@include media-breakpoint-up(lg) {
-			margin-left: calc-em(16);
-			margin-right: calc-em(16);
-		}
+		margin-left: calc-em(16);
+    padding: .625em 0;
+    font-size: calc-em(14);
+    @include media-breakpoint-up(lg) {
+      margin-left: calc-em(8);
+    }
 	}
 
 	.sni, .sni-text {

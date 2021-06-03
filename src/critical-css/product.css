@@ -2,7 +2,6 @@ header,nav{display:block}
 svg{overflow:hidden;vertical-align:middle}
 button{font-family:inherit;font-size:inherit;line-height:inherit;text-transform:none}
 [type=button],button{-webkit-appearance:button}
-[type=button]::-moz-focus-inner,button::-moz-focus-inner{padding:0;border-style:none}
 .h4{margin-bottom:.625em;font-weight:700;line-height:1.25;font-size:1em}
 .navbar{position:relative;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:0 .46875em}
 .navbar .container{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between}
@@ -30,7 +29,6 @@ button{font-family:inherit;font-size:inherit;line-height:inherit;text-transform:
 .p-1{padding:.625em!important}
 .text-uppercase{text-transform:uppercase!important}
 .bg-primary-light{background-color:#f5dadf!important}
-.sni,.sni-after{display:flex}
 .sni-after:after,.sni:before{font-family:supernova-icon!important;font-style:normal;font-weight:400!important;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .sni.sni__account:before{content:""}
 .sni.sni__cart:before{content:""}
@@ -46,7 +44,6 @@ button{font-family:inherit;font-size:inherit;line-height:inherit;text-transform:
 .nav-link.sni__cart{font-size:1.25em;flex-basis:20%}
 .nav-link.sni__cart:before{font-size:1.25em;margin-right:.1875em}
 }
-.navbar-brand:before{font-size:1.7em}
 @media (min-width:1260px){
 .container{max-width:1200px}
 .navbar-brand:before{font-size:2.05em}
