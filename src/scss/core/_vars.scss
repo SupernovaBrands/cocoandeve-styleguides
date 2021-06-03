@@ -206,6 +206,7 @@ $custom-select-indicator: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/
 $custom-select-bg-size: calc-em(16) calc-em(9);
 $custom-select-disabled-bg: $gray-100;
 $custom-select-disabled-color: $gray-400;
+$custom-select-background-mask: $custom-select-indicator no-repeat right $input-padding-x/2 center / $custom-select-bg-size !default;
 
 // Badge
 $badge-font-size: 1em;
