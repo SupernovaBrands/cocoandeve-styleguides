@@ -69,13 +69,7 @@ $yellow-light: #f9eeca;
 
 $theme-colors: (
   'primary': $primary,
-  'primary-light': $primary-light,
-  'secondary-light': $secondary-light,
-  'secondary': $secondary,
-  'purple': $sh-purple,
-  'blue': $bali-bod-blue,
-  'yellow-light': $yellow-light,
-  'dark': black
+  'secondary': $secondary
 );
 
 $shade-colors: (
@@ -83,7 +77,6 @@ $shade-colors: (
   'ultra-dark': #5C2323,
   'medium': #AA7878
 );
-
 
 $body-color: #151515;
 
