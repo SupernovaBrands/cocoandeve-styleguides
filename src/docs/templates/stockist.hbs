@@ -2,98 +2,289 @@
 <html>
 
 <head>
-	{{> html-head title="Forms" }}
+	{{> html-head title="Stockist" }}
 </head>
 
 <body>
-  <div class="container text-center stockist">
-    <h1 class="mt-3">Find us in a store near you</h1>
-    <form class="form-row justify-content-center align-items-center">
-      <label class="col-12 col-md-auto my-1 h4 mb-0 font-weight-bold">Choose your region:</label>
-      <div class="col-8 col-md-3 my-1">
-        <select class="custom-select mb-0 ml-md-2 stockist__select">
-          <option value="uk" data-label="United Kingdom">United Kingdom</option>
-          <option value="usa" data-label="USA" selected>USA</option>
-          <option value="asia" data-label="Asia">Asia</option>
-          <option value="eur" data-label="Europe">Europe</option>
-          <option value="aus" data-label="Australia">Australia</option>
-        </select>
-      </div>
-    </form>
-    <p>If we don't stock near you, you can buy online <a href="#" class="text-underline">here</a> and take advantage of our worldwide delivery</p>
-    <h2 class="mt-4 mb-3">Stockists in <span class="stockist__location">USA</span></h2>
-    <div class="row">
-      <figure class="m-0 col-6 col-md-4 d-none" data-toggle="uk">
-        <a href="#" class="d-block">
-          <img class="w-100" src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/Myer_2x_70e3adce-a8d5-47b1-af35-3c29ce8c6519.png" alt="">
-        </a>
-        <figcaption class="h4 my-2">Available in selected stores</figcaption>
-      </figure>
-      <figure class="m-0 col-6 col-md-4 d-none" data-toggle="uk">
-        <a href="#" class="d-block">
-          <img class="w-100" src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/Myer_2x_70e3adce-a8d5-47b1-af35-3c29ce8c6519.png" alt="">
-        </a>
-        <figcaption class="h4 my-2">Available online</figcaption>
-      </figure>
-      <figure class="m-0 col-6 col-md-4 d-none" data-toggle="usa">
-        <a href="#" class="d-block">
-          <img class="w-100" src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/Myer_2x_70e3adce-a8d5-47b1-af35-3c29ce8c6519.png" alt="">
-        </a>
-        <figcaption class="h4 my-2">Available online</figcaption>
-      </figure>
-      <figure class="m-0 col-6 col-md-4 d-none" data-toggle="usa">
-        <a href="#" class="d-block">
-          <img class="w-100" src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/Myer_2x_70e3adce-a8d5-47b1-af35-3c29ce8c6519.png" alt="">
-        </a>
-        <figcaption class="h4 my-2">Available in selected stores</figcaption>
-      </figure>
-      <figure class="m-0 col-6 col-md-4 d-none" data-toggle="eur">
-        <a href="#" class="d-block">
-          <img class="w-100" src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/Myer_2x_70e3adce-a8d5-47b1-af35-3c29ce8c6519.png" alt="">
-        </a>
-        <figcaption class="h4 my-2">Available online</figcaption>
-      </figure>
-      <figure class="m-0 col-6 col-md-4 d-none" data-toggle="asia">
-        <a href="#" class="d-block">
-          <img class="w-100" src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/Myer_2x_70e3adce-a8d5-47b1-af35-3c29ce8c6519.png" alt="">
-        </a>
-        <figcaption class="h4 my-2">HK, SG, PH, MY, TH: <br> Available in select stores</figcaption>
-      </figure>
-      <figure class="m-0 col-6 col-md-4 d-none" data-toggle="aus">
-        <a href="#" class="d-block">
-          <img class="w-100" src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/Myer_2x_70e3adce-a8d5-47b1-af35-3c29ce8c6519.png" alt="">
-        </a>
-        <figcaption class="h4 my-2">Available in selected stores</figcaption>
-      </figure>
-      <figure class="m-0 col-6 col-md-4 d-none" data-toggle="eur">
-        <a href="#" class="d-block">
-          <img class="w-100" src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/Myer_2x_70e3adce-a8d5-47b1-af35-3c29ce8c6519.png" alt="">
-        </a>
-        <figcaption class="h4 my-2">Available online</figcaption>
-      </figure>
-      <figure class="m-0 col-6 col-md-4 d-none" data-toggle="aus">
-        <a href="#" class="d-block">
-          <img class="w-100" src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/Myer_2x_70e3adce-a8d5-47b1-af35-3c29ce8c6519.png" alt="">
-        </a>
-        <figcaption class="h4 my-2">Available online</figcaption>
-      </figure>
-      <figure class="m-0 col-6 col-md-4 d-none" data-toggle="aus">
-        <a href="#" class="d-block">
-          <img class="w-100" src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/Myer_2x_70e3adce-a8d5-47b1-af35-3c29ce8c6519.png" alt="">
-        </a>
-        <figcaption class="h4 my-2">Available online</figcaption>
-      </figure>
-      <figure class="m-0 col-6 col-md-4 d-none" data-toggle="aus">
-        <a href="#" class="d-block">
-          <img class="w-100" src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/Myer_2x_70e3adce-a8d5-47b1-af35-3c29ce8c6519.png" alt="">
-        </a>
-      <figcaption class="h4 my-2">Available online</figcaption>
-      </figure>
-    </div>
-    <h2 class="h1 mt-4">Didn’t find your answer?</h2>
-    <p class="h4">No worries, you can email us: <a href="mailto:hello@cocoandeve.com" class="text-underline font-weight-bold">hello@cocoandeve.com</a></p>
-  </div>
-	{{> js jquery=true main=true }}
+    {{> sections/header}}
+    <section class="container text-center stockist my-4">
+        <h1>Find us in a store near you</h1>
+        <form class="form-row justify-content-center align-items-center">
+            <label class="col-12 col-md-auto my-1 h4 mb-0 font-weight-bold">Choose your region:</label>
+            <div class="col-8 col-md-3 my-1">
+                <select class="custom-select mb-0 ml-md-2 stockist__select">
+                <option value="uk" data-label="United Kingdom">United Kingdom</option>
+                <option value="usa" data-label="USA" selected>USA</option>
+                <option value="asia" data-label="Asia">Asia</option>
+                <option value="eur" data-label="Europe">Europe</option>
+                <option value="aus" data-label="Australia">Australia</option>
+                </select>
+            </div>
+        </form>
+        <p>If we don't stock near you, you can buy online <a href="#" class="text-underline">here</a> and take advantage of our worldwide delivery</p>
+        <h2 class="mt-4 mb-0 mb-lg-3">Stockists in <span class="stockist__location">USA</span></h2>
+        <hr class="d-lg-none my-3" >
+        <div class="row">
+            <figure class="m-0 col-6 col-md-4 d-none" data-toggle="uk">
+                <a href="#" class="d-block rounded">
+                    <img class="w-100" src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/Myer_2x_70e3adce-a8d5-47b1-af35-3c29ce8c6519.png" alt="">
+                </a>
+                <figcaption class="h4 my-2">Available in selected stores</figcaption>
+            </figure>
+            <figure class="m-0 col-6 col-md-4 d-none" data-toggle="uk">
+                <a href="#" class="d-block rounded">
+                    <img class="w-100" src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/Myer_2x_70e3adce-a8d5-47b1-af35-3c29ce8c6519.png" alt="">
+                </a>
+                <figcaption class="h4 my-2">Available online</figcaption>
+            </figure>
+            <figure class="m-0 col-6 col-md-4 d-none" data-toggle="usa">
+                <a href="#" class="d-block rounded">
+                    <img class="w-100" src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/Myer_2x_70e3adce-a8d5-47b1-af35-3c29ce8c6519.png" alt="">
+                </a>
+                <figcaption class="h4 my-2">Available online</figcaption>
+            </figure>
+            <figure class="m-0 col-6 col-md-4 d-none" data-toggle="usa">
+                <a href="#" class="d-block rounded">
+                    <img class="w-100" src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/Myer_2x_70e3adce-a8d5-47b1-af35-3c29ce8c6519.png" alt="">
+                </a>
+                <figcaption class="h4 my-2">Available in selected stores</figcaption>
+            </figure>
+            <figure class="m-0 col-6 col-md-4 d-none" data-toggle="eur">
+                <a href="#" class="d-block rounded">
+                    <img class="w-100" src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/Myer_2x_70e3adce-a8d5-47b1-af35-3c29ce8c6519.png" alt="">
+                </a>
+                <figcaption class="h4 my-2">Available online</figcaption>
+            </figure>
+            <figure class="m-0 col-6 col-md-4 d-none" data-toggle="asia">
+                <a href="#" class="d-block rounded">
+                    <img class="w-100" src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/Myer_2x_70e3adce-a8d5-47b1-af35-3c29ce8c6519.png" alt="">
+                </a>
+                <figcaption class="h4 my-2">HK, SG, PH, MY, TH: <br> Available in select stores</figcaption>
+            </figure>
+            <figure class="m-0 col-6 col-md-4 d-none" data-toggle="aus">
+                <a href="#" class="d-block rounded">
+                    <img class="w-100" src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/Myer_2x_70e3adce-a8d5-47b1-af35-3c29ce8c6519.png" alt="">
+                </a>
+                <figcaption class="h4 my-2">Available in selected stores</figcaption>
+            </figure>
+            <figure class="m-0 col-6 col-md-4 d-none" data-toggle="eur">
+                <a href="#" class="d-block rounded">
+                    <img class="w-100" src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/Myer_2x_70e3adce-a8d5-47b1-af35-3c29ce8c6519.png" alt="">
+                </a>
+                <figcaption class="h4 my-2">Available online</figcaption>
+            </figure>
+            <figure class="m-0 col-6 col-md-4 d-none" data-toggle="aus">
+                <a href="#" class="d-block rounded">
+                    <img class="w-100" src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/Myer_2x_70e3adce-a8d5-47b1-af35-3c29ce8c6519.png" alt="">
+                </a>
+                <figcaption class="h4 my-2">Available online</figcaption>
+            </figure>
+            <figure class="m-0 col-6 col-md-4 d-none" data-toggle="aus">
+                <a href="#" class="d-block rounded">
+                    <img class="w-100" src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/Myer_2x_70e3adce-a8d5-47b1-af35-3c29ce8c6519.png" alt="">
+                </a>
+                <figcaption class="h4 my-2">Available online</figcaption>
+            </figure>
+            <figure class="m-0 col-6 col-md-4 d-none" data-toggle="aus">
+                <a href="#" class="d-block rounded">
+                    <img class="w-100" src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/Myer_2x_70e3adce-a8d5-47b1-af35-3c29ce8c6519.png" alt="">
+                </a>
+            <figcaption class="h4 my-2">Available online</figcaption>
+            </figure>
+        </div>
+        <h2 class="h1 mt-2">Didn’t find your answer?</h2>
+        <p class="h4 font-weight-normal">No worries, you can email us: <a href="mailto:hello@cocoandeve.com" class="text-underline font-weight-bold">hello@cocoandeve.com</a></p>
+    </section>
+
+    <!-- instagram section -->
+    <section class="instagram pt-4 text-center bg-yellow-light container-fluid">
+        <div class="col-10 col-lg-8 text-center mx-auto pb-4">
+            <p class="h2">Get social with us</p>
+            <p class="h4">
+                <a href="#" target="_blank" class="text-dark text-underline">@cocoandeve</a>
+            </p>
+            <p class="h4 font-weight-normal mb-0">Want to feature on our website or instagram? Tag us in your photos/reviews on instagram or social media using the hashtag #cocoandeve and @cocoandeve.</p>
+        </div>
+        <div class="instagram--feed">
+            <div class="row flex-nowrap p-sm-0 pb-sm-1 p-md-1">
+                <div class="col-12 col-lg-5 p-0">
+                    <div class="row  m-0">
+                        <div class="col-12 col-lg-8 p-0">
+                            <a href="#" target="_blank">
+                                <picture>
+                                    <source srcset="https://via.placeholder.com/345x345"/>
+                                    <img class="w-100 img-big" src="https://via.placeholder.com/345x345">
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="col-12 col-lg-4 p-0">
+                            <div class="row  m-0 ">
+                                <div class="col-lg-12 col-6 p-0">
+                                    <a href="#" target="_blank">
+                                        <picture>
+                                            <source srcset="https://via.placeholder.com/345x345"/>
+                                            <img class="w-100" src="https://via.placeholder.com/345x345">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="col-6 col-lg-12 p-0 ">
+                                    <a href="#" target="_blank">
+                                        <picture>
+                                            <source srcset="https://via.placeholder.com/345x345"/>
+                                            <img class="w-100" src="https://via.placeholder.com/345x345">
+                                        </picture>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-4 p-0">
+                            <a href="#" target="_blank">
+                                <picture>
+                                    <source srcset="https://via.placeholder.com/345x345"/>
+                                    <img class="w-100" src="https://via.placeholder.com/345x345">
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="col-6 col-lg-4 p-0">
+                            <a href="#" target="_blank">
+                                <picture>
+                                    <source srcset="https://via.placeholder.com/345x345"/>
+                                    <img class="w-100" src="https://via.placeholder.com/345x345">
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 p-0 d-none d-md-inline-block">
+                            <a href="#" target="_blank">
+                                <picture>
+                                    <source srcset="https://via.placeholder.com/345x345"/>
+                                    <img class="w-100" src="https://via.placeholder.com/345x345">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 d-none p-0 d-md-inline-block">
+                    <div class="row  m-0">
+                        <div class="col-lg-6 p-0">
+                            <div class="row  m-0">
+                                <div class="col-lg-6 p-0">
+                                    <a href="#" target="_blank">
+                                    <picture>
+                                        <source srcset="https://via.placeholder.com/345x345"/>
+                                        <img class="w-100" src="https://via.placeholder.com/345x345">
+                                    </picture>
+                                    </a>
+                                </div>
+                                <div class="col-lg-6 p-0">
+                                    <a href="#" target="_blank">
+                                    <picture>
+                                        <source srcset="https://via.placeholder.com/345x345"/>
+                                        <img class="w-100" src="https://via.placeholder.com/345x345">
+                                    </picture>
+                                    </a>
+                                </div>
+                                <div class="col-12 p-0">
+                                    <a href="#" target="_blank">
+                                    <picture>
+                                        <source srcset="https://via.placeholder.com/345x345"/>
+                                        <img class="w-100 img-big" src="https://via.placeholder.com/345x345">
+                                    </picture>
+                                </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 p-0">
+                            <div class="row  m-0 ">
+                                <div class="col-lg-6 p-0">
+                                    <a href="#" target="_blank">
+                                        <picture>
+                                            <source srcset="https://via.placeholder.com/345x345"/>
+                                            <img class="w-100" src="https://via.placeholder.com/345x345">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="col-lg-6 p-0">
+                                    <a href="#" target="_blank">
+                                        <picture>
+                                            <source srcset="https://via.placeholder.com/345x345"/>
+                                            <img class="w-100" src="https://via.placeholder.com/345x345">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="col-lg-6  p-0">
+                                    <a href="#" target="_blank">
+                                        <picture>
+                                            <source srcset="https://via.placeholder.com/345x345"/>
+                                            <img class="w-100" src="https://via.placeholder.com/345x345">
+                                        </picture>
+                                    </a>
+                                    </figure>
+                                </div>
+                                <div class="col-lg-6 p-0">
+                                    <a href="#" target="_blank">
+                                        <picture>
+                                            <source srcset="https://via.placeholder.com/345x345"/>
+                                            <img class="w-100" src="https://via.placeholder.com/345x345">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="col-lg-6 p-0">
+                                    <a href="#" target="_blank">
+                                        <picture>
+                                            <source srcset="https://via.placeholder.com/345x345"/>
+                                            <img class="w-100" src="https://via.placeholder.com/345x345">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="col-lg-6 p-0">
+                                    <a href="#" target="_blank">
+                                        <picture>
+                                        <source srcset="https://via.placeholder.com/345x345"/>
+                                        <img class="w-100" src="https://via.placeholder.com/345x345">
+                                        </picture>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service sections -->
+    <section class="text-center bg-secondary-light">
+        <div class="container">
+            <ul class="list-unstyled row align-items-center justify-content-center pt-4 pt-md-4 pb-md-4 pb-0 pl-0 mx-0 mb-0 border-bottom border-secondary">
+                <li class="col-6 col-md-3">
+                    <i class="sni sni__fast-delivery d-inline-flex text-secondary h1 mb-0"></i>
+                    <p class="title mb-md-2 mb-4">Fast worldwide<br/>delivery</p>
+                </li>
+                <li class="col-6 col-md-3">
+                    <i class="sni sni__winner-award d-inline-flex text-secondary h1 mb-0"></i>
+                    <p class="title mb-md-2 mb-4">Winner of<br/>16 Beauty Awards
+                    </p>
+                </li>
+                <li class="col-6 col-md-3">
+                    <i class="sni sni__guarantee d-inline-flex text-secondary h1 mb-0"></i>
+                    <p class="title mb-md-2 mb-4">100% money back<br/>guarantee</p>
+                </li>
+            </ul>
+            <div class="d-flex flex-sm-column flex-md-row justify-content-center align-items-center pt-md-4 pb-md-4 pt-2 pb-2">
+                <p class="my-md-0 mr-md-1">Our customers say:</p>
+                <p class="my-md-0 font-weight-bold text-dark">Excellent</p>
+                <i class="review-stars--trustpilot sni sni__five-stars-box h3 mx-1 mb-0"></i>
+                <p class="d-none d-md-block my-md-0 mr-md-1">4.8 out of 493 reviews:</p>
+                <p class="text-center mt-2 brand my-md-0 text-dark">
+                    <i class="sni sni__star review-stars--trustpilot d-inline-flex"></i>
+                    Trustpilot
+                </p>
+            </div>
+        </div>
+    </section>
+
+    {{> sections/footer}}
+	{{> js jquery=true bootstrap=true main=true }}
 </body>
 
 </html>
