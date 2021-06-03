@@ -328,6 +328,7 @@ $(document).ready(function () {
 		}
 	});
 
+	//stockist
 	if ($('.stockist').length > 0) {
 		const stockistPlace = $('.stockist__select').val();
 		$(`.stockist figure[data-toggle="${stockistPlace}"]`).removeClass('d-none');
@@ -396,5 +397,56 @@ $(document).ready(function () {
 		window.addEventListener('scroll', setProgress);
 
 		setProgress();
+	}
+
+	//custom checkbox
+	if ($('.custom-checkbox')) {
+		$('.custom-checkbox').on('click', function() {
+			$(this).toggleClass('sni__check').toggleClass('checked');
+		});
+	}
+
+	//sweepstakes page
+	if ($('.sweepstakes').length > 0) {
+		$('#sweepstakes__form').on('submit', function(){
+			const el = $(this);
+			const email = el.find('#sweepstakes__email').val() || '';
+			const country = el.find('#sweepstakes__country').val() || '';
+			const phoneNum = el.find('#sweepstakes__phone').val() || '';
+
+			const tocAgree = el.find('#sweepstakes__toc').hasClass('checked');
+			const emailValid = email != '' && window.validateEmail(email);
+			const countryValid = country != '';
+			const phoneValid = phoneNum != '' && window.validatePhone(phoneNum);
+			const validForm = tocAgree && (emailValid || (countryValid && phoneValid));
+
+			el.find('.input-error').addClass('d-none');
+			if (!emailValid && !phoneValid && !countryValid) {
+				el.find('.email-error').removeClass('d-none');
+			}
+			if (!emailValid && !phoneValid) {
+				el.find('.phone-error').text('Please enter a valid phone number').removeClass('d-none');
+			}
+			if (!emailValid && phoneValid && !countryValid) {
+				el.find('.phone-error').text('Please enter a country').removeClass('d-none');
+			}
+			if (!tocAgree) {
+				el.find('.toc-error').removeClass('d-none');
+			}
+			if (!validForm) {
+				return false;
+			}
+
+			$('.sweepstakes__thank-you').removeClass('d-none');
+			$(this).addClass('d-none');
+			return false;
+			//proceed ajax call to bluecore
+		});
+
+		$('.sweepstakes select').on('change', function () {
+			const code = $(this).find(':selected').attr('data-code');
+			$('.sweepstakes__country-label').html(`+${code}`);
+		});
+
 	}
 });
