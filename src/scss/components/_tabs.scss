@@ -1,33 +1,36 @@
 .nav-tabs {
-  border-bottom: none;
+  &--product,
+  &--real-results {
+    border-bottom: none;
 
-  .nav-link {
-    border: $nav-tabs-border-width solid $nav-tabs-border-color;
-    border-radius: 0;
-    border-right: 0;
-    padding: 0;
-    line-height: calc-em(40, $context: 16, $unit: 1);
+    .nav-link {
+      border: $nav-tabs-border-width solid $nav-tabs-border-color;
+      border-radius: 0;
+      border-right: 0;
+      padding: 0;
+      line-height: calc-em(40, $context: 16, $unit: 1);
 
-    @include media-breakpoint-up(lg) {
-      line-height: calc-em(46, $context: 20, $unit: 1);
-    }
+      @include media-breakpoint-up(lg) {
+        line-height: calc-em(46, $context: 20, $unit: 1);
+      }
 
-    &.active {
-      color: white;
-    }
-  }
-
-  .nav-item {
-    &:first-child {
-      .nav-link {
-        border-radius: $nav-tabs-border-radius 0 0 $nav-tabs-border-radius;
+      &.active {
+        color: white;
       }
     }
 
-    &:last-child {
-      .nav-link {
-        border-radius: 0 $nav-tabs-border-radius $nav-tabs-border-radius 0;
-        border-right: $nav-tabs-border-width solid $nav-tabs-border-color;
+    .nav-item {
+      &:first-child {
+        .nav-link {
+          border-radius: $nav-tabs-border-radius 0 0 $nav-tabs-border-radius;
+        }
+      }
+
+      &:last-child {
+        .nav-link {
+          border-radius: 0 $nav-tabs-border-radius $nav-tabs-border-radius 0;
+          border-right: $nav-tabs-border-width solid $nav-tabs-border-color;
+        }
       }
     }
   }
