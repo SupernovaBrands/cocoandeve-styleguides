@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	{{> html-head title="Real Result" }}
+</head>
+
+<body>
+  {{> sections/header}}
+  <section class="py-4 real-result">
+    <div class="container">
+      <h1 class="text-center">Real Customers. Real Reviews</h1>
+      <form class="mb-3">
+        <div class="form-group row align-items-center justify-content-center ">
+          <p class="h4 font-weight-normal mr-3 mb-0">Filter By:</p>
+          <select class="custom-select col-5 d-lg-none">
+            <option value="all" selected="selected">All</option>
+            <option>Tan</option>
+            <option>Hair</option>
+            <option>Body</option>
+          </select>
+          <ul class="nav nav-tabs nav-tabs--real-results text-center d-none d-lg-flex" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link text-decoration-none h4 mb-0 font-weight-normal" data-toggle="tab" href="#tan" role="tab" aria-controls="tan">Tan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-decoration-none h4 mb-0 font-weight-normal" data-toggle="tab" href="#hair" role="tab" aria-controls="hair">Hair</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-decoration-none h4 mb-0 font-weight-normal" data-toggle="tab" href="#body" role="tab" aria-controls="value-sets">Body</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-decoration-none active h4" data-toggle="tab" href="#all" role="tab" aria-controls="all">All</a>
+            </li>
+          </ul>
+        </div>
+      </form>
+      <div class="row real-result__masonry d-lg-block">
+        {{> compounds/real-result username="@Stella" badge="Tan" badge_color="badge-purple" category="#tan" content="It's so incredible and cute! You just mix a few drops (depending on how much of a tan you want) into your daily moisturiser, and apply it evenly onto your face!"}}
+        {{> compounds/real-result username="@Alissa" badge="Tan" badge_color="badge-purple" category="#tan" content="I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼"}}
+        {{> compounds/real-result username="@cassielandsell" badge="Body" badge_color="badge-blue" category="#body" content="Now that summer is officially over Coco & Eve is making sure I keep my tan for the rest of the year 🤍"}}
+        {{> compounds/real-result username="@kaylaazjones" badge="Tan" badge_color="badge-purple" category="#tan" content="This hair oil made my hair VERY smooth, shiny and hydrated after using it 🥰 The elixir is very lightweight, no matter how much or how little you decide to use. I'm obsessed!"}}
+        {{> compounds/real-result username="@Nadia" badge="Hair" badge_color="badge-secondary" category="#hair" content="Obsessed with how perfectly golden this leaves my skin! Best part: this is the WORLDS FIRST fake tan formula to help reduce cellulite AND have anti aging"}}
+        {{> compounds/real-result username="@Madina Shrienzada" badge="Tan" badge_color="badge-" category="#tan" content="These Tan Drops give my face the most natural and healthy looking tan. It contains healthy ingredients including Banana, Coconut Water , Dragon Fruit. It is 100% natural and contains 5 different Hyaluronic Acids. For the smoothest application, I like to add a few drops to my moisturizer!"}}
+        {{> compounds/real-result username="@Emily" badge="Tan" badge_color="badge-purple" category="#tan" content="I've always avoided fake tan as I have very dry sensitive skin and i've had a few bad experiences with patchy colour. I tried Coco & Eve fake tan and my skin felt sooooooo moisturised it was unreal. No patches where i had dry skin, no bad smell and no orange mess!"}}
+        {{> compounds/real-result username="@Molly" badge="Hair" badge_color="badge-secondary" category="#hair" content="Sunny Honey gave me the most beautiful tan and perfected imperfections & cellulite on my legs. I loved using the kabuki brush on my feet and hands to ensure an even application. Zero complaints from me"}}
+        {{> compounds/real-result username="@Alexa" badge="Hair" badge_color="badge-secondary" category="#hair" content="Look how shiny this is! Thanks to Miracle Hair Elixir I can run my fingers through my hair for the first time in a long time. Not only does it smell amazing, but honestly my hair is so silky soft."}}
+        {{> compounds/real-result username="@Anisa" badge="Body" badge_color="badge-blue" category="#body" content="There's no words for this hair mask - in 10 mins it turns my hair smooth silky and shiny. Also gets rid of my frizz and tangles! I literally have no more dry hair days because of this!"}}
+        {{> compounds/real-result username="@jasmineregmi" badge="Hair" badge_color="badge-secondary" category="#hair" content="The entire collection together gave my skin the rejuvenation it needed. I have even more confidence in the way I feel because for me it’s always about the feeling more than the look."}}
+        {{> compounds/real-result username="@talmeshak" badge="Tan" badge_color="badge-purple" category="#tan" content="My hair is soo tangle prone because it’s so fine and long and bleached, but I was able to run my fingers through it easily with the mask."}}
+        {{> compounds/real-result username="@okevaaa" badge="Tan" badge_color="badge-purple" category="#tan" content="I have never used fake tan before and was nervous that I would be all orange and streaky but this looked so natural and I didn't get any streaks thanks to the awesome mitt and brush!! The smell is INCRED!"}}
+        {{> compounds/real-result username="@Lexington Hartman" badge="Body" badge_color="badge-blue" category="#body" content="I've always avoided fake tan as my skin is very dry and sensitive. I tried Coco & Eve and my skin felt sooo nourished, smelt unreal and I didn't have any dry patches where my fake tan would usually cling to."}}
+        {{> compounds/real-result username="@Tasha" badge="Hair" badge_color="badge-secondary" category="#hair" content="I have dry and knotty hair; I apply Coco & Eve weekly and as soon as I’ve put the product in, my hair is instantly hydrated and becomes so much more manageable."}}
+      </div>
+      <div class="row">
+        <div class="col text-center">
+          <a href="#" class="btn btn-lg btn-primary" id="real-result__show-more">Show more reviews</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{> sections/product-carousel bgclass="bg-yellow-light"}}
+  {{> sections/instagram bgclass="bg-yellow-light"}}
+  {{> sections/services}}
+  {{> sections/footer}}
+	{{> js jquery=true bootstrap=true main=true }}
+</body>
+
+</html>
