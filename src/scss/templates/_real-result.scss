@@ -1,12 +1,15 @@
 .real-result {
 
   @include media-breakpoint-up(lg) {
-    &__masonry {
-      column-count: 3;
+    &__grid {
+      column-count: $card-columns-count;
+      orphans: 1;
+      widows: 1;
     }
 
     .result-card {
       max-width: none;
+      display: inline-block;
     }
   }
 }
