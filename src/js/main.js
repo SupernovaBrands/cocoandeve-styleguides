@@ -420,15 +420,6 @@ $(document).ready(function () {
 				$('.custom-checkbox input[type="checkbox"]').prop('checked', false);
 			}
 		});
-
-		$('.custom-checkbox + label').on('click', function () {
-			$(this).prev().toggleClass('sni__check').toggleClass('checked');
-			if ($(this).prev().hasClass('checked')) {
-				$('.custom-checkbox input[type="checkbox"]').prop('checked', true);
-			} else {
-				$('.custom-checkbox input[type="checkbox"]').prop('checked', false);
-			}
-		});
 	}
 
 	// sweepstakes page

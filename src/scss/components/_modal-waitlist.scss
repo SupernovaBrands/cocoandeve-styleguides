@@ -10,7 +10,7 @@
   }
 
   .masking-select {
-    color: $gray-500;
+    color: $custom-select-color;
     padding: $custom-select-padding-y ($custom-select-padding-x + $custom-select-indicator-padding) $custom-select-padding-y $custom-select-padding-x/1.5;
     border: $custom-select-border-width solid $custom-select-border-color;
     background: $custom-select-bg $custom-select-background-mask;
@@ -26,9 +26,5 @@
     @include media-breakpoint-up('lg') {
       width: calc(100% - #{$grid-gutter-width-lg});
     }
-  }
-
-  .custom-select {
-    opacity: 0;
   }
 }
