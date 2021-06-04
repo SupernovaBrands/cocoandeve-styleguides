@@ -18,14 +18,28 @@
 }
 
 .product-info-tab {
+	border-color: $gray-400;
+
 	.nav-item {
 		flex: 1 0 0;
 	}
 
 	.nav-link {
 		&.active {
+			font-weight: $font-weight-bold;
 			box-shadow: 0 -2px 0 0 inset $primary;
+			background: none;
 		}
+	}
+}
+
+#product-ingredients__toggle {
+	&::after {
+		content: '\a0-';
+	}
+
+	&.collapsed::after {
+		content: '\a0+';
 	}
 }
 
@@ -39,5 +53,24 @@
 			width: 1.2em;
 			margin-right: 0.2em;
 		}
+	}
+}
+
+.shipping-table {
+	th {
+		background: #E0F0E9;
+	}
+
+	th,
+	td {
+		padding: 0.5rem;
+	}
+}
+
+#shipping-modal {
+	.close {
+		top: 0;
+		right: 0;
+		z-index: 1;
 	}
 }

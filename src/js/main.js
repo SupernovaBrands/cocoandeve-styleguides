@@ -279,9 +279,6 @@ $(document).ready(function () {
 	const announceBar = $('.announcement-bar');
 	const navbarHeight = navbarEl.height();
 
-	const productSwatchMobile = $('.product-swatch-mobile');
-	const productSwatchTrigger = $('.product-swatch-mobile__trigger');
-
 	$(window).on('scroll', function () {
 		navbarEl.addClass('position-fixed');
 		scrollTop = $(this).scrollTop();
@@ -304,15 +301,6 @@ $(document).ready(function () {
 			}
 		}
 		lastScrollTop = scrollTop;
-
-		if (window.innerWidth < screenLG) {
-			const overSwatch = scrollTop > productSwatchTrigger.offset().top;
-			if (overSwatch && !productSwatchMobile.hasClass('show')) {
-				productSwatchMobile.addClass('show');
-			} else if (!overSwatch && productSwatchMobile.hasClass('show')) {
-				productSwatchMobile.removeClass('show');
-			}
-		}
 	});
 
 	// Cart drawer

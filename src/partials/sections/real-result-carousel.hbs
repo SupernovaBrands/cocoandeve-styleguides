@@ -1,0 +1,64 @@
+<div style="background-color: #F9EECA;">
+	<div class="container px-g">
+		<div class="row">
+			<div class="col-12">
+				<section class="py-4">
+					<div id="result-carousel" class="carousel result-carousel slide carousel--loop no-gutters__in-container"
+						data-slide-number="4" data-ride="carousel" data-interval="false">
+						<h2 class="text-center h1 pb-2 mb-0">Real Results</h2>
+						<div class="carousel--centered">
+							<div class="carousel-inner d-flex flex-nowrap pb-4">
+								{{#times 8}}
+								<figure class="mb-0 px-lg-2 carousel-item {{#if @first}}active{{/if}} col-9 col-md-3">
+									<picture class="d-block">
+										<img src="https://via.placeholder.com/255x208" alt="Placeholder" class="d-block w-100">
+									</picture>
+									<figcaption class="bg-white py-2 px-g">
+										<div class="d-flex justify-content-between mb-1">
+											<div class="yotpo bottomLine show-avg-score yotpo-small" data-product-id="4543113265187">
+											</div>
+											<div class="badge badge-primary">Tan</div>
+										</div>
+										<p class="mb-1"><b>Product:</b> <a href="">Miracle Hair Elixir</a></p>
+										<p>Review {{@index}}: “I struggle with cellulite so wanted to try this 3 step process Glow Figure
+											range! After using the products my skin was a lot softer, smoother and had more glow! They have an
+											amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction
+											in cellulite. What more could a girl ask for! 😛💕🙌🏼”</p>
+										<b>@Alissa</b>
+									</figcaption>
+								</figure>
+								{{/times}}
+							</div>
+						</div>
+
+						<ol class="carousel-indicators carousel-indicators--primary d-lg-none">
+							{{#times 8}}
+							<li data-target="#result-carousel" data-slide-to="{{@index}}"
+								class="{{#if @first}}active{{/if}} rounded-circle border-0"></li>
+							{{/times}}
+						</ol>
+
+						<a class="carousel-control-prev carousel-control--background d-none d-lg-flex" href="#result-carousel"
+							role="button" data-slide="prev">
+							<span
+								class="carousel-control-prev-icon sni sni__chevron-prev justify-content-center align-items-center bg-primary-light"
+								aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="carousel-control-next carousel-control--background d-none d-lg-flex" href="#result-carousel"
+							role="button" data-slide="next">
+							<span
+								class="carousel-control-next-icon sni sni__chevron-next justify-content-center align-items-center bg-primary-light"
+								aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+
+					<div class="text-center">
+						<button class="btn btn-lg btn-primary">See All Results</button>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+</div>

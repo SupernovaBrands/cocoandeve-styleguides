@@ -1,3 +1,4 @@
+/* global screenLG */
 import snCart from '~mod/sn-cart';
 
 $('.product-image-carousel__indicator__item').on('click', function () {
@@ -78,15 +79,28 @@ $('.product-form').on('submit', function (e) {
 	}
 });
 
-$('.product-swatch-desktop .swatch').on('click', function () {
+$('.product-swatch-desktop .variant-swatch').on('click', function () {
 	const attrFor = $(this).attr('for');
-	$('.product-swatch-mobile .swatch').removeClass('border-primary');
-	$(`.product-swatch-mobile .swatch[for=${attrFor}]`).addClass('border-primary');
+	const mobileSwatch = $(this).closest('form').find('.product-swatch-mobile .variant-swatch');
+	mobileSwatch.removeClass('border-primary')
+		.filter(`[for=${attrFor}]`).addClass('border-primary');
+	$(this).parents('.product-swatch-desktop').find('p').addClass('d-none')
+		.filter(`.${attrFor}`)
+		.removeClass('d-none');
+	mobileSwatch.siblings('p').addClass('d-none')
+		.filter(`.${attrFor}`).removeClass('d-none');
 });
 
-$('.product-swatch-mobile .swatch').on('click', function () {
-	$(this).siblings('.swatch').removeClass('border-primary');
+$('.product-swatch-mobile .variant-swatch').on('click', function () {
+	const attrFor = $(this).attr('for');
+	const desktopSwatch = $(this).closest('form').find('.product-swatch-desktop');
+	$(this).siblings('.variant-swatch').removeClass('border-primary');
 	$(this).addClass('border-primary');
+	$(this).siblings('p').addClass('d-none')
+		.filter(`.${attrFor}`)
+		.removeClass('d-none');
+	desktopSwatch.find('p').addClass('d-none')
+		.filter(`.${attrFor}`).removeClass('d-none');
 });
 
 $('.product-swatch-mobile__collapse')
@@ -98,3 +112,22 @@ $('.product-swatch-mobile__collapse')
 		$(this).siblings('button[type=submit]').addClass('d-none');
 		$(this).siblings('button[type=button]').removeClass('d-none');
 	});
+
+const mobileSwatchTrigger = document.querySelector('.product-swatch-mobile__trigger');
+const mobileSwatch = $('.product-swatch-mobile');
+if (mobileSwatchTrigger && mobileSwatch.length > 0) {
+	const observerCallback = (entries) => {
+		if (window.innerWidth < screenLG) {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					mobileSwatch.removeClass('show');
+					$('.product-swatch-mobile__collapse').collapse('hide');
+				} else {
+					mobileSwatch.addClass('show');
+				}
+			});
+		}
+	};
+	const observer = new IntersectionObserver(observerCallback);
+	observer.observe(mobileSwatchTrigger);
+}

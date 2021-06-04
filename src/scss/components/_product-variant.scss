@@ -1,11 +1,19 @@
 .product-variant {
-	.custom-control-label {
+	> .custom-control-label {
 		padding-left: calc-em(60);
 		&::before {
-			top: 50%;
+			top: calc-em(40);
 			left: calc-em(20);
-			transform: translateY(-50%);
 		}
+	}
+
+	.custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+		background-color: #fff;
+		border-color: $gray-500;
+	}
+	.custom-control-input:checked:active ~ .custom-control-label::before {
+		background-color: $primary;
+		border-color: $primary;
 	}
 
 	.custom-control-input:checked~.custom-control-label {

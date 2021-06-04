@@ -81,12 +81,12 @@ export default class CartItem extends React.Component {
 									)}
 								</p>
 								{!showVariantOptions && (
-									<i className={`d-block swatch ${models.variantHandle}`} />
+									<i className={`d-block variant-swatch ${models.variantHandle}`} />
 								)}
 								{showVariantOptions && this.state.variantOptions.map((option) => (
 									<button
 										key={option.id}
-										className={`swatch mr-2 ${option.variantHandle} ${option.id === this.state.selectedVariant.id && 'border-primary'}`}
+										className={`variant-swatch mr-2 ${option.variantHandle} ${option.id === this.state.selectedVariant.id && 'border-primary'}`}
 										type="button"
 										tabIndex="-1"
 										disabled={!option.available}

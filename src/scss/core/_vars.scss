@@ -17,7 +17,7 @@ $container-max-widths: (
   xl: 1200px
 );
 
-$spacer: calc-em(20);
+$spacer: calc-em(20, $unit: 1rem);
 $spacers: (
   1: $spacer * 0.5,
   2: $spacer * 1,
@@ -95,6 +95,9 @@ $gray-900: $body-color;
 $text-muted: $gray-500;
 $border-color: $gray-400;
 
+// Border
+$border-radius-lg: calc-em(8, $unit: 1rem);
+
 // Forms
 $form-group-margin-bottom: map-get($spacers, 1);
 $input-color: $body-color;
@@ -131,7 +134,7 @@ $btn-padding-x-icon: calc-em(20);
 
 $btn-font-size-lg: 1em;
 $btn-line-height-lg: $line-height-base;
-$btn-border-radius-lg: calc-em(8, $unit: 1rem);
+$btn-border-radius-lg: $border-radius-lg;
 $btn-border-width-lg: 2px;
 $btn-padding-y-lg: calc-em(26 / 2);
 $btn-padding-x-lg: calc-em(54);
@@ -190,7 +193,7 @@ $navbar-padding-y: 0;
 $navbar-padding-x: calc-em(15 / 2, 16);
 $navbar-toggler-padding-x: 0;
 
-//navbar brand
+// navbar brand
 $navbar-brand-padding-y: calc-em(10, 16);
 
 // dropdown

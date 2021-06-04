@@ -1,13 +1,21 @@
-.swatch {
+.variant-swatch {
 	flex-shrink: 0;
-	width: 2em;
-	height: 2em;
+	width: calc-em(40);
+	height: calc-em(40);
 	border-radius: 50%;
-	border: 1px solid $gray-500;
-	box-shadow: inset 0px 0px 0px 2px #fff;
+	border: 2px solid #fff;
+	box-shadow: inset 0px 0px 0px 3px #fff;
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: 2em 2em;
+	background-size: calc-em(30);
+
+	&.small {
+		width: calc-em(10);
+		height: calc-em(10);
+		box-shadow: none;
+		border: none;
+		background-size: calc-em(10) calc-em(10);
+	}
 
 	&.custom-control-label {
 		&::before,
@@ -38,13 +46,13 @@
 	}
 
 	&.medium {
-		background-color: #AA7878;
+		background-color: #C48B8B;
 	}
 	&.dark {
 		background-color: #885757;
 	}
 	&.ultra-dark {
-		background-color: #5C2323;
+		background-color: #4A1F1F;
 	}
 
 	&.girl-print-limited-edition {

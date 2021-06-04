@@ -1,0 +1,94 @@
+$grid-column-width-lg: minmax(0, (map-get($container-max-widths, lg) - $grid-gutter-width-lg * $grid-columns) / $grid-columns);
+$grid-column-width-xl: minmax(0, (map-get($container-max-widths, xl) - $grid-gutter-width-lg * $grid-columns) / $grid-columns);
+
+.product-banner {
+	&__tan &__text {
+		background: $sh-orange-light;
+	}
+	&__hair &__text {
+		background: $primary-light;
+	}
+	&__body &__text {
+		background: $bali-bod-blue;
+		color: #fff;
+	}
+	&__body-2 &__text {
+		background: $sh-purple-light;
+	}
+
+	&__text {
+		padding-left: $grid-gutter-width;
+		padding-right: $grid-gutter-width;
+		@include media-breakpoint-up(lg) {
+			display: grid;
+			grid-template-columns: 1fr repeat(6, [col-start] $grid-column-width-lg);
+			column-gap: $grid-gutter-width-lg;
+			padding-left: 0;
+			align-content: center;
+
+			&-wrapper {
+				grid-column-start: col-start 1;
+				grid-column-end: span 5;
+			}
+
+			&-top {
+				align-content: initial;
+			}
+		}
+
+		@include media-breakpoint-up(xl) {
+			grid-template-columns: 1fr repeat(6, [col-start] $grid-column-width-xl);
+		}
+	}
+
+	&__image {
+		img {
+			object-fit: cover;
+			object-position: left;
+		}
+	}
+
+	&__d-reverse &__text {
+		@include media-breakpoint-up(lg) {
+			order: 1;
+			grid-template-columns: repeat(6, [col-start] $grid-column-width-lg);
+			column-gap: $grid-gutter-width-lg 1fr;
+			padding-right: 0;
+			padding-left: $grid-gutter-width;
+			&-wrapper {
+				grid-column-start: col-start 2;
+				grid-column-end: span 5;
+			}
+		}
+
+		@include media-breakpoint-up(xl) {
+			grid-template-columns: repeat(6, [col-start] $grid-column-width-xl) 1fr;
+		}
+	}
+
+	&__d-reverse &__image {
+		img {
+			object-position: right;
+		}
+	}
+
+	&__m-reverse &__text {
+		@include media-breakpoint-down(md) {
+			order: 1;
+		}
+	}
+
+	.bod-bundle-steps {
+		img {
+			width: calc-em(80);
+			margin-right: $grid-gutter-width-lg;
+			@include media-breakpoint-up(lg) {
+				width: calc-em(90);
+			}
+		}
+
+		h4 {
+			@include make-col(3, 5);
+		}
+	}
+}
