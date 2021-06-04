@@ -42,10 +42,6 @@ svg{overflow:hidden;vertical-align:middle}
 .nav-link.sni__cart{font-size:1.25em;flex-basis:20%}
 .nav-link.sni__cart:before{font-size:1.25em;margin-right:.1875em}
 }
-@media (min-width:1260px){
-.container{max-width:1200px}
-.navbar-brand:before{font-size:2.05em}
-}
 @media (min-width:992px){
 .navbar-expand-lg .navbar-nav{flex-basis:40%}
 .navbar-expand-lg .navbar-nav .nav-link{line-height:1.375em}
