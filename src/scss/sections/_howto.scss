@@ -48,10 +48,10 @@
 	}
 
 	.carousel-inner {
-		transform: translateX(-23%);
+		transform: translateX(-25%);
 
 		@include media-breakpoint-up(lg) {
-			transform: translateX(1.25%);
+			transform: translateX(0);
 		}
 	}
 }
