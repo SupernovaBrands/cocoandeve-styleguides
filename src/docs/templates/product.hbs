@@ -25,38 +25,65 @@
 				<p class="mb-2 mb-lg-4 font-size-lg order-lg-0">Anti-cellulite, anti-aging self tan</p>
 
 				<form class="product-form order-lg-2 mt-1 product-swatch-mobile__trigger">
-					<div class="d-none product-data" aria-hidden="true">1-x-sunny-honey-bali-bronzing-foam|medium|32068891541539::1-x-sunny-honey-bali-bronzing-foam|dark|32068891607075::1-x-sunny-honey-bali-bronzing-foam|ultra-dark|32068891639843::1-x-sunny-honey-bali-bronzing-bundle|medium|32068892295203::1-x-sunny-honey-bali-bronzing-bundle|dark|32068892327971::1-x-sunny-honey-bali-bronzing-bundle|ultra-dark|32068892360739</div>
+					{{#> components/product-variant name="product-variant" title="1x Sunny Honey Bali Bronzing Foam" value="1-x-sunny-honey-bali-bronzing-foam" checked=true class="mb-1"}}
+						<button type="button" class="variant-swatch medium mr-2 border-primary" data-value="medium" data-id="32068891541539"></button>
+						<button type="button" class="variant-swatch dark mr-2" data-value="dark" data-id="32068891607075"></button>
+						<button type="button" class="variant-swatch ultra-dark" data-value="ultra-dark" data-id="32068891639843"></button>
+						<p class="font-size-sm w-100 mt-2 mb-0 swatch-label-medium"><b>Medium</b> - Subtle glow, lighter skin tones</p>
+						<p class="font-size-sm w-100 mt-2 mb-0 swatch-label-dark d-none"><b>Dark</b> - Subtle glow, lighter skin tones</p>
+						<p class="font-size-sm w-100 mt-2 mb-0 swatch-label-ultra-dark d-none"><b>Ultra Dark</b> - Subtle glow, lighter skin tones</p>
+					{{/ components/product-variant}}
+					{{#> components/product-variant name="product-variant" title="1x Sunny Honey Bali Bronzing Bundle" value="1-x-sunny-honey-bali-bronzing-bundle" compare=true class="mb-1" note="Ultra dark OOS waitlist, dark oos"}}
+						<button type="button" class="variant-swatch medium mr-2 border-primary" data-value="medium" data-id="32068892295203"></button>
+						<button type="button" class="variant-swatch dark mr-2 oos" data-value="dark" data-id="32068892327971"></button>
+						<button type="button" class="variant-swatch ultra-dark oos waitlist" data-value="ultra-dark" data-id="32068892360739"></button>
+						<p class="font-size-sm w-100 mt-2 mb-0 swatch-label-medium"><b>Medium</b> - Subtle glow, lighter skin tones</p>
+						<p class="font-size-sm w-100 mt-2 mb-0 swatch-label-dark d-none"><b>Dark</b> - Subtle glow, lighter skin tones</p>
+						<p class="font-size-sm w-100 mt-2 mb-0 swatch-label-ultra-dark d-none"><b>Ultra Dark</b> - Subtle glow, lighter skin
+							tones</p>
+					{{/ components/product-variant}}
+					{{#> components/product-variant name="product-variant" title="Bronzing Face Drops" value="bronzing-face-drops" compare=true class="mb-3" note="No shade swatch test" hideSwatch="true"}}
+						<button type="button" class="variant-swatch medium mr-2 border-primary" data-value="medium" data-id="32363243831331"></button>
+						<p class="font-size-sm w-100 mt-2 mb-0 swatch-label-medium"><b>Medium</b> - Subtle glow, lighter skin tones</p>
+					{{/ components/product-variant}}
 
-					{{> components/product-shade-swatch class="product-swatch-desktop" input=true}}
-
-					<div class="product-swatch-mobile fixed-bottom d-lg-none mx-g mb-2">
-						<div id="product-swatch-mobile-4543113265187" class="product-swatch-mobile__collapse position-relative collapse bg-white border border-primary border-bottom-0 rounded-top">
-							<button class="close position-absolute sni sni__close font-size-xs" data-toggle="collapse" data-target="#product-swatch-mobile-4543113265187" aria-label="close"></button>
-							{{> components/product-shade-swatch class="justify-content-center p-g" input=false}}
+					<div class="product-swatch-mobile fixed-bottom d-lg-none mx-g mb-2 show">
+						<div id="product-swatch-mobile"
+							class="product-swatch-mobile__collapse position-relative collapse bg-white border border-primary border-bottom-0 rounded-top">
+							<button class="close position-absolute sni sni__close font-size-xs" data-toggle="collapse"
+								data-target="#product-swatch-mobile" aria-label="close"></button>
+							<div class="product-swatch d-flex flex-wrap justify-content-center justify-content-center p-g">
+								<button type="button" class="variant-swatch medium mr-2 border-primary" data-value="medium"></button>
+								<button type="button" class="variant-swatch dark mr-2" data-value="dark"></button>
+								<button type="button" class="variant-swatch ultra-dark" data-value="ultra-dark"></button>
+								<p class="font-size-sm w-100 mt-2 mb-0 swatch-label-medium"><b>Medium</b> - Subtle glow, lighter skin tones</p>
+								<p class="font-size-sm w-100 mt-2 mb-0 swatch-label-dark d-none"><b>Dark</b> - Subtle glow, lighter skin tones</p>
+								<p class="font-size-sm w-100 mt-2 mb-0 swatch-label-ultra-dark d-none"><b>Ultra Dark</b> - Subtle glow, lighter skin tones</p>
+							</div>
 						</div>
-						<button class="btn btn-lg btn-primary btn-block d-lg-none m-0" type="button" data-toggle="collapse" data-target="#product-swatch-mobile-4543113265187">Select Shade</button>
-						<button class="btn btn-lg btn-primary btn-block d-none m-0" type="submit">Add to Cart</button>
+						<button class="product-swatch-mobile__toggle btn btn-lg btn-primary btn-block m-0" type="button" data-toggle="collapse" data-target="#product-swatch-mobile">Select Shade</button>
+						<div class="product-swatch-mobile__action bg-white rounded-lg d-none">
+							<button class="product-form-submit btn btn-lg btn-primary btn-block m-0" type="submit">Add to Cart</button>
+							<a class="scroll-to-element btn btn-lg btn-primary btn-block d-none m-0" role="button" href="#product-waitlist-form-oos">Waitlist Me</a>
+						</div>
 					</div>
 
-					{{> components/product-variant name="product-variant" title="1x Sunny Honey Bali Bronzing Foam" value="1-x-sunny-honey-bali-bronzing-foam" checked=true class="mt-3 mb-1"}}
-					{{> components/product-variant name="product-variant" title="1x Sunny Honey Bali Bronzing Bundle" value="1-x-sunny-honey-bali-bronzing-bundle" compare=true class="mb-3" moreText=true}}
+					<div class="product-form-submit mb-3 mb-lg-4">
+						<div class="d-flex mb-3">
+							<div class="react-quantity-box"></div>
+							<button class="btn btn-lg btn-primary btn-block ml-1 ml-lg-3" type="submit">Add to Cart</button>
+						</div>
 
-					<div class="d-flex mb-3">
-						<div class="react-quantity-box"></div>
-						<button class="btn btn-lg btn-primary btn-block ml-1 ml-lg-3" type="submit">Add to Cart</button>
+						<div class="mb-1">
+							or 4 interest-free installments of $15.70 by
+							<img src="{{ imageUrl }}/logo-klarna.svg" height="15px" class="ml-1 d-inline-block align-baseline" />
+						</div>
+
+						<div>Fast shipping worldwide</div>
 					</div>
 				</form>
 
-				<div class="mb-1 order-lg-2">
-					or 4 interest-free installments of $15.70 by
-					<img src="{{ imageUrl }}/logo-klarna.svg" height="15px" class="ml-1 d-inline-block align-baseline" />
-				</div>
-
-				<div class="mb-3 mb-lg-4 order-lg-2">
-					Fast shipping worldwide
-				</div>
-
-				<form class="product-waitlist-form-oos bg-primary-light px-g py-3 order-lg-2  mb-3 mb-lg-4 d-none">
+				<form id="product-waitlist-form-oos" class="product-waitlist-form-oos bg-primary-light px-g py-3 order-lg-2  mb-3 mb-lg-4 d-none">
 					<h2 class="text-center">Restoking early June</h2>
 					<h4 class="text-center font-weight-normal">Our tan range has a worldwide hit we can’t keep up with the stock. But we are on it, sign up to be the wait list!</h4>
 					<div class="input-group mt-2">

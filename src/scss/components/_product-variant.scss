@@ -1,9 +1,9 @@
 .product-variant {
-	> .custom-control-label {
-		padding-left: calc-em(60);
+	.custom-control-label {
+		padding-left: calc-em(60, $unit: 1rem);
 		&::before {
-			top: calc-em(40);
-			left: calc-em(20);
+			top: calc-em(40, $unit: 1rem);
+			left: calc-em(20, $unit: 1rem);
 		}
 	}
 
@@ -16,7 +16,15 @@
 		border-color: $primary;
 	}
 
-	.custom-control-input:checked~.custom-control-label {
+	.custom-control-input:checked ~ .custom-control-label {
 		border-color: $primary !important;
+	}
+
+	.product-swatch {
+		display: none;
+	}
+
+	.custom-control-input:checked ~ .custom-control-label .product-swatch {
+		display: block;
 	}
 }

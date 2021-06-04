@@ -3,13 +3,10 @@ html{font-family:sans-serif;line-height:1.15;-webkit-text-size-adjust:100%}
 header,nav{display:block}
 body{margin:0;font-family:sofia-pro,"Helvetica Neue",Arial,sans-serif;font-size:1em;font-weight:400;line-height:1.25;color:#151515;text-align:left;background-color:#fff}
 ul{margin-top:0;margin-bottom:1rem}
-b{font-weight:bolder}
 a{color:#f3436c;text-decoration:none;background-color:transparent}
 svg{overflow:hidden;vertical-align:middle}
 button{border-radius:0;margin:0;font-family:inherit;font-size:inherit;line-height:inherit;overflow:visible;text-transform:none}
 [type=button],button{-webkit-appearance:button}
-[type=button]::-moz-focus-inner,button::-moz-focus-inner{padding:0;border-style:none}
-::-webkit-file-upload-button{font:inherit;-webkit-appearance:button}
 .h4{margin-bottom:.625em;font-weight:700;line-height:1.25;font-size:1em}
 .container{width:100%;padding-right:7.5px;padding-left:7.5px;margin-right:auto;margin-left:auto}
 @media (min-width:375px){
@@ -73,10 +70,8 @@ button{border-radius:0;margin:0;font-family:inherit;font-size:inherit;line-heigh
 .nav-link.sni__cart{font-size:1.25em;flex-basis:20%}
 .nav-link.sni__cart:before{font-size:1.25em;margin-right:.1875em}
 }
-.navbar-brand:before{font-size:1.7em}
 @media (min-width:1260px){
 .container{max-width:1200px}
-.navbar-brand:before{font-size:2.05em}
 }
 @media (min-width:992px){
 .navbar-expand-lg .navbar-nav{flex-basis:40%}
