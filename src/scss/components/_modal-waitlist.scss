@@ -1,0 +1,29 @@
+.waitlist-modal {
+  .close {
+    font-size: $font-size-xs;
+    color: $sh-purple;
+    opacity: 1;
+
+    &:hover {
+      color: $sh-purple;
+    }
+  }
+
+  .masking-select {
+    color: $custom-select-color;
+    padding: $custom-select-padding-y ($custom-select-padding-x + $custom-select-indicator-padding) $custom-select-padding-y $custom-select-padding-x/1.5;
+    border: $custom-select-border-width solid $custom-select-border-color;
+    background: $custom-select-bg $custom-select-background-mask;
+    width: calc(100% - #{$grid-gutter-width});
+
+    &.selected {
+      color: $custom-select-color;
+    }
+
+    @include box-shadow($custom-select-box-shadow);
+
+    @include media-breakpoint-up('lg') {
+      width: calc(100% - #{$grid-gutter-width-lg});
+    }
+  }
+}

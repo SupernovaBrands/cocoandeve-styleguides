@@ -1,5 +1,7 @@
 // Light pink background color
 @include bg-variant(".bg-primary-light", $primary-light, true);
+@include bg-variant(".bg-secondary-light", $secondary-light, true);
+@include bg-variant(".bg-yellow-light", $yellow-light, true);
 
 // Grey 100 background color
 @include bg-variant(".bg-gray-100", $gray-100, true);
@@ -53,7 +55,11 @@
 }
 
 @include media-breakpoint-up(lg) {
-	.position-lg-sticky { 
+	.position-lg-sticky {
 		position: sticky !important;
 	}
+}
+
+.opacity-0 {
+	opacity: 0;
 }
