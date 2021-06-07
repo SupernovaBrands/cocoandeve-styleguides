@@ -338,7 +338,6 @@ $(document).ready(function () {
 	});
 
 	// stockist
-
 	if ($('.stockist').length > 0) {
 		const stockistPlace = $('.stockist__select').val();
 		$(`.stockist figure[data-toggle="${stockistPlace}"]`).removeClass('d-none');
@@ -410,7 +409,6 @@ $(document).ready(function () {
 	}
 
 	// custom checkbox
-
 	if ($('.custom-checkbox')) {
 		$('.custom-checkbox').on('click', function () {
 			$(this).toggleClass('sni__check').toggleClass('checked');
@@ -423,7 +421,6 @@ $(document).ready(function () {
 	}
 
 	// sweepstakes page
-
 	if ($('.sweepstakes').length > 0) {
 		$('#sweepstakes__form').on('submit', function () {
 			const el = $(this);
@@ -457,6 +454,7 @@ $(document).ready(function () {
 			$('.sweepstakes__thank-you').removeClass('d-none');
 			$(this).addClass('d-none');
 			return false;
+			// proceed ajax call to bluecore
 		});
 
 		$('.sweepstakes select').on('change', function () {
