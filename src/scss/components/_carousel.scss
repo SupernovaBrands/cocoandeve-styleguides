@@ -156,6 +156,12 @@
 		}
 	}
 
+  &--body {
+    .active {
+      background-color: $body-color;
+    }
+  }
+
 	&--right {
 		justify-content: flex-end;
 		li {
