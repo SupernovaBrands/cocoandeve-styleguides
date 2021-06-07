@@ -32,6 +32,11 @@ if (carouselLoop.length > 0) {
 	import(/* webpackChunkName: 'carousel-loop' */ '~mod/carousel-loop');
 }
 
+const modalWaitlist = $('#productWaitlist');
+if (modalWaitlist.length > 0) {
+	import(/* webpackChunkName: 'modal-waitlist' */ '~mod/modal-waitlist');
+}
+
 const variantSwatch = $('.product-card');
 if (variantSwatch.length > 0) {
 	import(/* webpackChunkName: 'carousel-loop' */ '~mod/product-card');
@@ -110,6 +115,7 @@ $(document).ready(function () {
 
 	// video modal
 	// Gets the video src from the data-src on each button
+
 	let $videoSrc;
 	if ($('.video-card').length > 0) {
 		$('.video-card picture').on('click', function () {
@@ -141,6 +147,7 @@ $(document).ready(function () {
 
 	$('#videoCardModal').on('shown.bs.modal', function () {
 		// set the video src to autoplay and not to show related video.
+
 		if ($videoSrc.includes('.mp4')) {
 			toggleiFrameVideo($(this).find('iframe'), false);
 			toggleHTMLVideo($(this).find('video'), true, $videoSrc);
@@ -151,6 +158,7 @@ $(document).ready(function () {
 	});
 
 	// stop playing the youtube video when I close the modal
+
 	$('#videoCardModal').on('hide.bs.modal', function () {
 		toggleHTMLVideo($(this).find('video'), false);
 		toggleiFrameVideo($(this).find('iframe'), false);
@@ -258,6 +266,7 @@ $(document).ready(function () {
 	}
 
 	// mobile menu toggle
+
 	function mobileMenuToggler() {
 		$('.mobile-nav').toggleClass('show');
 		$('body').toggleClass('offcanvas-active');
@@ -375,6 +384,7 @@ $(document).ready(function () {
 	}
 
 	// Article Proggress Bar
+
 	const proggreeBar = $('.reading-proggress-bar');
 	if (proggreeBar.length) {
 		const { body, documentElement: html } = document;
@@ -390,7 +400,6 @@ $(document).ready(function () {
 		const setProgress = () => {
 			const scrollFromTop = (html.scrollTop || body.scrollTop) + html.clientHeight;
 			const width = `${(scrollFromTop / height) * 100}%`;
-			console.log(width);
 			proggreeBar.find('.reading-proggress-bar__proggress').css('width', width);
 		};
 
@@ -403,6 +412,11 @@ $(document).ready(function () {
 	if ($('.custom-checkbox')) {
 		$('.custom-checkbox').on('click', function () {
 			$(this).toggleClass('sni__check').toggleClass('checked');
+			if ($(this).hasClass('checked')) {
+				$('.custom-checkbox input[type="checkbox"]').prop('checked', true);
+			} else {
+				$('.custom-checkbox input[type="checkbox"]').prop('checked', false);
+			}
 		});
 	}
 
