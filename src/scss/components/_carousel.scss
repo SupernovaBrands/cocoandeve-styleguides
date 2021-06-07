@@ -256,6 +256,9 @@
 .product-image-carousel__indicator {
   .carousel-indicator {
     font-size: calc-em(27);
+		&:disabled {
+			opacity: 0;
+		}
   }
 
   @include media-breakpoint-up(lg) {

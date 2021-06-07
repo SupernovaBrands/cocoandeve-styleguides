@@ -2,20 +2,6 @@ $grid-column-width-lg: minmax(0, (map-get($container-max-widths, lg) - $grid-gut
 $grid-column-width-xl: minmax(0, (map-get($container-max-widths, xl) - $grid-gutter-width-lg * $grid-columns) / $grid-columns);
 
 .product-banner {
-	&__tan &__text {
-		background: $sh-orange-light;
-	}
-	&__hair &__text {
-		background: $primary-light;
-	}
-	&__body &__text {
-		background: $bali-bod-blue;
-		color: #fff;
-	}
-	&__body-2 &__text {
-		background: $sh-purple-light;
-	}
-
 	&__text {
 		padding-left: $grid-gutter-width;
 		padding-right: $grid-gutter-width;

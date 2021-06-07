@@ -1,5 +1,8 @@
 // Light pink background color
 @include bg-variant(".bg-primary-light", $primary-light, true);
+@include bg-variant(".bg-blue", $bali-bod-blue, true);
+@include bg-variant(".bg-orange-light", $sh-orange-light, true);
+@include bg-variant(".bg-purple-light", $sh-purple-light, true);
 
 // Sticky sidebar at bottom
 .sticky-bottom {
@@ -50,7 +53,7 @@
 }
 
 @include media-breakpoint-up(lg) {
-	.position-lg-sticky { 
+	.position-lg-sticky {
 		position: sticky !important;
 	}
 }

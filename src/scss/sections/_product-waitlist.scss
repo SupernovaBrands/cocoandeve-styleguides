@@ -459,11 +459,6 @@
 		border-radius: 20px;
 
 		@include media-breakpoint-down(md) {
-			.input-group .form-control,
-			.input-group .btn {
-				border-radius: $border-radius;
-			}
-
 			.btn {
 				width: 100%;
 				margin-top: map-get($spacers, 1);
@@ -473,11 +468,9 @@
 		@include media-breakpoint-up(lg) {
 			.input-group {
 				background: $white;
-				border-radius: $border-radius-lg;
 			}
 			.form-control {
 				border: 0;
-				border-radius: $border-radius-lg;
 			}
 		}
 	}

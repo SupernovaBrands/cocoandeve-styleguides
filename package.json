@@ -10,6 +10,7 @@
     "watch": "gulp watch",
     "critical": "gulp extractCriticalCss",
     "lint": "eslint .",
+    "prepare": "husky install",
     "server": "gulp server"
   },
   "repository": {
