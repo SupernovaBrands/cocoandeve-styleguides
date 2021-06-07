@@ -1,8 +1,8 @@
 $supernova-icon-font: "supernova-icon";
 
-$supernova-icon-asset: url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?60e3e52c0b3341076dfae11317f990f0") format("woff2"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff?60e3e52c0b3341076dfae11317f990f0") format("woff"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.svg?60e3e52c0b3341076dfae11317f990f0#supernova-icon") format("svg") !default;
+$supernova-icon-asset: url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?79db775d8821fbc4890ff2d93042cec0") format("woff2"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.woff?79db775d8821fbc4890ff2d93042cec0") format("woff"),
+url("/cocoandeve-styleguides/fonts/supernova-icon.svg?79db775d8821fbc4890ff2d93042cec0#supernova-icon") format("svg") !default;
 
 @font-face {
 	font-family: $supernova-icon-font;
@@ -79,10 +79,8 @@ $supernova-icon-map: (
 	"twitter-square": "\f131",
 	"vegan": "\f132",
 	"vip-card": "\f133",
-	"wave-fix": "\f134",
-	"wave": "\f135",
-	"winner-award": "\f136",
-	"youtube": "\f137",
+	"winner-award": "\f134",
+	"youtube": "\f135",
 );
 
 .sni.sni__account:before,
@@ -288,14 +286,6 @@ $supernova-icon-map: (
 .sni.sni__vip-card:before,
 .sni-after.sni__vip-card:after {
 	content: map-get($supernova-icon-map, "vip-card");
-}
-.sni.sni__wave-fix:before,
-.sni-after.sni__wave-fix:after {
-	content: map-get($supernova-icon-map, "wave-fix");
-}
-.sni.sni__wave:before,
-.sni-after.sni__wave:after {
-	content: map-get($supernova-icon-map, "wave");
 }
 .sni.sni__winner-award:before,
 .sni-after.sni__winner-award:after {
