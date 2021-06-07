@@ -1,0 +1,20 @@
+.affiliate__benefits {
+
+  .sni-after {
+    //circle box
+    &:before {
+      background-color: $secondary-light;
+      content: '';
+      width: calc-em(100, 16);
+      height: calc-em(100, 16);
+      border-radius: 100%;
+    }
+
+    &:after {
+      font-size: calc-em(54, 16);
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
