@@ -20,7 +20,6 @@
       color: $custom-select-color;
     }
 
-    @include border-radius($custom-select-border-radius, 0);
     @include box-shadow($custom-select-box-shadow);
 
     @include media-breakpoint-up('lg') {
