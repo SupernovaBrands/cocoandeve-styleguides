@@ -1,3 +1,5 @@
+@font-face{font-family:sofia-pro;src:url(https://use.typekit.net/af/30420e/00000000000000003b9b1a9e/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff2");font-display:swap;font-style:normal;font-weight:700}
+@font-face{font-family:sofia-pro;src:url(https://use.typekit.net/af/5855b2/00000000000000003b9b1a98/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff2");font-display:swap;font-style:normal;font-weight:400}
 header,nav{display:block}
 svg{overflow:hidden;vertical-align:middle}
 button{font-family:inherit;font-size:inherit;line-height:inherit;text-transform:none}
