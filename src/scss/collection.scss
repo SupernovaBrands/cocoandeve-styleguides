@@ -1,6 +1,5 @@
 @import 'core/functions';
 @import 'core/vars';
-@import 'mixins/carousel';
 
 @import 'bootstrap/bootstrap';
 
@@ -12,14 +11,9 @@
 @import 'components/icons';
 @import 'components/buttons';
 @import 'components/forms';
-@import 'components/video-card';
 @import 'components/hr';
-@import 'components/breadcrumb';
 @import 'components/social-icons';
-@import 'components/carousel';
-@import 'components/product-image-carousel';
 @import 'components/product-variant';
-@import 'components/list';
 @import 'components/nav';
 @import 'components/dropdown';
 @import 'components/swatch';
@@ -32,31 +26,15 @@
 @import 'components/accordion';
 @import 'components/tooltip';
 @import 'components/announcement-bar';
-@import 'components/article-proggress-bar';
 
 @import 'compounds/cart-bubble';
-@import 'compounds/upsell';
-@import 'compounds/post-card';
 @import 'compounds/image-with-text';
-@import 'compounds/result-card';
 @import 'compounds/product-card';
 
 @import 'sections/header';
 @import 'sections/cart-drawer';
-@import 'sections/howto';
 @import 'sections/modal-email';
 @import 'sections/product-waitlist';
 @import 'sections/footer';
-@import 'sections/sidebar';
-@import 'sections/playground';
-@import 'sections/testimonials';
-@import 'sections/instagram';
-@import 'sections/testimonials-carousel';
 
-@import 'templates/product';
-@import 'templates/blog';
-@import 'templates/stockist';
 @import 'templates/collection';
-@import 'templates/our-story';
-@import 'templates/sweepstakes';
-@import 'templates/real-result';
