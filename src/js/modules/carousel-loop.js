@@ -12,7 +12,7 @@ $(document).ready(function () {
 
 			// handling fix index for carousel when carousel-inner has elements with d-none
 			if (totalItems < idx) {
-				idx -= $('.carousel-inner .d-none').length;
+				idx -= $(this).find('.carousel-inner .d-none').length;
 			}
 
 			if (screenLG > window.innerWidth) {
