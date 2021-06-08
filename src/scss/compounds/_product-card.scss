@@ -20,6 +20,10 @@
     visibility: visible;
     opacity: 1;
   }
+
+  .btn-choose:focus {
+    box-shadow: none;
+  }
 }
 
 .variant-swatch {
