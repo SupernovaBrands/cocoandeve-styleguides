@@ -324,6 +324,17 @@ $(document).ready(function () {
 		}
 	});
 
+  $('.nav-item--mega-menu').hover(
+    function() {
+      $('.mega-menu', this).not('.in .mega-menu').stop(true, true).slideDown(150);
+      $(this).toggleClass('open');
+    },
+    function() {
+      $('.mega-menu', this).not('.in .mega-menu').stop(true, true).slideUp(150);
+      $(this).toggleClass('open');
+    }
+  );
+
 	// Cart drawer
 	$('.manual-gwp__item .btn').on('click', function () {
 		if ($(this).hasClass('btn-primary')) {
