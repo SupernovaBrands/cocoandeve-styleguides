@@ -20,16 +20,17 @@
         border-width: 0 calc-em(11) calc-em(11) calc-em(11);
         border-color: transparent transparent $primary transparent;
         top: 0;
-        right: calc-em(10, 16);
+        right: calc-em(15, 16);
         transform: translateY(-90%);
     }
 
-    &:after {
+    .sni {
         position: absolute;
-        right: calc-em(10, 20);
+        right: calc-em(15, 20);
         top: 50%;
         transform: translateY(-50%);
-        font-size: calc-em(24);
+        font-size: calc-em(19);
+		cursor: pointer;
     }
 
     &.show {
