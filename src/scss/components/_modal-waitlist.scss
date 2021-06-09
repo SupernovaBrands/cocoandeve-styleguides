@@ -11,7 +11,7 @@
 
   .masking-select {
     color: $custom-select-color;
-    padding: $custom-select-padding-y ($custom-select-padding-x + $custom-select-indicator-padding) $custom-select-padding-y $custom-select-padding-x/1.5;
+    padding: $custom-select-padding-y ($custom-select-padding-x + $custom-select-indicator-padding) $custom-select-padding-y $custom-select-padding-x/2;
     border: $custom-select-border-width solid $custom-select-border-color;
     background: $custom-select-bg $custom-select-background-mask;
     width: calc(100% - #{$grid-gutter-width});
@@ -24,6 +24,20 @@
 
     @include media-breakpoint-up('lg') {
       width: calc(100% - #{$grid-gutter-width-lg});
+    }
+  }
+
+  .modal-content {
+    max-width: calc(100% - #{$grid-gutter-width});
+    @include media-breakpoint-up('lg') {
+      width: 100%;
+    }
+  }
+
+  .text-danger {
+    top: -#{$grid-gutter-width/2};
+    @include media-breakpoint-up('lg') {
+      top: -#{$grid-gutter-width-lg/2};
     }
   }
 }
