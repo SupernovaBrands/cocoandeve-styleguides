@@ -8,6 +8,7 @@
 	background-color: #f6e4ef;
 	img {
 		width: 100%;
+		object-fit: contain;
 
 		@include media-breakpoint-up(lg) {
 			width: auto;
@@ -19,6 +20,10 @@
 			position: absolute;
 		}
 	}
+}
+
+.page-award-slider {
+	background-color: #f9eeca;
 }
 
 .page-award-slider {

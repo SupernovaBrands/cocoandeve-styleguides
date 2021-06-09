@@ -24,12 +24,12 @@
 	.carousel-control-prev {
 		&:before,
 		.sni {
-			margin-top: -7em;
-			margin-right: -2em;
+			top: 4.5em;
+			left: 1em;
 
 			@include media-breakpoint-up(lg) {
-				margin-right: -7em;
-				margin-top: -4.5em;
+				left: 6em;
+				top: 12em;
 			}
 		}
 	}
@@ -37,21 +37,23 @@
 	.carousel-control-next {
 		&:before,
 		.sni {
-			margin-top: -7em;
-			margin-left: -2em;
+			top: 4.5em;
+			right: 1em;
 
 			@include media-breakpoint-up(lg) {
-				margin-left: -7em;
-				margin-top: -4.5em;
+				right: 6em;
+				top: 12em;
 			}
 		}
 	}
 
 	.carousel-inner {
 		transform: translateX(-25%);
+		min-height: 19em;
 
 		@include media-breakpoint-up(lg) {
 			transform: translateX(0);
+			min-height: 30em;
 		}
 	}
 }

@@ -1,65 +1,85 @@
 footer {
-  background-color: $secondary;
-  color: $white;
+	background-color: $secondary;
+	color: $white;
 
-  a {
-    color: $white;
+	a {
+		color: $white;
 
-    &:hover {
-      color: $white;
-      text-decoration: underline;
-    }
-  }
+		&:hover {
+			color: $white;
+			text-decoration: underline;
+		}
+	}
 
-  .sni {
-    &:hover {
-      text-decoration: none;
-    }
-  }
+	.sni {
+		&:hover {
+			text-decoration: none;
+		}
+	}
 
-  hr {
-    border-color: $white;
-  }
+	hr {
+		border-color: $white;
+	}
 }
 
 .footer-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto auto auto;
-  grid-template-areas: "newsletter newsletter"
-      "aboutus helplinks"
-      "support followus"
-      "currency item";
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto auto auto auto;
+	grid-template-areas: "newsletter newsletter"
+			"aboutus helplinks"
+			"support followus"
+			"currency item";
 
-  @include media-breakpoint-up(lg) {
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    grid-template-rows: auto auto;
-    grid-template-areas: "newsletter aboutus helplinks support"
-        "newsletter followus currency item";
-    grid-column-gap: $grid-gutter-width-lg;
-  }
+	@include media-breakpoint-up(lg) {
+		grid-template-columns: 2fr 1fr 1fr 1fr;
+		grid-template-rows: auto auto;
+		grid-template-areas: "newsletter aboutus helplinks support"
+				"newsletter followus currency item";
+		grid-column-gap: $grid-gutter-width-lg;
+	}
 
-  &__newsletter {
-    grid-area: newsletter;
-  }
+	&__newsletter {
+		grid-area: newsletter;
+	}
 
-  &__about-us {
-    grid-area: aboutus;
-  }
+	&__about-us {
+		grid-area: aboutus;
+	}
 
-  &__help-links {
-    grid-area: helplinks;
-  }
+	&__help-links {
+		grid-area: helplinks;
+	}
 
-   &__followus {
-    grid-area: followus;
-  }
+	 &__followus {
+		grid-area: followus;
+	}
 
-  &__currency {
-    grid-area: currency;
-  }
+	&__currency {
+		grid-area: currency;
+	}
 
-  &__support {
-    grid-area: support;
-  }
+	&__support {
+		grid-area: support;
+	}
+
+	.dropdown .dropdown-menu {
+		-webkit-transition: all 0.3s;
+		-moz-transition: all 0.3s;
+		-ms-transition: all 0.3s;
+		-o-transition: all 0.3s;
+		transition: all 0.3s;
+		opacity: 0;
+		height: 0;
+		top: 0;
+		bottom: 0;
+		transform: translate3d(0,0,0);
+	}
+
+	.dropdown.show .dropdown-menu {
+		opacity: 1;
+		transform: translate3d(0px, -210px, 0px) !important;
+		height: 200px;
+		top: 0;
+	}
 }
