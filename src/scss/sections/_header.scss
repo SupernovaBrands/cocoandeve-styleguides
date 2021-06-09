@@ -203,7 +203,10 @@
 }
 
 .mega-menu {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+  transition: max-height 0.15s ease-in-out, opacity .1s linear;
   left: 0;
   top: 90%;
   box-shadow: 0 calc-em(4) calc-em(5) 0 rgba(0, 0, 0, .06);
@@ -215,6 +218,12 @@
     width: 100%;
     height: $grid-gutter-width;
     transform: translateY(-50%);
+  }
+
+  .nav-item--mega-menu:hover & {
+    max-height: 100vh;
+    opacity: 1;
+    visibility: visible;
   }
 
   a {

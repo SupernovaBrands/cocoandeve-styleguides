@@ -324,15 +324,6 @@ $(document).ready(function () {
 		}
 	});
 
-	$('.nav-item--mega-menu').hover(
-		function () {
-			$('.mega-menu', this).not('.in .mega-menu').stop(true, true).slideDown(150);
-		},
-		function () {
-			$('.mega-menu', this).not('.in .mega-menu').stop(true, true).slideUp(150);
-		},
-	);
-
 	// Cart drawer
 	$('.manual-gwp__item .btn').on('click', function () {
 		if ($(this).hasClass('btn-primary')) {
