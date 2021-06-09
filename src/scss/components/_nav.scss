@@ -34,14 +34,20 @@
 	color: $secondary;
 
 	&:before {
-		font-size: calc-em(34,20);
+		font-size: calc-em(34, 20);
 		@include media-breakpoint-up(xl) {
-			font-size: calc-em(41,20);
+			font-size: calc-em(41, 20);
 		}
 	}
 
 	&:hover {
 		color: $secondary;
+	}
+
+	@include media-breakpoint-up(lg) {
+		svg {
+			height: calc-em(33, 16);
+		}
 	}
 }
 
