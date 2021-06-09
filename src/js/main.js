@@ -327,11 +327,9 @@ $(document).ready(function () {
 	$('.nav-item--mega-menu').hover(
 		function () {
 			$('.mega-menu', this).not('.in .mega-menu').stop(true, true).slideDown(150);
-			$(this).toggleClass('open');
 		},
 		function () {
 			$('.mega-menu', this).not('.in .mega-menu').stop(true, true).slideUp(150);
-			$(this).toggleClass('open');
 		},
 	);
 
