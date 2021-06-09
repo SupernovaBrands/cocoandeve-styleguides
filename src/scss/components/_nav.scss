@@ -45,6 +45,9 @@
 	}
 
 	@include media-breakpoint-up(lg) {
+		padding-top: calc-em(11.625, 16);
+		padding-bottom: calc-em(11.625, 16);
+
 		svg {
 			height: calc-em(33, 16);
 		}
