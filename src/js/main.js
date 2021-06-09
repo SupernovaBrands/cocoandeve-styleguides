@@ -463,47 +463,44 @@ $(document).ready(function () {
 		});
 	}
 
+	const filterReview = (targetId) => {
+		$('.result-card').addClass('d-none');
+		$(`.result-card[data-category="${targetId}"]`).not('.result-card__more').removeClass('d-none');
+		if (targetId === '#all') {
+			$('.result-card').removeClass('d-none');
+		}
+	};
 
-  //real result page
-  if ($('.real-result').length > 0) {
-    function filterReview(targetId) {
-      $('.result-card').addClass('d-none');
-      $('.result-card[data-category="'+targetId+'"]').not('.result-card__more').removeClass('d-none');
-      if (targetId == '#all') {
-        $('.result-card').removeClass('d-none');
-      }
-    }
+	if ($('.real-result').length > 0) {
+		// review filter
+		$('#real-result__main-tab li').on('click', function () {
+			filterReview($(this).find('a').attr('href'));
+		});
 
-    //review filter
-    $('#real-result__main-tab li').on('click', function(){
-      filterReview($(this).find('a').attr('href'));
-    });
+		$('#real-result__select').on('change', function () {
+			filterReview($(this).val());
+		});
 
-    $('#real-result__select').on('change', function(){
-      filterReview($(this).val());
-    });
+		$('#real-result__show-more').on('click', function (e) {
+			e.preventDefault();
+			const loadMoreItem = $(this).data('load-more');
+			let filterVal = $('#real-result__select').val();
 
-    $('#real-result__show-more').on('click', function(e){
-      e.preventDefault();
-      const loadMoreItem = $(this).data('load-more');
-      let filterVal = $('#real-result__select').val();
+			if (window.innerWidth > screenLG) {
+				filterVal = $('#real-result__main-tab .active').attr('href');
+			}
 
-      if (window.innerWidth > screenLG) {
-        filterVal = $('#real-result__main-tab .active').attr('href');
-      }
+			let loadMoreElem = $(`.result-card.result-card__more.d-none[data-category="${filterVal}"]`);
+			if (filterVal === '#all') {
+				loadMoreElem = $('.result-card.result-card__more.d-none');
+			}
 
-      let loadMoreElem = $('.result-card.result-card__more.d-none[data-category="'+filterVal+'"]');
-      if (filterVal == '#all') {
-        loadMoreElem = $('.result-card.result-card__more.d-none');
-      }
-
-      if (loadMoreElem.length > 0) {
-        loadMoreElem.each(function(k, v){
-          $(v).removeClass('result-card__more').removeClass('d-none');
-          if ((k + 1) == loadMoreItem) return false;
-        });
-      }
-
-    });
-  }
+			if (loadMoreElem.length > 0) {
+				loadMoreElem.each(function (k, v) {
+					if ((k + 1) === loadMoreItem) return false;
+					return $(v).removeClass('result-card__more').removeClass('d-none');
+				});
+			}
+		});
+	}
 });
