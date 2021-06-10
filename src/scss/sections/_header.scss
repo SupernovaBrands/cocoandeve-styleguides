@@ -234,3 +234,17 @@
     }
   }
 }
+
+.cookies-banner-show {
+  .main-header,
+  .mobile-nav {
+    margin-top: $font-size-xs * 8;
+  }
+
+  &--expanded {
+    .main-header,
+    .mobile-nav {
+      margin-top: $font-size-xs * 25;
+    }
+  }
+}
