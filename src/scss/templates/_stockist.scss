@@ -11,4 +11,14 @@
             color: $primary;
         }
     }
+
+    hr {
+        border-color: $gray-400;
+    }
+
+    img {
+        @include media-breakpoint-down(md) {
+            width: 100%;
+        }
+    }
 }
