@@ -1,0 +1,11 @@
+.cookies-banner {
+  z-index: $zindex-fixed;
+}
+
+.cookies-banner-show {
+  margin-top: $font-size-xs * 8;
+
+  &--expanded {
+    margin-top: $font-size-xs * 25;
+  }
+}

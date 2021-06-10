@@ -47,6 +47,11 @@ if (realResults.length > 0) {
 	import(/* webpackChunkName: 'carousel-loop' */ '~mod/real-results');
 }
 
+const cookieBanner = $('.cookies-banner');
+if (cookieBanner.length > 0) {
+	import(/* webpackChunkName: 'carousel-loop' */ '~mod/cookies-banner.js');
+}
+
 if ($('body').hasClass('template-product')) {
 	import(/* webpackChunkName: 'products' */ '~mod/products');
 }
@@ -282,36 +287,57 @@ $(document).ready(function () {
 	});
 
 	// header navbar detect scroll top or down
-	let lastScrollTop; let
-		scrollTop = 0;
+	let lastScrollTop;
+	let scrollTop = 0;
 	const navbarEl = $('.main-header');
 	const announceBar = $('.announcement-bar');
 	const navbarHeight = navbarEl.height();
+	const cookiesBanner = $('.cookies-banner');
 
 	const productSwatchMobile = $('.product-swatch-mobile');
 	const productSwatchTrigger = $('.product-swatch-mobile__trigger');
 
+	if (cookiesBanner.find('.collapse:not(.show)').length > 0) {
+		$('.main-header .mobile-nav').addClass('cookies-banner-show');
+	}
+
 	$(window).on('scroll', function () {
-		navbarEl.addClass('position-fixed');
 		scrollTop = $(this).scrollTop();
-		if (scrollTop < lastScrollTop) {
-			navbarEl.removeClass('scrolled-down').addClass('scrolled-up');
+
+		if ($('.cookies-banner:not(.d-none)').length > 0) {
 			if (scrollTop <= 0) {
-				// remove scrolled up for mobile menu show properly
+				cookiesBanner.removeClass('fixed-top');
+			} else {
+				cookiesBanner.addClass('fixed-top');
+			}
+
+			if (cookiesBanner.find('.collapse:not(.show)').length > 0) {
+				$('.main-header .mobile-nav').addClass('cookies-banner-show');
+			} else if (cookiesBanner.find('.collapse.show').length > 0) {
+				$('.main-header .mobile-nav').addClass('cookies-banner-show--expanded');
+			}
+		} else {
+			navbarEl.addClass('position-fixed');
+			if (scrollTop < lastScrollTop) {
+				navbarEl.removeClass('scrolled-down').addClass('scrolled-up');
+				if (scrollTop <= 0) {
+					// remove scrolled up for mobile menu show properly
+					navbarEl.removeClass('position-fixed').removeClass('scrolled-up');
+					if (announceBar.length > 0) {
+						announceBar.removeClass('d-none');
+					}
+				}
+			} else if (scrollTop <= 0) {
+				// safari fix bounce effect
 				navbarEl.removeClass('position-fixed').removeClass('scrolled-up');
-				if (announceBar.length > 0) {
-					announceBar.removeClass('d-none');
+			} else {
+				navbarEl.removeClass('scrolled-up').addClass('scrolled-down');
+				if (announceBar.length > 0 && scrollTop > navbarHeight) {
+					announceBar.addClass('d-none');
 				}
 			}
-		} else if (scrollTop <= 0) {
-			// safari fix bounce effect
-			navbarEl.removeClass('position-fixed').removeClass('scrolled-up');
-		} else {
-			navbarEl.removeClass('scrolled-up').addClass('scrolled-down');
-			if (announceBar.length > 0 && scrollTop > navbarHeight) {
-				announceBar.addClass('d-none');
-			}
 		}
+
 		lastScrollTop = scrollTop;
 
 		if (window.innerWidth < screenLG && productSwatchTrigger.length > 0) {
