@@ -18,6 +18,16 @@ eval("/* global screenLG */\n$(document).ready(function () {\n  if ($('.carousel
 
 /***/ }),
 
+/***/ "./src/js/modules/cookies-banner.js":
+/*!******************************************!*\
+  !*** ./src/js/modules/cookies-banner.js ***!
+  \******************************************/
+/***/ (() => {
+
+eval("$(document).ready(function () {\n  $('.cookies-banner #collapseCookieBanner').on('show.bs.collapse', function () {\n    var parentEl = $('.cookies-banner');\n    parentEl.find('[data-toggle=\"collapse\"]').addClass('d-none');\n    parentEl.find('.use-default').removeClass('d-none');\n    $('body').addClass('cookies-banner-show--expanded');\n  });\n  $('.cookies-banner .use-default').click(function () {\n    var parentEl = $('.cookies-banner');\n    parentEl.find('#ads').prop('checked', true);\n    parentEl.find('#performance').prop('checked', true);\n    parentEl.addClass('d-none');\n    $('body').removeClass('cookies-banner-show cookies-banner-show--expanded');\n  });\n  $('.cookies-banner .accept-cookie').click(function () {\n    $('.cookies-banner').addClass('d-none');\n    $('body').removeClass('cookies-banner-show cookies-banner-show--expanded');\n  });\n  setTimeout(function () {\n    $('.cookies-banner').removeClass('d-none');\n    $('body').addClass('cookies-banner-show');\n  }, 2000); // same with shopify theme showing banner after 2 seconds\n});\n\n//# sourceURL=webpack://cocoandeve-styleguides/./src/js/modules/cookies-banner.js?");
+
+/***/ }),
+
 /***/ "./src/js/modules/product-card.js":
 /*!****************************************!*\
   !*** ./src/js/modules/product-card.js ***!
