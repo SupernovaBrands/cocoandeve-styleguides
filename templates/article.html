@@ -237,11 +237,11 @@
 	</header>
 	
 	<div class="modal fade cart-drawer" id="cart-drawer" tabindex="-1" aria-hidden="true"></div>
+  <div class="reading-proggress-bar position-fixed no-gutters__in-container w-100">
+    <div class="reading-proggress-bar__proggress"></div>
+  </div>
 	<div class="mobile-wrapper">
 		<div class="container mt-4">
-			<div class="reading-proggress-bar position-fixed d-lg-none no-gutters__in-container w-100">
-				<div class="reading-proggress-bar__proggress"></div>
-			</div>
 			<div class="text-center nav-blog nav-blog--pink nav-blog--sticky d-lg-none no-gutters__in-container w-100 position-fixed p-2">
 				<ul class="nav justify-content-center align-items-center">
 					<li class="nav-item">
@@ -555,7 +555,7 @@
 							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							US (USD)
 						</a>
-						<div class="dropdown-menu p-0" aria-labelledby="dropdownMenuLink">
+						<div class="dropdown-menu p-0 d-block overflow-hidden" aria-labelledby="dropdownMenuLink">
 							<a class="dropdown-item pt-1 pb-1 active" href="#">United Kingdom (GBP)</a>
 							<a class="dropdown-item pt-1 pb-1" href="#">USA (USD)</a>
 							<a class="dropdown-item pt-1 pb-1" href="#">Canada (CAD)</a>
@@ -571,7 +571,7 @@
 		</div>
 	</footer>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="/cocoandeve-styleguides/js/bootstrap.js"></script>
 	<script src="/cocoandeve-styleguides/js/main.js"></script>
 </body>
