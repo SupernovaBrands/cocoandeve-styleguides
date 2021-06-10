@@ -463,12 +463,26 @@ $(document).ready(function () {
 		});
 	}
 
+    const countReviewCard = (categoryId) => {
+        let cardRemaining = $(`.result-card.result-card__more.d-none[data-category="${categoryId}"]`);
+        if (categoryId === '#all') {
+            cardRemaining = $('.result-card.result-card__more.d-none');
+        }
+
+        return cardRemaining.length;
+    }
+
 	const filterReview = (targetId) => {
 		$('.result-card').addClass('d-none');
 		$(`.result-card[data-category="${targetId}"]`).not('.result-card__more').removeClass('d-none');
 		if (targetId === '#all') {
-			$('.result-card').removeClass('d-none');
+			$('.result-card').not('.result-card__more').removeClass('d-none');
 		}
+
+        const cardRemaining = countReviewCard(targetId);
+        if (cardRemaining > 0) {
+            $('#real-result__show-more').removeClass('d-none');
+        }
 	};
 
 	if ($('.real-result').length > 0) {
@@ -501,6 +515,11 @@ $(document).ready(function () {
 					return $(v).removeClass('result-card__more').removeClass('d-none');
 				});
 			}
+
+      const cardRemaining = countReviewCard(filterVal);
+      if (cardRemaining <= 0) {
+        $(this).addClass('d-none');
+      }
 		});
 	}
 });
