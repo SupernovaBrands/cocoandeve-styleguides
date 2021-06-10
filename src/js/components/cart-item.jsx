@@ -76,7 +76,7 @@ export default class CartItem extends React.Component {
 									{editingVariant && (
 										<>
 											<span className="mx-1">-</span>
-											<button type="button" className="btn btn-link p-0 border-0" onClick={this.onChangeVariant}>Update</button>
+											<button type="button" className="btn btn-link p-0 border-0 mr-3" onClick={this.onChangeVariant}>Update</button>
 										</>
 									)}
 								</p>
@@ -86,7 +86,7 @@ export default class CartItem extends React.Component {
 								{showVariantOptions && this.state.variantOptions.map((option) => (
 									<button
 										key={option.id}
-										className={`swatch mr-2 ${option.variantHandle} ${option.id === this.state.selectedVariant.id && 'border-primary'}`}
+										className={`swatch mr-1 ${option.variantHandle} ${option.id === this.state.selectedVariant.id && 'border-primary'}`}
 										type="button"
 										tabIndex="-1"
 										disabled={!option.available}
