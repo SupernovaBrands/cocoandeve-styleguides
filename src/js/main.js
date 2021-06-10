@@ -297,25 +297,23 @@ $(document).ready(function () {
 	const productSwatchMobile = $('.product-swatch-mobile');
 	const productSwatchTrigger = $('.product-swatch-mobile__trigger');
 
-	if (cookiesBanner.find('.collapse:not(.show)').length > 0) {
-		$('.main-header .mobile-nav').addClass('cookies-banner-show');
-	}
-
 	$(window).on('scroll', function () {
 		scrollTop = $(this).scrollTop();
 
 		if ($('.cookies-banner:not(.d-none)').length > 0) {
-			if (scrollTop <= 0) {
-				cookiesBanner.removeClass('fixed-top');
-			} else {
-				cookiesBanner.addClass('fixed-top');
-			}
+			// if (scrollTop <= 50) {
+			// 	cookiesBanner.removeClass('fixed-top');
+			// } else {
+			// 	cookiesBanner.addClass('fixed-top');
+			// }
 
 			if (cookiesBanner.find('.collapse:not(.show)').length > 0) {
-				$('.main-header .mobile-nav').addClass('cookies-banner-show');
+				$('body').addClass('cookies-banner-show');
 			} else if (cookiesBanner.find('.collapse.show').length > 0) {
-				$('.main-header .mobile-nav').addClass('cookies-banner-show--expanded');
+				$('body').addClass('cookies-banner-show--expanded');
 			}
+			navbarEl.removeClass('position-fixed').removeClass('scrolled-up').removeClass('scrolled-down');
+			announceBar.removeClass('d-none');
 		} else {
 			navbarEl.addClass('position-fixed');
 			if (scrollTop < lastScrollTop) {
