@@ -3,4 +3,8 @@
         border-color: $primary;
         border-width: calc-em(2, 16);
     }
+
+		&--gray-400 {
+				border-color: $gray-400;
+		}
 }
