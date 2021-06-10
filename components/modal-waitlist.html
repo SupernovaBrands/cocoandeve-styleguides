@@ -15,7 +15,7 @@
     <button class="btn btn-primary" data-toggle="modal" data-target="#productWaitlist">Open Modal</button>
     <div class="modal fade" id="productWaitlist" tabindex="-1" role="dialog" aria-labelledby="productWaitlist" aria-hidden="true">
       <div class="modal-dialog modal-lg modal-dialog-centered waitlist-modal" role="document">
-        <div class="modal-content text-center bg-secondary-light text-secondary">
+        <div class="modal-content text-center bg-secondary-light text-secondary mx-auto">
           <div class="modal-header d-flex align-items-center flex-column border-bottom-0">
             <button type="button" class="close sni sni__close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true"></span>
@@ -24,17 +24,18 @@
             <p class="mb-0">Be the first to get the new Coco &amp; Pooch drop alert. Be quick, it will sell out fast!</p>
           </div>
           <div class="modal-body pt-0">
-            <form data-pdp="false" data-product-id="product-id">
+            <form data-pdp="false" data-product-id="product-id" novalidate>
               <div class="row">
                 <div class="input-group form-group col">
-                  <input class="form-control" type="email" placeholder="Enter your email">
+                  <input class="form-control" type="email" name="email" placeholder="Enter your email">
                 </div>
+                <small class="col-12 text-danger email-error d-none">Please enter a valid email address</small>
               </div>
               <span class="d-block mb-1 mb-lg-2">or</span>
               <div class="row">
                 <div class="input-group form-group col-4 col-lg-2">
                   <span class="masking-select position-absolute rounded">Country</span>
-                  <select class="custom-select opacity-0">
+                  <select class="custom-select opacity-0" name="country">
                     <option value="" disabled="" selected="">Country</option>
                     <option value="US" data-code="1">United States</option>
                     <option value="GB" data-code="44">United Kingdom</option>
@@ -269,19 +270,21 @@
                   </select>
                 </div>
                 <div class="input-group form-group col-8 col-lg-10 pl-0">
-                  <input class="form-control" type="text" placeholder="Enter your phone number">
+                  <input class="form-control" type="text" name="phone" placeholder="Enter your phone number">
                 </div>
+                <small class="col-12 text-danger phone-error d-none">Please enter a valid phone number</small>
               </div>
               <div class="row">
                 <div class="input-group form-group col d-flex justify-content-center">
                   <div class="custom-checkbox text-primary justify-content-center align-items-center mr-1 sni border rounded bg-white">
-                    <input type="checkbox" name="agree" class="opacity-0 position-absolute" required id="agreement"/>
+                    <input type="checkbox" name="tos" class="opacity-0 position-absolute" required id="agreement"/>
                   </div>
                   <label class="form-check-label font-size-sm text-underline" for="agreement">I agree to Privacy Policy &amp; ToS</label>
                 </div>
+                <small class="col-12 text-danger terms-error d-none">You have not agreed to the Privacy Policy & ToS</small>
               </div>
               <div class="row">
-                <div class="form-group col">
+                <div class="form-group col mt-1">
                   <button class="btn btn-lg btn-primary btn-block" type="submit">Submit form</button>
                 </div>
               </div>
