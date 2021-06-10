@@ -7,7 +7,7 @@ waitFor(() => window.yotpo !== undefined, () => {
 		$('.yotpo.bottomLine.show-avg-score').each((i, el) => {
 			const stars = $(el).find('.yotpo-stars');
 			const rating = stars.find('.sr-only').text().split(' ')[0];
-			stars.after(`<span class="font-size-sm ml-1">${rating}</span>`);
+			stars.after(`<span class="ml-1">${rating}</span>`);
 		});
 	}
 });
