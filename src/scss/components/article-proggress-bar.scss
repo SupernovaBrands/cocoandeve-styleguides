@@ -9,4 +9,9 @@
 		background-color: $secondary;
 		height: 100%;
 	}
+
+	&--sticky {
+		position: fixed !important;
+		top: 0;
+	}
 }

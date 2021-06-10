@@ -226,9 +226,18 @@ $nav-tabs-link-hover-border-color: $body-color;
 $nav-tabs-link-active-border-color: $body-color;
 
 // Spinners
+$spinner-width: 1.9rem;
+$spinner-width: 1.9rem;
 $spinner-width-sm: .9em;
 $spinner-height-sm: .9em;
 
-
 //modal
 $modal-lg: calc-em(720);
+
+// Custom switch
+$custom-switch-indicator-size-height: calc-em(42);
+$custom-switch-width: calc-em(82);
+$custom-switch-indicator-border-radius: 2em;
+$custom-control-indicator-bg: white;
+$custom-control-indicator-border-color: white;
+$custom-control-indicator-checked-disabled-bg: $gray-400;

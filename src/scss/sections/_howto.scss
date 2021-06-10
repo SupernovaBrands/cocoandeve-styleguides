@@ -15,21 +15,32 @@
 	.carousel-control-next {
 		width: 10%;
 		background-color: $primary-light;
-
-		@include media-breakpoint-up(lg) {
-			margin-top: -1.5em;
-		}
 	}
 
 	.carousel-control-prev {
 		&:before,
 		.sni {
-			margin-top: -7em;
-			margin-right: -2em;
+			top: 23%;
+			left: 60%;
+
+			@media (min-width: 576px) {
+				top: 28.5%;
+				left: 60%;
+			}
+
+			@include media-breakpoint-up(md) {
+				left: 3.5em;
+				top: 32.5%;
+			}
 
 			@include media-breakpoint-up(lg) {
-				margin-right: -7em;
-				margin-top: -4.5em;
+				left: 4.5em;
+				top: 30%;
+			}
+
+			@media (min-width: 1260px) {
+				left: 6em;
+				top: 33.5%;
 			}
 		}
 	}
@@ -37,12 +48,27 @@
 	.carousel-control-next {
 		&:before,
 		.sni {
-			margin-top: -7em;
-			margin-left: -2em;
+			top: 23%;
+			right: 60%;
+
+			@media (min-width: 576px) {
+				top: 28.5%;
+				right: 60%;
+			}
+
+			@include media-breakpoint-up(md) {
+				right: 3.5em;
+				top: 32.5%;
+			}
 
 			@include media-breakpoint-up(lg) {
-				margin-left: -7em;
-				margin-top: -4.5em;
+				right: 4.5em;
+				top: 30%;
+			}
+
+			@media (min-width: 1260px) {
+				right: 6em;
+				top: 33.5%;
 			}
 		}
 	}
@@ -52,6 +78,10 @@
 
 		@include media-breakpoint-up(lg) {
 			transform: translateX(0);
+		}
+
+		h3 {
+			min-height: 90px;
 		}
 	}
 }

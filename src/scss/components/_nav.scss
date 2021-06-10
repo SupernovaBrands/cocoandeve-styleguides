@@ -17,17 +17,17 @@
 		}
 	}
 
-  @include media-breakpoint-down(md) {
-    &.sni__cart {
-      font-size: calc-em(20, 16);
-      flex-basis: 20%;
+	@include media-breakpoint-down(md) {
+		&.sni__cart {
+			font-size: calc-em(20, 16);
+			flex-basis: 20%;
 
-      &:before {
-        font-size: calc-em(20);
-        margin-right: calc-em(3, 16);
-      }
-    }
-  }
+			&:before {
+				font-size: calc-em(20);
+				margin-right: calc-em(3, 16);
+			}
+		}
+	}
 }
 
 .navbar-brand {
@@ -99,6 +99,13 @@
 			top: 4px;
 			transform: translateY(0);
 			transition: all 0.1s ease-in-out;
+		}
+	}
+
+	a {
+		&.active,
+		&:hover {
+			text-decoration: underline;
 		}
 	}
 }

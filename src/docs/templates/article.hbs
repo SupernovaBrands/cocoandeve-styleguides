@@ -7,11 +7,11 @@
 
 <body>
 	{{> sections/header}}
+  <div class="reading-proggress-bar position-fixed no-gutters__in-container w-100">
+    <div class="reading-proggress-bar__proggress"></div>
+  </div>
 	<div class="mobile-wrapper">
 		<div class="container mt-4">
-			<div class="reading-proggress-bar position-fixed d-lg-none no-gutters__in-container w-100">
-				<div class="reading-proggress-bar__proggress"></div>
-			</div>
 			<div class="text-center nav-blog nav-blog--pink nav-blog--sticky d-lg-none no-gutters__in-container w-100 position-fixed p-2">
 				<ul class="nav justify-content-center align-items-center">
 					<li class="nav-item">
@@ -263,7 +263,7 @@
 		</div>
 	</div>
 	{{> sections/footer}}
-	{{> js jquery=true bootstrap=true main=true }}
+	{{> js jquery=true popper=true bootstrap=true main=true }}
 </body>
 
 </html>
