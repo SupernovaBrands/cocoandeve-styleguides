@@ -14,3 +14,12 @@
     height: calc-em(90);
   }
 }
+
+// colors
+.badge-purple {
+  @include badge-variant($sh-purple);
+}
+
+.badge-blue {
+  @include badge-variant($bali-bod-blue);
+}

@@ -1,0 +1,36 @@
+.testimonials-carousel {
+
+    &__quote {
+
+        &::before,
+        &::after {
+            font-family: $supernova-icon-font;
+            color: $primary;
+            opacity: .3;
+            position: absolute;
+            font-size: calc-em(32, 16);
+        }
+        
+        &::before {
+            content: "#{map-get($supernova-icon-map, "quote-down")}   ";
+            top: -$grid-gutter-width;
+            left: $grid-gutter-width-lg;
+
+            @include media-breakpoint-up(lg) {
+                top: 0;
+                transform: translateY(-50%);
+            }
+        }
+
+        &::after {
+            content: "#{map-get($supernova-icon-map, "quote-up")}   ";
+            bottom: -$grid-gutter-width;
+            right: $grid-gutter-width-lg;
+    
+            @include media-breakpoint-up(lg) {
+                bottom: 0;
+                transform: translateY(50%);
+            }
+        }
+    }
+}

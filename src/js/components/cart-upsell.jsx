@@ -55,7 +55,7 @@ export default class CartUpsell extends React.Component {
 									</em>
 								)}
 
-								<p className="my-1" dangerouslySetInnerHTML={{ __html: item.settings.bundle_ad_product_desc }} />
+								<p className="mb-1" dangerouslySetInnerHTML={{ __html: item.settings.bundle_ad_product_desc }} />
 
 								<p className="mb-1">
 									{item.comparePrice > 0 && (

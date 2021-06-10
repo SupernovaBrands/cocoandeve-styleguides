@@ -71,7 +71,7 @@ export default class CartItem extends React.Component {
 
 						{models.variantTitle && (
 							<div className="mb-1">
-								<p className="d-flex mb-1">
+								<p className="d-flex mb-1 align-items-end">
 									{`${models.variantType}: ${models.variantTitle}`}
 									{editingVariant && (
 										<>
