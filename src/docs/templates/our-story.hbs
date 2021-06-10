@@ -5,6 +5,7 @@
 	{{> html-head title="COMPONENT/COMPOUND/SECTION/TEMPLATE" }}
 </head>
 <body>
+  {{> sections/header}}
 	<section class="page-banner-image container-fluid d-flex position-relative justify-content-center align-items-center p-0">
 		<h1 class="text-center position-absolute m-1 hero-font-size">In a (coco) nutshell? We promise unBALIevably good hair and skin</h1>
 		<picture>
@@ -112,5 +113,6 @@
 			</div>
 		</div>
 	</section>
-	{{> js jquery=true bootstrap=true main=true }}
+  {{> sections/footer}}
+	{{> js jquery=true popper=true bootstrap=true main=true }}
 </body>
