@@ -4,12 +4,12 @@
 		&::before {
 			top: calc-em(40, $unit: 1rem);
 			left: calc-em(20, $unit: 1rem);
+			border-color: $gray-500;
 		}
 	}
 
 	.custom-control-input:not(:disabled):active ~ .custom-control-label::before {
 		background-color: #fff;
-		border-color: $gray-500;
 	}
 	.custom-control-input:checked:active ~ .custom-control-label::before {
 		background-color: $primary;
@@ -26,5 +26,9 @@
 
 	.custom-control-input:checked ~ .custom-control-label .product-swatch {
 		display: block;
+	}
+
+	.text-linethrough {
+		color: $gray-600;
 	}
 }

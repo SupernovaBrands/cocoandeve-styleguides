@@ -9,7 +9,7 @@ waitFor(() => window.yotpo !== undefined, () => {
 				const stars = $(el).find('.yotpo-stars');
 				if (stars.length > 0) {
 					const rating = stars.find('.sr-only').text().split(' ')[0];
-					stars.after(`<span class="mr-1 text-body">${rating}</span>`);
+					stars.after(`<span class="rating-num text-body">${rating} stars</span>`);
 					const totalReviews = $(el).find('.text-m');
 					totalReviews.text(`(${totalReviews.text().split(' ')[0]})`);
 				} else {
