@@ -24,4 +24,29 @@
 
 .page-award-slider {
 	background-color: #f9eeca;
+
+	.carousel-control-next,
+	.carousel-control-prev {
+		width: 15%;
+	}
+
+	.carousel-control-next-icon {
+		@include media-breakpoint-up(lg) {
+			margin-right: -2em;
+
+			&:before {
+				margin-left: -1.5em;
+			}
+		}
+	}
+
+	.carousel-control-prev-icon {
+		 @include media-breakpoint-up(lg) {
+			margin-left: -2em;
+
+			&:before {
+				margin-right: -1.5em;
+			}
+		}
+	}
 }
