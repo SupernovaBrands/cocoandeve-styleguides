@@ -30,21 +30,29 @@
 		width: 15%;
 	}
 
-	.carousel-control-next-icon {
+	.carousel-control-prev {
 		@include media-breakpoint-up(lg) {
-			margin-right: -2em;
+			left: -3em;
+		}
+	}
 
-			&:before {
+	.carousel-control-next {
+		@include media-breakpoint-up(lg) {
+			right: -3em;
+		}
+	}
+
+	.sni__chevron-next {
+		&:before {
+			@include media-breakpoint-up(lg) {
 				margin-left: -1.5em;
 			}
 		}
 	}
 
-	.carousel-control-prev-icon {
-		 @include media-breakpoint-up(lg) {
-			margin-left: -2em;
-
-			&:before {
+	.sni__chevron-prev {
+		&:before {
+			@include media-breakpoint-up(lg) {
 				margin-right: -1.5em;
 			}
 		}
