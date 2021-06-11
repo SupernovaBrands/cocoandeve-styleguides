@@ -1871,7 +1871,6 @@
 .yotpo .write-review .yotpo-agree-and-submit .yotpo-i-agree .yotpo-checkbox-wrapper .yotpo-i-agree-to-the-terms {
 	width: 215px;
 	height: 18px;
-	font-family: "Open Sans";
 	font-size: 14px;
 	font-weight: normal;
 	font-stretch: normal;
@@ -2263,7 +2262,8 @@
 	float: left;
 	cursor: pointer;
 	-webkit-backface-visibility: hidden;
-	opacity: 0
+	opacity: 0;
+	object-fit: cover;
 }
 
 .yotpo .yotpo-review .yotpo-main .yotpo-review-images-wrapper .image-review:hover,
@@ -6993,7 +6993,6 @@ div.yotpo-preloader-wrapper .yotpo-pre-loader span.yotpo-empty-stars {
 }
 
 .yotpo-lightbox.yotpo-lightbox-old.yotpo .yotpo-modal.yotpo-modal-active .yotpo-lightbox-container .yotpo-lightbox-content-container .yotpo-lightbox-products-container .yotpo-lightbox-product-name .yotpo-lightbox-product-price {
-	font-family: "Open Sans";
 	font-weight: normal;
 	display: block
 }
@@ -7854,7 +7853,6 @@ div.yotpo-preloader-wrapper .yotpo-pre-loader span.yotpo-empty-stars {
 .filters-dropdown .yotpo-dropdown-button .selected {
 	width: 175px;
 	display: inline-block;
-	font-family: "Open Sans";
 	font-size: 13px;
 	line-height: 1.54;
 	color: #6B6D76;
@@ -8149,7 +8147,6 @@ div.yotpo-preloader-wrapper .yotpo-pre-loader span.yotpo-empty-stars {
 .reviews-header .reviews-amount {
 	width: 85px;
 	height: 16px;
-	font-family: "Open Sans";
 	font-size: 16px;
 	font-weight: 600;
 	font-style: normal;
@@ -8332,7 +8329,6 @@ div.yotpo-preloader-wrapper .yotpo-pre-loader span.yotpo-empty-stars {
 }
 
 .bottom-line-items-container .avg-score {
-	font-family: "Open Sans";
 	font-weight: 600;
 	font-style: normal;
 	font-stretch: normal;
@@ -8340,7 +8336,6 @@ div.yotpo-preloader-wrapper .yotpo-pre-loader span.yotpo-empty-stars {
 }
 
 .bottom-line-items-container .reviews-qa-labels-container .reviews-qa-label {
-	font-family: "Open Sans";
 	font-weight: normal;
 	font-style: normal;
 	font-stretch: normal;
@@ -8351,7 +8346,6 @@ div.yotpo-preloader-wrapper .yotpo-pre-loader span.yotpo-empty-stars {
 .bottom-line-items-container .bottomline-syndication-text {
 	width: 150px;
 	height: 16px;
-	font-family: "Open Sans";
 	font-size: 13px;
 	font-weight: normal;
 	font-style: normal;
@@ -8382,7 +8376,6 @@ div.yotpo-preloader-wrapper .yotpo-pre-loader span.yotpo-empty-stars {
 .write-question-review-buttons-container .write-question-review-button .write-question-review-button-text {
 	width: 101px;
 	height: 10px;
-	font-family: "Open Sans";
 	font-size: 14px;
 	font-weight: 600;
 	font-style: normal;
@@ -8456,7 +8449,6 @@ div.yotpo-preloader-wrapper .yotpo-pre-loader span.yotpo-empty-stars {
 .more-filters-btn .more-filters-text {
 	width: 84px;
 	height: 19px;
-	font-family: "Open Sans";
 	font-size: 14px;
 	font-weight: 600;
 	font-style: normal;
@@ -8493,7 +8485,6 @@ div.yotpo-preloader-wrapper .yotpo-pre-loader span.yotpo-empty-stars {
 }
 
 .yotpo-filter-tag .filter-tag-text {
-	font-family: "Open Sans";
 	font-size: 13px;
 	font-weight: 600;
 	font-style: normal;
@@ -8545,7 +8536,6 @@ div.yotpo-preloader-wrapper .yotpo-pre-loader span.yotpo-empty-stars {
 .mobile-filters-modal .mobile-filters-modal-title .mobile-clear-all-btn {
 	width: 55px;
 	height: 17px;
-	font-family: "Open Sans";
 	font-size: 12px;
 	font-weight: 600;
 	font-style: normal;
@@ -8568,7 +8558,6 @@ div.yotpo-preloader-wrapper .yotpo-pre-loader span.yotpo-empty-stars {
 .mobile-filters-modal .mobile-filters-container .mobile-single-filter .mobile-filter-title {
 	padding: 15px 25px;
 	width: 100%;
-	font-family: "Open Sans";
 	font-size: 16px;
 	font-weight: normal;
 	font-style: normal;
@@ -8604,7 +8593,6 @@ div.yotpo-preloader-wrapper .yotpo-pre-loader span.yotpo-empty-stars {
 
 .mobile-filters-modal .mobile-filters-container .mobile-single-filter .mobile-filter-radio-buttons .mobile-filter-radio-button .radio-text-option {
 	height: 22px;
-	font-family: "Open Sans";
 	font-size: 16px;
 	font-weight: normal;
 	font-style: normal;
@@ -8700,7 +8688,6 @@ div.yotpo-preloader-wrapper .yotpo-pre-loader span.yotpo-empty-stars {
 .mobile-filters-modal .mobile-filters-footer-btn .footer-text {
 	height: 22px;
 	padding: 17px;
-	font-family: "Open Sans";
 	font-size: 16px;
 	font-weight: bold;
 	font-style: normal;
