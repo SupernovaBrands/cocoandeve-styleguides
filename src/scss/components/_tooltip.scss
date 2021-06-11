@@ -24,7 +24,8 @@
         transform: translateY(-90%);
     }
 
-    &:after {
+    .sni {
+        cursor: pointer;
         position: absolute;
         right: calc-em(10, 20);
         top: 50%;
