@@ -546,13 +546,13 @@ $(document).ready(function () {
 		});
 	}
 
-  // tooltip
-  $('#tooltip__close').on('click', function () {
-    $(this).parent().removeClass('show');
-  });
+	// tooltip
+	$('#tooltip__close').on('click', function () {
+		$(this).parent().removeClass('show');
+	});
 
-  $('#tooltip__show').on('click', function () {
-    $('.navbar > .container').addClass('position-relative');
-    $('.tooltip').addClass('show');
-  });
+	$('#tooltip__show').on('click', function () {
+		$('.navbar > .container').addClass('position-relative');
+		$('.tooltip').addClass('show');
+	});
 });
