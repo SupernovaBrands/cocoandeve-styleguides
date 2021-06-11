@@ -14,33 +14,41 @@
 	.carousel-control-prev,
 	.carousel-control-next {
 		width: 10%;
-		background-color: $primary-light;
+		
+		@include media-breakpoint-up(lg) {
+			background-color: $primary-light;
+		}
 	}
 
 	.carousel-control-prev {
 		&:before,
 		.sni {
-			top: 23%;
+			top: 30.5%;
 			left: 60%;
 
+			@media (min-width: 414px) {
+				top: 31.5%;
+				left: 60%;
+			}
+
 			@media (min-width: 576px) {
-				top: 28.5%;
+				top: 35.5%;
 				left: 60%;
 			}
 
 			@include media-breakpoint-up(md) {
 				left: 3.5em;
-				top: 32.5%;
+				top: 38.8%;
 			}
 
 			@include media-breakpoint-up(lg) {
 				left: 4.5em;
-				top: 30%;
+				top: 31%;
 			}
 
 			@media (min-width: 1260px) {
 				left: 6em;
-				top: 33.5%;
+				top: 34.5%;
 			}
 		}
 	}
@@ -48,33 +56,38 @@
 	.carousel-control-next {
 		&:before,
 		.sni {
-			top: 23%;
+			top: 30.5%;
 			right: 60%;
 
+			@media (min-width: 414px) {
+				top: 31.5%;
+				right: 60%;
+			}
+
 			@media (min-width: 576px) {
-				top: 28.5%;
+				top: 35.5%;
 				right: 60%;
 			}
 
 			@include media-breakpoint-up(md) {
 				right: 3.5em;
-				top: 32.5%;
+				top: 38.8%;
 			}
 
 			@include media-breakpoint-up(lg) {
 				right: 4.5em;
-				top: 30%;
+				top: 31%;
 			}
 
 			@media (min-width: 1260px) {
 				right: 6em;
-				top: 33.5%;
+				top: 34.5%;
 			}
 		}
 	}
 
 	.carousel-inner {
-		transform: translateX(-25%);
+		transform: translateX(-62.5%);
 
 		@include media-breakpoint-up(lg) {
 			transform: translateX(0);
