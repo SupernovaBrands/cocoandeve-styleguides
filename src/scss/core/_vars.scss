@@ -184,7 +184,7 @@ $navbar-padding-x: calc-em(15 / 2, 16);
 $navbar-toggler-padding-x: 0;
 
 //navbar brand
-$navbar-brand-padding-y: calc-em(10, 16);
+$navbar-brand-padding-y: calc-em(9, 16);
 
 // dropdown
 $dropdown-border-width: 0;
@@ -206,7 +206,7 @@ $custom-select-indicator: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/
 $custom-select-bg-size: calc-em(16) calc-em(9);
 $custom-select-disabled-bg: $gray-100;
 $custom-select-disabled-color: $gray-400;
-$custom-select-background-mask: $custom-select-indicator no-repeat right $input-padding-x/2 center / $custom-select-bg-size !default;
+$custom-select-background-mask: $custom-select-indicator no-repeat right $input-padding-x/3 center / $custom-select-bg-size !default;
 
 // Badge
 $badge-font-size: 1em;
@@ -226,5 +226,18 @@ $nav-tabs-link-hover-border-color: $body-color;
 $nav-tabs-link-active-border-color: $body-color;
 
 // Spinners
+$spinner-width: 1.9rem;
+$spinner-width: 1.9rem;
 $spinner-width-sm: .9em;
 $spinner-height-sm: .9em;
+
+//modal
+$modal-lg: calc-em(720);
+
+// Custom switch
+$custom-switch-indicator-size-height: calc-em(42);
+$custom-switch-width: calc-em(82);
+$custom-switch-indicator-border-radius: 2em;
+$custom-control-indicator-bg: white;
+$custom-control-indicator-border-color: white;
+$custom-control-indicator-checked-disabled-bg: $gray-400;

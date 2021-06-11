@@ -1,0 +1,43 @@
+.custom-switch {
+  padding-left: $custom-switch-width;
+  height: $custom-switch-indicator-size-height;
+
+  .custom-control-label {
+    &::before {
+      border: 0;
+      height: $custom-switch-indicator-size-height;
+      background-color: $gray-600;
+      width: $custom-switch-width;
+    }
+
+    &::after {
+      width: $custom-switch-indicator-size-height;
+      height: $custom-switch-indicator-size-height;
+      top: 0;
+      left: -($custom-switch-width + $custom-control-gutter);
+    }
+
+    &::before,
+    &::after {
+      text-align: center;
+      line-height: $custom-switch-indicator-size-height;
+    }
+  }
+
+  .custom-control-input ~ .custom-control-label {
+    &::after {
+      content: 'Off';
+    }
+  }
+
+  .custom-control-input:checked ~ .custom-control-label {
+    &::before {
+      background-color: $bali-bod-blue;
+    }
+
+    &::after {
+      content: 'On';
+      transform: translateX(2.5em);
+    }
+  }
+}

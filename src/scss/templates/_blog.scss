@@ -29,6 +29,13 @@
 		top: 0;
 		z-index: $zindex-dropdown;
 	}
+
+	.nav-link {
+		&.active,
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 }
 
 .blog-post-grid {
