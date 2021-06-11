@@ -34,22 +34,6 @@
     font-family: yotpo-widget-font!important;
   }
 
-  span {
-    font-family: Open Sans;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-style: normal!important;
-    font-size: 14px;
-    line-height: 17px;
-    color: #6a6c77;
-    border: none;
-    padding: 0;
-    margin: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-
   .yotpo-icon {
     speak: none;
     font-size: 17.5px;
@@ -73,6 +57,7 @@
 
   .yotpo-stars {
     margin-right: calc-em(5);
+    line-height: $line-height-base;
   }
 }
 
