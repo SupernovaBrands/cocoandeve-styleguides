@@ -569,7 +569,7 @@ eval("module.exports = JSON.parse('[{\"id\":4625694621731,\"title\":\"2-way Scal
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "chunk." + chunkId + ".js?h=" + {"nav-category":"44deaed68e8472f5d45f","carousel-loop":"da4f6baced3e0c079a90","modal-waitlist":"8468d025a1a2754c817d","products":"3682e9dc3f21dbb33a15","yotpo":"5efd549f078cc87bc544"}[chunkId] + "";
+/******/ 			return "chunk." + chunkId + ".js?h=" + {"nav-category":"44deaed68e8472f5d45f","carousel-loop":"da4f6baced3e0c079a90","modal-waitlist":"8468d025a1a2754c817d","products":"3682e9dc3f21dbb33a15","yotpo":"65aa42210ee7258ba8f5"}[chunkId] + "";
 /******/ 		};
 /******/ 	})();
 /******/ 	
