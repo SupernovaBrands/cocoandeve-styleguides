@@ -58,18 +58,21 @@
     content: "\e60e";
   }
 
-  .yotpo-stars {
-    margin-right: calc-em(5);
-    line-height: $line-height-base;
-  }
-
-  .standalone-bottomline {
+  &.bottomLine {
+    .yotpo-stars, .rating-num {
+      margin-right: calc-em(5);
+    }
+    .yotpo-icon {
+      margin-left: calc-em(2);
+      line-height: $line-height-base;
+    }
     .text-m {
       color: $body-color !important;
       font-size: $font-size-base;
+      text-decoration: underline !important;
 
       &:hover {
-        color: $primary !important;
+        color: $gray-500 !important;
       }
     }
   }
