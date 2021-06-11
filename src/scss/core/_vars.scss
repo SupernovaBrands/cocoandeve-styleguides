@@ -17,7 +17,7 @@ $container-max-widths: (
   xl: 1200px
 );
 
-$spacer: calc-em(20);
+$spacer: calc-em(20, $unit: 1rem);
 $spacers: (
   1: $spacer * 0.5,
   2: $spacer * 1,
@@ -238,6 +238,4 @@ $modal-lg: calc-em(720);
 $custom-switch-indicator-size-height: calc-em(42);
 $custom-switch-width: calc-em(82);
 $custom-switch-indicator-border-radius: 2em;
-$custom-control-indicator-bg: white;
-$custom-control-indicator-border-color: white;
 $custom-control-indicator-checked-disabled-bg: $gray-400;
