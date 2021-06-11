@@ -17,7 +17,7 @@ $container-max-widths: (
   xl: 1200px
 );
 
-$spacer: calc-em(20);
+$spacer: calc-em(20, $unit: 1rem);
 $spacers: (
   1: $spacer * 0.5,
   2: $spacer * 1,
