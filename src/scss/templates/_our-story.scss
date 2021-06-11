@@ -25,6 +25,11 @@
 .page-award-slider {
   background-color: #f9eeca;
 
+  .carousel-control-next,
+  .carousel-control-prev {
+    width: 15%;
+  }
+
   .carousel-control-next-icon {
     @include media-breakpoint-up(lg) {
       margin-right: -2em;
