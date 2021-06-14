@@ -247,7 +247,7 @@
   .cookies-banner-show--expanded & {
     margin-top: ($font-size-xs + $line-height-base) * 10.5;
     @include media-breakpoint-up('lg') {
-      margin-top: ($font-size-xs + $line-height-base) * 8;
+      margin-top: ($font-size-xs + $line-height-base) * 7.5;
     }
   }
 }
