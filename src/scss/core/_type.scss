@@ -41,16 +41,16 @@
 	font-size: $font-size-xs !important;
 }
 @include media-breakpoint-up(lg) {
-	.font-size-lg-lg {
+	.font-size-dt-lg {
 		font-size: $font-size-lg !important;
 	}
-	.font-size-lg-base {
+	.font-size-dt-base {
 		font-size: $font-size-base !important;
 	}
-	.font-size-lg-sm {
+	.font-size-dt-sm {
 		font-size: $font-size-sm !important;
 	}
-	.font-size-lg-xs {
+	.font-size-dt-xs {
 		font-size: $font-size-xs !important;
 	}
 }

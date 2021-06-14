@@ -92,8 +92,8 @@
 					</picture>
 					<figcaption class="col-7 col-lg-8 px-2 py-1 py-lg-2 bg-light d-flex flex-column">
 						<h4 class="mb-0">Free Deluxe Exfoliating Mitt</h4>
-						<p class="font-size-xs font-size-lg-base mb-0 flex-grow-1">min. spend of $30</p>
-						<p class="font-size-sm font-size-lg-lg mb-0 text-primary justify-self-end">Use code: <b>BESTPREP</b></p>
+						<p class="font-size-xs font-size-dt-base mb-0 flex-grow-1">min. spend of $30</p>
+						<p class="font-size-sm font-size-dt-lg mb-0 text-primary justify-self-end">Use code: <b>BESTPREP</b></p>
 					</figcaption>
 				</figure>
 
@@ -215,7 +215,10 @@
 					</li>
 				</ul>
 
-				{{> sections/pdp-upsell class="order-lg-2"}}
+				<ul class="list-unstyled mb-0 order-lg-2">
+					<li class="mb-2">{{> compounds/upsell-pdp remove=true}}</li>
+					<li>{{> compounds/upsell-pdp}}</li>
+				</ul>
 			</div>
 		</div>
 	</div>
