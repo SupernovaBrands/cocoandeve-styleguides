@@ -24,6 +24,7 @@ svg{overflow:hidden;vertical-align:middle}
 .pt-0{padding-top:0!important}
 .px-0{padding-right:0!important;padding-left:0!important}
 .p-1{padding:.625em!important}
+.p-g{padding: 15px !important}
 .text-uppercase{text-transform:uppercase!important}
 .font-weight-bold{font-weight:700!important}
 .bg-primary-light{background-color:#f5dadf!important}
@@ -65,7 +66,8 @@ svg{overflow:hidden;vertical-align:middle}
 .navbar-toggler span::after,.navbar-toggler span::before{content:"";height:2px;background:#151515;position:absolute;left:0}
 .navbar-toggler span::before{width:1.05em;top:-.4em}
 .navbar-toggler span::after{width:.95em;top:.4em}
-.mega-menu,.mobile-nav,.modal,.tooltip{display:none}
+.modal,.tooltip{display:none}
+.mega-menu,.mobile-nav{visibility: hidden;opacity:0;}
 button{font-family:inherit;font-size:inherit;line-height:inherit;text-transform:none;font-family:inherit;font-size:inherit;line-height:inherit;text-transform:none;border-radius:0;overflow:visible}
 .col-12,.col-3,.col-9,.col-lg-3,.col-lg-4,.col-lg-6,.col-lg-7,.col-md-3{position:relative;width:100%;padding-right:7.5px;padding-left:7.5px}
 *,::after,::before{box-sizing:border-box}
