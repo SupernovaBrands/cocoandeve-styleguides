@@ -1,26 +1,26 @@
 .swatch {
 	flex-shrink: 0;
 	width: calc-em(40);
-  height: calc-em(40);
+	height: calc-em(40);
 	border-radius: 50%;
 	border: 2px solid white;
 	background-color: white;
-  background-size: calc-em(30);
-  position: relative;
+	background-size: calc-em(30);
+	position: relative;
 
-  &:before {
-    content: ' ';
-    position: absolute;
-    width: calc-em(30);
-    height: calc-em(30);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    top: calc-em(3);
-    left: calc-em(3);
-    margin: auto;
-    border-radius: 50%;
-  }
+	&:before {
+		content: ' ';
+		position: absolute;
+		width: calc-em(30);
+		height: calc-em(30);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		top: calc-em(3);
+		left: calc-em(3);
+		margin: auto;
+		border-radius: 50%;
+	}
 
 	&.custom-control-label {
 		&::before,
@@ -51,40 +51,40 @@
 	}
 
 	&.medium {
-    &:before {
-		  background-color: #C48B8B;
-    }
+		&:before {
+			background-color: #C48B8B;
+		}
 	}
 	&.dark {
-    &:before {
-		  background-color: #885757;
-    }
+		&:before {
+			background-color: #885757;
+		}
 	}
 	&.ultra-dark {
-    &:before {
-		  background-color: #4A1F1F;
-    }
+		&:before {
+			background-color: #4A1F1F;
+		}
 	}
 
 	&.girl-print-limited-edition {
-    &:before {
-		  background-image: url(asset-url('hairwrap-girl-print.png'));
-    }
+		&:before {
+			background-image: url(asset-url('hairwrap-girl-print.png'));
+		}
 	}
 	&.leaf-print {
-    &:before {
-		  background-image: url(asset-url('hairwrap-leaf-print.png'));
-    }
+		&:before {
+			background-image: url(asset-url('hairwrap-leaf-print.png'));
+		}
 	}
 	&.green,
 	&.grun {
-    &:before {
-		  background-image: url(asset-url('eyemask-leaf-green.svg'));
-    }
+		&:before {
+			background-image: url(asset-url('eyemask-leaf-green.svg'));
+		}
 	}
 	&.pink {
-    &:before {
-		  background-image: url(asset-url('eyemask-leaf-pink.svg'));
-    }
+		&:before {
+			background-image: url(asset-url('eyemask-leaf-pink.svg'));
+		}
 	}
 }

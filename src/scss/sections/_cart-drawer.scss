@@ -78,10 +78,10 @@
 			padding: map-get($spacers, 1) / 2;
 		}
 
-    button {
-      &:focus {
-        box-shadow: none;
-      }
-    }
+		button {
+			&:focus {
+				box-shadow: none;
+			}
+		}
 	}
 }
