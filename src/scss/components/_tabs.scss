@@ -35,6 +35,10 @@
   &--product {
     .nav-link {
       width: calc-em(120);
+
+      @include media-breakpoint-down(xs) {
+        width: calc-em(90);
+      }
     }
   }
 
@@ -42,5 +46,6 @@
     .nav-link {
       width: calc-em(90);
     }
+
   }
 }
