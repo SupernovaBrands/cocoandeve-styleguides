@@ -1,13 +1,26 @@
 .swatch {
 	flex-shrink: 0;
-	width: 2em;
-	height: 2em;
+	width: calc-em(40);
+  height: calc-em(40);
 	border-radius: 50%;
-	border: 1px solid $gray-500;
-	box-shadow: inset 0px 0px 0px 2px #fff;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 2em 2em;
+	border: 2px solid white;
+	background-color: white;
+  background-size: calc-em(30);
+  position: relative;
+
+  &:before {
+    content: ' ';
+    position: absolute;
+    width: calc-em(30);
+    height: calc-em(30);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: calc-em(3);
+    left: calc-em(3);
+    margin: auto;
+    border-radius: 50%;
+  }
 
 	&.custom-control-label {
 		&::before,
@@ -38,26 +51,40 @@
 	}
 
 	&.medium {
-		background-color: #AA7878;
+    &:before {
+		  background-color: #C48B8B;
+    }
 	}
 	&.dark {
-		background-color: #885757;
+    &:before {
+		  background-color: #885757;
+    }
 	}
 	&.ultra-dark {
-		background-color: #5C2323;
+    &:before {
+		  background-color: #4A1F1F;
+    }
 	}
 
 	&.girl-print-limited-edition {
-		background-image: url(asset-url('hairwrap-girl-print.png'));
+    &:before {
+		  background-image: url(asset-url('hairwrap-girl-print.png'));
+    }
 	}
 	&.leaf-print {
-		background-image: url(asset-url('hairwrap-leaf-print.png'));
+    &:before {
+		  background-image: url(asset-url('hairwrap-leaf-print.png'));
+    }
 	}
 	&.green,
 	&.grun {
-		background-image: url(asset-url('eyemask-leaf-green.svg'));
+    &:before {
+		  background-image: url(asset-url('eyemask-leaf-green.svg'));
+    }
 	}
 	&.pink {
-		background-image: url(asset-url('eyemask-leaf-pink.svg'));
+    &:before {
+		  background-image: url(asset-url('eyemask-leaf-pink.svg'));
+    }
 	}
 }
