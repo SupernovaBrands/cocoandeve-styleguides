@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="451" height="269" viewBox="0 0 451 269">
+  <g id="badge-tex-25" transform="translate(-3359 -5572)">
+    <text id="OFF" transform="translate(3678 5810)" fill="#fff" font-size="71" font-family="sofia-pro,sans-serif"><tspan x="0" y="0">OFF</tspan></text>
+    <text id="_" data-name="%" transform="translate(3666 5741)" fill="#fff" font-size="167" font-family="sofia-pro,sans-serif"><tspan x="0" y="0">%</tspan></text>
+    <text id="_25" data-name="25" transform="translate(3359 5809)" fill="#fff" font-size="269" font-family="sofia-pro,sans-serif"><tspan x="0" y="0">25</tspan></text>
+  </g>
+</svg>

@@ -13,38 +13,15 @@
       <span class="badge badge-secondary mb-1 mt-1">HAIR</span>
       <span class="badge badge-blue mb-1 mt-1">BODY</span>
     </div>
-    <p class="my-4">Circle Badge Text</p>
+    <p class="my-4">Circle Badge with svg</p>
     <div class="row">
       <div class="col-9 col-lg-3 pt-4">
-        <div class="circle-badge position-absolute rounded-circle bg-primary d-flex p-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 447 207">
-            <text id="badge-tex-new" transform="translate(0 155)" fill="#fff" font-size="207" font-family="sofia-pro" class="font-weight-bold">
-              <tspan x="0" y="0">new!</tspan>
-            </text>
-          </svg>
-        </div>
+        <picture class="circle-badge position-absolute rounded-circle bg-primary d-flex p-1">
+          <img class="w-100" src="../images/badge-25.svg"/>
+        </picture>
       </div>
     </div>
-    <p class="my-4">Circle Badge with Percentage</p>
-    <div class="row">
-      <div class="col-9 col-lg-3 pt-4">
-        <div class="circle-badge position-absolute rounded-circle bg-primary d-flex p-1 circle-badge--percentage">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 451 269" class="font-weight-bold">
-            <g id="badge-tex-25" transform="translate(-3359 -5572)">
-              <text id="OFF" transform="translate(3678 5775)" fill="#fff" font-size="71" font-family="sofia-pro, sans-serif">
-                <tspan x="0" y="0">OFF</tspan>
-              </text>
-              <text id="_" data-name="%" transform="translate(3666 5706)" fill="#fff" font-size="167" font-family="sofia-pro,sans-serif">
-                <tspan x="0" y="0">%</tspan>
-              </text>
-              <text id="_25" data-name="25" transform="translate(3359 5774)" fill="#fff" font-size="269" font-family="sofia-pro, sans-serif">
-                <tspan x="0" y="0">25</tspan>
-              </text>
-            </g>
-          </svg>
-        </div>
-      </div>
-    </div>
+  </div>
     {{> js jquery=true popper=false bootstrap=false main=true }}
   </body>
 
