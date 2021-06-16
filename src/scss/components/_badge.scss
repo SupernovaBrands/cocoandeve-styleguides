@@ -13,6 +13,12 @@
     width: calc-em(90);
     height: calc-em(90);
   }
+
+  &--percentage {
+    svg {
+      margin-top: 10%;
+    }
+  }
 }
 
 // colors
