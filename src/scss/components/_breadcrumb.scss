@@ -7,9 +7,6 @@
 }
 
 .breadcrumb-item {
-	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
 
 	&__link {
 		color: $body-color;

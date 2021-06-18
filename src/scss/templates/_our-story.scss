@@ -24,4 +24,37 @@
 
 .page-award-slider {
 	background-color: #f9eeca;
+
+	.carousel-control-next,
+	.carousel-control-prev {
+		width: 15%;
+	}
+
+	.carousel-control-prev {
+		@include media-breakpoint-up(lg) {
+			left: -3em;
+		}
+	}
+
+	.carousel-control-next {
+		@include media-breakpoint-up(lg) {
+			right: -3em;
+		}
+	}
+
+	.sni__chevron-next {
+		&:before {
+			@include media-breakpoint-up(lg) {
+				margin-left: -1.5em;
+			}
+		}
+	}
+
+	.sni__chevron-prev {
+		&:before {
+			@include media-breakpoint-up(lg) {
+				margin-right: -1.5em;
+			}
+		}
+	}
 }

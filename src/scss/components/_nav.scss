@@ -26,6 +26,11 @@
 				font-size: calc-em(20);
 				margin-right: calc-em(3, 16);
 			}
+
+      &:focus,
+      &:active {
+        outline: none;
+      }
 		}
 	}
 }

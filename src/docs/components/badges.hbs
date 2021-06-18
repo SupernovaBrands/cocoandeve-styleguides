@@ -13,16 +13,16 @@
       <span class="badge badge-secondary mb-1 mt-1">HAIR</span>
       <span class="badge badge-blue mb-1 mt-1">BODY</span>
     </div>
-    <div class="col-3 pt-4">
-      <picture class="circle-badge position-absolute">
-        <source srcset="https://via.placeholder.com/90x90/F3436C" media="(min-width: 992px)"/>
-        <source srcset="https://via.placeholder.com/66x66/F3436C"/>
-        <img class="img-fluid w-100 rounded-circle" src="https://via.placeholder.com/66x66/F3436C"/>
-      </picture>
+    <p class="my-4">Circle Badge with svg</p>
+    <div class="row">
+      <div class="col-9 col-lg-3 pt-4">
+        <picture class="circle-badge position-absolute rounded-circle bg-primary d-flex p-1">
+          <img class="w-100" src="../images/badge-25.svg"/>
+        </picture>
+      </div>
     </div>
   </div>
+    {{> js jquery=true popper=false bootstrap=false main=true }}
+  </body>
 
-  {{> js jquery=true popper=false bootstrap=false main=true }}
-</body>
-
-</html>
+  </html>

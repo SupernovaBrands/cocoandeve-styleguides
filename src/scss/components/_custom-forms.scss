@@ -15,6 +15,8 @@
       height: $custom-switch-indicator-size-height;
       top: 0;
       left: -($custom-switch-width + $custom-control-gutter);
+      background-color: white;
+      border: 1px solid $custom-control-indicator-checked-disabled-bg;
     }
 
     &::before,

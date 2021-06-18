@@ -8,10 +8,12 @@ $(document).ready(function () {
 
 	$('.cookies-banner .use-default').click(function () {
 		const parentEl = $('.cookies-banner');
-		parentEl.find('#ads').prop('checked', true);
-		parentEl.find('#performance').prop('checked', true);
-		parentEl.addClass('d-none');
-		$('body').removeClass('cookies-banner-show cookies-banner-show--expanded');
+		if (parentEl.find('#ads').prop('checked') && parentEl.find('#performance').prop('checked')) {
+			$('.cookies-banner .accept-cookie').click();
+		} else {
+			parentEl.find('#ads').prop('checked', true);
+			parentEl.find('#performance').prop('checked', true);
+		}
 	});
 
 	$('.cookies-banner .accept-cookie').click(function () {

@@ -38,6 +38,19 @@ Can use https://placeholder.com/ for placeholder images. i.e:
 2. Put Optimizes SVG in `fonts/svgs`
 3. Run `npm run buildfont` to build the font icon
 
+## Mobile Grid
+Can use class `px-g` in container to make the padding same as desktop gutter.
+
+Example:
+```
+<div>
+	<img /> // This will be full width
+	<div class="container px-g"> // This will have padding of desktop gutter
+		text content here
+	</div>
+</div>
+```
+
 ## Handlebars Helpers
 - `times`: index start with 1. Have 3 data: `@first` (boolean), `@last` (boolean),  `@index` (integer)
 	```

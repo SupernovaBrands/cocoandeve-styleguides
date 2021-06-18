@@ -2,8 +2,9 @@
 @import 'core/fonts';
 @import 'core/vars';
 
-@import 'bootstrap/bootstrap';
+@import 'bootstrap/bootstrap-homepage';
 
+@import 'core/reboot';
 @import 'core/grid';
 @import 'core/utilities';
 @import 'mixins/carousel';
@@ -12,11 +13,8 @@
 @import 'components/announcement-bar';
 @import 'components/tooltip';
 @import 'components/nav';
-@import 'components/dropdown';
-@import 'components/icons';
 @import 'components/social-icons';
-@import 'components/buttons';
-
+@import 'components/custom-forms';
 @import 'components/icons';
 @import 'components/buttons';
 @import 'components/hr';
@@ -26,7 +24,7 @@
 @import 'components/tabs';
 @import 'components/carousel';
 @import 'components/yotpo_stars';
-// @import 'components/swatch';
+@import 'components/swatch';
 @import 'components/forms';
 @import 'components/accordion';
 
