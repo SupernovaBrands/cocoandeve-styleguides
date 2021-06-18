@@ -213,9 +213,9 @@ $custom-select-background-mask: $custom-select-indicator no-repeat right $input-
 
 // Badge
 $badge-font-size: 1em;
-$badge-padding-y: 0;
-$badge-padding-x: calc-em(10);
-$badge-border-radius: calc-em(6);
+$badge-padding-y: calc-em(8);
+$badge-padding-x: calc-em(16);
+$badge-border-radius: calc-em(8);
 $badge-circle-width: calc-em(66);
 $badge-circle-height: calc-em(66);
 
