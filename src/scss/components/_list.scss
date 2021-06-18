@@ -1,8 +1,18 @@
 .list-check {
-	::marker {
-		font-family: $supernova-icon-font;
-		content: "#{map-get($supernova-icon-map, "check")}   ";
-		color: $primary;
+	list-style-type: none;
+	padding-left: map-get($spacers, 4);
+
+	li {
+		position: relative;
+
+		&::before {
+			font-family: $supernova-icon-font;
+			content: "\a0#{map-get($supernova-icon-map, "check")}";
+			color: $primary;
+			position: absolute;
+			top: 0;
+			left: - map-get($spacers, 4);
+		}
 	}
 
 	li:not(:last-child) {

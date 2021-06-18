@@ -1565,11 +1565,11 @@
 }
 
 .yotpo .yotpo-dropdown .list-category:hover a {
-	color: #CAECC8 !important
+	color: $primary !important
 }
 
 .yotpo .yotpo-dropdown .list-category:hover span {
-	color: #CAECC8
+	color: $primary
 }
 
 .yotpo .yotpo-dropdown .list-category a {
@@ -7877,7 +7877,7 @@ div.yotpo-preloader-wrapper .yotpo-pre-loader span.yotpo-empty-stars {
 }
 
 .filters-dropdown .yotpo-dropdown-button .non-default-item-selected {
-	color: #CAECC8;
+	color: $primary;
 	font-weight: 600;
 	max-width: 20ch
 }
