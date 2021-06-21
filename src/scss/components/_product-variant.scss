@@ -8,24 +8,26 @@
 		}
 	}
 
-	.custom-control-input:not(:disabled):active ~ .custom-control-label::before {
-		background-color: #fff;
-	}
-	.custom-control-input:checked:active ~ .custom-control-label::before {
-		background-color: $primary;
-		border-color: $primary;
-	}
-
-	.custom-control-input:checked ~ .custom-control-label {
-		border-color: $primary !important;
-	}
-
 	.product-swatch {
 		display: none;
 	}
 
-	.custom-control-input:checked ~ .custom-control-label .product-swatch {
-		display: block;
+	.custom-control-input {
+		&:not(:disabled):active ~ .custom-control-label::before {
+			background-color: #fff;
+		}
+
+		&:checked:active ~ .custom-control-label::before {
+			background-color: $primary;
+			border-color: $primary;
+		}
+
+		&:checked ~ .custom-control-label {
+			border-color: $primary !important;
+			.product-swatch {
+				display: block;
+			}
+		}
 	}
 
 	.text-linethrough {

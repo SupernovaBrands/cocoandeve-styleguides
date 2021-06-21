@@ -12,5 +12,9 @@
 				@include make-col(1, 5);
 			}
 		}
+
+		.carousel-indicator {
+			height: calc-em(50, $unit: 1rem);
+		}
 	}
 }

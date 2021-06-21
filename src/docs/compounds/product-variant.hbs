@@ -5,11 +5,11 @@
 	{{> html-head title="Product Variant" }}
 </head>
 
-<body>
+<body class="template-product">
 	<div class="container mt-4 mb-2 px-g">
 		<h1>Product Variant</h1>
 		<div class="row mt-3">
-			<form class="col-12 col-lg-5">
+			<form class="product-form col-12 col-lg-5">
 				{{#> components/product-variant name="product-variant" title="1x Sunny Honey Bali Bronzing Foam" value="1-x-sunny-honey-bali-bronzing-foam" checked=true class="mb-1"}}
 					<button type="button" class="variant-swatch medium mr-2 border-primary" data-value="medium" data-id="32068891541539"></button>
 					<button type="button" class="variant-swatch dark mr-2" data-value="dark" data-id="32068891607075"></button>
@@ -34,6 +34,8 @@
 			</form>
 		</div>
 	</div>
+
+	{{> js jquery=true bootstrap=true main=true }}
 </body>
 
 </html>
