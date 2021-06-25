@@ -63,7 +63,7 @@ export default class CartUpsell extends React.Component {
 									)}
 									<span className="text-primary font-weight-bold ml-2">{formatMoney(item.price)}</span>
 								</p>
-								<button className={`btn btn-outline-primary align-self-start ${this.state.isLoading === item.targetId ? 'btn-loading' : ''}`} onClick={() => { onAddUpsell(item); }} type="button">{item.settings.bundle_txt_button}</button>
+								<button className={`btn btn-outline-primary align-self-start col-8`} onClick={() => { onAddUpsell(item); }} type="button">{this.state.isLoading === item.targetId ? <span class='spinner-border spinner-border-sm' role='status' aria-hidden='true'></span> : item.settings.bundle_txt_button}</button>
 							</figcaption>
 						</figure>
 					</div>
