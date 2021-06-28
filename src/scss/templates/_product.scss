@@ -1,7 +1,7 @@
 .product-swatch-mobile {
 	transform: translateY(150%);
 	transition: transform .1s ease-in-out;
-  z-index: $zindex-dropdown !important;
+	z-index: $zindex-dropdown;
 
 	&.show {
 		transform: translateY(0);
