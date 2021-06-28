@@ -105,4 +105,5 @@ button{border-radius:0;margin:0;font-family:inherit;font-size:inherit;line-heigh
 .navbar-toggler span::after,.navbar-toggler span::before{content:"";height:2px;background:#151515;position:absolute;left:0}
 .navbar-toggler span::before{width:1.05em;top:-.4em}
 .navbar-toggler span::after{width:.95em;top:.4em}
-.mega-menu, .tooltip, .modal, .mobile-nav { display: none; }
+.mega-menu,.mobile-nav{visibility:hidden;opacity:0;}
+.tooltip,.modal{display:none;}

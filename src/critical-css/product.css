@@ -58,7 +58,8 @@ button{font-family:inherit;font-size:inherit;line-height:inherit;text-transform:
 .navbar-toggler span::after,.navbar-toggler span::before{content:"";height:2px;background:#151515;position:absolute;left:0}
 .navbar-toggler span::before{width:1.05em;top:-.4em}
 .navbar-toggler span::after{width:.95em;top:.4em}
-.mega-menu,.mobile-nav,.modal,.tooltip{display:none}
+.mega-menu,.mobile-nav{visibility:hidden;opacity:0}
+.modal,.tooltip{display:none}
 *,::after,::before{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;font-family:sans-serif;-webkit-text-size-adjust:100%}
 figure{display:block;margin:0 0 1rem}
