@@ -1,6 +1,7 @@
 .product-swatch-mobile {
 	transform: translateY(150%);
-	transition: transform .1s ease-in-out;
+	transition: transform .25s ease-in-out;
+	z-index: $zindex-dropdown !important;
 
 	&.show {
 		transform: translateY(0);
@@ -72,5 +73,11 @@
 		top: 0;
 		right: 0;
 		z-index: 1;
+	}
+}
+
+.video-card {
+	picture:before {
+		font-size: 3em;
 	}
 }

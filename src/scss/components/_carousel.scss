@@ -150,11 +150,11 @@
 }
 
 .carousel-indicators {
-	&--primary {
-		li {
-			background-color: $primary;
-		}
-	}
+  &--primary {
+    li {
+      background-color: $primary;
+    }
+  }
 
   &--black {
     .active {
@@ -162,15 +162,15 @@
     }
   }
 
-	&--right {
-		justify-content: flex-end;
-		li {
-			&:not(.active) {
-				background: transparent;
-				opacity: 1;
-			}
-		}
-	}
+  &--right {
+    justify-content: flex-end;
+    li {
+      &:not(.active) {
+        background: transparent;
+        opacity: 1;
+      }
+    }
+  }
 }
 
 .carousel-control {
@@ -204,7 +204,6 @@
 	}
 
 	&--loop {
-
 		&.carousel-control-prev,
 		&.carousel-control-next {
 			span[class*=carousel-control] {
@@ -232,12 +231,6 @@
 					border-radius: 50%;
 				}
 			}
-
-			&.floating-out-left {
-				@include media-breakpoint-up(lg) {
-					left: -2%;
-				}
-			}
 		}
 
 		&.carousel-control-next {
@@ -249,12 +242,18 @@
 					border-radius: 50%;
 				}
 			}
+		}
+	}
 
-			&.floating-out-right {
-				@include media-breakpoint-up(lg) {
-					right: -2%;
-				}
-			}
+	&.floating-out-left {
+		@include media-breakpoint-up(lg) {
+			left: -2%;
+		}
+	}
+
+	&.floating-out-right {
+		@include media-breakpoint-up(lg) {
+			right: -2%;
 		}
 	}
 }
@@ -323,11 +322,11 @@
   }
 }
 
-.result-carousel {
-  .carousel-control-prev {
-    transform: translateX(-50%);
-  }
-  .carousel-control-next {
-    transform: translateX(50%);
-  }
+.carousel--real-result {
+	.carousel-control {
+		@include media-breakpoint-up(lg) {
+			align-items: flex-start;
+			padding-top: 14.5%;
+		}
+	}
 }

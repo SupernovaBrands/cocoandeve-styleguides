@@ -27,7 +27,7 @@
 				<h1 class="mb-2 order-lg-0">Sunny Honey Bali Bronzing Foam</h1>
 				<p class="mb-2 mb-lg-4 font-size-lg order-lg-0">Anti-cellulite, anti-aging self tan</p>
 
-				<form class="product-form order-lg-2 mt-1 product-swatch-mobile__trigger">
+				<form class="product-form order-lg-2 mt-1">
 					{{#> components/product-variant name="product-variant" title="1x Sunny Honey Bali Bronzing Foam" value="1-x-sunny-honey-bali-bronzing-foam" checked=true class="mb-1"}}
 						<button type="button" class="variant-swatch medium mr-2 border-primary" data-value="medium" data-id="32068891541539"></button>
 						<button type="button" class="variant-swatch dark mr-2" data-value="dark" data-id="32068891607075"></button>
@@ -49,7 +49,7 @@
 					<div class="product-swatch-mobile fixed-bottom d-lg-none mx-g mb-2 show">
 						<div id="product-swatch-mobile"
 							class="product-swatch-mobile__collapse position-relative collapse bg-white border border-primary border-bottom-0 rounded-top">
-							<button class="close position-absolute sni sni__close font-size-xs" data-toggle="collapse"
+							<button type="button" class="close position-absolute sni sni__close font-size-xs" data-toggle="collapse"
 								data-target="#product-swatch-mobile" aria-label="close"></button>
 							<div class="product-swatch d-flex flex-wrap justify-content-center justify-content-center p-g">
 								<button type="button" class="variant-swatch medium mr-2 border-primary" data-value="medium"></button>
@@ -67,12 +67,16 @@
 						</div>
 					</div>
 
-					<div class="product-form-submit mb-3 mb-lg-4">
-						<div class="d-flex mb-3">
-							<div class="react-quantity-box"></div>
-							<button class="btn btn-lg btn-primary btn-block ml-1 ml-lg-3" type="submit">Add to Cart</button>
+					<div class="product-swatch-mobile__trigger">
+						<div class="product-form-submit mb-3">
+							<div class="d-flex">
+								<div class="react-quantity-box"></div>
+								<button class="btn btn-lg btn-primary btn-block ml-1 ml-lg-g" type="submit">Add to Cart</button>
+							</div>
 						</div>
+					</div>
 
+					<div class="product-form-submit mb-3 mb-lg-4">
 						<div class="mb-1">
 							or 4 interest-free installments of $15.70 by
 							<img src="{{ imageUrl }}/logo-klarna.svg" height="15px" class="ml-1 d-inline-block align-baseline" />
@@ -118,7 +122,7 @@
 								<li>Vegan. 100% Natural DHA. No Nasties</li>
 							</ul>
 						</div>
-						<div class="tab-pane fade" id="product-proudtobe" role="tabpanel" aria-labelledby="product-proudtobe-tab">
+						{{!-- <div class="tab-pane fade" id="product-proudtobe" role="tabpanel" aria-labelledby="product-proudtobe-tab">
 							<ul class="list-unstyled row mt-3 mb-1">
 								<li class="col-6 d-flex align-items-center mb-2 sni sni__natural-dha">100% Natural DHA</li>
 								<li class="col-6 d-flex align-items-center mb-2 sni sni__vegan">Vegan</li>
@@ -128,7 +132,7 @@
 								<li class="col-6 d-flex align-items-center mb-2 sni sni__gluten">Gluten Free</li>
 								<li class="col-6 d-flex align-items-center mb-2 sni sni__ethically">Ethically Sourced</li>
 								<li class="col-6 d-flex align-items-center mb-2 sni sni__paraben-free">Paraben Free</li>
-								<li class="col-6 d-flex align-items-center sni sni__peta">Peta Approved</li>
+								<li class="col-6 d-flex align-items-center mb-2 sni sni__peta">Peta Approved</li>
 							</ul>
 						</div>
 						<div class="tab-pane fade font-size-sm" id="product-ingredients" role="tabpanel" aria-labelledby="product-ingredients-tab">
@@ -146,11 +150,11 @@
 							<div id="product-ingredients__full" class="collapse" aria-labelledby="product-ingredients__toggle">
 								Aqua (Water), Dihydroxyacetone, Glycerin, Pentylene Glycol, PEG-40 Hydrogenated Castor Oil, Trideceth-9, Hydroxypropyl Methylcellulose, Coconut Oil Glycereth-8 Esters, Sodium Cocoyl Glutamate, Parfum (Fragrance), Citric Acid, Sodium Benzoate, Potassium Sorbate, Propylene Glycol, Erythrulose, Benzyl Alcohol, Trisodium Ethylenediamine Disuccinate, Lotus Maritimus Flower/Leaf Extract, Musa Sapientum (Banana) Extract, Citrus Aurantium Dulcis (Orange) Peel Extract, Citrus Nobilis (Mandarin Oil Green) Extract, Carica Papaya (Papaya) Fruit Extract, Cocos Nucifera (Coconut) Fruit Extract, Ficus Carica (Fig) Fruit Extract, Garcinia Mangostana Fruit Extract, Mangifera Indica (Mango) Fruit Extract, Theobroma Cacao (Cocoa) Seed Extract, Coumarin, Limonene, Butylphenyl Methylpropional, Benzyl Salicylate, CI 14700 (Red 4), CI 19140 (Yellow 5), CI 42090 (Blue 1).
 							</div>
-						</div>
+						</div> --}}
 					</div>
 				</div>
 
-				<ul id="product-collapse" class="list-unstyled border-top mb-4 order-lg-2">
+				{{!-- <ul id="product-collapse" class="list-unstyled border-top mb-4 order-lg-2">
 					<li class="py-3 border-bottom">
 						<button id="product-collapse-1__toggle" class="btn-unstyled w-100 d-flex justify-content-between font-weight-bold product-collapse__toggle collapsed sni-after sni__plus" type="button" data-toggle="collapse" data-target="#product-collapse-1" aria-expanded="true" aria-controls="product-collapse-1">How to Use</button>
 						<div id="product-collapse-1" class="product-collapse font-size-sm collapse" aria-labelledby="product-collapse-1__toggle" data-parent="#product-collapse">
@@ -212,12 +216,12 @@
 							<p>Contact our customer service team, <a href="">click here.</a></p>
 						</div>
 					</li>
-				</ul>
+				</ul> --}}
 
-				<ul class="list-unstyled mb-0 order-lg-2">
+				{{!-- <ul class="list-unstyled mb-0 order-lg-2">
 					<li class="mb-2">{{> compounds/upsell-pdp remove=true}}</li>
 					<li>{{> compounds/upsell-pdp}}</li>
-				</ul>
+				</ul> --}}
 			</div>
 		</div>
 	</div>

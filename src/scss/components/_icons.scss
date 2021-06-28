@@ -1,8 +1,7 @@
 $supernova-icon-font: "supernova-icon";
 
 $supernova-icon-asset: url("/cocoandeve-styleguides/fonts/supernova-icon.woff2?540d58c4abae141dc705eece382df00d") format("woff2"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.woff?540d58c4abae141dc705eece382df00d") format("woff"),
-url("/cocoandeve-styleguides/fonts/supernova-icon.svg?540d58c4abae141dc705eece382df00d#supernova-icon") format("svg") !default;
+url("/cocoandeve-styleguides/fonts/supernova-icon.woff?540d58c4abae141dc705eece382df00d") format("woff") !default;
 
 @font-face {
 	font-family: $supernova-icon-font;

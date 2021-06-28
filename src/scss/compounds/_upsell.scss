@@ -92,7 +92,7 @@
 		width: calc-em(90);
 	}
 
-	a {
+	&__atc {
 		width: calc-em(80);
 
 		@include media-breakpoint-up(lg) {
