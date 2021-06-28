@@ -316,7 +316,7 @@
     right: 0;
     background: #fff;
     text-align: center;
-    z-index: 10000;
+    z-index: $zindex-dropdown;
     border-top: 1px solid #e6e6e6;
     -webkit-transition: bottom 0.7s ease-out;
     transition: bottom 0.7s ease-out;
