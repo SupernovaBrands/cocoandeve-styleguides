@@ -65,9 +65,11 @@
 	}
 
 	.sni {
-		font-size: calc-em(30);
 		color: $primary;
 		transition: color $hover-transition-timing;
+		&::before {
+			font-size: calc-em(30);
+		}
 	}
 
 	a:hover {
