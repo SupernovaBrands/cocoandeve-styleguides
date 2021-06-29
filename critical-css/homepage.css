@@ -1,3 +1,5 @@
+@font-face{font-family:sofia-pro;src:url(https://use.typekit.net/af/30420e/00000000000000003b9b1a9e/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff2");font-display:swap;font-style:normal;font-weight:700}
+@font-face{font-family:sofia-pro;src:url(https://use.typekit.net/af/5855b2/00000000000000003b9b1a98/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff2");font-display:swap;font-style:normal;font-weight:400}
 svg{overflow:hidden;vertical-align:middle}
 .navbar{position:relative;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:0 .46875em}
 .navbar .container{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between}
@@ -42,10 +44,6 @@ svg{overflow:hidden;vertical-align:middle}
 .nav-link.sni__cart{font-size:1.25em;flex-basis:20%}
 .nav-link.sni__cart:before{font-size:1.25em;margin-right:.1875em}
 }
-@media (min-width:1260px){
-.container{max-width:1200px}
-.navbar-brand:before{font-size:2.05em}
-}
 @media (min-width:992px){
 .navbar-expand-lg .navbar-nav{flex-basis:40%}
 .navbar-expand-lg .navbar-nav .nav-link{line-height:1.375em}
@@ -65,7 +63,8 @@ svg{overflow:hidden;vertical-align:middle}
 .navbar-toggler span::after,.navbar-toggler span::before{content:"";height:2px;background:#151515;position:absolute;left:0}
 .navbar-toggler span::before{width:1.05em;top:-.4em}
 .navbar-toggler span::after{width:.95em;top:.4em}
-.mega-menu,.mobile-nav,.modal,.tooltip{display:none}
+.mega-menu,.mobile-nav{visibility:hidden;opacity:0}
+.modal,.tooltip{display:none}
 button{font-family:inherit;font-size:inherit;line-height:inherit;text-transform:none;font-family:inherit;font-size:inherit;line-height:inherit;text-transform:none;border-radius:0;overflow:visible}
 .col-12,.col-3,.col-9,.col-lg-3,.col-lg-4,.col-lg-6,.col-lg-7,.col-md-3{position:relative;width:100%;padding-right:7.5px;padding-left:7.5px}
 *,::after,::before{box-sizing:border-box}

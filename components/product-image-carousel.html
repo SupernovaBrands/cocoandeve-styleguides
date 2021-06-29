@@ -9,74 +9,117 @@
 	<link rel="stylesheet" href="/cocoandeve-styleguides/css/main.css">
 </head>
 
-<body class="mobile-wrapper">
-	<div class="container mt-4">
+<body class="template-product">
+	<div class="container px-g mt-4">
 		<h1>Product Image Carousel</h1>
 
 		<div class="row">
 			<div class="product-image-carousel__container col-12 col-lg-6 order-lg-2">
-				<figure id="product-image-carousel" class="product-image-carousel carousel slide mb-1 no-gutters__in-container" data-ride="carousel" data-interval="false" data-indicator="#product-image-carousel__indicator">
+				<figure id="product-image-carousel" class="product-image-carousel carousel slide mb-1 mb-lg-0 no-gutters__in-container" data-ride="carousel" data-interval="false" data-indicator="#product-image-carousel__indicator">
 					<div class="carousel-inner">
-						<img class="carousel-item active" src="https://via.placeholder.com/750x750/EFADBA?text=1" alt="Slide 1">
-						<img class="carousel-item " src="https://via.placeholder.com/750x750/EFADBA?text=2" alt="Slide 2">
-						<img class="carousel-item " src="https://via.placeholder.com/750x750/EFADBA?text=3" alt="Slide 3">
-						<img class="carousel-item " src="https://via.placeholder.com/750x750/EFADBA?text=4" alt="Slide 4">
-						<img class="carousel-item " src="https://via.placeholder.com/750x750/EFADBA?text=5" alt="Slide 5">
-						<img class="carousel-item " src="https://via.placeholder.com/750x750/EFADBA?text=6" alt="Slide 6">
-						<img class="carousel-item " src="https://via.placeholder.com/750x750/EFADBA?text=7" alt="Slide 7">
-						<img class="carousel-item " src="https://via.placeholder.com/750x750/EFADBA?text=8" alt="Slide 8">
+						<div class="carousel-item active">
+							<picture >
+								<source srcset="https://via.placeholder.com/1140x1260/EFADBA?text=1140x1260+Slide+1" media="(min-width: 992px)">
+								<img src="https://via.placeholder.com/750x750/EFADBA?text=750x750+Slide+1" alt="Slide 1" class="w-100" />
+							</picture>
+						</div>
+						<div class="carousel-item ">
+							<picture >
+								<source srcset="https://via.placeholder.com/1140x1260/EFADBA?text=1140x1260+Slide+2" media="(min-width: 992px)">
+								<img src="https://via.placeholder.com/750x750/EFADBA?text=750x750+Slide+2" alt="Slide 2" class="w-100" />
+							</picture>
+						</div>
+						<div class="carousel-item ">
+							<picture >
+								<source srcset="https://via.placeholder.com/1140x1260/EFADBA?text=1140x1260+Slide+3" media="(min-width: 992px)">
+								<img src="https://via.placeholder.com/750x750/EFADBA?text=750x750+Slide+3" alt="Slide 3" class="w-100" />
+							</picture>
+						</div>
+						<div class="carousel-item ">
+							<picture >
+								<source srcset="https://via.placeholder.com/1140x1260/EFADBA?text=1140x1260+Slide+4" media="(min-width: 992px)">
+								<img src="https://via.placeholder.com/750x750/EFADBA?text=750x750+Slide+4" alt="Slide 4" class="w-100" />
+							</picture>
+						</div>
+						<div class="carousel-item ">
+							<picture >
+								<source srcset="https://via.placeholder.com/1140x1260/EFADBA?text=1140x1260+Slide+5" media="(min-width: 992px)">
+								<img src="https://via.placeholder.com/750x750/EFADBA?text=750x750+Slide+5" alt="Slide 5" class="w-100" />
+							</picture>
+						</div>
+						<div class="carousel-item ">
+							<picture >
+								<source srcset="https://via.placeholder.com/1140x1260/EFADBA?text=1140x1260+Slide+6" media="(min-width: 992px)">
+								<img src="https://via.placeholder.com/750x750/EFADBA?text=750x750+Slide+6" alt="Slide 6" class="w-100" />
+							</picture>
+						</div>
+						<div class="carousel-item ">
+							<picture >
+								<source srcset="https://via.placeholder.com/1140x1260/EFADBA?text=1140x1260+Slide+7" media="(min-width: 992px)">
+								<img src="https://via.placeholder.com/750x750/EFADBA?text=750x750+Slide+7" alt="Slide 7" class="w-100" />
+							</picture>
+						</div>
+						<div class="carousel-item ">
+							<picture class="position-relative sni sni__play">
+								<source srcset="https://via.placeholder.com/1140x1260/EFADBA?text=1140x1260+Slide+8" media="(min-width: 992px)">
+								<img src="https://via.placeholder.com/750x750/EFADBA?text=750x750+Slide+8" alt="Slide 8" class="w-100" />
+							</picture>
+						</div>
 					</div>
 				</figure>
+				<picture class="circle-badge position-absolute rounded-circle bg-primary d-flex p-1 mr-0 mt-2 mr-lg-1 mt-lg-1">
+					<img class="w-100" src="../images/badge-25.svg" />
+				</picture>
 			</div>
 			
-			<div id="product-image-carousel__indicator" class="product-image-carousel__indicator col-12 col-lg-1 order-lg-1 carousel slide carousel--loop mb-1" data-slide-number="5" data-ride="carousel" data-interval="false">
-				<button class="carousel-indicator btn-unstyled d-none d-lg-flex mx-auto mb-1 text-center sni sni__chevron-up" href="#product-image-carousel__indicator" data-slide="prev" aria-hidden="true" disabled>
+			<div id="product-image-carousel__indicator" class="product-image-carousel__indicator col-12 col-lg-1 order-lg-1 carousel slide carousel--loop mb-1 mb-lg-0 px-0 px-lg-g" data-slide-number="5" data-ride="carousel" data-interval="false">
+				<button class="carousel-indicator btn-unstyled d-none d-lg-flex mx-auto mb-1 mb-lg-3 text-center sni sni__chevron-up text-primary align-items-center" href="#product-image-carousel__indicator" data-slide="prev" aria-hidden="true" disabled>
 				</button>
 			
 				<div class="carousel-inner d-flex flex-nowrap flex-lg-column ">
-					<div class="product-image-carousel__indicator__item carousel-item active col-12 px-lg-0 pb-lg-2 mw-100" data-target="#product-image-carousel" data-index="1">
+					<div class="product-image-carousel__indicator__item carousel-item active col-12 px-lg-0 pb-lg-3 mw-100" data-target="#product-image-carousel" data-index="1">
 						<button class="btn-unstyled border d-block border-primary">
 							<img class="img-fluid mx-auto d-block" src="https://via.placeholder.com/150x150/EFADBA?text=1" alt="Slide 1">
 						</button>
 					</div>
-					<div class="product-image-carousel__indicator__item carousel-item  col-12 px-lg-0 pb-lg-2 mw-100" data-target="#product-image-carousel" data-index="2">
+					<div class="product-image-carousel__indicator__item carousel-item  col-12 px-lg-0 pb-lg-3 mw-100" data-target="#product-image-carousel" data-index="2">
 						<button class="btn-unstyled border d-block border-white">
 							<img class="img-fluid mx-auto d-block" src="https://via.placeholder.com/150x150/EFADBA?text=2" alt="Slide 2">
 						</button>
 					</div>
-					<div class="product-image-carousel__indicator__item carousel-item  col-12 px-lg-0 pb-lg-2 mw-100" data-target="#product-image-carousel" data-index="3">
+					<div class="product-image-carousel__indicator__item carousel-item  col-12 px-lg-0 pb-lg-3 mw-100" data-target="#product-image-carousel" data-index="3">
 						<button class="btn-unstyled border d-block border-white">
 							<img class="img-fluid mx-auto d-block" src="https://via.placeholder.com/150x150/EFADBA?text=3" alt="Slide 3">
 						</button>
 					</div>
-					<div class="product-image-carousel__indicator__item carousel-item  col-12 px-lg-0 pb-lg-2 mw-100" data-target="#product-image-carousel" data-index="4">
+					<div class="product-image-carousel__indicator__item carousel-item  col-12 px-lg-0 pb-lg-3 mw-100" data-target="#product-image-carousel" data-index="4">
 						<button class="btn-unstyled border d-block border-white">
 							<img class="img-fluid mx-auto d-block" src="https://via.placeholder.com/150x150/EFADBA?text=4" alt="Slide 4">
 						</button>
 					</div>
-					<div class="product-image-carousel__indicator__item carousel-item  col-12 px-lg-0 pb-lg-2 mw-100" data-target="#product-image-carousel" data-index="5">
+					<div class="product-image-carousel__indicator__item carousel-item  col-12 px-lg-0 pb-lg-3 mw-100" data-target="#product-image-carousel" data-index="5">
 						<button class="btn-unstyled border d-block border-white">
 							<img class="img-fluid mx-auto d-block" src="https://via.placeholder.com/150x150/EFADBA?text=5" alt="Slide 5">
 						</button>
 					</div>
-					<div class="product-image-carousel__indicator__item carousel-item  col-12 px-lg-0 pb-lg-2 mw-100" data-target="#product-image-carousel" data-index="6">
+					<div class="product-image-carousel__indicator__item carousel-item  col-12 px-lg-0 pb-lg-3 mw-100" data-target="#product-image-carousel" data-index="6">
 						<button class="btn-unstyled border d-block border-white">
 							<img class="img-fluid mx-auto d-block" src="https://via.placeholder.com/150x150/EFADBA?text=6" alt="Slide 6">
 						</button>
 					</div>
-					<div class="product-image-carousel__indicator__item carousel-item  col-12 px-lg-0 pb-lg-2 mw-100" data-target="#product-image-carousel" data-index="7">
+					<div class="product-image-carousel__indicator__item carousel-item  col-12 px-lg-0 pb-lg-3 mw-100" data-target="#product-image-carousel" data-index="7">
 						<button class="btn-unstyled border d-block border-white">
 							<img class="img-fluid mx-auto d-block" src="https://via.placeholder.com/150x150/EFADBA?text=7" alt="Slide 7">
 						</button>
 					</div>
-					<div class="product-image-carousel__indicator__item carousel-item  col-12 px-lg-0 pb-lg-2 mw-100" data-target="#product-image-carousel" data-index="8">
+					<div class="product-image-carousel__indicator__item carousel-item  col-12 px-lg-0 pb-lg-3 mw-100" data-target="#product-image-carousel" data-index="8">
 						<button class="btn-unstyled border d-block border-white">
 							<img class="img-fluid mx-auto d-block" src="https://via.placeholder.com/150x150/EFADBA?text=8" alt="Slide 8">
 						</button>
 					</div>
 				</div>
 			
-				<button class="carousel-indicator btn-unstyled d-none d-lg-flex mx-auto mt-1 text-center sni sni__chevron-down" href="#product-image-carousel__indicator" data-slide="next" aria-hidden="true">
+				<button class="carousel-indicator btn-unstyled d-none d-lg-flex mx-auto mt-1 mt-lg-3 text-center sni sni__chevron-down text-primary align-items-center" href="#product-image-carousel__indicator" data-slide="next" aria-hidden="true">
 				</button>
 			</div>
 		</div>
