@@ -1,14 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30">
-  <defs>
-    <style>
-      .a{fill:#f4436c;}.b{fill:#fff;}
-    </style>
-  </defs>
-  <g transform="translate(.448)">
-    <circle class="a" cx="15" cy="15" r="15" transform="translate(-.448)"/>
-    <g transform="translate(6.552 7)">
-      <rect class="b" width="16" height="1.6" rx=".8" transform="rotate(90 4.4 4.4)"/>
-      <rect class="b" width="16" height="1.6" rx=".8" transform="translate(0 7.2)"/>
-    </g>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path d="M15 0C6.7 0 0 6.7 0 15s6.7 15 15 15 15-6.7 15-15S23.3 0 15 0zm7.2 15.8h-6.4v6.4c0 .4-.4.8-.8.8s-.8-.4-.8-.8v-6.4H7.8c-.4 0-.8-.4-.8-.8s.4-.8.8-.8h6.4V7.8c0-.4.4-.8.8-.8s.8.4.8.8v6.4h6.4c.4 0 .8.4.8.8s-.4.8-.8.8z" fill="#f4436c"/></svg>

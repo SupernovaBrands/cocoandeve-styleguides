@@ -1,3 +1,4 @@
+/* global screenLG */
 import snCart from '~mod/sn-cart';
 
 $('.product-image-carousel__indicator__item').on('click', function () {
@@ -57,44 +58,87 @@ if ($('.product-collapse__toggle').length > 0) {
 
 $('.product-form').on('submit', function (e) {
 	e.preventDefault();
-	const data = $(this).find('.product-data').text().split('::')
-		.map((t) => {
-			const splits = t.split('|');
-			const result = { id: splits.pop() };
-			splits.forEach((element, index) => {
-				result[`option${index + 1}`] = element;
-			});
-			return result;
-		});
-
-	const option1 = $(this).find('input[name="product-variant"]:checked').val();
-	const option2 = $(this).find('input[name="product-color"]:checked').val();
+	const variantId = $(this).find('input[name="product-variant"]:checked ~ label .product-swatch button.border-primary').data('id');
 	const quantity = parseInt($(this).find('input[name="quantity"]').val(), 10);
 
-	const selected = data.find((d) => d.option1 === option1 && d.option2 === option2);
-
-	if (selected) {
-		snCart.addItem(parseInt(selected.id, 10), quantity);
+	if (variantId) {
+		snCart.addItem(parseInt(variantId, 10), quantity);
 	}
 });
 
-$('.product-swatch-desktop .swatch').on('click', function () {
-	const attrFor = $(this).attr('for');
-	$('.product-swatch-mobile .swatch').removeClass('border-primary');
-	$(`.product-swatch-mobile .swatch[for=${attrFor}]`).addClass('border-primary');
+const mobileSwatch = $('.product-swatch-mobile');
+const updateFormButton = (form) => {
+	const selected = form.find('[name=product-variant]:checked ~ label .variant-swatch.border-primary');
+	if (selected.hasClass('waitlist') && $('#product-waitlist-form-oos').hasClass('d-none')) {
+		form.find('.product-form-submit').addClass('d-none');
+		mobileSwatch.find('.scroll-to-element').removeClass('d-none');
+		$('#product-waitlist-form-oos').removeClass('d-none');
+	} else {
+		form.find('.product-form-submit').removeClass('d-none');
+		mobileSwatch.find('.scroll-to-element').addClass('d-none');
+		$('#product-waitlist-form-oos').addClass('d-none');
+	}
+
+	if (selected.hasClass('oos')) {
+		form.find('button[type=submit]').text('Out of Stock').attr('disabled', 'disabled');
+	} else {
+		form.find('button[type=submit]').text('Add to Cart').removeAttr('disabled');
+	}
+};
+
+$('.product-form .variant-swatch').on('click', function () {
+	const attrFor = $(this).data('value');
+	const swatchContainers = $(this).closest('form').find('.product-swatch');
+	swatchContainers.each((i, el) => {
+		const swatches = $(el).find('.variant-swatch');
+		const selected = swatches.filter(`[data-value=${attrFor}]`);
+		if (selected.length > 0) {
+			swatches.removeClass('border-primary');
+			selected.addClass('border-primary');
+			$(el).find('p').addClass('d-none')
+				.filter(`.swatch-label-${attrFor}`)
+				.removeClass('d-none');
+		}
+	});
+	updateFormButton($(this).closest('form'));
 });
 
-$('.product-swatch-mobile .swatch').on('click', function () {
-	$(this).siblings('.swatch').removeClass('border-primary');
-	$(this).addClass('border-primary');
+$('.product-form [name=product-variant]').on('change', function () {
+	const swatches = $(this).parent().find('.variant-swatch');
+	if (swatches.length > 1) {
+		mobileSwatch.find('.product-swatch-mobile__action').addClass('d-none');
+		mobileSwatch.find('.product-swatch-mobile__toggle').removeClass('d-none');
+	} else {
+		mobileSwatch.find('.product-swatch-mobile__action').removeClass('d-none');
+		mobileSwatch.find('.product-swatch-mobile__toggle').addClass('d-none');
+	}
+	updateFormButton($(this).closest('form'));
 });
 
 $('.product-swatch-mobile__collapse')
 	.on('show.bs.collapse', function () {
-		$(this).siblings('button[type=submit]').removeClass('d-none');
-		$(this).siblings('button[type=button]').addClass('d-none');
+		$(this).siblings('.product-swatch-mobile__action').removeClass('d-none');
+		$(this).siblings('.product-swatch-mobile__toggle').addClass('d-none');
 	})
 	.on('hide.bs.collapse', function () {
-		$(this).siblings('button[type=submit]').addClass('d-none');
-		$(this).siblings('button[type=button]').removeClass('d-none');
+		$(this).siblings('.product-swatch-mobile__action').addClass('d-none');
+		$(this).siblings('.product-swatch-mobile__toggle').removeClass('d-none');
 	});
+
+const mobileSwatchTrigger = document.querySelector('.product-swatch-mobile__trigger');
+if (mobileSwatchTrigger && mobileSwatch.length > 0) {
+	const observerCallback = (entries) => {
+		if (window.innerWidth < screenLG) {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					mobileSwatch.removeClass('show');
+					$('.product-swatch-mobile__collapse').collapse('hide');
+				} else {
+					mobileSwatch.addClass('show');
+				}
+			});
+		}
+	};
+	const observer = new IntersectionObserver(observerCallback);
+	observer.observe(mobileSwatchTrigger);
+}

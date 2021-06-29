@@ -453,3 +453,25 @@
 		right: 8px;
 	}
 }
+
+.product-waitlist-form {
+	&-oos {
+		border-radius: 20px;
+
+		@include media-breakpoint-down(md) {
+			.btn {
+				width: 100%;
+				margin-top: map-get($spacers, 1);
+			}
+		}
+
+		@include media-breakpoint-up(lg) {
+			.input-group {
+				background: $white;
+			}
+			.form-control {
+				border: 0;
+			}
+		}
+	}
+}

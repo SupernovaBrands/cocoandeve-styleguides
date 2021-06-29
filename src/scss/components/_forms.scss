@@ -76,12 +76,13 @@
 .quantity-box {
 	.form-control {
 		width: 2em;
-	}
+		-moz-appearance: textfield;
 
-	input::-webkit-outer-spin-button,
-	input::-webkit-inner-spin-button {
-		-webkit-appearance: none;
-		margin: 0;
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
 	}
 
 	button:focus {

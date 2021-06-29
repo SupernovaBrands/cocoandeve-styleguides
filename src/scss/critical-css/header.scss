@@ -1,9 +1,22 @@
+@font-face {
+	font-family: "sofia-pro";
+	src: url("https://use.typekit.net/af/30420e/00000000000000003b9b1a9e/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2");
+	font-display: swap;
+	font-style: normal;
+	font-weight: 700;
+}
+@font-face {
+	font-family: "sofia-pro";
+	src: url("https://use.typekit.net/af/5855b2/00000000000000003b9b1a98/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2");
+	font-display: swap;
+	font-style: normal;
+	font-weight: 400;
+}
 *,::after,::before{box-sizing:border-box}
 html{font-family:sans-serif;line-height:1.15;-webkit-text-size-adjust:100%}
 header,nav{display:block}
 body{margin:0;font-family:sofia-pro,"Helvetica Neue",Arial,sans-serif;font-size:1em;font-weight:400;line-height:1.25;color:#151515;text-align:left;background-color:#fff}
 ul{margin-top:0;margin-bottom:1rem}
-b{font-weight:bolder}
 a{color:#f3436c;text-decoration:none;background-color:transparent}
 svg{overflow:hidden;vertical-align:middle}
 button{border-radius:0;margin:0;font-family:inherit;font-size:inherit;line-height:inherit;overflow:visible;text-transform:none}
@@ -72,7 +85,6 @@ button{border-radius:0;margin:0;font-family:inherit;font-size:inherit;line-heigh
 }
 @media (min-width:1260px){
 .container{max-width:1200px}
-.navbar-brand:before{font-size:2.05em}
 }
 @media (min-width:992px){
 .navbar-expand-lg .navbar-nav{flex-basis:40%}
@@ -93,4 +105,5 @@ button{border-radius:0;margin:0;font-family:inherit;font-size:inherit;line-heigh
 .navbar-toggler span::after,.navbar-toggler span::before{content:"";height:2px;background:#151515;position:absolute;left:0}
 .navbar-toggler span::before{width:1.05em;top:-.4em}
 .navbar-toggler span::after{width:.95em;top:.4em}
-.mega-menu, .tooltip, .modal, .mobile-nav { display: none; }
+.mega-menu,.mobile-nav{visibility:hidden;opacity:0;}
+.tooltip,.modal{display:none;}

@@ -2,7 +2,7 @@ module.exports = {
 	name: 'supernova-icon',
 	inputDir: './fonts/svgs', // (required)
 	outputDir: './fonts', // (required)
-	fontTypes: ['woff2', 'woff', 'svg'],
+	fontTypes: ['woff2', 'woff'],
 	fontsUrl: '/cocoandeve-styleguides/fonts',
 	assetTypes: ['scss', 'html'],
 	normalize: true,

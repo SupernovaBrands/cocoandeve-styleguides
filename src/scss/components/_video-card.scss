@@ -59,6 +59,10 @@
 }
 
 .video-modal {
+	.modal-content {
+		overflow: hidden;
+	}
+
 	&--body {
 		padding: 0;
 	}
@@ -66,5 +70,10 @@
 	&--icon {
 		right: calc-em(10, 16);
 		top: calc-em(10, 16);
+	}
+
+	video, iframe {
+		display: block;
+		width: 100%;
 	}
 }

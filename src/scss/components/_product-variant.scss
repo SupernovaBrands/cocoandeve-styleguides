@@ -1,14 +1,36 @@
 .product-variant {
 	.custom-control-label {
-		padding-left: calc-em(60);
+		padding-left: calc-em(60, $unit: 1rem);
 		&::before {
-			top: 50%;
-			left: calc-em(20);
-			transform: translateY(-50%);
+			top: calc-em(40, $unit: 1rem);
+			left: calc-em(20, $unit: 1rem);
+			border-color: $gray-500;
 		}
 	}
 
-	.custom-control-input:checked~.custom-control-label {
-		border-color: $primary !important;
+	.product-swatch {
+		display: none;
+	}
+
+	.custom-control-input {
+		&:not(:disabled):active ~ .custom-control-label::before {
+			background-color: #fff;
+		}
+
+		&:checked:active ~ .custom-control-label::before {
+			background-color: $primary;
+			border-color: $primary;
+		}
+
+		&:checked ~ .custom-control-label {
+			border-color: $primary !important;
+			.product-swatch {
+				display: block;
+			}
+		}
+	}
+
+	.text-linethrough {
+		color: $gray-600;
 	}
 }

@@ -5,9 +5,17 @@ import {
 waitFor(() => window.yotpo !== undefined, () => {
 	if ($('.yotpo.bottomLine.show-avg-score').length > 0) {
 		$('.yotpo.bottomLine.show-avg-score').each((i, el) => {
-			const stars = $(el).find('.yotpo-stars');
-			const rating = stars.find('.sr-only').text().split(' ')[0];
-			stars.after(`<span class="ml-1">${rating}</span>`);
+			waitFor(() => $(el).find('.yotpo-display-wrapper').length > 0, () => {
+				const stars = $(el).find('.yotpo-stars');
+				if (stars.length > 0) {
+					const rating = stars.find('.sr-only').text().split(' ')[0];
+					stars.after(`<span class="rating-num text-body">${rating} stars</span>`);
+					const totalReviews = $(el).find('.text-m');
+					totalReviews.text(`(${totalReviews.text().split(' ')[0]})`);
+				} else {
+					$(el).addClass('d-none');
+				}
+			});
 		});
 	}
 });

@@ -27,8 +27,8 @@ export default class CartUpsell extends React.Component {
 			<div className="mt-2">
 				<p className="text-center bg-primary-light m-0 py-1">{tSettings.upsell_header_title}</p>
 				{upsell.map((item) => (
-					<div className="upsell d-flex align-items-center pt-2 pb-3">
-						<figure key={item.replaceToId} className="row mb-0 w-100">
+					<div key={item.replaceToId} className="upsell d-flex align-items-center pt-2 pb-3">
+						<figure className="row mb-0 w-100">
 							<picture className="col-5">
 								<img
 									className="lazyload w-100"

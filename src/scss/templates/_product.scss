@@ -1,7 +1,7 @@
 .product-swatch-mobile {
 	transform: translateY(150%);
-	transition: transform .1s ease-in-out;
-	z-index: $zindex-dropdown;
+	transition: transform .25s ease-in-out;
+	z-index: $zindex-dropdown !important;
 
 	&.show {
 		transform: translateY(0);
@@ -19,14 +19,28 @@
 }
 
 .product-info-tab {
+	border-color: $gray-400;
+
 	.nav-item {
 		flex: 1 0 0;
 	}
 
 	.nav-link {
 		&.active {
-			box-shadow: 0 -2px 0 0 inset $primary;
+			font-weight: $font-weight-bold;
+			background: none;
+			border-bottom: 2px solid $primary !important;
 		}
+	}
+}
+
+#product-ingredients__toggle {
+	&::after {
+		content: '\a0-';
+	}
+
+	&.collapsed::after {
+		content: '\a0+';
 	}
 }
 
@@ -40,5 +54,30 @@
 			width: 1.2em;
 			margin-right: 0.2em;
 		}
+	}
+}
+
+.shipping-table {
+	th {
+		background: #E0F0E9;
+	}
+
+	th,
+	td {
+		padding: 0.5rem;
+	}
+}
+
+#shipping-modal {
+	.close {
+		top: 0;
+		right: 0;
+		z-index: 1;
+	}
+}
+
+.video-card {
+	picture:before {
+		font-size: 3em;
 	}
 }

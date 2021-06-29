@@ -1,6 +1,14 @@
 .cart-drawer {
 	z-index: $zindex-cartdrawer;
 
+	.modal-dialog {
+		max-width: calc-em(430);
+	}
+
+	.modal-dialog, .modal-content {
+		height: 100%;
+	}
+
 	&:not(.show) .modal-dialog {
 		transform: translate(100%, 0);
 	}
@@ -11,10 +19,11 @@
 		font-size: $font-size-base;
 		outline: none;
 		opacity: 1;
+		padding-top: map-get($spacers, 2) + map-get($spacers, 1) / 2;
 	}
 
 	.progress {
-		height: calc-em(5, 16);
+		height: 5px;
 	}
 
 	hr {
@@ -30,13 +39,14 @@
 		}
 	}
 
-	&__discount-toggle:before {
-		content: "-\a0";
+	&__discount-toggle:after {
+		content: "\a0-";
 		display: inline-block;
+		text-decoration: inherit;
 	}
 
-	&__discount-toggle.collapsed:before {
-		content: "+\a0";
+	&__discount-toggle.collapsed:after {
+		content: "\a0+";
 	}
 
 	&__services .sni:before {
@@ -58,11 +68,10 @@
 
 	&__left,
 	&__right {
-		font-size: calc-em(24);
 		top: 0;
 	}
-	&__left { right: calc-em(48, 24); }
-	&__right { right: calc-em(12, 24); }
+	&__left { right: 2em; }
+	&__right { right: 0.5em; }
 
 	&__item {
 		flex: 0 0 calc-em(96);
@@ -76,6 +85,7 @@
 			font-size: $font-size-xs;
 			background: $gray-200;
 			padding: map-get($spacers, 1) / 2;
+			border-radius: 2px;
 		}
 
 		button {
