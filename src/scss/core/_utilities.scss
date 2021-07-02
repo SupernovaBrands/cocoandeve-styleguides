@@ -1,7 +1,6 @@
 // Light pink background color
 @include bg-variant(".bg-primary-light", $primary-light, true);
 @include bg-variant(".bg-blue", $bali-bod-blue, true);
-@include bg-variant(".bg-orange-light", $sh-orange-light, true);
 @include bg-variant(".bg-purple-light", $sh-purple-light, true);
 @include bg-variant(".bg-secondary-light", $secondary-light, true);
 @include bg-variant(".bg-yellow-light", $yellow-light, true);
