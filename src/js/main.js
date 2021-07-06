@@ -107,6 +107,7 @@ $(document).ready(function () {
 	if (sidebarCarousel.length > 0) {
 		if (window.innerWidth < screenLG) {
 			sidebarCarousel.addClass('carousel');
+			sidebarCarousel.find('.rounded-circle.active').click();
 		}
 
 		$(window).on('resize', function () {
@@ -114,6 +115,7 @@ $(document).ready(function () {
 				sidebarCarousel.removeClass('carousel');
 			} else {
 				sidebarCarousel.addClass('carousel');
+				sidebarCarousel.find('.rounded-circle.active').click();
 			}
 		});
 	}
