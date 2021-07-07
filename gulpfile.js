@@ -125,7 +125,10 @@ const vendorJsFiles = function () {
 const scssFiles = function () {
 	return src(files.scss)
 		.pipe(sourcemaps.init())
-		.pipe(sass({ outputStyle: 'compressed' }).on('error', errorHandler))
+		.pipe(sass({
+			includePaths: ['node_modules/'],
+			outputStyle: 'compressed',
+		}).on('error', errorHandler))
 		.pipe(autoprefixer())
 		.pipe(sourcemaps.write('.'))
 		.pipe(dest(cssDir))
