@@ -8,6 +8,10 @@
 	background-size: calc-em(30);
 	position: relative;
 
+  &.oos {
+    opacity: .5;
+  }
+
 	&:before {
 		content: ' ';
 		position: absolute;
