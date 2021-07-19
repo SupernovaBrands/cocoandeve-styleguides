@@ -13,6 +13,11 @@
 		padding-bottom: calc-em(58);
 		background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, white 100%);
 		transition: all 300ms ease-in-out;
+
+		.btn-primary:hover {
+			background-color: $primary;
+			border-color: $primary;
+		}
 	}
 
 	.btn-choose:hover + .swatch-overlay,
