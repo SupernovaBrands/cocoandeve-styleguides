@@ -76,6 +76,11 @@
       }
     }
   }
+
+  div:focus,
+  span:focus {
+    outline: none;
+  }
 }
 
 .yotpo-display-wrapper {
