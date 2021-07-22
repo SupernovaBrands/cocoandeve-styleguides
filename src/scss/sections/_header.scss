@@ -3,7 +3,7 @@
 }
 
 .main-header {
-	z-index: $zindex-sticky;
+	z-index: $zindex-tooltip;
 
 	.offcanvas-active & {
 		height: 100%;

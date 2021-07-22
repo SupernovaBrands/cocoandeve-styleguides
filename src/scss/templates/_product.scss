@@ -69,11 +69,17 @@
 }
 
 #shipping-modal {
+	z-index: #{$zindex-tooltip + 1};
+
 	.close {
 		top: 0;
 		right: 0;
 		z-index: 1;
 	}
+}
+
+.modal-backdrop {
+	z-index: $zindex-tooltip;
 }
 
 .video-card {
