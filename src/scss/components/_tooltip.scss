@@ -6,6 +6,8 @@
     transition: all 0.4s ease-in-out;
     visibility: hidden;
     width: auto;
+    z-index: $zindex-modal;
+
     @include media-breakpoint-up(lg) {
         left: auto;
         right: 0;

@@ -3,7 +3,7 @@
 }
 
 .main-header {
-	z-index: $zindex-tooltip;
+	z-index: $zindex-modal;
 
 	.offcanvas-active & {
 		height: 100%;
@@ -102,7 +102,7 @@
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.6);
 	visibility: hidden;
-	z-index: $zindex-tooltip; // same value with tooltip to be above
+	z-index: $zindex-modal;
 
 	//overlay close icon
 	&:before {
