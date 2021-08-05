@@ -1,12 +1,10 @@
 <div class="{{#if carousel }}carousel-item {{else}} d-flex flex-column {{/if}} {{#if carousel }} col-9 col-md-3 {{else}}col-6 col-md-4 mb-5 {{/if}} {{active}} product-card text-center">
-	{{#if badge }}
 	<a href="#">
+	{{#if badge }}
 		<picture class="circle-badge position-absolute rounded-circle bg-primary d-flex p-1">
 			<img class="w-100" src="../images/{{ badge_image }}"/>
 		</picture>
-	</a>
 	{{/if}}
-	<a href="#">
 	<picture class="m-0">
 		<source srcset="https://via.placeholder.com/243x243"/>
 		<img class="w-100"
