@@ -48,7 +48,7 @@ if (realResults.length > 0) {
 }
 
 if ($('.real-result').length > 0) {
-	import(/* webpackChunkName: 'carousel-loop' */ '~mod/page-reviews');
+	import(/* webpackChunkName: 'page-reviews' */ '~mod/page-reviews');
 }
 
 const cookieBanner = $('.cookies-banner');
