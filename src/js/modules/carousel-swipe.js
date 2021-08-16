@@ -1,30 +1,3 @@
-/*
-$(document).ready(function () {
-	if ($('.carousel--swipe').length > 0) {
-		$('.carousel--swipe').each((index, carousel) => {
-			let touchstartX = 0;
-			let touchendX = 0;
-
-			function handleGesture() {
-				console.log('touchstartX', touchstartX);
-				console.log('touchendX', touchendX);
-				if (touchendX < touchstartX) $(carousel).carousel('next');
-				if (touchendX > touchstartX) $(carousel).carousel('prev');
-			}
-
-			carousel.addEventListener('touchstart', (e) => {
-				touchstartX = e.changedTouches[0].screenX;
-			});
-
-			carousel.addEventListener('touchend', (e) => {
-				touchendX = e.changedTouches[0].screenX;
-				handleGesture();
-			});
-		});
-	}
-});
-*/
-
 $(document).ready(function () {
 	if ($('.carousel--swipe').length > 0) {
 		$('.carousel--swipe').each((index, carousel) => {
