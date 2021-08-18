@@ -32,6 +32,10 @@ if (carouselLoop.length > 0) {
 	import(/* webpackChunkName: 'carousel-loop' */ '~mod/carousel-loop');
 }
 
+if ($('.carousel--swipe').length > 0) {
+	import(/* webpackChunkName: 'carousel-swipe' */ '~mod/carousel-swipe');
+}
+
 const modalWaitlist = $('#productWaitlist');
 if (modalWaitlist.length > 0) {
 	import(/* webpackChunkName: 'modal-waitlist' */ '~mod/modal-waitlist');
