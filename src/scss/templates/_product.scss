@@ -3,8 +3,16 @@
 	transition: transform .25s ease-in-out;
 	z-index: $zindex-fixed;
 
+	.tooltip--sold-out {
+		transform: translateY(150%);
+	}
+
 	&.show {
 		transform: translateY(0);
+
+		.tooltip--sold-out {
+			transform: translateY(0%);
+		}
 	}
 
 	&__collapse {
