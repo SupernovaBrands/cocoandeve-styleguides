@@ -494,10 +494,14 @@ $(document).ready(function () {
 	// tooltip
 	$('#tooltip__close').on('click', function () {
 		$(this).parent().removeClass('show');
+		setTimeout(function () {
+			$('header').addClass('overflow-hidden');
+		}, 500);
 	});
 
 	$('#tooltip__show').on('click', function () {
 		$('.navbar > .container').addClass('position-relative');
 		$('.tooltip').addClass('show');
+		$('header').removeClass('overflow-hidden');
 	});
 });
