@@ -1,42 +1,63 @@
 .tooltip {
-    left: -($grid-gutter-width / 2);
-    right: -($grid-gutter-width / 2);
-    top: 100%;
-    transform: translateY(-100%);
-    transition: all 0.4s ease-in-out;
-    visibility: hidden;
-    width: auto;
-    z-index: $zindex-modal;
+	left: -($grid-gutter-width / 2);
+	right: -($grid-gutter-width / 2);
+	top: 100%;
+	transform: translateY(-100%);
+	transition: all 0.4s ease-in-out;
+	visibility: hidden;
+	width: auto;
+	z-index: $zindex-modal;
 
-    @include media-breakpoint-up(lg) {
-        left: auto;
-        right: 0;
-        margin-right: $grid-gutter-width;
-        width: 100%;
-    }
+	@include media-breakpoint-up(lg) {
+		left: auto;
+		right: 0;
+		margin-right: $grid-gutter-width;
+		width: 100%;
+	}
 
-    &:before {
-        content: '';
-        position: absolute;
-        border-style: solid;
-        border-width: 0 calc-em(11) calc-em(11) calc-em(11);
-        border-color: transparent transparent $primary transparent;
-        top: 0;
-        right: calc-em(10, 16);
-        transform: translateY(-90%);
-    }
+	&:before {
+		content: '';
+		position: absolute;
+		border-style: solid;
+		border-width: 0 calc-em(11) calc-em(11) calc-em(11);
+		border-color: transparent transparent $primary transparent;
+		top: 0;
+		right: calc-em(10, 16);
+		transform: translateY(-90%);
+	}
 
-    .sni {
-        cursor: pointer;
-        position: absolute;
-        right: calc-em(10, 20);
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: calc-em(19, 16);
-    }
+	&--sold-out {
+		top: -5.5em;
 
-    &.show {
-        transform: translateY(0);
-        visibility: visible;
-    }
+		&:before {
+			content: '';
+			position: absolute;
+			border-style: solid;
+			border-width: calc-em(12) calc-em(12) 0 calc-em(12);
+			border-color: $secondary transparent transparent;
+			bottom: 0;
+			left: calc-em(10, 16);
+			transform: translateY(99%);
+			right: auto;
+
+			@include media-breakpoint-up(lg) {
+				left: auto;
+				right: calc-em(10, 16);
+			}
+		}
+	}
+
+	.sni {
+		cursor: pointer;
+		position: absolute;
+		right: calc-em(10, 20);
+		top: 50%;
+		transform: translateY(-50%);
+		font-size: calc-em(19, 16);
+	}
+
+	&.show {
+		transform: translateY(0);
+		visibility: visible;
+	}
 }
