@@ -33,9 +33,9 @@
 	}
 
 	&--sidebar {
-    @include media-breakpoint-down(sm) {
-      min-height: 17em;
-    }
+		@include media-breakpoint-down(sm) {
+			min-height: 16em;
+		}
 
 		.carousel-item {
 			@include media-breakpoint-up(lg) {
@@ -107,14 +107,14 @@
 		overflow: hidden;
 
 		.carousel-inner {
-  		width: calc(100% + #{$grid-gutter-width});
+			width: calc(100% + #{$grid-gutter-width});
 			overflow: visible;
 			@include make-carousel-centered(9, $grid-columns);
 
 			@include media-breakpoint-up(md) {
-  			width: calc(100% + #{$grid-gutter-width-lg});
+				width: calc(100% + #{$grid-gutter-width-lg});
 
-  			@include make-carousel-centered(3, $grid-columns);
+				@include make-carousel-centered(3, $grid-columns);
 
 				.active + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
 					display: block;
@@ -128,15 +128,15 @@
 			}
 		}
 
-    [data-slide-number="3"] & {
-      .carousel-inner {
-        transform: translateX(-60.6%);
+		[data-slide-number="3"] & {
+			.carousel-inner {
+				transform: translateX(-60.6%);
 
-        @include media-breakpoint-up(lg) {
-          transform: translateX(-10.5%);
-        }
-      }
-    }
+				@include media-breakpoint-up(lg) {
+					transform: translateX(-10.5%);
+				}
+			}
+		}
 	}
 
 	&--centered-mobile {
@@ -154,27 +154,27 @@
 }
 
 .carousel-indicators {
-  &--primary {
-    li {
-      background-color: $primary;
-    }
-  }
+	&--primary {
+		li {
+			background-color: $primary;
+		}
+	}
 
-  &--black {
-    .active {
-      background-color: $body-color;
-    }
-  }
+	&--black {
+		.active {
+			background-color: $body-color;
+		}
+	}
 
-  &--right {
-    justify-content: flex-end;
-    li {
-      &:not(.active) {
-        background: transparent;
-        opacity: 1;
-      }
-    }
-  }
+	&--right {
+		justify-content: flex-end;
+		li {
+			&:not(.active) {
+				background: transparent;
+				opacity: 1;
+			}
+		}
+	}
 }
 
 .carousel-control {
@@ -216,12 +216,12 @@
 				box-shadow: 0 calc-em(4) calc-em(4) rgba(0,0,0, .2);
 				color: black;
 				opacity: .9;
-        font-size: calc-em(26);
-        color: black;
+				font-size: calc-em(26);
+				color: black;
 
 				@include media-breakpoint-up(lg) {
 					border-radius: 50%;
-          width: calc-em(60);
+					width: calc-em(60);
 				}
 			}
 		}
@@ -263,67 +263,67 @@
 }
 
 .product-image-carousel__indicator {
-  .carousel-indicator {
-    font-size: calc-em(27);
+	.carousel-indicator {
+		font-size: calc-em(27);
 		&:disabled {
 			opacity: 0;
 		}
-  }
+	}
 
-  @include media-breakpoint-up(lg) {
-    %transform-negative-y {
-      position: relative;
-      transform: translate3d(0, -100%, 0);
-      visibility: visible;
-    }
+	@include media-breakpoint-up(lg) {
+		%transform-negative-y {
+			position: relative;
+			transform: translate3d(0, -100%, 0);
+			visibility: visible;
+		}
 
-    %transform-positive-y {
-      position: relative;
-      transform: translate3d(0, 100%, 0);
-      visibility: visible;
-      display: block;
-    }
+		%transform-positive-y {
+			position: relative;
+			transform: translate3d(0, 100%, 0);
+			visibility: visible;
+			display: block;
+		}
 
-    .carousel-inner {
-      height: 0;
-      padding-bottom: calc(500% + (30px * 4));
-    }
+		.carousel-inner {
+			height: 0;
+			padding-bottom: calc(500% + (30px * 4));
+		}
 
-    .carousel-item-next.carousel-item-left,
-    .carousel-item-prev.carousel-item-right {
-      transform: translate3d(0, 0, 0);
-    }
+		.carousel-item-next.carousel-item-left,
+		.carousel-item-prev.carousel-item-right {
+			transform: translate3d(0, 0, 0);
+		}
 
-    .carousel-item-next,
-    .active.carousel-item-right {
-      transform: translate3d(0, 100% 0);
-    }
+		.carousel-item-next,
+		.active.carousel-item-right {
+			transform: translate3d(0, 100% 0);
+		}
 
-    .carousel-item-prev,
-    .active.carousel-item-left {
-      transform: translate3d(0, -100%, 0);
-    }
+		.carousel-item-prev,
+		.active.carousel-item-left {
+			transform: translate3d(0, -100%, 0);
+		}
 
-    .carousel-item-prev:not(.carousel-item-right) {
-      transform: translateY(-100%);
-    }
+		.carousel-item-prev:not(.carousel-item-right) {
+			transform: translateY(-100%);
+		}
 
-    .active.carousel-item-left+.carousel-item-next.carousel-item-left {
-      @extend %transform-negative-y;
-    }
+		.active.carousel-item-left+.carousel-item-next.carousel-item-left {
+			@extend %transform-negative-y;
+		}
 
-    .active.carousel-item-right+.carousel-item-prev.carousel-item-right {
-      @extend %transform-positive-y;
-    }
+		.active.carousel-item-right+.carousel-item-prev.carousel-item-right {
+			@extend %transform-positive-y;
+		}
 
-    @include carousel-item-level('.carousel-item-next.carousel-item-left', '.carousel-item', 6, false) {
-      @extend %transform-negative-y;
-    }
+		@include carousel-item-level('.carousel-item-next.carousel-item-left', '.carousel-item', 6, false) {
+			@extend %transform-negative-y;
+		}
 
-    @include carousel-item-level('.carousel-item-prev.carousel-item-right', '.carousel-item', 6, false) {
-      @extend %transform-positive-y;
-    }
-  }
+		@include carousel-item-level('.carousel-item-prev.carousel-item-right', '.carousel-item', 6, false) {
+			@extend %transform-positive-y;
+		}
+	}
 }
 
 .carousel--real-result {

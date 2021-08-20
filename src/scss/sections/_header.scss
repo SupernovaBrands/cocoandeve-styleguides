@@ -237,7 +237,7 @@
 	.mobile-nav {
 		margin-top: ($font-size-xs + $line-height-base) * 3.5;
 		@include media-breakpoint-up('lg') {
-			margin-top: ($font-size-xs + $line-height-base) * 3;
+			margin-top: ($font-size-xs + $line-height-base) * 3.2;
 		}
 	}
 

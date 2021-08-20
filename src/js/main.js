@@ -346,6 +346,12 @@ $(document).ready(function () {
 		lastScrollTop = scrollTop;
 	});
 
+	$('.nav-item--mega-menu').hover(function () {
+		$('header').removeClass('overflow-hidden');
+	}, function () {
+		$('header').addClass('overflow-hidden');
+	});
+
 	// Cart drawer
 	$('.manual-gwp__item .btn').on('click', function () {
 		if ($(this).hasClass('btn-primary')) {

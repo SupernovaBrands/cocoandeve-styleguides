@@ -1,6 +1,6 @@
 .product-card {
 	&__title {
-		min-height: calc-em(54);
+		min-height: calc-em(60);
 	}
 
 	.swatch-overlay {
@@ -29,63 +29,4 @@
 	.btn-choose:focus {
 		box-shadow: none;
 	}
-}
-
-.product-variant-swatch {
-	&__item {
-		span {
-			width: calc-em(32);
-			height: calc-em(32);
-			border-radius: 50%;
-			display: inline-block;
-			position: relative;
-			cursor: pointer;
-			background-size: cover;
-
-			&::before {
-				content: '';
-				position: absolute;
-				top: calc-em(-4);
-				left: calc-em(-4);
-				right: calc-em(-4);
-				bottom: calc-em(-4);
-				border: calc-em(1) solid $gray-500;
-				border-radius: 50%;
-			}
-		}
-
-		&.active {
-			span {
-				&::before {
-					border-color: $primary;
-				}
-			}
-		}
-
-		&.disabled {
-			opacity: 0.5;
-		}
-	}
-}
-
-@each $color, $value in $shade-colors {
-	.shade-#{$color} {
-		@include badge-variant($value);
-	}
-}
-
-.style-girl-print {
-	background-image: url("../images/ce-towel-girl.svg");
-}
-
-.style-leaf-print {
-	background-image: url("../images/ce-towel-leaf.svg");
-}
-
-.style-eyemask-pink {
-	background-image: url("../images/ce-eyemask-pink.svg");
-}
-
-.style-eyemask-green {
-	background-image: url("../images/ce-eyemask-green.svg");
 }

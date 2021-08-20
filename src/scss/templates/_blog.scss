@@ -5,7 +5,8 @@
 		grid-template-rows: auto auto auto;
 		grid-template-areas: "post1 post1 search"
 			"post1 post1 sidebar"
-			"post2 post3 sidebar";
+			"post2 post3 sidebar"
+			"postall postall sidebar";
 	}
 
 	&__search {

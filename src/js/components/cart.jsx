@@ -2,8 +2,9 @@
 
 import React from 'react';
 
-import CartItem from '~comp/cart-item';
+import CartShippingMeter from '~comp/cart-shipping-meter';
 import CartDiscountMeter from '~comp/cart-discount-meter';
+import CartItem from '~comp/cart-item';
 import CartDiscountForm from '~comp/cart-discount-form';
 import CartManualGwp from '~comp/cart-manual-gwp';
 import CartUpsell from '~comp/cart-upsell';
@@ -40,6 +41,7 @@ export default class Cart extends React.Component {
 			manualGwp: {},
 			loadingManualGwp: { loading: false, id: -1 },
 			shippingData: {},
+			shippingMeter: {},
 			discountMeter: {},
 		};
 	}
@@ -62,7 +64,7 @@ export default class Cart extends React.Component {
 			if (detail && detail.action === 'add') {
 				const item = detail.result;
 				if (!isItemHasProp(item, '_campaign_type', 'manual_gwp')) {
-					count = prevState.itemCount + detail.quantity;
+					count = prevState.itemCount + parseInt(detail.quantity, 10);
 				}
 			} else {
 				count = detail.result.item_count - prevState.manualGwpCount;
@@ -94,9 +96,10 @@ export default class Cart extends React.Component {
 				manualGwpCount += items[i].quantity;
 			} else {
 				count += items[i].quantity;
-				comparePriceDiff += items[i].models.comparePriceDiff;
+				comparePriceDiff += items[i].models.comparePriceDiff * items[i].quantity;
 			}
 		}
+
 		models.itemCount = count;
 		models.manualGwpCount = manualGwpCount;
 		models.comparePriceDiff = comparePriceDiff;
@@ -104,8 +107,8 @@ export default class Cart extends React.Component {
 
 		models.upsellData = await this.getUpsell(items);
 
-		models.totalPrice = cart.items_subtotal_price;
-		models.subtotalPrice = models.totalPrice + comparePriceDiff;
+		models.totalPrice = cart.original_total_price;
+		models.subtotalPrice = cart.original_total_price + comparePriceDiff;
 
 		await snCart.checkAppliedDiscount(cart).then((discountData) => {
 			models.discountData = this.getDiscountDataDisplay({
@@ -124,24 +127,39 @@ export default class Cart extends React.Component {
 			return getShippingPrice(models.totalPrice);
 		}).then((shippingData) => {
 			models.shippingData = {
-				show: shippingData.shipping != null,
+				show: shippingData.shipping !== null,
 				amount: shippingData.shipping || 0,
 			};
 
 			if (shippingData.freeRate && models.totalPrice > 0) {
 				const rate = shippingData.freeRate;
-				models.discountMeter = {
+				models.shippingMeter = {
 					enabled: true,
 					target: rate.min_order_subtotal ? parseFloat(rate.min_order_subtotal) * 100 : 0,
 					current: models.totalPrice,
 				};
 			} else {
-				models.discountMeter = {
+				models.shippingMeter = {
 					enabled: false,
 				};
 			}
+
 			models.totalPrice += models.shippingData.amount;
-		});
+			return snCart.checkTierLevel(cart);
+		})
+			.then((tierDiscount) => {
+				const tiers = tierDiscount;
+				const selectedTier = tiers[0];
+				const nextTier = tiers[1] || selectedTier;
+				const totalOriginal = tiers[2];
+
+				models.discountMeter = {
+					enabled: true,
+					target: parseInt(nextTier.min_spend, 10) * 100,
+					current: totalOriginal,
+					progressText: selectedTier.text,
+				};
+			});
 
 		this.setState({
 			loadingInit: false,
@@ -160,8 +178,9 @@ export default class Cart extends React.Component {
 			image: item.image ? item.image.replace(/(\.[^.]*)$/, '_medium$1').replace('http:', '') : '//cdn.shopify.com/s/assets/admin/no-image-medium-cc9732cb976dd349a0df1d39816fbcc7.gif',
 			comparePrice: productData.comparePrices[item.id],
 			color: (item.options_with_values.find((opt) => isSameText(opt.name, 'color')) || { value: false }).value,
-			style: (item.options_with_values.find((opt) => isSameText(opt.name, 'style')) || { value: false }).value,
+			style: (item.options_with_values.find((opt) => isSameText(opt.name, 'style') || opt.name.toLowerCase().includes('style')) || { value: false }).value,
 			showPreorderNotif: tSettings.variantNotification.indexOf(item.id) !== -1 && tSettings.enable_tan_change,
+			showPreorderNotif_2: tSettings.variantNotification_2.indexOf(item.id) !== -1 && tSettings.enable_tan_change,
 		};
 
 		models.url = models.free ? undefined : item.url;
@@ -177,14 +196,15 @@ export default class Cart extends React.Component {
 		}
 
 		if (models.color) {
-			models.variantHandle = kebabCase(models.color);
-			models.variantOptions = await this.getColorOptions(item.handle, item.variant_options);
+			models.variantHandle = models.color.startsWith('Medium') ? 'medium' : kebabCase(models.color);
+			models.variantOptions = await this.getVariantOptions(item.handle, item.variant_options, 'color');
 			models.variantType = 'Shade';
 			models.variantTitle = models.color;
 		}
 
 		if (models.style) {
 			models.variantHandle = kebabCase(models.style);
+			models.variantOptions = await this.getVariantOptions(item.handle, item.variant_options, 'style');
 			models.variantType = 'Style';
 			models.variantTitle = models.style;
 		}
@@ -195,10 +215,12 @@ export default class Cart extends React.Component {
 	/* -------------------
 		Variant options
 	------------------- */
-	async getColorOptions(handle, variantOptions) {
+	async getVariantOptions(handle, variantOptions, optionName) {
 		const { variants, options } = (await snCart.getProductInfo(handle)).product;
 		const allOptions = [];
-		const optionPos = options.find((opt) => isSameText(opt.name, 'color')).position;
+		const optionPos = options.find((opt) => isSameText(opt.name, optionName)
+			|| opt.name.toLowerCase().includes(optionName)).position;
+
 		const option = `option${optionPos}`;
 		variants.forEach((variant) => {
 			// If all option other than color is the same, show the variant
@@ -212,7 +234,7 @@ export default class Cart extends React.Component {
 				allOptions.push({
 					id: variant.id,
 					available: variant.available,
-					color: variant[option],
+					variantTitle: variant[option],
 					variantHandle: kebabCase(variant[option]),
 				});
 			}
@@ -331,7 +353,7 @@ export default class Cart extends React.Component {
 		if (data.reason) {
 			switch (data.reason) {
 				case 'purchase':
-					error = `${tStrings.discount_min_spend} ${formatMoney(data.minPurchase, $('#shop_currency_val').text())}`;
+					error = `${tStrings.discount_min_spend} ${formatMoney(data.minPurchase)}`;
 					break;
 				case 'product':
 					error = tStrings.discount_error;
@@ -354,11 +376,20 @@ export default class Cart extends React.Component {
 			error = tSettings.custom_error_codes_msg;
 		}
 
+		if (data.code_reject) {
+			error = tStrings.cart_code_rejection_msg;
+		}
+
+		let amount = data.discount < 0 ? (data.discount * -1) : (data.discount || 0);
+		if (!amount) {
+			amount = data.amount;
+		}
+
 		return {
-			applied: data.valid === true && data.code && data.code !== '' && !error,
+			applied: data.valid && data.code && data.code !== '' && !error && !tSettings.cart_code_rejection,
 			code: !error ? (data.code || '').toUpperCase() : '',
 			isAuto: !!data.isAuto,
-			amount: data.discount < 0 ? (data.discount * -1) : (data.discount || 0),
+			amount,
 			error,
 			errorExtra: data.errorExtra ? data.errorExtra : false,
 		};
@@ -396,23 +427,33 @@ export default class Cart extends React.Component {
 
 	onApplyDiscountCode = (code) => {
 		this.setState({ loadingDiscount: true }, () => {
-			snCart.applyDiscountCode(code).then((discountData) => {
-				if (discountData.enabled === false || discountData.isValid === false) {
-					this.setState({
+			if (!tSettings.cart_code_rejection) {
+				snCart.applyDiscountCode(code).then((discountData) => {
+					if (discountData.enabled === false || discountData.isValid === false) {
+						this.setState({
+							loadingDiscount: false,
+							discountData: this.getDiscountDataDisplay({ reason: discountData.error, discode: discountData.code }),
+						});
+					} else {
+						this.setState({
+							loadingDiscount: false,
+							discountData: this.getDiscountDataDisplay({
+								...discountData,
+								valid: true,
+								error: '',
+								errorExtra: this.getDiscountErrorExtra(discountData),
+							}),
+						});
+					}
+				});
+			} else {
+				snCart.applyDiscountCode(code).then(() => {
+					this.setState((prevState) => ({
 						loadingDiscount: false,
-						discountData: this.getDiscountDataDisplay({ reason: discountData.error }),
-					});
-				} else {
-					this.setState({
-						loadingDiscount: false,
-						discountData: this.getDiscountDataDisplay({
-							...discountData,
-							valid: true,
-							error: '',
-						}),
-					});
-				}
-			});
+						discountData: this.getDiscountDataDisplay({ ...prevState.discountData, code_reject: true }),
+					}));
+				});
+			}
 		});
 	}
 
@@ -448,9 +489,7 @@ export default class Cart extends React.Component {
 	}
 
 	submitForm() {
-		if (this.formRef) {
-			this.formRef.submit();
-		}
+		$('#cart-drawer-form').trigger('submit');
 	}
 
 	render() {
@@ -468,22 +507,34 @@ export default class Cart extends React.Component {
 			loadingManualGwp,
 			upsellData,
 			shippingData,
+			shippingMeter,
 			discountMeter,
 		} = this.state;
 		return (
 			<div className="modal-dialog modal-dialog-scrollable modal-md m-0 w-100 mh-100 float-right">
-				<div className="modal-content vh-100 mh-100 border-0 rounded-0">
+				<div className="modal-content mh-100 border-0 rounded-0">
 					<div className="modal-body mobile-wrapper pt-0 px-lg-0">
 						<div className="container d-flex flex-column align-items-stretch text-center pt-2">
-							<h4 className="font-size-lg">{tStrings.cart_drawer_title}</h4>
-							<button type="button" className="close text-body m-0 p-2 position-absolute" data-dismiss="modal" aria-label="Close">
+							<h4 className="font-size-lg font-weight-bold">{tStrings.cart_drawer_title}</h4>
+							<button type="button" className="close text-body m-0 px-g pb-2 position-absolute" data-dismiss="modal" aria-label="Close">
 								<span className="sni sni__close" aria-hidden="true" />
 							</button>
 
-							{tSettings.cartShippingMeter.enable && discountMeter.enabled && (
+							{!tSettings.cartDiscountMeter.enable
+								&& tSettings.cartShippingMeter.enable
+								&& shippingMeter.enabled
+								&& itemCount > 0
+								&& (
+									<CartShippingMeter
+										target={shippingMeter.target}
+										current={shippingMeter.current}
+									/>
+								)}
+							{tSettings.cartDiscountMeter.enable && discountMeter.enabled && itemCount > 0 && (
 								<CartDiscountMeter
 									target={discountMeter.target}
 									current={discountMeter.current}
+									progressText={discountMeter.progressText}
 								/>
 							)}
 							<hr className="w-100 m-0" />
@@ -496,18 +547,20 @@ export default class Cart extends React.Component {
 						)}
 
 						{!loadingInit && (itemCount === 0 ? (
-							<h4 className="mt-2 text-center">{tStrings.cart_empty}</h4>
+							<h4 className="mt-2 text-center font-weight-bold">{tStrings.cart_empty}</h4>
 						) : (
 							// eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
 							<form
+								id="cart-drawer-form"
 								className="container"
 								action="/cart"
 								method="post"
 								noValidate
 								onKeyDown={this.handleKeyDown}
-								ref={(r) => { this.formRef = r; }}
 							>
-								<ul className="list-unstyled">
+								<input type="hidden" name="checkout" value="Checkout" />
+
+								<ul className="list-unstyled border-bottom">
 									{cart.items.map((item) => !!item.models && !item.models.isManualGwp && (
 										<CartItem
 											key={item.key}
@@ -521,19 +574,21 @@ export default class Cart extends React.Component {
 								</ul>
 
 								{manualGwp.enabled && (
-									<CartManualGwp
-										title={manualGwp.title}
-										maxSelected={manualGwp.maxSelected}
-										selectedKey={manualGwp.selectedKey}
-										items={manualGwp.items}
-										onAddItem={this.onToggleManualGwp}
-										onRemoveItem={this.onToggleManualGwp}
-										loading={loadingManualGwp.loading}
-										processingId={loadingManualGwp.id}
-									/>
+									<>
+										<CartManualGwp
+											title={manualGwp.title}
+											maxSelected={manualGwp.maxSelected}
+											selectedKey={manualGwp.selectedKey}
+											items={manualGwp.items}
+											onAddItem={this.onToggleManualGwp}
+											onRemoveItem={this.onToggleManualGwp}
+											loading={loadingManualGwp.loading}
+											processingId={loadingManualGwp.id}
+										/>
+										<hr />
+									</>
 								)}
 
-								<hr />
 								<CartDiscountForm
 									isApplied={discountData.applied}
 									code={discountData.code}
@@ -547,27 +602,27 @@ export default class Cart extends React.Component {
 								<hr />
 
 								<div className="row">
-									<h4 className="col-8 font-weight-bold">{tStrings.cart_subtotal}</h4>
-									<h4 className="col-4 text-right">{formatMoney(subtotalPrice)}</h4>
+									<p className="col-8 mb-1 font-weight-bold">{tStrings.cart_subtotal}</p>
+									<p className="col-4 mb-1 font-weight-bold text-right">{formatMoney(subtotalPrice)}</p>
 
 									{comparePriceDiff > 0 && (
 										<>
-											<h4 className="col-8">Bundle Discount</h4>
-											<h4 className="col-4 text-right">{`-${formatMoney(comparePriceDiff)}`}</h4>
+											<p className="col-8 mb-1 font-weight-bold">{tStrings.cart_bundle_discount}</p>
+											<p className="col-4 mb-1 font-weight-bold text-right">{`-${formatMoney(comparePriceDiff)}`}</p>
 										</>
 									)}
 
 									{discountData.amount > 0 && (
 										<>
-											<h4 className="col-8">Discount</h4>
-											<h4 className="col-4 text-right">{`-${formatMoney(discountData.amount)}`}</h4>
+											<p className="col-8 mb-1 font-weight-bold">{tStrings.cart_discount}</p>
+											<p className="col-4 mb-1 font-weight-bold text-right">{`-${formatMoney(discountData.amount)}`}</p>
 										</>
 									)}
 
 									{shippingData.show && (
 										<>
-											<h4 className="col-8">{tStrings.cart_shipping}</h4>
-											<h4 className="col-4 text-right text-primary">{shippingData.amount > 0 ? formatMoney(shippingData.amount) : 'Free'}</h4>
+											<p className="col-8 mb-1 font-weight-bold">{tStrings.cart_shipping}</p>
+											<p className={`col-4 mb-1 font-weight-bold text-right ${shippingData.amount > 0 ? '' : 'text-primary'}`}>{shippingData.amount > 0 ? formatMoney(shippingData.amount) : 'Free'}</p>
 										</>
 									)}
 								</div>
@@ -576,14 +631,14 @@ export default class Cart extends React.Component {
 
 								{upsellData && (<CartUpsell upsell={upsellData} onAddUpsell={this.onAddUpsell} />)}
 
-								<CartExtras />
+								<CartExtras totalPrice={totalPrice} />
 							</form>
 						))}
 					</div>
 
-					{!loadingInit && (
-						<div className="modal-footer">
-							<div className="row w-100">
+					{!loadingInit && itemCount > 0 && (
+						<div className="modal-footer px-g">
+							<div className="row no-gutters w-100">
 								<span className="col-8 font-size-lg font-weight-bold">{tStrings.cart_total}</span>
 								<span className="col-4 font-size-lg font-weight-bold text-right">{formatMoney(totalPrice)}</span>
 								<div className="col-12 my-1">
@@ -597,7 +652,7 @@ export default class Cart extends React.Component {
 									</button>
 								</div>
 							</div>
-							<p className="col-12 text-center">*Shipping and taxes calculated at checkout</p>
+							<p className="col-12 p-0 text-center" dangerouslySetInnerHTML={{ __html: tStrings.cart_shipping_at_checkout }} />
 						</div>
 					)}
 				</div>

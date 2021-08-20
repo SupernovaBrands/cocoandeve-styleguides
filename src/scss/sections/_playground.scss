@@ -4,6 +4,12 @@
       text-shadow: 0 0 calc-em(24) rgba(0, 48, 45, 0.25);
     }
   }
+  figure {
+    min-height: calc-em(164);
+    @include media-breakpoint-up(lg) {
+      min-height: calc-em(164 * 2);
+    }
+  }
 }
 
 .playground-font-size {

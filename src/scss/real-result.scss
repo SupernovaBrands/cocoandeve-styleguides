@@ -1,41 +1,24 @@
-@import 'core/functions';
-@import 'core/fonts';
-@import 'core/vars';
+@import 'core';
+@import 'bootstrap/common';
+@import 'bootstrap/main';
+@import 'common';
 
-@import 'bootstrap/bootstrap';
-
-@import 'core/grid';
-@import 'core/utilities';
-@import 'mixins/carousel';
-@import 'core/type';
-
-@import 'components/announcement-bar';
-@import 'components/tooltip';
-@import 'components/nav';
-@import 'components/dropdown';
 @import 'components/icons';
 @import 'components/social-icons';
 @import 'components/buttons';
 
-@import 'compounds/result-card';
-@import 'compounds/product-card';
-@import 'compounds/cart-bubble';
-
 @import 'components/hr';
-@import 'components/dropdown';
 @import 'components/badge';
 @import 'components/review-stars';
 @import 'components/tabs';
 @import 'components/carousel';
 @import 'components/yotpo_stars';
-@import 'components/swatch';
-@import 'components/forms';
-@import 'components/accordion';
+@import 'components/custom-forms';
 
-@import 'sections/header';
-@import 'sections/cart-drawer';
-@import 'sections/footer';
+@import 'compounds/result-card';
+@import 'compounds/product-card';
+
 @import 'sections/instagram';
-@import 'sections/modal-email';
+@import 'sections/testimonials-carousel';
 
 @import 'templates/real-result';

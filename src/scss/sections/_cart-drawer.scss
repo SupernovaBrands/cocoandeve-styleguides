@@ -1,6 +1,10 @@
 .cart-drawer {
 	z-index: $zindex-tooltip;
 
+	.show-modal-klarna & {
+		z-index: 1;
+	}
+
 	.modal-dialog {
 		max-width: calc-em(430);
 	}
