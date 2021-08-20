@@ -8,9 +8,9 @@
 	background-size: calc-em(30);
 	position: relative;
 
-  &.oos {
-    opacity: .5;
-  }
+	&.oos {
+		opacity: .5;
+	}
 
 	&:before {
 		content: ' ';
@@ -38,11 +38,13 @@
 	}
 
 	&.small {
-		width: calc-em(10);
-		height: calc-em(10);
-		box-shadow: none;
-		border: none;
-		background-size: calc-em(10) calc-em(10);
+		&, &::before {
+			width: calc-em(10, $unit: 1rem);
+			height: calc-em(10, $unit: 1rem);
+			background-size: calc-em(10, $unit: 1rem) calc-em(10, $unit: 1rem);
+			top: 0;
+			left: 0;
+		}
 	}
 
 	&:focus {
@@ -54,41 +56,41 @@
 		opacity: 0.5;
 	}
 
-	&.medium {
-		&:before {
-			background-color: #C48B8B;
-		}
-	}
-	&.dark {
-		&:before {
-			background-color: #885757;
-		}
-	}
-	&.ultra-dark {
-		&:before {
-			background-color: #4A1F1F;
+	@each $color, $value in $shade-colors {
+		&.#{$color} {
+			&:before {
+				background-color: $value;
+			}
 		}
 	}
 
-	&.girl-print-limited-edition {
+	&.girl-print-limited-edition,
+	&.girl-print {
 		&:before {
-			background-image: url(asset-url('hairwrap-girl-print.png'));
+			background-image: url(asset-url('ce-towel-girl.svg'));
 		}
 	}
 	&.leaf-print {
 		&:before {
-			background-image: url(asset-url('hairwrap-leaf-print.png'));
+			background-image: url(asset-url('ce-towel-leaf.svg'));
 		}
 	}
 	&.green,
 	&.grun {
 		&:before {
-			background-image: url(asset-url('eyemask-leaf-green.svg'));
+			background-image: url(asset-url('ce-eyemask-green.svg'));
 		}
 	}
 	&.pink {
 		&:before {
-			background-image: url(asset-url('eyemask-leaf-pink.svg'));
+			background-image: url(asset-url('ce-eyemask-pink.svg'));
+		}
+	}
+	&.pool-print-limited-edition,
+	&.pool-print {
+		&:before {
+			background-image: url(asset-url('ce-pool-print.svg'));
+			transform: rotate(10deg);
 		}
 	}
 }

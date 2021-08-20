@@ -7,10 +7,17 @@ export default class CartDiscountForm extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+			showForm: false,
 			code: '',
 			prevCode: '',
 			error: '',
 		};
+	}
+
+	componentDidMount() {
+		if (this.props.code) {
+			this.setState({ showForm: true, code: this.props.code, prevCode: this.props.code });
+		}
 	}
 
 	static getDerivedStateFromProps(nextProps, prevState) {
@@ -18,12 +25,18 @@ export default class CartDiscountForm extends React.Component {
 			return {
 				prevCode: nextProps.code,
 				code: nextProps.code,
+				showForm: prevState.code !== '' || (prevState.code === '' && !!nextProps.code),
 				error: nextProps.error,
 			};
 		}
+
 		return {
 			error: nextProps.error,
 		};
+	}
+
+	onToggleForm() {
+		this.setState((prevState) => ({ showForm: !prevState.showForm }));
 	}
 
 	onTextChange = (e) => {
@@ -33,7 +46,7 @@ export default class CartDiscountForm extends React.Component {
 
 	onKeyUp = (e) => {
 		if (e.keyCode === 13) {
-			this.applyDiscount(e);
+			this.applyDiscount();
 		}
 	}
 
@@ -41,6 +54,7 @@ export default class CartDiscountForm extends React.Component {
 		e.stopPropagation();
 		this.setState((prevState) => ({ code: prevState.code.trim() }), () => {
 			this.props.onApply(this.state.code);
+			this.state.code = this.props.code;
 		});
 	}
 
@@ -62,13 +76,14 @@ export default class CartDiscountForm extends React.Component {
 		} = this.state;
 
 		return isApplied ? (
-			<div className="mt-1 d-flex flex-column align-items-start">
-				<p className="font-size-xs text-muted mb-1">Promo code applied</p>
-				<div className="bg-light d-flex align-items-center d-inline-block p-1">
+			<div className="mt-2 d-flex flex-column align-items-start">
+				<input type="hidden" name="discount" value={code} />
+				<p className="font-size-xs text-muted mb-1">{tStrings.cart_discount_applied}</p>
+				<div className="bg-light d-flex align-items-center d-inline-block p-1 text-black-50 rounded">
 					<i className="sni-text mr-1" aria-hidden="true">tag</i>
 					{code}
 					{!isAutoDiscount && (
-						<button className="btn-unstyled ml-1 sni sni__close-circle" onClick={this.removeDiscount} type="button" aria-label="Remove Discount" />
+						<button className="btn-unstyled ml-1 sni sni__close-circle text-black-50" onClick={this.removeDiscount} type="button" aria-label="Remove Discount" />
 					)}
 				</div>
 				{errorExtra && (
@@ -76,12 +91,12 @@ export default class CartDiscountForm extends React.Component {
 				)}
 			</div>
 		) : (
-			<div className="mt-1">
+			<div className="mt-2">
 				<a className="text-body text-underline collapsed cart-drawer__discount-toggle" data-toggle="collapse" href="#cart-drawer__discount-form" role="button" aria-expanded="false" aria-controls="cart-drawer__discount-form">{tStrings.cart_discount_text}</a>
 				<div className="collapse" id="cart-drawer__discount-form">
 					<div className="input-group py-1">
 						<input type="text" name="discount" className="form-control text-body border-right-0" placeholder={tStrings.cart_discount_input} value={code} onChange={this.onTextChange} onKeyUp={this.onKeyUp} readOnly={loading} />
-						<button className="btn btn-link border border-left-0 rounded-left-0" type="button" onClick={this.applyDiscount} disabled={!code}>
+						<button className="btn btn-link border border-left-0 rounded-left-0 font-weight-bold d-flex align-items-center" type="button" onClick={this.applyDiscount} disabled={!code}>
 							{loading ? (<div className="spinner-border" role="status" />) : tStrings.cart_discount_apply}
 						</button>
 					</div>

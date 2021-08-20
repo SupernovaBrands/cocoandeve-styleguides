@@ -1,66 +1,19 @@
-@font-face {
-  font-family: yotpo-widget-font;
-  src: url('//staticw2.yotpo.com/assets/yotpo-widget-font.eot?version=2020-11-11_14-27-34');
-  src: url('//staticw2.yotpo.com/assets/yotpo-widget-font.eot?version=2020-11-11_14-27-34#iefix') format("embedded-opentype"),
-  url('//staticw2.yotpo.com/assets/yotpo-widget-font.woff?version=2020-11-11_14-27-34') format("woff"),
-  url('//staticw2.yotpo.com/assets/yotpo-widget-font.ttf?version=2020-11-11_14-27-34') format("truetype"),
-  url('//staticw2.yotpo.com/assets/yotpo-widget-font.svg?version=2020-11-11_14-27-34') format("svg");
-  font-weight: 400;
-  font-style: normal
+.yotpo-display-wrapper {
+  visibility: visible!important;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-    font-family: yotpo-widget-font;
-    src: url('//staticw2.yotpo.com/assets/yotpo-widget-font.svg?version=2020-11-11_14-27-34') format("svg");
-  }
+.reviews__count {
+  display: none;
 }
 
 .yotpo {
-  .standalone-bottomline.star-clickable,
-  .standalone-bottomline .star-clickable {
-    cursor: pointer;
-    display: flex;
-    margin: 0 auto;
-    float: none;
-    align-items: center;
-  }
-
-  .yotpo-icon,
-  .yotpo-icon:after,
-  .yotpo-icon:before {
-    font-family: yotpo-widget-font!important;
-  }
-
-  .yotpo-icon {
-    speak: none;
-    font-size: 17.5px;
-    font-style: normal;
-    font-weight: 400;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    width: auto!important;
-    background: 0 0;
-    height: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  .yotpo-icon-star,
-  .yotpo-icon-half-star,
-  .yotpo-icon-empty-star {
-    color: $primary;
-  }
-
-  .yotpo-icon-default-star:before,
-  .yotpo-icon-star:before {
-    content: "\e60e";
-  }
-
+  /* need important to override style from yotpo on widget.css */
   &.bottomLine {
+    min-height: calc-em(21);
+
     .yotpo-stars, .rating-num {
       margin-right: calc-em(5);
+      cursor: initial;
     }
     .yotpo-icon {
       margin-left: calc-em(2);
@@ -70,6 +23,7 @@
       color: $body-color !important;
       font-size: $font-size-base;
       text-decoration: underline !important;
+      pointer-events: none;
 
       &:hover {
         color: $gray-500 !important;
@@ -83,10 +37,6 @@
   }
 }
 
-.yotpo-display-wrapper {
-  visibility: visible!important;
-}
-
-.reviews__count {
+.write-review-btn-hidden {
   display: none;
 }

@@ -1,40 +1,21 @@
-@import 'core/functions';
-@import 'core/fonts';
-@import 'core/vars';
+@import 'core';
+@import 'bootstrap/common';
+@import 'bootstrap/home';
+@import 'common';
 
-@import 'bootstrap/bootstrap-homepage';
-
-@import 'core/reboot';
-@import 'core/grid';
-@import 'core/utilities';
-@import 'mixins/carousel';
-@import 'core/type';
-
-@import 'components/announcement-bar';
-@import 'components/tooltip';
-@import 'components/nav';
-@import 'components/social-icons';
-@import 'components/custom-forms';
 @import 'components/icons';
+@import 'components/social-icons';
 @import 'components/buttons';
 @import 'components/hr';
-@import 'components/dropdown';
 @import 'components/badge';
+@import 'components/modal-waitlist';
 @import 'components/review-stars';
 @import 'components/tabs';
 @import 'components/carousel';
 @import 'components/yotpo_stars';
-@import 'components/swatch';
-@import 'components/forms';
-@import 'components/accordion';
 
 @import 'compounds/result-card';
 @import 'compounds/product-card';
-@import 'compounds/cart-bubble';
 
-@import 'sections/header';
-@import 'sections/cart-drawer';
-@import 'sections/footer';
 @import 'sections/playground';
 @import 'sections/instagram';
-@import 'sections/modal-email';

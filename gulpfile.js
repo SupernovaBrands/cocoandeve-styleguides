@@ -4,6 +4,8 @@ const {
 const browserSync = require('browser-sync');
 const del = require('del');
 const sass = require('gulp-sass');
+// eslint-disable-next-line import/no-extraneous-dependencies
+const nodeSass = require('node-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
 const handlebars = require('gulp-compile-handlebars');
@@ -27,7 +29,7 @@ const files = {
 	vendorJs: ['src/js/vendor/*'],
 	allScss: ['src/scss/**/*', '!src/scss/critical-css/*.scss'],
 	scss: ['src/scss/*.scss'],
-	criticalScss: ['src/scss/critical-css/*.scss'],
+	criticalScss: ['src/critical-css/*.css'],
 	static: [
 		// fonts
 		'fonts/*.svg',
@@ -128,6 +130,10 @@ const scssFiles = function () {
 		.pipe(sass({
 			includePaths: ['node_modules/'],
 			outputStyle: 'compressed',
+			functions: {
+				'asset-url($filename)': function (filename) { return new nodeSass.types.String(`'/cocoandeve-styleguides/images/${filename.getValue()}'`); },
+				'font-url($filename)': function (filename) { return new nodeSass.types.String(`'/cocoandeve-styleguides/fonts/${filename.getValue()}'`); },
+			},
 		}).on('error', errorHandler))
 		.pipe(autoprefixer())
 		.pipe(sourcemaps.write('.'))
@@ -137,12 +143,6 @@ const scssFiles = function () {
 
 const criticalFiles = function () {
 	return src(files.criticalScss)
-		.pipe(sass({ outputStyle: 'compressed' }).on('error', errorHandler))
-		.pipe(cleancss({
-			format: 'keep-breaks',
-			level: 2,
-		}))
-		.pipe(dest('src/critical-css'))
 		.pipe(dest('dist/critical-css'))
 		.pipe(browserSync.stream());
 };
@@ -154,7 +154,7 @@ const staticFiles = function () {
 };
 
 const extractCriticalCss = function () {
-	return src(['dist/criticals/*.html', '!dist/criticals/header.html'])
+	return src(['dist/criticals/*.html'])
 		.pipe(
 			critical({
 				base: 'dist/',
@@ -180,11 +180,10 @@ const extractCriticalCss = function () {
 			format: 'keep-breaks',
 			level: 2,
 		}))
-		.pipe(rename({ extname: '.scss' }))
 		.on('error', (err) => {
 			console.error(err.message);
 		})
-		.pipe(dest('src/scss/critical-css'));
+		.pipe(dest('src/critical-css'));
 };
 
 const webpackBuild = (isWatch = false) => function () {

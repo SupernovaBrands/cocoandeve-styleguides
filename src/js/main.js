@@ -346,6 +346,12 @@ $(document).ready(function () {
 		lastScrollTop = scrollTop;
 	});
 
+	$('.nav-item--mega-menu').hover(function () {
+		$('header').removeClass('overflow-hidden');
+	}, function () {
+		$('header').addClass('overflow-hidden');
+	});
+
 	// Cart drawer
 	$('.manual-gwp__item .btn').on('click', function () {
 		if ($(this).hasClass('btn-primary')) {
@@ -488,10 +494,14 @@ $(document).ready(function () {
 	// tooltip
 	$('#tooltip__close').on('click', function () {
 		$(this).parent().removeClass('show');
+		setTimeout(function () {
+			$('header').addClass('overflow-hidden');
+		}, 500);
 	});
 
 	$('#tooltip__show').on('click', function () {
 		$('.navbar > .container').addClass('position-relative');
 		$('.tooltip').addClass('show');
+		$('header').removeClass('overflow-hidden');
 	});
 });

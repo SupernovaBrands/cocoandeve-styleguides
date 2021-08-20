@@ -1,20 +1,26 @@
 .sweepstakes {
 
-    &__country-label:after {
-        font-size: calc-em(10, 16);
-        margin-left: calc-em(10, 16);
-    }
+	&__country-label:after {
+		font-size: calc-em(10, 16);
+		margin-left: calc-em(10, 16);
+	}
 
-    .input-group-addon + input {
-        flex-basis: 55%;
+	&__success {
+		@include media-breakpoint-up(lg) {
+			min-height: calc-em(925, 16);
+		}
+	}
 
-        @include media-breakpoint-up(xl) {
-            flex-basis: 65%;
-        }
-    }
+	.input-group-addon + input {
+		flex-basis: 55%;
 
-    select {
-        opacity: 0;
-    }
+		@include media-breakpoint-up(xl) {
+			flex-basis: 65%;
+		}
+	}
+
+	select {
+		opacity: 0;
+	}
 
 }

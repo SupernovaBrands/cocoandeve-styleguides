@@ -15,6 +15,7 @@
 				<li class="nav-item nav-item--mega-menu">
 					<a href="#" class="btn btn-primary align-items-center mr-1 sni-after sni__chevron-down">Shop</a>
 					<div class="mega-menu position-absolute bg-white w-100">
+						{{#unless critical}}
 						<div class="container">
 							<div class="row flex-grow-1 py-1">
 								<div class="col-3">
@@ -61,6 +62,7 @@
 								<a href="#" class="col-3"><img class="w-100" src="//via.placeholder.com/290x190/EFADBA"></a>
 							</div>
 						</div>
+						{{/unless}}
 					</div>
 				</li>
 				<li class="nav-item">
@@ -101,6 +103,7 @@
 	</nav>
 
 	<nav class="mobile-nav position-fixed d-lg-none sni sni__close">
+		{{#unless critical}}
 		<ul id="mobileMenu" class="mobile-nav__menu accordion position-fixed h-100 col-9 bg-white list-unstyled py-2 mb-0"
 			role="tablist" aria-multiselectable="true">
 			<li class="mb-1">
@@ -203,6 +206,7 @@
 				</select>
 			</li>
 		</ul>
+		{{/unless}}
 	</nav>
 	<nav class="text-center nav-ranges p-g bg-white d-lg-none">
 		<ul class="nav justify-content-center">

@@ -61,6 +61,7 @@ class SNCart {
 			items: [],
 			item_count: 0,
 			items_subtotal_price: 0,
+			original_total_price: 0,
 		};
 
 		this.manualGwpSelected = [];
@@ -78,6 +79,7 @@ class SNCart {
 		});
 		this.cart.item_count = count;
 		this.cart.items_subtotal_price = subtotal;
+		this.cart.original_total_price = subtotal;
 		document.dispatchEvent(new CustomEvent('snCart.requestDone', { detail: { result: this.cart } }));
 		document.dispatchEvent(new CustomEvent('snCart.requestComplete'));
 	}
@@ -280,6 +282,10 @@ class SNCart {
 			this.appliedCode = '';
 		}
 	})
+
+	async checkTierLevel(cart) {
+		return [{}, {}, cart.items_subtotal_price];
+	}
 }
 
 const snCart = new SNCart();

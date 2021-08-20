@@ -1,20 +1,20 @@
 .stockist {
 
-    figure a {
-        background-color: $secondary-light;
-    }
+	figure a {
+		background-color: $secondary-light;
+	}
 
-    a {
-        color: $body-color;
+	a {
+		color: $body-color;
 
-        &:hover {
-            color: $primary;
-        }
-    }
+		&:hover {
+			color: $primary;
+		}
+	}
 
-    img {
-        @include media-breakpoint-down(md) {
-            width: 100%;
-        }
-    }
+	img {
+		@include media-breakpoint-down(md) {
+				width: 100%;
+		}
+	}
 }

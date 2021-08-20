@@ -27,10 +27,10 @@
 				margin-right: calc-em(3, 16);
 			}
 
-      &:focus,
-      &:active {
-        outline: none;
-      }
+			&:focus,
+			&:active {
+				outline: none;
+			}
 		}
 	}
 }
@@ -39,9 +39,9 @@
 	color: $secondary;
 
 	&:before {
-		font-size: calc-em(34, 20);
+		font-size: calc-em(34,20);
 		@include media-breakpoint-up(xl) {
-			font-size: calc-em(41, 20);
+			font-size: calc-em(41,20);
 		}
 	}
 
@@ -50,12 +50,12 @@
 	}
 
 	@include media-breakpoint-up(lg) {
-		padding-top: calc-em(11.625, 16);
-		padding-bottom: calc-em(11.625, 16);
+	padding-top: calc-em(11.625, 16);
+	padding-bottom: calc-em(11.625, 16);
 
-		svg {
-			height: calc-em(33, 16);
-		}
+	svg {
+		height: calc-em(33, 16);
+	}
 	}
 }
 

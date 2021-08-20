@@ -1,7 +1,4 @@
-@import 'core/functions';
-@import 'core/vars';
-
-@import 'bootstrap/core';
+@import 'core';
 
 /*!
  * Widget Version: 2021-06-06_15-16-58
@@ -2087,7 +2084,7 @@
 .yotpo .yotpo-review .yotpo-header .yotpo-review-stars .yotpo-user-related-fields .yotpo-user-field .yotpo-user-field-description,
 .yotpo .yotpo-comment .yotpo-header .yotpo-review-stars .yotpo-user-related-fields .yotpo-user-field .yotpo-user-field-description,
 .yotpo .yotpo-question .yotpo-header .yotpo-review-stars .yotpo-user-related-fields .yotpo-user-field .yotpo-user-field-description {
-	float: left;
+	float: unset;
 	font-style: italic !important;
 	font-weight: bold;
 	margin-right: 7px;

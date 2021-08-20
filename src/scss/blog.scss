@@ -3,21 +3,23 @@
 @import 'bootstrap/main';
 @import 'common';
 
-@import 'components/icons';
+@import 'components/video-card';
+@import 'components/breadcrumb';
 @import 'components/social-icons';
+@import 'components/article-proggress-bar';
+@import 'components/icons';
 @import 'components/buttons';
-
 @import 'components/hr';
 @import 'components/badge';
+@import 'components/modal-waitlist';
 @import 'components/review-stars';
 @import 'components/tabs';
 @import 'components/carousel';
 @import 'components/yotpo_stars';
 
-@import 'compounds/result-card';
-@import 'compounds/product-card';
+@import 'compounds/post-card';
 
-@import 'sections/instagram';
-@import 'sections/testimonials-carousel';
+@import 'sections/howto';
+@import 'sections/sidebar';
 
-@import 'templates/real-result';
+@import 'templates/blog';

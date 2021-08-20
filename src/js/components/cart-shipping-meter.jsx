@@ -5,17 +5,18 @@ import PropTypes from 'prop-types';
 
 import { formatMoney } from '~mod/utils';
 
-const CartDiscountMeter = (props) => {
+const CartShippingMeter = (props) => {
 	const {
 		target,
 		current,
 		progressText,
+		finalText,
 	} = props;
 
 	const remaining = target - current;
 	const progress = remaining <= 0 ? 100 : Math.floor((current / target) * 100);
 	const amount = formatMoney(remaining);
-	const text = remaining <= 0 ? progressText : progressText.replace('#{remaining}', amount);
+	const text = remaining <= 0 ? finalText : progressText.replace('#{shipping_price}', amount).replace('#{amount}', amount);
 
 	return (
 		<>
@@ -35,16 +36,18 @@ const CartDiscountMeter = (props) => {
 	);
 };
 
-CartDiscountMeter.propTypes = {
+CartShippingMeter.propTypes = {
 	current: PropTypes.number,
 	target: PropTypes.number,
 	progressText: PropTypes.string,
+	finalText: PropTypes.string,
 };
 
-CartDiscountMeter.defaultProps = {
+CartShippingMeter.defaultProps = {
 	current: 0,
 	target: 0,
 	progressText: tSettings.cartShippingMeter.inProgressText,
+	finalText: tSettings.cartShippingMeter.finalText,
 };
 
-export default CartDiscountMeter;
+export default CartShippingMeter;

@@ -34,7 +34,8 @@ export default class CartItem extends React.Component {
 		this.props.onRemoveItem(this.props.item);
 	}
 
-	onChangeVariant = () => {
+	onChangeVariant = (e) => {
+		e.stopPropagation();
 		this.setState({ editingVariant: false }, () => {
 			this.props.onChangeVariant(this.props.item, this.state.selectedVariant.id);
 		});
@@ -42,11 +43,11 @@ export default class CartItem extends React.Component {
 
 	render() {
 		const { item } = this.props;
-		const { editingVariant } = this.state;
+		const { editingVariant, selectedVariant } = this.state;
 		const { models } = item;
 		const showVariantOptions = models.variantOptions && models.variantOptions.length > 1 && !models.isFree;
 		return (
-			<li className="cart-item border-bottom">
+			<li className="cart-item">
 				<figure className="row py-2 mb-0 align-items-start">
 					<ConditionWrapper
 						condition={!models.isFree}
@@ -57,26 +58,28 @@ export default class CartItem extends React.Component {
 						</picture>
 					</ConditionWrapper>
 					<figcaption className="col-9">
-						<div className="d-flex align-items-start">
-							<h4 className="flex-grow-1 mr-1">
+						<div className="d-flex align-items-start no-gutters justify-content-between">
+							<p className="mb-1 font-weight-bold col-8">
 								<ConditionWrapper
 									condition={!models.isFree}
 									wrapper={(children) => <a href={item.url} className="link-secondary">{children}</a>}
 								>
 									{item.product_title}
 								</ConditionWrapper>
-							</h4>
+							</p>
 							{!models.isFree && (<button className="cart-item__remove btn-unstyled sni sni__trash" type="button" aria-label="Remove" onClick={this.onRemoveItem} />)}
 						</div>
 
 						{models.variantTitle && (
 							<div className="mb-1">
 								<p className="d-flex mb-1 align-items-end">
-									{`${models.variantType}: ${models.variantTitle}`}
+									<span>
+										{`${models.variantType}: ${selectedVariant ? selectedVariant.variantTitle.replace(': limited edition!', '') : item.models.variantTitle.replace(': limited edition!', '')}`}
+									</span>
 									{editingVariant && (
 										<>
 											<span className="mx-1">-</span>
-											<button type="button" className="btn btn-link p-0 border-0" onClick={this.onChangeVariant}>Update</button>
+											<button type="button" className="btn btn-link p-0 border-0 text-underline mr-3" onClick={this.onChangeVariant}>{tStrings.cart_update_variant}</button>
 										</>
 									)}
 								</p>
@@ -86,7 +89,7 @@ export default class CartItem extends React.Component {
 								{showVariantOptions && this.state.variantOptions.map((option) => (
 									<button
 										key={option.id}
-										className={`variant-swatch mr-2 ${option.variantHandle} ${option.id === this.state.selectedVariant.id && 'border-primary'}`}
+										className={`variant-swatch mr-1 ${option.variantHandle} ${option.id === this.state.selectedVariant.id && 'border-primary'}`}
 										type="button"
 										tabIndex="-1"
 										disabled={!option.available}
@@ -99,7 +102,7 @@ export default class CartItem extends React.Component {
 
 						{models.properties && Object.keys(models.properties).map((key) => (<p key={key} className="mb-1">{`${key}: ${item.properties[key]}`}</p>))}
 
-						<div className="d-flex align-items-end justify-content-between">
+						<div className="d-flex align-items-center justify-content-between">
 							<QuantityBox
 								name="updates[]"
 								editable={!item.models.isFree}
@@ -120,6 +123,9 @@ export default class CartItem extends React.Component {
 
 				{models.showPreorderNotif && (
 					<span className="d-block mb-2">{tStrings.estimated_delivery_text}</span>
+				)}
+				{models.showPreorderNotif_2 && (
+					<span className="d-block mb-2">{tStrings.estimated_delivery_text_2}</span>
 				)}
 			</li>
 		);
