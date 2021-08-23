@@ -93,4 +93,14 @@
 			transform: rotate(10deg);
 		}
 	}
+  &.scent-1 {
+    &:before {
+      background-image: url(asset-url('scent01.svg'));
+    }
+  }
+  &.scent-2 {
+    &:before {
+      background-image: url(asset-url('scent02.svg'));
+    }
+  }
 }
