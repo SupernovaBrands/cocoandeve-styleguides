@@ -29,6 +29,10 @@
 	&--sold-out {
 		top: -4.7em;
 
+    @include media-breakpoint-down(md) {
+      left: 0;
+    }
+
 		&:before {
 			content: '';
 			position: absolute;
