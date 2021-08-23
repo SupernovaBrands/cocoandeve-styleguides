@@ -3,9 +3,9 @@
 		<div class="carousel-inner">
 			{{#times totalSlide}}
 			<div class="carousel-item {{#if @first}}active{{/if}}">
-				<picture {{#if @last}}class="position-relative sni sni__play"{{/if}}>
-					<source srcset="https://via.placeholder.com/1140x1260/EFADBA?text=1140x1260+Slide+{{@index}}" media="(min-width: 992px)">
-					<img src="https://via.placeholder.com/750x750/EFADBA?text=750x750+Slide+{{@index}}" alt="Slide {{@index}}" class="w-100" />
+				<picture class="embed-responsive embed-responsive-1by1 bg-shimmer {{#if @last}}sni sni__play{{/if}}">
+					<source data-srcset="https://via.placeholder.com/1140x1260/EFADBA?text=1140x1260+Slide+{{@index}}" media="(min-width: 992px)">
+					<img data-src="https://via.placeholder.com/750x750/EFADBA?text=750x750+Slide+{{@index}}" alt="Slide {{@index}}" class="w-100 embed-responsive-item fit--cover lazyload" />
 				</picture>
 			</div>
 			{{/times}}
@@ -25,8 +25,10 @@
 	<div class="carousel-inner d-flex flex-nowrap flex-lg-column {{#if (gt totalSlide 5)}}{{else}}justify-content-center justify-content-lg-start{{/if}}">
 		{{#times totalSlide}}
 		<div class="product-image-carousel__indicator__item carousel-item {{#if @first}}active{{/if}} col-12 px-lg-0 pb-lg-3 mw-100" data-target="#product-image-carousel{{#if num}}{{num}}{{/if}}" data-index="{{@index}}">
-			<button class="btn-unstyled border d-block {{#if @first}}border-primary{{else}}border-white{{/if}}">
-				<img class="img-fluid mx-auto d-block" src="https://via.placeholder.com/150x150/EFADBA?text={{@index}}" alt="Slide {{@index}}">
+			<button class="btn-unstyled border d-block w-100 {{#if @first}}border-primary{{else}}border-white{{/if}}">
+				<picture class="embed-responsive embed-responsive-1by1 bg-shimmer">
+					<img class="embed-responsive-item fit--cover lazyload" data-src="https://via.placeholder.com/150x150/EFADBA?text={{@index}}" alt="Slide {{@index}}">
+				</picture>
 			</button>
 		</div>
 		{{/times}}

@@ -78,3 +78,23 @@
 .cursor-default {
 	cursor: default !important;
 }
+
+.fit--cover {
+	object-fit: cover;
+}
+
+@keyframes gradient-shimmer {
+	0%{background-position: 100% 50%}
+	100%{background-position: 0% 50%}
+}
+
+.bg-shimmer {
+	background: $gray-500;
+	background: linear-gradient(130deg, $gray-500 33%, $gray-100 50%, $gray-500 67%);
+	background-size: 1000% 1000%;
+	animation: gradient-shimmer 2.5s ease infinite;
+
+	img {
+		opacity: 0;
+	}
+}
