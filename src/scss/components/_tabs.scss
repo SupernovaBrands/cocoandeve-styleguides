@@ -43,6 +43,15 @@
         width: calc-em(90);
       }
     }
+
+		&_long .nav-link {
+			min-width: calc-em(75);
+
+			@include media-breakpoint-down(xs) {
+				// 360px width
+				min-width: calc-em(60);
+			}
+		}
   }
 
   &--real-results {
