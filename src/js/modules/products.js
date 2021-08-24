@@ -89,6 +89,17 @@ const updateFormButton = (form) => {
 $('.product-form .variant-swatch').on('click', function () {
 	const attrFor = $(this).data('value');
 	const swatchContainers = $(this).closest('form').find('.product-swatch');
+	const imageSwatch = $(this).data('image');
+	const carouselIndicator = $('#product-image-carousel__indicator .product-image-carousel__indicator__item');
+
+	// connecting variant swatch with image carousel
+	if (imageSwatch && carouselIndicator.length) {
+		const targetIndicator = carouselIndicator.find(`button img[src='${imageSwatch}']`);
+		if (targetIndicator) {
+			$(targetIndicator).closest('.product-image-carousel__indicator__item').trigger('click');
+		}
+	}
+
 	swatchContainers.each((i, el) => {
 		const swatches = $(el).find('.variant-swatch');
 		const selected = swatches.filter(`[data-value=${attrFor}]`);
