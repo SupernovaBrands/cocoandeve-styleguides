@@ -93,14 +93,15 @@
 			transform: rotate(10deg);
 		}
 	}
-	&.scent-1 {
+	&.tropical-mango,
+	&.sweet-mango {
 		&:before {
-			background-image: url(asset-url('scent01.svg'));
+			background-image: url(asset-url('scent-sweet-manggo.svg'));
 		}
 	}
-	&.scent-2 {
+	&.lychee-dragonfruit {
 		&:before {
-			background-image: url(asset-url('scent02.svg'));
+			background-image: url(asset-url('scent-lychee-dragonfruit.svg'));
 		}
 	}
 }
