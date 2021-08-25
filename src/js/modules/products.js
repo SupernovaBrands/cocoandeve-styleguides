@@ -145,10 +145,10 @@ if (mobileSwatchTrigger && mobileSwatch.length > 0) {
 
 const soldOutTooltip = $('.tooltip--sold-out');
 if (soldOutTooltip.length > 0) {
-	setTimeout(function() {
+	setTimeout(function () {
 		soldOutTooltip.addClass('show');
-		setTimeout(function() {
+		setTimeout(function () {
 			soldOutTooltip.removeClass('show');
-		}, 5000)
-	}, 2000)
+		}, 5000);
+	}, 2000);
 }
