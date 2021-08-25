@@ -95,6 +95,13 @@
 	animation: gradient-shimmer 2.5s ease infinite;
 
 	img {
+		transition: opacity 0.4s linear;
 		opacity: 0;
+	}
+
+	&--loaded {
+		img {
+			opacity: 1;
+		}
 	}
 }

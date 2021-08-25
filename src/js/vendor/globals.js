@@ -1,65 +1,10 @@
-// Mocks global variables in live store
-
+/*
+	- Mocks global variables in live store
+	- Inline scripts
+*/
 window.assetUrl = function (filename) {
 	return `/images/${filename}`;
 };
-
-window.initLazyImages = () => {
-	function removeBg(e) {
-		const parent = e.target.parentElement;
-		if (parent.classList.contains('bg-shimmer')) {
-			parent.classList.remove('bg-shimmer');
-		}
-		e.target.removeEventListener('load', removeBg);
-	}
-
-	function loadImage(img) {
-		const parent = img.parentElement;
-		const hasSource = parent.tagName === 'PICTURE' && parent.querySelectorAll('source').length > 0;
-		const dataSrc = img.dataset.src;
-		const hasDataSrc = dataSrc && img.src !== dataSrc;
-		const sources = parent.querySelectorAll('source');
-
-		if (img.complete && !hasDataSrc) {
-			removeBg({ target: img });
-		} else {
-			img.addEventListener('load', removeBg);
-		}
-
-		if (hasDataSrc) {
-			// eslint-disable-next-line no-param-reassign
-			img.src = dataSrc;
-			if (hasSource && typeof sources !== 'undefined') {
-				sources.forEach((source) => {
-					// eslint-disable-next-line no-param-reassign
-					if (source.dataset.srcset) source.srcset = source.dataset.srcset;
-				});
-			}
-		}
-	}
-
-	const io = new IntersectionObserver((entries) => {
-		entries.forEach((entry) => {
-			if (entry.isIntersecting) {
-				setTimeout(() => {
-					loadImage(entry.target);
-				}, 1000);
-				entry.target.classList.remove('lazyload');
-				io.unobserve(entry.target);
-			}
-		});
-	}, {
-		rootMargin: '300px 0px',
-	});
-
-	window.renderLazyImages = () => {
-		document.querySelectorAll('img.lazyload').forEach((img) => {
-			io.observe(img);
-		});
-	};
-};
-window.initLazyImages();
-window.renderLazyImages();
 
 window.screenLG = 992;
 window.tStrings = {
