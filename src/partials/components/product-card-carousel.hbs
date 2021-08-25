@@ -48,13 +48,13 @@
 				<label class="mb-2"><strong>Shade: </strong><span data-swatch-label>Dark</span></label>
 				<ul class="list-unstyled product-variant-swatch d-flex justify-content-center">
 					<li class="product-variant-swatch__item available col-3" data-available="available">
-						<span data-id="32068891541539" data-val="Medium" class="shade-medium"></span>
+						<span data-id="32068891541539" data-val="Medium" class="d-block variant-swatch shade-medium"></span>
 					</li>
 					<li class="product-variant-swatch__item available active col-3" data-available="available">
-						<span data-id="32068891607075" data-val="Dark" class="shade-dark"></span>
+						<span data-id="32068891607075" data-val="Dark" class="d-block border-primary mx-auto variant-swatch shade-dark"></span>
 					</li>
 					<li class="product-variant-swatch__item available col-3" data-available="available">
-						<span data-id="32068891639843" data-val="Ultra Dark" class="shade-ultra-dark"></span>
+						<span data-id="32068891639843" data-val="Ultra Dark" class="d-block mx-auto  variant-swatch shade-ultra-dark"></span>
 					</li>
 				</ul>
 			</div>
@@ -71,10 +71,10 @@
 				<label class="mb-2"><strong>Style: </strong><span data-swatch-label>Girl Print: Limited edition!</span></label>
 				<ul class="list-unstyled product-variant-swatch d-flex justify-content-center">
 					<li class="product-variant-swatch__item available active col-3" data-available="available">
-						<span data-id="32068891607075" data-val="Girl Print" class="style-girl-print"></span>
+						<span data-id="32068891607075" data-val="Girl Print" class="d-block border-primary mx-auto  variant-swatch girl-print"></span>
 					</li>
 					<li class="product-variant-swatch__item available col-3" data-available="available">
-						<span data-id="32068891639843" data-val="Print Leaf" class="style-leaf-print"></span>
+						<span data-id="32068891639843" data-val="Print Leaf" class="d-block mx-auto  variant-swatch leaf-print"></span>
 					</li>
 				</ul>
 			</div>
@@ -90,10 +90,29 @@
 				<label class="mb-2"><strong>Style: </strong><span data-swatch-label>Girl Print: Limited edition!</span></label>
 				<ul class="list-unstyled product-variant-swatch d-flex justify-content-center">
 					<li class="product-variant-swatch__item available active col-3" data-available="available">
-						<span data-id="32068891607075" data-val="Girl Print" class="style-eyemask-pink"></span>
+						<span data-id="32068891607075" data-val="Girl Print" class="d-block border-primary mx-auto  variant-swatch pink"></span>
 					</li>
 					<li class="product-variant-swatch__item available col-3" data-available="available">
-						<span data-id="32068891639843" data-val="Print Leaf" class="style-eyemask-green"></span>
+						<span data-id="32068891639843" data-val="Print Leaf" class="d-block mx-auto  variant-swatch green"></span>
+					</li>
+				</ul>
+			</div>
+			<button type="button" class="btn btn-lg btn-primary add-to-cart btn-block px-0">
+				Add To Cart
+			</button>
+		</div>
+		{{/if}}
+		{{#if swatch_scent }}
+		<button type="button" class="btn btn-lg btn-primary btn-choose btn-block px-0">Choose Scent</button>
+		<div class="swatch-overlay flex-column align-items-center justify-content-end w-100 pb-0 position-absolute {{#if collection }} px-lg-2 {{else}} px-2 {{/if}}">
+			<div class="text-center w-100 pt-2 pb-lg-2">
+				<label class="mb-2"><strong>Scent: </strong><span data-swatch-label>Girl Print: Limited edition!</span></label>
+				<ul class="list-unstyled product-variant-swatch d-flex justify-content-center">
+					<li class="product-variant-swatch__item available active col-3" data-available="available">
+						<span data-id="32068891607075" data-val="Girl Print" class="d-block border-primary mx-auto  variant-swatch sweet-manggo"></span>
+					</li>
+					<li class="product-variant-swatch__item available col-3" data-available="available">
+						<span data-id="32068891639843" data-val="Print Leaf" class="d-block mx-auto  variant-swatch lychee-dragonfruit"></span>
 					</li>
 				</ul>
 			</div>

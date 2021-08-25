@@ -93,4 +93,15 @@
 			transform: rotate(10deg);
 		}
 	}
+	&.tropical-mango,
+	&.sweet-mango {
+		&:before {
+			background-image: url(asset-url('scent-sweet-manggo.svg'));
+		}
+	}
+	&.lychee-dragonfruit {
+		&:before {
+			background-image: url(asset-url('scent-lychee-dragonfruit.svg'));
+		}
+	}
 }
