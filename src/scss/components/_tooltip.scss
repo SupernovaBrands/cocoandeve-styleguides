@@ -27,11 +27,15 @@
 	}
 
 	&--sold-out {
-		top: -4.7em;
+		top: auto;
+		bottom: 2em;
+		z-index: 0;
+		left: 0;
+		transform: translateY(170%);
 
-    @include media-breakpoint-down(md) {
-      left: 0;
-    }
+		@include media-breakpoint-up(lg) {
+			left: calc-em(24, 16);
+		}
 
 		&:before {
 			content: '';
@@ -43,11 +47,23 @@
 			left: calc-em(10, 16);
 			transform: translateY(99%);
 			right: auto;
+		}
 
-			@include media-breakpoint-up(lg) {
-				left: auto;
-				right: calc-em(10, 16);
-			}
+		&.show {
+			animation-duration: 1s;
+			animation-name: tooltipBounceInUp;
+		}
+	}
+
+	@keyframes tooltipBounceInUp {
+		0% {
+			transform: translateY(170%);
+		}
+		60% {
+			transform: translateY(-25%);
+		}
+		100% {
+			transform: translateY(0);
 		}
 	}
 
