@@ -142,3 +142,13 @@ if (mobileSwatchTrigger && mobileSwatch.length > 0) {
 	const observer = new IntersectionObserver(observerCallback);
 	observer.observe(mobileSwatchTrigger);
 }
+
+const soldOutTooltip = $('.tooltip--sold-out');
+if (soldOutTooltip.length > 0) {
+	setTimeout(function() {
+		soldOutTooltip.addClass('show');
+		setTimeout(function() {
+			soldOutTooltip.removeClass('show');
+		}, 5000)
+	}, 2000)
+}
