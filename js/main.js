@@ -591,7 +591,7 @@ eval("module.exports = JSON.parse('[{\"id\":4625694621731,\"title\":\"2-way Scal
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "chunk." + chunkId + ".js?h=" + {"nav-category":"44deaed68e8472f5d45f","carousel-loop":"0d7c316456b29658d3fe","carousel-swipe":"bb7d70cc1ae00b9ffb11","modal-waitlist":"8468d025a1a2754c817d","page-reviews":"3661dd41dd1fb525aa61","products":"0756446f9b1cfb573c51","yotpo":"07ec20212abc6bb04568"}[chunkId] + "";
+/******/ 			return "chunk." + chunkId + ".js?h=" + {"nav-category":"44deaed68e8472f5d45f","carousel-loop":"0d7c316456b29658d3fe","carousel-swipe":"bb7d70cc1ae00b9ffb11","modal-waitlist":"8468d025a1a2754c817d","page-reviews":"3661dd41dd1fb525aa61","products":"c05ff72f8ee13c81c1a9","yotpo":"07ec20212abc6bb04568"}[chunkId] + "";
 /******/ 		};
 /******/ 	})();
 /******/ 	
