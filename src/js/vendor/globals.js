@@ -1,5 +1,7 @@
-// Mocks global variables in live store
-
+/*
+	- Mocks global variables in live store
+	- Inline scripts
+*/
 window.assetUrl = function (filename) {
 	return `/images/${filename}`;
 };

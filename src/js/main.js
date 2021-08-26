@@ -1,7 +1,5 @@
 /* global screenLG */
 
-import '~mod/globals';
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Cart from '~comp/cart';
