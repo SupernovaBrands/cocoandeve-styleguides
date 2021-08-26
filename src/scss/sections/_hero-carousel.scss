@@ -1,0 +1,9 @@
+.hero-carousel {
+	picture {
+		padding-top: percentage(926 / 828);
+
+		@include media-breakpoint-up(lg) {
+			padding-top: percentage(733 / 1920);
+		}
+	}
+}
