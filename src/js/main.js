@@ -160,7 +160,6 @@ $(document).ready(function () {
 
 	$('#videoCardModal').on('shown.bs.modal', function () {
 		// set the video src to autoplay and not to show related video.
-
 		if ($videoSrc.includes('.mp4')) {
 			toggleiFrameVideo($(this).find('iframe'), false);
 			toggleHTMLVideo($(this).find('video'), true, $videoSrc);
