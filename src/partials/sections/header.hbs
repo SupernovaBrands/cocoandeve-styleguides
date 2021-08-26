@@ -230,3 +230,8 @@
 </header>
 
 <div class="modal fade cart-drawer" id="cart-drawer" tabindex="-1" aria-hidden="true"></div>
+
+{{!-- Adding this to include bg-shimmer related classes in critical css --}}
+{{#if critical}}
+<div class="d-none embed-responsive bg-shimmer embed-responsive-item fit--cover"><img /></div>
+{{/if}}
