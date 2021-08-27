@@ -8,7 +8,8 @@
 		}
 	}
 
-	.product-swatch {
+	.product-swatch,
+	&__note {
 		display: none;
 	}
 
@@ -24,8 +25,17 @@
 
 		&:checked ~ .custom-control-label {
 			border-color: $primary !important;
-			.product-swatch {
+			.product-swatch,
+			.product-variant__note {
 				display: block;
+			}
+		}
+	}
+
+	&--subscription {
+		.custom-control-input {
+			&:checked ~ .custom-control-label {
+				background-color: $primary-light;
 			}
 		}
 	}

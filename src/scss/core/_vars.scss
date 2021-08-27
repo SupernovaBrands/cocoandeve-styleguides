@@ -242,3 +242,11 @@ $custom-switch-indicator-border-radius: 2em;
 $custom-control-indicator-bg: white;
 $custom-control-indicator-border-color: white;
 $custom-control-indicator-checked-disabled-bg: $gray-400;
+
+//Popover
+$popover-max-width: 302px !default;
+$popover-border-radius: calc-em(6);
+$popover-body-padding-y: calc-em(10);
+$popover-body-padding-x: calc-em(15);
+$popover-box-shadow: 0 .25em .5em rgba(black, .2);
+$popover-border-width: 0;

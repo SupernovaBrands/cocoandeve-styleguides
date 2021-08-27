@@ -65,7 +65,11 @@ export default class CartItem extends React.Component {
 									wrapper={(children) => <a href={item.url} className="link-secondary">{children}</a>}
 								>
 									{item.product_title}
+									{`${models.recurring ? ' Subscription' : ''}`}
 								</ConditionWrapper>
+								{models.recurring && (
+									<small className="text-primary mt-1 d-flex"><i class="sni sni__recurring mr-1"></i> Recurring every 1 month</small>
+								)}
 							</p>
 							{!models.isFree && (<button className="cart-item__remove btn-unstyled sni sni__trash" type="button" aria-label="Remove" onClick={this.onRemoveItem} />)}
 						</div>
@@ -112,7 +116,10 @@ export default class CartItem extends React.Component {
 							<div className="d-flex flex-column text-right">
 								{models.comparePrice > 0 && (
 									<span className="text-linethrough">{formatMoney(models.comparePrice)}</span>)}
-								<span className="font-weight-bold">{formatMoney(item.original_price)}</span>
+								<span className="font-weight-bold">
+									{formatMoney(item.original_price)}
+									{models.recurring && ('/month')}
+								</span>
 							</div>
 						</div>
 
