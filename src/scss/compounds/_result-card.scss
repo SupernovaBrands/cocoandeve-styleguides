@@ -1,10 +1,13 @@
 .result-card {
-  picture {
-    padding-top: percentage(214 / 300);
+  img {
     border-radius: $badge-border-radius $badge-border-radius 0 0;
   }
 
   &.carousel-item {
+    img {
+      max-height: calc-em(194);
+    }
+
     & > div {
       min-height: calc-em(430);
     }

@@ -1,15 +1,12 @@
 .instagram {
   &--feed {
-    &--link {
+    img {
+      object-fit: cover;
+      max-height: calc-em(173);
       padding: calc-em(6);
-    }
 
-    @include media-breakpoint-up(lg) {
-      &--left {
-        @include make-col(3, 7);
-      }
-      &--right {
-        @include make-col(4, 7);
+      &.img-big {
+        max-height: calc-em(173*2);
       }
     }
   }
