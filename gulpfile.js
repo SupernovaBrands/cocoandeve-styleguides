@@ -32,6 +32,7 @@ const files = {
 	allScss: ['src/scss/**/*', '!src/scss/critical-css/*.scss'],
 	scss: ['src/scss/*.scss'],
 	criticalScss: ['src/critical-css/*.css'],
+	icons: ['images/icons/*'],
 	static: [
 		// fonts
 		'fonts/*.svg',
@@ -108,10 +109,14 @@ const indexFile = function () {
 };
 
 const hbsFiles = function () {
+	const svgIcons = fs.readdirSync('images/icons')
+		.filter((file) => path.extname(file) === '.svg')
+		.map((file) => file.replace('.svg', ''));
+
 	return src(files.hbs)
-		.pipe(handlebars(hbsVars, { batch: ['src/partials'], helpers: hbsHelpers }))
+		.pipe(handlebars({ ...hbsVars, svgIcons }, { batch: ['src/partials'], helpers: hbsHelpers }))
 		.pipe(rename({ extname: '.html' }))
-		.pipe(replace(/<img[^>]*?replace-to-svg[^>]*?>/i, (match) => {
+		.pipe(replace(/<img[^>]*?replace-to-svg[^>]*?>/gi, (match) => {
 			let result = match;
 			const folder = 'images';
 			const img = cheerio.load(match);
@@ -232,6 +237,7 @@ const watchFiles = function (done) {
 		.on('add', indexFile)
 		.on('unlink', indexFile);
 	watch(files.partials, hbsFiles);
+	watch(files.icons, hbsFiles);
 	watch(files.js, jsFiles);
 	watch(files.vendorJs, vendorJsFiles);
 	watch(files.static, staticFiles);

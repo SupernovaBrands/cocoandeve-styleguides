@@ -1,0 +1,39 @@
+.svg {
+	height: $font-size-base;
+
+	&--white {
+		path {
+			fill: $white;
+		}
+	}
+
+	&--primary {
+		path {
+			fill: $primary;
+		}
+	}
+
+	&--secondary {
+		path {
+			fill: $secondary;
+		}
+	}
+
+	&--purple {
+		path {
+			fill: $sh-purple;
+		}
+	}
+
+	&--size-xs {
+		height: $font-size-xs;
+	}
+
+	&--size-sm {
+		height: $font-size-sm;
+	}
+
+	&--size-lg {
+		height: $font-size-lg;
+	}
+}
