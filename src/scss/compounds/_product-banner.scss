@@ -28,6 +28,13 @@ $grid-column-width-xl: minmax(0, (map-get($container-max-widths, xl) - $grid-gut
 	}
 
 	&__image {
+		picture {
+			padding-top: percentage(646/750);
+			@include media-breakpoint-up(lg) {
+				padding-top: percentage(1176/1366);
+			}
+		}
+
 		img {
 			object-fit: cover;
 			object-position: left;
