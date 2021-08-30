@@ -12,6 +12,8 @@ const handlebars = require('gulp-compile-handlebars');
 const rename = require('gulp-rename');
 const critical = require('critical').stream;
 const cleancss = require('gulp-clean-css');
+const replace = require('gulp-replace');
+const cheerio = require('cheerio');
 const fs = require('fs');
 const path = require('path');
 
@@ -109,6 +111,29 @@ const hbsFiles = function () {
 	return src(files.hbs)
 		.pipe(handlebars(hbsVars, { batch: ['src/partials'], helpers: hbsHelpers }))
 		.pipe(rename({ extname: '.html' }))
+		.pipe(replace(/<img[^>]*?replace-to-svg[^>]*?>/i, (match) => {
+			let result = match;
+			const folder = 'images';
+			const img = cheerio.load(match);
+			const attrs = img('img').attr();
+			if (attrs.src && attrs.src !== '') {
+				let svg;
+				try {
+					svg = fs.readFileSync(`${folder}/${attrs.src}`, { encoding: 'utf8' });
+				} catch (error) {
+					console.log('Inject SVG error:', `${folder}/${attrs.src}`);
+					return result;
+				}
+				svg = cheerio.load(svg);
+				Object.keys(attrs).forEach((attr) => {
+					if (!['src', 'replace-to-svg'].includes(attr)) {
+						svg('svg').attr(attr, attrs[attr]);
+					}
+				});
+				result = svg('svg').prop('outerHTML');
+			}
+			return result;
+		}))
 		.pipe(dest('dist'))
 		.pipe(browserSync.stream());
 };
