@@ -2,17 +2,14 @@
 
     &__quote {
 
-        &::before,
-        &::after {
-            font-family: $supernova-icon-font;
-            color: $primary;
+        .quote-up,
+        .quote-down {
             opacity: .3;
             position: absolute;
             font-size: calc-em(32, 16);
         }
-        
-        &::before {
-            content: "#{map-get($supernova-icon-map, "quote-down")}   ";
+
+        .quote-down {
             top: -$grid-gutter-width;
             left: $grid-gutter-width-lg;
 
@@ -22,11 +19,10 @@
             }
         }
 
-        &::after {
-            content: "#{map-get($supernova-icon-map, "quote-up")}   ";
+        .quote-up {
             bottom: -$grid-gutter-width;
             right: $grid-gutter-width-lg;
-    
+
             @include media-breakpoint-up(lg) {
                 bottom: 0;
                 transform: translateY(50%);

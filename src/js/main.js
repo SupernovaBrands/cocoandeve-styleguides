@@ -437,7 +437,7 @@ $(document).ready(function () {
 	// custom checkbox
 	if ($('.custom-checkbox')) {
 		$('.custom-checkbox').on('click', function () {
-			$(this).toggleClass('sni__check').toggleClass('checked');
+			$(this).toggleClass('checked');
 			if ($(this).hasClass('checked')) {
 				$('.custom-checkbox input[type="checkbox"]').prop('checked', true);
 			} else {

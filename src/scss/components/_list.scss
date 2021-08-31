@@ -5,13 +5,10 @@
 	li {
 		position: relative;
 
-		&::before {
-			font-family: $supernova-icon-font;
-			content: "\a0#{map-get($supernova-icon-map, "check")}";
-			color: $primary;
+		.svg {
 			position: absolute;
 			top: 0;
-			left: - map-get($spacers, 4);
+			left: calc-em(-35, $unit: 1rem);
 		}
 
 		&:not(:last-child) {

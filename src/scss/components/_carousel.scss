@@ -178,15 +178,13 @@
 }
 
 .carousel-control {
-	&--background {
-		.sni {
-			content: " ";
-			background-color: $white;
-			width: 2.5em;
-			height: 2.5em;
-			position: absolute;
-			z-index: -1;
-		}
+	&--background &-prev-icon,
+	&--background &-next-icon {
+		background-color: $white;
+		width: 2.5em;
+		height: 2.5em;
+		position: absolute;
+		z-index: -1;
 	}
 
 	&--right-lg {

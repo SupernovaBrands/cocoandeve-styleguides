@@ -108,6 +108,26 @@ const indexFile = function () {
 		.pipe(browserSync.stream());
 };
 
+const getSvg = (attrs = {}, folder = 'images') => {
+	if (attrs.src && attrs.src !== '') {
+		let svg;
+		try {
+			svg = fs.readFileSync(`${folder}/${attrs.src}`, { encoding: 'utf8' });
+		} catch (error) {
+			console.log('Inject SVG error:', `${folder}/${attrs.src}`);
+			return '';
+		}
+		svg = cheerio.load(svg);
+		Object.keys(attrs).forEach((attr) => {
+			if (!['src', 'replace-to-svg'].includes(attr)) {
+				svg('svg').attr(attr, attrs[attr]);
+			}
+		});
+		return svg('svg').prop('outerHTML');
+	}
+	return '';
+};
+
 const hbsFiles = function () {
 	const svgIcons = fs.readdirSync('images/icons')
 		.filter((file) => path.extname(file) === '.svg')
@@ -117,27 +137,10 @@ const hbsFiles = function () {
 		.pipe(handlebars({ ...hbsVars, svgIcons }, { batch: ['src/partials'], helpers: hbsHelpers }))
 		.pipe(rename({ extname: '.html' }))
 		.pipe(replace(/<img[^>]*?replace-to-svg[^>]*?>/gi, (match) => {
-			let result = match;
-			const folder = 'images';
 			const img = cheerio.load(match);
 			const attrs = img('img').attr();
-			if (attrs.src && attrs.src !== '') {
-				let svg;
-				try {
-					svg = fs.readFileSync(`${folder}/${attrs.src}`, { encoding: 'utf8' });
-				} catch (error) {
-					console.log('Inject SVG error:', `${folder}/${attrs.src}`);
-					return result;
-				}
-				svg = cheerio.load(svg);
-				Object.keys(attrs).forEach((attr) => {
-					if (!['src', 'replace-to-svg'].includes(attr)) {
-						svg('svg').attr(attr, attrs[attr]);
-					}
-				});
-				result = svg('svg').prop('outerHTML');
-			}
-			return result;
+			const result = getSvg(attrs);
+			return result === '' ? match : result;
 		}))
 		.pipe(dest('dist'))
 		.pipe(browserSync.stream());

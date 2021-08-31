@@ -8,6 +8,8 @@ import QuantityBox from '~comp/quantity-box';
 
 import { formatMoney } from '~mod/utils';
 
+import SvgTrash from '~svg/trash.svg';
+
 export default class CartItem extends React.Component {
 	constructor(props) {
 		super(props);
@@ -67,7 +69,7 @@ export default class CartItem extends React.Component {
 									{item.product_title}
 								</ConditionWrapper>
 							</p>
-							{!models.isFree && (<button className="cart-item__remove btn-unstyled sni sni__trash" type="button" aria-label="Remove" onClick={this.onRemoveItem} />)}
+							{!models.isFree && (<button className="cart-item__remove btn-unstyled" type="button" aria-label="Remove" onClick={this.onRemoveItem}><SvgTrash class="svg" /></button>)}
 						</div>
 
 						{models.variantTitle && (

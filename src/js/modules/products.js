@@ -27,8 +27,8 @@ $('.product-image-carousel__indicator').on('slide.bs.carousel', function (e) {
 	const index = $e.index();
 	const totalItems = $(this).find('.carousel-item').length;
 
-	const prevButton = $(this).children('button.sni__chevron-up');
-	const nextButton = $(this).children('button.sni__chevron-down');
+	const prevButton = $(this).children('button.chevron-up');
+	const nextButton = $(this).children('button.chevron-down');
 
 	if (index === 0) {
 		prevButton.attr('disabled', 'disabled');
@@ -41,20 +41,6 @@ $('.product-image-carousel__indicator').on('slide.bs.carousel', function (e) {
 		nextButton.removeAttr('disabled');
 	}
 });
-
-if ($('.product-collapse__toggle').length > 0) {
-	const handleToggle = function (open, el) {
-		const toggle = el.siblings('.product-collapse__toggle');
-		if (open) {
-			toggle.addClass('sni__minus').removeClass('sni__plus');
-		} else {
-			toggle.addClass('sni__plus').removeClass('sni__minus');
-		}
-	};
-	$('.product-collapse')
-		.on('show.bs.collapse', function () { handleToggle(true, $(this)); })
-		.on('hide.bs.collapse', function () { handleToggle(false, $(this)); });
-}
 
 $('.product-form').on('submit', function (e) {
 	e.preventDefault();

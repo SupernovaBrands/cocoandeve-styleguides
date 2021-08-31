@@ -53,8 +53,7 @@
 		content: "\a0+";
 	}
 
-	&__services .sni:before {
-		color: $secondary;
+	&__services .svg {
 		font-size: calc-em(50);
 		margin-bottom: map-get($spacers, 1) / 2;
 	}

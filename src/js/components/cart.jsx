@@ -21,6 +21,8 @@ import {
 	formatMoney,
 } from '~mod/utils';
 
+import SvgClose from '~svg/close.svg';
+
 export default class Cart extends React.Component {
 	constructor(props) {
 		super(props);
@@ -517,7 +519,7 @@ export default class Cart extends React.Component {
 						<div className="container d-flex flex-column align-items-stretch text-center pt-2">
 							<h4 className="font-size-lg font-weight-bold">{tStrings.cart_drawer_title}</h4>
 							<button type="button" className="close text-body m-0 px-g pb-2 position-absolute" data-dismiss="modal" aria-label="Close">
-								<span className="sni sni__close" aria-hidden="true" />
+								<SvgClose className="svg svg--body" aria-hidden="true" />
 							</button>
 
 							{!tSettings.cartDiscountMeter.enable

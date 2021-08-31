@@ -13,75 +13,21 @@
 				<div id="carouselLoopCentered" class="carousel slide carousel--loop" data-slide-number="2">
 					<div class="carousel--centered">
 						<div class="carousel-inner row flex-nowrap" role="listbox">
-							<figure class="video-card mb-0 carousel-item col-6 col-lg-4 active">
-								<picture class="d-block position-relative sni sni__play" data-toggle="modal" data-src="https://www.youtube.com/embed/xwAfY_vdE9I" data-target="#videoCardModal">
-									<source srcset="https://via.placeholder.com/340x340?text=1" media="(min-width: 992px)">
-									<source srcset="https://via.placeholder.com/340x340?text=1">
-									<img src="https://via.placeholder.com/275x275?text=1" alt="Placeholder" class="d-block w-100">
-								</picture>
-								<figcaption class="text-center mt-2">
-									<h3>Multi-masking #selfcaresunday with Janet Amrani</h3>
-								</figcaption>
-							</figure>
-							<figure class="video-card mb-0 carousel-item col-6 col-lg-4">
-								<picture class="d-block position-relative sni sni__play" data-toggle="modal" data-src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/TAN_HOW_TO_BONNIE_LR.mp4?v=1610351992" data-target="#videoCardModal">
-									<source srcset="https://via.placeholder.com/340x340?text=2" media="(min-width: 992px)">
-									<source srcset="https://via.placeholder.com/340x340?text=2">
-									<img src="https://via.placeholder.com/275x164?text=2" alt="Placeholder" class="d-block w-100">
-								</picture>
-								<figcaption class="text-center mt-2">
-									<h3>Multi-masking #selfcaresunday with Janet Amrani</h3>
-								</figcaption>
-							</figure>
-							<figure class="video-card mb-0 carousel-item col-6 col-lg-4">
-								<picture class="d-block position-relative sni sni__play" data-toggle="modal" data-src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/TAN_HOW_TO_BONNIE_LR.mp4?v=1610351992" data-target="#videoCardModal">
-									<source srcset="https://via.placeholder.com/340x340?text=3" media="(min-width: 992px)">
-									<source srcset="https://via.placeholder.com/340x340?text=3">
-									<img src="https://via.placeholder.com/275x164?text=3" alt="Placeholder" class="d-block w-100">
-								</picture>
-								<figcaption class="text-center mt-2">
-									<h3>Multi-masking #selfcaresunday with Janet Amrani</h3>
-								</figcaption>
-							</figure>
-							<figure class="video-card mb-0 carousel-item col-6 col-lg-4">
-								<picture class="d-block position-relative sni sni__play" data-toggle="modal" data-src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/TAN_HOW_TO_BONNIE_LR.mp4?v=1610351992" data-target="#videoCardModal">
-									<source srcset="https://via.placeholder.com/340x340?text=4" media="(min-width: 992px)">
-									<source srcset="https://via.placeholder.com/340x340?text=4">
-									<img src="https://via.placeholder.com/275x164?text=4" alt="Placeholder" class="d-block w-100">
-								</picture>
-								<figcaption class="text-center mt-2">
-									<h3>Multi-masking #selfcaresunday with Janet Amrani</h3>
-								</figcaption>
-							</figure>
-							<figure class="video-card mb-0 carousel-item col-6 col-lg-4">
-								<picture class="d-block position-relative sni sni__play" data-toggle="modal" data-src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/TAN_HOW_TO_BONNIE_LR.mp4?v=1610351992" data-target="#videoCardModal">
-									<source srcset="https://via.placeholder.com/340x340?text=5" media="(min-width: 992px)">
-									<source srcset="https://via.placeholder.com/340x340?text=5">
-									<img src="https://via.placeholder.com/275x164?text=5" alt="Placeholder" class="d-block w-100">
-								</picture>
-								<figcaption class="text-center mt-2">
-									<h3>Multi-masking #selfcaresunday with Janet Amrani</h3>
-								</figcaption>
-							</figure>
-							<figure class="video-card mb-0 carousel-item col-6 col-lg-4">
-								<picture class="d-block position-relative sni sni__play" data-toggle="modal" data-src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/TAN_HOW_TO_BONNIE_LR.mp4?v=1610351992" data-target="#videoCardModal">
-									<source srcset="https://via.placeholder.com/340x340?text=6" media="(min-width: 992px)">
-									<source srcset="https://via.placeholder.com/340x340?text=6">
-									<img src="https://via.placeholder.com/275x164?text=6" alt="Placeholder" class="d-block w-100">
-								</picture>
-								<figcaption class="text-center mt-2">
-									<h3>Multi-masking #selfcaresunday with Janet Amrani</h3>
-								</figcaption>
-							</figure>
+							{{> components/video-card class="mb-0 carousel-item col-6 col-lg-4 active" src="https://www.youtube.com/embed/xwAfY_vdE9I" title="Multi-masking #selfcaresunday with Janet Amrani" imgtext="1"}}
+							{{> components/video-card class="mb-0 carousel-item col-6 col-lg-4" src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/TAN_HOW_TO_BONNIE_LR.mp4?v=1610351992" title="Multi-masking #selfcaresunday with Janet Amrani" imgtext="2"}}
+							{{> components/video-card class="mb-0 carousel-item col-6 col-lg-4" src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/TAN_HOW_TO_BONNIE_LR.mp4?v=1610351992" title="Multi-masking #selfcaresunday with Janet Amrani" imgtext="3"}}
+							{{> components/video-card class="mb-0 carousel-item col-6 col-lg-4" src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/TAN_HOW_TO_BONNIE_LR.mp4?v=1610351992" title="Multi-masking #selfcaresunday with Janet Amrani" imgtext="4"}}
+							{{> components/video-card class="mb-0 carousel-item col-6 col-lg-4" src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/TAN_HOW_TO_BONNIE_LR.mp4?v=1610351992" title="Multi-masking #selfcaresunday with Janet Amrani" imgtext="5"}}
+							{{> components/video-card class="mb-0 carousel-item col-6 col-lg-4" src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/TAN_HOW_TO_BONNIE_LR.mp4?v=1610351992" title="Multi-masking #selfcaresunday with Janet Amrani" imgtext="6"}}
 						</div>
 					</div>
 
 					<a class="carousel-control carousel-control-prev text-primary carousel-control--background" href="#carouselLoopCentered" role="button" data-slide="prev">
-						<span class="carousel-control-prev-icon sni sni__chevron-prev justify-content-center align-items-center" aria-hidden="true"></span>
+						<span class="carousel-control-prev-icon d-flex justify-content-center align-items-center" aria-hidden="true"><img class="svg svg--primary" src="icons/chevron-prev.svg" replace-to-svg /></span>
 						<span class="sr-only">Previous</span>
 					</a>
 					<a class="carousel-control carousel-control-next text-primary carousel-control--background" href="#carouselLoopCentered" role="button" data-slide="next">
-						<span class="carousel-control-next-icon sni sni__chevron-next justify-content-center align-items-center" aria-hidden="true"></span>
+						<span class="carousel-control-next-icon d-flex justify-content-center align-items-center" aria-hidden="true"><img class="svg svg--primary" src="icons/chevron-next.svg" replace-to-svg /></span>
 						<span class="sr-only">Next</span>
 					</a>
 				</div>
@@ -97,14 +43,13 @@
 							</video>
 							<iframe class="d-none embed-responsive-item" src=""></iframe>
 						</div>
-						<button type="button" class="close position-absolute sni sni__close video-modal--icon" data-dismiss="modal"
-							aria-label="Close"></button>
+						<button type="button" class="close position-absolute video-modal--icon" data-dismiss="modal"
+							aria-label="Close"><img class="svg svg--body" src="icons/close.svg" replace-to-svg /></button>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<script src="/cocoandeve-styleguides/js/bootstrap.js"></script>
-			<script src="/cocoandeve-styleguides/js/main.js"></script>
+		{{> js jquery=true bootstrap=true main=true }}
 	</body>
 </html>

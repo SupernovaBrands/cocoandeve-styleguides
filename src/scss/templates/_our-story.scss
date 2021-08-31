@@ -42,16 +42,16 @@
 		}
 	}
 
-	.sni__chevron-next {
-		&:before {
+	.carousel-control-next-icon {
+		.svg {
 			@include media-breakpoint-up(lg) {
 				margin-left: -1.5em;
 			}
 		}
 	}
 
-	.sni__chevron-prev {
-		&:before {
+	.carousel-control-prev-icon {
+		.svg {
 			@include media-breakpoint-up(lg) {
 				margin-right: -1.5em;
 			}

@@ -5,6 +5,9 @@ import PropTypes from 'prop-types';
 
 import { isItemIdInKey } from '~mod/utils';
 
+import SvgChevronPrev from '~svg/chevron-prev.svg';
+import SvgChevronNext from '~svg/chevron-next.svg';
+
 export default class CartManualGwp extends React.Component {
 	constructor(props) {
 		super(props);
@@ -51,8 +54,8 @@ export default class CartManualGwp extends React.Component {
 			<div className="manual-gwp position-relative">
 				<p className="font-size-base font-weight-bold mb-0">{title}</p>
 				<p className="font-size-base text-muted">{`${selectedKey.length}/${maxSelected} ${tStrings.items_selected}`}</p>
-				<button className={`position-absolute btn-unstyled text-primary manual-gwp__left sni sni__chevron-prev ${this.state.showScroll ? '' : 'd-none'}`} aria-hidden="true" type="button" onClick={() => this.scroll('left')} />
-				<button className={`position-absolute btn-unstyled text-primary manual-gwp__right sni sni__chevron-next ${this.state.showScroll ? '' : 'd-none'}`} aria-hidden="true" type="button" onClick={() => this.scroll('right')} />
+				<button className={`position-absolute btn-unstyled text-primary manual-gwp__left ${this.state.showScroll ? '' : 'd-none'}`} aria-hidden="true" type="button" onClick={() => this.scroll('left')}><SvgChevronPrev class="svg svg--primary" /></button>
+				<button className={`position-absolute btn-unstyled text-primary manual-gwp__right ${this.state.showScroll ? '' : 'd-none'}`} aria-hidden="true" type="button" onClick={() => this.scroll('right')}><SvgChevronNext class="svg svg--primary" /></button>
 				<ul className="list-unstyled manual-gwp__container d-flex mb-0 text-center" ref={(r) => { this.scrollRef = r; }}>
 					{items.map((item) => {
 						const isLoading = loading && processingId === item.id;

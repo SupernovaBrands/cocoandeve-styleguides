@@ -15,16 +15,15 @@
 	}
 
 	&, &__indicator {
-		.sni__play {
+		.with-video {
 			cursor: pointer;
-		}
-		.sni__play:before {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			font-size: calc-em(30);
-			color: #fff;
+			.svg {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				font-size: calc-em(30);
+			}
 		}
 	}
 }

@@ -7,6 +7,12 @@
 		}
 	}
 
+	&--body {
+		path {
+			fill: $body-color;
+		}
+	}
+
 	&--primary {
 		path {
 			fill: $primary;

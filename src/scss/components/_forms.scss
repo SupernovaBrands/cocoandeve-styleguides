@@ -16,14 +16,12 @@
 	border-radius: $input-border-radius-sm;
 	background: $white;
 
-	.sni__search {
-		font-size: calc-em(20, 14);
-		color: $primary;
+	&__icon svg {
+		height: calc-em(20, 14);
 	}
 
-	.sni__close {
-		font-size: calc-em(12, 14);
-		color: $gray-400;
+	&__close svg {
+		height: calc-em(12, 14);
 	}
 
 	& .input-group-prepend &__icon,
@@ -111,7 +109,12 @@
 	height: calc-em(19, 16);
 	cursor: pointer;
 
-    &:before {
-        font-size: calc-em(11, 16)
-    }
+	.svg {
+		display: none;
+		font-size: calc-em(11, 16)
+	}
+
+	&.checked .svg {
+		display: block;
+	}
 }

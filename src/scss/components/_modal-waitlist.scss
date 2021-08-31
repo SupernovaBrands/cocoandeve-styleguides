@@ -1,12 +1,7 @@
 .waitlist-modal {
 	.close {
 		font-size: $font-size-xs;
-		color: $sh-purple;
 		opacity: 1;
-
-		&:hover {
-			color: $sh-purple;
-		}
 	}
 
 	.masking-select {
