@@ -28,7 +28,9 @@
 	}
 
 	.modal-content {
+		background-color: $yellow-light;
 		max-width: calc(100% - #{$grid-gutter-width});
+
 		@include media-breakpoint-up('lg') {
 			width: 100%;
 		}
