@@ -1,0 +1,47 @@
+@import 'core';
+
+html[lang="fr"] {
+
+	.nav-tabs--product .nav-link {
+		min-width: calc-em(75);
+
+		@include media-breakpoint-down(xs) {
+			// 360px width
+		    min-width: calc-em(60);
+		}
+	}
+
+    .playground-font-size {
+        @include font-size(2.5em);
+
+        @include media-breakpoint-up(lg) {
+            @include font-size(3.25em);
+        }
+    }
+}
+
+#btt-button {
+
+    body.signup-popup & {
+        bottom: 158px;
+    }
+
+    body.signup-popup.swatch-mobile--show & {
+        @include media-breakpoint-down(md) {
+          bottom: 223px;
+        }
+    }
+}
+
+iframe#launcher {
+
+    body.signup-popup & {
+		bottom: 145px!important;
+	}
+
+    body.signup-popup.swatch-mobile--show & {
+		@include media-breakpoint-down(md) {
+			bottom: 210px !important;
+		}
+	}
+}
