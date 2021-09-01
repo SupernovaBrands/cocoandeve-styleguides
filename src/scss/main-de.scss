@@ -2,11 +2,11 @@
 
 #btt-button {
 
-    body.signup-popup.store__de & {
+    body.signup-popup & {
         bottom: 158px;
     }
 
-    body.signup-popup.swatch-mobile--show.store__de & {
+    body.signup-popup.swatch-mobile--show & {
         @include media-breakpoint-down(md) {
             bottom: 223px;
         }
