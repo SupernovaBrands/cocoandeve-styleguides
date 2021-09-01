@@ -17,11 +17,11 @@ iframe#launcher {
 
     body.signup-popup & {
 		bottom: 145px!important;
-	}
+    }
 
     body.signup-popup.swatch-mobile--show & {
 		@include media-breakpoint-down(md) {
 			bottom: 210px !important;
 		}
-	}
+    }
 }
