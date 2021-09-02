@@ -1,42 +1,6 @@
 .svg {
 	height: $font-size-base;
 	path {
-		fill: $body-color;
-	}
-
-	&--white {
-		path {
-			fill: $white;
-		}
-	}
-
-	&--muted {
-		path {
-			fill: $text-muted;
-		}
-	}
-
-	&--primary {
-		path {
-			fill: $primary;
-		}
-	}
-
-	&--secondary {
-		path {
-			fill: $secondary;
-		}
-	}
-
-	&--green-light {
-		path {
-			fill: $green-light;
-		}
-	}
-
-	&--purple {
-		path {
-			fill: $sh-purple;
-		}
+		fill: currentColor;
 	}
 }

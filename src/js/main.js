@@ -285,7 +285,7 @@ $(document).ready(function () {
 		$('body').toggleClass('offcanvas-active');
 	}
 
-	$('.navbar-toggler').on('click', function () {
+	$('.navbar-toggler, .mobile-nav__close').on('click', function () {
 		mobileMenuToggler();
 	});
 

@@ -13,7 +13,7 @@
 
 			<ul class="navbar-nav align-items-center d-none d-lg-flex">
 				<li class="nav-item nav-item--mega-menu">
-					<a href="#" class="btn btn-primary align-items-center mr-1">Shop <img class="svg svg--white font-size-xs" src="icons/chevron-down.svg" replace-to-svg /></a>
+					<a href="#" class="btn btn-primary align-items-center mr-1">Shop <img class="svg font-size-xs" src="icons/chevron-down.svg" replace-to-svg /></a>
 					<div class="mega-menu position-absolute bg-white w-100">
 						{{#unless critical}}
 						<div class="container">
@@ -93,7 +93,7 @@
 				<img class="svg" src="icons/cart.svg" replace-to-svg /> (<span class="cart-drawer__count"></span>)
 			</a>
 			<div class="col-lg-4 tooltip bg-primary text-white text-center py-2">
-				<img id="tooltip__close" class="svg svg--white" src="icons/close-circle.svg" replace-to-svg />
+				<img id="tooltip__close" class="svg" src="icons/close-circle.svg" replace-to-svg />
 				Item added to cart
 				<a href="#" class="d-block text-white text-underline">Proceed to checkout</a>
 			</div>
@@ -103,7 +103,7 @@
 	</nav>
 
 	<nav class="mobile-nav position-fixed d-lg-none">
-		<img class="svg svg--white" src="icons/close.svg" replace-to-svg />
+		<img class="mobile-nav__close svg text-white" src="icons/close.svg" replace-to-svg />
 		{{#unless critical}}
 		<ul id="mobileMenu" class="mobile-nav__menu accordion position-fixed h-100 col-9 bg-white list-unstyled py-2 mb-0"
 			role="tablist" aria-multiselectable="true">

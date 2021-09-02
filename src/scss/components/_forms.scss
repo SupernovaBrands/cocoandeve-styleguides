@@ -17,11 +17,13 @@
 	background: $white;
 
 	&__icon svg {
-		height: calc-em(20, 14);
+		font-size: calc-em(20, 14);
+		color: $primary;
 	}
 
 	&__close svg {
-		height: calc-em(12, 14);
+		font-size: calc-em(12, 14);
+		color: $gray-400;
 	}
 
 	& .input-group-prepend &__icon,

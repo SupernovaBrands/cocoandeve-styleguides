@@ -87,9 +87,9 @@ export default class CartExtras extends React.Component {
 				<ul className="cart-drawer__services list-unstyled row mt-3 my-4 text-center">
 					{tSettings.cartServices.map((t, index) => (
 						<li key={t} className="col-4 d-flex flex-column">
-							{tSettings.cartServicesIcon[index] === 'delivery' && <SvgDelivery className="svg svg--secondary" />}
-							{tSettings.cartServicesIcon[index] === 'awards' && <SvgAwards className="svg svg--secondary" />}
-							{tSettings.cartServicesIcon[index] === 'moneyback' && <SvgMoneyback className="svg svg--secondary" />}
+							{tSettings.cartServicesIcon[index] === 'delivery' && <SvgDelivery className="svg text-secondary" />}
+							{tSettings.cartServicesIcon[index] === 'awards' && <SvgAwards className="svg text-secondary" />}
+							{tSettings.cartServicesIcon[index] === 'moneyback' && <SvgMoneyback className="svg text-secondary" />}
 							{t}
 						</li>
 					))}

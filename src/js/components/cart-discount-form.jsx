@@ -83,11 +83,11 @@ export default class CartDiscountForm extends React.Component {
 				<input type="hidden" name="discount" value={code} />
 				<p className="font-size-xs text-muted mb-1">{tStrings.cart_discount_applied}</p>
 				<div className="bg-light d-flex align-items-center d-inline-block p-1 text-black-50 rounded">
-					<SvgTag className="svg opacity-50 mr-1" />
+					<SvgTag className="svg mr-1" />
 					{code}
 					{!isAutoDiscount && (
 						<button className="btn-unstyled ml-1 text-black-50" onClick={this.removeDiscount} type="button" aria-label="Remove Discount">
-							<SvgCloseCircle class="svg opacity-50" />
+							<SvgCloseCircle class="svg" />
 						</button>
 					)}
 				</div>
