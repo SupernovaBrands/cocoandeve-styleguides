@@ -35,11 +35,4 @@
 			width: 100%;
 		}
 	}
-
-	.text-danger {
-		margin-top: -#{$grid-gutter-width/2};
-		@include media-breakpoint-up('lg') {
-			margin-top: -#{$grid-gutter-width-lg/2};
-		}
-	}
 }
