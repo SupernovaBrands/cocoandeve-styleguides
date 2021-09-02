@@ -1,5 +1,8 @@
 .svg {
 	height: $font-size-base;
+	path {
+		fill: $body-color;
+	}
 
 	&--white {
 		path {
@@ -7,9 +10,9 @@
 		}
 	}
 
-	&--body {
+	&--muted {
 		path {
-			fill: $body-color;
+			fill: $text-muted;
 		}
 	}
 
@@ -25,21 +28,15 @@
 		}
 	}
 
+	&--green-light {
+		path {
+			fill: $green-light;
+		}
+	}
+
 	&--purple {
 		path {
 			fill: $sh-purple;
 		}
-	}
-
-	&--size-xs {
-		height: $font-size-xs;
-	}
-
-	&--size-sm {
-		height: $font-size-sm;
-	}
-
-	&--size-lg {
-		height: $font-size-lg;
 	}
 }

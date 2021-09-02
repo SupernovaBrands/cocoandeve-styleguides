@@ -96,7 +96,7 @@ export default class QuantityBox extends React.Component {
 					disabled={!this.props.editable}
 					onClick={this.onSubtractQuantity}
 				>
-					<SvgMinus className="svg svg--body" />
+					<SvgMinus className="svg" />
 				</button>
 				<input
 					type="number"
@@ -114,7 +114,7 @@ export default class QuantityBox extends React.Component {
 					disabled={!this.props.editable}
 					onClick={this.onAddQuantity}
 				>
-					<SvgPlus className="svg svg--body" />
+					<SvgPlus className="svg" />
 				</button>
 			</div>
 		);

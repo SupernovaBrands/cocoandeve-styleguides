@@ -7,8 +7,8 @@ import {
 	formatMoney,
 } from '~mod/utils';
 
-import SvgDelivery from '~svg/delivery.svg';
-import SvgAwards from '~svg/awards.svg';
+import SvgDelivery from '~svg/fast-delivery.svg';
+import SvgAwards from '~svg/winner-award.svg';
 import SvgMoneyback from '~svg/moneyback.svg';
 
 let currency;

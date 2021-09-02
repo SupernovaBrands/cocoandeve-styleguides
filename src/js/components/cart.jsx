@@ -519,7 +519,7 @@ export default class Cart extends React.Component {
 						<div className="container d-flex flex-column align-items-stretch text-center pt-2">
 							<h4 className="font-size-lg font-weight-bold">{tStrings.cart_drawer_title}</h4>
 							<button type="button" className="close text-body m-0 px-g pb-2 position-absolute" data-dismiss="modal" aria-label="Close">
-								<SvgClose className="svg svg--body" aria-hidden="true" />
+								<SvgClose className="svg" aria-hidden="true" />
 							</button>
 
 							{!tSettings.cartDiscountMeter.enable
