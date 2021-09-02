@@ -4,18 +4,18 @@
 	<form data-pdp="false" data-product-id="product-id" novalidate>
 		<div class="row">
 			<div class="input-group col mb-1">
-				<input class="form-control" type="email" name="email" placeholder="Enter your email">
+				<input class="form-control border-0" type="email" name="email" placeholder="Enter your email">
 			</div>
 			<small class="col-12 text-danger email-error d-none">Please enter a valid email address</small>
 		</div>
 		<span class="d-block mb-1">or</span>
 		<div class="row">
 			<div class="input-group col-4 col-lg-3 mb-1">
-				<span class="masking-select position-absolute rounded">+65</span>
+				<span class="masking-select position-absolute rounded border-0">+65</span>
 				{{> components/countries-options }}
 			</div>
 			<div class="input-group col-8 col-lg-9 pl-0 mb-1">
-				<input class="form-control" type="text" name="phone" placeholder="Enter your phone number">
+				<input class="form-control border-0" type="text" name="phone" placeholder="Enter your phone number">
 			</div>
 			<small class="col-12 text-danger phone-error d-none">Please enter a valid phone number</small>
 		</div>
@@ -33,7 +33,7 @@
 				<button class="btn btn-lg btn-primary btn-block" type="submit">Submit form</button>
 			</div>
 		</div>
-		<p class="small">By signing up via text you agree to receive recurring automated marketing messages at the phone number provided. Consent is not a condition of purchase. Reply STOP to unsubscribe. HELP for help. Msg & Data rates may apply. View Privacy Policy & ToS.</p>
+		<p class="font-size-xs">By signing up via text you agree to receive recurring automated marketing messages at the phone number provided. Consent is not a condition of purchase. Reply STOP to unsubscribe. HELP for help. Msg & Data rates may apply. View Privacy Policy & ToS.</p>
 	</form>
 </div>
 <div class="product-waitlist product-waitlist--launch product-waitlist__submitted w-100 p-3 mb-3 rounded text-center {{ class }} d-none">
