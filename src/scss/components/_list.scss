@@ -5,7 +5,8 @@
 	li {
 		position: relative;
 
-		.svg {
+		&:before {
+			content: url(icon-svg('check.svg', #{$primary}));
 			position: absolute;
 			top: 0;
 			left: calc-em(-35, $unit: 1rem);

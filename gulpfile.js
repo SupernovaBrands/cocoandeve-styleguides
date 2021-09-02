@@ -166,6 +166,15 @@ const scssFiles = function () {
 			functions: {
 				'asset-url($filename)': function (filename) { return new nodeSass.types.String(`'/cocoandeve-styleguides/images/${filename.getValue()}'`); },
 				'font-url($filename)': function (filename) { return new nodeSass.types.String(`'/cocoandeve-styleguides/fonts/${filename.getValue()}'`); },
+				'icon-svg($filename, $color: "#000", $size: "1em")': function (filename, color, size) {
+					const fill = color.getValue().replace('#', '%23');
+					const svg = getSvg({ src: filename.getValue(), height: size }, 'images/icons')
+						.replace(/fill=".*"/g, '')
+						.replace(/<path/g, `<path fill="${fill}"`)
+						.replace(/'/g, '"')
+						.replace(/\n/g, '');
+					return new nodeSass.types.String(`'data:image/svg+xml;utf8,${svg}'`);
+				},
 			},
 		}).on('error', errorHandler))
 		.pipe(autoprefixer())
