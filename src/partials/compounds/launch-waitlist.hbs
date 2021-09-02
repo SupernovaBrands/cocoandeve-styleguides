@@ -3,30 +3,30 @@
 	<p class="mb-3 font-size-sm">Get alerted when our newest product drops, and get a free gift with your purchase. You got to be quick! sign up now cause this is definitely goinf to sell out fast!</p>
 	<form data-pdp="false" data-product-id="product-id" novalidate>
 		<div class="row">
-			<div class="input-group form-group col">
+			<div class="input-group col mb-1">
 				<input class="form-control" type="email" name="email" placeholder="Enter your email">
 			</div>
-			<small class="col-12 text-danger email-error d-none mt-n1">Please enter a valid email address</small>
+			<small class="col-12 text-danger email-error d-none">Please enter a valid email address</small>
 		</div>
-		<span class="d-block mb-1 mb-lg-2">or</span>
+		<span class="d-block mb-1">or</span>
 		<div class="row">
-			<div class="input-group form-group col-4 col-lg-3">
+			<div class="input-group col-4 col-lg-3 mb-1">
 				<span class="masking-select position-absolute rounded">+65</span>
 				{{> components/countries-options }}
 			</div>
-			<div class="input-group form-group col-8 col-lg-9 pl-0">
+			<div class="input-group col-8 col-lg-9 pl-0 mb-1">
 				<input class="form-control" type="text" name="phone" placeholder="Enter your phone number">
 			</div>
-			<small class="col-12 text-danger phone-error d-none mt-n1">Please enter a valid phone number</small>
+			<small class="col-12 text-danger phone-error d-none">Please enter a valid phone number</small>
 		</div>
 		<div class="row">
-			<div class="input-group form-group col d-flex justify-content-center my-1">
+			<div class="input-group col d-flex justify-content-center my-1">
 				<div class="custom-checkbox text-primary justify-content-center align-items-center mr-1 sni border rounded bg-white">
 					<input type="checkbox" name="tos" class="opacity-0 position-absolute" required id="agreement"/>
 				</div>
 				<label class="form-check-label font-size-sm text-underline" for="agreement">I agree to Privacy Policy &amp; ToS</label>
 			</div>
-			<small class="col-12 text-danger terms-error d-none mt-n1">You have not agreed to the Privacy Policy & ToS</small>
+			<small class="col-12 text-danger terms-error d-none">You have not agreed to the Privacy Policy & ToS</small>
 		</div>
 		<div class="row">
 			<div class="form-group col mt-1">
