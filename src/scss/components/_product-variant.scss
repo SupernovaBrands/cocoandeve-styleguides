@@ -8,7 +8,8 @@
 		}
 	}
 
-	.product-swatch {
+	.product-swatch,
+	&__note {
 		display: none;
 	}
 
@@ -24,13 +25,41 @@
 
 		&:checked ~ .custom-control-label {
 			border-color: $primary !important;
-			.product-swatch {
+			.product-swatch,
+			.product-variant__note {
 				display: block;
 			}
 		}
 	}
 
+	&--subscription {
+		.subscription-title {
+			&--secondary {
+				display: none;
+			}
+		}
+
+		.custom-control-input {			
+			&:checked {
+				~ .custom-control-label {
+					background-color: $primary-light-second;
+					
+					.subscription-title {
+						&--primary {
+							display: none;
+						}
+
+						&--secondary {
+							display: block;
+						}
+					}
+				}
+			}
+
+		}
+	}
+
 	.text-linethrough {
-		color: $gray-600;
+		color: $gray-700;
 	}
 }

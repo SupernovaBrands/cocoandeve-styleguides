@@ -155,8 +155,27 @@ const productWaitlistSubmitted = $('.product-waitlist__submitted');
 if (productWaitlistForm.length > 0 && productWaitlistSubmitted.length > 0) {
 	$('.product-waitlist__form form').on('submit', function (e) {
 		e.preventDefault();
-		console.log('click');
 		productWaitlistForm.addClass('d-none');
 		productWaitlistSubmitted.removeClass('d-none');
 	});
 }
+
+// popover
+if ($('[data-toggle="popover"]').length) {
+	$(function () {
+		$('[data-toggle="popover"]').popover({
+			delay: {
+				show: 100,
+			},
+		});
+	});
+}
+
+// Dismissable popover click out side
+$('body').on('click', function (e) {
+	$('[data-toggle=popover]').each(function () {
+		if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0 && !$(e.target).hasClass('custom-control-input')) {
+			$(this).popover('hide');
+		}
+	});
+});
