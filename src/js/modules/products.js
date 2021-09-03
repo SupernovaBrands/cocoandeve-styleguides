@@ -169,13 +169,13 @@ if ($('[data-toggle="popover"]').length) {
 			},
 		});
 	});
-}
 
-// Dismissable popover click out side
-$('body').on('click', function (e) {
-	$('[data-toggle=popover]').each(function () {
-		if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0 && !$(e.target).hasClass('custom-control-input')) {
-			$(this).popover('hide');
-		}
+	// Dismissable popover click out side
+	$('body').on('click', function (e) {
+		$('[data-toggle=popover]').each(function () {
+			if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0 && !$(e.target).hasClass('custom-control-input')) {
+				$(this).popover('hide');
+			}
+		});
 	});
-});
+}
