@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 
 import { debounce } from '~mod/utils';
 
+import SvgPlus from '~svg/plus.svg';
+import SvgMinus from '~svg/minus.svg';
+
 export default class QuantityBox extends React.Component {
 	constructor(props) {
 		super(props);
@@ -87,13 +90,15 @@ export default class QuantityBox extends React.Component {
 		return (
 			<div className="quantity-box d-flex">
 				<button
-					className="input-group-text bg-transparent border-right-0 rounded-lg rounded-right-0 border-dark flex-grow-0 sni sni__minus"
+					className="input-group-text bg-transparent border-right-0 rounded-lg rounded-right-0 border-dark flex-grow-0"
 					type="button"
 					aria-label="Add Subtract"
 					disabled={!this.props.editable}
 					onClick={this.onSubtractQuantity}
 					data-cy="cart-subtract-quantity-icon"
-				/>
+				>
+					<SvgMinus className="svg" />
+				</button>
 				<input
 					type="number"
 					name={this.props.name}
@@ -104,13 +109,15 @@ export default class QuantityBox extends React.Component {
 					readOnly={!this.props.editable}
 				/>
 				<button
-					className="input-group-text bg-transparent border-left-0 rounded-lg rounded-left-0 border-dark flex-grow-0 sni sni__plus"
+					className="input-group-text bg-transparent border-left-0 rounded-lg rounded-left-0 border-dark flex-grow-0"
 					type="button"
 					aria-label="Add Quantity"
 					disabled={!this.props.editable}
 					onClick={this.onAddQuantity}
 					data-cy="cart-add-quantity-icon"
-				/>
+				>
+					<SvgPlus className="svg" />
+				</button>
 			</div>
 		);
 	}
