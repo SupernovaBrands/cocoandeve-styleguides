@@ -67,7 +67,7 @@ export default class CartItem extends React.Component {
 									{item.product_title}
 								</ConditionWrapper>
 							</p>
-							{!models.isFree && (<button className="cart-item__remove btn-unstyled sni sni__trash" type="button" aria-label="Remove" onClick={this.onRemoveItem} />)}
+							{!models.isFree && (<button className="cart-item__remove btn-unstyled sni sni__trash" type="button" aria-label="Remove" onClick={this.onRemoveItem} data-cy="cart-remove-icon" />)}
 						</div>
 
 						{models.variantTitle && (
