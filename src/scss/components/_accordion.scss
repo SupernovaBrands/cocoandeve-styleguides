@@ -4,15 +4,14 @@
 }
 
 .card-header {
-    &:before {
+    .chevron-down {
         position: absolute;
         right: 0;
         top: 50%;
-        font-size: calc-em(12);
         transform: translateY(-50%) rotate(180deg);
     }
 
-    &.collapsed:before {
+    &.collapsed .chevron-down {
         transform: translateY(-50%);
     }
 }

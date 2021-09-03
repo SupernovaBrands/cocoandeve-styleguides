@@ -3,6 +3,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import SvgTag from '~svg/tag.svg';
+import SvgCloseCircle from '~svg/close-circle.svg';
+
 export default class CartDiscountForm extends React.Component {
 	constructor(props) {
 		super(props);
@@ -80,10 +83,12 @@ export default class CartDiscountForm extends React.Component {
 				<input type="hidden" name="discount" value={code} />
 				<p className="font-size-xs text-muted mb-1">{tStrings.cart_discount_applied}</p>
 				<div className="bg-light d-flex align-items-center d-inline-block p-1 text-black-50 rounded">
-					<i className="sni-text mr-1" aria-hidden="true">tag</i>
+					<SvgTag className="svg mr-1" />
 					{code}
 					{!isAutoDiscount && (
-						<button className="btn-unstyled ml-1 sni sni__close-circle text-black-50" onClick={this.removeDiscount} type="button" aria-label="Remove Discount" />
+						<button className="btn-unstyled ml-1 text-black-50" onClick={this.removeDiscount} type="button" aria-label="Remove Discount">
+							<SvgCloseCircle class="svg" />
+						</button>
 					)}
 				</div>
 				{errorExtra && (
