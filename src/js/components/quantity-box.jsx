@@ -95,6 +95,7 @@ export default class QuantityBox extends React.Component {
 					aria-label="Add Subtract"
 					disabled={!this.props.editable}
 					onClick={this.onSubtractQuantity}
+					data-cy="cart-subtract-quantity-icon"
 				>
 					<SvgMinus className="svg" />
 				</button>
@@ -113,6 +114,7 @@ export default class QuantityBox extends React.Component {
 					aria-label="Add Quantity"
 					disabled={!this.props.editable}
 					onClick={this.onAddQuantity}
+					data-cy="cart-add-quantity-icon"
 				>
 					<SvgPlus className="svg" />
 				</button>

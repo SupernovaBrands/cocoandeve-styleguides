@@ -524,7 +524,7 @@ export default class Cart extends React.Component {
 					<div className="modal-body mobile-wrapper pt-0 px-lg-0">
 						<div className="container d-flex flex-column align-items-stretch text-center pt-2">
 							<h4 className="font-size-lg font-weight-bold">{tStrings.cart_drawer_title}</h4>
-							<button type="button" className="close text-body m-0 px-g pb-2 position-absolute" data-dismiss="modal" aria-label="Close">
+							<button type="button" className="close text-body m-0 px-g pb-2 position-absolute" data-dismiss="modal" aria-label="Close" data-cy="cart-close-icon">
 								<SvgClose className="svg" aria-hidden="true" />
 							</button>
 
@@ -610,27 +610,27 @@ export default class Cart extends React.Component {
 								<hr />
 
 								<div className="row">
-									<p className="col-8 mb-1 font-weight-bold">{tStrings.cart_subtotal}</p>
-									<p className="col-4 mb-1 font-weight-bold text-right">{formatMoney(subtotalPrice)}</p>
+									<p className="col-8 mb-1 font-weight-bold" data-cy="cart-subtotal-label">{tStrings.cart_subtotal}</p>
+									<p className="col-4 mb-1 font-weight-bold text-right" data-cy="cart-subtotal-value">{formatMoney(subtotalPrice)}</p>
 
 									{comparePriceDiff > 0 && (
 										<>
-											<p className="col-8 mb-1 font-weight-bold">{tStrings.cart_bundle_discount}</p>
-											<p className="col-4 mb-1 font-weight-bold text-right">{`-${formatMoney(comparePriceDiff)}`}</p>
+											<p className="col-8 mb-1 font-weight-bold" data-cy="cart-bundledisount-label">{tStrings.cart_bundle_discount}</p>
+											<p className="col-4 mb-1 font-weight-bold text-right" data-cy="cart-bundledisount-value">{`-${formatMoney(comparePriceDiff)}`}</p>
 										</>
 									)}
 
 									{discountData.amount > 0 && (
 										<>
-											<p className="col-8 mb-1 font-weight-bold">{tStrings.cart_discount}</p>
-											<p className="col-4 mb-1 font-weight-bold text-right">{`-${formatMoney(discountData.amount)}`}</p>
+											<p className="col-8 mb-1 font-weight-bold" data-cy="cart-discount-label">{tStrings.cart_discount}</p>
+											<p className="col-4 mb-1 font-weight-bold text-right" data-cy="cart-discount-value">{`-${formatMoney(discountData.amount)}`}</p>
 										</>
 									)}
 
 									{shippingData.show && (
 										<>
-											<p className="col-8 mb-1 font-weight-bold">{tStrings.cart_shipping}</p>
-											<p className={`col-4 mb-1 font-weight-bold text-right ${shippingData.amount > 0 ? '' : 'text-primary'}`}>{shippingData.amount > 0 ? formatMoney(shippingData.amount) : 'Free'}</p>
+											<p className="col-8 mb-1 font-weight-bold" data-cy="cart-shipping-label">{tStrings.cart_shipping}</p>
+											<p className={`col-4 mb-1 font-weight-bold text-right ${shippingData.amount > 0 ? '' : 'text-primary'}`} data-cy="cart-shipping-value">{shippingData.amount > 0 ? formatMoney(shippingData.amount) : 'Free'}</p>
 										</>
 									)}
 								</div>
@@ -647,14 +647,15 @@ export default class Cart extends React.Component {
 					{!loadingInit && itemCount > 0 && (
 						<div className="modal-footer px-g">
 							<div className="row no-gutters w-100">
-								<span className="col-8 font-size-lg font-weight-bold">{tStrings.cart_total}</span>
-								<span className="col-4 font-size-lg font-weight-bold text-right">{formatMoney(totalPrice)}</span>
+								<span className="col-8 font-size-lg font-weight-bold" data-cy="cart-total-label">{tStrings.cart_total}</span>
+								<span className="col-4 font-size-lg font-weight-bold text-right" data-cy="cart-total-value">{formatMoney(totalPrice)}</span>
 								<div className="col-12 my-1">
 									<button
 										type="button"
 										className="btn btn-lg btn-block btn-primary px-1"
 										disabled={loadingDiscount || manualGwp.loading}
 										onClick={this.submitForm}
+										data-cy="checkout-btn"
 									>
 										{tStrings.cart_checkout}
 									</button>
