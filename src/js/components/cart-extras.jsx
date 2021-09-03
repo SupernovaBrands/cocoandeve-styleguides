@@ -7,6 +7,10 @@ import {
 	formatMoney,
 } from '~mod/utils';
 
+import SvgDelivery from '~svg/fast-delivery.svg';
+import SvgAwards from '~svg/winner-award.svg';
+import SvgMoneyback from '~svg/moneyback.svg';
+
 let currency;
 let locale;
 if (window.Afterpay !== undefined) {
@@ -82,7 +86,12 @@ export default class CartExtras extends React.Component {
 			<>
 				<ul className="cart-drawer__services list-unstyled row mt-3 my-4 text-center">
 					{tSettings.cartServices.map((t, index) => (
-						<li key={t} className={`col-4 flex-column sni sni__${tSettings.cartServicesIcon[index]}`}>{t}</li>
+						<li key={t} className="col-4 d-flex flex-column">
+							{tSettings.cartServicesIcon[index] === 'delivery' && <SvgDelivery className="svg text-secondary" />}
+							{tSettings.cartServicesIcon[index] === 'awards' && <SvgAwards className="svg text-secondary" />}
+							{tSettings.cartServicesIcon[index] === 'moneyback' && <SvgMoneyback className="svg text-secondary" />}
+							{t}
+						</li>
 					))}
 				</ul>
 

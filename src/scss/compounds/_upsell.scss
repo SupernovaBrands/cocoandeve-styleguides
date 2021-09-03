@@ -64,18 +64,20 @@
 		width: 2.85em;
 	}
 
-	.sni {
-		color: $primary;
-		transition: color $hover-transition-timing;
-		&::before {
-			font-size: calc-em(30);
+	.svg {
+		font-size: calc-em(30);
+
+		path {
+			transition: fill $hover-transition-timing;
 		}
 	}
 
 	a:hover {
 		text-decoration: none;
-		.sni {
-			color: $primary-dark;
+		.svg {
+			path {
+				fill: $primary-dark;
+			}
 		}
 	}
 

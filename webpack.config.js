@@ -37,6 +37,7 @@ const webpackCfg = {
 			'~mod': path.resolve(__dirname, './src/js/modules'),
 			'~comp': path.resolve(__dirname, './src/js/components'),
 			'~rt': path.resolve(__dirname, './src/js/templates'),
+			'~svg': path.resolve(__dirname, './images/icons'),
 		},
 	},
 	module: {
@@ -48,6 +49,10 @@ const webpackCfg = {
 					loader: 'babel-loader',
 					options: { babelrc: true },
 				}],
+			},
+			{
+				test: /\.svg$/,
+				use: ['@svgr/webpack'],
 			},
 		],
 	},

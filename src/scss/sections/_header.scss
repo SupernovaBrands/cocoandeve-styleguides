@@ -105,7 +105,7 @@
 	z-index: $zindex-modal;
 
 	//overlay close icon
-	&:before {
+	> .svg {
 		position: absolute;
 		right: 12.5%;
 		top: calc-em(28);
