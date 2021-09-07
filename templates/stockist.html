@@ -19,7 +19,7 @@
   	<nav class="bg-white navbar navbar-expand-lg">
   
   		<div class="container">
-  			<button class="navbar-toggler" type="button">
+  			<button class="navbar-toggler" type="button" data-cy="menu-icon">
   				<span class="d-block"></span>
   			</button>
   
@@ -90,13 +90,13 @@
   			</a>
   			<ul class="navbar-nav d-none d-lg-flex justify-content-end">
   				<li class="nav-item">
-  					<a class="nav-link h4 m-0 text-uppercase font-weight-bold sni sni__account" href="#">Account</a>
+  					<a class="nav-link h4 m-0 text-uppercase font-weight-bold sni sni__account" href="#" data-cy="account-icon">Account</a>
   				</li>
   				<li class="nav-item">
-  					<a class="nav-link h4 m-0 text-uppercase font-weight-bold" href="#">Track My Order</a>
+  					<a class="nav-link h4 m-0 text-uppercase font-weight-bold" href="#" data-cy="tracking-order">Track My Order</a>
   				</li>
   				<li class="nav-item">
-  					<a class="nav-link h4 m-0 text-uppercase font-weight-bold sni sni__cart" data-toggle="modal" data-target="#cart-drawer" role="button">Cart (<span class="cart-drawer__count">0</span>)</a>
+  					<a class="nav-link h4 m-0 text-uppercase font-weight-bold sni sni__cart" data-toggle="modal" data-target="#cart-drawer" role="button" data-cy="cart-icon">Cart (<span class="cart-drawer__count">0</span>)</a>
   				</li>
   			</ul>
   			<a class="nav-link justify-content-end font-weight-bold sni sni__cart px-0 d-lg-none" data-toggle="modal" data-target="#cart-drawer" role="button">
@@ -116,7 +116,7 @@
   		<ul id="mobileMenu" class="mobile-nav__menu accordion position-fixed h-100 col-9 bg-white list-unstyled py-2 mb-0"
   			role="tablist" aria-multiselectable="true">
   			<li class="mb-1">
-  				<a href="#" class="btn btn-primary btn-block">Shop All</a>
+  				<a href="#" class="btn btn-primary btn-block" data-cy="shopall-btn">Shop All</a>
   			</li>
   			<li class="card">
   				<figure id="headingHair" class="media card-header position-relative collapsed sni sni__chevron-down p-0"
