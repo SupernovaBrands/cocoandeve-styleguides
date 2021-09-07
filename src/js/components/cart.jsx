@@ -188,6 +188,12 @@ export default class Cart extends React.Component {
 		models.url = models.free ? undefined : item.url;
 		models.comparePriceDiff = models.comparePrice > 0 ? models.comparePrice - item.original_price : 0;
 
+		models.recurring = false;
+
+		if (item.selling_plan_allocation) {
+			models.recurring = item.selling_plan_allocation.selling_plan.recurring_deliveries;
+		}
+
 		models.properties = {};
 		if (item.properties) {
 			Object.keys(item.properties).forEach((key) => {
