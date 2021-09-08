@@ -68,8 +68,8 @@ footer {
 
 	.dropdown.show .dropdown-menu {
 		opacity: 1;
-		transform: translate3d(0px, -280px, 0px) !important;
-		height: 17.5em;
+		transform: translate3d(0px, -320px, 0px) !important;
+		height: calc-em(320);
 		top: 0;
 	}
 }
