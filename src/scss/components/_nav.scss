@@ -9,7 +9,7 @@
 		}
 	}
 
-	&.sni:before {
+	.svg {
 		font-size: calc-em(22, 16);
 
 		@include media-breakpoint-up(lg) {
@@ -18,11 +18,11 @@
 	}
 
 	@include media-breakpoint-down(md) {
-		&.sni__cart {
+		&.cart {
 			font-size: calc-em(20, 16);
 			flex-basis: 20%;
 
-			&:before {
+			.svg {
 				font-size: calc-em(20);
 				margin-right: calc-em(3, 16);
 			}

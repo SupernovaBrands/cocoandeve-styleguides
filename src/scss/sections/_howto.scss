@@ -21,8 +21,7 @@
 	}
 
 	.carousel-control-prev {
-		&:before,
-		.sni {
+		&-icon {
 			top: 30.5%;
 			left: 60%;
 
@@ -54,8 +53,7 @@
 	}
 
 	.carousel-control-next {
-		&:before,
-		.sni {
+		&-icon {
 			top: 30.5%;
 			right: 60%;
 
