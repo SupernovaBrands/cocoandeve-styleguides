@@ -2,8 +2,10 @@
 
 html[lang="de"] {
     @include media-breakpoint-down('md') {
-        .cookies-banner-show .main-header {
-            margin-top: 8em;
+        .cookies-banner-show:not(.cookies-banner-show--expanded) {
+            .main-header {
+                margin-top: 8em;
+            }
         }
     }
 }
