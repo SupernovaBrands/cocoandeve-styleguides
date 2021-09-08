@@ -20,11 +20,8 @@ html[lang="fr"] {
     }
 
     @include media-breakpoint-down('md') {
-        .cookies-banner-show {
-            .main-header,
-            .mobile-nav {
-                margin-top: 8em;
-            }
+        .cookies-banner-show .main-header {
+            margin-top: 8em;
         }
     }
 }

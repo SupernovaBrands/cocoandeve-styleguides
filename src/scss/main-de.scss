@@ -1,5 +1,13 @@
 @import 'core';
 
+html[lang="de"] {
+    @include media-breakpoint-down('md') {
+        .cookies-banner-show .main-header {
+            margin-top: 8em;
+        }
+    }
+}
+
 #btt-button {
 
     body.signup-popup & {
