@@ -21,7 +21,7 @@ html[lang="fr"] {
 
     @include media-breakpoint-down('md') {
         .cookies-banner-show:not(.cookies-banner-show--expanded) {
-            .mobile-nav {
+            .main-header {
                 margin-top: 8em;
             }
         }
