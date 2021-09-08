@@ -1,5 +1,4 @@
-// eslint-disable-next-line import/no-unresolved
-import loadingAttributePolyfill from 'loading-attribute-polyfill';
+import loadingAttributePolyfill from 'loading-attribute-polyfill/dist/loading-attribute-polyfill.module';
 
 const checkLazyImages = () => {
 	const lazyLoadAreas = document.querySelectorAll('noscript.loading-lazy');

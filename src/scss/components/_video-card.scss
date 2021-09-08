@@ -2,22 +2,18 @@
 	picture {
 		cursor: pointer;
 
-		&:before {
+		.svg {
 			position: absolute;
 			color: white;
-			font-size: calc-em(36, 16);
-			right: 0;
-			left: 0;
-			bottom: 0;
-			top: 0;
-			display: flex;
-			justify-content: center;
-			align-items: center;
+			font-size: 3em;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
 		}
 	}
 
 	&__icon-left {
-		&:before {
+		.svg {
 			left: calc-em(20, 36);
 			right: auto;
 		}
@@ -39,12 +35,13 @@
 		}
 
 		picture {
-			&:before {
+			.svg {
 				left: calc-em(20, 36);
 				right: auto;
 				bottom: calc-em(22, 36);
 				top: auto;
 				font-size: 3.6em;
+				transform: none;
 
 				@include media-breakpoint-up(lg) {
 					left: calc-em(20, 36);
@@ -61,6 +58,13 @@
 .video-modal {
 	.modal-content {
 		overflow: hidden;
+	}
+
+	.close {
+		opacity: 0.6;
+		.svg {
+			filter: drop-shadow(0px 1px 0px #fff);
+		}
 	}
 
 	&--body {

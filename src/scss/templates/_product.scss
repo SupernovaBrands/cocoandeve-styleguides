@@ -54,13 +54,24 @@
 
 #product-proudtobe {
 	li {
-		&:before {
+		.svg {
 			display: flex;
 			justify-content: center;
 			flex-shrink: 0;
 			font-size: calc-em(40);
 			width: 1.2em;
 			margin-right: 0.2em;
+		}
+	}
+}
+
+.product-collapse {
+	&__toggle {
+		.icon-plus { display: none; }
+		.icon-minus { display: block; }
+		&.collapsed {
+			.icon-plus { display: block; }
+			.icon-minus { display: none; }
 		}
 	}
 }
