@@ -18,6 +18,14 @@ html[lang="fr"] {
             @include font-size(3.25em);
         }
     }
+
+    @include media-breakpoint-down('md') {
+        .cookies-banner-show:not(.cookies-banner-show--expanded) {
+            .mobile-nav {
+                margin-top: 8em;
+            }
+        }
+    }
 }
 
 #btt-button {
