@@ -502,21 +502,4 @@ $(document).ready(function () {
 		$('.tooltip').addClass('show');
 		$('header').removeClass('overflow-hidden');
 	});
-
-	const sustainabilityCarousel = $('#sutainabilityCarousel');
-	if (sustainabilityCarousel.length > 0) {
-		if (window.innerWidth < screenLG) {
-			sustainabilityCarousel.addClass('carousel');
-			sustainabilityCarousel.find('.active').click();
-		}
-
-		$(window).on('resize', function () {
-			if (window.innerWidth >= screenLG) {
-				sustainabilityCarousel.removeClass('carousel');
-			} else {
-				sustainabilityCarousel.addClass('carousel');
-				sustainabilityCarousel.find('.rounded-circle.active').click();
-			}
-		});
-	}
 });
