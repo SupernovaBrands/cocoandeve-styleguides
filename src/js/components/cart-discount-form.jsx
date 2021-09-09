@@ -83,7 +83,7 @@ export default class CartDiscountForm extends React.Component {
 					<i className="sni-text mr-1" aria-hidden="true">tag</i>
 					{code}
 					{!isAutoDiscount && (
-						<button className="btn-unstyled ml-1 sni sni__close-circle text-black-50" onClick={this.removeDiscount} type="button" aria-label="Remove Discount" />
+						<button className="btn-unstyled ml-1 sni sni__close-circle text-black-50" onClick={this.removeDiscount} type="button" aria-label="Remove Discount" data-cy="checkout-removepromo-icon" />
 					)}
 				</div>
 				{errorExtra && (
@@ -92,11 +92,11 @@ export default class CartDiscountForm extends React.Component {
 			</div>
 		) : (
 			<div className="mt-2">
-				<a className="text-body text-underline collapsed cart-drawer__discount-toggle" data-toggle="collapse" href="#cart-drawer__discount-form" role="button" aria-expanded="false" aria-controls="cart-drawer__discount-form">{tStrings.cart_discount_text}</a>
+				<a className="text-body text-underline collapsed cart-drawer__discount-toggle" data-toggle="collapse" href="#cart-drawer__discount-form" role="button" aria-expanded="false" aria-controls="cart-drawer__discount-form" data-cy="applypromo-text">{tStrings.cart_discount_text}</a>
 				<div className="collapse" id="cart-drawer__discount-form">
 					<div className="input-group py-1">
-						<input type="text" name="discount" className="form-control text-body border-right-0" placeholder={tStrings.cart_discount_input} value={code} onChange={this.onTextChange} onKeyUp={this.onKeyUp} readOnly={loading} />
-						<button className="btn btn-link border border-left-0 rounded-left-0 font-weight-bold d-flex align-items-center" type="button" onClick={this.applyDiscount} disabled={!code}>
+						<input type="text" name="discount" className="form-control text-body border-right-0" placeholder={tStrings.cart_discount_input} value={code} onChange={this.onTextChange} onKeyUp={this.onKeyUp} readOnly={loading} data-cy="cart-discount" />
+						<button className="btn btn-link border border-left-0 rounded-left-0 font-weight-bold d-flex align-items-center" type="button" onClick={this.applyDiscount} disabled={!code} data-cy="cart-apply-btn">
 							{loading ? (<div className="spinner-border" role="status" />) : tStrings.cart_discount_apply}
 						</button>
 					</div>
