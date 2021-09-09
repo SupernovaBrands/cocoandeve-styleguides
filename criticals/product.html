@@ -25,7 +25,7 @@
 	
 				<ul class="navbar-nav align-items-center d-none d-lg-flex">
 					<li class="nav-item nav-item--mega-menu">
-						<a href="#" class="btn btn-primary align-items-center mr-1 sni-after sni__chevron-down">Shop</a>
+						<a href="#" class="btn btn-primary align-items-center mr-1">Shop <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.6 22.6" class="svg font-size-xs"><path d="M1.9 5.4l9.4 9.4 9.4-9.4 1.9 1.9-11.3 11.3L0 7.3l1.9-1.9z"></path></svg></a>
 						<div class="mega-menu position-absolute bg-white w-100">
 						</div>
 					</li>
@@ -47,17 +47,17 @@
 						<a class="nav-link h4 m-0 text-uppercase font-weight-bold" href="#" data-cy="tracking-order">Track My Order</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link h4 m-0 text-uppercase font-weight-bold sni sni__account" href="#" data-cy="account-icon">Account</a>
+						<a class="nav-link h4 m-0 d-flex text-uppercase font-weight-bold" href="#" data-cy="account-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 22" class="svg mr-25"><path d="M19.1 18.2c0-1.8-.8-3.7-2.1-4.9-1.3-1.3-3.1-2-5-2H7.1c-1.9 0-3.6.7-5 2C.8 14.6 0 16.4 0 18.2v3.2h19.1v-3.2zm-12-4.9H12c1.3 0 2.6.5 3.6 1.4.9.9 1.5 2.2 1.5 3.5v1.2h-15v-1.2c0-1.3.5-2.6 1.5-3.5.9-.9 2.2-1.4 3.5-1.4zM9.5 10.1c.1 0 .1 0 0 0 1.4 0 2.7-.5 3.7-1.5 1-.9 1.5-2.2 1.5-3.6 0-1.3-.5-2.6-1.5-3.6C12.3.5 11 0 9.6 0h-.1C8.2 0 6.9.5 6 1.5 5 2.4 4.4 3.7 4.4 5c0 1.4.5 2.7 1.5 3.6 1 1 2.3 1.5 3.6 1.5zM6.4 5c0-.8.3-1.6.9-2.2.6-.5 1.4-.8 2.2-.8.8 0 1.6.3 2.2.9l.2.1c.6.6.9 1.3.8 2.1 0 .8-.3 1.6-.9 2.1-.6.6-1.4.9-2.2.9-.8 0-1.6-.3-2.2-.9-.6-.5-1-1.3-1-2.2z"></path></svg> Account</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link h4 m-0 text-uppercase font-weight-bold sni sni__cart" data-toggle="modal" data-target="#cart-drawer" role="button" data-cy="cart-icon">Cart (<span class="cart-drawer__count">0</span>)</a>
+						<a class="nav-link h4 m-0 d-flex text-uppercase font-weight-bold" data-toggle="modal" data-target="#cart-drawer" role="button" data-cy="cart-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 35" class="svg mr-25"><path d="M15.5.5l.234.003a7.049 7.049 0 016.818 6.577l5.11-.001a1.758 1.758 0 011.752 1.518l.015.147 1.066 21.965a3.347 3.347 0 01-.739 2.439l-.145.166-.074.072c-.886.772-2.033 1.173-3.124 1.13l-.233-.016-21.26-.004a4.592 4.592 0 01-3.259-.955l-.193-.16-.074-.072a3.36 3.36 0 01-.905-2.346l.012-.211L1.566 8.74c.048-.89.75-1.593 1.615-1.657l.145-.004H8.45A7.049 7.049 0 0115.26.503l.24-.002zm10.495 10.086H5.01l-.98 20.343.04.011.141.025.2.021c.077.006.164.01.263.013l.157.002h21.351l.275-.006c.041-.001.08-.003.116-.006l.19-.016.22-.031-.987-20.356zM15.502 3.973a3.545 3.545 0 00-3.517 3.106h7.034a3.545 3.545 0 00-3.517-3.106z"></path></svg> Cart (<span class="cart-drawer__count">0</span>)</a>
 					</li>
 				</ul>
-				<a class="nav-link justify-content-end font-weight-bold sni sni__cart px-0 d-lg-none" data-toggle="modal" data-target="#cart-drawer" role="button">
-					(<span class="cart-drawer__count"></span>)
+				<a class="nav-link cart d-flex justify-content-end font-weight-bold px-0 d-lg-none" data-toggle="modal" data-target="#cart-drawer" role="button">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 35" class="svg"><path d="M15.5.5l.234.003a7.049 7.049 0 016.818 6.577l5.11-.001a1.758 1.758 0 011.752 1.518l.015.147 1.066 21.965a3.347 3.347 0 01-.739 2.439l-.145.166-.074.072c-.886.772-2.033 1.173-3.124 1.13l-.233-.016-21.26-.004a4.592 4.592 0 01-3.259-.955l-.193-.16-.074-.072a3.36 3.36 0 01-.905-2.346l.012-.211L1.566 8.74c.048-.89.75-1.593 1.615-1.657l.145-.004H8.45A7.049 7.049 0 0115.26.503l.24-.002zm10.495 10.086H5.01l-.98 20.343.04.011.141.025.2.021c.077.006.164.01.263.013l.157.002h21.351l.275-.006c.041-.001.08-.003.116-.006l.19-.016.22-.031-.987-20.356zM15.502 3.973a3.545 3.545 0 00-3.517 3.106h7.034a3.545 3.545 0 00-3.517-3.106z"></path></svg> (<span class="cart-drawer__count"></span>)
 				</a>
 				<div class="col-lg-4 tooltip bg-primary text-white text-center py-2">
-	        <i id="tooltip__close" class="sni sni__close-circle"></i>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="tooltip__close" class="svg"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2m2.59 6L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8z"></path></svg>
 					Item added to cart
 					<a href="#" class="d-block text-white text-underline">Proceed to checkout</a>
 				</div>
@@ -66,7 +66,8 @@
 	
 		</nav>
 	
-		<nav class="mobile-nav position-fixed d-lg-none sni sni__close">
+		<nav class="mobile-nav position-fixed d-lg-none">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" class="mobile-nav__close svg text-white"><path d="M12 1l-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1-5-5z"></path></svg>
 		</nav>
 		<nav class="text-center nav-ranges p-g bg-white d-lg-none">
 			<ul class="nav justify-content-center">
@@ -103,6 +104,7 @@
 							<picture class="embed-responsive embed-responsive-1by1 bg-shimmer ">
 								<source srcset="https://via.placeholder.com/1140x1260/EFADBA?text=1140x1260+Slide+1" media="(min-width: 992px)">
 								<img src="https://via.placeholder.com/750x750/EFADBA?text=750x750+Slide+1" alt="Slide 1" class="w-100 embed-responsive-item fit--cover"  />
+								
 							</picture>
 							
 						</div>
@@ -111,6 +113,7 @@
 							<picture class="embed-responsive embed-responsive-1by1 bg-shimmer ">
 								<source srcset="https://via.placeholder.com/1140x1260/EFADBA?text=1140x1260+Slide+2" media="(min-width: 992px)">
 								<img src="https://via.placeholder.com/750x750/EFADBA?text=750x750+Slide+2" alt="Slide 2" class="w-100 embed-responsive-item fit--cover" loading="lazy" />
+								
 							</picture>
 							</noscript>
 						</div>
@@ -119,6 +122,7 @@
 							<picture class="embed-responsive embed-responsive-1by1 bg-shimmer ">
 								<source srcset="https://via.placeholder.com/1140x1260/EFADBA?text=1140x1260+Slide+3" media="(min-width: 992px)">
 								<img src="https://via.placeholder.com/750x750/EFADBA?text=750x750+Slide+3" alt="Slide 3" class="w-100 embed-responsive-item fit--cover" loading="lazy" />
+								
 							</picture>
 							</noscript>
 						</div>
@@ -127,6 +131,7 @@
 							<picture class="embed-responsive embed-responsive-1by1 bg-shimmer ">
 								<source srcset="https://via.placeholder.com/1140x1260/EFADBA?text=1140x1260+Slide+4" media="(min-width: 992px)">
 								<img src="https://via.placeholder.com/750x750/EFADBA?text=750x750+Slide+4" alt="Slide 4" class="w-100 embed-responsive-item fit--cover" loading="lazy" />
+								
 							</picture>
 							</noscript>
 						</div>
@@ -135,6 +140,7 @@
 							<picture class="embed-responsive embed-responsive-1by1 bg-shimmer ">
 								<source srcset="https://via.placeholder.com/1140x1260/EFADBA?text=1140x1260+Slide+5" media="(min-width: 992px)">
 								<img src="https://via.placeholder.com/750x750/EFADBA?text=750x750+Slide+5" alt="Slide 5" class="w-100 embed-responsive-item fit--cover" loading="lazy" />
+								
 							</picture>
 							</noscript>
 						</div>
@@ -143,6 +149,7 @@
 							<picture class="embed-responsive embed-responsive-1by1 bg-shimmer ">
 								<source srcset="https://via.placeholder.com/1140x1260/EFADBA?text=1140x1260+Slide+6" media="(min-width: 992px)">
 								<img src="https://via.placeholder.com/750x750/EFADBA?text=750x750+Slide+6" alt="Slide 6" class="w-100 embed-responsive-item fit--cover" loading="lazy" />
+								
 							</picture>
 							</noscript>
 						</div>
@@ -151,14 +158,16 @@
 							<picture class="embed-responsive embed-responsive-1by1 bg-shimmer ">
 								<source srcset="https://via.placeholder.com/1140x1260/EFADBA?text=1140x1260+Slide+7" media="(min-width: 992px)">
 								<img src="https://via.placeholder.com/750x750/EFADBA?text=750x750+Slide+7" alt="Slide 7" class="w-100 embed-responsive-item fit--cover" loading="lazy" />
+								
 							</picture>
 							</noscript>
 						</div>
 						<div class="carousel-item ">
 							<noscript class="loading-lazy">
-							<picture class="embed-responsive embed-responsive-1by1 bg-shimmer sni sni__play">
+							<picture class="embed-responsive embed-responsive-1by1 bg-shimmer with-video">
 								<source srcset="https://via.placeholder.com/1140x1260/EFADBA?text=1140x1260+Slide+8" media="(min-width: 992px)">
 								<img src="https://via.placeholder.com/750x750/EFADBA?text=750x750+Slide+8" alt="Slide 8" class="w-100 embed-responsive-item fit--cover" loading="lazy" />
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 54" class="svg text-white"><path d="M27 0a27 27 0 1027 27A27 27 0 0027 0zm11.371 27.86a1.929 1.929 0 01-.866.866v.01L22.076 36.45a1.929 1.929 0 01-2.791-1.736V19.286a1.929 1.929 0 012.791-1.726L37.5 25.274a1.928 1.928 0 01.871 2.586z"></path></svg>
 							</picture>
 							</noscript>
 						</div>
@@ -174,69 +183,79 @@
 			</div>
 			
 			<div id="product-image-carousel__indicator" class="product-image-carousel__indicator col-12 col-lg-1 order-lg-1 carousel slide carousel--loop mb-1 mb-lg-0 px-0 px-lg-g" data-slide-number="5" data-ride="carousel" data-interval="false">
-				<button class="carousel-indicator btn-unstyled d-none d-lg-flex mx-auto mb-1 mb-lg-3 text-center sni sni__chevron-up text-primary align-items-center" href="#product-image-carousel__indicator" data-slide="prev" aria-hidden="true" disabled>
+				<button class="carousel-indicator chevron-up btn-unstyled d-none d-lg-flex mx-auto mb-1 mb-lg-3 text-center align-items-center" href="#product-image-carousel__indicator" data-slide="prev" aria-hidden="true" disabled>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.6 22.6" class="svg text-primary"><path d="M20.7 17.2l-9.4-9.4-9.4 9.4L0 15.3 11.3 4l11.3 11.3-1.9 1.9z"></path></svg>
 				</button>
 			
 				<div class="carousel-inner d-flex flex-nowrap flex-lg-column ">
 					<div class="product-image-carousel__indicator__item carousel-item active col-12 px-lg-0 pb-lg-3 mw-100" data-target="#product-image-carousel" data-index="1">
 						<button class="btn-unstyled border d-block w-100 border-primary">
-							<picture class="embed-responsive embed-responsive-1by1 bg-shimmer">
+							<picture class="embed-responsive embed-responsive-1by1 bg-shimmer ">
 								<img class="embed-responsive-item fit--cover" src="https://via.placeholder.com/150x150/EFADBA?text=1" alt="Slide 1">
+								
 							</picture>
 						</button>
 					</div>
 					<div class="product-image-carousel__indicator__item carousel-item  col-12 px-lg-0 pb-lg-3 mw-100" data-target="#product-image-carousel" data-index="2">
 						<button class="btn-unstyled border d-block w-100 border-white">
-							<picture class="embed-responsive embed-responsive-1by1 bg-shimmer">
+							<picture class="embed-responsive embed-responsive-1by1 bg-shimmer ">
 								<img class="embed-responsive-item fit--cover" src="https://via.placeholder.com/150x150/EFADBA?text=2" alt="Slide 2">
+								
 							</picture>
 						</button>
 					</div>
 					<div class="product-image-carousel__indicator__item carousel-item  col-12 px-lg-0 pb-lg-3 mw-100" data-target="#product-image-carousel" data-index="3">
 						<button class="btn-unstyled border d-block w-100 border-white">
-							<picture class="embed-responsive embed-responsive-1by1 bg-shimmer">
+							<picture class="embed-responsive embed-responsive-1by1 bg-shimmer ">
 								<img class="embed-responsive-item fit--cover" src="https://via.placeholder.com/150x150/EFADBA?text=3" alt="Slide 3">
+								
 							</picture>
 						</button>
 					</div>
 					<div class="product-image-carousel__indicator__item carousel-item  col-12 px-lg-0 pb-lg-3 mw-100" data-target="#product-image-carousel" data-index="4">
 						<button class="btn-unstyled border d-block w-100 border-white">
-							<picture class="embed-responsive embed-responsive-1by1 bg-shimmer">
+							<picture class="embed-responsive embed-responsive-1by1 bg-shimmer ">
 								<img class="embed-responsive-item fit--cover" src="https://via.placeholder.com/150x150/EFADBA?text=4" alt="Slide 4">
+								
 							</picture>
 						</button>
 					</div>
 					<div class="product-image-carousel__indicator__item carousel-item  col-12 px-lg-0 pb-lg-3 mw-100" data-target="#product-image-carousel" data-index="5">
 						<button class="btn-unstyled border d-block w-100 border-white">
-							<picture class="embed-responsive embed-responsive-1by1 bg-shimmer">
+							<picture class="embed-responsive embed-responsive-1by1 bg-shimmer ">
 								<img class="embed-responsive-item fit--cover" src="https://via.placeholder.com/150x150/EFADBA?text=5" alt="Slide 5">
+								
 							</picture>
 						</button>
 					</div>
 					<div class="product-image-carousel__indicator__item carousel-item  col-12 px-lg-0 pb-lg-3 mw-100" data-target="#product-image-carousel" data-index="6">
 						<button class="btn-unstyled border d-block w-100 border-white">
-							<picture class="embed-responsive embed-responsive-1by1 bg-shimmer">
+							<picture class="embed-responsive embed-responsive-1by1 bg-shimmer ">
 								<img class="embed-responsive-item fit--cover" src="https://via.placeholder.com/150x150/EFADBA?text=6" alt="Slide 6">
+								
 							</picture>
 						</button>
 					</div>
 					<div class="product-image-carousel__indicator__item carousel-item  col-12 px-lg-0 pb-lg-3 mw-100" data-target="#product-image-carousel" data-index="7">
 						<button class="btn-unstyled border d-block w-100 border-white">
-							<picture class="embed-responsive embed-responsive-1by1 bg-shimmer">
+							<picture class="embed-responsive embed-responsive-1by1 bg-shimmer ">
 								<img class="embed-responsive-item fit--cover" src="https://via.placeholder.com/150x150/EFADBA?text=7" alt="Slide 7">
+								
 							</picture>
 						</button>
 					</div>
 					<div class="product-image-carousel__indicator__item carousel-item  col-12 px-lg-0 pb-lg-3 mw-100" data-target="#product-image-carousel" data-index="8">
 						<button class="btn-unstyled border d-block w-100 border-white">
-							<picture class="embed-responsive embed-responsive-1by1 bg-shimmer">
+							<picture class="embed-responsive embed-responsive-1by1 bg-shimmer with-video">
 								<img class="embed-responsive-item fit--cover" src="https://via.placeholder.com/150x150/EFADBA?text=8" alt="Slide 8">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 54" class="svg text-white"><path d="M27 0a27 27 0 1027 27A27 27 0 0027 0zm11.371 27.86a1.929 1.929 0 01-.866.866v.01L22.076 36.45a1.929 1.929 0 01-2.791-1.736V19.286a1.929 1.929 0 012.791-1.726L37.5 25.274a1.928 1.928 0 01.871 2.586z"></path></svg>
 							</picture>
 						</button>
 					</div>
 				</div>
 			
-				<button class="carousel-indicator btn-unstyled d-none d-lg-flex mx-auto mt-1 mt-lg-3 text-center sni sni__chevron-down text-primary align-items-center" href="#product-image-carousel__indicator" data-slide="next" aria-hidden="true">
+				<button class="carousel-indicator chevron-down btn-unstyled d-none d-lg-flex mx-auto mt-1 mt-lg-3 text-center align-items-center" href="#product-image-carousel__indicator" data-slide="next" aria-hidden="true">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.6 22.6" class="svg text-primary"><path d="M1.9 5.4l9.4 9.4 9.4-9.4 1.9 1.9-11.3 11.3L0 7.3l1.9-1.9z"></path></svg>
 				</button>
 			</div>
 
@@ -298,8 +317,8 @@
 					<div class="product-swatch-mobile fixed-bottom d-lg-none mx-g mb-2 show">
 						<div id="product-swatch-mobile"
 							class="product-swatch-mobile__collapse position-relative collapse bg-white border border-primary border-bottom-0 rounded-top">
-							<button type="button" class="close position-absolute sni sni__close font-size-xs" data-toggle="collapse"
-								data-target="#product-swatch-mobile" aria-label="close"></button>
+							<button type="button" class="close position-absolute font-size-xs" data-toggle="collapse"
+								data-target="#product-swatch-mobile" aria-label="close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" class="svg"><path d="M12 1l-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1-5-5z"></path></svg></button>
 							<div class="product-swatch d-flex flex-wrap justify-content-center justify-content-center p-g">
 								<button type="button" class="variant-swatch medium mr-2 border-primary" data-value="medium"></button>
 								<button type="button" class="variant-swatch dark mr-2" data-value="dark"></button>
@@ -381,8 +400,6 @@
 						</div>
 					</div>
 				</div>
-
-
 			</div>
 		</div>
 	</div>
