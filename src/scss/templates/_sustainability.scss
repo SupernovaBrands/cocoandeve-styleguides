@@ -32,6 +32,11 @@
 			min-height: 190px;
 		}
 	}
+
+	.carousel-control[disabled] {
+		pointer-events: none;
+		color: $gray-600;
+	}
 }
 
 .sustainability-image-text {
