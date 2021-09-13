@@ -1,3 +1,5 @@
+/* global screenLG */
+
 $(document).ready(function () {
 	// handle swatch selection on product carousel
 	if ($('.variant-swatch .variant-swatch__item span').length > 0) {
@@ -26,4 +28,22 @@ $(document).ready(function () {
 			}, 1000);
 		});
 	}
+
+	if ($('.btn-choose').length > 0 && $('.product-swatch__overlay').length > 0) {
+		$('.btn-choose').click(function () {
+			if (window.innerWidth < screenLG) {
+				$('.product-swatch__overlay').addClass('show');
+			} else {
+				$('#productSwatchModal').modal({
+					show: true
+				});
+			}
+		});
+
+		$('.product-swatch__close').click(function (){
+			$('.product-swatch__overlay').removeClass('show');
+		});
+	}
+
+
 });

@@ -7,7 +7,7 @@
 
 <body>
 	{{> sections/header}}
-	<div class="container">
+	<div class="container collection-template">
 		<figure class="imagewtext mobile-wrapper row position-relative align-items-center mb-lg-2 mt-lg-5">
 			<div class="col-12 col-lg-8 order-lg-last">
 				<div class="no-gutters__in-container">
@@ -67,16 +67,20 @@
 
 					{{> components/product-card-carousel title="Like a Virgin Hair Masque Like a Virgin Hair Masque" compare_price="$44.90" price="$34.90" collection="true" }}
 
-					{{> components/product-card-carousel title="Like a Virgin Hair Masque" compare_price="$44.90" price="$34.90" swatch="true" swatch_style="true" badge="true" badge_image="badge-new.svg" collection="true"}}
+					{{> components/product-card-carousel title="Like a Virgin Hair Masque" compare_price="$44.90" price="$34.90" swatch="true" swatch_style="true" badge="true" badge_image="badge-new.svg" collection="true" swatch_modal="true"}}
 
-					{{> components/product-card-carousel title="Like a Virgin Hair Masque" compare_price="$44.90" price="$34.90" swatch="true" swatch_style="true" collection="true"}}
+					{{> components/product-card-carousel title="Like a Virgin Hair Masque" compare_price="$44.90" price="$34.90" swatch="true" swatch_style="true" collection="true" swatch_modal="true"}}
 
-					{{> components/product-card-carousel title="Satin Eye Mask" compare_price="$44.90" price="$34.90" swatch="true" swatch_style_eyemask="true" collection="true"}}
+					{{> components/product-card-carousel title="Satin Eye Mask" compare_price="$44.90" price="$34.90" swatch="true" swatch_style_eyemask="true" collection="true" swatch_modal="true"}}
 
-					{{> components/product-card-carousel title="Like a Virgin Hair Masque" compare_price="$44.90" price="$34.90" swatch="true" swatch_style="true" badge="true" badge_image="badge-new.svg" collection="true"}}
+					{{> components/product-card-carousel title="Like a Virgin Hair Masque" compare_price="$44.90" price="$34.90" swatch="true" swatch_style="true" badge="true" badge_image="badge-new.svg" collection="true" swatch_modal="true" swatch_modal="true"}}
 
-					{{> components/product-card-carousel title="Satin Eye Mask" compare_price="$44.90" price="$34.90" swatch="true" swatch_style_eyemask="true" collection="true"}}
-					{{> components/product-card-carousel title="Smoothie Shower Gel" compare_price="$44.90" price="$34.90" swatch="true" swatch_scent="true" collection="true"}}
+					{{> components/product-card-carousel title="Satin Eye Mask" compare_price="$44.90" price="$34.90" swatch="true" swatch_style_eyemask="true" collection="true" swatch_modal="true"}}
+					{{> components/product-card-carousel title="Smoothie Shower Gel" compare_price="$44.90" price="$34.90" swatch="true" swatch_scent="true" collection="true" swatch_modal="true"}}
+
+
+					{{> compounds/product-swatch-overlay}}
+					{{> compounds/product-swatch-modal}}
 				</div>
 			</div>
 		</div>

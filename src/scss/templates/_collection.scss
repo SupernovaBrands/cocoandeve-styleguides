@@ -19,3 +19,57 @@
 		}
 	}
 }
+
+.product-swatch {
+
+	&__overlay {
+		background-color: rgba(0,0,0,.4);
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: $zindex-modal;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity .2s linear;
+
+		&.show {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	&__collection {
+		border-bottom-left-radius: 0 !important;
+		border-bottom-right-radius: 0 !important;
+
+
+	}
+
+	&__close {
+		top: $grid-gutter-width;
+		right: $grid-gutter-width;
+		cursor: pointer;
+	}
+
+	@include media-breakpoint-up(lg) {
+		&__modal {
+			.modal-lg{
+				max-width: calc-em(770);
+			}
+
+			.product-waitlist-form-oos {
+				bottom: 0;
+				left: 0;
+				right: 0;
+			}
+		}
+
+		&__price {
+			bottom: 0;
+			left: 0;
+			right: $grid-gutter-width;
+		}
+	}
+
+}

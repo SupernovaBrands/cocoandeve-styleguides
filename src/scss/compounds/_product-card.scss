@@ -20,12 +20,6 @@
 		}
 	}
 
-	.btn-choose:hover + .swatch-overlay,
-	.swatch-overlay:hover {
-		visibility: visible;
-		opacity: 1;
-	}
-
 	.btn-choose:focus {
 		box-shadow: none;
 	}
