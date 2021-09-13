@@ -67,7 +67,7 @@ if (yotpo.length > 0) {
 	import(/* webpackChunkName: 'yotpo' */ '~mod/yotpo');
 }
 
-if ($('.collection-template').length >= 0) {
+if ($('.collection-template').length > 0) {
 	import(/* webpackChunkName: 'collection' */ '~mod/collection-template');
 }
 
