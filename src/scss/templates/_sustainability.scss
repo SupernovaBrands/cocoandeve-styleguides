@@ -1,0 +1,93 @@
+.sustainability-banner {
+	picture::before {
+		padding-top: percentage(260/375);
+
+		@include media-breakpoint-up(lg) {
+			padding-top: percentage(390/1440);
+		}
+	}
+
+	h1 {
+		top: 40%;
+	}
+}
+
+.sustainability-image-slider {
+	picture::before {
+		padding-top: percentage(375/320);
+
+		@include media-breakpoint-up(lg) {
+			padding-top: percentage(350/670);
+		}
+	}
+
+	&__wrapper {
+		width: 5em;
+	}
+
+	.carousel {
+		min-height: 240px;
+
+		@include media-breakpoint-up(lg) {
+			min-height: 190px;
+		}
+	}
+
+	.carousel-control[disabled] {
+		pointer-events: none;
+		color: $gray-600;
+	}
+}
+
+.sustainability-image-text {
+	picture::before {
+		padding-top: percentage(180/375);
+
+		@include media-breakpoint-up(lg) {
+			padding-top: percentage(270/670);
+		}
+	}
+}
+
+.sustainability-formula {
+	ul {
+		border-color: $gray-400;
+	}
+
+	.nav-link.active, .nav-link:hover {
+		border: none;
+		background: none;
+		border-bottom: 2px solid $secondary;
+		font-weight: bold;
+	}
+
+	.svg {
+		height: 2em;;
+	}
+
+	.tab-pane {
+		@include media-breakpoint-down(lg) {
+			min-height: 16em;
+		}
+	}
+}
+
+.sustainability-card {
+	picture::before {
+		padding-top: percentage(180/310);
+
+		@include media-breakpoint-up(lg) {
+			padding-top: percentage(180/365);
+		}
+	}
+
+	.bg-primary-light {
+		@include media-breakpoint-down(lg) {
+			min-height: 26.5em;
+		}
+	}
+}
+
+.border-primary.active {
+	background-color: $primary;
+}
