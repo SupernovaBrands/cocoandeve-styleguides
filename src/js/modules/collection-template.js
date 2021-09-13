@@ -3,11 +3,11 @@ const updateFormButton = (form) => {
 	if (selected.hasClass('waitlist') && $('.product-waitlist-form-oos').hasClass('d-none')) {
 		form.find('.product-form-submit').addClass('d-none');
 		$('.product-waitlist-form-oos').removeClass('d-none');
-        form.find('.product-swatch__price').addClass('d-none');
+		form.find('.product-swatch__price').addClass('d-none');
 	} else {
 		form.find('.product-form-submit').removeClass('d-none');
 		$('.product-waitlist-form-oos').addClass('d-none');
-        form.find('.product-swatch__price').removeClass('d-none');
+		form.find('.product-swatch__price').removeClass('d-none');
 	}
 
 	if (selected.hasClass('oos')) {
@@ -24,7 +24,7 @@ $('.variant-swatch').on('click', function () {
 	swatchContainers.each((i, el) => {
 		const swatches = $(el).find('.variant-swatch');
 		const selected = swatches.filter(`[data-value=${attrFor}]`);
-        console.log('selected', selected);
+		console.log('selected', selected);
 		if (selected.length > 0) {
 			swatches.removeClass('border-primary');
 			selected.addClass('border-primary');
@@ -34,5 +34,5 @@ $('.variant-swatch').on('click', function () {
 		}
 	});
 
-    updateFormButton($(this).closest('form'));
+	updateFormButton($(this).closest('form'));
 });
