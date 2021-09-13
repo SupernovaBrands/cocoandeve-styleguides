@@ -64,6 +64,12 @@
 	.svg {
 		height: 2em;;
 	}
+
+	.tab-pane {
+		@include media-breakpoint-down(lg) {
+			min-height: 16em;
+		}
+	}
 }
 
 .sustainability-card {
@@ -72,6 +78,12 @@
 
 		@include media-breakpoint-up(lg) {
 			padding-top: percentage(180/365);
+		}
+	}
+
+	.bg-primary-light {
+		@include media-breakpoint-down(lg) {
+			min-height: 26.5em;
 		}
 	}
 }
