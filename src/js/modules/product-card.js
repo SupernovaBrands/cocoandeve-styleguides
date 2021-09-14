@@ -35,15 +35,13 @@ $(document).ready(function () {
 				$('.product-swatch__overlay').addClass('show');
 			} else {
 				$('#productSwatchModal').modal({
-					show: true
+					show: true,
 				});
 			}
 		});
 
-		$('.product-swatch__close').click(function (){
+		$('.product-swatch__close').click(function () {
 			$('.product-swatch__overlay').removeClass('show');
 		});
 	}
-
-
 });
