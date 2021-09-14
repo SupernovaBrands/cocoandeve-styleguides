@@ -87,7 +87,7 @@ export default class CartDiscountForm extends React.Component {
 					{code}
 					{!isAutoDiscount && (
 						<button className="btn-unstyled ml-1 text-black-50" onClick={this.removeDiscount} type="button" aria-label="Remove Discount" data-cy="checkout-removepromo-icon">
-							<SvgCloseCircle class="svg" />
+							<SvgCloseCircle className="svg" />
 						</button>
 					)}
 				</div>

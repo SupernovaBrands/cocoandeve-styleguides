@@ -59,6 +59,8 @@ window.tSettings = {
 	// eslint-disable-next-line no-template-curly-in-string
 	moneyWithCurrencyFormat: '${{amount}} USD',
 	currencyFormat: 'money_format',
+	yotpoKey: "6txi4aUWjmI6eNoVLssUgrIObhvqlGbIfVyePeRW", // Dev Store
+	// yotpoKey: "s4mQID1Ka0NxGslq0gdmbbWxtATkPWDCzuGAK75f", // US store
 	variantNotification: [
 		32068892688419,
 		32068892721187,
