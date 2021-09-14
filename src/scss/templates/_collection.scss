@@ -30,7 +30,6 @@
 	opacity: 0;
 	visibility: hidden;
 	transition: opacity .2s linear;
-	content: '';
 	position: fixed;
 	z-index: $zindex-modal;
 
