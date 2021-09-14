@@ -79,11 +79,9 @@
 					</div>
 
 					<div class="row">
-						<div class="input-group form-group col">
-							<div class="custom-checkbox d-flex justify-content-center align-items-center mr-1 border rounded">
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 25" class="svg text-primary"><path d="M28.82.543c.382-.014.752.14 1.012.421.571.615.604 1.556.076 2.208L12.436 23.97a1.312 1.312 0 01-1.992.072 1.693 1.693 0 01-.167-.21 1.578 1.578 0 01-.138-.127L1.127 14.38a1.621 1.621 0 112.33-2.253l8.058 8.335L27.84 1.04c.239-.3.596-.481.98-.496z"></path></svg>
-							</div>
-							<label class="form-check-label font-size-sm">I agree to <a href="#">Privacy Policy & ToS</a></label>
+						<div class="custom-control custom-checkbox col d-flex justify-content-center my-1">
+							<input type="checkbox" name="tos" class="custom-control-input" id="agreement" />
+							<label class="custom-control-label font-size-sm" for="agreement">I agree to <a href="#">Privacy Policy & ToS</a></label>
 						</div>
 					</div>
 
@@ -104,6 +102,7 @@
 	
 	<script src="/cocoandeve-styleguides/js/main.js"></script>
 	
+	<link rel="stylesheet" href="/cocoandeve-styleguides/css/yotpo-widget.css">
 </body>
 
 </html>
