@@ -1,3 +1,5 @@
+/* global tStrings */
+
 import React, {
 	useState,
 } from 'react';
@@ -67,16 +69,17 @@ const YotpoReviewForm = (props) => {
 		<div id="yotpoReviewForm" className="collapse mt-3" data-parent="#yotpoFormCollapse">
 			<div className="yotpo__review-fields d-flex flex-column">
 				<div className="form-group">
-					<h4 className="mb-2">Write a Review</h4>
+					<h4 className="mb-2">{tStrings.yotpo.writeReview}</h4>
 					<p className="font-size-sm mb-1">
 						<span className="text-primary">* </span>
-						Indicates a required field
+						{tStrings.yotpo.requiredField}
 					</p>
 				</div>
 				<div className="form-group">
 					<p className="font-size-sm mb-1">
 						<span className="text-primary">* </span>
-						Score:
+						{tStrings.yotpo.score}
+						:
 					</p>
 					{[...Array(5)].map((star, index) => {
 						const i = index + 1;
@@ -95,18 +98,20 @@ const YotpoReviewForm = (props) => {
 				<div className="form-group">
 					<p className="font-size-sm mb-1">
 						<span className="text-primary">* </span>
-						Title:
+						{tStrings.yotpo.title}
+						:
 					</p>
 					<input type="text" className="form-control mb-1" id="yotpoFormTitle" value={title} onChange={(e) => setTitle(e.target.value)} required />
-					{errorTitle && <small className="text-primary mb-1">Title field required</small>}
+					{errorTitle && <small className="text-primary mb-1">{tStrings.yotpo.titleError}</small>}
 				</div>
 				<div className="form-group">
 					<p className="font-size-sm mb-1">
 						<span className="text-primary">* </span>
-						Review:
+						{tStrings.yotpo.review}
+						:
 					</p>
 					<textarea className="form-control mb-1" id="yotpoFormReview" value={review} onChange={(e) => setReview(e.target.value)} rows="5" />
-					{errorReview && <small className="text-primary mb-1">Review field required</small>}
+					{errorReview && <small className="text-primary mb-1">{tStrings.yotpo.reviewError}</small>}
 				</div>
 				{customQuestions.map((q) => (
 					<div className="form-group" key={q.slug}>
@@ -124,22 +129,24 @@ const YotpoReviewForm = (props) => {
 					<div className="col-lg-4 px-0 px-lg-g mb-1 mb-lg-0">
 						<p className="font-size-sm mb-1">
 							<span className="text-primary">* </span>
-							Use your name:
+							{tStrings.yotpo.name}
+							:
 						</p>
 						<input type="text" id="yotpoReviewName" className="form-control mb-1" placeholder="Your name" value={name} onChange={(e) => setName(e.target.value)} required />
-						{errorName && <small className="text-primary mb-1">Name field required</small>}
+						{errorName && <small className="text-primary mb-1">{tStrings.yotpo.nameError}</small>}
 					</div>
 					<div className="col-lg-4 px-0 px-lg-g">
 						<p className="font-size-sm mb-1">
 							<span className="text-primary">* </span>
-							Email:
+							{tStrings.yotpo.email}
+							:
 						</p>
 						<input type="email" id="yotpoReviewEmail" className="form-control mb-1" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-						{errorEmail && <small className="text-primary mb-1">Please enter a valid email</small>}
+						{errorEmail && <small className="text-primary mb-1">{tStrings.yotpo.emailError}</small>}
 					</div>
 				</div>
 				<div className="d-flex form-group justify-content-end">
-					<button type="button" className="btn btn-primary" onClick={onSubmitButton}>Submit</button>
+					<button type="button" className="btn btn-primary" onClick={onSubmitButton}>{tStrings.yotpo.submit}</button>
 				</div>
 			</div>
 		</div>
