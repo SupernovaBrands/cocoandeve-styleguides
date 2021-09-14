@@ -95,6 +95,10 @@
 }
 
 .custom-radio {
+	.custom-control-label::before {
+		border-color: $text-muted;
+	}
+
 	.custom-control-input:checked ~ .custom-control-label {
 		&::before {
 			box-shadow: inset 0px 0px 0px 2px #fff;
@@ -107,16 +111,19 @@
 
 
 .custom-checkbox {
-	width: calc-em(19, 16);
-	height: calc-em(19, 16);
-	cursor: pointer;
-
-	.svg {
-		display: none;
-		font-size: calc-em(11, 16)
+	.custom-control-label::before {
+		border-color: $text-muted;
 	}
 
-	&.checked .svg {
-		display: block;
+	.custom-control-input:checked ~ .custom-control-label {
+		&::before {
+			background-color: #fff;
+		}
+
+		&::after {
+			background-image: url(icon-svg('check.svg', #{$primary}));
+			background-size: 70%;
+			background-position: center;
+		}
 	}
 }

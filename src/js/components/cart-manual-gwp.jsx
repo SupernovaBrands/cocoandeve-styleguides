@@ -54,8 +54,8 @@ export default class CartManualGwp extends React.Component {
 			<div className="manual-gwp position-relative">
 				<p className="font-size-base font-weight-bold mb-0">{title}</p>
 				<p className="font-size-base text-muted">{`${selectedKey.length}/${maxSelected} ${tStrings.items_selected}`}</p>
-				<button className={`position-absolute btn-unstyled text-primary manual-gwp__left ${this.state.showScroll ? '' : 'd-none'}`} aria-hidden="true" type="button" onClick={() => this.scroll('left')}><SvgChevronPrev class="svg" /></button>
-				<button className={`position-absolute btn-unstyled text-primary manual-gwp__right ${this.state.showScroll ? '' : 'd-none'}`} aria-hidden="true" type="button" onClick={() => this.scroll('right')}><SvgChevronNext class="svg" /></button>
+				<button className={`position-absolute btn-unstyled text-primary manual-gwp__left ${this.state.showScroll ? '' : 'd-none'}`} aria-hidden="true" type="button" onClick={() => this.scroll('left')}><SvgChevronPrev className="svg" /></button>
+				<button className={`position-absolute btn-unstyled text-primary manual-gwp__right ${this.state.showScroll ? '' : 'd-none'}`} aria-hidden="true" type="button" onClick={() => this.scroll('right')}><SvgChevronNext className="svg" /></button>
 				<ul className="list-unstyled manual-gwp__container d-flex mb-0 text-center" ref={(r) => { this.scrollRef = r; }}>
 					{items.map((item) => {
 						const isLoading = loading && processingId === item.id;
