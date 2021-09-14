@@ -42,10 +42,11 @@ widgets.forEach((el) => {
 	ReactDOM.render(
 		React.createElement(YotpoReviewWidget, {
 			productId: parseInt(el.dataset.productId, 10),
-			productName: el.dataset.name,
-			productUrl: el.dataset.url,
-			productImage: el.dataset.imageUrl,
-			productDesc: el.dataset.description,
+			productName: el.dataset.name || '',
+			productUrl: el.dataset.url || '',
+			productImage: el.dataset.imageUrl || '',
+			productDesc: el.dataset.description || '',
+			canCreate: el.dataset.canCreate === 'true',
 		}, null),
 		el,
 	);
