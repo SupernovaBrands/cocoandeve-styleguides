@@ -29,19 +29,19 @@ $(document).ready(function () {
 		});
 	}
 
-	if ($('.btn-choose').length > 0 && $('.product-swatch__overlay').length > 0) {
+	if ($('.btn-choose').length > 0 && $('.collection-swatch').length > 0) {
 		$('.btn-choose').click(function () {
 			if (window.innerWidth < screenLG) {
-				$('.product-swatch__overlay').addClass('show');
+				$('.collection-swatch').addClass('show');
 			} else {
-				$('#productSwatchModal').modal({
+				$('#collectionSwatchModal').modal({
 					show: true,
 				});
 			}
 		});
 
-		$('.product-swatch__close').click(function () {
-			$('.product-swatch__overlay').removeClass('show');
+		$('.collection-swatch__close').click(function () {
+			$('.collection-swatch').removeClass('show');
 		});
 	}
 });

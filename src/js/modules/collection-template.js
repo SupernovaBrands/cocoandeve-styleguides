@@ -1,13 +1,13 @@
 const updateFormButton = (form) => {
 	const selected = form.find('.variant-swatch.border-primary');
-	if (selected.hasClass('waitlist') && $('.product-waitlist-form-oos').hasClass('d-none')) {
-		form.find('.product-form-submit').addClass('d-none');
-		$('.product-waitlist-form-oos').removeClass('d-none');
-		form.find('.product-swatch__price').addClass('d-none');
+	if (selected.hasClass('waitlist') && $('.collection-swatch__waitlist').hasClass('d-none')) {
+		$('.collection-swatch__waitlist').removeClass('d-none');
+		form.find('.collection-swatch__price div').removeClass('d-flex').addClass('d-none');
+		form.find('.collection-swatch__price button').addClass('d-none');
 	} else {
-		form.find('.product-form-submit').removeClass('d-none');
-		$('.product-waitlist-form-oos').addClass('d-none');
-		form.find('.product-swatch__price').removeClass('d-none');
+		$('.collection-swatch__waitlist').addClass('d-none');
+		form.find('.collection-swatch__price div').removeClass('d-none').addClass('d-flex');
+		form.find('.collection-swatch__price button').removeClass('d-none');
 	}
 
 	if (selected.hasClass('oos')) {
