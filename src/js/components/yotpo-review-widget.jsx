@@ -75,6 +75,7 @@ const YotpoReviewWidget = (props) => {
 		productUrl,
 		productImage,
 		productDesc,
+		canCreate,
 	} = props;
 
 	const [init, setInit] = useState(false);
@@ -391,7 +392,7 @@ const YotpoReviewWidget = (props) => {
 				</div>
 			)}
 
-			{!revThanks && !qnaThanks && (
+			{!revThanks && !qnaThanks && canCreate && (
 				<div id="yotpoFormCollapse" className="mt-2">
 					<div className="row justify-content-end">
 						<div className="col-6 col-md-3 col-xl-2">
@@ -539,6 +540,9 @@ const YotpoReviewWidget = (props) => {
 								data-target="#yotpoReviewForm"
 								aria-expanded="false"
 								aria-controls="yotpoReviewForm"
+								onClick={() => {
+									if (!canCreate) window.location.href = `${productUrl}#write-a-review`
+								}}
 							>
 								{tStrings.yotpo.beFirstReview}
 							</button>
@@ -657,6 +661,9 @@ const YotpoReviewWidget = (props) => {
 								data-target="#yotpoQuestionForm"
 								aria-expanded="false"
 								aria-controls="yotpoQuestionForm"
+								onClick={() => {
+									if (!canCreate) window.location.href = `${productUrl}#write-a-review`
+								}}
 							>
 								{tStrings.yotpo.beFirstQuestion}
 							</button>
@@ -786,6 +793,7 @@ YotpoReviewWidget.propTypes = {
 	productUrl: PropTypes.string.isRequired,
 	productImage: PropTypes.string.isRequired,
 	productDesc: PropTypes.string.isRequired,
+	canCreate: PropTypes.bool.isRequired,
 };
 
 export default YotpoReviewWidget;
