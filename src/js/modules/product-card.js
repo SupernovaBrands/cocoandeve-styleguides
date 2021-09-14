@@ -29,8 +29,8 @@ $(document).ready(function () {
 		});
 	}
 
-	if ($('.btn-choose').length > 0 && $('.collection-swatch').length > 0) {
-		$('.btn-choose').click(function () {
+	if ($('.btn-choose__swatch').length > 0 && $('.collection-swatch').length > 0) {
+		$('.btn-choose__swatch').click(function () {
 			if (window.innerWidth < screenLG) {
 				$('.collection-swatch').addClass('show');
 			} else {
