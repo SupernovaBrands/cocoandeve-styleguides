@@ -25,11 +25,11 @@ const YotpoStar = (props) => {
 	return init ? (
 		<div className="d-flex">
 			<ReviewStar score={score} />
-			{props.showScore && <span className="ml-25">{score.toFixed(1)}</span>}
+			{props.showScore && <span className="ml-25">{`${score.toFixed(1)} stars`}</span>}
 			{props.showTotal && (
 				<span className="ml-25">
 					(
-					{props.productUrl ? (<a className="link-secondary text-underline" href={`${props.productUrl}#write-a-review`}>{total}</a>) : total}
+					<a className="link-secondary text-underline" href={`${props.productUrl}#write-a-review`}>{total}</a>
 					)
 				</span>
 			)}
