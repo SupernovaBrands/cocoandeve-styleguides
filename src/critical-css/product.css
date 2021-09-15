@@ -276,12 +276,6 @@ h1{font-size:2.5em}
 .mega-menu{opacity:0;visibility:hidden;max-height:0;left:0;top:90%;box-shadow:0 .25em .3125em 0 rgba(0,0,0,.06);z-index:1020}
 .mega-menu:before{content:"";display:block;width:100%;height:15px;transform:translateY(-50%)}
 .cart-drawer{z-index:1070}
-.footer-grid__newsletter{grid-area:newsletter}
-.footer-grid__about-us{grid-area:aboutus}
-.footer-grid__help-links{grid-area:helplinks}
-.footer-grid__followus{grid-area:followus}
-.footer-grid__currency{grid-area:currency}
-.footer-grid__support{grid-area:support}
 .carousel--loop .carousel-item{margin-right:0}
 .carousel--loop .carousel-item.active,.carousel--loop .carousel-item.active+.carousel-item,.carousel--loop .carousel-item.active+.carousel-item+.carousel-item,.carousel--loop .carousel-item.active+.carousel-item+.carousel-item+.carousel-item,.carousel--loop .carousel-item.active+.carousel-item+.carousel-item+.carousel-item+.carousel-item,.carousel--loop .carousel-item.active+.carousel-item+.carousel-item+.carousel-item+.carousel-item+.carousel-item,.carousel--loop .carousel-item.active+.carousel-item+.carousel-item+.carousel-item+.carousel-item+.carousel-item+.carousel-item{display:block}
 .product-image-carousel__indicator .carousel-indicator{font-size:1.6875em}
@@ -319,11 +313,3 @@ h1{font-size:2.5em}
 .product-info-tab{border-color:#d0d0d0}
 .product-info-tab .nav-item{flex:1 0 0}
 .product-info-tab .nav-link.active{font-weight:700;background:0 0;border-bottom:2px solid #f3436c!important}
-.blog-grid__search{grid-area:search}
-.blog-grid__post1{grid-area:post1}
-.blog-grid__post2{grid-area:post2}
-.blog-grid__post3{grid-area:post3}
-.blog-grid__sidebar{grid-area:sidebar;top:0;z-index:1000}
-.blog-post-grid__content{grid-area:content}
-.blog-post-grid__comment{grid-area:comment}
-.blog-post-grid__sidebar{grid-area:sidebar}
