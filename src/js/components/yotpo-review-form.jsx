@@ -7,7 +7,6 @@ import PropTypes from 'prop-types';
 
 import {
 	kebabCase,
-	scrollToElement,
 	validateEmail,
 } from '~mod/utils';
 
@@ -21,6 +20,7 @@ const YotpoReviewForm = (props) => {
 
 	const [score, setScore] = useState(0);
 	const [hoverStar, setHoverStar] = useState(0);
+	const [errorScore, setErrorScore] = useState(false);
 
 	const [title, setTitle] = useState('');
 	const [errorTitle, setErrorTitle] = useState(false);
@@ -31,19 +31,24 @@ const YotpoReviewForm = (props) => {
 	const [email, setEmail] = useState('');
 	const [errorEmail, setErrorEmail] = useState(false);
 
+	const [hasError, setHasError] = useState(false);
+
 	const onSubmitButton = () => {
+		const isScoreErr = score === 0;
 		const isTitleErr = title === '';
 		const isReviewErr = review === '';
 		const isNameErr = name === '';
 		const isEmailErr = !validateEmail(email);
+		setErrorScore(isScoreErr);
 		setErrorTitle(isTitleErr);
 		setErrorReview(isReviewErr);
 		setErrorName(isNameErr);
 		setErrorEmail(isEmailErr);
 
-		if (isTitleErr || isReviewErr || isNameErr || isEmailErr) {
-			scrollToElement('#yotpoReviewForm');
-		} else {
+		const error = isScoreErr || isTitleErr || isReviewErr || isNameErr || isEmailErr;
+		setHasError(error);
+
+		if (!error) {
 			const form = document.getElementById('yotpoReviewForm');
 			const custom = {};
 			customQuestions.forEach((q) => {
@@ -94,6 +99,7 @@ const YotpoReviewForm = (props) => {
 							/>
 						);
 					})}
+					{errorScore && <small className="text-primary d-flex mb-1">{tStrings.yotpo.scoreError}</small>}
 				</div>
 				<div className="form-group">
 					<p className="font-size-sm mb-1">
@@ -145,7 +151,8 @@ const YotpoReviewForm = (props) => {
 						{errorEmail && <small className="text-primary mb-1">{tStrings.yotpo.emailError}</small>}
 					</div>
 				</div>
-				<div className="d-flex form-group justify-content-end">
+				<div className="d-flex form-group align-items-center justify-content-end">
+					{hasError && <small className="text-primary mr-1">{tStrings.yotpo.formError}</small>}
 					<button type="button" className="btn btn-primary" onClick={onSubmitButton}>{tStrings.yotpo.submit}</button>
 				</div>
 			</div>

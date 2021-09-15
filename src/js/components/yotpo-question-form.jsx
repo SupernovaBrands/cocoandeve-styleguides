@@ -6,7 +6,6 @@ import React, {
 import PropTypes from 'prop-types';
 
 import {
-	scrollToElement,
 	validateEmail,
 } from '~mod/utils';
 
@@ -22,6 +21,8 @@ const YotpoQuestionForm = (props) => {
 	const [email, setEmail] = useState('');
 	const [errorEmail, setErrorEmail] = useState(false);
 
+	const [hasError, setHasError] = useState(false);
+
 	const onSubmitButton = () => {
 		const isQuestionErr = question === '';
 		const isNameErr = name === '';
@@ -30,9 +31,10 @@ const YotpoQuestionForm = (props) => {
 		setErrorName(isNameErr);
 		setErrorEmail(isEmailErr);
 
-		if (isQuestionErr || isNameErr || isEmailErr) {
-			scrollToElement('#yotpoQuestionForm');
-		} else {
+		const error = isQuestionErr || isNameErr || isEmailErr;
+		setHasError(error);
+
+		if (!error) {
 			const data = {
 				review_content: question,
 				display_name: name,
@@ -81,7 +83,8 @@ const YotpoQuestionForm = (props) => {
 						{errorEmail && <small className="text-primary mb-1">{tStrings.yotpo.emailError}</small>}
 					</div>
 				</div>
-				<div className="d-flex form-group justify-content-end">
+				<div className="d-flex form-group align-items-center justify-content-end">
+					{hasError && <small className="text-primary mr-1">{tStrings.yotpo.formError}</small>}
 					<button type="button" className="btn btn-primary" onClick={onSubmitButton}>{tStrings.yotpo.submit}</button>
 				</div>
 			</div>
