@@ -1,0 +1,25 @@
+.yotpo-widget {
+	&__score {
+		font-size: calc-em(45);
+	}
+
+	&__total {
+		margin-top: map-get($spacers, 1) / 2;
+	}
+
+	&__thanks {
+		border-color: $text-muted;
+
+		.close {
+			top: map-get($spacers, 2);
+			right: map-get($spacers, 2);
+		}
+	}
+
+	&__modal {
+		.close {
+			top: map-get($spacers, 1);
+			right: map-get($spacers, 1);
+		}
+	}
+}

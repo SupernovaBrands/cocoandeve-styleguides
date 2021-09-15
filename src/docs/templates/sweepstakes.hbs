@@ -59,8 +59,11 @@
                         </div>
 
                         <div class="d-flex form-group align-items-center justify-content-center my-2">
-                            <div id="sweepstakes__toc" class="custom-checkbox d-flex text-primary justify-content-center align-items-center mr-1 border rounded"><img class="svg text-primary" src="icons/check.svg" replace-to-svg /></div>
-                            <label class="form-check-label font-size-sm">I agree to <a href="#">Privacy Policy & ToS</a></label>
+
+                            <div class="custom-control custom-checkbox col d-flex justify-content-center">
+                                <input type="checkbox" name="tos" class="custom-control-input" id="sweepstakes__toc" />
+                                <label class="custom-control-label font-size-sm" for="sweepstakes__toc">I agree to <a href="#">Privacy Policy & ToS</a></label>
+                            </div>
                         </div>
                         <div class="d-none input-error toc-error font-size-xs text-primary mb-2">You have not agreed to the Privacy Policy & ToS</div>
                         <p class="font-size-xs">By signing up, you agree to receive exclusive offers via email or automated marketing SMS (4/mth). Msg &amp; data rates may apply. Consent not required for purchase. Opt out any time.</p>

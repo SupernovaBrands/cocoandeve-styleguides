@@ -26,3 +26,8 @@
 		vertical-align: middle;
 	}
 }
+
+.btn-primary-light {
+	@include button-variant($primary-light, $primary-light);
+	color: $gray-600;
+}

@@ -196,3 +196,27 @@ export const addXMLRequestCallback = function (callback) {
 		};
 	}
 };
+
+export const scrollToElement = (targetSelector, offset = -70) => {
+	$('html, body').animate({ scrollTop: $(targetSelector).offset().top + offset }, 600);
+};
+
+export const validateEmail = (t) => (
+	/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(String(t).toLowerCase())
+);
+
+export const decodeHtml = (html) => {
+	const txt = document.createElement('textarea');
+	txt.innerHTML = html;
+	return txt.value;
+};
+
+export const updateItemInArray = (array, compareFunc, modFunc) => {
+	const index = array.findIndex(compareFunc);
+	const item = array[index];
+	return [
+		...array.slice(0, index),
+		modFunc(item),
+		...array.slice(index + 1),
+	];
+};
