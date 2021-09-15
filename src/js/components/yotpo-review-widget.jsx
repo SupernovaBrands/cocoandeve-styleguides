@@ -449,7 +449,7 @@ const YotpoReviewWidget = (props) => {
 								name="free_text_search"
 								className="form-control border-right-0"
 								aria-label="Search reviews"
-								placeholder="Search reviews"
+								placeholder={tStrings.yotpo.searchReviews}
 								onKeyPress={(e) => {
 									if (e.key === 'Enter') onFilterChange();
 								}}
@@ -541,7 +541,7 @@ const YotpoReviewWidget = (props) => {
 								aria-expanded="false"
 								aria-controls="yotpoReviewForm"
 								onClick={() => {
-									if (!canCreate) window.location.href = `${productUrl}#write-a-review`
+									if (!canCreate) window.location.href = `${productUrl}#write-a-review`;
 								}}
 							>
 								{tStrings.yotpo.beFirstReview}
@@ -597,7 +597,7 @@ const YotpoReviewWidget = (props) => {
 														className="btn btn-link p-0 ml-25"
 														onClick={() => { showMoreContent(review); }}
 													>
-														{review.hideContent ? 'Read More' : 'Read Less'}
+														{review.hideContent ? tStrings.yotpo.readMore : tStrings.yotpo.readLess}
 													</button>
 												)}
 											</p>
@@ -662,7 +662,7 @@ const YotpoReviewWidget = (props) => {
 								aria-expanded="false"
 								aria-controls="yotpoQuestionForm"
 								onClick={() => {
-									if (!canCreate) window.location.href = `${productUrl}#write-a-review`
+									if (!canCreate) window.location.href = `${productUrl}#write-a-review`;
 								}}
 							>
 								{tStrings.yotpo.beFirstQuestion}
