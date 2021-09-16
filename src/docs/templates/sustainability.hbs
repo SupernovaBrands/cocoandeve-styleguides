@@ -57,11 +57,11 @@
 						</div>
 					</div>
 					<div class="sustainability-image-slider__wrapper d-flex position-relative mx-auto mx-lg-0 mt-3 justify-content-center">
-						<a class="carousel-control carousel-control-prev" href="#carouselWithControls" role="button" data-slide="prev">
+						<a class="carousel-control carousel-control-prev" href="#carouselWithControls" role="button" data-slide="prev" disabled="true">
 							<span class="carousel-control-prev-icon justify-content-center align-items-center" aria-hidden="true"><img class="svg" src="icons/chevron-prev.svg" replace-to-svg /></span>
 							<span class="sr-only">Previous</span>
 						</a>
-						<span>1 of 3</span>
+						<span id="slideACtive">1 of 3</span>
 						<a class="carousel-control carousel-control-next" href="#carouselWithControls" role="button" data-slide="next">
 							<span class="carousel-control-next-icon justify-content-center align-items-center" aria-hidden="true"><img class="svg" src="icons/chevron-next.svg" replace-to-svg /></span>
 							<span class="sr-only">Next</span>
@@ -93,7 +93,7 @@
 							<div class="tab-pane fade" id="product-proudtobe" role="tabpanel" aria-labelledby="product-proudtobe-tab">
 								<p>The beauty world moves fast, so we’re constantly reviewing our ingredients to ensure our products are safe for our customers and kind to the environment. Worried about our oceans? Don’t be – we’re 100% microbead-free! Any manual exfoliants are made from natural, biodegradable particles that’ll get you glowing without clogging your drains or harming marine life.</p>
 							</div>
-							<div class="tab-pane fade font-size-sm" id="product-ingredients" role="tabpanel" aria-labelledby="product-ingredients-tab">
+							<div class="tab-pane fade" id="product-ingredients" role="tabpanel" aria-labelledby="product-ingredients-tab">
 								<h4>Why do we use synthetic and natural ingredients?</h4>
 								<p>While we’re committed to minimising the use of synthetics in our formulas, we will sometimes need to use them to deliver you the best possible product. For example, our fragrances are derived from synthetic ingredients. This is because natural fragrances like essential oils can be irritable on the skin –and they’re not necessarily more sustainable. In fact, it can take 10 times more flowers to create a natural fragrance than a synthetic one!</p>
 							</div>
@@ -122,7 +122,7 @@
 						<img class="embed-responsive-item fit--cover" alt="/" src="https://via.placeholder.com/375x180.jpg/EFADBA" />
 					</picture>
 				</div>
-				<div class="col-12 col-lg-5 py-2 py-lg-5 px-g px-lg-3">
+				<div class="col-12 col-lg-5 py-2 d-flex flex-wrap align-content-center  px-g px-lg-3 text-center text-lg-left justify-content-center justify-content-lg-start">
 					<h3>Cruelty Free & Vegan</h3>
 					<p class="mb-0">Bali is home to amazingly diverse wildlife and plants – and we want to keep it that way! As deforestation and loss of natural habitat poses a threat to many of our furry friends, we only use FSC paper and card from sustainably managed forests. We also ensure our natural ingredients are from eco-conscious suppliers, and we are proudly 100% vegan and PETA approved! </p>
 				</div>
@@ -131,7 +131,7 @@
 		<section class="py-4 py-lg-5">
 			<div class="container text-center">
 				<h2 class="text-center mx-5">Like what we are doing? Shop now!</h2>
-				<div class="carousel slide carousel--loop" data-slide-number="5">
+				<div class="carousel slide carousel--loop" data-slide-number="4" id="sustainability-products">
 					<div class="carousel--centered pt-2">
 						<div class="carousel-inner row flex-nowrap">
 							{{> components/product-card-carousel active="active" title="Like a Virgin Hair Masque" compare_price="$44.90" price="$34.90" col_lg="3" col="9" }}
@@ -144,16 +144,16 @@
 							{{> components/product-card-carousel title="Like a Virgin Hair Masque" compare_price="$44.90" price="$34.90" col_lg="3" col="9" }}
 						</div>
 					</div>
-					<a class="carousel-control carousel-control-prev carousel-control--background floating-out-left justify-content-start text-primary" href="#" role="button" data-slide="prev">
+					<a class="carousel-control carousel-control-prev carousel-control--background floating-out-left justify-content-start text-primary" href="#sustainability-products" role="button" data-slide="prev">
 						<span class="carousel-control-prev-icon d-flex justify-content-center align-items-center" aria-hidden="true"><img class="svg" src="icons/chevron-prev.svg" replace-to-svg="sg" /></span>
 						<span class="sr-only">Previous</span>
 					</a>
-					<a class="carousel-control carousel-control-next carousel-control--background floating-out-right justify-content-end text-primary" href="#" role="button" data-slide="next">
+					<a class="carousel-control carousel-control-next carousel-control--background floating-out-right justify-content-end text-primary" href="#sustainability-products" role="button" data-slide="next">
 						<span class="carousel-control-next-icon d-flex justify-content-center align-items-center" aria-hidden="true"><img class="svg" src="icons/chevron-next.svg" replace-to-svg="sg" /></span>
 						<span class="sr-only">Next</span>
 					</a>
 				</div>
-				<a href="#" class="btn btn-lg btn-outline-primary">Shop All</a>
+				<a href="/collection/all" class="btn btn-lg btn-outline-primary mb-2 mb-lg-3">Shop All</a>
 			</div>
 		</section>
 	</main>
