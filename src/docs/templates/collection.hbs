@@ -67,25 +67,32 @@
 
 					{{> components/product-card-carousel title="Like a Virgin Hair Masque Like a Virgin Hair Masque" compare_price="$44.90" price="$34.90" collection="true" }}
 
-					{{> components/product-card-carousel title="Like a Virgin Hair Masque" compare_price="$44.90" price="$34.90" swatch="true" swatch_style="true" badge="true" badge_image="badge-new.svg" collection="true" swatch_modal="true"}}
+					{{> components/product-card-carousel title="Like a Virgin Hair Masque" compare_price="$44.90" price="$34.90" swatch="true" swatch_style="true" badge="true" badge_image="badge-new.svg" collection="true"}}
 
-					{{> components/product-card-carousel title="Like a Virgin Hair Masque" compare_price="$44.90" price="$34.90" swatch="true" swatch_style="true" collection="true" swatch_modal="true"}}
+					{{> components/product-card-carousel title="Like a Virgin Hair Masque" compare_price="$44.90" price="$34.90" swatch="true" swatch_style="true" collection="true"}}
 
-					{{> components/product-card-carousel title="Satin Eye Mask" compare_price="$44.90" price="$34.90" swatch="true" swatch_style_eyemask="true" collection="true" swatch_modal="true"}}
+					{{> components/product-card-carousel title="Satin Eye Mask" compare_price="$44.90" price="$34.90" swatch="true" swatch_style_eyemask="true" collection="true"}}
 
-					{{> components/product-card-carousel title="Like a Virgin Hair Masque" compare_price="$44.90" price="$34.90" swatch="true" swatch_style="true" badge="true" badge_image="badge-new.svg" collection="true" swatch_modal="true" swatch_modal="true"}}
+					{{> components/product-card-carousel title="Like a Virgin Hair Masque" compare_price="$44.90" price="$34.90" swatch="true" swatch_style="true" badge="true" badge_image="badge-new.svg" collection="true"}}
 
-					{{> components/product-card-carousel title="Satin Eye Mask" compare_price="$44.90" price="$34.90" swatch="true" swatch_style_eyemask="true" collection="true" swatch_modal="true"}}
-					{{> components/product-card-carousel title="Smoothie Shower Gel" compare_price="$44.90" price="$34.90" swatch="true" swatch_scent="true" collection="true" swatch_modal="true"}}
+					{{> components/product-card-carousel title="Satin Eye Mask" compare_price="$44.90" price="$34.90" swatch="true" swatch_style_eyemask="true" collection="true"}}
+					{{> components/product-card-carousel title="Smoothie Shower Gel" compare_price="$44.90" price="$34.90" swatch="true" swatch_scent="true" collection="true"}}
 
-
-					{{> compounds/collection-swatch-overlay}}
-					{{> compounds/collection-swatch-modal}}
+					{{> components/product-card-carousel title="Glow Essentials Bundle" compare_price="$44.90" price="$34.90" swatch="true" swatch_modal="true" collection="true"}}
 
 				</div>
 			</div>
 		</div>
 	</div>
+	<div class="collection-swatch d-lg-none">
+		{{> compounds/collection-swatch-overlay}}
+	</div>
+	<div class="modal fade collection-swatch__modal" id="collectionSwatchModal" tabindex="-1" role="dialog" aria-labelledby="collectionSwatchModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+			{{> compounds/collection-swatch-modal}}
+		</div>
+	</div>
+
 	{{> sections/services }}
 	{{> sections/footer}}
 
