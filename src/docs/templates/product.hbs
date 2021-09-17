@@ -13,13 +13,7 @@
 			{{> components/product-image-carousel totalSlide=8}}
 
 			<div class="col-12 col-lg-5 order-lg-3 mt-2 mt-lg-0 d-flex flex-column">
-				<div class="yotpo bottomLine show-avg-score yotpo-small mb-2 mb-lg-1 order-lg-0" data-appkey="6txi4aUWjmI6eNoVLssUgrIObhvqlGbIfVyePeRW"
-					data-domain="dev-cocoandeve.myshopify.com" data-product-id="4543113265187" data-product-models="4543113265187"
-					data-name="Sunny Honey Bali Bronzing Foam"
-					data-url="https://dev.cocoandeve.com/products/sunny-honey-bali-bronzing-self-tan-mousse"
-					data-image-url="//cdn.shopify.com/s/files/1/0286/1327/9779/products/FOAM_DARK_YELLOW_1_large.jpg%3Fv=1609922006"
-					data-description="<div> <strong></strong>Anti-cellulite, anti-ageing self tan with zero nasties. Created using unique CellushapeTM formula to hydrate and firm the skin.<br> </div> <ul> <li>Blurs Pigmentation and Perfects Skin.</li> <li>Tropical Mango and Guava Scent. (No biscuit smells!)</li> <li>Lightweight, non-sticky formula.</li> <li>Fast drying and develops in just 2 hours</li> <li>Vegan. 100% Natural DHA. No Nasties</li> </ul>" data-bread-crumbs="Best Sellers;Tan;" data-yotpo-element-id="2">
-				</div>
+				<div class="react-yotpo-star" data-product-id="4543113265187" data-show-total="false" data-show-score="true"></div>
 
 				<h1 class="mb-2 order-lg-0">Sunny Honey Bali Bronzing Foam</h1>
 				<p class="mb-2 mb-lg-4 font-size-lg order-lg-0">Anti-cellulite, anti-aging self tan</p>
@@ -249,13 +243,25 @@
 	<div class="py-4 bg-light">
 		<div class="container">
 			<div class="row">
-				<h2 class="h1 mb-0 col-12 text-center">Customer Reviews</h2>
-				<div class="yotpo yotpo-main-widget new-yotpo-snippet" data-product-id="4543113265187"
+				<h2 class="h1 mb-2 col-12 text-center">Customer Reviews</h2>
+				{{!-- Dev Store --}}
+				<div
+					class="react-yotpo-widget container px-g"
+					data-product-id="4543113265187"
 					data-name="Sunny Honey Bali Bronzing Foam"
 					data-url="https://dev.cocoandeve.com/products/sunny-honey-bali-bronzing-self-tan-mousse"
 					data-image-url="//cdn.shopify.com/s/files/1/0286/1327/9779/products/FOAM_DARK_YELLOW_1_large.jpg%3Fv=1609922006"
 					data-description="<div> <strong></strong>Anti-cellulite, anti-ageing self tan with zero nasties. Created using unique CellushapeTM formula to hydrate and firm the skin.<br> </div> <ul> <li>Blurs Pigmentation and Perfects Skin.</li> <li>Tropical Mango and Guava Scent. (No biscuit smells!)</li> <li>Lightweight, non-sticky formula.</li> <li>Fast drying and develops in just 2 hours</li> <li>Vegan. 100% Natural DHA. No Nasties</li> </ul>"
-					data-yotpo-element-id="1"></div>
+					data-can-create="true"></div>
+
+				{{!-- US Store --}}
+				{{!-- <div class="react-yotpo-widget container px-g"
+					data-product-id="4024565301312"
+					data-name="Sunny Honey Bali Bronzing Foam"
+					data-url="https://www.cocoandeve.com/products/sunny-honey-bali-bronzing-self-tan-mousse"
+					data-image-url="//cdn.shopify.com/s/files/1/0243/8817/3888/products/SH_BBF_large.jpg%3Fv=1629277156"
+					data-description="<meta charset=&quot;utf-8&quot;><meta charset=&quot;utf-8&quot;><meta charset=&quot;utf-8&quot;> <p>Anti-cellulite, anti-aging self tan with zero nasties. Created using unique CellushapeTM formula to hydrate and firm the skin.<br></p> <ul> <li>Blurs Pigmentation and Perfects Skin.</li> <li>Tropical Mango and Guava Scent. (No biscuit smells!)</li> <li>Lightweight, non-sticky formula.</li> <li>Fast drying and develops in just 2 hours</li> <li>Vegan. 100% Natural DHA. No Nasties</li> </ul> <p>&nbsp;</p> <div id=&quot;eJOY__extension_root&quot; style=&quot;all: unset;&quot;></div>"
+					data-can-create="true"></div> --}}
 			</div>
 		</div>
 	</div>
@@ -291,10 +297,9 @@
 			</div>
 		</div>
 
-
 	</div>
 	{{> compounds/modal-waitlist}}
-	{{> js jquery=true popper=true bootstrap=true main=true yotpo=true }}
+	{{> js jquery=true popper=true bootstrap=true main=true }}
 </body>
 
 </html>
