@@ -75,27 +75,6 @@ $('.collection-swatch, .collection-swatch__modal').on('click', '.variant-swatch'
 	updateFormButton($(this).closest('form'));
 });
 
-$('.collection-swatch, .collection-swatch__modal').on('submit', '.product-form', function (e) {
-	e.preventDefault();
-	const selectedElem = $(this).find('.product-swatch button.border-primary');
-	let variantId = selectedElem.data('id');
-
-	if (selectedElem.length > 1 && $(this).find('.swatch-bundle-variant').length > 0) {
-		const bundleSelect = [];
-		selectedElem.each(function (idx, el) {
-			bundleSelect.push($(el).data('value'));
-		});
-		variantId = $(this).find('.swatch-bundle-variant').find(`[data-pair=${bundleSelect.join('-')}]`).attr('id');
-	}
-	if (variantId) {
-		window.snTheme.addToCart({
-			id: parseInt(variantId, 10),
-			quantity: 1,
-			buttonEl: $(this).find('button[type=submit]'),
-		});
-	}
-});
-
 $('.collection-swatch').on('click', '.collection-swatch__close', function () {
 	$('.collection-swatch').removeClass('show');
 });
