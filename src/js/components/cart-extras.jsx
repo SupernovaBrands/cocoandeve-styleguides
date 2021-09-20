@@ -96,7 +96,7 @@ export default class CartExtras extends React.Component {
 				</ul>
 
 				{this.state.afterpay && (
-					<afterpay-placement ref={(r) => { this.afterpayRef = r; }} class="text-center border-top m-0 pt-2" data-locale={locale} data-currency={currency} data-amount={this.state.totalPrice / 100} data-size="sm" />
+					<afterpay-placement ref={(r) => { this.afterpayRef = r; }} className="text-center border-top m-0 pt-2" data-locale={locale} data-currency={currency} data-amount={this.state.totalPrice / 100} data-size="sm" />
 				)}
 
 				{this.state.klarna && (

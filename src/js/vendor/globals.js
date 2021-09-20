@@ -47,6 +47,49 @@ window.tStrings = {
 	code_replacing_error: 'Limited to 1 code per order. [previous_code] is removed. [new_code] is applied.',
 	discount_title: 'Discount',
 	cart_code_rejection_msg: 'You’ve unlocked the best discount, so save your codes for after the sale!',
+	yotpo: {
+		writeReview: 'Write a Review',
+		askQuestion: 'Ask a Question',
+		requiredField: 'Indicates a required field',
+		score: 'Score',
+		title: 'Title',
+		review: 'Review',
+		name: 'Use your name',
+		email: 'Email',
+		question: 'Question',
+		scoreError: 'Please enter a star rating for this review',
+		titleError: 'Review\'s title & body can\'t be empty',
+		reviewError: 'Review\'s title & body can\'t be empty',
+		nameError: 'Name field cannot be empty',
+		emailError: 'Invalid email',
+		questionError: 'Question\'s body can\'t be empty',
+		formError: 'One or more of your answers does not meet the required criteria',
+		submit: 'Submit',
+		reviews: 'Reviews',
+		questions: 'Questions',
+		answer: 'Answer',
+		qnas: 'Q&As',
+		readMore: 'Read More',
+		readLess: 'Read Less',
+		thanksReviewTitle: 'THANK YOU FOR POSTING A REVIEW!',
+		thanksReviewText: 'We value your input. Share your review so everyone else can enjoy it too.',
+		thanksQuestionTitle: 'THANK YOU FOR POSTING A QUESTION!',
+		thanksQuestionText1: 'Please click on the link in the confirmation email we just sent you to submit your question.',
+		thanksQuestionText2: 'Your question will appear on the site once someone answers it.',
+		filterReviews: 'Filter reviews',
+		searchReviews: 'Search Reviews',
+		rating: 'Rating',
+		imageVideo: 'Images & Videos',
+		withImageVideo: 'With Images & Videos',
+		beFirstReview: 'Be the first to write a review',
+		noReviewFilter: 'Sorry, no reviews match your criteria. Clear or modify your filters and try again.',
+		verifiedBuyer: 'Verified Buyer',
+		reviewHelpful: 'Was This Review Helpful?',
+		beFirstQuestion: 'Be the first to ask a question',
+		verifiedReviewer: 'Verified Reviewer',
+		storeOwner: 'Store Owner',
+		answerHelpful: 'Was This Answer Helpful?',
+	}
 };
 
 window.tSettings = {
@@ -59,6 +102,8 @@ window.tSettings = {
 	// eslint-disable-next-line no-template-curly-in-string
 	moneyWithCurrencyFormat: '${{amount}} USD',
 	currencyFormat: 'money_format',
+	yotpoKey: "6txi4aUWjmI6eNoVLssUgrIObhvqlGbIfVyePeRW", // Dev Store
+	// yotpoKey: "s4mQID1Ka0NxGslq0gdmbbWxtATkPWDCzuGAK75f", // US store
 	variantNotification: [
 		32068892688419,
 		32068892721187,

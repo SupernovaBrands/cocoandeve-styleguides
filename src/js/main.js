@@ -4,6 +4,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Cart from '~comp/cart';
 import QuantityBox from '~comp/quantity-box';
+import YotpoStar from '~comp/yotpo-star';
+import YotpoReviewWidget from '~comp/yotpo-review-widget';
+
+import { scrollToElement } from '~mod/utils';
 
 if ($('#cart-drawer').length > 0) {
 	ReactDOM.render(
@@ -16,6 +20,34 @@ const qtyBoxes = document.querySelectorAll('.react-quantity-box');
 qtyBoxes.forEach((el) => {
 	ReactDOM.render(
 		React.createElement(QuantityBox, { name: 'quantity', quantity: 1, editable: true }, null),
+		el,
+	);
+});
+
+const yotpoStars = document.querySelectorAll('.react-yotpo-star');
+yotpoStars.forEach((el) => {
+	ReactDOM.render(
+		React.createElement(YotpoStar, {
+			productId: parseInt(el.dataset.productId, 10),
+			productUrl: el.dataset.productUrl,
+			showScore: el.dataset.showScore === 'true',
+			showTotal: el.dataset.showTotal === 'true',
+		}, null),
+		el,
+	);
+});
+
+const widgets = document.querySelectorAll('.react-yotpo-widget');
+widgets.forEach((el) => {
+	ReactDOM.render(
+		React.createElement(YotpoReviewWidget, {
+			productId: parseInt(el.dataset.productId, 10),
+			productName: el.dataset.name || '',
+			productUrl: el.dataset.url || '',
+			productImage: el.dataset.imageUrl || '',
+			productDesc: el.dataset.description || '',
+			canCreate: el.dataset.canCreate === 'true',
+		}, null),
 		el,
 	);
 });
@@ -62,11 +94,6 @@ if ($('body').hasClass('template-product')) {
 	import(/* webpackChunkName: 'products' */ '~mod/products');
 }
 
-const yotpo = $('.yotpo');
-if (yotpo.length > 0) {
-	import(/* webpackChunkName: 'yotpo' */ '~mod/yotpo');
-}
-
 $(document).ready(function () {
 	window.showGrid = function () {
 		jQuery('body').append('<style type="text/css">.gridoverlay{position:fixed;top:0;left:50%;transform:translateX(-50%);z-index:9999}.gridoverlay .col{height:100vh}.gridoverlay .col:before{content:"";display:block;background-color:rgba(0,123,255,0.3);height:100%}</style><div class="container gridoverlay"><div class="row"><div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div></div></div>');
@@ -75,10 +102,6 @@ $(document).ready(function () {
 	if (/[?&]?show-grid=true[&]?/.test(window.location.search)) {
 		window.showGrid();
 	}
-
-	const scrollToElement = (targetSelector) => {
-		$('html, body').animate({ scrollTop: $(targetSelector).offset().top - 70 }, 600);
-	};
 
 	$('.scroll-to-element').on('click', function (e) {
 		e.preventDefault();
@@ -434,18 +457,6 @@ $(document).ready(function () {
 		setProgress();
 	}
 
-	// custom checkbox
-	if ($('.custom-checkbox')) {
-		$('.custom-checkbox').on('click', function () {
-			$(this).toggleClass('checked');
-			if ($(this).hasClass('checked')) {
-				$('.custom-checkbox input[type="checkbox"]').prop('checked', true);
-			} else {
-				$('.custom-checkbox input[type="checkbox"]').prop('checked', false);
-			}
-		});
-	}
-
 	// sweepstakes page
 	if ($('.sweepstakes').length > 0) {
 		$('#sweepstakes__form').on('submit', function () {
@@ -454,7 +465,7 @@ $(document).ready(function () {
 			const country = el.find('#sweepstakes__country').val() || '';
 			const phoneNum = el.find('#sweepstakes__phone').val() || '';
 
-			const tocAgree = el.find('#sweepstakes__toc').hasClass('checked');
+			const tocAgree = el.find('#sweepstakes__toc')[0].checked;
 			const emailValid = email !== '' && window.validateEmail(email);
 			const countryValid = country !== '';
 			const phoneValid = phoneNum !== '' && window.validatePhone(phoneNum);
