@@ -94,11 +94,6 @@ if ($('body').hasClass('template-product')) {
 	import(/* webpackChunkName: 'products' */ '~mod/products');
 }
 
-const yotpo = $('.yotpo');
-if (yotpo.length > 0) {
-	import(/* webpackChunkName: 'yotpo' */ '~mod/yotpo');
-}
-
 if ($('.collection-swatch').length > 0) {
 	import(/* webpackChunkName: 'collection-swatch' */ '~mod/collection-swatch');
 }
