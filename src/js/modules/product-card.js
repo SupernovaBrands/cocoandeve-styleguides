@@ -1,5 +1,3 @@
-/* global screenLG */
-
 $(document).ready(function () {
 	// handle swatch selection on product carousel
 	if ($('.variant-swatch .variant-swatch__item span').length > 0) {
@@ -26,22 +24,6 @@ $(document).ready(function () {
 			setTimeout(function () {
 				$(_).removeAttr('disabled').html(prevContent).blur();
 			}, 1000);
-		});
-	}
-
-	if ($('.btn-choose__swatch').length > 0 && $('.collection-swatch').length > 0) {
-		$('.btn-choose__swatch').click(function () {
-			if (window.innerWidth < screenLG) {
-				$('.collection-swatch').addClass('show');
-			} else {
-				$('#collectionSwatchModal').modal({
-					show: true,
-				});
-			}
-		});
-
-		$('.collection-swatch__close').click(function () {
-			$('.collection-swatch').removeClass('show');
 		});
 	}
 });

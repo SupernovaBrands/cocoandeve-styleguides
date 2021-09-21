@@ -50,6 +50,12 @@
 			max-width: calc-em(770);
 		}
 
+		&__modal-subscription {
+			.modal-content {
+				min-height: calc-em(514);
+			}
+		}
+
 		&__price,
 		&__waitlist {
 			bottom: 0;

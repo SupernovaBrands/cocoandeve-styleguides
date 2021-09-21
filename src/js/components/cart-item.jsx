@@ -71,7 +71,7 @@ export default class CartItem extends React.Component {
 									{`${models.recurring ? ' Subscription' : ''}`}
 								</ConditionWrapper>
 								{models.recurring && (
-									<span className="text-primary mt-1 d-flex font-italic font-size-sm font-weight-normal"><SvgRecurring class="svg mr-1"/> Recurring every 1 month</span>
+									<span className="text-primary mt-1 d-flex font-italic font-size-sm font-weight-normal"><SvgRecurring className="svg mr-1"/> Recurring every 1 month</span>
 								)}
 							</p>
 							{!models.isFree && (<button className="cart-item__remove btn-unstyled d-flex" type="button" aria-label="Remove" onClick={this.onRemoveItem} data-cy="cart-remove-icon"><SvgTrash className="svg" /></button>)}
