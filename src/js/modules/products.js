@@ -1,5 +1,6 @@
 /* global screenLG */
 import snCart from '~mod/sn-cart';
+import { popopOver } from '~mod/utils';
 
 $('.product-image-carousel__indicator__item').on('click', function () {
 	const carousel = $(this).data('target');
@@ -164,22 +165,4 @@ if (productWaitlistForm.length > 0 && productWaitlistSubmitted.length > 0) {
 	});
 }
 
-// popover
-if ($('[data-toggle="popover"]').length) {
-	$(function () {
-		$('[data-toggle="popover"]').popover({
-			delay: {
-				show: 100,
-			},
-		});
-	});
-
-	// Dismissable popover click out side
-	$('body').on('click', function (e) {
-		$('[data-toggle=popover]').each(function () {
-			if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0 && !$(e.target).hasClass('custom-control-input')) {
-				$(this).popover('hide');
-			}
-		});
-	});
-}
+popopOver();

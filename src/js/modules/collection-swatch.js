@@ -1,4 +1,5 @@
 /* global screenLG */
+import { popopOver } from '~mod/utils';
 
 const updateFormButton = (form) => {
 	const selected = form.find('.variant-swatch.border-primary');
@@ -98,10 +99,19 @@ $('.btn-choose__swatch').click(function () {
 	if (window.innerWidth < screenLG) {
 		swatchRender($('.collection-swatch'), btn.siblings('.swatch-overlay').html());
 		$('.collection-swatch').addClass('show');
+		$('.collection-swatch > div').addClass('d-none');
+
+		let className = '.collection-swatch--overlay';
+		if ($(btn).hasClass('btn-choose__swatch-subscription')) className = '.collection-swatch--subscription';
+		$(className).removeClass('d-none');
+		popopOver();
 	} else {
 		swatchRender($('.collection-swatch__modal .modal-dialog'), btn.siblings('.swatch-overlay').html());
-		$('#collectionSwatchModal').modal({
+		let id = '#collectionSwatchModal';
+		if ($(btn).hasClass('btn-choose__swatch-subscription')) id = '#collectionSubscriptionModal';
+		$(id).modal({
 			show: true,
 		});
+		$(id).on('shown.bs.modal', () => popopOver());
 	}
 });

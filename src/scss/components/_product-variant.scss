@@ -1,9 +1,16 @@
 .product-variant {
+
 	.custom-control-label {
 		padding-left: calc-em(60, $unit: 1rem);
 		&::before {
 			top: calc-em(40, $unit: 1rem);
 			left: calc-em(20, $unit: 1rem);
+		}
+
+		.media-body & {
+			&::before {
+				top: calc-em(20, $unit: 1rem);
+			}
 		}
 	}
 
