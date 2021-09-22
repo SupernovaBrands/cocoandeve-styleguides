@@ -8,7 +8,7 @@
 	<div class="container">
 		<h1>Product Card</h1>
 		<div class="row">
-			<div class="col-9 col-md-3 product-card text-center">
+			<div class="col-9 col-md-3 product-card text-center mb-5">
 				<picture class="m-0">
 					<source srcset="https://via.placeholder.com/243x243"/>
 					<img class="w-100"
@@ -30,7 +30,7 @@
 					</button>
 				</div>
 			</div>
-			<div class="col-9 col-md-3 product-card text-center">
+			<div class="col-9 col-md-3 product-card text-center mb-5">
         <div class="circle-badge position-absolute rounded-circle bg-primary d-flex p-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 447 207">
             <text id="badge-tex-new" transform="translate(0 155)" fill="#fff" font-size="207" font-family="sofia-pro" class="font-weight-bold">
@@ -73,7 +73,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-9 col-md-3 product-card text-center">
+			<div class="col-9 col-md-3 product-card text-center mb-5">
 				<picture class="m-0">
 					<source srcset="https://via.placeholder.com/243x243"/>
 					<img class="w-100"
@@ -90,7 +90,7 @@
 					<p class="text-center">
 						<span class="text-linethrough h4 m-1">$34.90</span><span class="text-primary h4">$24.90</span>
 					</p>
-					<button type="button" class="btn btn-lg btn-primary btn-choose btn-block">Choose Shade</button>
+					<button type="button" class="btn btn-lg btn-primary btn-choose__swatch btn-block">Choose Shade</button>
 					<div class="swatch-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2 position-absolute">
 						<div class="text-center w-100 py-2">
 							<label class="mb-2"><strong>Shade: </strong><span data-swatch-label>Dark</span></label>
@@ -114,6 +114,16 @@
 			</div>
 		</div>
 	</div>
+
+	<div class="collection-swatch d-lg-none">
+		{{> compounds/collection-swatch-overlay}}
+	</div>
+	<div class="modal fade collection-swatch__modal" id="collectionSwatchModal" tabindex="-1" role="dialog" aria-labelledby="collectionSwatchModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+			{{> compounds/collection-swatch-modal}}
+		</div>
+	</div>
+
 	{{> js jquery=true popper=false bootstrap=true main=true }}
 </body>
 </html>
