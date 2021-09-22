@@ -94,8 +94,8 @@ if ($('body').hasClass('template-product')) {
 	import(/* webpackChunkName: 'products' */ '~mod/products');
 }
 
-if ($('.collection-template').length > 0) {
-	import(/* webpackChunkName: 'collection' */ '~mod/collection-template');
+if ($('.collection-swatch').length > 0) {
+	import(/* webpackChunkName: 'collection-swatch' */ '~mod/collection-swatch');
 }
 
 $(document).ready(function () {
