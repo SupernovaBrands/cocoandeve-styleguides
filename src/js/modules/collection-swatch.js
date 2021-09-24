@@ -80,10 +80,7 @@ $('.collection-swatch').on('click', '.collection-swatch__close', function () {
 	$('.collection-swatch').removeClass('show');
 });
 
-const swatchRender = function (target, content) {
-	if (content !== '') {
-		target.html(content);
-	}
+const swatchRender = function (target) {
 	if (target.find('.swatch-bundle-variant').length > 0) {
 		target.find('.swatch-bundle-variant').each(function (i, el) {
 			const productForm = $(el).closest('.product-form');
