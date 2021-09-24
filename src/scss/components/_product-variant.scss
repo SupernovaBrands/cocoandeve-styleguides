@@ -6,6 +6,10 @@
 			top: calc-em(20, $unit: 1rem);
 			left: calc-em(20, $unit: 1rem);
 		}
+
+		.svg {
+			height: calc-em(16, $unit: 1rem);
+		}
 	}
 
 	.product-swatch,
