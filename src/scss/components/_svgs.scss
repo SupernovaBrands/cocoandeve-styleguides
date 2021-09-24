@@ -1,5 +1,5 @@
 .svg {
-	height: $font-size-base;
+	height: calc-em(16, $unit: 1rem);
 	path {
 		fill: currentColor;
 	}
