@@ -6,7 +6,10 @@ import PropTypes from 'prop-types';
 import ConditionWrapper from '~comp/condition-wrapper';
 import QuantityBox from '~comp/quantity-box';
 
-import { formatMoney } from '~mod/utils';
+import {
+	formatMoney,
+	kebabCase,
+} from '~mod/utils';
 
 import SvgTrash from '~svg/trash.svg';
 import SvgRecurring from '~svg/recurring.svg';
@@ -17,28 +20,16 @@ export default class CartItem extends React.Component {
 		this.state = {
 			editingVariant: false,
 		};
-
-		if (props.item.models && props.item.models.variantOptions) {
-			this.state.variantOptions = props.item.models.variantOptions;
-			this.state.selectedVariant = this.state.variantOptions.find((opt) => opt.id === props.item.id);
-		}
-
-		if (props.item.models && props.item.models.variantOptions1) {
-			this.state.variantOptions1 = props.item.models.variantOptions1;
-			this.state.selectedVariant = this.state.variantOptions1.find((opt) => opt.id === props.item.id);
-		}
-
-		if (props.item.models && props.item.models.variantOptions2) {
-			this.state.variantOptions2 = props.item.models.variantOptions2;
-			this.state.selectedVariant = this.state.variantOptions2.find((opt) => opt.id === props.item.id);
-		}
 	}
 
-	onSelectVariant(opt) {
-		if (opt.available) {
+	onSelectVariant(variant, swatchIndex) {
+		if (variant.available) {
 			this.setState({
-				selectedVariant: opt,
-				editingVariant: opt.id !== this.props.item.id,
+				editingVariant: variant.id !== this.props.item.id ? swatchIndex : false,
+			}, () => {
+				if (this.state.editingVariant !== false) {
+					this.props.onChangeVariant(this.props.item, variant.id);
+				}
 			});
 		}
 	}
@@ -47,22 +38,13 @@ export default class CartItem extends React.Component {
 		this.props.onRemoveItem(this.props.item);
 	}
 
-	onChangeVariant = (e) => {
-		e.stopPropagation();
-		this.setState({ editingVariant: false }, () => {
-			this.props.onChangeVariant(this.props.item, this.state.selectedVariant.id);
-		});
-	}
-
 	render() {
 		const { item } = this.props;
-		const { editingVariant, selectedVariant } = this.state;
+		const { editingVariant } = this.state;
 		const { models } = item;
-		const showVariantOptions = models.variantOptions && models.variantOptions.length > 1 && !models.isFree;
+		const { swatches, variants, selectedSwatch } = models;
+		const showSwatches = variants && variants.length > 1 && !models.isFree;
 
-		//multi var
-		const showVariantOptions1 = models.variantOptions1 && models.variantOptions1.length > 1 && !models.isFree;
-		const showVariantOptions2 = models.variantOptions2 && models.variantOptions2.length > 1 && !models.isFree;
 		return (
 			<li className="cart-item">
 				<figure className="row py-2 mb-0 align-items-start">
@@ -85,106 +67,50 @@ export default class CartItem extends React.Component {
 									{`${models.recurring ? ' Subscription' : ''}`}
 								</ConditionWrapper>
 								{models.recurring && (
-									<span className="text-primary mt-1 d-flex font-italic font-size-sm font-weight-normal"><SvgRecurring class="svg mr-1"/> Recurring every 1 month</span>
+									<span className="text-primary mt-1 d-flex font-italic font-size-sm font-weight-normal">
+										<SvgRecurring class="svg mr-1" />
+										{' '}
+										Recurring every 1 month
+									</span>
 								)}
 							</p>
 							{!models.isFree && (<button className="cart-item__remove btn-unstyled d-flex" type="button" aria-label="Remove" onClick={this.onRemoveItem} data-cy="cart-remove-icon"><SvgTrash className="svg" /></button>)}
 						</div>
 
-						{models.variantTitle && showVariantOptions && (
-							<div className="mb-1">
-								<p className="d-flex mb-1 align-items-end">
-									<span>
-										{`${models.variantType}: ${selectedVariant ? selectedVariant.variantTitle.replace(': limited edition!', '') : item.models.variantTitle.replace(': limited edition!', '')}`}
-									</span>
-									{editingVariant && (
-										<>
-											<span className="mx-1">-</span>
-											<button type="button" className="btn btn-link p-0 border-0 text-underline mr-3" onClick={this.onChangeVariant}>{tStrings.cart_update_variant}</button>
-										</>
+						{swatches.map((opt, index) => {
+							const selected = selectedSwatch[index];
+							return (
+								<div key={opt.id} className="mb-1">
+									<p className="d-flex mb-1 align-items-baseline">
+										<span className="mr-1">
+											{`${opt.name}: ${selected.replace(': limited edition!', '')}`}
+										</span>
+										{editingVariant === index && (
+											<span className="spinner-border spinner-border-sm text-primary" role="status" />
+										)}
+									</p>
+									{!showSwatches && (
+										<i className={`d-block variant-swatch ${kebabCase(selected)}`} />
 									)}
-								</p>
-								{!showVariantOptions && (
-									<i className={`d-block variant-swatch ${models.variantHandle}`} />
-								)}
-								{showVariantOptions && this.state.variantOptions.map((option) => (
-									<button
-										key={option.id}
-										className={`variant-swatch mr-1 ${option.variantHandle} ${option.id === this.state.selectedVariant.id && 'border-primary'}`}
-										type="button"
-										tabIndex="-1"
-										disabled={!option.available}
-										aria-label={option.variantHandle}
-										onClick={() => this.onSelectVariant(option)}
-									/>
-								))}
-
-							</div>
-						)}
-
-						{models.variantTitle && showVariantOptions1 && (
-							<div className="mb-1">
-								<p className="d-flex mb-1 align-items-end">
-									<span>
-										{`${models.variantType}: ${selectedVariant ? selectedVariant.variantTitle.replace(': limited edition!', '') : item.models.variantTitle.replace(': limited edition!', '')}`}
-									</span>
-									{editingVariant && (
-										<>
-											<span className="mx-1">-</span>
-											<button type="button" className="btn btn-link p-0 border-0 text-underline mr-3" onClick={this.onChangeVariant}>{tStrings.cart_update_variant}</button>
-										</>
-									)}
-								</p>
-								{!showVariantOptions1 && (
-									<i className={`d-block variant-swatch ${models.variantHandle}`} />
-								)}
-								{showVariantOptions1 && this.state.variantOptions1.map((option) => (
-									<button
-										key={option.id}
-										className={`variant-swatch mr-1 ${option.variantHandle} ${option.id === this.state.selectedVariant.id && 'border-primary'}`}
-										type="button"
-										tabIndex="-1"
-										disabled={!option.available}
-										aria-label={option.variantHandle}
-										onClick={() => this.onSelectVariant(option)}
-									/>
-								))}
-
-							</div>
-						)}
-
-
-						{models.variantTitle && showVariantOptions2 && (
-							<div className="mb-1">
-								<p className="d-flex mb-1 align-items-end">
-									<span>
-										{`${models.variantType}: ${selectedVariant ? selectedVariant.variantTitle.replace(': limited edition!', '') : item.models.variantTitle.replace(': limited edition!', '')}`}
-									</span>
-									{editingVariant && (
-										<>
-											<span className="mx-1">-</span>
-											<button type="button" className="btn btn-link p-0 border-0 text-underline mr-3" onClick={this.onChangeVariant}>{tStrings.cart_update_variant}</button>
-										</>
-									)}
-								</p>
-								{!showVariantOptions2 && (
-									<i className={`d-block variant-swatch ${models.variantHandle}`} />
-								)}
-								{showVariantOptions2 && this.state.variantOptions2.map((option) => (
-									<button
-										key={option.id}
-										className={`variant-swatch mr-1 ${option.variantHandle} ${option.id === this.state.selectedVariant.id && 'border-primary'}`}
-										type="button"
-										tabIndex="-1"
-										disabled={!option.available}
-										aria-label={option.variantHandle}
-										onClick={() => this.onSelectVariant(option)}
-									/>
-								))}
-
-							</div>
-						)}
-
+									{showSwatches && opt.values.map((val) => {
+										const o = [...selectedSwatch];
+										o[index] = val;
+										const variant = variants.find((v) => v.option.join() === o.join());
+										return (
+											<button
+												key={`${opt.id}-${kebabCase(val)}`}
+												className={`variant-swatch mr-1 ${kebabCase(val)} ${selected === val && 'border-primary'}`}
+												type="button"
+												tabIndex="-1"
+												disabled={!variant.available || editingVariant !== false}
+												aria-label={kebabCase(val)}
+												onClick={() => this.onSelectVariant(variant, index)}
+											/>
+										);
+									})}
+								</div>
+							);
+						})}
 
 						{models.properties && Object.keys(models.properties).map((key) => (<p key={key} className="mb-1">{`${key}: ${item.properties[key]}`}</p>))}
 

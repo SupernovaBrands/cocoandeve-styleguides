@@ -133,6 +133,10 @@ class SNCart {
 					options.push(variant.option2);
 					options_with_values.push({ name: product.options[1].name, value: variant.option2 });
 				}
+				if (variant.option3) {
+					options.push(variant.option3);
+					options_with_values.push({ name: product.options[2].name, value: variant.option3 });
+				}
 
 				items.splice(0, 0, {
 					id,
@@ -177,9 +181,11 @@ class SNCart {
 	}
 
 	replaceItem(oldId, newId, quantity) {
-		this.removeItem(oldId);
-		this.addItem(newId, quantity);
-		this.calculateCart();
+		setTimeout(() => {
+			this.removeItem(oldId);
+			this.addItem(newId, quantity);
+			this.calculateCart();
+		}, 1000);
 	}
 
 	getProductInfo(handle) {

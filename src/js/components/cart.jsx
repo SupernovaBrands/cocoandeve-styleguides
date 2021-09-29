@@ -179,15 +179,11 @@ export default class Cart extends React.Component {
 			isManualGwp: isItemHasProp(item, '_campaign_type', 'manual_gwp'),
 			image: item.image ? item.image.replace(/(\.[^.]*)$/, '_medium$1').replace('http:', '') : '//cdn.shopify.com/s/assets/admin/no-image-medium-cc9732cb976dd349a0df1d39816fbcc7.gif',
 			comparePrice: productData.comparePrices[item.id],
-			color: (item.options_with_values.find((opt) => isSameText(opt.name, 'color')) || { value: false }).value,
-			style: (item.options_with_values.find((opt) => isSameText(opt.name, 'style') || opt.name.toLowerCase().includes('style')) || { value: false }).value,
 			showPreorderNotif: tSettings.variantNotification.indexOf(item.id) !== -1 && tSettings.enable_tan_change,
 			showPreorderNotif_2: tSettings.variantNotification_2.indexOf(item.id) !== -1 && tSettings.enable_tan_change,
-			opt1: (item.options_with_values.find((opt) => isSameText(opt.name, 'color drops')) || { value: false }).value,
-			opt2: (item.options_with_values.find((opt) => isSameText(opt.name, 'color foam')) || { value: false }).value,
 		};
 
-		console.log('models', models);
+		// console.log('models', models);
 
 		models.url = models.free ? undefined : item.url;
 		models.comparePriceDiff = models.comparePrice > 0 ? models.comparePrice - item.original_price : 0;
@@ -207,33 +203,10 @@ export default class Cart extends React.Component {
 			});
 		}
 
-		if (models.color) {
-			models.variantHandle = models.color.startsWith('Medium') ? 'medium' : kebabCase(models.color);
-			models.variantOptions = await this.getVariantOptions(item.handle, item.variant_options, 'color');
-			models.variantType = 'Shade';
-			models.variantTitle = models.color;
-		}
-
-		if (models.style) {
-			models.variantHandle = kebabCase(models.style);
-			models.variantOptions = await this.getVariantOptions(item.handle, item.variant_options, 'style');
-			models.variantType = 'Style';
-			models.variantTitle = models.style;
-		}
-
-		if (models.opt1) {
-			models.variantHandle = models.opt1.startsWith('Medium') ? 'medium' : kebabCase(models.opt1);
-			models.variantOptions1 = await this.getVariantOptions(item.handle, item.variant_options, 'color drops');
-			models.variantType = 'Shade';
-			models.variantTitle = models.opt1;
-		}
-
-		if (models.opt2) {
-			models.variantHandle = models.opt2.startsWith('Medium') ? 'medium' : kebabCase(models.opt2);
-			models.variantOptions2 = await this.getVariantOptions(item.handle, item.variant_options, 'color foam');
-			models.variantType = 'Shade';
-			models.variantTitle = models.opt2;
-		}
+		const options = await this.getVariantOptions(item.handle, item.id, item.variant_options);
+		models.swatches = options.swatches;
+		models.variants = options.variants;
+		models.selectedSwatch = options.selected;
 
 		console.log('models', models);
 
@@ -243,18 +216,30 @@ export default class Cart extends React.Component {
 	/* -------------------
 		Variant options
 	------------------- */
-	async getVariantOptions(handle, variantOptions, optionName) {
+	async getVariantOptions(handle, varId, currentOptions) {
 		const { variants, options } = (await snCart.getProductInfo(handle)).product;
-		const allOptions = [];
-		const optionPos = options.find((opt) => isSameText(opt.name, optionName)
-			|| opt.name.toLowerCase().includes(optionName)).position;
+		const swatches = options.filter((opt) => opt.name.toLowerCase().includes('color')
+			|| opt.name.toLowerCase().includes('style')
+			|| opt.name.toLowerCase().includes('scent')).map((opt) => {
+			let { name } = opt;
+			if (name.toLowerCase().includes('drops')) {
+				name = 'Bronzing Drops';
+			} else if (name.toLowerCase().includes('foam')) {
+				name = 'Tan Foam';
+			} else if (name.toLowerCase().includes('color')) {
+				name = 'Shade';
+			}
+			return { ...opt, name };
+		});
 
-		const option = `option${optionPos}`;
+		const positions = swatches.map((opt) => opt.position);
+		const allOptions = [];
+		let selected = [];
 		variants.forEach((variant) => {
-			// If all option other than color is the same, show the variant
+			// If all option other than swatches are the same, show the variant
 			let showOption = true;
-			variantOptions.forEach((opt, index) => {
-				if (index + 1 !== optionPos) {
+			currentOptions.forEach((opt, index) => {
+				if (positions.indexOf(index + 1) === -1) {
 					showOption = showOption && opt === variant[`option${index + 1}`];
 				}
 			});
@@ -262,12 +247,18 @@ export default class Cart extends React.Component {
 				allOptions.push({
 					id: variant.id,
 					available: variant.available,
-					variantTitle: variant[option],
-					variantHandle: kebabCase(variant[option]),
+					option: positions.map((pos) => variant[`option${pos}`]),
 				});
 			}
+			if (variant.id === varId) {
+				selected = positions.map((pos) => currentOptions[pos - 1]);
+			}
 		});
-		return allOptions;
+		return {
+			selected,
+			swatches,
+			variants: allOptions,
+		};
 	}
 
 	/* -------------------
