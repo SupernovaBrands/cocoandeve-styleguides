@@ -179,15 +179,11 @@ export default class Cart extends React.Component {
 			isManualGwp: isItemHasProp(item, '_campaign_type', 'manual_gwp'),
 			image: item.image ? item.image.replace(/(\.[^.]*)$/, '_medium$1').replace('http:', '') : '//cdn.shopify.com/s/assets/admin/no-image-medium-cc9732cb976dd349a0df1d39816fbcc7.gif',
 			comparePrice: productData.comparePrices[item.id],
-			color: (item.options_with_values.find((opt) => isSameText(opt.name, 'color')) || { value: false }).value,
-			style: (item.options_with_values.find((opt) => isSameText(opt.name, 'style') || opt.name.toLowerCase().includes('style')) || { value: false }).value,
 			showPreorderNotif: tSettings.variantNotification.indexOf(item.id) !== -1 && tSettings.enable_tan_change,
 			showPreorderNotif_2: tSettings.variantNotification_2.indexOf(item.id) !== -1 && tSettings.enable_tan_change,
-			opt1: (item.options_with_values.find((opt) => isSameText(opt.name, 'color drops')) || { value: false }).value,
-			opt2: (item.options_with_values.find((opt) => isSameText(opt.name, 'color foam')) || { value: false }).value,
 		};
 
-		console.log('models', models);
+		// console.log('models', models);
 
 		models.url = models.free ? undefined : item.url;
 		models.comparePriceDiff = models.comparePrice > 0 ? models.comparePrice - item.original_price : 0;
@@ -211,6 +207,7 @@ export default class Cart extends React.Component {
 		models.swatches = options.swatches;
 		models.variants = options.variants;
 		models.selectedSwatch = options.selected;
+<<<<<<< HEAD
 
 		if (models.opt1) {
 			models.variantHandle = models.opt1.startsWith('Medium') ? 'medium' : kebabCase(models.opt1);
@@ -225,6 +222,8 @@ export default class Cart extends React.Component {
 			models.variantType = 'Shade';
 			models.variantTitle = models.opt2;
 		}
+=======
+>>>>>>> 8b918bc (add multiple product swatch in cart, remove update button)
 
 		console.log('models', models);
 
@@ -240,12 +239,21 @@ export default class Cart extends React.Component {
 			|| opt.name.toLowerCase().includes('style')
 			|| opt.name.toLowerCase().includes('scent')).map((opt) => {
 			let { name } = opt;
+<<<<<<< HEAD
 			if (name.toLowerCase().includes('drops') || name.toLowerCase().includes('foam') || name.toLowerCase().includes('color')) {
 				name = 'Shade';
 			} else if (name.toLowerCase().includes('style')) {
 				name = 'Style';
 			} else if (name.toLowerCase().includes('scent')) {
 				name = 'Scent';
+=======
+			if (name.toLowerCase().includes('drops')) {
+				name = 'Bronzing Drops';
+			} else if (name.toLowerCase().includes('foam')) {
+				name = 'Tan Foam';
+			} else if (name.toLowerCase().includes('color')) {
+				name = 'Shade';
+>>>>>>> 8b918bc (add multiple product swatch in cart, remove update button)
 			}
 			return { ...opt, name };
 		});
@@ -272,7 +280,10 @@ export default class Cart extends React.Component {
 				selected = positions.map((pos) => currentOptions[pos - 1]);
 			}
 		});
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8b918bc (add multiple product swatch in cart, remove update button)
 		return {
 			selected,
 			swatches,
