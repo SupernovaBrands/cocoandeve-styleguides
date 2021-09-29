@@ -27,6 +27,16 @@ export default class CartItem extends React.Component {
 			this.state.variantOptions = props.item.models.variantOptions;
 			this.state.selectedVariant = this.state.variantOptions.find((opt) => opt.id === props.item.id);
 		}
+
+		if (props.item.models && props.item.models.variantOptions1) {
+			this.state.variantOptions1 = props.item.models.variantOptions1;
+			this.state.selectedVariant = this.state.variantOptions1.find((opt) => opt.id === props.item.id);
+		}
+
+		if (props.item.models && props.item.models.variantOptions2) {
+			this.state.variantOptions2 = props.item.models.variantOptions2;
+			this.state.selectedVariant = this.state.variantOptions2.find((opt) => opt.id === props.item.id);
+		}
 	}
 
 	onSelectVariant(variant, swatchIndex) {
@@ -132,6 +142,7 @@ export default class CartItem extends React.Component {
 
 							);
 						})}
+
 
 						{models.properties && Object.keys(models.properties).map((key) => (<p key={key} className="mb-1">{`${key}: ${item.properties[key]}`}</p>))}
 

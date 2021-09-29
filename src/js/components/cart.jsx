@@ -183,7 +183,11 @@ export default class Cart extends React.Component {
 			style: (item.options_with_values.find((opt) => isSameText(opt.name, 'style') || opt.name.toLowerCase().includes('style')) || { value: false }).value,
 			showPreorderNotif: tSettings.variantNotification.indexOf(item.id) !== -1 && tSettings.enable_tan_change,
 			showPreorderNotif_2: tSettings.variantNotification_2.indexOf(item.id) !== -1 && tSettings.enable_tan_change,
+			opt1: (item.options_with_values.find((opt) => isSameText(opt.name, 'color drops')) || { value: false }).value,
+			opt2: (item.options_with_values.find((opt) => isSameText(opt.name, 'color foam')) || { value: false }).value,
 		};
+
+		console.log('models', models);
 
 		models.url = models.free ? undefined : item.url;
 		models.comparePriceDiff = models.comparePrice > 0 ? models.comparePrice - item.original_price : 0;
@@ -207,6 +211,22 @@ export default class Cart extends React.Component {
 		models.swatches = options.swatches;
 		models.variants = options.variants;
 		models.selectedSwatch = options.selected;
+
+		if (models.opt1) {
+			models.variantHandle = models.opt1.startsWith('Medium') ? 'medium' : kebabCase(models.opt1);
+			models.variantOptions1 = await this.getVariantOptions(item.handle, item.variant_options, 'color drops');
+			models.variantType = 'Shade';
+			models.variantTitle = models.opt1;
+		}
+
+		if (models.opt2) {
+			models.variantHandle = models.opt2.startsWith('Medium') ? 'medium' : kebabCase(models.opt2);
+			models.variantOptions2 = await this.getVariantOptions(item.handle, item.variant_options, 'color foam');
+			models.variantType = 'Shade';
+			models.variantTitle = models.opt2;
+		}
+
+		console.log('models', models);
 
 		return models;
 	}
