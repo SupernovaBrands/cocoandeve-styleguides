@@ -183,8 +183,6 @@ export default class Cart extends React.Component {
 			showPreorderNotif_2: tSettings.variantNotification_2.indexOf(item.id) !== -1 && tSettings.enable_tan_change,
 		};
 
-		// console.log('models', models);
-
 		models.url = models.free ? undefined : item.url;
 		models.comparePriceDiff = models.comparePrice > 0 ? models.comparePrice - item.original_price : 0;
 
