@@ -207,25 +207,7 @@ export default class Cart extends React.Component {
 		models.swatches = options.swatches;
 		models.variants = options.variants;
 		models.selectedSwatch = options.selected;
-<<<<<<< HEAD
-
-		if (models.opt1) {
-			models.variantHandle = models.opt1.startsWith('Medium') ? 'medium' : kebabCase(models.opt1);
-			models.variantOptions1 = await this.getVariantOptions(item.handle, item.variant_options, 'color drops');
-			models.variantType = 'Shade';
-			models.variantTitle = models.opt1;
-		}
-
-		if (models.opt2) {
-			models.variantHandle = models.opt2.startsWith('Medium') ? 'medium' : kebabCase(models.opt2);
-			models.variantOptions2 = await this.getVariantOptions(item.handle, item.variant_options, 'color foam');
-			models.variantType = 'Shade';
-			models.variantTitle = models.opt2;
-		}
-=======
->>>>>>> 8b918bc (add multiple product swatch in cart, remove update button)
-
-		console.log('models', models);
+		models.swatchType = options.type;
 
 		return models;
 	}
@@ -234,26 +216,18 @@ export default class Cart extends React.Component {
 		Variant options
 	------------------- */
 	async getVariantOptions(handle, varId, currentOptions) {
+		let type;
 		const { variants, options } = (await snCart.getProductInfo(handle)).product;
 		const swatches = options.filter((opt) => opt.name.toLowerCase().includes('color')
 			|| opt.name.toLowerCase().includes('style')
 			|| opt.name.toLowerCase().includes('scent')).map((opt) => {
 			let { name } = opt;
-<<<<<<< HEAD
 			if (name.toLowerCase().includes('drops') || name.toLowerCase().includes('foam') || name.toLowerCase().includes('color')) {
 				name = 'Shade';
 			} else if (name.toLowerCase().includes('style')) {
 				name = 'Style';
 			} else if (name.toLowerCase().includes('scent')) {
 				name = 'Scent';
-=======
-			if (name.toLowerCase().includes('drops')) {
-				name = 'Bronzing Drops';
-			} else if (name.toLowerCase().includes('foam')) {
-				name = 'Tan Foam';
-			} else if (name.toLowerCase().includes('color')) {
-				name = 'Shade';
->>>>>>> 8b918bc (add multiple product swatch in cart, remove update button)
 			}
 			return { ...opt, name };
 		});
@@ -280,11 +254,8 @@ export default class Cart extends React.Component {
 				selected = positions.map((pos) => currentOptions[pos - 1]);
 			}
 		});
-<<<<<<< HEAD
-
-=======
->>>>>>> 8b918bc (add multiple product swatch in cart, remove update button)
 		return {
+			type,
 			selected,
 			swatches,
 			variants: allOptions,
