@@ -13,6 +13,7 @@ import {
 
 import SvgTrash from '~svg/trash.svg';
 import SvgRecurring from '~svg/recurring.svg';
+import SvgChevronDown from '~svg/chevron-down.svg';;
 
 export default class CartItem extends React.Component {
 	constructor(props) {
@@ -44,6 +45,7 @@ export default class CartItem extends React.Component {
 		const { models } = item;
 		const { swatches, variants, selectedSwatch } = models;
 		const showSwatches = variants && variants.length > 1 && !models.isFree;
+		const showAccordion = models.swatches.length > 1;
 
 		return (
 			<li className="cart-item">
@@ -77,18 +79,32 @@ export default class CartItem extends React.Component {
 							{!models.isFree && (<button className="cart-item__remove btn-unstyled d-flex" type="button" aria-label="Remove" onClick={this.onRemoveItem} data-cy="cart-remove-icon"><SvgTrash className="svg" /></button>)}
 						</div>
 
+						<ConditionWrapper
+							condition={showAccordion}
+							wrapper={(children) =>
+								<div class="cart-drawer__shade">
+									<a className="d-flex align-items-center text-primary text-underline collapsed mb-2" data-toggle="collapse" href={`#cart-drawer__shade-${item.id}`} role="button" aria-expanded="false" aria-controls={`#cart-drawer__shade-${item.id}`}>
+										View {models.swatchType}
+										<SvgChevronDown class="svg chevron-down ml-1" width="12" height="12" />
+									</a>
+									<div className="collapse text-body" id={`cart-drawer__shade-${item.id}`}>
+									{children}
+									</div>
+								</div>}
+						>
+
 						{swatches.map((opt, index) => {
 							const selected = selectedSwatch[index];
+
 							return (
-								<div key={opt.id} className="mb-1">
-									<p className="d-flex mb-1 align-items-baseline">
-										<span className="mr-1">
-											{`${opt.name}: ${selected.replace(': limited edition!', '')}`}
-										</span>
-										{editingVariant === index && (
-											<span className="spinner-border spinner-border-sm text-primary" role="status" />
-										)}
-									</p>
+								<div key={opt.id} className={`mb-1 ${showAccordion && index === 0 ? 'border-bottom' : ''}`}>
+
+									{showAccordion && (
+										<p class="font-size-sm mb-1">1x Bronzing Face Drops 30ml</p>
+									)}
+
+									<p className="d-flex mb-1 align-items-center">
+
 									{!showSwatches && (
 										<i className={`d-block variant-swatch ${kebabCase(selected)}`} />
 									)}
@@ -99,7 +115,7 @@ export default class CartItem extends React.Component {
 										return (
 											<button
 												key={`${opt.id}-${kebabCase(val)}`}
-												className={`variant-swatch mr-1 ${kebabCase(val)} ${selected === val && 'border-primary'}`}
+												className={`variant-swatch mr-1 ${kebabCase(val)} ${selected === val && 'border-primary'} ${!variant.available ? 'oos' : ''}`}
 												type="button"
 												tabIndex="-1"
 												disabled={!variant.available || editingVariant !== false}
@@ -108,9 +124,21 @@ export default class CartItem extends React.Component {
 											/>
 										);
 									})}
+
+									{editingVariant === index && (
+										<span className="spinner-border spinner-border-sm text-primary ml-1" role="status" />
+									)}
+
+									<span className={editingVariant === index ? 'd-none' : 'font-size-sm'}>
+										{` - ${selected.replace(': limited edition!', '')} ${opt.name}`}
+									</span>
+									</p>
 								</div>
+
 							);
 						})}
+
+						</ConditionWrapper>
 
 						{models.properties && Object.keys(models.properties).map((key) => (<p key={key} className="mb-1">{`${key}: ${item.properties[key]}`}</p>))}
 
