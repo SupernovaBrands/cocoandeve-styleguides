@@ -80,16 +80,27 @@
 
 					{{> components/product-card-carousel title="Glow Essentials Bundle" compare_price="$44.90" price="$34.90" swatch="true" swatch_modal="true" collection="true"}}
 
+					{{> components/product-card-carousel title="Shampo & Conditioner" compare_price="$44.90" price="$34.90" swatch="true" collection="true" quick_shop="true"}}
 				</div>
 			</div>
 		</div>
 	</div>
 	<div class="collection-swatch d-lg-none">
-		{{> compounds/collection-swatch-overlay}}
+		<div class="collection-swatch--overlay">
+			{{> compounds/collection-swatch-overlay}}
+		</div>
+		<div class="collection-swatch--subscription d-none">
+			{{> compounds/collection-subscription-overlay}}
+		</div>
 	</div>
 	<div class="modal fade collection-swatch__modal" id="collectionSwatchModal" tabindex="-1" role="dialog" aria-labelledby="collectionSwatchModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
 			{{> compounds/collection-swatch-modal}}
+		</div>
+	</div>
+	<div class="modal fade collection-swatch__modal collection-swatch__modal-subscription" id="collectionSubscriptionModal" tabindex="-1" role="dialog" aria-labelledby="collectionSwatchModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+			{{> compounds/collection-subscription-modal}}
 		</div>
 	</div>
 
