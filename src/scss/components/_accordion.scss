@@ -5,10 +5,13 @@
 
 .card-header {
     .chevron-down {
-        transform: rotate(180deg);
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%) rotate(180deg);
     }
 
     &.collapsed .chevron-down {
-        transform: rotate(0);
+        transform: translateY(-50%);
     }
 }
