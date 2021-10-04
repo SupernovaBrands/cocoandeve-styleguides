@@ -205,7 +205,6 @@ export default class Cart extends React.Component {
 		models.swatches = options.swatches;
 		models.variants = options.variants;
 		models.selectedSwatch = options.selected;
-		models.swatchType = options.type;
 
 		return models;
 	}
@@ -214,7 +213,6 @@ export default class Cart extends React.Component {
 		Variant options
 	------------------- */
 	async getVariantOptions(handle, varId, currentOptions) {
-		let type;
 		const { variants, options } = (await snCart.getProductInfo(handle)).product;
 		const swatches = options.filter((opt) => opt.name.toLowerCase().includes('color')
 			|| opt.name.toLowerCase().includes('style')
@@ -222,10 +220,8 @@ export default class Cart extends React.Component {
 			let { name } = opt;
 			if (name.toLowerCase().includes('drops') || name.toLowerCase().includes('foam') || name.toLowerCase().includes('color')) {
 				name = 'Shade';
-				type = name;
 			} else if (name.toLowerCase().includes('style') || name.toLowerCase().includes('scent')) {
 				name = 'Style';
-				type = name;
 			}
 			return { ...opt, name };
 		});
@@ -254,7 +250,6 @@ export default class Cart extends React.Component {
 		});
 
 		return {
-			type,
 			selected,
 			swatches,
 			variants: allOptions,
