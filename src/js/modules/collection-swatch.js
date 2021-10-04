@@ -1,6 +1,4 @@
 /* global screenLG */
-import { popopOver } from '~mod/utils';
-
 const updateFormButton = (form) => {
 	const selected = form.find('.variant-swatch.border-primary');
 	if (selected.hasClass('waitlist')) {
