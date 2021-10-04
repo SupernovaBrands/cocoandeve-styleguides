@@ -14,7 +14,8 @@ import {
 
 import SvgTrash from '~svg/trash.svg';
 import SvgRecurring from '~svg/recurring.svg';
-import SvgChevronDown from '~svg/chevron-down.svg';;
+
+import VariantQuantity from '~mod/variant-quantity.json';
 
 export default class CartItem extends React.Component {
 	constructor(props) {
@@ -26,12 +27,15 @@ export default class CartItem extends React.Component {
 	}
 
 	onSelectVariant(variant, swatchIndex) {
+		const itemProps = this.props.item;
+		const lastStock = VariantQuantity.filter((item) => item.id === variant.id && itemProps.quantity > item.quantity);
+
 		if (variant.available) {
 			this.setState({
 				editingVariant: variant.id !== this.props.item.id ? swatchIndex : false,
 			}, () => {
 				if (this.state.editingVariant !== false) {
-					this.props.onChangeVariant(this.props.item, variant.id);
+					this.props.onChangeVariant(this.props.item, variant.id, lastStock);
 				}
 			});
 		}
@@ -47,11 +51,7 @@ export default class CartItem extends React.Component {
 		const { models } = item;
 		const { swatches, variants, selectedSwatch } = models;
 		const showSwatches = variants && variants.length > 1 && !models.isFree;
-<<<<<<< HEAD
 		const isMultiOptions = models.swatches.length > 1;
-=======
-		const showAccordion = models.swatches.length > 1;
->>>>>>> bd9e7ac (update design)
 
 		return (
 			<li className="cart-item">
@@ -78,42 +78,21 @@ export default class CartItem extends React.Component {
 									<span className="text-primary mt-1 d-flex font-italic font-size-sm font-weight-normal"><SvgRecurring className="svg mr-1"/> Recurring every 1 month</span>
 								)}
 							</p>
-							{!models.isFree && (<button className="cart-item__remove btn-unstyled d-flex" type="button" aria-label="Remove" onClick={this.onRemoveItem} data-cy="cart-remove-icon"><SvgTrash className="svg" /></button>)}
+							{!models.isFree && (<button className="cart-item__remove btn-unstyled d-flex text-body" type="button" aria-label="Remove" onClick={this.onRemoveItem} data-cy="cart-remove-icon"><SvgTrash className="svg" /></button>)}
 						</div>
-
-						<ConditionWrapper
-							condition={showAccordion}
-							wrapper={(children) =>
-								<div class="cart-drawer__shade">
-									<a className="d-flex align-items-center text-primary text-underline collapsed mb-2" data-toggle="collapse" href={`#cart-drawer__shade-${item.id}`} role="button" aria-expanded="false" aria-controls={`#cart-drawer__shade-${item.id}`}>
-										View {models.swatchType}
-										<SvgChevronDown class="svg chevron-down ml-1" width="12" height="12" />
-									</a>
-									<div className="collapse text-body" id={`cart-drawer__shade-${item.id}`}>
-									{children}
-									</div>
-								</div>}
-						>
 
 						{swatches.map((opt, index) => {
 							const selected = selectedSwatch[index];
 
 							return (
-<<<<<<< HEAD
 								<div key={opt.id} className={`mb-1 ${isMultiOptions && index === 0 ? 'border-bottom' : ''}`}>
 
 									{isMultiOptions && (
-=======
-								<div key={opt.id} className={`mb-1 ${showAccordion && index === 0 ? 'border-bottom' : ''}`}>
-
-									{showAccordion && (
->>>>>>> bd9e7ac (update design)
-										<p class="font-size-sm mb-1">1x Bronzing Face Drops 30ml</p>
+										<p className="font-size-sm mb-1">1x Bronzing Face Drops 30ml</p>
 									)}
 
 									<p className="d-flex mb-1 align-items-center">
 
-<<<<<<< HEAD
 										{!showSwatches && (
 											<i className={`d-block variant-swatch ${kebabCase(selected)}`} />
 										)}
@@ -141,45 +120,11 @@ export default class CartItem extends React.Component {
 										<span className={editingVariant === index ? 'd-none' : 'font-size-sm'}>
 											{` - ${selected.replace(': limited edition!', '')} ${opt.name}`}
 										</span>
-=======
-									{!showSwatches && (
-										<i className={`d-block variant-swatch ${kebabCase(selected)}`} />
-									)}
-									{showSwatches && opt.values.map((val) => {
-										const o = [...selectedSwatch];
-										o[index] = val;
-										const variant = variants.find((v) => v.option.join() === o.join());
-										return (
-											<button
-												key={`${opt.id}-${kebabCase(val)}`}
-												className={`variant-swatch pr-0 mr-1 ${kebabCase(val)} ${selected === val && 'border-primary'} ${!variant.available ? 'oos' : ''}`}
-												type="button"
-												tabIndex="-1"
-												disabled={!variant.available || editingVariant !== false}
-												aria-label={kebabCase(val)}
-												onClick={() => this.onSelectVariant(variant, index)}
-											/>
-										);
-									})}
-
-									{editingVariant === index && (
-										<span className="spinner-border spinner-border-sm text-primary ml-1" role="status" />
-									)}
-
-									<span className={editingVariant === index ? 'd-none' : 'font-size-sm'}>
-										{` - ${selected.replace(': limited edition!', '')} ${opt.name}`}
-									</span>
->>>>>>> bd9e7ac (update design)
 									</p>
 								</div>
 
 							);
 						})}
-
-<<<<<<< HEAD
-=======
-						</ConditionWrapper>
->>>>>>> bd9e7ac (update design)
 
 						{models.properties && Object.keys(models.properties).map((key) => (<p key={key} className="mb-1">{`${key}: ${item.properties[key]}`}</p>))}
 

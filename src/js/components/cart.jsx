@@ -16,7 +16,6 @@ import {
 	isFreeItem,
 	isItemHasProp,
 	isSameText,
-	kebabCase,
 	intersectTwo,
 	formatMoney,
 } from '~mod/utils';
@@ -205,7 +204,6 @@ export default class Cart extends React.Component {
 		models.swatches = options.swatches;
 		models.variants = options.variants;
 		models.selectedSwatch = options.selected;
-		models.swatchType = options.type;
 
 		return models;
 	}
@@ -214,7 +212,6 @@ export default class Cart extends React.Component {
 		Variant options
 	------------------- */
 	async getVariantOptions(handle, varId, currentOptions) {
-		let type;
 		const { variants, options } = (await snCart.getProductInfo(handle)).product;
 		const swatches = options.filter((opt) => opt.name.toLowerCase().includes('color')
 			|| opt.name.toLowerCase().includes('style')
@@ -253,7 +250,6 @@ export default class Cart extends React.Component {
 			}
 		});
 		return {
-			type,
 			selected,
 			swatches,
 			variants: allOptions,
@@ -500,6 +496,7 @@ export default class Cart extends React.Component {
 		});
 	}
 
+	// eslint-disable-next-line arrow-body-style, camelcase
 	getStock = (var_id) => {
 		return snCart.getVariantInProducts(var_id).inv;
 	}
