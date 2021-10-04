@@ -226,9 +226,12 @@ export const popopOver = () => {
 	if ($('[data-toggle="popover"]').length) {
 		$(function () {
 			$(document).find('[data-toggle="popover"]').popover({
+				flip: 'top',
+				fallbackPlacement: ['top'],
 				delay: {
 					show: 100,
 				},
+				offset: -70,
 			});
 		});
 
