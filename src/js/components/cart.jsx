@@ -197,19 +197,10 @@ export default class Cart extends React.Component {
 			});
 		}
 
-		if (models.color) {
-			models.variantHandle = models.color.startsWith('Medium') ? 'medium' : kebabCase(models.color);
-			models.variantOptions = await this.getVariantOptions(item.handle, item.variant_options, 'color');
-			models.variantType = 'Shade';
-			models.variantTitle = models.color;
-		}
-
-		if (models.style) {
-			models.variantHandle = kebabCase(models.style);
-			models.variantOptions = await this.getVariantOptions(item.handle, item.variant_options, 'style');
-			models.variantType = 'Style';
-			models.variantTitle = models.style;
-		}
+		const options = await this.getVariantOptions(item.handle, item.id, item.variant_options);
+		models.swatches = options.swatches;
+		models.variants = options.variants;
+		models.selectedSwatch = options.selected;
 
 		return models;
 	}
@@ -217,18 +208,30 @@ export default class Cart extends React.Component {
 	/* -------------------
 		Variant options
 	------------------- */
-	async getVariantOptions(handle, variantOptions, optionName) {
+	async getVariantOptions(handle, varId, currentOptions) {
 		const { variants, options } = (await snCart.getProductInfo(handle)).product;
-		const allOptions = [];
-		const optionPos = options.find((opt) => isSameText(opt.name, optionName)
-			|| opt.name.toLowerCase().includes(optionName)).position;
+		const swatches = options.filter((opt) => opt.name.toLowerCase().includes('color')
+			|| opt.name.toLowerCase().includes('style')
+			|| opt.name.toLowerCase().includes('scent')).map((opt) => {
+			let { name } = opt;
+			if (name.toLowerCase().includes('drops') || name.toLowerCase().includes('foam') || name.toLowerCase().includes('color')) {
+				name = 'Shade';
+			} else if (name.toLowerCase().includes('style')) {
+				name = 'Style';
+			} else if (name.toLowerCase().includes('scent')) {
+				name = 'Scent';
+			}
+			return { ...opt, name };
+		});
 
-		const option = `option${optionPos}`;
+		const positions = swatches.map((opt) => opt.position);
+		const allOptions = [];
+		let selected = [];
 		variants.forEach((variant) => {
-			// If all option other than color is the same, show the variant
+			// If all option other than swatches are the same, show the variant
 			let showOption = true;
-			variantOptions.forEach((opt, index) => {
-				if (index + 1 !== optionPos) {
+			currentOptions.forEach((opt, index) => {
+				if (positions.indexOf(index + 1) === -1) {
 					showOption = showOption && opt === variant[`option${index + 1}`];
 				}
 			});
@@ -236,12 +239,19 @@ export default class Cart extends React.Component {
 				allOptions.push({
 					id: variant.id,
 					available: variant.available,
-					variantTitle: variant[option],
-					variantHandle: kebabCase(variant[option]),
+					option: positions.map((pos) => variant[`option${pos}`]),
 				});
 			}
+			if (variant.id === varId) {
+				selected = positions.map((pos) => currentOptions[pos - 1]);
+			}
 		});
-		return allOptions;
+
+		return {
+			selected,
+			swatches,
+			variants: allOptions,
+		};
 	}
 
 	/* -------------------

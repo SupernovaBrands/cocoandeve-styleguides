@@ -59,10 +59,14 @@ const updateFormButton = (form) => {
 		form.find('.product-form-submit').addClass('d-none');
 		mobileSwatch.find('.scroll-to-element').removeClass('d-none');
 		$('#product-waitlist-form-oos').removeClass('d-none');
+		$('.product-swatch-mobile__toggle').addClass('d-none');
+		$('.product-swatch-mobile__action').removeClass('d-none');
 	} else {
 		form.find('.product-form-submit').removeClass('d-none');
 		mobileSwatch.find('.scroll-to-element').addClass('d-none');
 		$('#product-waitlist-form-oos').addClass('d-none');
+		$('.product-swatch-mobile__toggle').removeClass('d-none');
+		$('.product-swatch-mobile__action').addClass('d-none');
 	}
 
 	if (selected.hasClass('oos')) {

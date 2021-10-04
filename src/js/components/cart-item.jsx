@@ -6,7 +6,10 @@ import PropTypes from 'prop-types';
 import ConditionWrapper from '~comp/condition-wrapper';
 import QuantityBox from '~comp/quantity-box';
 
-import { formatMoney } from '~mod/utils';
+import {
+	formatMoney,
+	kebabCase,
+} from '~mod/utils';
 
 import SvgTrash from '~svg/trash.svg';
 
@@ -23,11 +26,14 @@ export default class CartItem extends React.Component {
 		}
 	}
 
-	onSelectVariant(opt) {
-		if (opt.available) {
+	onSelectVariant(variant, swatchIndex) {
+		if (variant.available) {
 			this.setState({
-				selectedVariant: opt,
-				editingVariant: opt.id !== this.props.item.id,
+				editingVariant: variant.id !== this.props.item.id ? swatchIndex : false,
+			}, () => {
+				if (this.state.editingVariant !== false) {
+					this.props.onChangeVariant(this.props.item, variant.id);
+				}
 			});
 		}
 	}
@@ -45,9 +51,12 @@ export default class CartItem extends React.Component {
 
 	render() {
 		const { item } = this.props;
-		const { editingVariant, selectedVariant } = this.state;
+		const { editingVariant } = this.state;
 		const { models } = item;
-		const showVariantOptions = models.variantOptions && models.variantOptions.length > 1 && !models.isFree;
+		const { swatches, variants, selectedSwatch } = models;
+		const showSwatches = variants && variants.length > 1 && !models.isFree;
+		const isMultiOptions = models.swatches.length > 1;
+
 		return (
 			<li className="cart-item">
 				<figure className="row py-2 mb-0 align-items-start">
@@ -72,35 +81,50 @@ export default class CartItem extends React.Component {
 							{!models.isFree && (<button className="cart-item__remove btn-unstyled d-flex" type="button" aria-label="Remove" onClick={this.onRemoveItem} data-cy="cart-remove-icon"><SvgTrash className="svg" /></button>)}
 						</div>
 
-						{models.variantTitle && (
-							<div className="mb-1">
-								<p className="d-flex mb-1 align-items-end">
-									<span>
-										{`${models.variantType}: ${selectedVariant ? selectedVariant.variantTitle.replace(': limited edition!', '') : item.models.variantTitle.replace(': limited edition!', '')}`}
-									</span>
-									{editingVariant && (
-										<>
-											<span className="mx-1">-</span>
-											<button type="button" className="btn btn-link p-0 border-0 text-underline mr-3" onClick={this.onChangeVariant}>{tStrings.cart_update_variant}</button>
-										</>
+						{swatches.map((opt, index) => {
+							const selected = selectedSwatch[index];
+
+							return (
+								<div key={opt.id} className={`mb-1 ${isMultiOptions && index === 0 ? 'border-bottom' : ''}`}>
+
+									{isMultiOptions && (
+										<p class="font-size-sm mb-1">1x Bronzing Face Drops 30ml</p>
 									)}
-								</p>
-								{!showVariantOptions && (
-									<i className={`d-block variant-swatch ${models.variantHandle}`} />
-								)}
-								{showVariantOptions && this.state.variantOptions.map((option) => (
-									<button
-										key={option.id}
-										className={`variant-swatch mr-1 ${option.variantHandle} ${option.id === this.state.selectedVariant.id && 'border-primary'}`}
-										type="button"
-										tabIndex="-1"
-										disabled={!option.available}
-										aria-label={option.variantHandle}
-										onClick={() => this.onSelectVariant(option)}
-									/>
-								))}
-							</div>
-						)}
+
+									<p className="d-flex mb-1 align-items-center">
+
+										{!showSwatches && (
+											<i className={`d-block variant-swatch ${kebabCase(selected)}`} />
+										)}
+										{showSwatches && opt.values.map((val) => {
+											const o = [...selectedSwatch];
+											o[index] = val;
+											const variant = variants.find((v) => v.option.join() === o.join());
+											return (
+												<button
+													key={`${opt.id}-${kebabCase(val)}`}
+													className={`variant-swatch pr-0 mr-1 ${kebabCase(val)} ${selected === val && 'border-primary'} ${!variant.available ? 'oos' : ''}`}
+													type="button"
+													tabIndex="-1"
+													disabled={!variant.available || editingVariant !== false}
+													aria-label={kebabCase(val)}
+													onClick={() => this.onSelectVariant(variant, index)}
+												/>
+											);
+										})}
+
+										{editingVariant === index && (
+											<span className="spinner-border spinner-border-sm text-primary ml-1" role="status" />
+										)}
+
+										<span className={editingVariant === index ? 'd-none' : 'font-size-sm'}>
+											{` - ${selected.replace(': limited edition!', '')} ${opt.name}`}
+										</span>
+									</p>
+								</div>
+
+							);
+						})}
 
 						{models.properties && Object.keys(models.properties).map((key) => (<p key={key} className="mb-1">{`${key}: ${item.properties[key]}`}</p>))}
 

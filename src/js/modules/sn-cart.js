@@ -133,6 +133,10 @@ class SNCart {
 					options.push(variant.option2);
 					options_with_values.push({ name: product.options[1].name, value: variant.option2 });
 				}
+				if (variant.option3) {
+					options.push(variant.option3);
+					options_with_values.push({ name: product.options[2].name, value: variant.option3 });
+				}
 				items.splice(0, 0, {
 					id,
 					key: `${id}:abcd`,
@@ -175,9 +179,11 @@ class SNCart {
 	}
 
 	replaceItem(oldId, newId, quantity) {
-		this.removeItem(oldId);
-		this.addItem(newId, quantity);
-		this.calculateCart();
+		setTimeout(() => {
+			this.removeItem(oldId);
+			this.addItem(newId, quantity);
+			this.calculateCart();
+		}, 1000);
 	}
 
 	getProductInfo(handle) {
@@ -295,6 +301,7 @@ $('#product-add').on('click', function () {
 	snCart.addItem(parseInt($('#product-select').val(), 10), 1);
 });
 
+snCart.addItem(39449113788451, 1);
 snCart.addItem(32346434732067, 1);
 snCart.addItem(32068891541539, 1);
 snCart.addItem(32068893048867, 1);
