@@ -13,7 +13,6 @@ import {
 
 import SvgTrash from '~svg/trash.svg';
 import SvgRecurring from '~svg/recurring.svg';
-import SvgChevronDown from '~svg/chevron-down.svg';;
 
 export default class CartItem extends React.Component {
 	constructor(props) {
@@ -45,7 +44,7 @@ export default class CartItem extends React.Component {
 		const { models } = item;
 		const { swatches, variants, selectedSwatch } = models;
 		const showSwatches = variants && variants.length > 1 && !models.isFree;
-		const showAccordion = models.swatches.length > 1;
+		const isMultiOptions = models.swatches.length > 1;
 
 		return (
 			<li className="cart-item">
@@ -75,27 +74,13 @@ export default class CartItem extends React.Component {
 							{!models.isFree && (<button className="cart-item__remove btn-unstyled d-flex" type="button" aria-label="Remove" onClick={this.onRemoveItem} data-cy="cart-remove-icon"><SvgTrash className="svg" /></button>)}
 						</div>
 
-						<ConditionWrapper
-							condition={showAccordion}
-							wrapper={(children) =>
-								<div class="cart-drawer__shade">
-									<a className="d-flex align-items-center text-primary text-underline collapsed mb-2" data-toggle="collapse" href={`#cart-drawer__shade-${item.id}`} role="button" aria-expanded="false" aria-controls={`#cart-drawer__shade-${item.id}`}>
-										View {models.swatchType}
-										<SvgChevronDown class="svg chevron-down ml-1" width="12" height="12" />
-									</a>
-									<div className="collapse text-body" id={`cart-drawer__shade-${item.id}`}>
-									{children}
-									</div>
-								</div>}
-						>
-
 						{swatches.map((opt, index) => {
 							const selected = selectedSwatch[index];
 
 							return (
-								<div key={opt.id} className={`mb-1 ${showAccordion && index === 0 ? 'border-bottom' : ''}`}>
+								<div key={opt.id} className={`mb-1 ${isMultiOptions && index === 0 ? 'border-bottom' : ''}`}>
 
-									{showAccordion && (
+									{isMultiOptions && (
 										<p class="font-size-sm mb-1">1x Bronzing Face Drops 30ml</p>
 									)}
 
@@ -133,8 +118,6 @@ export default class CartItem extends React.Component {
 
 							);
 						})}
-
-						</ConditionWrapper>
 
 						{models.properties && Object.keys(models.properties).map((key) => (<p key={key} className="mb-1">{`${key}: ${item.properties[key]}`}</p>))}
 
