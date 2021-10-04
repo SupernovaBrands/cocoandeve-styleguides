@@ -1,4 +1,5 @@
 /* global screenLG */
+
 const updateFormButton = (form) => {
 	const selected = form.find('.variant-swatch.border-primary');
 	if (selected.hasClass('waitlist')) {
@@ -95,18 +96,10 @@ $('.btn-choose__swatch').click(function () {
 		swatchRender($('.collection-swatch'), btn.siblings('.swatch-overlay').html());
 		$('.collection-swatch').addClass('show');
 		$('.collection-swatch > div').addClass('d-none');
-
-		let className = '.collection-swatch--overlay';
-		if ($(btn).hasClass('btn-choose__swatch-subscription')) className = '.collection-swatch--subscription';
-		$(className).removeClass('d-none');
-		popopOver();
 	} else {
 		swatchRender($('.collection-swatch__modal .modal-dialog'), btn.siblings('.swatch-overlay').html());
-		let id = '#collectionSwatchModal';
-		if ($(btn).hasClass('btn-choose__swatch-subscription')) id = '#collectionSubscriptionModal';
-		$(id).modal({
+		$('#collectionSwatchModal').modal({
 			show: true,
 		});
-		$(id).on('shown.bs.modal', () => popopOver());
 	}
 });
