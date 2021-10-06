@@ -45,8 +45,13 @@
 
     }
 
-    &-v2 .nav-link.active {
-      color: $primary;
+    &-v2 .nav-link {
+      width: auto;
+      line-height: $line-height-base;
+
+      &.active {
+        color: $primary;
+      }
     }
   }
 
