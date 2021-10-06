@@ -151,6 +151,73 @@
 			}
 		}
 	}
+
+	&--sfw {
+		$carousel-sfw-padding-lg: calc((100vw - 960px) / 2);
+		$carousel-sfw-padding-xl: calc((100vw - 1200px) / 2);
+
+		.carousel-item {
+			display: block;
+			margin-right: 0;
+		}
+
+		.carousel-inner {
+			overflow: auto hidden;
+			-ms-overflow-style: none;
+			scrollbar-width: none;
+
+			@include media-breakpoint-up(lg) {
+				overflow: hidden;
+				padding-left: $carousel-sfw-padding-lg;
+				padding-right: $carousel-sfw-padding-lg;
+			}
+			@include media-breakpoint-up(xl) {
+				padding-left: $carousel-sfw-padding-xl;
+				padding-right: $carousel-sfw-padding-xl;
+			}
+
+			&::-webkit-scrollbar {
+				display: none;
+			}
+		}
+
+		.scrollbar {
+			position: relative;
+			background: $gray-200;
+
+			&, &--thumb {
+				height: 4px;
+				border-radius: 2px;
+			}
+
+			&--thumb {
+				position: absolute;
+				left: 0;
+				background: $primary;
+			}
+		}
+
+		.carousel-control-prev,
+		.carousel-control-next {
+			width: auto;
+		}
+		.carousel-control-prev {
+			margin-left: $grid-gutter-width;
+			transform: translateX(-50%);
+			left: $carousel-sfw-padding-lg;
+			@include media-breakpoint-up(xl) {
+				left: $carousel-sfw-padding-xl;
+			}
+		}
+		.carousel-control-next {
+			margin-right: $grid-gutter-width;
+			transform: translateX(50%);
+			right: $carousel-sfw-padding-lg;
+			@include media-breakpoint-up(xl) {
+				right: $carousel-sfw-padding-xl;
+			}
+		}
+	}
 }
 
 .carousel-indicators {

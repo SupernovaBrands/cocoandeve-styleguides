@@ -32,6 +32,7 @@ yotpoStars.forEach((el) => {
 			productUrl: el.dataset.productUrl,
 			showScore: el.dataset.showScore === 'true',
 			showTotal: el.dataset.showTotal === 'true',
+			hideStars: el.dataset.hideStars === 'true',
 		}, null),
 		el,
 	);
@@ -64,6 +65,10 @@ if (carouselLoop.length > 0) {
 
 if ($('.carousel--swipe').length > 0) {
 	import(/* webpackChunkName: 'carousel-swipe' */ '~mod/carousel-swipe');
+}
+
+if ($('.carousel--sfw').length > 0) {
+	import(/* webpackChunkName: 'carousel-sfw' */ '~mod/carousel-scroll-full-width');
 }
 
 const modalWaitlist = $('#productWaitlist');

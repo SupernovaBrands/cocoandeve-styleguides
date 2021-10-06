@@ -16,6 +16,10 @@
 
       &.active {
         color: white;
+
+        .product-carousel-v2 & {
+          color: $primary;
+        }
       }
     }
 
