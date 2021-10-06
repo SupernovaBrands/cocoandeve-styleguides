@@ -16,10 +16,6 @@
 
       &.active {
         color: white;
-
-        .product-carousel-v2 & {
-          color: $primary;
-        }
       }
     }
 
@@ -46,6 +42,11 @@
       @include media-breakpoint-down(xs) {
         width: calc-em(90);
       }
+
+    }
+
+    &-v2 .nav-link.active {
+      color: $primary;
     }
   }
 
