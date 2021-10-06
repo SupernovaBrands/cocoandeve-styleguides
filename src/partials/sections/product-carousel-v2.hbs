@@ -1,33 +1,28 @@
 <!-- product carousel section -->
 <section class="product-carousel pt-4 pb-4 carousel--sfw__tabs">
-  <ul class="nav nav-tabs mx-auto nav-tabs--product nav-tabs--product-v2 text-center justify-content-center" role="tablist">
+  <ul class="nav nav-tabs mx-auto nav-tabs--product nav-tabs--product-v2 text-center justify-content-center mb-1" role="tablist">
     <li class="nav-item">
-      <a class="nav-link text-decoration-none h4 mb-0 font-weight-normal border-0 bg-transparent text-nowrap" data-toggle="tab" href="#tab-1" role="tab"
-        aria-controls="tab-1">Tab 1 (A)</a>
+      <a class="nav-link text-decoration-none h4 mb-0 border-0 bg-transparent text-nowrap mx-1" data-toggle="tab" href="#featured-bestsellers" role="tab"
+        aria-controls="featured-bestsellers">Bestsellers</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link text-decoration-none h4 mb-0 font-weight-normal border-0 bg-transparent text-nowrap active" data-toggle="tab" href="#tab-2"
-        role="tab" aria-controls="tab-2">Tab 2 (A)</a>
+      <a class="nav-link text-decoration-none h4 mb-0 border-0 bg-transparent text-nowrap mx-1 active" data-toggle="tab" href="#featured-new"
+        role="tab" aria-controls="featured-new">New</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link text-decoration-none h4 mb-0 font-weight-normal border-0 bg-transparent text-nowrap" data-toggle="tab" href="#tab-3"
-        role="tab" aria-controls="tab-3">Tab 3 (B)</a>
+      <a class="nav-link text-decoration-none h4 mb-0 border-0 bg-transparent text-nowrap mx-1" data-toggle="tab" href="#featured-value-sets"
+        role="tab" aria-controls="featured-value-sets">Value Sets (B)</a>
     </li>
   </ul>
   <div class="tab-content">
-    <div class="tab-pane fade" id="tab-1" role="tabpanel" aria-labelledby="tab-1-tab">
+    <div class="tab-pane fade" id="featured-bestsellers" role="tabpanel" aria-labelledby="featured-bestsellers-tab">
       {{#> components/carousel-scroll-full-width class="pb-1"}}
         {{> components/product-card-v2 class="carousel-item active" subtitle="Like A Virgin" title="Hair Masque" compare_price="$44.90" price="$34.90" }}
         {{> components/product-card-v2 class="carousel-item" subtitle="Sunny Honey" title="Bronzing Bundle" compare_price="$44.90" price="$34.90" swatch="true" swatch_shade="true" }}
         {{> components/product-card-v2 class="carousel-item" subtitle="Like A Virgin" title="Hair Masque" compare_price="$44.90" price="$34.90" swatch="true" swatch_style="true" }}
-        {{> components/product-card-v2 class="carousel-item" subtitle="Like A Virgin" title="Hair Masque" compare_price="$44.90" price="$34.90" }}
-        {{> components/product-card-v2 class="carousel-item" subtitle="Like A Virgin" title="Hair Masque" compare_price="$44.90" price="$34.90" }}
-        {{> components/product-card-v2 class="carousel-item" subtitle="Like A Virgin" title="Hair Masque" compare_price="$44.90" price="$34.90" }}
-        {{> components/product-card-v2 class="carousel-item" subtitle="Like A Virgin" title="Hair Masque" compare_price="$44.90" price="$34.90" }}
-        {{> components/product-card-v2 class="carousel-item" subtitle="Like A Virgin" title="Hair Masque" compare_price="$44.90" price="$34.90" }}
       {{/ components/carousel-scroll-full-width}}
     </div>
-    <div class="tab-pane fade show active" id="tab-2" role="tabpanel" aria-labelledby="tab-2-tab">
+    <div class="tab-pane fade show active" id="featured-new" role="tabpanel" aria-labelledby="featured-new-tab">
       {{#> components/carousel-scroll-full-width class="pb-1"}}
         {{> components/product-card-v2 class="carousel-item active" subtitle="Like a Virgin" title="Hair Masque" compare_price="$44.90" price="$34.90" }}
         {{> components/product-card-v2 class="carousel-item" subtitle="Sunny Honey" title="Bronzing Bundle" compare_price="$44.90" price="$34.90" swatch="true" swatch_shade="true" }}
@@ -39,7 +34,7 @@
         {{> components/product-card-v2 class="carousel-item" subtitle="Like a Virgin" title="Hair Masque" compare_price="$44.90" price="$34.90" }}
       {{/ components/carousel-scroll-full-width}}
     </div>
-    <div class="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="tab-3-tab">
+    <div class="tab-pane fade" id="featured-value-sets" role="tabpanel" aria-labelledby="featured-value-sets-tab">
       {{#> components/carousel-scroll-full-width class="pb-1" typeB="true"}}
         {{> components/product-card-v2 class="carousel-item active mb-2 mb-lg-0" subtitle="Like a Virgin" title="Hair Masque" compare_price="$44.90" price="$34.90" }}
         {{> components/product-card-v2 class="carousel-item mb-2 mb-lg-0" subtitle="Sunny Honey" title="Bronzing Bundle" compare_price="$44.90" price="$34.90" swatch="true" swatch_shade="true" }}
