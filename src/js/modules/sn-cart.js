@@ -133,6 +133,7 @@ class SNCart {
 					options.push(variant.option2);
 					options_with_values.push({ name: product.options[1].name, value: variant.option2 });
 				}
+
 				items.splice(0, 0, {
 					id,
 					key: `${id}:abcd`,
@@ -149,6 +150,7 @@ class SNCart {
 					original_price: pInfo.prices[id],
 					original_line_price: pInfo.prices[id] * quantity,
 					properties,
+					selling_plan_allocation: product.selling_plan_allocation,
 				});
 			}
 		}

@@ -155,7 +155,6 @@ const productWaitlistSubmitted = $('.product-waitlist__submitted');
 if (productWaitlistForm.length > 0 && productWaitlistSubmitted.length > 0) {
 	$('.product-waitlist__form form').on('submit', function (e) {
 		e.preventDefault();
-		console.log('click');
 		productWaitlistForm.addClass('d-none');
 		productWaitlistSubmitted.removeClass('d-none');
 	});
