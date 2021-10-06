@@ -1,0 +1,34 @@
+html.au-store {
+
+	.variant-swatch {
+		width: calc-em(30);
+		height: calc-em(30);
+
+		&.oos {
+			opacity: 1;
+
+			&:after {
+				content: '';
+				height: 1px;
+				background-color: $primary;
+				position: absolute;
+				left: 0;
+				right: 0;
+				transform: rotate(-45deg);
+			}
+		}
+
+		&:before {
+			content: ' ';
+			position: absolute;
+			width: calc-em(20);
+			height: calc-em(20);
+		}
+
+		&__new-tag {
+			left: 50%;
+			bottom: 0;
+			transform: translate(-50%, 50%);
+		}
+	}
+}
