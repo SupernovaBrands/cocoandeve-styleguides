@@ -43,18 +43,21 @@
 						<p class="font-size-sm w-100 mt-2 mb-0 swatch-label-medium"><b>Medium</b> - Subtle glow, lighter skin tones</p>
 					{{/ components/product-variant}}
 
-					{{#> components/product-variant name="product-variant" title="Subscription (20% OFF)" title_subscription="Monthly Subscription" value="shampoo-conditioner-set" compare=true class="mb-3 product-variant--subscription" note="Super Hydrating Shampoo (250ml)" hideSwatch="true" subscription=true}}
+					{{#> components/product-variant name="product-variant" title="Subscription (20% OFF)" title_subscription="Monthly Subscription" value="shampoo-conditioner-set" compare=true class="mb-1 product-variant--subscription" note="Super Hydrating Shampoo (250ml)" hideSwatch="true" subscription=true}}
 						<button type="button" class="variant-swatch medium mr-2 border-primary" data-value="medium" data-id="32363243831331"></button>
 						<p class="font-size-sm w-100 mt-2 mb-0 swatch-label-medium"><b>Medium</b> - Subtle glow, lighter skin tones</p>
 					{{/ components/product-variant}}
+
+					{{> components/product-variant-bundle name="product-variant" title="Glow Essentials Bundle" value="glow essentials bundle" compare=true class="mb-3" note="Ultra dark OOS waitlist, dark oos"}}
+
 					<div class="product-swatch-mobile fixed-bottom d-lg-none mx-g mb-2 show">
 						<div id="product-swatch-mobile"
 							class="product-swatch-mobile__collapse position-relative collapse bg-white border border-primary border-bottom-0 rounded-top">
 							<button type="button" class="close position-absolute font-size-xs" data-toggle="collapse"
 								data-target="#product-swatch-mobile" aria-label="close"><img class="svg" src="icons/close.svg" replace-to-svg /></button>
 							<div class="product-swatch d-flex flex-wrap justify-content-center justify-content-center p-g">
-								<button type="button" class="variant-swatch medium mr-2 border-primary" data-value="medium"></button>
-								<button type="button" class="variant-swatch dark mr-2" data-value="dark"></button>
+								<button type="button" class="variant-swatch medium mr-1 border-primary" data-value="medium"></button>
+								<button type="button" class="variant-swatch dark mr-1" data-value="dark"></button>
 								<button type="button" class="variant-swatch ultra-dark" data-value="ultra-dark"></button>
 								<p class="font-size-sm w-100 mt-2 mb-0 swatch-label-medium"><b>Medium</b> - Subtle glow, lighter skin tones</p>
 								<p class="font-size-sm w-100 mt-2 mb-0 swatch-label-dark d-none"><b>Dark</b> - Subtle glow, lighter skin tones</p>
@@ -64,7 +67,7 @@
 						<button class="product-swatch-mobile__toggle btn btn-lg btn-primary btn-block m-0" type="button" data-toggle="collapse" data-target="#product-swatch-mobile">Select Shade</button>
 						<div class="product-swatch-mobile__action bg-white rounded-lg d-none">
 							<button class="product-form-submit btn btn-lg btn-primary btn-block m-0" type="submit">Add to Cart</button>
-							<a class="scroll-to-element btn btn-lg btn-primary btn-block d-none m-0" role="button" href="#product-waitlist-form-oos">Waitlist Me</a>
+							<button type="button" class="scroll-to-element btn btn-lg btn-primary btn-block d-none m-0" role="button" data-toggle="modal" data-target="#productWaitlist">Waitlist Me</button>
 						</div>
 					</div>
 
@@ -294,7 +297,7 @@
 			</div>
 		</div>
 	</div>
-
+	{{> compounds/modal-waitlist}}
 	{{> js jquery=true popper=true bootstrap=true main=true }}
 </body>
 

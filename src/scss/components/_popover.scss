@@ -1,8 +1,8 @@
 .popover {
-	left: -5% !important;
+	z-index: $zindex-fixed;
 	box-shadow: $popover-box-shadow;
-	
-	.arrow {
-		left: 67% !important;
+
+	.modal-open & {
+		z-index: $zindex-modal;
 	}
 }
