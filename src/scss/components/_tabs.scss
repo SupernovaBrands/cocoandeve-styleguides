@@ -44,15 +44,6 @@
       }
 
     }
-
-    &-v2 .nav-link {
-      width: auto;
-      line-height: $line-height-base;
-
-      &.active {
-        color: $primary;
-      }
-    }
   }
 
   &--real-results {

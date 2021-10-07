@@ -68,7 +68,7 @@ if ($('.carousel--swipe').length > 0) {
 }
 
 if ($('.carousel--sfw').length > 0) {
-	import(/* webpackChunkName: 'carousel-sfw' */ '~mod/carousel-scroll-full-width');
+	import(/* webpackChunkName: 'carousel-sfw' */ '~mod/carousel-scroll-full-width-abtest');
 }
 
 const modalWaitlist = $('#productWaitlist');
