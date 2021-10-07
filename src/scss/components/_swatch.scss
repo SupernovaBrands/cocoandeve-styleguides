@@ -1,28 +1,22 @@
 .variant-swatch {
 	flex-shrink: 0;
-	width: calc-em(30);
-	height: calc-em(30);
+	width: calc-em(40);
+	height: calc-em(40);
 	border-radius: 50%;
 	border: 2px solid #fff;
 	background-color: white;
 	background-size: calc-em(30);
 	position: relative;
 
-	&.oos:after {
-		content: '';
-		height: 1px;
-		background-color: $primary;
-		position: absolute;
-		left: 0;
-		right: 0;
-		transform: rotate(-45deg);
+	&.oos {
+		opacity: .5;
 	}
 
 	&:before {
 		content: ' ';
 		position: absolute;
-		width: calc-em(20);
-		height: calc-em(20);
+		width: calc-em(30);
+		height: calc-em(30);
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: center;
