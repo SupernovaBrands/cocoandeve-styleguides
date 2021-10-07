@@ -246,7 +246,6 @@ h2{font-size:2em}
 .navbar-expand-lg .nav-item:last-child{padding-right:0}
 }
 .variant-swatch{flex-shrink:0;width:1.875em;height:1.875em;border-radius:50%;border:2px solid #fff;background-color:#fff;background-size:1.875em;position:relative}
-.variant-swatch.oos:after{content:"";height:1px;background-color:#f3436c;position:absolute;left:0;right:0;transform:rotate(-45deg)}
 .variant-swatch:before{content:" ";position:absolute;width:1.25em;height:1.25em;background-size:contain;background-repeat:no-repeat;background-position:center;top:.1875em;left:.1875em;margin:auto;border-radius:50%}
 .variant-swatch.dark:before{background-color:#885757}
 .variant-swatch.ultra-dark:before{background-color:#5c2323}
