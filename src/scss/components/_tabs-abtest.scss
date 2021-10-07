@@ -1,0 +1,17 @@
+html.dev-store,
+html.au-store {
+
+.nav-tabs {
+  &--product {
+    &-abtest .nav-link {
+      width: auto;
+      line-height: $line-height-base;
+
+      &.active {
+        color: $primary;
+      }
+    }
+  }
+}
+
+}
