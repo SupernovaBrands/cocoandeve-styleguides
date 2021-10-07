@@ -54,16 +54,16 @@
 					<p class="text-center">
 						<span class="text-linethrough h4 m-1">$34.90</span><span class="text-primary h4">$24.90</span>
 					</p>
-					<button type="button" class="btn btn-lg btn-primary btn-choose__swatch btn-block">Choose Style</button>
+					<button type="button" class="btn btn-lg btn-primary btn-choose btn-block">Choose Style</button>
 					<div class="swatch-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2 position-absolute">
 						<div class="text-center w-100 py-2">
 							<label class="mb-2"><strong>Style: </strong><span data-swatch-label>Girl Print: Limited edition!</span></label>
 							<ul class="list-unstyled product-variant-swatch d-flex justify-content-center">
 								<li class="product-variant-swatch__item available active col-3" data-available="available">
-									<span data-id="32068891607075" data-val="Girl Print" class="style-girl-print"></span>
+									<span data-id="32068891607075" data-val="Girl Print" class="d-block variant-swatch girl-print mx-auto border-primary"></span>
 								</li>
 								<li class="product-variant-swatch__item available col-3" data-available="available">
-									<span data-id="32068891639843" data-val="Print Leaf" class="style-leaf-print"></span>
+									<span data-id="32068891639843" data-val="Print Leaf" class="d-block variant-swatch leaf-print mx-auto"></span>
 								</li>
 							</ul>
 						</div>
@@ -90,19 +90,19 @@
 					<p class="text-center">
 						<span class="text-linethrough h4 m-1">$34.90</span><span class="text-primary h4">$24.90</span>
 					</p>
-					<button type="button" class="btn btn-lg btn-primary btn-choose__swatch btn-block">Choose Shade</button>
+					<button type="button" class="btn btn-lg btn-primary btn-choose btn-block">Choose Shade</button>
 					<div class="swatch-overlay flex-column align-items-center justify-content-end w-100 pb-0 px-2 position-absolute">
 						<div class="text-center w-100 py-2">
 							<label class="mb-2"><strong>Shade: </strong><span data-swatch-label>Dark</span></label>
 							<ul class="list-unstyled product-variant-swatch d-flex justify-content-center">
 								<li class="product-variant-swatch__item available col-3" data-available="available">
-									<span data-id="32068891541539" data-val="Medium" class="shade-medium"></span>
+									<span data-id="32068891541539" data-val="Medium" class="d-block variant-swatch medium border-primary"></span>
 								</li>
 								<li class="product-variant-swatch__item available active col-3" data-available="available">
-									<span data-id="32068891607075" data-val="Dark" class="shade-dark"></span>
+									<span data-id="32068891607075" data-val="Dark" class="d-block variant-swatch dark"></span>
 								</li>
 								<li class="product-variant-swatch__item available col-3" data-available="available">
-									<span data-id="32068891639843" data-val="Ultra Dark" class="shade-ultra-dark"></span>
+									<span data-id="32068891639843" data-val="Ultra Dark" class="d-block variant-swatch ultra-dark"></span>
 								</li>
 							</ul>
 						</div>
@@ -112,15 +112,6 @@
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-
-	<div class="collection-swatch d-lg-none">
-		{{> compounds/collection-swatch-overlay}}
-	</div>
-	<div class="modal fade collection-swatch__modal" id="collectionSwatchModal" tabindex="-1" role="dialog" aria-labelledby="collectionSwatchModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-			{{> compounds/collection-swatch-modal}}
 		</div>
 	</div>
 
