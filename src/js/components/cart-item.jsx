@@ -14,22 +14,34 @@ import {
 import SvgTrash from '~svg/trash.svg';
 import SvgRecurring from '~svg/recurring.svg';
 
+import VariantQuantity from '~mod/variant-quantity.json';
+
 export default class CartItem extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			editingVariant: false,
+			lastStockVariant: false,
 		};
 	}
 
 	onSelectVariant(variant, swatchIndex) {
-		if (variant.available) {
+		const itemProps = this.props.item;
+		const lastStock = VariantQuantity.filter((item) => {
+			return item.id === variant.id && itemProps.quantity > item.quantity;
+		});
+
+		if (variant.available && lastStock.length === 0) {
 			this.setState({
 				editingVariant: variant.id !== this.props.item.id ? swatchIndex : false,
 			}, () => {
 				if (this.state.editingVariant !== false) {
 					this.props.onChangeVariant(this.props.item, variant.id);
 				}
+			});
+		} else if (lastStock.length > 0) {
+			this.setState({
+				lastStockVariant: true
 			});
 		}
 	}
@@ -40,7 +52,7 @@ export default class CartItem extends React.Component {
 
 	render() {
 		const { item } = this.props;
-		const { editingVariant } = this.state;
+		const { editingVariant, lastStockVariant } = this.state;
 		const { models } = item;
 		const { swatches, variants, selectedSwatch } = models;
 		const showSwatches = variants && variants.length > 1 && !models.isFree;
@@ -138,7 +150,7 @@ export default class CartItem extends React.Component {
 							</div>
 						</div>
 
-						{this.props.isLastStock && (
+						{(this.props.isLastStock || lastStockVariant) && (
 							<p className="mt-1 mb-0 text-danger">Oh nuts! You got the last one!</p>)}
 					</figcaption>
 				</figure>
