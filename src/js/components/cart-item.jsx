@@ -21,27 +21,20 @@ export default class CartItem extends React.Component {
 		super(props);
 		this.state = {
 			editingVariant: false,
-			lastStockVariant: false,
 		};
 	}
 
 	onSelectVariant(variant, swatchIndex) {
 		const itemProps = this.props.item;
-		const lastStock = VariantQuantity.filter((item) => {
-			return item.id === variant.id && itemProps.quantity > item.quantity;
-		});
+		const lastStock = VariantQuantity.filter((item) => item.id === variant.id && itemProps.quantity > item.quantity);
 
-		if (variant.available && lastStock.length === 0) {
+		if (variant.available) {
 			this.setState({
 				editingVariant: variant.id !== this.props.item.id ? swatchIndex : false,
 			}, () => {
 				if (this.state.editingVariant !== false) {
-					this.props.onChangeVariant(this.props.item, variant.id);
+					this.props.onChangeVariant(this.props.item, variant.id, lastStock);
 				}
-			});
-		} else if (lastStock.length > 0) {
-			this.setState({
-				lastStockVariant: true
 			});
 		}
 	}
@@ -52,7 +45,7 @@ export default class CartItem extends React.Component {
 
 	render() {
 		const { item } = this.props;
-		const { editingVariant, lastStockVariant } = this.state;
+		const { editingVariant } = this.state;
 		const { models } = item;
 		const { swatches, variants, selectedSwatch } = models;
 		const showSwatches = variants && variants.length > 1 && !models.isFree;
@@ -93,38 +86,38 @@ export default class CartItem extends React.Component {
 								<div key={opt.id} className={`mb-1 ${isMultiOptions && index === 0 ? 'border-bottom' : ''}`}>
 
 									{isMultiOptions && (
-										<p class="font-size-sm mb-1">1x Bronzing Face Drops 30ml</p>
+										<p className="font-size-sm mb-1">1x Bronzing Face Drops 30ml</p>
 									)}
 
 									<p className="d-flex mb-1 align-items-center">
 
-									{!showSwatches && (
-										<i className={`d-block variant-swatch ${kebabCase(selected)}`} />
-									)}
-									{showSwatches && opt.values.map((val) => {
-										const o = [...selectedSwatch];
-										o[index] = val;
-										const variant = variants.find((v) => v.option.join() === o.join());
-										return (
-											<button
-												key={`${opt.id}-${kebabCase(val)}`}
-												className={`variant-swatch pr-0 mr-1 ${kebabCase(val)} ${selected === val && 'border-primary'} ${!variant.available ? 'oos' : ''}`}
-												type="button"
-												tabIndex="-1"
-												disabled={!variant.available || editingVariant !== false}
-												aria-label={kebabCase(val)}
-												onClick={() => this.onSelectVariant(variant, index)}
-											/>
-										);
-									})}
+										{!showSwatches && (
+											<i className={`d-block variant-swatch ${kebabCase(selected)}`} />
+										)}
+										{showSwatches && opt.values.map((val) => {
+											const o = [...selectedSwatch];
+											o[index] = val;
+											const variant = variants.find((v) => v.option.join() === o.join());
+											return (
+												<button
+													key={`${opt.id}-${kebabCase(val)}`}
+													className={`variant-swatch pr-0 mr-1 ${kebabCase(val)} ${selected === val && 'border-primary'} ${!variant.available ? 'oos' : ''}`}
+													type="button"
+													tabIndex="-1"
+													disabled={!variant.available || editingVariant !== false}
+													aria-label={kebabCase(val)}
+													onClick={() => this.onSelectVariant(variant, index)}
+												/>
+											);
+										})}
 
-									{editingVariant === index && (
-										<span className="spinner-border spinner-border-sm text-primary ml-1" role="status" />
-									)}
+										{editingVariant === index && (
+											<span className="spinner-border spinner-border-sm text-primary ml-1" role="status" />
+										)}
 
-									<span className={editingVariant === index ? 'd-none' : 'font-size-sm'}>
-										{` - ${selected.replace(': limited edition!', '')} ${opt.name}`}
-									</span>
+										<span className={editingVariant === index ? 'd-none' : 'font-size-sm'}>
+											{` - ${selected.replace(': limited edition!', '')} ${opt.name}`}
+										</span>
 									</p>
 								</div>
 
@@ -150,7 +143,7 @@ export default class CartItem extends React.Component {
 							</div>
 						</div>
 
-						{(this.props.isLastStock || lastStockVariant) && (
+						{this.props.isLastStock && (
 							<p className="mt-1 mb-0 text-danger">Oh nuts! You got the last one!</p>)}
 					</figcaption>
 				</figure>

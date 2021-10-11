@@ -422,9 +422,10 @@ export default class Cart extends React.Component {
 		});
 	}
 
-	onChangeVariant = (item, newVariantId) => {
+	onChangeVariant = (item, newVariantId, lastStock) => {
+		const quantity = (lastStock && lastStock.length > 0) ? lastStock[0].quantity : item.quantity;
 		if (item.id !== newVariantId) {
-			snCart.replaceItem(item.key, newVariantId, item.quantity);
+			snCart.replaceItem(item.key, newVariantId, quantity);
 		}
 	}
 
