@@ -552,3 +552,7 @@ $(document).ready(function () {
 if ($('.carousel--sfw').length > 0 || $('.product-card-abtest').length > 0) {
 	import(/* webpackChunkName: 'featured-product-abtest' */ '~mod/featured-product-abtest');
 }
+
+if ($('.btn-choose__swatch').length > 0) {
+	import(/* webpackChunkName: 'featured-product-abtest' */ '~mod/collection-swatch');
+}

@@ -81,7 +81,7 @@ export default class CartItem extends React.Component {
 								<div key={opt.id} className={`mb-1 ${isMultiOptions && index === 0 ? 'border-bottom' : ''}`}>
 
 									{isMultiOptions && (
-										<p class="font-size-sm mb-1">1x Bronzing Face Drops 30ml</p>
+										<p className="font-size-sm mb-1">1x Bronzing Face Drops 30ml</p>
 									)}
 
 									<p className="d-flex mb-1 align-items-center">
