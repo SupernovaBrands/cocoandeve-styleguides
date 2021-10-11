@@ -37,26 +37,10 @@
 	}
 
 	&--subscription {
-		&__title-secondary {
-			display: none;
-		}
-
 		.custom-control-input {			
 			&:checked {
 				~ .custom-control-label {
 					background-color: $primary-light-second;
-					
-					.product-variant--subscription {
-						@include media-breakpoint-down(lg) {
-							&__title-primary {
-								display: none;
-							}
-
-							&__title-secondary {
-								display: block;
-							}
-						}
-					}
 				}
 			}
 
