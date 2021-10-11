@@ -1,9 +1,13 @@
 <div class="product-variant custom-radio w-100 {{ class }}">
 	<input id="{{name}}-{{value}}" class="custom-control-input" type="radio" name="{{name}}" value="{{value}}" {{#if checked}}checked{{/if}}/>
 	<label for="{{name}}-{{value}}" class="custom-control-label w-100 border py-2 pr-2 rounded">		
-		<p class="{{#if titleClass}}{{titleClass}}{{else}}h4{{/if}} mb-0 {{#if subscription}}d-flex{{/if}}">
-			<span class="product-variant--subscription__title-primary">{{title}}</span>
-			<span class="product-variant--subscription__title-secondary">{{title_subscription}}</span>
+		<p class="{{#if titleClass}}{{titleClass}}{{/if}} mb-0 font-weight-bold {{#if subscription}}d-flex{{/if}}">
+			{{#if subscription }}
+				<span class="product-variant--subscription__title-primary">{{title}}</span>
+				<span class="product-variant--subscription__title-secondary">{{title_subscription}}</span>
+			{{else}}
+				{{title}}
+			{{/if}}
 			{{#if subscription}}
 				<a class="text-primary ml-1" data-container="body" data-toggle="popover" data-placement="top" data-content="<strong>No fuss and frizz, just good hair days ahead.</strong><br/>Keep your hair routine in check and never run out of your washday must-haves every month and free shipping on top of that.<br/><br/>Cancel anytime, and come back when you're ready. ❤️" data-html="true"><img class="svg" src="icons/help.svg" replace-to-svg /></a>
 			{{/if}}
