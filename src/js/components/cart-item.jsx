@@ -14,6 +14,8 @@ import {
 import SvgTrash from '~svg/trash.svg';
 import SvgRecurring from '~svg/recurring.svg';
 
+import VariantQuantity from '~mod/variant-quantity.json';
+
 export default class CartItem extends React.Component {
 	constructor(props) {
 		super(props);
@@ -23,12 +25,15 @@ export default class CartItem extends React.Component {
 	}
 
 	onSelectVariant(variant, swatchIndex) {
+		const itemProps = this.props.item;
+		const lastStock = VariantQuantity.filter((item) => item.id === variant.id && itemProps.quantity > item.quantity);
+
 		if (variant.available) {
 			this.setState({
 				editingVariant: variant.id !== this.props.item.id ? swatchIndex : false,
 			}, () => {
 				if (this.state.editingVariant !== false) {
-					this.props.onChangeVariant(this.props.item, variant.id);
+					this.props.onChangeVariant(this.props.item, variant.id, lastStock);
 				}
 			});
 		}
@@ -86,33 +91,33 @@ export default class CartItem extends React.Component {
 
 									<p className="d-flex mb-1 align-items-center">
 
-									{!showSwatches && (
-										<i className={`d-block variant-swatch ${kebabCase(selected)}`} />
-									)}
-									{showSwatches && opt.values.map((val) => {
-										const o = [...selectedSwatch];
-										o[index] = val;
-										const variant = variants.find((v) => v.option.join() === o.join());
-										return (
-											<button
-												key={`${opt.id}-${kebabCase(val)}`}
-												className={`variant-swatch pr-0 mr-1 ${kebabCase(val)} ${selected === val && 'border-primary'} ${!variant.available ? 'oos' : ''}`}
-												type="button"
-												tabIndex="-1"
-												disabled={!variant.available || editingVariant !== false}
-												aria-label={kebabCase(val)}
-												onClick={() => this.onSelectVariant(variant, index)}
-											/>
-										);
-									})}
+										{!showSwatches && (
+											<i className={`d-block variant-swatch ${kebabCase(selected)}`} />
+										)}
+										{showSwatches && opt.values.map((val) => {
+											const o = [...selectedSwatch];
+											o[index] = val;
+											const variant = variants.find((v) => v.option.join() === o.join());
+											return (
+												<button
+													key={`${opt.id}-${kebabCase(val)}`}
+													className={`variant-swatch pr-0 mr-1 ${kebabCase(val)} ${selected === val && 'border-primary'} ${!variant.available ? 'oos' : ''}`}
+													type="button"
+													tabIndex="-1"
+													disabled={!variant.available || editingVariant !== false}
+													aria-label={kebabCase(val)}
+													onClick={() => this.onSelectVariant(variant, index)}
+												/>
+											);
+										})}
 
-									{editingVariant === index && (
-										<span className="spinner-border spinner-border-sm text-primary ml-1" role="status" />
-									)}
+										{editingVariant === index && (
+											<span className="spinner-border spinner-border-sm text-primary ml-1" role="status" />
+										)}
 
-									<span className={editingVariant === index ? 'd-none' : 'font-size-sm'}>
-										{` - ${selected.replace(': limited edition!', '')} ${opt.name}`}
-									</span>
+										<span className={editingVariant === index ? 'd-none' : 'font-size-sm'}>
+											{` - ${selected.replace(': limited edition!', '')} ${opt.name}`}
+										</span>
 									</p>
 								</div>
 
