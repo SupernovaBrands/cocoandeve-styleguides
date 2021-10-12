@@ -1,5 +1,6 @@
 /* global screenLG */
 import snCart from '~mod/sn-cart';
+import { popopOver } from '~mod/utils';
 
 $('.product-image-carousel__indicator__item').on('click', function () {
 	const carousel = $(this).data('target');
@@ -59,10 +60,14 @@ const updateFormButton = (form) => {
 		form.find('.product-form-submit').addClass('d-none');
 		mobileSwatch.find('.scroll-to-element').removeClass('d-none');
 		$('#product-waitlist-form-oos').removeClass('d-none');
+		$('.product-swatch-mobile__toggle').addClass('d-none');
+		$('.product-swatch-mobile__action').removeClass('d-none');
 	} else {
 		form.find('.product-form-submit').removeClass('d-none');
 		mobileSwatch.find('.scroll-to-element').addClass('d-none');
 		$('#product-waitlist-form-oos').addClass('d-none');
+		$('.product-swatch-mobile__toggle').removeClass('d-none');
+		$('.product-swatch-mobile__action').addClass('d-none');
 	}
 
 	if (selected.hasClass('oos')) {
@@ -155,8 +160,9 @@ const productWaitlistSubmitted = $('.product-waitlist__submitted');
 if (productWaitlistForm.length > 0 && productWaitlistSubmitted.length > 0) {
 	$('.product-waitlist__form form').on('submit', function (e) {
 		e.preventDefault();
-		console.log('click');
 		productWaitlistForm.addClass('d-none');
 		productWaitlistSubmitted.removeClass('d-none');
 	});
 }
+
+popopOver();

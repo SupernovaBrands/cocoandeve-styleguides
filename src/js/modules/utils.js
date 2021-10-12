@@ -220,3 +220,28 @@ export const updateItemInArray = (array, compareFunc, modFunc) => {
 		...array.slice(index + 1),
 	];
 };
+
+export const popopOver = () => {
+	// popover
+	if ($('[data-toggle="popover"]').length) {
+		$(function () {
+			$(document).find('[data-toggle="popover"]').popover({
+				flip: 'top',
+				fallbackPlacement: ['top'],
+				delay: {
+					show: 100,
+				},
+				offset: -70,
+			});
+		});
+
+		// Dismissable popover click out side
+		$(document).off('click').on('click', function (e) {
+			$(document).find('[data-toggle=popover]').each(function () {
+				if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0 && !$(e.target).hasClass('custom-control-input')) {
+					$(this).popover('hide');
+				}
+			});
+		});
+	}
+};

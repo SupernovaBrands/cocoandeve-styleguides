@@ -25,6 +25,9 @@
 			{{#if compare_price }}<span class="text-linethrough h4 m-1">{{compare_price}}</span>{{/if}}<span class="text-primary h4">{{price}}</span>
 		</p>
 		{{#if swatch }}
+		{{#if quick_shop }}
+		<button type="button" class="btn btn-lg btn-primary btn-choose__swatch btn-choose__swatch-subscription btn-block px-0">Quick Shop</button>
+		{{/if}}
 		{{#if swatch_shade }}
 		<button type="button" class="btn btn-lg btn-primary btn-choose btn-block px-0">Choose Shade</button>
 		<div class="swatch-overlay flex-column align-items-center justify-content-end w-100 pb-0 position-absolute {{#if collection }} px-lg-2 {{else}} px-2 {{/if}}">
