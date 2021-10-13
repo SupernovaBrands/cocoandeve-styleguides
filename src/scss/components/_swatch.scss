@@ -15,7 +15,8 @@
 		position: absolute;
 		left: 0;
 		right: 0;
-		transform: rotate(-45deg);
+		top: 50%;
+		transform: rotate(-45deg) translateY(-50%);
 	}
 
 	&:before {
