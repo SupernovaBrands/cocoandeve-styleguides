@@ -153,6 +153,7 @@ class SNCart {
 					original_price: pInfo.prices[id],
 					original_line_price: pInfo.prices[id] * quantity,
 					properties,
+					selling_plan_allocation: product.selling_plan_allocation,
 				});
 			}
 		}

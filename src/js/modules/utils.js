@@ -220,3 +220,43 @@ export const updateItemInArray = (array, compareFunc, modFunc) => {
 		...array.slice(index + 1),
 	];
 };
+
+export const popopOver = () => {
+	// popover
+	if ($('[data-toggle="popover"]').length) {
+		$(function () {
+			$(document).find('[data-toggle="popover"]').popover({
+				flip: 'top',
+				fallbackPlacement: ['top'],
+				delay: {
+					show: 100,
+				},
+				offset: -70,
+				html: true,
+			});
+
+			$(document).find('[data-toggle="popover"]').on('inserted.bs.popover', function () {
+				/* inject close icon, since can't add svg tag inside data-content attribute,
+				svg tag always removed from the content when popover open */
+
+				const closePopover = '<span class="font-size-sm fixed-top text-right mr-1 mt-1 popover-body__close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" class="svg"><path d="M12 1l-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1-5-5z"></path></svg></span>';
+				const popoverBox = $('.popover-body');
+				popoverBox.prepend(closePopover);
+
+				// listen event click on svg icon to close popover
+				$('.popover-body__close').on('click', function () {
+					$(this).closest('.popover').popover('hide');
+				});
+			});
+		});
+
+		// Dismissable popover click out side
+		$(document).off('click').on('click', function (e) {
+			$(document).find('[data-toggle=popover]').each(function () {
+				if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0 && !$(e.target).hasClass('custom-control-input')) {
+					$(this).popover('hide');
+				}
+			});
+		});
+	}
+};

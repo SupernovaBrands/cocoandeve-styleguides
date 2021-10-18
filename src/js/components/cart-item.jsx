@@ -12,6 +12,7 @@ import {
 } from '~mod/utils';
 
 import SvgTrash from '~svg/trash.svg';
+import SvgRecurring from '~svg/recurring.svg';
 
 export default class CartItem extends React.Component {
 	constructor(props) {
@@ -76,7 +77,11 @@ export default class CartItem extends React.Component {
 									wrapper={(children) => <a href={item.url} className="link-secondary">{children}</a>}
 								>
 									{item.product_title}
+									{`${models.recurring ? ' Subscription' : ''}`}
 								</ConditionWrapper>
+								{models.recurring && (
+									<span className="text-primary mt-1 d-flex font-italic font-size-sm font-weight-normal"><SvgRecurring className="svg mr-1"/> Recurring every 1 month</span>
+								)}
 							</p>
 							{!models.isFree && (<button className="cart-item__remove btn-unstyled d-flex" type="button" aria-label="Remove" onClick={this.onRemoveItem} data-cy="cart-remove-icon"><SvgTrash className="svg" /></button>)}
 						</div>
@@ -138,7 +143,10 @@ export default class CartItem extends React.Component {
 							<div className="d-flex flex-column text-right">
 								{models.comparePrice > 0 && (
 									<span className="text-linethrough">{formatMoney(models.comparePrice)}</span>)}
-								<span className="font-weight-bold">{formatMoney(item.original_price)}</span>
+								<span className="font-weight-bold">
+									{formatMoney(item.original_price)}
+									{models.recurring && ('/month')}
+								</span>
 							</div>
 						</div>
 

@@ -14,6 +14,26 @@
     "published_scope": "web",
     "tags": "",
     "admin_graphql_api_id": "gid://shopify/Product/4625694621731",
+    "selling_plan_allocation": {
+      "price_adjustments": [
+          {"position":1,"price":4240}
+        ],
+      "price":4240,
+      "compare_at_price":5300,
+      "per_delivery_price":4240,
+      "selling_plan": { 
+        "id":449249315,
+        "name":"Delivery every 30 Days",
+        "description":null,
+        "options":[
+          {"name":"30 Day(s)","position":1,"value":"30 Day(s)"}
+        ],
+        "recurring_deliveries":true,
+        "price_adjustments":[
+          {"order_count":null,"position":1,"value_type":"percentage","value":20}
+        ]
+      }
+    },
     "variants": [
       {
         "id": 39376802644003,

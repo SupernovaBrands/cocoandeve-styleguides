@@ -10,6 +10,8 @@
 @import 'components/review-stars';
 @import 'components/tabs';
 @import 'components/carousel';
+@import 'components/product-variant';
+@import 'components/popover';
 
 @import 'compounds/result-card';
 @import 'compounds/product-card';
@@ -17,3 +19,6 @@
 
 @import 'sections/playground';
 @import 'sections/instagram';
+
+@import 'components/tabs-abtest';
+@import 'components/carousel-abtest';

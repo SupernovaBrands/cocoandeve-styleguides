@@ -1,0 +1,127 @@
+<div
+	class="{{#if hideMobile}}d-none d-lg-flex{{else}}d-flex{{/if}} flex-column col-6 col-md-3 product-card product-card-abtest {{class}}">
+	<a href="#">
+		<noscript class="loading-lazy">
+			<picture class="embed-responsive embed-responsive-1by1 bg-shimmer m-0">
+				<img class="embed-responsive-item fit--cover" alt="Image Alt" loading="lazy"
+					src="https://via.placeholder.com/243x243">
+			</picture>
+		</noscript>
+		{{#if badge }}
+		<picture class="circle-badge position-absolute rounded-circle bg-primary d-flex p-1">
+			<img class="w-100" src="../images/{{ badge_image }}" />
+		</picture>
+		{{/if}}
+	</a>
+	<div
+		class="pt-1 pb-0 position-relative flex-grow-1 d-flex flex-column">
+		<div class="d-flex mb-1">
+			<div class="react-yotpo-star-abtest font-size-sm" data-product-id="4543113265187" data-hide-stars="true"></div>
+		</div>
+		<p class="product-card__title flex-grow-1 d-flex flex-column h-100 font-weight-normal mb-1">
+			<span class="text-dark font-size-sm font-size-dt-base mb-25">{{subtitle}}</span>
+			<a href="#" class="text-dark h4 font-weight-bold text-decoration-none">{{title}}</a>
+		</p>
+		<p class="mb-1">
+			<span class="text-primary mr-1">{{price}}</span>
+			{{#if compare_price }}<span class="text-linethrough text-muted ">{{compare_price}}</span>{{/if}}
+		</p>
+		{{#if swatch }}
+		{{#if swatch_shade }}
+		<button type="button" class="btn btn-lg btn-primary btn-choose btn-block px-0">Choose Shade</button>
+		<div
+			class="swatch-overlay flex-column align-items-center justify-content-end w-100 pb-0 position-absolute">
+			<div class="text-center w-100 pt-2 pb-lg-2">
+				<label class="mb-2"><strong>Shade: </strong><span data-swatch-label>Dark</span></label>
+				<ul class="list-unstyled product-variant-swatch d-flex justify-content-center">
+					<li class="product-variant-swatch__item available col-3 p-0" data-available="available">
+						<span data-id="32068891541539" data-val="Medium" class="d-block variant-swatch medium"></span>
+					</li>
+					<li class="product-variant-swatch__item available active col-3 p-0" data-available="available">
+						<span data-id="32068891607075" data-val="Dark"
+							class="d-block border-primary mx-auto variant-swatch dark"></span>
+					</li>
+					<li class="product-variant-swatch__item available col-3 p-0" data-available="available">
+						<span data-id="32068891639843" data-val="Ultra Dark"
+							class="d-block mx-auto  variant-swatch ultra-dark"></span>
+					</li>
+				</ul>
+			</div>
+			<button type="button" class="btn btn-lg btn-primary btn-block add-to-cart">
+				Add To Cart
+			</button>
+		</div>
+		{{/if}}
+
+		{{#if swatch_style }}
+		<button type="button" class="btn btn-lg btn-primary btn-choose btn-block px-0">Choose Style</button>
+		<div
+			class="swatch-overlay flex-column align-items-center justify-content-end w-100 pb-0 position-absolute">
+			<div class="text-center w-100 pt-2 pb-lg-2">
+				<label class="mb-2"><strong>Style: </strong><span data-swatch-label>Girl Print: Limited edition!</span></label>
+				<ul class="list-unstyled product-variant-swatch d-flex justify-content-center">
+					<li class="product-variant-swatch__item available active col-3 p-0" data-available="available">
+						<span data-id="32068891607075" data-val="Girl Print"
+							class="d-block border-primary mx-auto  variant-swatch girl-print"></span>
+					</li>
+					<li class="product-variant-swatch__item available col-3 p-0" data-available="available">
+						<span data-id="32068891639843" data-val="Print Leaf"
+							class="d-block mx-auto  variant-swatch leaf-print"></span>
+					</li>
+				</ul>
+			</div>
+			<button type="button" class="btn btn-lg btn-primary add-to-cart btn-block px-0">
+				Add To Cart
+			</button>
+		</div>
+		{{/if}}
+		{{#if swatch_style_eyemask }}
+		<button type="button" class="btn btn-lg btn-primary btn-choose btn-block px-0">Choose Style</button>
+		<div
+			class="swatch-overlay flex-column align-items-center justify-content-end w-100 pb-0 position-absolute">
+			<div class="text-center w-100 pt-2 pb-lg-2">
+				<label class="mb-2"><strong>Style: </strong><span data-swatch-label>Girl Print: Limited edition!</span></label>
+				<ul class="list-unstyled product-variant-swatch d-flex justify-content-center">
+					<li class="product-variant-swatch__item available active col-3 p-0" data-available="available">
+						<span data-id="32068891607075" data-val="Girl Print"
+							class="d-block border-primary mx-auto  variant-swatch pink"></span>
+					</li>
+					<li class="product-variant-swatch__item available col-3 p-0" data-available="available">
+						<span data-id="32068891639843" data-val="Print Leaf" class="d-block mx-auto  variant-swatch green"></span>
+					</li>
+				</ul>
+			</div>
+			<button type="button" class="btn btn-lg btn-primary add-to-cart btn-block px-0">
+				Add To Cart
+			</button>
+		</div>
+		{{/if}}
+		{{#if swatch_scent }}
+		<button type="button" class="btn btn-lg btn-primary btn-choose btn-block px-0">Choose Scent</button>
+		<div
+			class="swatch-overlay flex-column align-items-center justify-content-end w-100 pb-0 position-absolute">
+			<div class="text-center w-100 pt-2 pb-lg-2">
+				<label class="mb-2"><strong>Scent: </strong><span data-swatch-label>Girl Print: Limited edition!</span></label>
+				<ul class="list-unstyled product-variant-swatch d-flex justify-content-center">
+					<li class="product-variant-swatch__item available active col-3 p-0" data-available="available">
+						<span data-id="32068891607075" data-val="Girl Print"
+							class="d-block border-primary mx-auto  variant-swatch sweet-manggo"></span>
+					</li>
+					<li class="product-variant-swatch__item available col-3 p-0" data-available="available">
+						<span data-id="32068891639843" data-val="Print Leaf"
+							class="d-block mx-auto  variant-swatch lychee-dragonfruit"></span>
+					</li>
+				</ul>
+			</div>
+			<button type="button" class="btn btn-lg btn-primary add-to-cart btn-block px-0">
+				Add To Cart
+			</button>
+		</div>
+		{{/if}}
+		{{ else }}
+		<button type="button" class="btn btn-lg btn-primary add-to-cart btn-block px-0">
+			Add To Cart
+		</button>
+		{{/if}}
+	</div>
+</div>
