@@ -1,22 +1,29 @@
 .variant-swatch {
 	flex-shrink: 0;
-	width: calc-em(40);
-	height: calc-em(40);
+	width: calc-em(30);
+	height: calc-em(30);
 	border-radius: 50%;
 	border: 2px solid #fff;
 	background-color: white;
 	background-size: calc-em(30);
 	position: relative;
 
-	&.oos {
-		opacity: .5;
+	&.oos:after {
+		content: '';
+		height: 1px;
+		background-color: $primary;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 50%;
+		transform: rotate(-45deg) translateY(-50%);
 	}
 
 	&:before {
 		content: ' ';
 		position: absolute;
-		width: calc-em(30);
-		height: calc-em(30);
+		width: calc-em(20);
+		height: calc-em(20);
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: center;
@@ -45,6 +52,12 @@
 			top: 0;
 			left: 0;
 		}
+	}
+
+	&__new-tag {
+		left: 50%;
+		bottom: 0;
+		transform: translate(-50%, 50%);
 	}
 
 	&:focus {

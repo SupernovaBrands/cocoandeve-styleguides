@@ -25,8 +25,12 @@
 			{{#if compare_price }}<span class="text-linethrough h4 m-1">{{compare_price}}</span>{{/if}}<span class="text-primary h4">{{price}}</span>
 		</p>
 		{{#if swatch }}
-		{{#if swatch_modal}}
-		<button type="button" class="btn btn-lg btn-primary btn-choose__swatch btn-block px-0">Choose Shade</button>
+		{{#if quick_shop }}
+		<button type="button" class="btn btn-lg btn-primary btn-choose__swatch btn-choose__swatch-subscription btn-block px-0">Quick Shop</button>
+		{{/if}}
+
+		{{#if swatch_link}}
+		<a href="product.html#product-form" class="btn btn-lg btn-primary btn-choose btn-block px-0">Choose Shade</a>
 		{{/if}}
 		{{#if swatch_shade }}
 		<button type="button" class="btn btn-lg btn-primary btn-choose btn-block px-0">Choose Shade</button>
@@ -35,7 +39,7 @@
 				<label class="mb-2"><strong>Shade: </strong><span data-swatch-label>Dark</span></label>
 				<ul class="list-unstyled product-variant-swatch d-flex justify-content-center">
 					<li class="product-variant-swatch__item available col-3" data-available="available">
-						<span data-id="32068891541539" data-val="Medium" class="d-block variant-swatch medium"></span>
+						<span data-id="32068891541539" data-val="Medium" class="d-block variant-swatch medium oos"></span>
 					</li>
 					<li class="product-variant-swatch__item available active col-3" data-available="available">
 						<span data-id="32068891607075" data-val="Dark" class="d-block border-primary mx-auto variant-swatch dark"></span>
