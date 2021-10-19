@@ -5,12 +5,10 @@ html.au-store {
 			display: none;
 		}
 
-		.custom-control-input {
+		.custom-control-input:checked ~ .custom-control-label {
 
-			&:checked ~ .custom-control-label {
-				.product-variant__notes {
-					display: block;
-				}
+			.product-variant__notes {
+				display: block;
 			}
 		}
 
