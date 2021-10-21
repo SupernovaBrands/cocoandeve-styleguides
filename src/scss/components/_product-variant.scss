@@ -1,10 +1,16 @@
 .product-variant {
 
 	.custom-control-label {
-		padding-left: calc-em(60, $unit: 1rem);
+		padding-left: calc-em(50, $unit: 1rem);
+		@include media-breakpoint-up(lg) {
+			padding-left: calc-em(69, $unit: 1rem);
+		}
 		&::before {
-			top: calc-em(40, $unit: 1rem);
-			left: calc-em(20, $unit: 1rem);
+			top: calc-em(20, $unit: 1rem);
+			left: calc-em(15, $unit: 1rem);
+			@include media-breakpoint-up(lg) {
+				left: calc-em(24, $unit: 1rem);
+			}
 		}
 
 		.svg {
