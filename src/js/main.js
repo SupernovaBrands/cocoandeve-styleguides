@@ -95,7 +95,7 @@ if ($('body').hasClass('template-product')) {
 }
 
 if ($('.collection-swatch').length > 0) {
-	import(/* webpackChunkName: 'collection-swatch' */ '~mod/collection-swatch');
+	import(/* webpackChunkName: 'collection-swatch-abtest' */ '~mod/collection-swatch-abtest');
 }
 
 $(document).ready(function () {
