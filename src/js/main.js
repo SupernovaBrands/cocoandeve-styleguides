@@ -94,10 +94,6 @@ if ($('body').hasClass('template-product')) {
 	import(/* webpackChunkName: 'products' */ '~mod/products');
 }
 
-if ($('.collection-swatch').length > 0) {
-	import(/* webpackChunkName: 'collection-swatch-abtest' */ '~mod/collection-swatch-abtest');
-}
-
 $(document).ready(function () {
 	window.showGrid = function () {
 		jQuery('body').append('<style type="text/css">.gridoverlay{position:fixed;top:0;left:50%;transform:translateX(-50%);z-index:9999}.gridoverlay .col{height:100vh}.gridoverlay .col:before{content:"";display:block;background-color:rgba(0,123,255,0.3);height:100%}</style><div class="container gridoverlay"><div class="row"><div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div><div class="col d-none d-lg-block"></div></div></div>');
@@ -555,4 +551,8 @@ $(document).ready(function () {
 
 if ($('.carousel--sfw').length > 0 || $('.product-card-abtest').length > 0) {
 	import(/* webpackChunkName: 'featured-product-abtest' */ '~mod/featured-product-abtest');
+}
+
+if ($('.btn-choose__swatch').length > 0) {
+	import(/* webpackChunkName: 'collection-swatch' */ '~mod/collection-swatch');
 }
