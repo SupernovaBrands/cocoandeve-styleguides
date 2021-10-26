@@ -22,7 +22,7 @@ $('.btn-choose__swatch').click(function () {
 		if ($(btn).hasClass('btn-choose__swatch-subscription')) className = '.collection-swatch--subscription';
 		$(className).removeClass('d-none');
 		popopOver();
-	} else if ($('html').hasClass('au-store')) {
+	} else {
 		swatchRender($('.collection-swatch__modal .modal-dialog'), btn.siblings('.swatch-overlay').html());
 		let id = '#collectionSwatchModal';
 		if ($(btn).hasClass('btn-choose__swatch-subscription')) id = '#collectionSubscriptionModal';
