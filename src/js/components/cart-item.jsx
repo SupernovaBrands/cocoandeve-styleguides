@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 
 import ConditionWrapper from '~comp/condition-wrapper';
 import QuantityBox from '~comp/quantity-box';
+import snCart from '~mod/sn-cart';
 
 import { formatMoney } from '~mod/utils';
 
@@ -16,6 +17,7 @@ export default class CartItem extends React.Component {
 		super(props);
 		this.state = {
 			editingVariant: false,
+			inventory: snCart.getItem(this.props.item.id),
 		};
 
 		if (props.item.models && props.item.models.variantOptions) {
@@ -115,6 +117,9 @@ export default class CartItem extends React.Component {
 								editable={!item.models.isFree}
 								quantity={item.quantity}
 								onChangeQuantity={(newQty, callback) => this.props.onChangeQuantity(item, newQty, callback)}
+								isLastStock={this.props.isLastStock}
+								productId={this.props.productId}
+								productStock={this.props.productStock}
 							/>
 							<div className="d-flex flex-column text-right">
 								{models.comparePrice > 0 && (
