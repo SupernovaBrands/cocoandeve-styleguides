@@ -556,3 +556,7 @@ if ($('.carousel--sfw').length > 0 || $('.product-card-abtest').length > 0) {
 if ($('.btn-choose__swatch').length > 0) {
 	import(/* webpackChunkName: 'featured-product-abtest' */ '~mod/collection-swatch');
 }
+
+if ($('.btn-choose__swatch-abtest').length > 0) {
+	import(/* webpackChunkName: 'collection-swatch-abtest' */ '~mod/collection-swatch-abtest');
+}
