@@ -1,10 +1,10 @@
-.collection-swatch {
+.collection-swatch-abtest {
 	display: none;
 }
 
 html.au-store {
 
-	.collection-swatch {
+	.collection-swatch-abtest {
 
 		display: block;
 
@@ -56,6 +56,12 @@ html.au-store {
 		@include media-breakpoint-up(lg) {
 			&__modal .modal-lg {
 				max-width: calc-em(770);
+			}
+
+			&__modal-subscription {
+				.modal-content {
+					min-height: calc-em(564);
+				}
 			}
 
 			&__price,
