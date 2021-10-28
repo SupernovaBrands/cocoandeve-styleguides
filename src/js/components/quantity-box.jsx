@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { debounce } from '~mod/utils';
+import snCart from '~mod/sn-cart';
 
 import SvgPlus from '~svg/plus.svg';
 import SvgMinus from '~svg/minus.svg';
@@ -12,6 +13,7 @@ export default class QuantityBox extends React.Component {
 		this.state = {
 			prevQuantity: props.quantity,
 			quantity: `${props.quantity}`,
+			lastStock: false,
 		};
 
 		this.debounceChangeQuantity = debounce(this.changeQuantity, 500);
@@ -35,6 +37,22 @@ export default class QuantityBox extends React.Component {
 				{ quantity: qty + 1 },
 				() => {
 					this.debounceChangeQuantity();
+					const inventory = this.props.productStock;
+					const id = this.props.productId;
+					if (inventory && id) {
+						let remaining = inventory;
+						if (this.props.isPdp) {
+							const itemInCart = snCart.getItem(id);
+
+							if (itemInCart) {
+								remaining -= itemInCart.quantity;
+							}
+						}
+						
+						if (this.state.quantity === remaining) {
+							this.setState({ lastStock: true });
+						}
+					}
 				},
 			);
 		}
@@ -49,6 +67,13 @@ export default class QuantityBox extends React.Component {
 				{ quantity: qty - 1 },
 				() => {
 					this.debounceChangeQuantity();
+					const inventory = this.props.productStock;
+					if (inventory) {
+						let remaining = inventory;
+						if (this.state.quantity < remaining && !this.props.isLastStock) {
+							this.setState({ lastStock: false })
+						}
+					}
 				},
 			);
 		}
@@ -88,7 +113,7 @@ export default class QuantityBox extends React.Component {
 
 	render() {
 		return (
-			<div className="quantity-box d-flex">
+			<div className="quantity-box d-flex" data-inventory={this.props.productStock} data-id={this.props.productId}>
 				<button
 					className="input-group-text bg-transparent border-right-0 rounded-lg rounded-right-0 border-dark flex-grow-0"
 					type="button"
@@ -112,7 +137,7 @@ export default class QuantityBox extends React.Component {
 					className="input-group-text bg-transparent border-left-0 rounded-lg rounded-left-0 border-dark flex-grow-0"
 					type="button"
 					aria-label="Add Quantity"
-					disabled={!this.props.editable}
+					disabled={!this.props.editable || this.state.lastStock}
 					onClick={this.onAddQuantity}
 					data-cy="cart-add-quantity-icon"
 				>
@@ -129,6 +154,10 @@ QuantityBox.propTypes = {
 	quantity: PropTypes.number.isRequired,
 	onChangeQuantity: PropTypes.func,
 	allowZero: PropTypes.bool,
+	productId: PropTypes.number,
+	productStock: PropTypes.number,
+	isLastStock: PropTypes.bool,
+	isPdp: PropTypes.bool,
 };
 
 QuantityBox.defaultProps = {
