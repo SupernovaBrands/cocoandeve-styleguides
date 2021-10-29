@@ -24,9 +24,19 @@ export default class QuantityBox extends React.Component {
 			return {
 				prevQuantity: nextProps.quantity,
 				quantity: `${nextProps.quantity}`,
+				lastStock: false,
 			};
 		}
-		return null;
+		if (nextProps.productStock <= prevState.quantity) {
+			return {
+				prevQuantity: nextProps.quantity,
+				quantity: `${nextProps.productStock}`,
+				lastStock: true,
+			};
+		}
+		return {
+			lastStock: false,
+		};
 	}
 
 	onAddQuantity = (e) => {
@@ -118,7 +128,7 @@ export default class QuantityBox extends React.Component {
 					className="input-group-text bg-transparent border-right-0 rounded-lg rounded-right-0 border-dark flex-grow-0"
 					type="button"
 					aria-label="Add Subtract"
-					disabled={!this.props.editable}
+					disabled={!this.props.editable || this.state.prevQuantity === 0}
 					onClick={this.onSubtractQuantity}
 					data-cy="cart-subtract-quantity-icon"
 				>
