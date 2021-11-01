@@ -325,7 +325,6 @@ $(document).ready(function () {
 	let lastScrollTop;
 	let scrollTop = 0;
 	const navbarEl = $('.main-header');
-	const cookiesBanner = $('.cookies-banner');
 
 	$(window).on('scroll', function () {
 		scrollTop = $(this).scrollTop();
