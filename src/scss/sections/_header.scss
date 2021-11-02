@@ -4,6 +4,9 @@
 
 .main-header {
 	z-index: $zindex-modal;
+	width: 100%;
+	top: 0;
+	position: relative;
 
 	.offcanvas-active & {
 		height: 100%;
@@ -60,24 +63,26 @@
 		}
 	}
 
-	&.position-fixed {
+	&.scrolled-down {
+		transform: translateY(-100%);
+		transition: all 0.1s ease-in-out;
+		position: fixed;
+	}
+
+	&.scrolled-up {
+		transition: all 0.4s ease-in-out, right 0s;
 		top: 0;
 		right: 0;
 		left: 0;
 		box-shadow: 0 calc-em(4) calc-em(5) 0 rgba(0, 0, 0, .06);
+		position: fixed;
 		@include media-breakpoint-down(md) {
 			align-items: flex-start;
 		}
-	}
 
-	&.scrolled-down {
-		transform: translateY(-100%);
-		transition: all 0.1s ease-in-out;
-	}
-
-	&.scrolled-up {
-		transform: translateY(0);
-		transition: all 0.4s ease-in-out, right 0s;
+		.announcement-bar {
+			display: none;
+		}
 	}
 
 	@include media-breakpoint-down(lg) {
@@ -228,26 +233,6 @@
 
 		&:hover {
 			color: $primary;
-		}
-	}
-}
-
-.cookies-banner-show {
-	.main-header,
-	.mobile-nav {
-		margin-top: ($font-size-xs + $line-height-base) * 3.5;
-		@include media-breakpoint-up('lg') {
-			margin-top: ($font-size-xs + $line-height-base) * 3.2;
-		}
-	}
-
-	&--expanded {
-		.main-header,
-		.mobile-nav {
-			margin-top: ($font-size-xs + $line-height-base) * 10.5;
-			@include media-breakpoint-up('lg') {
-				margin-top: ($font-size-xs + $line-height-base) * 7.5;
-			}
 		}
 	}
 }
