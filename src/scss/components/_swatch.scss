@@ -8,6 +8,10 @@
 	background-size: calc-em(30);
 	position: relative;
 
+	&:hover {
+		cursor: pointer;
+	}
+
 	&.oos {
 		opacity: .5;
 	}
