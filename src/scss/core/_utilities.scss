@@ -114,13 +114,16 @@
 
 // Percy
 @media only percy {
-	iframe,
-	[loading="lazy"] {
+	picture.embed-responsive,
+	[loading=lazy] {
 		visibility: hidden !important;
 	}
+	iframe,
+	.yotpo-bottomline
 	.react-yotpo-star,
 	.react-yotpo-widget,
-	.popup-email {
+	.popup-email,
+	.cookies-banner {
 		display: none !important;
 	}
 }
