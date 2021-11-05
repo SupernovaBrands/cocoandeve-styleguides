@@ -15,6 +15,8 @@ import products from '~mod/products.json';
 const productInfo = {};
 const productQuantities = {};
 const varIdtoHandle = {};
+window.heros_bundles = [];
+
 products.forEach((product) => {
 	const prices = {};
 	const comparePrices = {};
@@ -189,6 +191,17 @@ class SNCart {
 
 	getProductInfo(handle) {
 		return Promise.resolve(productInfo[handle]);
+	}
+
+	getVariantInProducts(varId) {
+		if (window.heros_bundles.length > 0) {
+			const product = window.heros_bundles.find((item) => item.variants.find((variant) => variant.var_id === varId));
+			if (product && product.variants.length > 0) {
+				return product.variants.find((variant) => variant.var_id === varId);
+			}
+			return false;
+		}
+		return false;
 	}
 
 	getItem(id) {

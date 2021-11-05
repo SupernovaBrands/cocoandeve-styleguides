@@ -500,6 +500,10 @@ export default class Cart extends React.Component {
 		});
 	}
 
+	getStock = (var_id) => {
+		return snCart.getVariantInProducts(var_id).inv;
+	}
+
 	handleKeyDown = (e) => {
 		if (e.keyCode === 13) {
 			e.preventDefault();
@@ -587,6 +591,8 @@ export default class Cart extends React.Component {
 											onChangeVariant={this.onChangeVariant}
 											onChangeQuantity={this.onChangeQuantity}
 											onRemoveItem={this.onRemoveItem}
+											productId={item.id}
+											productStock={this.getStock(item.id)}
 										/>
 									))}
 								</ul>

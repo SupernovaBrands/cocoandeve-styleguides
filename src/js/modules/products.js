@@ -1,4 +1,7 @@
 /* global screenLG */
+import React from 'react';
+import ReactDOM from 'react-dom';
+import QuantityBox from '~comp/quantity-box';
 import snCart from '~mod/sn-cart';
 import { popopOver } from '~mod/utils';
 
@@ -83,6 +86,38 @@ $('.product-form .variant-swatch').on('click', function () {
 	const imageSwatch = $(this).data('image');
 	const carouselIndicator = $('#product-image-carousel__indicator .product-image-carousel__indicator__item');
 
+	const variantInventory = $(this).data('inventory');
+	const variantId = $(this).data('id');
+	let qty = 1;
+	const qtyBoxes = document.querySelectorAll('.react-quantity-box');
+	let productStock = parseInt(variantInventory, 10);
+	const productId = parseInt(variantId, 10);
+	const qtyEl = $('.quantity-box input[type="number"]');
+
+	$(this).closest('.product-variant').find('input[name="product-variant"]').attr('data-id', variantId);
+
+	if (productStock && productId) {
+		const itemInCart = snCart.getItem(productId);
+
+		if (itemInCart) {
+			productStock -= itemInCart.quantity;
+		}
+	}
+	if (qtyEl) {
+		qty = parseInt(qtyEl.val(), 10);
+		if (productStock <= qty) {
+			qty = productStock;
+		}
+	}
+	qtyBoxes.forEach((el) => {
+		ReactDOM.render(
+			React.createElement(QuantityBox, {
+				name: 'quantity', quantity: qty, editable: true, allowZero: false, productStock, productId, isPdp: true,
+			}, null),
+			el,
+		);
+	});
+
 	// connecting variant swatch with image carousel
 	if (imageSwatch && carouselIndicator.length) {
 		const targetIndicator = carouselIndicator.find(`button img[src='${imageSwatch}']`);
@@ -106,6 +141,35 @@ $('.product-form .variant-swatch').on('click', function () {
 });
 
 $('.product-form [name=product-variant]').on('change', function () {
+	let qty = 1;
+	const variantInventory = $(this).data('inventory');
+	const variantId = $(this).attr('data-id');
+	const qtyBoxes = document.querySelectorAll('.react-quantity-box');
+	let productStock = parseInt(variantInventory, 10);
+	const productId = parseInt(variantId, 10);
+	const qtyEl = $('.quantity-box input[type="number"]');
+	if (productStock && productId) {
+		const itemInCart = snCart.getItem(productId);
+
+		if (itemInCart) {
+			productStock -= itemInCart.quantity;
+		}
+	}
+	if (qtyEl) {
+		qty = (parseInt(qtyEl.val(), 10) !== 0) ? parseInt(qtyEl.val(), 10) : 1;
+		if (productStock <= qty) {
+			qty = productStock;
+		}
+	}
+	qtyBoxes.forEach((el) => {
+		ReactDOM.render(
+			React.createElement(QuantityBox, {
+				name: 'quantity', quantity: qty, editable: true, allowZero: false, productStock, productId, isPdp: true,
+			}, null),
+			el,
+		);
+	});
+
 	const swatches = $(this).parent().find('.variant-swatch');
 	if (swatches.length > 1) {
 		mobileSwatch.find('.product-swatch-mobile__action').addClass('d-none');
