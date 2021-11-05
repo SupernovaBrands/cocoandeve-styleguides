@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	{{> html-head title="BFCM - Waitlist" }}
+</head>
+
+<body>
+	{{> sections/header}}
+	<section class="bfcm-waitlist">
+		<div class="container">
+			<div class="row m-0 align-items-center text-white py-2 py-lg-4 justify-content-center">
+				<figure class="col-lg-7 position-relative d-md-flex p-0 mb-0">
+					<noscript class="loading-lazy">
+						<picture class="embed-responsive">
+							<source srcset="../images/bfcm-img-desktop.png" media="(min-width: 992px)"/>
+							<img class="embed-responsive-item fit--cover fit-lg--contain" alt="/" src="../images/bfcm-img-mobile.png"
+							loading="lazy" />
+						</picture>
+					</noscript>
+					<figcaption class="bfcm-waitlist__title position-absolute w-100 h-100 d-flex flex-column justify-content-center text-center font-weight-bold px-4">
+						Biggest Sale of the Year!
+					</figcaption>
+				</figure>
+				<div class="col-lg-4 pt-0 px-2 pb-2 p-lg-0">
+					<form id="bfcm-waitlist__form" class="p-2 text-center border border-white rounded-lg">
+						<h1 class="mb-2">Join the Waitlist!</h1>
+						<ul class="d-inline-block list-check text-left">
+							<li>Up to 30% off</li>
+							<li>Get 24 hours early access</li>
+							<li>Storewide & Limited Stock</li>
+							<li>Win your wish list worth $500</li>
+						</ul>
+
+						<ul class="nav text-center tabs mb-2">
+							<li class="nav-item">
+								<a class="wl-nav-link nav-link active" data-toggle="pill" href="#tab-email" aria-selected="true" data-tab="email">Email</a>
+							</li>
+							<li class="nav-item">
+								<a class="wl-nav-link nav-link" data-toggle="pill" href="#tab-sms" aria-selected="false" data-tab="sms">SMS</a>
+							</li>
+						</ul>
+						<div class="tab-content" id="banner-tabContent">
+							<div class="tab-pane  show active" id="tab-email">
+								<div class="input-group form-group">
+									<input id="bfcm-waitlist__email" class="form-control" type="email" placeholder="Email address">
+								</div>
+								<div id="email-error" class="input-error text-danger font-size-xs">Please enter a valid email address</div>
+							</div>
+							<div class="tab-pane " id="tab-sms">
+								<div class="input-group form-group">
+									<label for="bfcm-waitlist__country" class="input-group-addon form-control">
+										<span class="position-absolute bfcm-waitlist__country-label align-items-center">+65 <img class="svg" src="icons/chevron-down.svg" replace-to-svg /></span>
+										<select id="bfcm-waitlist__country" class="custom-select">
+											<option value="" disabled="">Select Country</option>
+											<option value="KH" data-code="855">Cambodia</option>
+											<option value="HK" data-code="852">Hong Kong</option>
+											<option value="IL" data-code="972">Israel</option>
+											<option value="JP" data-code="81">Japan</option>
+											<option value="KR" data-code="82">South Korea</option>
+											<option value="LA" data-code="856">Laos</option>
+											<option value="MO" data-code="853">Macau</option>
+											<option value="MY" data-code="60">Malaysia</option>
+											<option value="MV" data-code="960">Maldives</option>
+											<option value="MM" data-code="95">Myanmar</option>
+											<option value="PG" data-code="675">Papua New Guinea</option>
+											<option value="PH" data-code="63">Philippines</option>
+											<option value="RE" data-code="262">Réunion</option>
+											<option value="RU" data-code="7">Russia</option>
+											<option value="SG" data-code="65" selected="">Singapore</option>
+											<option value="LK" data-code="94">Sri Lanka</option>
+											<option value="TW" data-code="886">Taiwan</option>
+											<option value="TR" data-code="90">Turkey</option>
+											<option value="VN" data-code="84">Vietnam</option>
+										</select>
+									</label>
+									<input id="bfcm-waitlist__phone" class="form-control" type="phone" placeholder="Phone number">
+								</div>
+								<div id="phone-error" class="input-error text-danger font-size-xs">Please enter a valid phone number</div>
+							</div>
+						</div>
+						<div class="d-flex form-group align-items-center justify-content-center my-2">
+							<div class="custom-control custom-checkbox col d-flex justify-content-center">
+								<input type="checkbox" name="tos" class="custom-control-input" id="bfcm-waitlist__toc" />
+								<label class="custom-control-label font-size-sm" for="bfcm-waitlist__toc">I agree to <a href="#">Privacy Policy & ToS</a></label>
+							</div>
+						</div>
+						<div id="toc-error" class="d-none input-error font-size-xs text-danger mb-2">You have not agreed to the Privacy Policy & ToS</div>
+						<div class="form-group mb-0">
+							<button id="bfcm-waitlist__submit" type="submit" class="btn btn-lg btn-primary btn-block">Sign me up</button>
+						</div>
+					</form>
+					<div class="d-none bfcm-waitlist__thank-you p-2 text-center border border-white rounded-lg">
+						<p class="text-primary">Thanks for signing up to our waitlist!</p>
+						<p>Stay tuned for updates on your early access, and our exclusive contest.</p>
+						<p class="font-weight-bold">Share the early VIP access with a friend</p>
+						<div class="d-flex flex-row justify-content-center">
+							<a class="bfcm-waitlist__shares bfcm-waitlist__shares--facebook" href="#">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="126.445 2.281 589 589">
+									<circle cx="420.945" cy="296.781" r="294.5" fill="#3c5a9a"/>
+									<path fill="#fff" d="M516.704 92.677h-65.239c-38.715 0-81.777 16.283-81.777 72.402.189 19.554 0 38.281 0 59.357H324.9v71.271h46.174v205.177h84.847V294.353h56.002l5.067-70.117h-62.531s.14-31.191 0-40.249c0-22.177 23.076-20.907 24.464-20.907 10.981 0 32.332.032 37.813 0V92.677h-.032z"/>
+								</svg>
+							</a>
+							<a class="bfcm-waitlist__shares bfcm-waitlist__shares--twitter ml-1" href="#">
+								<svg viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+									<path d="M512 256c0 141.4-114.6 256-256 256S0 397.4 0 256 114.6 0 256 0s256 114.6 256 256z" fill="#1DA1F2"/>
+									<path d="M358.5 202.9c3.3 73.9-51.8 156.2-149.3 156.2-29.7 0-57.3-8.7-80.5-23.6 27.9 3.3 55.7-4.4 77.8-21.7-23-.4-42.4-15.6-49.1-36.5 8.2 1.6 16.3 1.1 23.7-.9-25.3-5.1-42.7-27.8-42.1-52.2 7.1 3.9 15.2 6.3 23.8 6.6-23.4-15.6-30-46.5-16.3-70.1 25.9 31.8 64.6 52.7 108.3 54.9-7.6-32.9 17.3-64.5 51.2-64.5 15.1 0 28.7 6.4 38.3 16.6 12-2.4 23.2-6.7 33.4-12.7-3.9 12.3-12.3 22.6-23.1 29.1 10.6-1.3 20.7-4.1 30.2-8.3-7.2 10.5-16.1 19.7-26.3 27.1z" fill="#FFF"/>
+								</svg>
+							</a>
+							<a class="bfcm-waitlist__shares bfcm-waitlist__shares--whatsapp ml-1" href="#">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+									<path fill="#4CAF50" d="M8.002 0h-.004C3.587 0 0 3.588 0 8a7.94 7.94 0 0 0 1.523 4.689l-.997 2.972 3.075-.983A7.93 7.93 0 0 0 8.002 16C12.413 16 16 12.411 16 8s-3.587-8-7.998-8z"/>
+									<path fill="#FAFAFA" d="M12.657 11.297c-.193.545-.959.997-1.57 1.129-.418.089-.964.16-2.802-.602-2.351-.974-3.865-3.363-3.983-3.518-.113-.155-.95-1.265-.95-2.413s.583-1.707.818-1.947c.193-.197.512-.287.818-.287.099 0 .188.005.268.009.235.01.353.024.508.395.193.465.663 1.613.719 1.731.057.118.114.278.034.433-.075.16-.141.231-.259.367-.118.136-.23.24-.348.386-.108.127-.23.263-.094.498.136.23.606.997 1.298 1.613.893.795 1.617 1.049 1.876 1.157.193.08.423.061.564-.089.179-.193.4-.513.625-.828.16-.226.362-.254.574-.174.216.075 1.359.64 1.594.757.235.118.39.174.447.273.056.099.056.564-.137 1.11z"/>
+								</svg>
+							</a>
+							<a class="btn btn-outline-primary align-items-center mb-2 ml-1 bfcm-waitlist__shares bfcm-waitlist__shares bfcm-waitlist__shares--copy" href="#">Copy <img class="svg font-size-xs" src="icons/copy.svg" replace-to-svg /></a>
+						</div>
+					</div>
+					<div class="d-none bfcm-waitlist__thank-you p-2 text-center">
+						<a href="#" class="btn btn-lg btn-primary btn-block">Shop Coco & Eve</a>
+					</div>
+				</div>
+				<p class="col-12 font-size-xs text-lg-center p-2 p-lg-0 my-0 mt-lg-5">
+					*Customers who sign up to our waitlist through SMS or email address will be given 24 hours early access to our Black Friday sale, and a chance to be one of three to win $500 usd worth of products. Black Friday early access, and contest winners will be notified via email. Black Friday early access will run from November 24, 2020 12:00am PST to November 24, 2020 11:50pm PST. Black Friday offer cannot be used in conjunction with any other code, offer or promotion. Coco & Eve reserves the right to cancel or alter any promotion without prior notice. In the event of any dispute, the decision of Coco & Eve is final.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	{{> sections/footer}}
+
+	{{> js jquery=true bootstrap=true main=true }}
+</body>
+</html>
