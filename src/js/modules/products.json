@@ -14,26 +14,6 @@
     "published_scope": "web",
     "tags": "",
     "admin_graphql_api_id": "gid://shopify/Product/4625694621731",
-    "selling_plan_allocation": {
-      "price_adjustments": [
-          {"position":1,"price":4240}
-        ],
-      "price":4240,
-      "compare_at_price":5300,
-      "per_delivery_price":4240,
-      "selling_plan": { 
-        "id":449249315,
-        "name":"Delivery every 30 Days",
-        "description":null,
-        "options":[
-          {"name":"30 Day(s)","position":1,"value":"30 Day(s)"}
-        ],
-        "recurring_deliveries":true,
-        "price_adjustments":[
-          {"order_count":null,"position":1,"value_type":"percentage","value":20}
-        ]
-      }
-    },
     "variants": [
       {
         "id": 39376802644003,
@@ -2189,7 +2169,7 @@
   {
     "id": 4630922559523,
     "title": "Bronzing Face Drops",
-    "body_html": "<meta charset=\"utf-8\">\n<p>Get a gradual, natural, glowing tan whilst moisturising and plumping skin with this ultra-hydrating face tanner! Just add 2-3 tanning drops to your daily moisturizer and boost it with self-tan benefits so you can dial-up your Bali bronze drop-by-drop.</p>\n<ul>\n<li>Unique formula twins Bali Botanicals and super hydrating Hyaluronic Acids to increase skin elasticity, suppleness, and improve the appearance of fine lines and wrinkles.</li>\n<li>Non-drying, alcohol-free formula leaves your skin soft, supple, and sun-kissed for days</li>\n<li>Want a deeper, or softer glow? You’re in control. More drops = more glow!</li>\n<li>Dermatologist approved. Non-comedogenic</li>\n</ul>\n<ul></ul>",
+    "body_html": "<meta charset=\"utf-8\">\n<p>Get a gradual, natural, glowing tan whilst moisturising and plumping skin with this ultra-hydrating face tanner! Just add 2-3 tanning drops to your daily moisturizer and boost it with self-tan benefits so you can dial-up your Bali bronze drop-by-drop.</p>\n<ul>\n<li>Unique formula twins Bali Botanicals and super hydrating Hyaluronic Acids to increase skin elasticity, suppleness, and improve the appearance of fine lines and wrinkles.</li>\n<li>Non-drying, alcohol-free formula leaves your skin soft, supple, and sun-kissed for days</li>\n<li>Want a deeper, or softer glow? You’re in control. More drops = more glow!</li>\n<li>Dermatologist approved. Non-comedogenic</li>\n</ul>\n<ul></ul>",
     "vendor": "Coco & Eve DEV",
     "product_type": "HERO",
     "created_at": "2020-09-02T14:09:47+08:00",
@@ -3971,7 +3951,7 @@
   {
     "id": 6592917012515,
     "title": "FREE Beauty Sleep Pillow Case",
-    "body_html": "<div>\n<p class=\"p1\">Get your beauty sleep and wake up with silkier, smoother, stronger hair and skin!</p>\n</div>\n<div>\n<ul class=\"ul1\">\n<li>\n<strong>Silkier, smoother, stronger hair: </strong>Unlike traditional cotton pillowcases, this one doesn’t tug or pull at hair, meaning zero frizz and flyaways, just smooth, silky, soft hair.</li>\n<li class=\"li1\">\n<strong>Less tangles:</strong> <meta charset=\"utf-8\"> <span data-mce-fragment=\"1\">Made from a material so soft and gentle, hair glides over the surface meaning hair is protected for longer.</span>\n</li>\n<li class=\"li1\">\n<strong>Anti-aging:</strong> Less creases and marks left on your skin with this super soft friction-less material that doesn’t irritate.</li>\n<li class=\"li1\">\n<strong>Hydrating: </strong>Skin is glowy and plump by morning, kept hydrated all night thanks to a material that keeps your face cream in your skin and not on your sheets.</li>\n</ul>\n</div>",
+    "body_html": "<div>\n<p class=\"p1\">Get your beauty sleep and wake up with silkier, smoother, stronger hair and skin!</p>\n</div>\n<div>\n<ul class=\"ul1\">\n<li>\n<strong>Silkier, smoother, stronger hair: </strong>Unlike traditional cotton pillowcases, this one doesn’t tug or pull at hair, meaning zero frizz and flyaways, just smooth, silky, soft hair.</li>\n<li class=\"li1\">\n<strong>Less tangles:</strong> <meta charset=\"utf-8\"> <span data-mce-fragment=\"1\">Made from a material so soft and gentle, hair glides over the surface meaning hair is protected for longer.</span>\n</li>\n<li class=\"li1\">\n<strong>Anti-aging:</strong> Less creases and marks left on your skin with this super soft friction-less material that doesn’t irritate.</li>\n<li class=\"li1\">\n<strong>Hydrating: </strong>Skin is glowy and plump by morning, kept hydrated all night thanks to a material that keeps your face cream in your skin and not on your sheets.</li>\n</ul>\n</div>",
     "vendor": "Coco & Eve DEV",
     "product_type": "GWP",
     "created_at": "2021-08-03T11:56:05+08:00",
@@ -4343,7 +4323,7 @@
   {
     "id": 4841656320035,
     "title": "FREE Bounce Body Masque",
-    "body_html": "<meta charset=\"utf-8\"><meta charset=\"utf-8\"><meta charset=\"utf-8\">\n<p><b><strong></strong></b><b></b><span style=\"font-weight: 400;\">Rich in antioxidants and natural enzymes this body masque sculpts and tones skin giving it a natural glow with less stretchmarks and cellulite in just minutes.</span></p>\n<ul>\n<li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Reduces stretchmarks and cellulite. </span></li>\n<li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Great for the booty, belly, underboob and thighs.</span></li>\n<li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Volcanic clay absorbs excess oils for less body spots and redness.</span></li>\n<li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Smooths and softens for a plumper booty with more bounce.</span></li>\n<li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Green coffee extract increases circulation, stimulates and firms skin.</span></li>\n<li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Heaven-scent Dragonfruit and Lychee fragrance</span></li>\n</ul>",
+    "body_html": "<meta charset=\"utf-8\"><meta charset=\"utf-8\"><meta charset=\"utf-8\">\n<p><b><strong></strong></b><b></b><span style=\"font-weight: 400;\">Rich in antioxidants and natural enzymes this body masque sculpts and tones skin giving it a natural glow with less stretchmarks and cellulite in just minutes.</span></p>\n<ul>\n<li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Reduces stretchmarks and cellulite. </span></li>\n<li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Great for the booty, belly, underboob and thighs.</span></li>\n<li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Volcanic clay absorbs excess oils for less body spots and redness.</span></li>\n<li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Smooths and softens for a plumper booty with more bounce.</span></li>\n<li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Green coffee extract increases circulation, stimulates and firms skin.</span></li>\n<li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Heaven-scent Dragonfruit and Lychee fragrance</span></li>\n</ul>",
     "vendor": "Coco & Eve CA",
     "product_type": "GWP",
     "created_at": "2020-12-17T16:43:15+08:00",
@@ -7338,7 +7318,7 @@
   {
     "id": 4841657335843,
     "title": "FREE Silky Face Mask",
-    "body_html": "<div class=\"p-rich_text_section\">A must-have handbag essential this reusable face mask not only looks cute but its silky, gentle material won’t irritate skin meaning less maskne. </div>\n<ul data-indent=\"0\" class=\"p-rich_text_list p-rich_text_list__bullet\" data-stringify-type=\"unordered-list\">\n<li>\n<b data-stringify-type=\"bold\">Non-irritating: </b>Feels invisible on the skin.</li>\n<li>\n<b data-stringify-type=\"bold\">Built for comfort: </b>Adjustable nose wire and ear loops means a snug but comfortable fit so no more marks left on the skin. </li>\n<li>\n<b data-stringify-type=\"bold\">Breathable: </b>Lightweight, water-repellent material means less sweat and glasses steaming.</li>\n<li>\n<b data-stringify-type=\"bold\">Stylish: </b>Streamlined design that compliments any outfit.</li>\n</ul>\n<ul></ul>",
+    "body_html": "<div class=\"p-rich_text_section\">A must-have handbag essential this reusable face mask not only looks cute but its silky, gentle material won’t irritate skin meaning less maskne. </div>\n<ul data-indent=\"0\" class=\"p-rich_text_list p-rich_text_list__bullet\" data-stringify-type=\"unordered-list\">\n<li>\n<b data-stringify-type=\"bold\">Non-irritating: </b>Feels invisible on the skin.</li>\n<li>\n<b data-stringify-type=\"bold\">Built for comfort: </b>Adjustable nose wire and ear loops means a snug but comfortable fit so no more marks left on the skin. </li>\n<li>\n<b data-stringify-type=\"bold\">Breathable: </b>Lightweight, water-repellent material means less sweat and glasses steaming.</li>\n<li>\n<b data-stringify-type=\"bold\">Stylish: </b>Streamlined design that compliments any outfit.</li>\n</ul>\n<ul></ul>",
     "vendor": "Coco & Eve DEV",
     "product_type": "GWP",
     "created_at": "2020-12-17T17:00:13+08:00",
@@ -10569,7 +10549,7 @@
   {
     "id": 6606969110563,
     "title": "Hair Masque Sample",
-    "body_html": "<meta charset=\"utf-8\"><meta charset=\"utf-8\">\n<p><b></b><span>The ultimate body indulgence. This rich, nurturing formula is created using CelluShape</span><span>™️ Technology that leaves skin soft &amp; supple, while deeply hydrating, and firming from within.</span><br></p>\n<ul>\n<li><span style=\"font-weight: 400;\">Buttery-soft formula with virgin coconut oil smooths, softens &amp; brightens skin </span></li>\n<li><span style=\"font-weight: 400;\">Rich in antioxidants and amino acids to fight cellulite &amp; improve appearance of skin</span></li>\n<li><span style=\"font-weight: 400;\">Fast-absorbing, non-greasy formula</span></li>\n<li><span style=\"font-weight: 400;\">100% Vegan, No Nasties</span></li>\n<li><span style=\"font-weight: 400;\">Heaven-scent Dragonfruit and Lychee fragrance</span></li>\n</ul>",
+    "body_html": "<meta charset=\"utf-8\"><meta charset=\"utf-8\">\n<p><b></b><span>The ultimate body indulgence. This rich, nurturing formula is created using CelluShape</span><span>™️ Technology that leaves skin soft &amp; supple, while deeply hydrating, and firming from within.</span><br></p>\n<ul>\n<li><span style=\"font-weight: 400;\">Buttery-soft formula with virgin coconut oil smooths, softens &amp; brightens skin </span></li>\n<li><span style=\"font-weight: 400;\">Rich in antioxidants and amino acids to fight cellulite &amp; improve appearance of skin</span></li>\n<li><span style=\"font-weight: 400;\">Fast-absorbing, non-greasy formula</span></li>\n<li><span style=\"font-weight: 400;\">100% Vegan, No Nasties</span></li>\n<li><span style=\"font-weight: 400;\">Heaven-scent Dragonfruit and Lychee fragrance</span></li>\n</ul>",
     "vendor": "Coco & Eve CA",
     "product_type": "HERO",
     "created_at": "2021-09-22T18:17:28+08:00",
@@ -11985,7 +11965,7 @@
   {
     "id": 6594882043939,
     "title": "Microfibre Hair Towel Wrap",
-    "body_html": "<meta charset=\"utf-8\">\n<ul>\n<li>Soft, super water-absorbent microfibre hair towel wrap </li>\n<li>Dries hair quickly &amp; easily, drastically reducing blow dry time</li>\n<li>Combats frizz, friction &amp; fly-aways from regular towels</li>\n<li>Protects sheets when sleeping with our hair masque in overnight</li>\n<li>Recommended use: Apply hair masque to hair and cover with Towel Wrap for several hours (or overnight!) before rinsing for an intense boost of hydration</li>\n</ul>\n<p>Please note: Hair masque and Tangle Tamer not included.</p>\n<div id=\"eJOY__extension_root\" style=\"all: unset;\"></div>\n<div id=\"gtx-trans\" style=\"position: absolute; left: -43px; top: -18px;\">\n<div class=\"gtx-trans-icon\"></div>\n</div>",
+    "body_html": "<meta charset=\"utf-8\">\n<ul>\n<li>Soft, super water-absorbent microfibre hair towel wrap </li>\n<li>Dries hair quickly &amp; easily, drastically reducing blow dry time</li>\n<li>Combats frizz, friction &amp; fly-aways from regular towels</li>\n<li>Protects sheets when sleeping with our hair masque in overnight</li>\n<li>Recommended use: Apply hair masque to hair and cover with Towel Wrap for several hours (or overnight!) before rinsing for an intense boost of hydration</li>\n</ul>\n<p>Please note: Hair masque and Tangle Tamer not included.</p>\n<div id=\"eJOY__extension_root\" style=\"all: unset;\"></div>\n<div id=\"gtx-trans\" style=\"position: absolute; left: -43px; top: -18px;\">\n<div class=\"gtx-trans-icon\"></div>\n</div>",
     "vendor": "Coco and Eve",
     "product_type": "HERO",
     "created_at": "2021-08-05T16:13:52+08:00",
@@ -12087,6 +12067,147 @@
       {
         "id": 8476511633443,
         "product_id": 6594882043939,
+        "name": "Size",
+        "position": 1,
+        "values": [
+          "Deluxe Microfibre Hair Towel Wrap"
+        ]
+      },
+      {
+        "id": 8476511666211,
+        "product_id": 6594882043939,
+        "name": "Style",
+        "position": 2,
+        "values": [
+          "Girl Print: limited edition!",
+          "Leaf Print",
+          "Pool Print: limited edition!"
+        ]
+      }
+    ],
+    "images": [
+      {
+        "id": 28546505932835,
+        "product_id": 6594882043939,
+        "position": 1,
+        "created_at": "2021-08-05T16:13:52+08:00",
+        "updated_at": "2021-08-05T16:13:52+08:00",
+        "alt": null,
+        "width": 1000,
+        "height": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0286/1327/9779/products/LAV_Wrap1.jpg?v=1628151232",
+        "variant_ids": [
+          39410426511395
+        ],
+        "admin_graphql_api_id": "gid://shopify/ProductImage/28546505932835"
+      },
+      {
+        "id": 28546505965603,
+        "product_id": 6594882043939,
+        "position": 2,
+        "created_at": "2021-08-05T16:13:52+08:00",
+        "updated_at": "2021-08-05T16:13:52+08:00",
+        "alt": null,
+        "width": 1000,
+        "height": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0286/1327/9779/products/LAV_Wrap2.jpg?v=1628151232",
+        "variant_ids": [],
+        "admin_graphql_api_id": "gid://shopify/ProductImage/28546505965603"
+      },
+      {
+        "id": 28546505998371,
+        "product_id": 6594882043939,
+        "position": 3,
+        "created_at": "2021-08-05T16:13:52+08:00",
+        "updated_at": "2021-08-05T16:13:52+08:00",
+        "alt": null,
+        "width": 1000,
+        "height": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0286/1327/9779/products/LAV_Wrap3.jpg?v=1628151232",
+        "variant_ids": [
+          39410426478627
+        ],
+        "admin_graphql_api_id": "gid://shopify/ProductImage/28546505998371"
+      },
+      {
+        "id": 28546506031139,
+        "product_id": 6594882043939,
+        "position": 4,
+        "created_at": "2021-08-05T16:13:52+08:00",
+        "updated_at": "2021-08-05T16:13:52+08:00",
+        "alt": null,
+        "width": 1000,
+        "height": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0286/1327/9779/products/LAV_Wrap4.jpg?v=1628151232",
+        "variant_ids": [],
+        "admin_graphql_api_id": "gid://shopify/ProductImage/28546506031139"
+      }
+    ],
+    "image": {
+      "id": 28546505932835,
+      "product_id": 6594882043939,
+      "position": 1,
+      "created_at": "2021-08-05T16:13:52+08:00",
+      "updated_at": "2021-08-05T16:13:52+08:00",
+      "alt": null,
+      "width": 1000,
+      "height": 1000,
+      "src": "https://cdn.shopify.com/s/files/1/0286/1327/9779/products/LAV_Wrap1.jpg?v=1628151232",
+      "variant_ids": [
+        39410426511395
+      ],
+      "admin_graphql_api_id": "gid://shopify/ProductImage/28546505932835"
+    }
+  },
+  {
+    "id": 4818971557923,
+    "title": "Mini Hair Kit",
+    "body_html": "<p data-mce-fragment=\"1\"><span style=\"font-weight: 400;\" data-mce-fragment=\"1\" data-mce-style=\"font-weight: 400;\">All you need for instantly healthy, nourished locks. Our Mini Hair Kit cuts your hair masking session to just 5 minutes thanks to our ultra-cute, benefit-boosting shower cap. The perfect coco hit to amazing hair results!</span> </p>\n<p data-mce-fragment=\"1\"><span style=\"font-weight: 400;\" data-mce-fragment=\"1\" data-mce-style=\"font-weight: 400;\">This kit includes:</span></p>\n<ul data-mce-fragment=\"1\">\n<li style=\"font-weight: 400;\" data-mce-fragment=\"1\" data-mce-style=\"font-weight: 400;\"><b data-mce-fragment=\"1\">1x Super Nourishing Hair Masque (60ml)</b></li>\n<li style=\"font-weight: 400;\" data-mce-fragment=\"1\" data-mce-style=\"font-weight: 400;\"><b data-mce-fragment=\"1\">1x Moisture Boost Shower Cap</b></li>\n</ul>",
+    "vendor": "Coco & Eve DEV",
+    "product_type": "BUNDLE",
+    "created_at": "2020-10-27T12:58:59+08:00",
+    "handle": "mini-hair-kit",
+    "updated_at": "2021-09-28T02:29:26+08:00",
+    "published_at": "2021-07-08T16:13:26+08:00",
+    "template_suffix": "",
+    "status": "active",
+    "published_scope": "web",
+    "tags": "",
+    "admin_graphql_api_id": "gid://shopify/Product/4818971557923",
+    "variants": [
+      {
+        "id": 32929693335587,
+        "product_id": 4818971557923,
+        "title": "1x Mini Hair Kit",
+        "price": "100.00",
+        "sku": "CE0000802040",
+        "position": 1,
+        "inventory_policy": "deny",
+        "compare_at_price": null,
+        "fulfillment_service": "manual",
+        "inventory_management": "shopify",
+        "option1": "1x Mini Hair Kit",
+        "option2": null,
+        "option3": null,
+        "created_at": "2020-10-27T12:58:59+08:00",
+        "updated_at": "2021-01-18T15:59:02+08:00",
+        "taxable": true,
+        "barcode": "",
+        "grams": 0,
+        "image_id": null,
+        "weight": 0,
+        "weight_unit": "kg",
+        "inventory_item_id": 34677985378339,
+        "inventory_quantity": 0,
+        "old_inventory_quantity": 0,
+        "requires_shipping": true,
+        "admin_graphql_api_id": "gid://shopify/ProductVariant/32929693335587"
+      }
+    ],
+    "options": [
+      {
+        "id": 6257161994275,
+        "product_id": 4818971557923,
         "name": "Size",
         "position": 1,
         "values": [
@@ -15138,7 +15259,7 @@
   {
     "id": 6574068105251,
     "title": "Super Hydrating Cream Conditioner",
-    "body_html": "<meta charset=\"utf-8\">\n<p data-mce-fragment=\"1\"><span data-mce-fragment=\"1\">Instant hydration without the weigh down. Visible gloss, shine &amp; smoothness, perfect for all hair types.</span></p>\n<ul data-mce-fragment=\"1\">\n<li data-mce-fragment=\"1\">\n<p data-mce-fragment=\"1\"><span data-mce-fragment=\"1\">26 times more hydration with ResistHyal<sup data-mce-fragment=\"1\">TM</sup> Hyaluronic Acid technology &amp; no devolumizing silicones.</span></p>\n</li>\n<li data-mce-fragment=\"1\">\n<p data-mce-fragment=\"1\"><span data-mce-fragment=\"1\"></span>Instant hair mask results with 3 times thicker texture than a regular conditioner for deep conditioning.</p>\n</li>\n<li data-mce-fragment=\"1\">\n<p data-mce-fragment=\"1\"><span data-mce-fragment=\"1\"></span><span data-mce-fragment=\"1\">Instantly detangles for less breakage whilst pea proteins repair &amp; reduce damage by 65% with split ends sealed.</span></p>\n</li>\n<li data-mce-fragment=\"1\">\n<p data-mce-fragment=\"1\"><span data-mce-fragment=\"1\"></span><span data-mce-fragment=\"1\">Visibly glossier, shinier &amp; smoother hair.</span></p>\n</li>\n<li data-mce-fragment=\"1\">\n<p data-mce-fragment=\"1\"><span data-mce-fragment=\"1\"></span><span data-mce-fragment=\"1\">Iconic Coconut &amp; Fig scent takes your hair to paradise.</span></p>\n</li>\n</ul>",
+    "body_html": "<meta charset=\"utf-8\">\n<p data-mce-fragment=\"1\"><span data-mce-fragment=\"1\">Instant hydration without the weigh down. Visible gloss, shine &amp; smoothness, perfect for all hair types.</span></p>\n<ul data-mce-fragment=\"1\">\n<li data-mce-fragment=\"1\">\n<p data-mce-fragment=\"1\"><span data-mce-fragment=\"1\">26 times more hydration with ResistHyal<sup data-mce-fragment=\"1\">TM</sup> Hyaluronic Acid technology &amp; no devolumizing silicones.</span></p>\n</li>\n<li data-mce-fragment=\"1\">\n<p data-mce-fragment=\"1\"><span data-mce-fragment=\"1\"></span>Instant hair mask results with 3 times thicker texture than a regular conditioner for deep conditioning.</p>\n</li>\n<li data-mce-fragment=\"1\">\n<p data-mce-fragment=\"1\"><span data-mce-fragment=\"1\"></span><span data-mce-fragment=\"1\">Instantly detangles for less breakage whilst pea proteins repair &amp; reduce damage by 65% with split ends sealed.</span></p>\n</li>\n<li data-mce-fragment=\"1\">\n<p data-mce-fragment=\"1\"><span data-mce-fragment=\"1\"></span><span data-mce-fragment=\"1\">Visibly glossier, shinier &amp; smoother hair.</span></p>\n</li>\n<li data-mce-fragment=\"1\">\n<p data-mce-fragment=\"1\"><span data-mce-fragment=\"1\"></span><span data-mce-fragment=\"1\">Iconic Coconut &amp; Fig scent takes your hair to paradise.</span></p>\n</li>\n</ul>",
     "vendor": "Coco & Eve DEV",
     "product_type": "HERO",
     "created_at": "2021-06-09T12:32:48+08:00",
@@ -15291,7 +15412,7 @@
   {
     "id": 6574067941411,
     "title": "Super Hydrating Shampoo",
-    "body_html": "<meta charset=\"utf-8\">\n<p data-mce-fragment=\"1\"><span data-mce-fragment=\"1\">Clean, hydrated, healthy hair from the first wash! Sulfate-free, triple cleansing formula leaves locks fresher for longer without drying, or stripping out color.</span></p>\n<ul data-mce-fragment=\"1\">\n<li data-mce-fragment=\"1\"><span data-mce-fragment=\"1\">26 times more hydration ResistHyal<sup data-mce-fragment=\"1\">TM </sup>Hyaluronic Acid technology &amp; no devolumizing silicones.</span></li>\n<li data-mce-fragment=\"1\">Hair is cleaner for longer with a rich lather &amp; zero drying sulfates.</li>\n<li data-mce-fragment=\"1\">7-in-1 formula for instant hydration, shine, softness, strength, volume &amp; no split ends or frizz.</li>\n<li data-mce-fragment=\"1\">Infused with fruit enzymes for a super clean wash without drying out your hair.</li>\n<li data-mce-fragment=\"1\">Iconic Coconut &amp; Fig scent takes your hair to paradise.</li>\n</ul>",
+    "body_html": "<meta charset=\"utf-8\">\n<p data-mce-fragment=\"1\"><span data-mce-fragment=\"1\">Clean, hydrated, healthy hair from the first wash! Sulfate-free, triple cleansing formula leaves locks fresher for longer without drying, or stripping out color.</span></p>\n<ul data-mce-fragment=\"1\">\n<li data-mce-fragment=\"1\"><span data-mce-fragment=\"1\">26 times more hydration ResistHyal<sup data-mce-fragment=\"1\">TM </sup>Hyaluronic Acid technology &amp; no devolumizing silicones.</span></li>\n<li data-mce-fragment=\"1\">Hair is cleaner for longer with a rich lather &amp; zero drying sulfates.</li>\n<li data-mce-fragment=\"1\">7-in-1 formula for instant hydration, shine, softness, strength, volume &amp; no split ends or frizz.</li>\n<li data-mce-fragment=\"1\">Infused with fruit enzymes for a super clean wash without drying out your hair.</li>\n<li data-mce-fragment=\"1\">Iconic Coconut &amp; Fig scent takes your hair to paradise.</li>\n</ul>",
     "vendor": "Coco & Eve DEV",
     "product_type": "HERO",
     "created_at": "2021-06-09T12:30:57+08:00",
@@ -15380,6 +15501,611 @@
         "position": 1,
         "created_at": "2021-06-21T11:46:07+08:00",
         "updated_at": "2021-06-21T11:46:07+08:00",
+        "alt": null,
+        "width": 1000,
+        "height": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0286/1327/9779/products/Shamp-web.jpg?v=1624247167",
+        "variant_ids": [],
+        "admin_graphql_api_id": "gid://shopify/ProductImage/28377578897443"
+      },
+      {
+        "id": 28377578930211,
+        "product_id": 6574067941411,
+        "position": 2,
+        "created_at": "2021-06-21T11:46:09+08:00",
+        "updated_at": "2021-06-21T11:46:09+08:00",
+        "alt": null,
+        "width": 1000,
+        "height": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0286/1327/9779/products/Concept4B_5d6d1720-6234-451f-a299-83ee2079a129.jpg?v=1624247169",
+        "variant_ids": [],
+        "admin_graphql_api_id": "gid://shopify/ProductImage/28377578930211"
+      },
+      {
+        "id": 28377578962979,
+        "product_id": 6574067941411,
+        "position": 3,
+        "created_at": "2021-06-21T11:46:10+08:00",
+        "updated_at": "2021-06-21T11:46:10+08:00",
+        "alt": null,
+        "width": 1000,
+        "height": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0286/1327/9779/products/PDP_SC_1_86e86adf-b299-43e3-9ba5-cdb2d83f3102.jpg?v=1624247170",
+        "variant_ids": [],
+        "admin_graphql_api_id": "gid://shopify/ProductImage/28377578962979"
+      },
+      {
+        "id": 28377578995747,
+        "product_id": 6574067941411,
+        "position": 4,
+        "created_at": "2021-06-21T11:46:12+08:00",
+        "updated_at": "2021-06-21T11:46:12+08:00",
+        "alt": null,
+        "width": 1000,
+        "height": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0286/1327/9779/products/PDP_SC_7_c3dddfc3-1aad-43b5-8b28-6c6eca1aa67e.jpg?v=1624247172",
+        "variant_ids": [],
+        "admin_graphql_api_id": "gid://shopify/ProductImage/28377578995747"
+      }
+    ],
+    "image": {
+      "id": 28377578897443,
+      "product_id": 6574067941411,
+      "position": 1,
+      "created_at": "2021-06-21T11:46:07+08:00",
+      "updated_at": "2021-06-21T11:46:07+08:00",
+      "alt": null,
+      "width": 1000,
+      "height": 1000,
+      "src": "https://cdn.shopify.com/s/files/1/0286/1327/9779/products/Shamp-web.jpg?v=1624247167",
+      "variant_ids": [],
+      "admin_graphql_api_id": "gid://shopify/ProductImage/28377578897443"
+    }
+  },
+  {
+    "id": 6574068170787,
+    "title": "Super Hydrating Shampoo & Conditioner Set",
+    "body_html": "<meta charset=\"utf-8\">\n<div class=\"c-message_kit__gutter\" data-mce-fragment=\"1\">\n<div data-qa=\"message_content\" class=\"c-message_kit__gutter__right\" data-mce-fragment=\"1\">\n<div class=\"c-message_kit__blocks c-message_kit__blocks--rich_text\" data-mce-fragment=\"1\">\n<div class=\"c-message__message_blocks c-message__message_blocks--rich_text\" data-mce-fragment=\"1\">\n<div data-qa=\"block-kit-renderer\" class=\"p-block_kit_renderer\" data-mce-fragment=\"1\">\n<div class=\"p-block_kit_renderer__block_wrapper p-block_kit_renderer__block_wrapper--first\" data-mce-fragment=\"1\">\n<div dir=\"auto\" class=\"p-rich_text_block\" data-mce-fragment=\"1\">\n<div class=\"p-rich_text_section\" data-mce-fragment=\"1\">Get your healthiest hair ever with our new Super Hydrating Shampoo &amp; Cream Conditioner! Instantly boost hydration, shine, softness, strength, volume whilst reducing split ends &amp; frizz.</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n<ul data-mce-fragment=\"1\">\n<li data-mce-fragment=\"1\">\n<b data-stringify-type=\"bold\" data-mce-fragment=\"1\">1 x Super Hydrating Shampoo (8.4 fl. oz.):<span data-mce-fragment=\"1\"> </span></b><span data-mce-fragment=\"1\">Get virgin hair everyday &amp; your cleanest hair ever thanks to a sulfate free, triple cleansing formula that leaves locks fresher for longer!</span>\n</li>\n<li data-mce-fragment=\"1\">\n<b data-stringify-type=\"bold\" data-mce-fragment=\"1\">1 x Super Hydrating Cream Conditioner (8.4 fl. oz.):</b><span data-mce-fragment=\"1\"> Twice as thick as a regular conditioner with ResistHyal<sup data-mce-fragment=\"1\">TM</sup> Hyaluronic Acid technology for 26 times more hydration giving instant hair mask results without de-volumizing silicones.<br data-mce-fragment=\"1\"></span>\n</li>\n<li data-mce-fragment=\"1\"><span data-mce-fragment=\"1\"><strong data-mce-fragment=\"1\">1 x Shampoo Brush: </strong>Leaves your hair cleaner than ever before whilst gently exfoliating &amp; massaging the scalp creating a healthy environment for hair growth.</span></li>\n</ul>",
+    "vendor": "Coco & Eve DEV",
+    "product_type": "BUNDLE",
+    "created_at": "2021-06-09T12:33:17+08:00",
+    "handle": "shampoo-conditioner-set",
+    "updated_at": "2021-09-28T09:56:28+08:00",
+    "published_at": "2021-06-15T14:02:36+08:00",
+    "template_suffix": "",
+    "status": "active",
+    "published_scope": "web",
+    "tags": "",
+    "admin_graphql_api_id": "gid://shopify/Product/6574068170787",
+    "variants": [
+      {
+        "id": 39350321184803,
+        "product_id": 6574068170787,
+        "title": "Super Hydrating Shampoo & Conditioner",
+        "price": "53.00",
+        "sku": "CE0001792020",
+        "position": 1,
+        "inventory_policy": "deny",
+        "compare_at_price": "65.80",
+        "fulfillment_service": "manual",
+        "inventory_management": "shopify",
+        "option1": "Super Hydrating Shampoo & Conditioner",
+        "option2": null,
+        "option3": null,
+        "created_at": "2021-06-09T12:33:17+08:00",
+        "updated_at": "2021-09-25T12:10:30+08:00",
+        "taxable": true,
+        "barcode": "",
+        "grams": 0,
+        "image_id": null,
+        "weight": 0,
+        "weight_unit": "kg",
+        "inventory_item_id": 41444198514723,
+        "inventory_quantity": 4,
+        "old_inventory_quantity": 4,
+        "requires_shipping": true,
+        "admin_graphql_api_id": "gid://shopify/ProductVariant/39350321184803"
+      }
+    ],
+    "options": [
+      {
+        "id": 8451186163747,
+        "product_id": 6574068170787,
+        "name": "Size",
+        "position": 1,
+        "values": [
+          "Super Hydrating Shampoo & Conditioner"
+        ]
+      }
+    ],
+    "images": [
+      {
+        "id": 28377578831907,
+        "product_id": 6574068170787,
+        "position": 1,
+        "created_at": "2021-06-21T11:44:17+08:00",
+        "updated_at": "2021-06-21T11:44:17+08:00",
+        "alt": null,
+        "width": 1000,
+        "height": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0286/1327/9779/products/PDP_SC_1_3ca35cab-9f03-4c8f-b3a8-3b0e995b8df8.jpg?v=1624247057",
+        "variant_ids": [],
+        "admin_graphql_api_id": "gid://shopify/ProductImage/28377578831907"
+      },
+      {
+        "id": 28377578799139,
+        "product_id": 6574068170787,
+        "position": 2,
+        "created_at": "2021-06-21T11:44:17+08:00",
+        "updated_at": "2021-06-21T11:44:17+08:00",
+        "alt": null,
+        "width": 1000,
+        "height": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0286/1327/9779/products/PDP_SC_7_4f23f173-c694-45d6-85d0-1482d9b68ac8.jpg?v=1624247057",
+        "variant_ids": [],
+        "admin_graphql_api_id": "gid://shopify/ProductImage/28377578799139"
+      },
+      {
+        "id": 28377578864675,
+        "product_id": 6574068170787,
+        "position": 3,
+        "created_at": "2021-06-21T11:44:22+08:00",
+        "updated_at": "2021-06-21T11:44:22+08:00",
+        "alt": null,
+        "width": 1000,
+        "height": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0286/1327/9779/products/Bundle_7e95c550-851a-44a3-a4c1-6b88d1236757.jpg?v=1624247062",
+        "variant_ids": [],
+        "admin_graphql_api_id": "gid://shopify/ProductImage/28377578864675"
+      }
+    ],
+    "image": {
+      "id": 28377578831907,
+      "product_id": 6574068170787,
+      "position": 1,
+      "created_at": "2021-06-21T11:44:17+08:00",
+      "updated_at": "2021-06-21T11:44:17+08:00",
+      "alt": null,
+      "width": 1000,
+      "height": 1000,
+      "src": "https://cdn.shopify.com/s/files/1/0286/1327/9779/products/PDP_SC_1_3ca35cab-9f03-4c8f-b3a8-3b0e995b8df8.jpg?v=1624247057",
+      "variant_ids": [],
+      "admin_graphql_api_id": "gid://shopify/ProductImage/28377578831907"
+    }
+  },
+  {
+    "id": 4543112708131,
+    "title": "Tangle Tamer",
+    "body_html": "<meta charset=\"utf-8\"><meta charset=\"utf-8\">\n<ul>\n<li>Unique 2-tiered bristle technology</li>\n<li>Works for all hair types! Straight, wavy, curly, kinky--we gotchu</li>\n<li>Gently detangles hair, and minimizes breakage and damage</li>\n<li>Maximizes the application of our masque and in the aftercare of your new healthy glossy locks</li>\n</ul>",
+    "vendor": "Coco & Eve CA",
+    "product_type": "HERO",
+    "created_at": "2020-05-13T10:35:48+08:00",
+    "handle": "tangle-tamer-brush",
+    "updated_at": "2021-09-28T02:30:04+08:00",
+    "published_at": "2021-06-21T13:45:31+08:00",
+    "template_suffix": "",
+    "status": "active",
+    "published_scope": "web",
+    "tags": "Hair",
+    "admin_graphql_api_id": "gid://shopify/Product/4543112708131",
+    "variants": [
+      {
+        "id": 39375507030051,
+        "product_id": 4543112708131,
+        "title": "Tangle Tamer",
+        "price": "9.90",
+        "sku": "CE0000022060",
+        "position": 1,
+        "inventory_policy": "deny",
+        "compare_at_price": null,
+        "fulfillment_service": "manual",
+        "inventory_management": "shopify",
+        "option1": "Tangle Tamer",
+        "option2": null,
+        "option3": null,
+        "created_at": "2021-07-07T15:13:04+08:00",
+        "updated_at": "2021-09-22T01:32:46+08:00",
+        "taxable": true,
+        "barcode": "8886482910295",
+        "grams": 0,
+        "image_id": null,
+        "weight": 0,
+        "weight_unit": "kg",
+        "inventory_item_id": 41469434331171,
+        "inventory_quantity": 99,
+        "old_inventory_quantity": 99,
+        "requires_shipping": true,
+        "admin_graphql_api_id": "gid://shopify/ProductVariant/39375507030051"
+      },
+      {
+        "id": 39375507062819,
+        "product_id": 4543112708131,
+        "title": "Tangle Tamer Value Set",
+        "price": "19.90",
+        "sku": "CE0000022025",
+        "position": 2,
+        "inventory_policy": "deny",
+        "compare_at_price": "39.60",
+        "fulfillment_service": "manual",
+        "inventory_management": "shopify",
+        "option1": "Tangle Tamer Value Set",
+        "option2": null,
+        "option3": null,
+        "created_at": "2021-07-07T15:13:04+08:00",
+        "updated_at": "2021-07-12T15:27:46+08:00",
+        "taxable": true,
+        "barcode": "",
+        "grams": 0,
+        "image_id": null,
+        "weight": 0,
+        "weight_unit": "kg",
+        "inventory_item_id": 41469434363939,
+        "inventory_quantity": 100,
+        "old_inventory_quantity": 100,
+        "requires_shipping": true,
+        "admin_graphql_api_id": "gid://shopify/ProductVariant/39375507062819"
+      }
+    ],
+    "options": [
+      {
+        "id": 5945431588899,
+        "product_id": 4543112708131,
+        "name": "Size",
+        "position": 1,
+        "values": [
+          "Tangle Tamer",
+          "Tangle Tamer Value Set"
+        ]
+      }
+    ],
+    "images": [
+      {
+        "id": 15301625118755,
+        "product_id": 4543112708131,
+        "position": 1,
+        "created_at": "2020-05-13T10:35:48+08:00",
+        "updated_at": "2020-05-13T10:35:48+08:00",
+        "alt": null,
+        "width": 1080,
+        "height": 1080,
+        "src": "https://cdn.shopify.com/s/files/1/0286/1327/9779/products/tamerproductshot.jpg?v=1589337348",
+        "variant_ids": [],
+        "admin_graphql_api_id": "gid://shopify/ProductImage/15301625118755"
+      },
+      {
+        "id": 15301625151523,
+        "product_id": 4543112708131,
+        "position": 2,
+        "created_at": "2020-05-13T10:35:48+08:00",
+        "updated_at": "2020-05-13T10:35:48+08:00",
+        "alt": null,
+        "width": 1080,
+        "height": 1080,
+        "src": "https://cdn.shopify.com/s/files/1/0286/1327/9779/products/tamerstilllife.jpg?v=1589337348",
+        "variant_ids": [],
+        "admin_graphql_api_id": "gid://shopify/ProductImage/15301625151523"
+      },
+      {
+        "id": 15301625184291,
+        "product_id": 4543112708131,
+        "position": 3,
+        "created_at": "2020-05-13T10:35:48+08:00",
+        "updated_at": "2020-05-13T10:35:48+08:00",
+        "alt": null,
+        "width": 1080,
+        "height": 1080,
+        "src": "https://cdn.shopify.com/s/files/1/0286/1327/9779/products/Screenshot-2020-05-07-at-8.35.34-AM.jpg?v=1589337348",
+        "variant_ids": [],
+        "admin_graphql_api_id": "gid://shopify/ProductImage/15301625184291"
+      }
+    ],
+    "image": {
+      "id": 15301625118755,
+      "product_id": 4543112708131,
+      "position": 1,
+      "created_at": "2020-05-13T10:35:48+08:00",
+      "updated_at": "2020-05-13T10:35:48+08:00",
+      "alt": null,
+      "width": 1080,
+      "height": 1080,
+      "src": "https://cdn.shopify.com/s/files/1/0286/1327/9779/products/tamerproductshot.jpg?v=1589337348",
+      "variant_ids": [],
+      "admin_graphql_api_id": "gid://shopify/ProductImage/15301625118755"
+    }
+  },
+  {
+    "id": 4631342219299,
+    "title": "Tanning Goddess",
+    "body_html": "<strong></strong>\n<p><span style=\"font-weight: 400;\">Everything you need to get you glowing like a bronzed goddess. Our iconic, fast-acting, award-winning fake tan with 3 must-have tanning accessories for a perfect, natural tan every time.</span></p>\n<ul>\n<li style=\"font-weight: 400;\">\n<b>1 x Sunny Honey Bronzing Foam: </b><span style=\"font-weight: 400;\">Anti-cellulite, anti-ageing self tan with zero nasties. Created using unique CellushapeTM formula to hydrate and firm the skin.</span>\n</li>\n<li style=\"font-weight: 400;\">\n<b>1x Deluxe Kabuki Brush:</b> <span style=\"font-weight: 400;\">Soft, fine bristles to sweep the formula over those tricky-to-tan areas such as the hands, feet, ears and face helping you achieve an even tan from head to toe!</span>\n</li>\n<li style=\"font-weight: 400;\">\n<b>1x Soft Velvet Tanning Mitt: </b><span style=\"font-weight: 400;\">Helps with the application of the tan to ensure the formula is evenly spread and doesn’t gather on dry areas of the skin or on your hands!</span>\n</li>\n<li style=\"font-weight: 400;\">\n<b>1x Deluxe Exfoliating Mitt:</b> <span style=\"font-weight: 400;\">Brushes away dead skin cells, to prep your skin for a fresh application of Coco &amp; Eve Bali Bronzing Foam.</span>\n</li>\n<li style=\"font-weight: 400;\">\n<b>1x Limited Edition Self-Tan Bag: </b><span style=\"font-weight: 400;\">Soft cotton, multi-purpose bag, perfect for your on-the-glow sessions</span>\n</li>\n</ul>",
+    "vendor": "Coco and Eve",
+    "product_type": "BUNDLE",
+    "created_at": "2020-09-03T14:13:18+08:00",
+    "handle": "tanning-goddess",
+    "updated_at": "2021-09-28T02:30:06+08:00",
+    "published_at": "2020-09-03T14:13:17+08:00",
+    "template_suffix": "tanning-goddess",
+    "status": "active",
+    "published_scope": "web",
+    "tags": "Tan",
+    "admin_graphql_api_id": "gid://shopify/Product/4631342219299",
+    "variants": [
+      {
+        "id": 32364706332707,
+        "product_id": 4631342219299,
+        "title": "Tanning Goddess Kit / Medium",
+        "price": "59.90",
+        "sku": "CE0000852010",
+        "position": 1,
+        "inventory_policy": "deny",
+        "compare_at_price": "96.80",
+        "fulfillment_service": "manual",
+        "inventory_management": "shopify",
+        "option1": "Tanning Goddess Kit",
+        "option2": "Medium",
+        "option3": null,
+        "created_at": "2020-09-03T14:13:19+08:00",
+        "updated_at": "2021-07-09T10:54:34+08:00",
+        "taxable": true,
+        "barcode": "8886482910059",
+        "grams": 0,
+        "image_id": null,
+        "weight": 0,
+        "weight_unit": "kg",
+        "inventory_item_id": 34171941552163,
+        "inventory_quantity": 17,
+        "old_inventory_quantity": 17,
+        "requires_shipping": true,
+        "admin_graphql_api_id": "gid://shopify/ProductVariant/32364706332707"
+      },
+      {
+        "id": 32364706365475,
+        "product_id": 4631342219299,
+        "title": "Tanning Goddess Kit / Dark",
+        "price": "59.90",
+        "sku": "CE0000852020",
+        "position": 2,
+        "inventory_policy": "deny",
+        "compare_at_price": "96.80",
+        "fulfillment_service": "manual",
+        "inventory_management": "shopify",
+        "option1": "Tanning Goddess Kit",
+        "option2": "Dark",
+        "option3": null,
+        "created_at": "2020-09-03T14:13:19+08:00",
+        "updated_at": "2021-07-09T10:54:34+08:00",
+        "taxable": true,
+        "barcode": "8886482910059",
+        "grams": 0,
+        "image_id": null,
+        "weight": 0,
+        "weight_unit": "kg",
+        "inventory_item_id": 34171941584931,
+        "inventory_quantity": 49,
+        "old_inventory_quantity": 49,
+        "requires_shipping": true,
+        "admin_graphql_api_id": "gid://shopify/ProductVariant/32364706365475"
+      },
+      {
+        "id": 32364706398243,
+        "product_id": 4631342219299,
+        "title": "Tanning Goddess Kit / Ultra Dark",
+        "price": "59.90",
+        "sku": "CE0000852030",
+        "position": 3,
+        "inventory_policy": "deny",
+        "compare_at_price": "96.80",
+        "fulfillment_service": "manual",
+        "inventory_management": "shopify",
+        "option1": "Tanning Goddess Kit",
+        "option2": "Ultra Dark",
+        "option3": null,
+        "created_at": "2020-09-03T14:13:19+08:00",
+        "updated_at": "2021-07-09T10:54:34+08:00",
+        "taxable": true,
+        "barcode": "8886482910059",
+        "grams": 0,
+        "image_id": null,
+        "weight": 0,
+        "weight_unit": "kg",
+        "inventory_item_id": 34171941617699,
+        "inventory_quantity": 16,
+        "old_inventory_quantity": 16,
+        "requires_shipping": true,
+        "admin_graphql_api_id": "gid://shopify/ProductVariant/32364706398243"
+      }
+    ],
+    "options": [
+      {
+        "id": 6059874877475,
+        "product_id": 4631342219299,
+        "name": "Size",
+        "position": 1,
+        "values": [
+          "Tanning Goddess Kit"
+        ]
+      },
+      {
+        "id": 6059874910243,
+        "product_id": 4631342219299,
+        "name": "Color",
+        "position": 2,
+        "values": [
+          "Medium",
+          "Dark",
+          "Ultra Dark"
+        ]
+      }
+    ],
+    "images": [
+      {
+        "id": 28469124104227,
+        "product_id": 4631342219299,
+        "position": 1,
+        "created_at": "2021-07-19T17:38:45+08:00",
+        "updated_at": "2021-07-19T17:39:35+08:00",
+        "alt": null,
+        "width": 1000,
+        "height": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0286/1327/9779/products/SH_TannignGoddess1.jpg?v=1626687575",
+        "variant_ids": [],
+        "admin_graphql_api_id": "gid://shopify/ProductImage/28469124104227"
+      },
+      {
+        "id": 28469124038691,
+        "product_id": 4631342219299,
+        "position": 2,
+        "created_at": "2021-07-19T17:38:45+08:00",
+        "updated_at": "2021-07-19T17:39:35+08:00",
+        "alt": null,
+        "width": 1000,
+        "height": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0286/1327/9779/products/SH_TannignGoddess2.jpg?v=1626687575",
+        "variant_ids": [],
+        "admin_graphql_api_id": "gid://shopify/ProductImage/28469124038691"
+      },
+      {
+        "id": 28469124202531,
+        "product_id": 4631342219299,
+        "position": 3,
+        "created_at": "2021-07-19T17:38:46+08:00",
+        "updated_at": "2021-07-19T17:39:35+08:00",
+        "alt": null,
+        "width": 3912,
+        "height": 3912,
+        "src": "https://cdn.shopify.com/s/files/1/0286/1327/9779/products/SH_TannignGoddess3.jpg?v=1626687575",
+        "variant_ids": [],
+        "admin_graphql_api_id": "gid://shopify/ProductImage/28469124202531"
+      },
+      {
+        "id": 28469124136995,
+        "product_id": 4631342219299,
+        "position": 4,
+        "created_at": "2021-07-19T17:38:45+08:00",
+        "updated_at": "2021-07-19T17:39:35+08:00",
+        "alt": null,
+        "width": 1000,
+        "height": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0286/1327/9779/products/SH_TannignGoddess4.jpg?v=1626687575",
+        "variant_ids": [],
+        "admin_graphql_api_id": "gid://shopify/ProductImage/28469124136995"
+      },
+      {
+        "id": 28469124071459,
+        "product_id": 4631342219299,
+        "position": 5,
+        "created_at": "2021-07-19T17:38:45+08:00",
+        "updated_at": "2021-07-19T17:39:35+08:00",
+        "alt": null,
+        "width": 1000,
+        "height": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0286/1327/9779/products/SH_TannignGoddess5.jpg?v=1626687575",
+        "variant_ids": [],
+        "admin_graphql_api_id": "gid://shopify/ProductImage/28469124071459"
+      },
+      {
+        "id": 28469124235299,
+        "product_id": 4631342219299,
+        "position": 6,
+        "created_at": "2021-07-19T17:38:46+08:00",
+        "updated_at": "2021-07-19T17:39:35+08:00",
+        "alt": null,
+        "width": 2048,
+        "height": 2048,
+        "src": "https://cdn.shopify.com/s/files/1/0286/1327/9779/products/SH_TannignGoddess6.jpg?v=1626687575",
+        "variant_ids": [],
+        "admin_graphql_api_id": "gid://shopify/ProductImage/28469124235299"
+      },
+      {
+        "id": 28469124169763,
+        "product_id": 4631342219299,
+        "position": 7,
+        "created_at": "2021-07-19T17:38:45+08:00",
+        "updated_at": "2021-07-19T17:39:35+08:00",
+        "alt": null,
+        "width": 1000,
+        "height": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0286/1327/9779/products/SH_TannignGoddess7.jpg?v=1626687575",
+        "variant_ids": [],
+        "admin_graphql_api_id": "gid://shopify/ProductImage/28469124169763"
+      }
+    ],
+    "image": {
+      "id": 28469124104227,
+      "product_id": 4631342219299,
+      "position": 1,
+      "created_at": "2021-07-19T17:38:45+08:00",
+      "updated_at": "2021-07-19T17:39:35+08:00",
+      "alt": null,
+      "width": 1000,
+      "height": 1000,
+      "src": "https://cdn.shopify.com/s/files/1/0286/1327/9779/products/SH_TannignGoddess1.jpg?v=1626687575",
+      "variant_ids": [],
+      "admin_graphql_api_id": "gid://shopify/ProductImage/28469124104227"
+    }
+  },
+  {
+    "id": 4819003998243,
+    "title": "Taste of the Tropics Kit",
+    "body_html": "<p><span style=\"font-weight: 400;\">Get instant, indulgent nourishment from top to toe with our crowd favourite multi-award-winners: Like A Virgin Hair Masque and Glow Figure Body Moisture Whip.</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Work hard, party harder. This luxe, total-hydration kit is your go-to for stunning hair and skin all season long. Don’t be shy, you know you deserve the extra TLC.</span></p>\n<p><span style=\"font-weight: 400;\"></span><span style=\"font-weight: 400;\">This kit includes:</span></p>\n<ul>\n<li><b>1x Super Nourishing Hair Masque (60ml)</b></li>\n<li><strong>1x Glow Figure Body Moisture Whip (60ml)</strong></li>\n</ul>",
+    "vendor": "Coco & Eve DEV",
+    "product_type": "BUNDLE",
+    "created_at": "2020-10-27T13:46:48+08:00",
+    "handle": "taste-of-the-tropics-kit",
+    "updated_at": "2021-09-28T02:30:08+08:00",
+    "published_at": "2021-07-08T16:13:26+08:00",
+    "template_suffix": "",
+    "status": "active",
+    "published_scope": "web",
+    "tags": "",
+    "admin_graphql_api_id": "gid://shopify/Product/4819003998243",
+    "variants": [
+      {
+        "id": 32929736687651,
+        "product_id": 4819003998243,
+        "title": "1x Taste of the Tropics Kit",
+        "price": "90.00",
+        "sku": "CE0000822040",
+        "position": 1,
+        "inventory_policy": "deny",
+        "compare_at_price": null,
+        "fulfillment_service": "manual",
+        "inventory_management": "shopify",
+        "option1": "1x Taste of the Tropics Kit",
+        "option2": null,
+        "option3": null,
+        "created_at": "2020-10-27T13:46:48+08:00",
+        "updated_at": "2021-03-17T14:26:16+08:00",
+        "taxable": true,
+        "barcode": "",
+        "grams": 0,
+        "image_id": null,
+        "weight": 0,
+        "weight_unit": "kg",
+        "inventory_item_id": 34678028730403,
+        "inventory_quantity": 0,
+        "old_inventory_quantity": 0,
+        "requires_shipping": true,
+        "admin_graphql_api_id": "gid://shopify/ProductVariant/32929736687651"
+      }
+    ],
+    "options": [
+      {
+        "id": 6257196630051,
+        "product_id": 4819003998243,
+        "name": "Size",
+        "position": 1,
+        "values": [
+          "1x Taste of the Tropics Kit"
+        ]
+      }
+    ],
+    "images": [
+      {
+        "id": 17285274796067,
+        "product_id": 4819003998243,
+        "position": 1,
+        "created_at": "2020-11-04T10:48:59+08:00",
+        "updated_at": "2020-11-04T10:48:59+08:00",
         "alt": null,
         "width": 1000,
         "height": 1000,
@@ -17622,7 +18348,7 @@
   {
     "id": 6574068269091,
     "title": "[VIP] Shampoo & Conditioner Bundle",
-    "body_html": "<p data-mce-fragment=\"1\"><meta charset=\"utf-8\"><span>Get your healthiest hair ever with our new Super Hydrating Shampoo &amp; Cream Conditioner! Instantly boost hydration, shine, softness, strength, volume whilst reducing split ends &amp; frizz. Enriched with ResistHyal<sup>TM</sup> Hyaluronic Acid technology, Balinese botanicals like Coconut &amp; Pineapple &amp; a super nourishing oil blend of Argan, Almond, Camelia &amp; Avocado.</span></p>\n<ul>\n<li>\n<b data-stringify-type=\"bold\">1 x Super Hydrating Shampoo (250ml):<span> </span></b><span>Get virgin hair everyday &amp; your cleanest hair ever thanks to a sulfate free, triple cleansing formula that leaves locks fresher for longer!</span>\n</li>\n<li>\n<b data-stringify-type=\"bold\">1 x Super Hydrating Cream Conditioner (250ml):</b><span> Twice as thick as a regular conditioner with ResistHyal<sup>TM</sup> Hyaluronic Acid technology for 26 times more hydration giving instant hair mask results without de-volumizing silicones.<br></span>\n</li>\n<li><span><strong>1 x Shampoo Brush: </strong></span></li>\n<li><span><strong>1 x FREE Like A Virgin Hair Masque (60ml): </strong></span></li>\n</ul>",
+    "body_html": "<p data-mce-fragment=\"1\"><meta charset=\"utf-8\"><span>Get your healthiest hair ever with our new Super Hydrating Shampoo &amp; Cream Conditioner! Instantly boost hydration, shine, softness, strength, volume whilst reducing split ends &amp; frizz. Enriched with ResistHyal<sup>TM</sup> Hyaluronic Acid technology, Balinese botanicals like Coconut &amp; Pineapple &amp; a super nourishing oil blend of Argan, Almond, Camelia &amp; Avocado.</span></p>\n<ul>\n<li>\n<b data-stringify-type=\"bold\">1 x Super Hydrating Shampoo (250ml):<span> </span></b><span>Get virgin hair everyday &amp; your cleanest hair ever thanks to a sulfate free, triple cleansing formula that leaves locks fresher for longer!</span>\n</li>\n<li>\n<b data-stringify-type=\"bold\">1 x Super Hydrating Cream Conditioner (250ml):</b><span> Twice as thick as a regular conditioner with ResistHyal<sup>TM</sup> Hyaluronic Acid technology for 26 times more hydration giving instant hair mask results without de-volumizing silicones.<br></span>\n</li>\n<li><span><strong>1 x Shampoo Brush: </strong></span></li>\n<li><span><strong>1 x FREE Like A Virgin Hair Masque (60ml): </strong></span></li>\n</ul>",
     "vendor": "Coco & Eve DEV",
     "product_type": "",
     "created_at": "2021-06-09T12:33:41+08:00",

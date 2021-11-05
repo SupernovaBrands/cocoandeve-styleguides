@@ -139,6 +139,7 @@ class SNCart {
 					options.push(variant.option3);
 					options_with_values.push({ name: product.options[2].name, value: variant.option3 });
 				}
+
 				items.splice(0, 0, {
 					id,
 					key: `${id}:abcd`,
@@ -315,6 +316,7 @@ $('#product-add').on('click', function () {
 	snCart.addItem(parseInt($('#product-select').val(), 10), 1);
 });
 
+snCart.addItem(39456765050915, 99);
 snCart.addItem(39449113788451, 1);
 snCart.addItem(32346434732067, 1);
 snCart.addItem(32068891541539, 1);
