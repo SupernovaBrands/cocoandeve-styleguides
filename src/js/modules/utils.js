@@ -262,3 +262,12 @@ export const popopOver = () => {
 		});
 	}
 };
+
+export const copyToClipboard = (element, copied) => {
+	const $temp = $('<input>');
+	$('body').append($temp);
+	$temp.val(element).select();
+	document.execCommand('copy');
+	$temp.remove();
+	$(element).text(copied);
+};
