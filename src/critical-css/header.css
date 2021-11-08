@@ -84,6 +84,7 @@ button{border-radius:0;margin:0;font-family:inherit;font-size:inherit;line-heigh
 .bg-primary-light{background-color:#f5dadf!important}
 .mr-25{margin-right:.3125rem!important}
 .fit--cover{-o-object-fit:cover;object-fit:cover}
+.fit--lg-contain{-o-object-fit:contain;object-fit:contain}
 @-webkit-keyframes gradient-shimmer{
 0%{background-position:100% 50%}
 100%{background-position:0 50%}
