@@ -4,51 +4,68 @@ import {
 	copyToClipboard,
 } from '~mod/utils';
 
-$('#bfcm-waitlist__form').on('submit', function (e) {
-	e.preventDefault();
-	let validEmail = false;
-	let validPhone = false;
+const validForm = {
+	email: false,
+	phone: false,
+};
 
-	const email = $(this).find('#bfcm-waitlist__email');
-	const phone = $(this).find('#bfcm-waitlist__phone');
-
-	$(this).find('.text-danger').addClass('d-none');
+const validateForm = () => {
+	const $form = $('#bfcm-waitlist__form');
+	const email = $form.find('#bfcm-waitlist__email');
+	const phone = $form.find('#bfcm-waitlist__phone');
+	const acceptedTerm = $('#bfcm-waitlist__toc').is(':checked');
+	validForm.email = false;
+	validForm.phone = false;
 
 	if (validateEmail($(email).val())) {
-		validEmail = true;
+		validForm.email = true;
 	}
 
 	if (validatePhone($(phone).val())) {
-		validPhone = true;
+		validForm.phone = true;
 	}
 
-	const acceptedTerm = $('#bfcm-waitlist__toc').is(':checked');
+	$form.find('.text-danger').addClass('d-none');
 
-	if (acceptedTerm && (validEmail || validPhone)) {
+	if (acceptedTerm && (validForm.email || validForm.phone)) {
+		$('#bfcm-waitlist__submit').prop('disabled', false);
+		return true;
+	}
+
+	$('#bfcm-waitlist__submit').prop('disabled', true);
+	if (!acceptedTerm) {
+		$('#toc-error').removeClass('d-none');
+	}
+
+	if (!validForm.email && $(email).val() !== '') {
+		$('#email-error').removeClass('d-none');
+	}
+
+	if (!validForm.phone && $(phone).val() !== '') {
+		$('#phone-error').removeClass('d-none');
+	}
+	return false;
+};
+
+$('#bfcm-waitlist__form').on('submit', function (e) {
+	e.preventDefault();
+
+	if (validateForm()) {
 		$(this).addClass('d-none');
 		$('.bfcm-waitlist__thank-you').removeClass('d-none');
 		$('.bfcm-waitlist__title').text($(this).data('thank-you-message'));
 
-		if (validEmail) {
-			// code for send email to Backend
-		} else if (validPhone) {
-			// code for send phone to smsbump
-		}
-	} else {
-		if (!acceptedTerm) {
-			$('#toc-error').removeClass('d-none');
+		if (validateForm.email) {
+			// send email to bluecore and internal backend
 		}
 
-		if (!validEmail && $(email).val() !== '') {
-			$('#email-error').removeClass('d-none');
-		}
-
-		if (!validPhone && $(phone).val() !== '') {
-			$('#phone-error').removeClass('d-none');
+		if (validateForm.phone) {
+			// send phone to bluecore
 		}
 	}
 });
 
+// listener of elements
 $('#bfcm-waitlist__country').on('change', function () {
 	const code = $(this).find(':selected').attr('data-code');
 	$('.bfcm-waitlist__country-label').html(`+${code}`);
@@ -56,4 +73,8 @@ $('#bfcm-waitlist__country').on('change', function () {
 
 $('.bfcm-waitlist__shares--copy').on('click', function () {
 	copyToClipboard(this, $(this).data('copy'));
+});
+
+$('#bfcm-waitlist__phone, #bfcm-waitlist__email, #bfcm-waitlist__toc').on('change', function () {
+	validateForm();
 });
