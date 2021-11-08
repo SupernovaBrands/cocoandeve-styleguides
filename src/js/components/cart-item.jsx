@@ -38,6 +38,10 @@ export default class CartItem extends React.Component {
 					this.props.onChangeVariant(this.props.item, variant.id, lastStock);
 				}
 			});
+		} else if (lastStock.length > 0) {
+			this.setState({
+				lastStockVariant: true
+			});
 		}
 	}
 
@@ -47,7 +51,7 @@ export default class CartItem extends React.Component {
 
 	render() {
 		const { item } = this.props;
-		const { editingVariant } = this.state;
+		const { editingVariant, lastStockVariant } = this.state;
 		const { models } = item;
 		const { swatches, variants, selectedSwatch } = models;
 		const showSwatches = variants && variants.length > 1 && !models.isFree;
@@ -148,7 +152,7 @@ export default class CartItem extends React.Component {
 							</div>
 						</div>
 
-						{this.props.isLastStock && (
+						{(this.props.isLastStock || lastStockVariant) && (
 							<p className="mt-1 mb-0 text-danger">Oh nuts! You got the last one!</p>)}
 					</figcaption>
 				</figure>
