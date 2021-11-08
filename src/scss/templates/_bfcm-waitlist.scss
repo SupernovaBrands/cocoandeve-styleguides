@@ -1,0 +1,70 @@
+.bfcm-waitlist {
+	background: black;
+
+	&__title {
+		top: 0;
+		@include font-size($hero-banner-font-size);
+
+		@include media-breakpoint-up(lg) {
+		    @include font-size($hero-banner-font-size-lg);
+		}
+	}
+
+	picture {
+	    padding-top: 50%;
+	    @include media-breakpoint-up(lg) {
+	      padding-top: 90%;
+	    }
+  	}
+
+  	.nav-item {
+  		width: 50%;
+  		border-bottom: 1px solid white;
+
+  		.nav-link {
+  			color: white;
+
+  			&.active {
+  				color: $primary;
+  				border-bottom: 3px solid white;
+  			}
+  		}
+  	}
+
+  	&__country-label .svg {
+		font-size: calc-em(10, 16);
+		margin-left: calc-em(10, 16);
+	}
+
+	&__success {
+		@include media-breakpoint-up(lg) {
+			min-height: calc-em(925, 16);
+		}
+	}
+
+	.input-group-addon + input {
+		flex-basis: 55%;
+
+		@include media-breakpoint-up(xl) {
+			flex-basis: 65%;
+		}
+	}
+
+	select {
+		opacity: 0;
+	}
+
+	&__shares {
+		svg {
+			width: calc-em(36);
+		}
+
+		&--copy {
+			&:active,
+			&:hover {
+				background-color: transparent;
+				color: $primary;
+			}
+		}
+	}
+}
