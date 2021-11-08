@@ -1,6 +1,7 @@
 import {
 	validateEmail,
 	validatePhone,
+	copyToClipboard,
 } from '~mod/utils';
 
 $('#bfcm-waitlist__form').on('submit', function (e) {
@@ -52,4 +53,8 @@ $('#bfcm-waitlist__form').on('submit', function (e) {
 $('#bfcm-waitlist__country').on('change', function () {
 	const code = $(this).find(':selected').attr('data-code');
 	$('.bfcm-waitlist__country-label').html(`+${code}`);
+});
+
+$('.bfcm-waitlist__shares--copy').on('click', function () {
+	copyToClipboard(this, $(this).data('copy'));
 });
