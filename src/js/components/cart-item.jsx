@@ -27,21 +27,13 @@ export default class CartItem extends React.Component {
 	}
 
 	onSelectVariant(variant, swatchIndex) {
-		const itemProps = this.props.item;
-		const lastStock = VariantQuantity.filter((item) => item.id === variant.id && itemProps.quantity > item.quantity);
-
 		if (variant.available) {
 			this.setState({
 				editingVariant: variant.id !== this.props.item.id ? swatchIndex : false,
 			}, () => {
 				if (this.state.editingVariant !== false) {
-					this.props.onChangeVariant(this.props.item, variant.id, lastStock);
+					this.props.onChangeVariant(this.props.item, variant.id);
 				}
-			});
-		}
-	}
-
-	onRemoveItem = () => {
 		this.props.onRemoveItem(this.props.item);
 	}
 

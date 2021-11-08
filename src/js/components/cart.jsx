@@ -220,8 +220,10 @@ export default class Cart extends React.Component {
 			let { name } = opt;
 			if (name.toLowerCase().includes('drops') || name.toLowerCase().includes('foam') || name.toLowerCase().includes('color')) {
 				name = 'Shade';
-			} else if (name.toLowerCase().includes('style') || name.toLowerCase().includes('scent')) {
+			} else if (name.toLowerCase().includes('style')) {
 				name = 'Style';
+			} else if (name.toLowerCase().includes('scent')) {
+				name = 'Scent';
 			}
 			return { ...opt, name };
 		});
