@@ -11,7 +11,7 @@
 	}
 
 	picture {
-	    padding-top: percentage(150 / 345);
+	    padding-top: 50%;
 	    @include media-breakpoint-up(lg) {
 	      padding-top: 90%;
 	    }
