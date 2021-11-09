@@ -10,6 +10,7 @@
 		@include media-breakpoint-up(lg) {
 			background-image: url(asset-url('bfcm-signup-popup-desktop.jpg'));
 			background-position: center;
+			background-size: cover;
 		}
 	}
 
@@ -56,6 +57,7 @@
 	&__close {
 		top: $grid-gutter-width;
 		right: $grid-gutter-width;
+		cursor: pointer;
 	}
 
 	&__toc {
