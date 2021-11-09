@@ -13,15 +13,6 @@
 		}
 	}
 
-	&__title {
-
-		@include font-size($h1-font-size);
-
-		@include media-breakpoint-up(lg) {
-		    @include font-size($h3-font-size-lg);
-		}
-	}
-
 	.form-control {
 		border-width: 2px;
 
@@ -50,6 +41,15 @@
 
 		@include media-breakpoint-up(lg) {
 			border-right-width: 2px;
+		}
+	}
+
+	&__title {
+
+		@include font-size($h1-font-size);
+
+		@include media-breakpoint-up(lg) {
+		    @include font-size($h3-font-size-lg);
 		}
 	}
 
