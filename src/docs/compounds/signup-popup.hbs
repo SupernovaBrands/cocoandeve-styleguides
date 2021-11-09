@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{{> html-head title="Signup Popup" }}
+</head>
+<body>
+	<div class="container">
+		<h1>Signup Popup</h1>
+
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signupPopupModal">Launch modal</button>
+
+		<div class="modal fade" id="signupPopupModal" tabindex="-1" role="dialog" aria-labelledby="signupPopupModalTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content mx-g">
+					<form class="modal-body px-2 py-g">
+						<h2>Win $500 of products</h2>
+						<img data-dismiss="modal" aria-label="Close" class="svg position-absolute collection-swatch__close"
+							src="icons/close.svg" replace-to-svg />
+						<div class="input-group form-group">
+							<input class="form-control" type="email" placeholder="Email" required>
+						</div>
+					</form>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{{> js jquery=true popper=true bootstrap=true main=true }}
+</body>
+</html>
