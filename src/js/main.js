@@ -523,6 +523,10 @@ $(document).ready(function () {
 	}
 });
 
+if ($('.bfcm-waitlist').length > 0) {
+	import(/* webpackChunkName: 'bfcm-waitlist' */ '~mod/bfcm-waitlist');
+}
+
 if ($('.carousel--sfw').length > 0 || $('.product-card-abtest').length > 0) {
 	import(/* webpackChunkName: 'featured-product-abtest' */ '~mod/collection-swatch');
 }

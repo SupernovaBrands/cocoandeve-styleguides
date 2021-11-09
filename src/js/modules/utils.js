@@ -205,6 +205,8 @@ export const validateEmail = (t) => (
 	/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(String(t).toLowerCase())
 );
 
+export const validatePhone = (phone) => /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s./0-9]*$/g.test(phone);
+
 export const decodeHtml = (html) => {
 	const txt = document.createElement('textarea');
 	txt.innerHTML = html;
@@ -259,4 +261,13 @@ export const popopOver = () => {
 			});
 		});
 	}
+};
+
+export const copyToClipboard = (element, copied) => {
+	const $temp = $('<input>');
+	$('body').append($temp);
+	$temp.val(element).select();
+	document.execCommand('copy');
+	$temp.remove();
+	$(element).text(copied);
 };
