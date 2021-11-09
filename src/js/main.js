@@ -531,6 +531,6 @@ if ($('.btn-choose__swatch-abtest').length > 0) {
 	import(/* webpackChunkName: 'collection-swatch-abtest' */ '~mod/collection-swatch-abtest');
 }
 
-if ($('#signupPopupModal').length > 0) {
-	import(/* webpackChunkName: 'signup-popup' */ '~mod/signup-popup');
+if ($('#bfcmSignupPopupModal').length > 0) {
+	import(/* webpackChunkName: 'bfcm-signup-popup' */ '~mod/bfcm-signup-popup');
 }

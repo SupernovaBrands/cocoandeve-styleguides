@@ -1,0 +1,94 @@
+.bfcm-signup-popup {
+
+	.modal-content {
+		background-image: url(asset-url('bfcm-signup-popup-mobile.jpg'));
+		background-size: 100%;
+		background-position: top center;
+		background-repeat: no-repeat;
+		border-radius: calc-em(20, $unit: 1rem);
+
+		@include media-breakpoint-up(lg) {
+			background-image: url(asset-url('bfcm-signup-popup-desktop.jpg'));
+			background-position: center;
+		}
+	}
+
+	&__title {
+
+		@include font-size($h1-font-size);
+
+		@include media-breakpoint-up(lg) {
+		    @include font-size($h3-font-size-lg);
+		}
+	}
+
+	.form-control {
+		border-width: 2px;
+
+		@include media-breakpoint-up(lg) {
+			border-width: 0;
+		}
+	}
+
+	.input-group-addon {
+
+		+ input {
+			flex-basis: 55%;
+
+			@include media-breakpoint-up(lg) {
+				flex-basis: 57.5%;
+			}
+		}
+
+		svg {
+			color: $gray-600;
+			height: calc-em(12);
+			right: calc-em(10);
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		@include media-breakpoint-up(lg) {
+			border-right-width: 2px;
+		}
+	}
+
+	&__close {
+		top: $grid-gutter-width;
+		right: $grid-gutter-width;
+	}
+
+	&__toc {
+		color: $text-muted;
+
+		@include media-breakpoint-up(lg) {
+			color: white;
+		}
+	}
+
+	&__separator {
+		color: $primary;
+
+		@include media-breakpoint-up(lg) {
+			color: white;
+		}
+	}
+
+	&__thank-you,
+	&__form {
+		min-height: calc-em(290);
+	}
+
+	&__thank-you {
+		color: $gray-600;
+
+		@include media-breakpoint-up(lg) {
+			color: white;
+			min-height: calc-em(420);
+		}
+	}
+
+	select {
+		opacity: 0;
+	}
+}
