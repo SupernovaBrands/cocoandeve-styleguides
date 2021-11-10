@@ -5,7 +5,7 @@
 		background-size: 100%;
 		background-position: top center;
 		background-repeat: no-repeat;
-		border-radius: calc-em(20, $unit: 1rem);
+		border-radius: calc-em(22.5, $unit: 1rem);
 
 		@include media-breakpoint-up(lg) {
 			background-image: url(asset-url('bfcm-signup-popup-desktop.jpg'));
