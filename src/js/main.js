@@ -534,3 +534,7 @@ if ($('.carousel--sfw').length > 0 || $('.product-card-abtest').length > 0) {
 if ($('.btn-choose__swatch-abtest').length > 0) {
 	import(/* webpackChunkName: 'collection-swatch-abtest' */ '~mod/collection-swatch-abtest');
 }
+
+if ($('#bfcmSignupPopupModal').length > 0) {
+	import(/* webpackChunkName: 'bfcm-signup-popup' */ '~mod/bfcm-signup-popup');
+}
