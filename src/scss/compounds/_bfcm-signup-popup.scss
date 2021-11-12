@@ -50,7 +50,7 @@
 		@include font-size($h1-font-size);
 
 		@include media-breakpoint-up(lg) {
-		    @include font-size($h3-font-size-lg);
+				@include font-size($h3-font-size-lg);
 		}
 	}
 
@@ -58,6 +58,7 @@
 		top: $grid-gutter-width;
 		right: $grid-gutter-width;
 		cursor: pointer;
+		z-index: $zindex-dropdown;
 	}
 
 	&__toc {
