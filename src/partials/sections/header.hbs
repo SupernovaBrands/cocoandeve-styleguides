@@ -1,10 +1,17 @@
 <header class="main-header">
 	{{> components/cookies-banner }}
+
+	{{#if bfcmtimer}}
+	{{> components/bfcm-timer}}
+	{{/if}}
+
+	{{#unless bfcmtimer}}
 	<div class="announcement-bar bg-primary-light w-100">
 		<div class="container text-center font-weight-bold">
 			<a href="#">Up to 25% off + Free Gift worth $25.40</a>
 		</div>
 	</div>
+	{{/unless}}
 	<nav class="bg-white navbar navbar-expand-lg">
 
 		<div class="container">
