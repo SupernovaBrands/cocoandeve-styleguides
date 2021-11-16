@@ -1,13 +1,13 @@
 const getUtcTime = (date) => {
 	const now = new Date(date);
-	const utcTimestamp = Date.UTC(now.getUTCFullYear(),now.getUTCMonth(), now.getUTCDate(),
+	const utcTimestamp = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(),
 		now.getUTCHours(), now.getUTCMinutes(), now.getUTCSeconds(), now.getUTCMilliseconds());
 	return utcTimestamp - (8 * 60 * 60 * 1000);
 };
 
 const nowUtcTime = () => {
 	const now = new Date();
-	const utcTimestamp = Date.UTC(now.getUTCFullYear(),now.getUTCMonth(), now.getUTCDate(),
+	const utcTimestamp = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(),
 		now.getUTCHours(), now.getUTCMinutes(), now.getUTCSeconds(), now.getUTCMilliseconds());
 	return utcTimestamp - (8 * 60 * 60 * 1000);
 };
