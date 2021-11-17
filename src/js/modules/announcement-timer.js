@@ -26,7 +26,7 @@ const startCount = (endAt) => {
 		const distance = end - now;
 		if (distance < 0) {
 			clearInterval(timer);
-			$('.bfcm-timer').addClass('d-none');
+			$('.announcement-bar__timer').addClass('d-none');
 			return;
 		}
 		const days = Math.floor(distance / day);
@@ -55,6 +55,6 @@ $(document).ready(function () {
 		startCount(`${endDate.replace(' ', 'T')}Z`);
 	} else {
 		console.log('expired');
-		$('.bfcm-timer').addClass('d-none');
+		$('.announcement-bar__timer').addClass('d-none');
 	}
 });
