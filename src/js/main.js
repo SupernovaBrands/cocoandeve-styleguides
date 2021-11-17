@@ -539,6 +539,6 @@ if ($('#bfcmSignupPopupModal').length > 0) {
 	import(/* webpackChunkName: 'bfcm-signup-popup' */ '~mod/bfcm-signup-popup');
 }
 
-if ($('.bfcm-timer').length > 0) {
-	import(/* webpackChunkName: 'bfcm-timer' */ '~mod/bfcm-timer');
+if ($('.announcement-bar__timer').length > 0) {
+	import(/* webpackChunkName: 'announcement-timer' */ '~mod/announcement-timer');
 }
