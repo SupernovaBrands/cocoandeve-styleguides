@@ -6,6 +6,7 @@
 	&__close {
 		top: map-get($spacers, 2);
 		right: map-get($spacers, 2);
+		cursor: pointer;
 	}
 
 	figcaption {
