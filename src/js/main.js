@@ -538,3 +538,7 @@ if ($('.btn-choose__swatch-abtest').length > 0) {
 if ($('#bfcmSignupPopupModal').length > 0) {
 	import(/* webpackChunkName: 'bfcm-signup-popup' */ '~mod/bfcm-signup-popup');
 }
+
+if ($('#exit-intent-popup').length > 0) {
+	import(/* webpackChunkName: 'exit-intent-popup' */ '~mod/exit-intent-popup');
+}
