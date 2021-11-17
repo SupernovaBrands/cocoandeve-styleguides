@@ -46,7 +46,7 @@ const startCount = (endAt) => {
 $(document).ready(function () {
 	// start & end from settings
 	const startDate = '2021-11-15 00:00:00';
-	const endDate = '2021-11-22 23:59:00';
+	const endDate = '2021-12-02 23:59:00';
 	const startAt = getUtcTime(`${startDate.replace(' ', 'T')}Z`);
 	const endAt = getUtcTime(`${endDate.replace(' ', 'T')}Z`);
 	const now = nowUtcTime();
