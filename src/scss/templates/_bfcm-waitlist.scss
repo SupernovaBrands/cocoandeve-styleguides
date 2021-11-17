@@ -17,20 +17,6 @@
 	    }
   	}
 
-  	.nav-item {
-  		width: 50%;
-  		border-bottom: 1px solid white;
-
-  		.nav-link {
-  			color: white;
-
-  			&.active {
-  				color: $primary;
-  				border-bottom: 3px solid white;
-  			}
-  		}
-  	}
-
   	&__country-label .svg {
 		font-size: calc-em(10, 16);
 		margin-left: calc-em(10, 16);

@@ -55,11 +55,11 @@ $('#bfcm-waitlist__form').on('submit', function (e) {
 		$('.bfcm-waitlist__thank-you').removeClass('d-none');
 		$('.bfcm-waitlist__title').text($(this).data('thank-you-message'));
 
-		if (validateForm.email) {
+		if (validForm.email) {
 			// send email to bluecore and internal backend
 		}
 
-		if (validateForm.phone) {
+		if (validForm.phone) {
 			// send phone to bluecore
 		}
 	}

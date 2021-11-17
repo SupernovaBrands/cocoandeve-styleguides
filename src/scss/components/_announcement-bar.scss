@@ -4,4 +4,8 @@
         color: $secondary;
         font-size: 1.125em;
     }
+
+    &__timer ul {
+        border-bottom: 2px solid #fff;
+    }
 }
