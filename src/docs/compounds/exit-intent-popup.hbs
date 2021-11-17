@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{{> html-head title="Exit Intent Popup" }}
+</head>
+<body>
+	<div class="container px-g mt-4">
+		<h1>Exit Intent Popup</h1>
+
+		<p class="mt-4">Move cursor outside or click:</p>
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exit-intent-popup">Launch modal</button>
+
+		{{> compounds/exit-intent-popup }}
+	</div>
+	{{> js jquery=true popper=true bootstrap=true main=true }}
+</body>
+</html>
