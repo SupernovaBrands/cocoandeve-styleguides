@@ -542,3 +542,7 @@ if ($('#bfcmSignupPopupModal').length > 0) {
 if ($('.announcement-bar__timer').length > 0) {
 	import(/* webpackChunkName: 'announcement-timer' */ '~mod/announcement-timer');
 }
+
+if ($('#exit-intent-popup').length > 0) {
+	import(/* webpackChunkName: 'exit-intent-popup' */ '~mod/exit-intent-popup');
+}
