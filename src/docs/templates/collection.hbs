@@ -83,20 +83,10 @@
 
 					{{> components/product-card-carousel title="Shampo & Conditioner" compare_price="$44.90" price="$34.90" swatch="true" collection="true" quick_shop="true"}}
 
-					{{> components/product-card-carousel-abtest title="Glow Essentials Bundle" compare_price="$44.90" price="$34.90" swatch="true" swatch_modal="true" collection="true"}}
-
+					{{> components/product-card-carousel title="Glow Essentials Bundle" compare_price="$44.90" price="$34.90" swatch="true" swatch_modal="true" collection="true"}}
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="collection-swatch d-lg-none">
-		<div class="collection-swatch--subscription d-none">
-			{{> compounds/collection-subscription-overlay}}
-		</div>
-	</div>
-
-	<div class="collection-swatch-abtest d-lg-none">
-		{{> compounds/collection-swatch-overlay-abtest}}
 	</div>
 
 	<div class="modal fade collection-swatch__modal collection-swatch__modal-subscription" id="collectionSubscriptionModal" tabindex="-1" role="dialog" aria-labelledby="collectionSwatchModalLabel" aria-hidden="true">
@@ -105,9 +95,9 @@
 		</div>
 	</div>
 
-	<div class="modal fade collection-swatch-abtest__modal" id="collectionSwatchModal" tabindex="-1" role="dialog" aria-labelledby="collectionSwatchModalLabel" aria-hidden="true">
+	<div class="modal fade collection-swatch__modal" id="collectionSwatchModal" tabindex="-1" role="dialog" aria-labelledby="collectionSwatchModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-			{{> compounds/collection-swatch-modal-abtest}}
+			{{> compounds/collection-swatch-modal}}
 		</div>
 	</div>
 
