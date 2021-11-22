@@ -315,6 +315,7 @@ $('#product-add').on('click', function () {
 	snCart.addItem(parseInt($('#product-select').val(), 10), 1);
 });
 
+snCart.addItem(39456765050915, 99);
 snCart.addItem(39449113788451, 1);
 snCart.addItem(32346434732067, 1);
 snCart.addItem(32068891541539, 1);
