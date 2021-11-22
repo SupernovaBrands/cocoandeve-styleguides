@@ -16,7 +16,6 @@ import {
 	isFreeItem,
 	isItemHasProp,
 	isSameText,
-	kebabCase,
 	intersectTwo,
 	formatMoney,
 } from '~mod/utils';
@@ -179,8 +178,6 @@ export default class Cart extends React.Component {
 			isManualGwp: isItemHasProp(item, '_campaign_type', 'manual_gwp'),
 			image: item.image ? item.image.replace(/(\.[^.]*)$/, '_medium$1').replace('http:', '') : '//cdn.shopify.com/s/assets/admin/no-image-medium-cc9732cb976dd349a0df1d39816fbcc7.gif',
 			comparePrice: productData.comparePrices[item.id],
-			color: (item.options_with_values.find((opt) => isSameText(opt.name, 'color')) || { value: false }).value,
-			style: (item.options_with_values.find((opt) => isSameText(opt.name, 'style') || opt.name.toLowerCase().includes('style')) || { value: false }).value,
 			showPreorderNotif: tSettings.variantNotification.indexOf(item.id) !== -1 && tSettings.enable_tan_change,
 			showPreorderNotif_2: tSettings.variantNotification_2.indexOf(item.id) !== -1 && tSettings.enable_tan_change,
 		};
@@ -252,7 +249,6 @@ export default class Cart extends React.Component {
 				selected = positions.map((pos) => currentOptions[pos - 1]);
 			}
 		});
-
 		return {
 			selected,
 			swatches,
@@ -426,9 +422,10 @@ export default class Cart extends React.Component {
 		});
 	}
 
-	onChangeVariant = (item, newVariantId) => {
+	onChangeVariant = (item, newVariantId, lastStock) => {
+		const quantity = (lastStock && lastStock.length > 0) ? lastStock[0].quantity : item.quantity;
 		if (item.id !== newVariantId) {
-			snCart.replaceItem(item.key, newVariantId, item.quantity);
+			snCart.replaceItem(item.key, newVariantId, quantity);
 		}
 	}
 
@@ -500,6 +497,7 @@ export default class Cart extends React.Component {
 		});
 	}
 
+	// eslint-disable-next-line arrow-body-style, camelcase
 	getStock = (var_id) => {
 		return snCart.getVariantInProducts(var_id).inv;
 	}
