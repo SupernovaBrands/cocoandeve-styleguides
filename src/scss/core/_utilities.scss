@@ -1,3 +1,7 @@
+html, body {
+	overflow-x: hidden;
+}
+
 // Light pink background color
 @include bg-variant(".bg-primary-light", $primary-light, true);
 @include bg-variant(".bg-blue", $bali-bod-blue, true);
