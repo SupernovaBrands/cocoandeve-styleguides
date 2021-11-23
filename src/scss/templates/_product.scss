@@ -1,7 +1,7 @@
 .product-swatch-mobile {
 	transform: translateY(150%);
 	transition: transform .25s ease-in-out;
-	z-index: $zindex-fixed;
+	z-index: $zindex-sticky;
 
 	.tooltip--sold-out {
 		transform: translateY(150%);
