@@ -101,6 +101,10 @@
 				}
 			}
 		}
+		
+		@include media-breakpoint-down(sm) {
+			overflow-x: hidden;
+		}
 	}
 
 	&--centered {
