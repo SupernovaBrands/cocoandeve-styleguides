@@ -12,22 +12,9 @@
         {{> components/video-card class="mb-4 px-lg-2" src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/TAN_HOW_TO_BONNIE_LR.mp4?v=1610351992" title="Multi-masking #selfcaresunday with Janet Amrani"}}
 
         {{> components/video-card class="mb-0 px-lg-2" src="https://www.youtube.com/embed/xwAfY_vdE9I" title="How to Self Tan Your Face with Sunny Honey Bronzing Drops (Youtube)"}}
-
-        <div class="modal fade" id="videoCardModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered video-modal" role="document">
-                <div class="modal-content">
-                    <div class="modal-body video-modal--body embed-responsive embed-responsive-16by9">
-                        <!-- 16:9 aspect ratio -->
-                        <video controls>
-                            <source src="" type="video/mp4">
-                        </video>
-                        <iframe class="d-none embed-responsive-item" src=""></iframe>
-                    </div>
-                    <button type="button" class="close position-absolute video-modal--icon" data-dismiss="modal" aria-label="Close"><img class="svg" src="icons/close.svg" replace-to-svg /></button>
-                </div>
-            </div>
-        </div>
     </div>
+
+    {{> components/video-modal}}
 
     {{> js jquery=true bootstrap=true main=true }}
 </body>
