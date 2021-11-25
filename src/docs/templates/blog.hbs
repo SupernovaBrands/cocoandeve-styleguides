@@ -145,22 +145,6 @@
 				</a>
 			</div>
 		</section>
-		<div class="modal fade" id="videoCardModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel"
-			aria-hidden="true">
-			<div class="modal-dialog modal-lg modal-dialog-centered video-modal" role="document">
-				<div class="modal-content">
-					<div class="modal-body video-modal--body embed-responsive embed-responsive-16by9">
-						<!-- 16:9 aspect ratio -->
-						<video controls>
-							<source src="" type="video/mp4">
-						</video>
-						<iframe class="d-none embed-responsive-item" allow="autoplay" src=""></iframe>
-					</div>
-					<button type="button" class="close position-absolute video-modal--icon" data-dismiss="modal"
-						aria-label="Close"><img class="svg" src="icons/close.svg" replace-to-svg /></button>
-				</div>
-			</div>
-		</div>
 
 		<ul class="row mb-5 list-unstyled">
 			<li class="col-12 col-lg-4">
@@ -204,6 +188,9 @@
 	<div class="w-100 text-center">
 		<a href="javascript:void(0);" class="btn btn-lg btn-outline-primary mb-4">Load more posts</a>
 	</div>
+
+	{{> components/video-modal}}
+
 	{{> sections/footer}}
 	{{> js jquery=true popper=true bootstrap=true main=true }}
 </body>
