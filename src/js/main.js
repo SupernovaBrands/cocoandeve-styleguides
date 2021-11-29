@@ -483,6 +483,7 @@ $(document).ready(function () {
 	});
 
 	$('#tooltip__show').on('click', function () {
+		$('.navbar > .container').addClass('position-relative');
 		$('.tooltip').addClass('show');
 		$('header').removeClass('overflow-hidden');
 	});
