@@ -90,14 +90,7 @@
 			<a class="nav-link cart d-flex justify-content-end font-weight-bold px-0 d-lg-none" data-toggle="modal" data-target="#cart-drawer" role="button">
 				<img class="svg" src="icons/cart.svg" replace-to-svg /> (<span class="cart-drawer__count"></span>)
 			</a>
-			<div class="col-lg-4 tooltip bg-primary text-white text-center py-2 overflow-hidden w-100">
-				<img id="tooltip__close" class="svg" src="icons/close-circle.svg" replace-to-svg />
-				Item added to cart
-				<a href="#" class="d-block text-white text-underline">Proceed to checkout</a>
-			</div>
 		</div>
-
-
 	</nav>
 
 	<nav class="mobile-nav position-fixed d-lg-none">
@@ -211,6 +204,7 @@
 		</ul>
 		{{/unless}}
 	</nav>
+	{{> components/tooltip}}
 	<nav class="text-center nav-ranges p-g bg-white d-lg-none">
 		<ul class="nav justify-content-center">
 			<li class="nav-item">
