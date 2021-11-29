@@ -28,6 +28,9 @@
 		{{#if quick_shop }}
 		<button type="button" class="btn btn-lg btn-primary btn-choose__swatch btn-choose__swatch-subscription btn-block px-0">Quick Shop</button>
 		{{/if}}
+		{{#if swatch_modal}}
+		<button type="button" class="btn btn-lg btn-primary btn-choose__swatch btn-block px-0">Choose Shade</button>
+		{{/if}}
 
 		{{#if swatch_modal}}
 		<button type="button" class="btn btn-lg btn-primary btn-choose__swatch btn-block px-0">Choose Shade</button>
@@ -66,7 +69,7 @@
 				<label class="mb-2"><strong>Style: </strong><span data-swatch-label>Girl Print: Limited edition!</span></label>
 				<ul class="list-unstyled product-variant-swatch d-flex justify-content-center">
 					<li class="product-variant-swatch__item available active col-3" data-available="available">
-						<span data-id="32068891607075" data-val="Girl Print" class="d-block border-primary mx-auto  variant-swatch girl-print"></span>
+						<span data-id="32068891607075" data-val="Girl Print" class="d-block border-primary mx-auto  variant-swatch girl-print oos"></span>
 					</li>
 					<li class="product-variant-swatch__item available col-3" data-available="available">
 						<span data-id="32068891639843" data-val="Print Leaf" class="d-block mx-auto  variant-swatch leaf-print"></span>
