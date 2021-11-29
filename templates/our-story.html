@@ -377,7 +377,7 @@
 
 	<section class="page-video-banner container-fluid justify-content-center d-lg-flex align-items-center p-0">
 		<figure class="video-card video-card--play-caption ml-auto col-lg-7 p-0 position-relative mb-0">
-			<picture class="video-card__icon-left position-relative d-block" data-toggle="modal" data-src="https://www.youtube.com/embed/xwAfY_vdE9I" data-target="#videoCardModal">
+			<picture class="video-card__icon-left position-relative d-block" data-toggle="modal" data-src="https://cdn.shopify.com/s/files/1/0028/8253/5533/files/Pop_Up_Video_Journalist_-_1_reexport_2.mp4?v=1634105075" data-target="#videoCardModal">
 				<source srcset="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/AboutUs_banner05_DT_2x_eb45c1bd-6215-4dcf-8ded-c38f6931fe96_800x.jpg?v=1590061791" media="(min-width: 992px)">
 				<img src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/AboutUs_banner05_DT_2x_eb45c1bd-6215-4dcf-8ded-c38f6931fe96_800x.jpg?v=1590061791" class="w-100 rounded-0">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 54" class="svg"><path d="M27 0a27 27 0 1027 27A27 27 0 0027 0zm11.371 27.86a1.929 1.929 0 01-.866.866v.01L22.076 36.45a1.929 1.929 0 01-2.791-1.736V19.286a1.929 1.929 0 012.791-1.726L37.5 25.274a1.928 1.928 0 01.871 2.586z"></path></svg>
@@ -393,6 +393,23 @@
 			</div>
 		</div>
 	</section>
+
+	<div class="modal fade" id="videoCardModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg modal-dialog-centered video-modal" role="document">
+			<div class="modal-content">
+				<div class="modal-body video-modal--body embed-responsive embed-responsive-16by9">
+					<!-- 16:9 aspect ratio -->
+					<video controls>
+						<source src="" type="video/mp4">
+					</video>
+					<iframe class="d-none embed-responsive-item" src=""></iframe>
+				</div>
+				<button type="button" class="close position-absolute video-modal--icon" data-dismiss="modal"
+					aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" class="svg"><path d="M12 1l-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1-5-5z"></path></svg></button>
+			</div>
+		</div>
+	</div>
+
   <footer class="pt-md-6 pb-md-6 pt-2 pt-lg-4 pb-1 mobile-wrapper">
   	<div class="container">
   		<div class="footer-grid">
