@@ -518,14 +518,10 @@ $(document).ready(function () {
 			if (e.to + 1 === 3) {
 				$('.sustainability-image-slider .carousel-control-next').attr('disabled', true);
 				$('.sustainability-image-slider .carousel-control-prev').removeAttr('disabled');
-			}
+			} 
 		});
 	}
 });
-
-if ($('.bfcm-waitlist').length > 0) {
-	import(/* webpackChunkName: 'bfcm-waitlist' */ '~mod/bfcm-waitlist');
-}
 
 if ($('.carousel--sfw').length > 0 || $('.product-card-abtest').length > 0) {
 	import(/* webpackChunkName: 'featured-product-abtest' */ '~mod/collection-swatch');
@@ -535,14 +531,7 @@ if ($('.btn-choose__swatch').length > 0) {
 	import(/* webpackChunkName: 'collection-swatch' */ '~mod/collection-swatch');
 }
 
-if ($('#bfcmSignupPopupModal').length > 0) {
-	import(/* webpackChunkName: 'bfcm-signup-popup' */ '~mod/bfcm-signup-popup');
-}
-
 if ($('.announcement-bar__timer').length > 0) {
 	import(/* webpackChunkName: 'announcement-timer' */ '~mod/announcement-timer');
 }
 
-if ($('#exit-intent-popup').length > 0) {
-	import(/* webpackChunkName: 'exit-intent-popup' */ '~mod/exit-intent-popup');
-}
