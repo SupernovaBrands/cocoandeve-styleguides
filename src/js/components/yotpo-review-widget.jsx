@@ -612,11 +612,11 @@ const YotpoReviewWidget = (props) => {
 											)}
 											<div className="d-flex justify-content-end align-items-center mt-3">
 												<p className="font-size-sm mr-1 mb-0">{tStrings.yotpo.reviewHelpful}</p>
-												<button type="button" className={`btn-unstyled font-size-sm d-flex align-items-center mx-1 ${votes[`reviews-${review.id}`] === 'up' && 'text-primary'}`} onClick={() => { onVote('reviews', review.id, 'up'); }}>
+												<button type="button" className={`btn-unstyled font-size-sm d-flex align-items-center mx-1 text-body ${votes[`reviews-${review.id}`] === 'up' && 'text-primary'}`} onClick={() => { onVote('reviews', review.id, 'up'); }}>
 													<SvgThumbsUp className="svg mr-25" />
 													{review.votes_up + (votes[`reviews-${review.id}`] === 'up' ? 1 : 0)}
 												</button>
-												<button type="button" className={`btn-unstyled font-size-sm d-flex align-items-center mx-1 ${votes[`reviews-${review.id}`] === 'down' && 'text-primary'}`} onClick={() => { onVote('reviews', review.id, 'down'); }}>
+												<button type="button" className={`btn-unstyled font-size-sm d-flex align-items-center mx-1 text-body ${votes[`reviews-${review.id}`] === 'down' && 'text-primary'}`} onClick={() => { onVote('reviews', review.id, 'down'); }}>
 													<SvgThumbsDown className="svg mr-25" />
 													{review.votes_down + (votes[`reviews-${review.id}`] === 'down' ? 1 : 0)}
 												</button>

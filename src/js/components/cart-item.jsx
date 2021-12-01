@@ -15,6 +15,8 @@ import {
 import SvgTrash from '~svg/trash.svg';
 import SvgRecurring from '~svg/recurring.svg';
 
+import VariantQuantity from '~mod/variant-quantity.json';
+
 export default class CartItem extends React.Component {
 	constructor(props) {
 		super(props);
@@ -22,20 +24,18 @@ export default class CartItem extends React.Component {
 			editingVariant: false,
 			inventory: snCart.getItem(this.props.item.id),
 		};
-
-		if (props.item.models && props.item.models.variantOptions) {
-			this.state.variantOptions = props.item.models.variantOptions;
-			this.state.selectedVariant = this.state.variantOptions.find((opt) => opt.id === props.item.id);
-		}
 	}
 
 	onSelectVariant(variant, swatchIndex) {
+		const itemProps = this.props.item;
+		const lastStock = VariantQuantity.filter((item) => item.id === variant.id && itemProps.quantity > item.quantity);
+
 		if (variant.available) {
 			this.setState({
 				editingVariant: variant.id !== this.props.item.id ? swatchIndex : false,
 			}, () => {
 				if (this.state.editingVariant !== false) {
-					this.props.onChangeVariant(this.props.item, variant.id);
+					this.props.onChangeVariant(this.props.item, variant.id, lastStock);
 				}
 			});
 		}
@@ -43,13 +43,6 @@ export default class CartItem extends React.Component {
 
 	onRemoveItem = () => {
 		this.props.onRemoveItem(this.props.item);
-	}
-
-	onChangeVariant = (e) => {
-		e.stopPropagation();
-		this.setState({ editingVariant: false }, () => {
-			this.props.onChangeVariant(this.props.item, this.state.selectedVariant.id);
-		});
 	}
 
 	render() {
@@ -85,7 +78,7 @@ export default class CartItem extends React.Component {
 									<span className="text-primary mt-1 d-flex font-italic font-size-sm font-weight-normal"><SvgRecurring className="svg mr-1"/> Recurring every 1 month</span>
 								)}
 							</p>
-							{!models.isFree && (<button className="cart-item__remove btn-unstyled d-flex" type="button" aria-label="Remove" onClick={this.onRemoveItem} data-cy="cart-remove-icon"><SvgTrash className="svg" /></button>)}
+							{!models.isFree && (<button className="cart-item__remove btn-unstyled d-flex text-body" type="button" aria-label="Remove" onClick={this.onRemoveItem} data-cy="cart-remove-icon"><SvgTrash className="svg" /></button>)}
 						</div>
 
 						{swatches.map((opt, index) => {
@@ -95,7 +88,7 @@ export default class CartItem extends React.Component {
 								<div key={opt.id} className={`mb-1 ${isMultiOptions && index === 0 ? 'border-bottom' : ''}`}>
 
 									{isMultiOptions && (
-										<p class="font-size-sm mb-1">1x Bronzing Face Drops 30ml</p>
+										<p className="font-size-sm mb-1">1x Bronzing Face Drops 30ml</p>
 									)}
 
 									<p className="d-flex mb-1 align-items-center">
