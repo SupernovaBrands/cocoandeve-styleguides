@@ -277,15 +277,22 @@
 				<li><a href="#">FAQ</a></li>
 				<li><a href="#">Result IRL</a></li>
 				<li><a href="#">Contact Us</a></li>
-				<li>
-					<select class="custom-select font-weight-bold my-1 px-0 h-auto">
-						<option selected="">USA (USD)</option>
-						<option value="">United Kingdom (GBP)</option>
-						<option value="">Canada (CAD)</option>
-						<option value="">Australia (AUD)</option>
-						<option value="">Europe (EUR)</option>
-						<option value="">Rest of the World (USD)</option>
-					</select>
+				<li class="border-bottom border-top card py-1 my-g">
+					<h4 id="countrySelect" class="card-header position-relative collapsed p-0 mb-25 mt-25" data-toggle="collapse" data-target="#collapseCountry" aria-expanded="false" aria-controls="collapseCountry">
+						Rest of the World (SGD)
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.6 22.6" class="svg font-size-xs chevron-down"><path d="M1.9 5.4l9.4 9.4 9.4-9.4 1.9 1.9-11.3 11.3L0 7.3l1.9-1.9z"></path></svg>
+					</h4>
+					<ul id="collapseCountry" class="collapse list-unstyled card-body p-0" role="tabpanel"
+						aria-labelledby="countrySelect" data-parent="#mobileMenu">
+						<li class="pt-g"><a href="#">USA (USD)</a></li>
+						<li><a href="#">United Kingdom (GBP)</a></li>
+						<li><a href="#">Canada (CAD)</a></li>
+						<li><a href="#">Australia (AUD)</a></li>
+						<li><a href="#">Europe (EUR)</a></li>
+						<li><a href="#">Germany (EUR)</a></li>
+						<li><a href="#">France (EUR)</a></li>
+						<li><a href="#">Rest of the World (SGD)</a></li>
+					</ul>
 				</li>
 			</ul>
 		</nav>
