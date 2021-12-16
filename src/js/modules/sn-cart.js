@@ -22,6 +22,7 @@ products.forEach((product) => {
 	const comparePrices = {};
 	// eslint-disable-next-line no-param-reassign
 	product.available = false;
+	product.featured_image = product.image ? product.image.src : '';
 	product.variants.forEach((variant) => {
 		prices[variant.id] = typeof variant.price === 'string' ? parseInt(variant.price.replace('.', ''), 10) : 0;
 		comparePrices[variant.id] = typeof variant.compare_at_price === 'string' ? parseInt(variant.compare_at_price.replace('.', ''), 10) : 0;
@@ -65,6 +66,9 @@ class SNCart {
 			items_subtotal_price: 0,
 			original_total_price: 0,
 		};
+
+		this.productInfo = productInfo;
+		this.recentProducts = ['sunny-honey-bali-bronzing-self-tan-set', 'bali-buffing-sugar-scrub', 'bali-hair-ways-travel-kit'];
 
 		this.manualGwpSelected = [];
 

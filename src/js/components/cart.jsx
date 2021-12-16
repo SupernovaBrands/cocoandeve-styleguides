@@ -1,6 +1,7 @@
 /* global tSettings tStrings */
 
 import React from 'react';
+import { getSizedImageUrl } from '@shopify/theme-images';
 
 import CartShippingMeter from '~comp/cart-shipping-meter';
 import CartDiscountMeter from '~comp/cart-discount-meter';
@@ -9,6 +10,7 @@ import CartDiscountForm from '~comp/cart-discount-form';
 import CartManualGwp from '~comp/cart-manual-gwp';
 import CartUpsell from '~comp/cart-upsell';
 import CartExtras from '~comp/cart-extras';
+import CartRecentProducts from '~comp/cart-recent-products';
 
 import snCart from '~mod/sn-cart';
 import { getShippingPrice } from '~mod/shipping';
@@ -44,18 +46,22 @@ export default class Cart extends React.Component {
 			shippingData: {},
 			shippingMeter: {},
 			discountMeter: {},
+			recentProducts: [],
 		};
 	}
 
 	componentDidMount() {
 		this.setCartData();
+		this.setRecentProducts();
 		document.addEventListener('snCart.requestComplete', this.setCartData);
 		document.addEventListener('snCart.requestDone', this.setCartCount);
+		document.addEventListener('snCart.recentProducts', this.setRecentProducts);
 	}
 
 	componentWillUnmount() {
 		document.removeEventListener('snCart.requestComplete', this.setCartData);
 		document.removeEventListener('snCart.requestDone', this.setCartCount);
+		document.removeEventListener('snCart.recentProducts', this.setRecentProducts);
 	}
 
 	setCartCount = (e) => {
@@ -254,6 +260,32 @@ export default class Cart extends React.Component {
 			swatches,
 			variants: allOptions,
 		};
+	}
+
+	setRecentProducts = async () => {
+		const { recentProducts, productInfo } = snCart;
+		const products = [];
+
+		for (let i = 0; i < recentProducts.length; i += 1) {
+			// eslint-disable-next-line no-await-in-loop
+			const productData = productInfo[recentProducts[i]];
+			if (productData) {
+				const variant = productData.product.variants[0];
+				if (variant && variant.available) {
+					products.push({
+						upsellId: variant.id,
+						title: productData.product.title.trim(),
+						image: getSizedImageUrl(productData.product.featured_image, '444x558'),
+						price: variant.price,
+						comparePrice: variant.compare_at_price || 0,
+					});
+				}
+			}
+		}
+
+		this.setState({
+			recentProducts: products,
+		});
 	}
 
 	/* -------------------
@@ -529,6 +561,7 @@ export default class Cart extends React.Component {
 			shippingData,
 			shippingMeter,
 			discountMeter,
+			recentProducts,
 		} = this.state;
 		return (
 			<div className="modal-dialog modal-dialog-scrollable modal-md m-0 w-100 mh-100 float-right">
@@ -567,7 +600,18 @@ export default class Cart extends React.Component {
 						)}
 
 						{!loadingInit && (itemCount === 0 ? (
-							<h4 className="mt-2 text-center font-weight-bold">{tStrings.cart_empty}</h4>
+							<div className="pt-3 text-center">
+								<div className="container px-g">
+									<p className="my-3 text-center">{tStrings.cart_empty}</p>
+									<a href="/collections" className="btn btn-primary" data-cy="shop-all-btn">Shop all products</a>
+								</div>
+								{recentProducts.length > 0 && (
+									<>
+										<hr />
+										<CartRecentProducts products={recentProducts} onAddToCart={this.onAddUpsell} />
+									</>
+								)}
+							</div>
 						) : (
 							// eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
 							<form

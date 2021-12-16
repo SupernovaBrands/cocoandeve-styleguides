@@ -23,7 +23,7 @@ const YotpoStar = (props) => {
 	}, [props.productId]);
 
 	return init ? (
-		<div className="d-flex">
+		<div className={`d-flex ${props.extraClass}`}>
 			<ReviewStar score={score} />
 			{props.showScore && <span className="ml-25">{`${score.toFixed(1)} stars`}</span>}
 			{props.showTotal && (
@@ -42,12 +42,14 @@ YotpoStar.propTypes = {
 	productUrl: PropTypes.string,
 	showScore: PropTypes.bool,
 	showTotal: PropTypes.bool,
+	extraClass: PropTypes.string,
 };
 
 YotpoStar.defaultProps = {
 	productUrl: '',
 	showScore: false,
 	showTotal: true,
+	extraClass: '',
 };
 
 export default YotpoStar;
