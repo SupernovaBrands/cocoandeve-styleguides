@@ -535,3 +535,6 @@ if ($('.announcement-bar__timer').length > 0) {
 	import(/* webpackChunkName: 'announcement-timer' */ '~mod/announcement-timer');
 }
 
+if ($('.product-carousel-tan-abtest').length > 0) {
+	import(/* webpackChunkName: 'product-carousel-tan-abtest' */ '~mod/product-carousel-tan-abtest');
+}

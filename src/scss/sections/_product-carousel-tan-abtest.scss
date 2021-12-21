@@ -1,0 +1,11 @@
+html.au-store {
+    .homepage-product-carousel-tan-abtest {
+        .product-carousel-tan-abtest {
+            display: block !important;
+        }
+
+        .product-carousel:not(.product-carousel-tan-abtest) {
+            display: none !important;
+        }
+    }
+}
