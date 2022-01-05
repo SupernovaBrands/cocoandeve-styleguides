@@ -22,6 +22,7 @@ products.forEach((product) => {
 	const comparePrices = {};
 	// eslint-disable-next-line no-param-reassign
 	product.available = false;
+	// eslint-disable-next-line no-param-reassign
 	product.featured_image = product.image ? product.image.src : '';
 	product.variants.forEach((variant) => {
 		prices[variant.id] = typeof variant.price === 'string' ? parseInt(variant.price.replace('.', ''), 10) : 0;
