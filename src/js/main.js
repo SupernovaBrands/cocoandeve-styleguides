@@ -87,7 +87,7 @@ if ($('.real-result').length > 0) {
 
 const cookieBanner = $('.cookies-banner');
 if (cookieBanner.length > 0) {
-	import(/* webpackChunkName: 'carousel-loop' */ '~mod/cookies-banner.js');
+	import(/* webpackChunkName: 'carousel-loop' */ '~mod/cookies-banner');
 }
 
 if ($('body').hasClass('template-product')) {
@@ -518,7 +518,7 @@ $(document).ready(function () {
 			if (e.to + 1 === 3) {
 				$('.sustainability-image-slider .carousel-control-next').attr('disabled', true);
 				$('.sustainability-image-slider .carousel-control-prev').removeAttr('disabled');
-			} 
+			}
 		});
 	}
 });
