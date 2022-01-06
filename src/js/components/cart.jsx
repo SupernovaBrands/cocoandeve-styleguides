@@ -66,11 +66,6 @@ export default class Cart extends React.Component {
 
 	setCartCountEl = (count) => {
 		$('.cart-drawer__count').text(count);
-		if (count > 9) {
-			$('.cart-drawer__count.mobile').addClass('small');
-		} else {
-			$('.cart-drawer__count.mobile').removeClass('small');
-		}
 	}
 
 	setCartCount = (e) => {
