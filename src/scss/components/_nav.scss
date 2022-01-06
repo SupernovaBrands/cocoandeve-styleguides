@@ -27,9 +27,9 @@
 
 			.cart-drawer__count {
 				position: absolute;
-				top: 1em;
+				top: 0.5em;
 				left: 50%;
-				transform: translate(-50%, -50%);
+				transform: translateX(-50%);
 			}
 
 			&:focus,
