@@ -87,7 +87,14 @@
 					<a class="nav-link h4 m-0 d-flex text-uppercase font-weight-bold" data-toggle="modal" data-target="#cart-drawer" role="button" data-cy="cart-icon"><img class="svg mr-25" src="icons/cart.svg" replace-to-svg /> Cart (<span class="cart-drawer__count">0</span>)</a>
 				</li>
 			</ul>
-			<a class="nav-link cart d-flex justify-content-end font-weight-bold px-0 d-lg-none" data-toggle="modal" data-target="#cart-drawer" role="button">
+
+			<!-- BEGIN ABtest code -->
+			<a class="nav-link nav-link--abtest-user cart d-none justify-content-end font-weight-bold px-0 d-lg-none" href="#">
+				<img class="svg" src="icons/account.svg" replace-to-svg />
+			</a>
+			<!-- END ABtest code -->
+
+			<a class="nav-link cart d-flex justify-content-end font-weight-bold px-0 d-lg-none nav-link__cart" data-toggle="modal" data-target="#cart-drawer" role="button">
 				<img class="svg" src="icons/cart.svg" replace-to-svg /> (<span class="cart-drawer__count"></span>)
 			</a>
 		</div>
