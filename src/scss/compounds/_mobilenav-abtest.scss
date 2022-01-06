@@ -1,0 +1,14 @@
+html.uk-store {
+	.mobile-menu--abtest {
+
+		@include media-breakpoint-down(md) {
+			.mobile-menu__bottom-nav {
+				display: block !important;
+			}
+		}
+
+		.product-swatch-mobile.show {
+			transform: translateY(-100%);
+		}
+	}
+}
