@@ -136,6 +136,21 @@ html.us-store {
         }
     }
 
+    .search-feature-component-abtest {
+        .nav-link {
+
+            @include media-breakpoint-up(lg) {
+                .cart-drawer__count {
+                    position: absolute;
+                    top: 0.3em;
+                    left: 30%;
+                    transform: translateX(-30%);
+                }
+            }
+        }
+    }
+    
+
     .search-feature-with-suggestion-abtest-active {
         .search-feature-component-abtest {
             display: flex !important;
