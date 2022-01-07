@@ -1,9 +1,9 @@
 html.uk-store {
 
-	.mobile-menu-with-cart--abtest,
-	.mobile-menu-with-account--abtest {
+	.mobile-secnav-bottom__cart--abtest,
+	.mobile-secnav-bottom__account--abtest {
 		@include media-breakpoint-down(md) {
-			.mobile-menu__bottom-nav {
+			.mobile-secnav-bottom {
 				display: block !important;
 			}
 		}
@@ -11,15 +11,19 @@ html.uk-store {
 		.product-swatch-mobile.show {
 			transform: translateY(-100%);
 		}
+
+		.mobile-secnav {
+			display: none !important;
+		}
 	}
 
 	// Cart icon on top, account icon at the bottom variant
-	.mobile-menu-with-account--abtest .col__cart {
+	.mobile-secnav-bottom__account--abtest .col__cart {
 		display: none;
 	}
 
 	// Account icon on top, cart icon at the bottom variant
-	.mobile-menu-with-cart--abtest {
+	.mobile-secnav-bottom__cart--abtest {
 
 		.col__account {
 			display: none;
