@@ -40,6 +40,7 @@ const SearchBox = {
 		return $('.search-panel').hasClass('show');
 	},
 	searchBoxToggle() {
+		$('header').removeClass('overflow-hidden');
 		$('.search-panel').toggleClass('show');
 		$('body').toggleClass('search-panel-active');
 		if (SearchBox.isSearchOpen()) {
