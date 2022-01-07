@@ -14,7 +14,7 @@
   \*******************************************************/
 /***/ (() => {
 
-eval("$('.product-carousel-tan-abtest').each(function (index, tabs) {\n  $(tabs).find('[data-toggle=\"tab\"]').on('shown.bs.tab', function (event) {\n    $('.carousel--scroll').each(function (index, carousel) {\n      carousel.classList.remove('d-none');\n      carousel.dispatchEvent(new CustomEvent('adjustThumb'));\n    });\n  });\n});\n\n//# sourceURL=webpack://cocoandeve-styleguides/./src/js/modules/product-carousel-tan-abtest.js?");
+eval("$('.product-carousel-tan-abtest').each(function (index, tabs) {\n  $(tabs).find('[data-toggle=\"tab\"]').on('shown.bs.tab', function () {\n    $('.carousel--scroll').each(function (index2, carousel) {\n      carousel.classList.remove('d-none');\n      carousel.dispatchEvent(new CustomEvent('adjustThumb'));\n    });\n  });\n});\n\n//# sourceURL=webpack://cocoandeve-styleguides/./src/js/modules/product-carousel-tan-abtest.js?");
 
 /***/ })
 
