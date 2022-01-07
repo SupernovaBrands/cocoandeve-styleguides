@@ -198,6 +198,47 @@
 			width: 33.33333333%;
 		}
 	}
+
+	&--scroll {
+		.carousel-item {
+			display: block;
+			margin-right: 0;
+		}
+
+		.carousel-inner {
+			overflow: auto hidden;
+			-ms-overflow-style: none;
+			scrollbar-width: none;
+
+			&::-webkit-scrollbar {
+				display: none;
+			}
+		}
+
+		.scrollbar {
+			position: relative;
+			background: $gray-100;
+
+			&, &--thumb {
+				height: 4px;
+				border-radius: 2px;
+			}
+
+			&--thumb {
+				position: absolute;
+				left: 0;
+				background: $gray-400;
+			}
+		}
+
+		.carousel-control-prev,
+		.carousel-control-next {
+			top: 50%;
+			bottom: auto;
+			width: auto;
+			transform: translateY(-50%);
+		}
+	}
 }
 
 .carousel-indicators {
