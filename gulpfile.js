@@ -18,7 +18,7 @@ const fs = require('fs');
 const path = require('path');
 
 const webpack = require('webpack');
-const webpackConfig = require('./webpack.config.js');
+const webpackConfig = require('./webpack.config');
 
 const cssDir = 'dist/css';
 const jsDir = 'dist/js';

@@ -65,6 +65,10 @@ export default class Cart extends React.Component {
 		document.removeEventListener('snCart.recentProducts', this.setRecentProducts);
 	}
 
+	setCartCountEl = (count) => {
+		$('.cart-drawer__count').text(count);
+	}
+
 	setCartCount = (e) => {
 		this.setState((prevState) => {
 			const { detail } = e;
@@ -78,7 +82,7 @@ export default class Cart extends React.Component {
 				count = detail.result.item_count - prevState.manualGwpCount;
 			}
 			count = count > 0 ? count : 0;
-			$('.cart-drawer__count').text(count);
+			this.setCartCountEl(count);
 
 			return {
 				itemCount: count,
@@ -111,7 +115,7 @@ export default class Cart extends React.Component {
 		models.itemCount = count;
 		models.manualGwpCount = manualGwpCount;
 		models.comparePriceDiff = comparePriceDiff;
-		$('.cart-drawer__count').text(count);
+		this.setCartCountEl(count);
 
 		models.upsellData = await this.getUpsell(items);
 
@@ -532,9 +536,7 @@ export default class Cart extends React.Component {
 		});
 	}
 
-	getStock = (var_id) => {
-		return snCart.getVariantInProducts(var_id).inv;
-	}
+	getStock = (var_id) => snCart.getVariantInProducts(var_id).inv
 
 	handleKeyDown = (e) => {
 		if (e.keyCode === 13) {
