@@ -82,7 +82,11 @@ export default class CartItem extends React.Component {
 									{`${models.recurring ? ' Subscription' : ''}`}
 								</ConditionWrapper>
 								{models.recurring && (
-									<span className="text-primary mt-1 d-flex font-italic font-size-sm font-weight-normal"><SvgRecurring className="svg mr-1"/> Recurring every 1 month</span>
+									<span className="text-primary mt-1 d-flex font-italic font-size-sm font-weight-normal">
+										<SvgRecurring className="svg mr-1" />
+										{' '}
+										Recurring every 1 month
+									</span>
 								)}
 							</p>
 							{!models.isFree && (<button className="cart-item__remove btn-unstyled d-flex" type="button" aria-label="Remove" onClick={this.onRemoveItem} data-cy="cart-remove-icon"><SvgTrash className="svg" /></button>)}
@@ -95,7 +99,7 @@ export default class CartItem extends React.Component {
 								<div key={opt.id} className={`mb-1 ${isMultiOptions && index === 0 ? 'border-bottom' : ''}`}>
 
 									{isMultiOptions && (
-										<p class="font-size-sm mb-1">1x Bronzing Face Drops 30ml</p>
+										<p className="font-size-sm mb-1">1x Bronzing Face Drops 30ml</p>
 									)}
 
 									<p className="d-flex mb-1 align-items-center">

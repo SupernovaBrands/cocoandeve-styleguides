@@ -87,7 +87,7 @@ if ($('.real-result').length > 0) {
 
 const cookieBanner = $('.cookies-banner');
 if (cookieBanner.length > 0) {
-	import(/* webpackChunkName: 'carousel-loop' */ '~mod/cookies-banner.js');
+	import(/* webpackChunkName: 'carousel-loop' */ '~mod/cookies-banner');
 }
 
 if ($('body').hasClass('template-product')) {
@@ -518,7 +518,7 @@ $(document).ready(function () {
 			if (e.to + 1 === 3) {
 				$('.sustainability-image-slider .carousel-control-next').attr('disabled', true);
 				$('.sustainability-image-slider .carousel-control-prev').removeAttr('disabled');
-			} 
+			}
 		});
 	}
 });
@@ -537,4 +537,8 @@ if ($('.announcement-bar__timer').length > 0) {
 
 if ($('.product-carousel-tan-abtest').length > 0) {
 	import(/* webpackChunkName: 'product-carousel-tan-abtest' */ '~mod/product-carousel-tan-abtest');
+}
+
+if ($('.search-panel').length > 0) {
+	import(/* webpackChunkName: 'predictive-search' */ '~mod/search-box-abtest');
 }

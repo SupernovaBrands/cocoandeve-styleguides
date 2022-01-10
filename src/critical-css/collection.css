@@ -129,8 +129,9 @@ h1{font-size:2.5em}
 .nav-link{color:#151515}
 .nav-link .svg{font-size:1.375em}
 @media (max-width:991.98px){
-.nav-link.cart{font-size:1.25em;flex-basis:20%}
-.nav-link.cart .svg{font-size:1.25em;margin-right:.1875em}
+.nav-link.cart{flex-basis:20%}
+.nav-link.cart .svg{font-size:1.5625em}
+.nav-link.cart .cart-drawer__count{position:absolute;top:.5em;left:50%;transform:translateX(-50%)}
 }
 .navbar-brand{color:#00635b}
 .navbar-brand:before{font-size:1.7em}

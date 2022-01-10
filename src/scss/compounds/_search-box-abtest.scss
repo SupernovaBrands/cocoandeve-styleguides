@@ -1,0 +1,183 @@
+html.us-store {
+    .product-card {
+        &--search-result {
+            > a {
+                @include media-breakpoint-up(lg) {
+                    flex: none;
+                    max-width: none;
+                }
+            }
+    
+            picture {
+                flex-basis: 20%;
+            }
+    
+            img {
+                max-height: calc-em(85, 16);
+                object-fit: cover;
+    
+                @include media-breakpoint-up(lg) {
+                    max-height: none;
+                }
+            }
+        }
+    }
+
+    .search-panel-active {
+        overflow: hidden;
+    
+        @include media-breakpoint-up(lg) {
+            overflow: auto;
+        }
+    }
+    
+    .search-panel {
+        box-shadow: 0 4px 6px #0000000d;
+        transition: all 0.3s;
+        position: fixed;
+        left: 100%;
+        height: 100vh;
+        opacity: 0;
+        z-index: $zindex-sticky;
+        border-radius: 0;
+        display: block !important;
+    
+        @include media-breakpoint-up(lg) {
+            height: 0;
+            position: absolute;
+            left: 0;
+        }
+    
+        &.show {
+            transition: all .5s ease;
+            opacity: 1;
+            height: 100vh;
+            left: 0;
+    
+            @include media-breakpoint-up(lg) {
+                height: 30em;
+            }
+        }
+    
+        &__top {
+            border-bottom: 1px solid $gray-400;
+    
+            input {
+                &:focus,
+                &:active {
+                    box-shadow: none;
+                    outline: 0;
+                }
+            }
+        }
+    
+        &__close {
+            right: calc-em(16, 16);
+            color: $body-color;
+        }
+    
+        &__result {
+            overflow-y: scroll;
+            max-height: calc(100vh - 2.5rem);
+    
+            @include media-breakpoint-up(lg) {
+                overflow-y: unset;
+            }
+        }
+    
+        &__tag {
+            background-color: $gray-100;
+            cursor: pointer;
+        }
+    
+        &__clear {
+            right: calc-em(42, 16);
+            color: $body-color;
+    
+            &:hover,
+            &:focus {
+                text-decoration: none;
+                color: $body-color;
+            }
+    
+            &.disabled {
+                opacity: .5;
+                pointer-events: none;
+            }
+        }
+    
+        .carousel-inner {
+            @include media-breakpoint-down(md) {
+                flex-wrap: wrap !important;
+            }
+        }
+    
+        @include media-breakpoint-up(md) {
+            .carousel-control {
+                transform: none;
+            }
+    
+            .carousel-control-next {
+                top: auto;
+                right: 1%;
+            }
+
+            .carousel-control-prev {
+                top: auto;
+                left: auto;
+                right: 3%;
+            }
+        }
+    }
+
+    .nav-ranges + .search-panel {
+        @include media-breakpoint-down(md) {
+            margin-top: -3em;
+        }
+    }
+
+    .search-feature-component-abtest {
+        .nav-link {
+
+            @include media-breakpoint-up(lg) {
+                .cart-drawer__count {
+                    position: absolute;
+                    top: 0.3em;
+                    left: 30%;
+                    transform: translateX(-30%);
+                }
+            }
+        }
+    }
+    
+
+    .search-feature-with-suggestion-abtest-active {
+        .search-feature-component-abtest {
+            display: flex !important;
+        }
+
+        .navbar-nav.justify-content-end:not(.search-feature-component-abtest),
+        .nav-link.cart:not(.search-feature-component-abtest) {
+            display: none !important;
+        }
+    }
+
+    .search-feature-without-suggestion-abtest-active {
+        .search-feature-component-abtest {
+            display: flex !important;
+        }
+
+        .search-panel__home {
+            display: none;
+        }
+
+        .search-panel {
+            height: auto;
+        }
+
+        .navbar-nav.justify-content-end:not(.search-feature-component-abtest),
+        .nav-link.cart:not(.search-feature-component-abtest) {
+            display: none !important;
+        }
+    }
+}

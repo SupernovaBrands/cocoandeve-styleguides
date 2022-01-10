@@ -19,12 +19,17 @@
 
 	@include media-breakpoint-down(md) {
 		&.cart {
-			font-size: calc-em(20, 16);
 			flex-basis: 20%;
 
 			.svg {
-				font-size: calc-em(20);
-				margin-right: calc-em(3, 16);
+				font-size: calc-em(25);
+			}
+
+			.cart-drawer__count {
+				position: absolute;
+				top: 0.5em;
+				left: 50%;
+				transform: translateX(-50%);
 			}
 
 			&:focus,
