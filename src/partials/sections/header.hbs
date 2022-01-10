@@ -99,10 +99,15 @@
 						<span class="position-relative font-weight-normal">
 							<img class="svg" src="icons/cart.svg" replace-to-svg /><span class="cart-drawer__count font-size-sm"></span>
 						</span>
-					</a> 
+					</a>
 				</li>
 			</ul>
-			<a class="nav-link cart d-flex justify-content-end px-0 d-lg-none" data-toggle="modal" data-target="#cart-drawer" role="button">
+			<!-- BEGIN ABtest code -->
+			<a class="nav-link nav-link--abtest-user cart d-none justify-content-end font-weight-bold px-0 d-lg-none" href="#">
+				<img class="svg" src="icons/account.svg" replace-to-svg />
+			</a>
+			<!-- END ABtest code -->
+			<a class="nav-link cart d-flex justify-content-end px-0 d-lg-none nav-link__cart" data-toggle="modal" data-target="#cart-drawer" role="button">
 				<span class="position-relative">
 					<img class="svg" src="icons/cart.svg" replace-to-svg /><span class="cart-drawer__count font-size-sm"></span>
 				</span>
@@ -229,7 +234,7 @@
 		{{/unless}}
 	</nav>
 	{{> components/tooltip}}
-	<nav class="text-center nav-ranges p-g bg-white d-lg-none">
+	<nav class="text-center mobile-secnav p-g bg-white d-lg-none">
 		<ul class="nav justify-content-center">
 			<li class="nav-item">
 				<a href="#" class="nav-link pb-0 pt-0 "><b>Shop All</b></a>
