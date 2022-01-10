@@ -107,10 +107,15 @@
 							<span class="position-relative font-weight-normal">
 								<svg viewBox="0 0 22 25" xmlns="http://www.w3.org/2000/svg" class="svg"><path d="m11.001 0 .219.005c2.606.11 4.711 2.191 4.826 4.784l.003.145h4.078l.12.007c.472.053.86.412.937.885l.013.12.8 16.508c.03.609-.122 1.157-.479 1.599l-.127.144-.133.127c-.506.442-1.197.642-2.022.672l-.228.004H2.995l-.229-.004c-.825-.03-1.516-.23-2.024-.675l-.134-.128-.126-.143c-.316-.391-.47-.87-.481-1.397l.002-.2L.8 5.945c.025-.535.44-.949.95-1.005l.12-.006h4.082C5.994 2.201 8.246 0 11.002 0Zm8.109 7.064H2.894l-.748 15.492v.064l.003.048.013.062.063.034.1.036c.105.032.27.064.525.073l.147.002H19.01c.268 0 .455-.023.583-.05l.126-.036a.735.735 0 0 0 .045-.017l.074-.039.009-.007.01-.05a.538.538 0 0 0 .005-.05l-.001-.067-.751-15.495Zm-8.109-4.937-.17.005a2.903 2.903 0 0 0-2.733 2.705l-.003.097h5.813c-.04-1.494-1.236-2.715-2.736-2.802l-.17-.005Z"></path></svg><span class="cart-drawer__count font-size-sm"></span>
 							</span>
-						</a> 
+						</a>
 					</li>
 				</ul>
-				<a class="nav-link cart d-flex justify-content-end px-0 d-lg-none" data-toggle="modal" data-target="#cart-drawer" role="button">
+				<!-- BEGIN ABtest code -->
+				<a class="nav-link nav-link--abtest-user cart d-none justify-content-end font-weight-bold px-0 d-lg-none" href="#">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 22" class="svg"><path d="M19.1 18.2c0-1.8-.8-3.7-2.1-4.9-1.3-1.3-3.1-2-5-2H7.1c-1.9 0-3.6.7-5 2C.8 14.6 0 16.4 0 18.2v3.2h19.1v-3.2zm-12-4.9H12c1.3 0 2.6.5 3.6 1.4.9.9 1.5 2.2 1.5 3.5v1.2h-15v-1.2c0-1.3.5-2.6 1.5-3.5.9-.9 2.2-1.4 3.5-1.4zM9.5 10.1c.1 0 .1 0 0 0 1.4 0 2.7-.5 3.7-1.5 1-.9 1.5-2.2 1.5-3.6 0-1.3-.5-2.6-1.5-3.6C12.3.5 11 0 9.6 0h-.1C8.2 0 6.9.5 6 1.5 5 2.4 4.4 3.7 4.4 5c0 1.4.5 2.7 1.5 3.6 1 1 2.3 1.5 3.6 1.5zM6.4 5c0-.8.3-1.6.9-2.2.6-.5 1.4-.8 2.2-.8.8 0 1.6.3 2.2.9l.2.1c.6.6.9 1.3.8 2.1 0 .8-.3 1.6-.9 2.1-.6.6-1.4.9-2.2.9-.8 0-1.6-.3-2.2-.9-.6-.5-1-1.3-1-2.2z"></path></svg>
+				</a>
+				<!-- END ABtest code -->
+				<a class="nav-link cart d-flex justify-content-end px-0 d-lg-none nav-link__cart" data-toggle="modal" data-target="#cart-drawer" role="button">
 					<span class="position-relative">
 						<svg viewBox="0 0 22 25" xmlns="http://www.w3.org/2000/svg" class="svg"><path d="m11.001 0 .219.005c2.606.11 4.711 2.191 4.826 4.784l.003.145h4.078l.12.007c.472.053.86.412.937.885l.013.12.8 16.508c.03.609-.122 1.157-.479 1.599l-.127.144-.133.127c-.506.442-1.197.642-2.022.672l-.228.004H2.995l-.229-.004c-.825-.03-1.516-.23-2.024-.675l-.134-.128-.126-.143c-.316-.391-.47-.87-.481-1.397l.002-.2L.8 5.945c.025-.535.44-.949.95-1.005l.12-.006h4.082C5.994 2.201 8.246 0 11.002 0Zm8.109 7.064H2.894l-.748 15.492v.064l.003.048.013.062.063.034.1.036c.105.032.27.064.525.073l.147.002H19.01c.268 0 .455-.023.583-.05l.126-.036a.735.735 0 0 0 .045-.017l.074-.039.009-.007.01-.05a.538.538 0 0 0 .005-.05l-.001-.067-.751-15.495Zm-8.109-4.937-.17.005a2.903 2.903 0 0 0-2.733 2.705l-.003.097h5.813c-.04-1.494-1.236-2.715-2.736-2.802l-.17-.005Z"></path></svg><span class="cart-drawer__count font-size-sm"></span>
 					</span>
@@ -128,7 +133,7 @@
 		        <a href="#" class="d-block text-white text-underline">Proceed to checkout</a>
 		    </div>
 		</div>
-		<nav class="text-center nav-ranges p-g bg-white d-lg-none">
+		<nav class="text-center mobile-secnav p-g bg-white d-lg-none">
 			<ul class="nav justify-content-center">
 				<li class="nav-item">
 					<a href="#" class="nav-link pb-0 pt-0 "><b>Shop All</b></a>
