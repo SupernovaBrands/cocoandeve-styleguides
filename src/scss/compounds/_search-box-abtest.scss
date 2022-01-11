@@ -82,8 +82,12 @@ html.us-store {
         }
     
         &__close {
-            right: calc-em(16, 16);
+            right: 0;
             color: $body-color;
+
+            @include media-breakpoint-up(lg) {
+                right: calc-em(16, 16);
+            }
         }
     
         &__result {
@@ -160,8 +164,8 @@ html.us-store {
                 .cart-drawer__count {
                     position: absolute;
                     top: 0.3em;
-                    left: 30%;
-                    transform: translateX(-30%);
+                    left: 50%;
+                    transform: translateX(-50%);
                 }
             }
         }
