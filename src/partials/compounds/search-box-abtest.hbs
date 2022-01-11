@@ -3,10 +3,10 @@
 	<div class="search-panel__top w-100">
 		<div class="bg-white px-g">
 			<div class="container px-0 position-relative d-flex align-items-center">
-				<input type="text" placeholder="Type search terms here" name="q" class="col-12  border-0 py-2">
-				<a class="search-panel__clear position-absolute align-items-center font-weight-bold disabled" href="javascript:void(0)">Clear</a>
+				<img class="svg search-panel__input-search-icon position-absolute h2 mb-0" src="icons/search-abtest.svg" replace-to-svg />
+				<input type="text" placeholder="Search" name="q" class="col-12  border-0 py-2 pl-3">
 				<a class="search-panel__close position-absolute align-items-center font-weight-bold d-flex" href="javascript:void(0)">
-					<img class="svg font-size-xs" src="icons/close.svg" replace-to-svg />
+					<img class="svg" src="icons/close.svg" replace-to-svg />
 				</a>
 			</div>
 		</div>
@@ -17,12 +17,12 @@
 			<h4 class="col-12 col-lg-4 mb-lg-2 font-weight-normal order-1 font-weight-normal font-size-base">Popular searched items</h4>
 			<h4 class="col-12 col-lg-8 mb-lg-2 font-weight-normal order-3 order-lg-2 font-weight-normal font-size-base">Popular searched products</h4>
 			<div class="col-12 col-lg-4 order-2 mb-3">
-				<span class="search-panel__tag p-1 mr-1 d-inline-block mb-1 text-primary bg-primary-light rounded">Mask</span>
-				<span class="search-panel__tag p-1 mr-1 d-inline-block mb-1 text-primary bg-primary-light rounded">Shampoo</span>
-				<span class="search-panel__tag p-1 mr-1 d-inline-block mb-1 text-primary bg-primary-light rounded">Tan</span>
-				<span class="search-panel__tag p-1 mr-1 d-inline-block mb-1 text-primary bg-primary-light rounded">Scul scrub</span>
-				<span class="search-panel__tag p-1 mr-1 d-inline-block mb-1 text-primary bg-primary-light rounded">Mitt</span>
-				<span class="search-panel__tag p-1 mr-1 d-inline-block mb-1 text-primary bg-primary-light rounded">Bali Bod Bundle</span>
+				<span class="search-panel__tag p-1 mr-1 d-inline-block mb-1 text-primary rounded font-weight-bold">Mask</span>
+				<span class="search-panel__tag p-1 mr-1 d-inline-block mb-1 text-primary rounded font-weight-bold">Shampoo</span>
+				<span class="search-panel__tag p-1 mr-1 d-inline-block mb-1 text-primary rounded font-weight-bold">Tan</span>
+				<span class="search-panel__tag p-1 mr-1 d-inline-block mb-1 text-primary rounded font-weight-bold">Scul scrub</span>
+				<span class="search-panel__tag p-1 mr-1 d-inline-block mb-1 text-primary rounded font-weight-bold">Mitt</span>
+				<span class="search-panel__tag p-1 mr-1 d-inline-block mb-1 text-primary rounded font-weight-bold">Bali Bod Bundle</span>
 			</div>
 			{{> compounds/search-box-product-card-abtest class="mb-1 order-4" title="Bali Bronzing Foam in two lines"}}
 			{{> compounds/search-box-product-card-abtest class="mb-1  order-4" title="Bali Bronzing Foam"}}
@@ -35,7 +35,7 @@
 			<h4 class="container mt-2 mt-lg-0 font-size-base">X Results</h4>
 			{{#> sections/carousel-scroll class="mb-3" id="search-products" no-scrollbar="true" controlclass="carousel-control d-none d-lg-flex"}}
 				{{> compounds/search-box-product-card-abtest class="carousel-item mb-1 active" title="Bali Bronzing Foam in two lines"}}
-				{{> compounds/search-box-product-card-abtest class="carousel-item mb-1" title="Bali Bronzing Foam in two lines"}}
+				{{> compounds/search-box-product-card-abtest class="carousel-item mb-1" title="Bali Bronzing Foam in two lines long lines"}}
 				{{> compounds/search-box-product-card-abtest class="carousel-item mb-1" title="Bali Bronzing Foam in two lines"}}
 				{{> compounds/search-box-product-card-abtest class="carousel-item mb-1" title="Bali Bronzing Foam in two lines"}}
 				{{> compounds/search-box-product-card-abtest class="carousel-item mb-1" title="Bali Bronzing Foam in two lines"}}
