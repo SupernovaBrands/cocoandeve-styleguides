@@ -70,6 +70,16 @@ html.us-store {
                 }
             }
         }
+
+        &__home {
+            h4 {
+                color: $gray-600;
+            }
+        }
+
+        &__input-search-icon {
+            z-index: $zindex-dropdown;
+        }
     
         &__close {
             right: calc-em(16, 16);
@@ -86,7 +96,7 @@ html.us-store {
         }
     
         &__tag {
-            background-color: $gray-100;
+            background-color: $primary-light-second;
             cursor: pointer;
         }
     
@@ -138,6 +148,13 @@ html.us-store {
 
     .search-feature-component-abtest {
         .nav-link {
+            &.search {
+                @include media-breakpoint-down(md) {
+                    .svg {
+                        font-size: calc-em(25);
+                    }
+                }
+            }
 
             @include media-breakpoint-up(lg) {
                 .cart-drawer__count {
