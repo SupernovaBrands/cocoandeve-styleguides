@@ -152,6 +152,12 @@ html.us-store {
     }
 
     .search-feature-component-abtest {
+        @include media-breakpoint-up(lg) {
+            .nav-link {
+                line-height: calc-em(16, 16);
+            }
+        }
+
         .nav-link {
             &.search {
                 @include media-breakpoint-down(md) {
