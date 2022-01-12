@@ -1,0 +1,20 @@
+.btn-choose__swatch--abtest {
+	display: none !important;
+}
+
+html.au-store {
+	.btn-choose__swatch {
+
+		&:not(.btn-choose__swatch-subscription) {
+			display: none !important;
+		}
+
+		&--abtest {
+			display: block !important;
+		}
+	}
+
+	.collection-swatch--abtest .border-bottom {
+		border-color: $sh-purple-light !important;
+	}
+}
