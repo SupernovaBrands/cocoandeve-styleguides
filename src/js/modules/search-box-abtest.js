@@ -62,7 +62,9 @@ const SearchBox = {
 		if (keyword === '') {
 			SearchBox.loading(false);
 			searchResult.hide();
-			searchHome.show();
+			if (!$('body').hasClass('search-feature-without-suggestion-abtest-active')) {
+				searchHome.show();
+			}
 			return;
 		}
 

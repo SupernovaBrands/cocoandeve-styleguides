@@ -2,9 +2,9 @@
 	{{#unless critical}}
 	<div class="search-panel__top w-100">
 		<div class="bg-white px-g">
-			<div class="container px-0 position-relative d-flex align-items-center">
+			<div class="container position-relative d-flex align-items-center px-0 px-lg-g">
 				<img class="svg search-panel__input-search-icon position-absolute h2 mb-0" src="icons/search-abtest.svg" replace-to-svg />
-				<input type="text" placeholder="Search" name="q" class="col-12  border-0 py-2 pl-3">
+				<input type="text" placeholder="Search" name="q" class="col-12  border-0 py-2 pl-4 pl-lg-4">
 				<a class="search-panel__close position-absolute align-items-center font-weight-bold d-flex" href="javascript:void(0)">
 					<img class="svg" src="icons/close.svg" replace-to-svg />
 				</a>
@@ -32,7 +32,7 @@
 	</div>
 	<div class="search-panel__result container mt-lg-2 px-g" style="display: none;">
 		<div class="row">
-			<h4 class="container mt-2 mt-lg-0 font-size-base">X Results</h4>
+			<h4 class="container mt-2 mt-lg-0 font-size-base">X results</h4>
 			{{#> sections/carousel-scroll class="mb-3" id="search-products" no-scrollbar="true" controlclass="carousel-control d-none d-lg-flex"}}
 				{{> compounds/search-box-product-card-abtest class="carousel-item mb-1 active" title="Bali Bronzing Foam in two lines"}}
 				{{> compounds/search-box-product-card-abtest class="carousel-item mb-1" title="Bali Bronzing Foam in two lines long lines"}}
