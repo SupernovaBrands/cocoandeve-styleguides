@@ -152,6 +152,12 @@ html.us-store {
     }
 
     .search-feature-component-abtest {
+        @include media-breakpoint-up(lg) {
+            .nav-link {
+                line-height: calc-em(16, 16);
+            }
+        }
+
         .nav-link {
             &.search {
                 @include media-breakpoint-down(md) {
@@ -164,7 +170,7 @@ html.us-store {
             @include media-breakpoint-up(lg) {
                 .cart-drawer__count {
                     position: absolute;
-                    top: 0.3em;
+                    bottom: 0;
                     left: 50%;
                     transform: translateX(-50%);
                 }
