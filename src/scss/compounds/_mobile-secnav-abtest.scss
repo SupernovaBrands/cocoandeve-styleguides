@@ -12,7 +12,7 @@ html.uk-store {
 			}
 
 			.product-swatch-mobile.show {
-				transform: translateY(-100%);
+				bottom: calc-em(50);
 			}
 
 			.main-header .mobile-secnav {
