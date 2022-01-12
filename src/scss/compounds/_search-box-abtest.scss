@@ -164,7 +164,7 @@ html.us-store {
             @include media-breakpoint-up(lg) {
                 .cart-drawer__count {
                     position: absolute;
-                    top: 0.3em;
+                    top: 0.5em;
                     left: 50%;
                     transform: translateX(-50%);
                 }
