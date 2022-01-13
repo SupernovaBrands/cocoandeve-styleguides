@@ -1,4 +1,22 @@
 html.us-store {
+    .search-panel-active {
+        overflow: hidden;
+    
+        @include media-breakpoint-up(lg) {
+            overflow: auto;
+        }
+    
+        &:before {
+            content: ' ';
+            height: 100%;
+            background: #000;
+            z-index: $zindex-dropdown;
+            opacity: .5;
+            width: 100%;
+            position: fixed;
+        }
+    }
+
     .product-card {
         &--search-result {
             > a {
@@ -55,7 +73,13 @@ html.us-store {
             left: 0;
     
             @include media-breakpoint-up(lg) {
-                height: 30em;
+                height: 28em;
+            }
+
+            &.no-result {
+                @include media-breakpoint-up(lg) {
+                    height: auto;
+                }
             }
         }
     
@@ -69,6 +93,12 @@ html.us-store {
                     box-shadow: none;
                     outline: 0;
                 }
+            }
+        }
+
+        &__loading {
+            svg {
+                font-size: calc-em(54, 16);
             }
         }
 
@@ -145,9 +175,9 @@ html.us-store {
         }
     }
 
-    .nav-ranges + .search-panel {
+    .nav-ranges + .search-panel, .mobile-secnav + .search-panel {
         @include media-breakpoint-down(md) {
-            margin-top: -3em;
+            margin-top: -3.2em;
         }
     }
 
