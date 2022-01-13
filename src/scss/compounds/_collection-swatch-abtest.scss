@@ -4,11 +4,6 @@
 
 html.au-store {
 	.btn-choose__swatch {
-
-		&:not(.btn-choose__swatch-subscription) {
-			display: none !important;
-		}
-
 		&--abtest {
 			display: block !important;
 		}
