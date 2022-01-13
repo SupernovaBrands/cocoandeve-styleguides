@@ -316,13 +316,20 @@
   				<div class="container position-relative d-flex align-items-center px-0 px-lg-g">
   					<svg viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg search-panel__input-search-icon position-absolute h2 mb-0"><path d="m23.707 22.793-6.825-6.825A9.454 9.454 0 0 0 19 10C19 4.762 14.738.5 9.5.5S0 4.762 0 10s4.262 9.5 9.5 9.5c2.26 0 4.335-.796 5.968-2.118l6.825 6.825a.997.997 0 0 0 1.414 0 .999.999 0 0 0 0-1.414ZM9.5 17.5C5.364 17.5 2 14.136 2 10s3.364-7.5 7.5-7.5S17 5.864 17 10s-3.364 7.5-7.5 7.5Z" fill="#000"></path></svg>
   					<input type="text" placeholder="Search" name="q" class="col-12  border-0 py-2 pl-4 pl-lg-4">
+  					<a class="search-panel__clear position-absolute align-items-center disabled" href="javascript:void(0)">Clear</a>
   					<a class="search-panel__close position-absolute align-items-center font-weight-bold d-flex" href="javascript:void(0)">
   						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" class="svg"><path d="M12 1l-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1-5-5z"></path></svg>
   					</a>
   				</div>
   			</div>
   		</div>
-  		<h5 class="search-panel__no-result text-center pb-3 d-none">Your search returned no results</h5>
+  		<div class="search-panel__no-result py-3 container d-none">
+  			<p class="font-weight-bold">0 results</p>
+  			<p class="mb-0">Whoops, there it isn’t. Try a new search or check out our <a href="#" class="text-underline">shop all page</a>.</p>
+  		</div>
+  		<div class="search-panel__loading pt-5 container d-none text-center">
+  			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" class="svg text-primary"><path d="M8.527 15a1.421 1.421 0 00-1.421-1.421H1.421a1.421 1.421 0 100 2.842h5.685A1.421 1.421 0 008.527 15zm20.052-1.421h-2.842a1.421 1.421 0 100 2.842h2.842a1.421 1.421 0 000-2.842zM15.714 8.527a1.421 1.421 0 001.421-1.421V1.421a1.421 1.421 0 00-2.842 0v5.685a1.421 1.421 0 001.421 1.421zm.001 12.946a1.421 1.421 0 00-1.421 1.421v5.685a1.421 1.421 0 002.842 0v-5.685a1.421 1.421 0 00-1.421-1.421zM6.589 4.579a1.421 1.421 0 00-2.01 2.01l4.02 4.02a1.421 1.421 0 102.01-2.01zm16.234 14.812a1.421 1.421 0 10-2.01 2.01l4.02 4.02a1.421 1.421 0 102.01-2.01zm-14.225.001l-4.02 4.02a1.421 1.421 0 002.01 2.01l4.02-4.02a1.421 1.421 0 10-2.01-2.01z"></path></svg>
+  		</div>
   		<div class="search-panel__home container px-g pt-3">
   			<div class="row">
   				<h4 class="col-12 col-lg-4 mb-lg-2 font-weight-normal order-1 font-weight-normal font-size-base">Popular searched items</h4>
@@ -550,6 +557,7 @@
   		</div>
   	</div>
   			</div>
+  			<p class="mt-n3">Now what you're looking for? Check our <a href="#" class="text-underline">shop all page</a></p>
   		</div>
   	</div>
   </header>
