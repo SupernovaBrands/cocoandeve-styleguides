@@ -5,13 +5,20 @@
 			<div class="container position-relative d-flex align-items-center px-0 px-lg-g">
 				<img class="svg search-panel__input-search-icon position-absolute h2 mb-0" src="icons/search-abtest.svg" replace-to-svg />
 				<input type="text" placeholder="Search" name="q" class="col-12  border-0 py-2 pl-4 pl-lg-4">
+				<a class="search-panel__clear position-absolute align-items-center disabled" href="javascript:void(0)">Clear</a>
 				<a class="search-panel__close position-absolute align-items-center font-weight-bold d-flex" href="javascript:void(0)">
 					<img class="svg" src="icons/close.svg" replace-to-svg />
 				</a>
 			</div>
 		</div>
 	</div>
-	<h5 class="search-panel__no-result text-center pb-3 d-none">Your search returned no results</h5>
+	<div class="search-panel__no-result py-3 container d-none">
+		<p class="font-weight-bold">0 results</p>
+		<p class="mb-0">Whoops, there it isn’t. Try a new search or check out our <a href="#" class="text-underline">shop all page</a>.</p>
+	</div>
+	<div class="search-panel__loading pt-5 container d-none text-center">
+		<img class="svg text-primary" src="icons/loading.svg" replace-to-svg />
+	</div>
 	<div class="search-panel__home container px-g pt-3">
 		<div class="row">
 			<h4 class="col-12 col-lg-4 mb-lg-2 font-weight-normal order-1 font-weight-normal font-size-base">Popular searched items</h4>
@@ -45,6 +52,7 @@
 				{{> compounds/search-box-product-card-abtest class="carousel-item mb-1" title="Bali Bronzing Foam in two lines"}}
 			{{/ sections/carousel-scroll}}
 		</div>
+		<p class="mt-n3">Now what you're looking for? Check our <a href="#" class="text-underline">shop all page</a></p>
 	</div>
 	{{/unless}}
 </div>
