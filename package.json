@@ -1,6 +1,6 @@
 {
   "name": "cocoandeve-styleguides",
-  "version": "1.5.23",
+  "version": "1.5.24",
   "description": "Here we have all the CORE, COMPONENTS, COMPOUND, SECTIONS and TEMPLATE scss-code organized in the same waas is done on the Shopify repo.",
   "main": "index.html",
   "scripts": {
