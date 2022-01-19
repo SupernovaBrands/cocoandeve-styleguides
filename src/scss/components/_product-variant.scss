@@ -46,17 +46,6 @@
 		}
 	}
 
-	&--subscription {
-		.custom-control-input {
-			&:checked {
-				~ .custom-control-label {
-					background-color: $primary-light-second;
-				}
-			}
-
-		}
-	}
-
 	.text-linethrough {
 		color: $gray-700;
 	}

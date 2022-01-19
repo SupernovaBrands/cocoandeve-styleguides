@@ -86,3 +86,14 @@
 		font-size: 3em;
 	}
 }
+
+
+
+.product--subscription {
+	background-image: url(asset-url('subscription-radial-backround.svg'));
+	background-color: $primary-light-second;
+
+	@include media-breakpoint-up(lg) {
+		border-radius: $border-radius;
+	}
+}
