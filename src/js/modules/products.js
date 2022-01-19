@@ -229,4 +229,12 @@ if (productWaitlistForm.length > 0 && productWaitlistSubmitted.length > 0) {
 	});
 }
 
-popopOver();
+if ($('.product--subscription').length > 0) {
+	popopOver();
+
+	$('#subscriptionCheckbox').on('change', function () {
+		const subscriptionVariant = $('.product-variant--subscription');
+		subscriptionVariant.find('input[type="radio"]').prop('checked', true);
+		subscriptionVariant.find('label').toggleClass('bg-primary-light-second', this.checked);
+	});
+}
