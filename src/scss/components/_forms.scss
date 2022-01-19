@@ -126,33 +126,4 @@
 			background-position: center;
 		}
 	}
-
-	&--subscription {
-
-		.custom-control-label::before,
-		.custom-control-label::after {
-			border-color: $primary;
-			border-radius: calc-em(2);
-			width: calc-em(16);
-			height: calc-em(16);
-			top: 50%;
-			transform: translateY(-50%);
-		}
-
-		.custom-control-input {
-			&:focus:not(:checked) ~ .custom-control-label::before {
-				border-color: $primary;
-			}
-
-			&:checked ~ .custom-control-label {
-				&::before {
-					background-color: $primary;
-				}
-
-				&::after {
-					background-image: url(icon-svg('check.svg', '#fff'));
-				}
-			}
-		}
-	}
 }

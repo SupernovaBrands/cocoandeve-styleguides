@@ -229,15 +229,4 @@ if (productWaitlistForm.length > 0 && productWaitlistSubmitted.length > 0) {
 	});
 }
 
-if ($('.product--subscription').length > 0) {
-	popopOver();
-
-	$('#subscriptionCheckbox').on('change', function () {
-		const subscriptionVariant = $('.product-variant--subscription');
-		subscriptionVariant.find('input[type="radio"]').prop('checked', true);
-		subscriptionVariant.find('label').toggleClass('bg-primary-light-second', this.checked);
-
-		subscriptionVariant.find('.product-variant__title').toggleClass('d-none', this.checked);
-		subscriptionVariant.find('.product-variant__title-subscription').toggleClass('d-none', !this.checked);
-	});
-}
+popopOver();
