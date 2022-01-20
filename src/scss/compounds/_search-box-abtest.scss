@@ -1,11 +1,11 @@
-html.us-store {
+html.uk-store {
     .search-panel-active {
         overflow: hidden;
-    
+
         @include media-breakpoint-up(lg) {
             overflow: auto;
         }
-    
+
         &:before {
             content: ' ';
             height: 100%;
@@ -25,15 +25,15 @@ html.us-store {
                     max-width: none;
                 }
             }
-    
+
             picture {
                 flex-basis: 20%;
             }
-    
+
             img {
                 max-height: calc-em(85, 16);
                 object-fit: cover;
-    
+
                 @include media-breakpoint-up(lg) {
                     max-height: none;
                 }
@@ -43,12 +43,12 @@ html.us-store {
 
     .search-panel-active {
         overflow: hidden;
-    
+
         @include media-breakpoint-up(lg) {
             overflow: auto;
         }
     }
-    
+
     .search-panel {
         box-shadow: 0 4px 6px #0000000d;
         transition: all 0.3s;
@@ -59,19 +59,19 @@ html.us-store {
         z-index: $zindex-sticky;
         border-radius: 0;
         display: block !important;
-    
+
         @include media-breakpoint-up(lg) {
             height: 0;
             position: absolute;
             left: 0;
         }
-    
+
         &.show {
             transition: all .5s ease;
             opacity: 1;
             height: 100vh;
             left: 0;
-    
+
             @include media-breakpoint-up(lg) {
                 height: 28em;
             }
@@ -82,11 +82,11 @@ html.us-store {
                 }
             }
         }
-    
+
         &__top {
             border-bottom: 1px solid $gray-400;
             border-top: 1px solid $gray-400;
-    
+
             input {
                 &:focus,
                 &:active {
@@ -111,7 +111,7 @@ html.us-store {
         &__input-search-icon {
             z-index: $zindex-dropdown;
         }
-    
+
         &__close {
             right: 0;
             color: $body-color;
@@ -120,48 +120,48 @@ html.us-store {
                 right: calc-em(16, 16);
             }
         }
-    
+
         &__result {
             overflow-y: scroll;
             max-height: calc(100vh - 2.5rem);
-    
+
             @include media-breakpoint-up(lg) {
                 overflow-y: unset;
             }
         }
-    
+
         &__tag {
             background-color: $primary-light-second;
             cursor: pointer;
         }
-    
+
         &__clear {
             right: calc-em(42, 16);
             color: $body-color;
-    
+
             &:hover,
             &:focus {
                 text-decoration: none;
                 color: $body-color;
             }
-    
+
             &.disabled {
                 opacity: .5;
                 pointer-events: none;
             }
         }
-    
+
         .carousel-inner {
             @include media-breakpoint-down(md) {
                 flex-wrap: wrap !important;
             }
         }
-    
+
         @include media-breakpoint-up(md) {
             .carousel-control {
                 transform: none;
             }
-    
+
             .carousel-control-next {
                 top: auto;
                 right: 1%;
@@ -207,14 +207,14 @@ html.us-store {
             @include media-breakpoint-up(lg) {
                 .cart-drawer__count {
                     position: absolute;
-                    bottom: 0;
+                    top: 0.25em;
                     left: 50%;
                     transform: translateX(-50%);
                 }
             }
         }
     }
-    
+
 
     .search-feature-with-suggestion-abtest-active {
         .search-feature-component-abtest {
