@@ -34,6 +34,8 @@ html.us-store {
 			}
 		}
 
+
+
 		.product-subscription {
 			display: flex !important;
 			background-image: url(asset-url('subscription-radial-backround.svg'));
@@ -41,6 +43,35 @@ html.us-store {
 
 			@include media-breakpoint-up(lg) {
 				border-radius: $border-radius;
+			}
+		}
+
+		.product-variant--subscription {
+
+			.product-variant__title {
+				display: block;
+
+				&-subscription {
+					display: none;
+				}
+			}
+
+			.custom-control-input:checked ~ .custom-control-label {
+				background-color: #fff;
+			}
+
+			&-selected {
+				.custom-control-input:checked ~ .custom-control-label {
+					background-color: $primary-light-second;
+				}
+
+				.product-variant__title {
+					display: none;
+
+					&-subscription {
+						display: block;
+					}
+				}
 			}
 		}
 	}
