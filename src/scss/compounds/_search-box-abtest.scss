@@ -207,7 +207,7 @@ html.uk-store {
             @include media-breakpoint-up(lg) {
                 .cart-drawer__count {
                     position: absolute;
-                    bottom: 0;
+                    top: 0.25em;
                     left: 50%;
                     transform: translateX(-50%);
                 }
