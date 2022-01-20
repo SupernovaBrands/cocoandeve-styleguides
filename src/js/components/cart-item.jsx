@@ -105,7 +105,7 @@ export default class CartItem extends React.Component {
 						<ConditionWrapper
 							condition={showAccordion}
 							wrapper={(children) => (
-								<div className="cart-drawer__shade pb-1">
+								<div className="pb-1">
 									<a onClick={this.onAccordionOpen} className="d-flex align-items-center text-primary text-underline collapsed mb-1" data-toggle="collapse" href={`#cart-drawer__shade-${item.id}`} role="button" aria-expanded="false" aria-controls={`#cart-drawer__shade-${item.id}`}>
 										{!isAccordionOpen && (
 											<>
