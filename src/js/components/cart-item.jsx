@@ -105,7 +105,7 @@ export default class CartItem extends React.Component {
 							condition={showAccordion}
 							wrapper={(children) => (
 								<div className="pb-1">
-									<a onClick={this.onAccordionOpen} className="d-block text-primary text-underline card-header p-0 border-bottom-0 position-relative collapsed mb-1" data-toggle="collapse" href={`#cart-drawer__shade-${item.id}`} role="button" aria-expanded="false" aria-controls={`#cart-drawer__shade-${item.id}`}>
+									<a onClick={this.onAccordionOpen} className="d-inline-block text-primary text-underline card-header p-0 border-bottom-0 position-relative collapsed pr-2 mb-1" data-toggle="collapse" href={`#cart-drawer__shade-${item.id}`} role="button" aria-expanded="false" aria-controls={`#cart-drawer__shade-${item.id}`}>
 										{isAccordionOpen ? 'Hide details' : 'Show details'}
 										<SvgChevronDown className="svg chevron-down ml-1" width="12" height="12" />
 									</a>
