@@ -15,7 +15,6 @@ import {
 import SvgTrash from '~svg/trash.svg';
 import SvgRecurring from '~svg/recurring.svg';
 import SvgChevronDown from '~svg/chevron-down.svg';
-import SvgChevronUp from '~svg/chevron-up.svg';
 
 export default class CartItem extends React.Component {
 	constructor(props) {
@@ -106,19 +105,9 @@ export default class CartItem extends React.Component {
 							condition={showAccordion}
 							wrapper={(children) => (
 								<div className="pb-1">
-									<a onClick={this.onAccordionOpen} className="d-flex align-items-center text-primary text-underline collapsed mb-1" data-toggle="collapse" href={`#cart-drawer__shade-${item.id}`} role="button" aria-expanded="false" aria-controls={`#cart-drawer__shade-${item.id}`}>
-										{!isAccordionOpen && (
-											<>
-												Show details
-												<SvgChevronUp className="svg chevron-up ml-1" width="12" height="12" />
-											</>
-										)}
-										{isAccordionOpen && (
-											<>
-												Hide details
-												<SvgChevronDown className="svg chevron-down ml-1" width="12" height="12" />
-											</>
-										)}
+									<a onClick={this.onAccordionOpen} className="d-block text-primary text-underline card-header p-0 border-bottom-0 position-relative collapsed mb-1" data-toggle="collapse" href={`#cart-drawer__shade-${item.id}`} role="button" aria-expanded="false" aria-controls={`#cart-drawer__shade-${item.id}`}>
+										{isAccordionOpen ? 'Hide details' : 'Show details'}
+										<SvgChevronDown className="svg chevron-down ml-1" width="12" height="12" />
 									</a>
 									<div className="collapse text-body" id={`cart-drawer__shade-${item.id}`}>
 										{children}

@@ -61,6 +61,11 @@
 	.modal-footer > * {
 		margin: 0;
 	}
+
+	.chevron-down {
+		right: auto;
+		left: calc-em(90);
+	}
 }
 
 .manual-gwp {
