@@ -103,6 +103,13 @@ html.uk-store {
         }
 
         &__home {
+            overflow-y: scroll;
+            max-height: calc(100vh - 4rem);
+
+            @include media-breakpoint-up(lg) {
+                overflow-y: unset;
+            }
+
             h4 {
                 color: $gray-600;
             }
@@ -244,5 +251,9 @@ html.uk-store {
         .nav-link.cart:not(.search-feature-component-abtest) {
             display: none !important;
         }
+    }
+
+    .scrolled-up .search-panel__home {
+        max-height: calc(100vh - 1.5rem);
     }
 }
