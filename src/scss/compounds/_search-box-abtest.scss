@@ -15,6 +15,10 @@ html.uk-store {
             width: 100%;
             position: fixed;
         }
+
+        .mobile-secnav:not(.fixed-bottom) {
+            display: none !important;
+        }
     }
 
     .product-card {
@@ -180,12 +184,6 @@ html.uk-store {
                 opacity: .5;
                 pointer-events: none;
             }
-        }
-    }
-
-    .nav-ranges + .search-panel, .mobile-secnav + .search-panel {
-        @include media-breakpoint-down(md) {
-            margin-top: -3.2em;
         }
     }
 
