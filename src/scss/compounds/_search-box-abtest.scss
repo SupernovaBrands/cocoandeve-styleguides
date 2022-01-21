@@ -247,11 +247,13 @@ html.uk-store {
         }
     }
 
-    .scrolled-up .search-panel {
+    @include media-breakpoint-down(md) {
+        .scrolled-up .search-panel {
 
-        &__home,
-        &__result {
-            max-height: calc(100vh - 1.5rem);
+            &__home,
+            &__result {
+                max-height: calc(100vh - 1.5rem);
+            }
         }
     }
 }
