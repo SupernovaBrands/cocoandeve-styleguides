@@ -73,7 +73,7 @@ html.uk-store {
             left: 0;
 
             @include media-breakpoint-up(lg) {
-                height: 28em;
+                height: auto;
             }
 
             &.no-result {
@@ -121,9 +121,10 @@ html.uk-store {
             }
         }
 
-        &__result {
+        &__result,
+        &__home {
             overflow-y: scroll;
-            max-height: calc(100vh - 2.5rem);
+            max-height: calc(100vh - 4rem);
 
             @include media-breakpoint-up(lg) {
                 overflow-y: unset;
@@ -243,6 +244,16 @@ html.uk-store {
         .navbar-nav.justify-content-end:not(.search-feature-component-abtest),
         .nav-link.cart:not(.search-feature-component-abtest) {
             display: none !important;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        .scrolled-up .search-panel {
+
+            &__home,
+            &__result {
+                max-height: calc(100vh - 1.5rem);
+            }
         }
     }
 }

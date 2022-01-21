@@ -19,7 +19,7 @@
 	<div class="search-panel__loading pt-5 container d-none text-center">
 		<img class="svg text-primary" src="icons/loading.svg" replace-to-svg />
 	</div>
-	<div class="search-panel__home container px-g pt-3">
+	<div class="search-panel__home container px-g py-3">
 		<div class="row">
 			<h4 class="col-12 col-lg-4 mb-lg-2 font-weight-normal order-1 font-weight-normal font-size-base">Popular searched items</h4>
 			<h4 class="col-12 col-lg-8 mb-lg-2 font-weight-normal order-3 order-lg-2 font-weight-normal font-size-base">Popular searched products</h4>
@@ -32,15 +32,15 @@
 				<span class="search-panel__tag p-1 mr-1 d-inline-block mb-1 text-primary rounded font-weight-bold">Bali Bod Bundle</span>
 			</div>
 			{{> compounds/search-box-product-card-abtest class="mb-1 order-4" title="Bali Bronzing Foam in two lines"}}
-			{{> compounds/search-box-product-card-abtest class="mb-1  order-4" title="Bali Bronzing Foam"}}
-			{{> compounds/search-box-product-card-abtest class=" mb-1  order-4" title="Bali Bronzing Foam"}}
-			{{> compounds/search-box-product-card-abtest class=" mb-1  order-4" title="Bali Bronzing Foam"}}
+			{{> compounds/search-box-product-card-abtest class="mb-1 order-4" title="Bali Bronzing Foam"}}
+			{{> compounds/search-box-product-card-abtest class="mb-1 order-4" title="Bali Bronzing Foam"}}
+			{{> compounds/search-box-product-card-abtest class="mb-4 mb-lg-1 pb-4 pb-lg-0 order-4" title="Bali Bronzing Foam"}}
 		</div>
 	</div>
 	<div class="search-panel__result container mt-lg-2 px-g" style="display: none;">
 		<div class="row">
 			<h4 class="container mt-2 mt-lg-0 font-size-base">X results</h4>
-			{{#> sections/carousel-scroll class="mb-3" id="search-products" no-scrollbar="true" controlclass="carousel-control d-none d-lg-flex"}}
+			{{#> sections/carousel-scroll class="mb-3" id="search-products" no-scrollbar="true" controlclass="carousel-control d-none d-lg-flex" footerTextAbTest=true}}
 				{{> compounds/search-box-product-card-abtest class="carousel-item mb-1 active" title="Bali Bronzing Foam in two lines"}}
 				{{> compounds/search-box-product-card-abtest class="carousel-item mb-1" title="Bali Bronzing Foam in two lines long lines"}}
 				{{> compounds/search-box-product-card-abtest class="carousel-item mb-1" title="Bali Bronzing Foam in two lines"}}
@@ -52,7 +52,7 @@
 				{{> compounds/search-box-product-card-abtest class="carousel-item mb-1" title="Bali Bronzing Foam in two lines"}}
 			{{/ sections/carousel-scroll}}
 		</div>
-		<p class="mt-n3">Now what you're looking for? Check our <a href="#" class="text-underline">shop all page</a></p>
+
 	</div>
 	{{/unless}}
 </div>
