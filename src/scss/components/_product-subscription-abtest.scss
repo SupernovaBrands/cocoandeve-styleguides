@@ -17,24 +17,16 @@ html.us-store {
 				transform: translateY(-50%);
 			}
 
-			.custom-control-input {
-				&:focus:not(:checked) ~ .custom-control-label::before {
-					border-color: $primary;
+			.custom-control-input:checked ~ .custom-control-label {
+				&::before {
+					background-color: $primary;
 				}
 
-				&:checked ~ .custom-control-label {
-					&::before {
-						background-color: $primary;
-					}
-
-					&::after {
-						background-image: url(icon-svg('check.svg', '#fff'));
-					}
+				&::after {
+					background-image: url(icon-svg('check.svg', '#fff'));
 				}
 			}
 		}
-
-
 
 		.product-subscription {
 			display: flex !important;
