@@ -7,6 +7,9 @@
 				<a class="text-primary ml-1" data-container="body" data-toggle="popover" data-placement="top" data-content="<strong>No fuss and frizz, just good hair days ahead.</strong><br/>Keep your hair routine in check and never run out of your washday must-haves every month and free shipping on top of that.<br/><br/>Cancel anytime, and come back when you're ready. ❤️" data-html="true"><img class="svg" src="icons/help.svg" replace-to-svg /></a>
 			{{/if}}
 		</p>
+		{{#if title_subscription}}
+		<p class="mb-1 font-weight-bold {{#if titleSubsClass}}{{titleSubsClass}}{{/if}}">{{ title_subscription }}</p>
+		{{/if}}
 		<p class="mb-1 font-size-sm">1x Masque + Brush</p>
 		{{#if note}}
 		<p class="mb-1 font-size-sm">1x Other items</p>

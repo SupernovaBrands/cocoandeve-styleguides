@@ -1,4 +1,4 @@
-/* global tSettings */
+/* global tSettings screenLG */
 
 export const get = (obj, path, defValue) => {
 	if (!path) return undefined;
@@ -227,29 +227,17 @@ export const popopOver = () => {
 	// popover
 	if ($('[data-toggle="popover"]').length) {
 		$(function () {
-			$(document).find('[data-toggle="popover"]').popover({
+			const popoverConfig = {
 				flip: 'top',
 				fallbackPlacement: ['top'],
+				placement: 'top',
 				delay: {
 					show: 100,
 				},
-				offset: -70,
+				offset: window.innerWidth >= screenLG ? $('[data-toggle="popover"]').attr('data-offset-lg') : $('[data-toggle="popover"]').attr('data-offset'),
 				html: true,
-			});
-
-			$(document).find('[data-toggle="popover"]').on('inserted.bs.popover', function () {
-				/* inject close icon, since can't add svg tag inside data-content attribute,
-				svg tag always removed from the content when popover open */
-
-				const closePopover = '<span class="font-size-sm fixed-top text-right mr-1 mt-1 popover-body__close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" class="svg"><path d="M12 1l-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1-5-5z"></path></svg></span>';
-				const popoverBox = $('.popover-body');
-				popoverBox.prepend(closePopover);
-
-				// listen event click on svg icon to close popover
-				$('.popover-body__close').on('click', function () {
-					$(this).closest('.popover').popover('hide');
-				});
-			});
+			};
+			$(document).find('[data-toggle="popover"]').popover(popoverConfig);
 		});
 
 		// Dismissable popover click out side
