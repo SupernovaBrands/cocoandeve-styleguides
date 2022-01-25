@@ -40,14 +40,6 @@ html.us-store {
 
 		.product-variant--subscription {
 
-			.product-variant__title {
-				display: block;
-
-				&-subscription {
-					display: none;
-				}
-			}
-
 			.custom-control-input:checked ~ .custom-control-label {
 				background-color: #fff;
 			}
@@ -61,7 +53,7 @@ html.us-store {
 					display: none;
 
 					&-subscription {
-						display: block;
+						display: block !important;
 					}
 				}
 			}
