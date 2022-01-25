@@ -5,7 +5,14 @@ html.us-store {
 			top: -(calc-em(10)) !important;
 		}
 
-		.custom-checkbox--subscription {
+		.product-subscription {
+			display: flex !important;
+			background-image: url(asset-url('subscription-radial-backround.svg'));
+			background-color: $primary-light-second;
+
+			@include media-breakpoint-up(lg) {
+				border-radius: $border-radius;
+			}
 
 			.custom-control-label::before,
 			.custom-control-label::after {
@@ -25,16 +32,6 @@ html.us-store {
 				&::after {
 					background-image: url(icon-svg('check.svg', '#fff'));
 				}
-			}
-		}
-
-		.product-subscription {
-			display: flex !important;
-			background-image: url(asset-url('subscription-radial-backround.svg'));
-			background-color: $primary-light-second;
-
-			@include media-breakpoint-up(lg) {
-				border-radius: $border-radius;
 			}
 		}
 
