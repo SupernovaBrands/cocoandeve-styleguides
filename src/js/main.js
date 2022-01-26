@@ -543,10 +543,6 @@ if ($('.search-panel').length > 0) {
 	import(/* webpackChunkName: 'predictive-search' */ '~mod/search-box-abtest');
 }
 
-if ($('.btn-choose__swatch--abtest').length > 0) {
-	import(/* webpackChunkName: 'collection-swatch--abtest' */ '~mod/collection-swatch--abtest');
-}
-
 if ($('.product-subscription').length > 0) {
 	import(/* webpackChunkName: 'product-subscription-abtest' */ '~mod/product-subscription-abtest');
 }
