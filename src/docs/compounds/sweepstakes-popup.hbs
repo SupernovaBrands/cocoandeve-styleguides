@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{{> html-head title="Sweepstakes Signup Popup" }}
+</head>
+<body>
+	<div class="container">
+		<h1>Sweepstakes Signup Popup</h1>
+
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sweepstakesModal">Launch modal</button>
+
+		<div class="modal fade sweepstakes-popup" id="sweepstakesModal" tabindex="-1" role="dialog" aria-labelledby="sweepstakesModalTitle" aria-hidden="true">
+			<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+				<div class="modal-content mx-g mx-lg-4 border-0">
+					<div class="modal-body px-2 px-lg-3 py-g">
+						<div class="sweepstakes-popup__heading row justify-content-end mb-4 mb-lg-g">
+							<div class="col-9 col-lg-6 pl-lg-0 text-center text-white pr-0 pr-lg-g">
+								<p class="sweepstakes-popup__title font-weight-bold mt-1 mb-25 mb-lg-1">Win $500 of products</p>
+								<p class="mb-lg-0 mt-lg-1">and exclusive savings on our Black Friday Deals and<br class="d-lg-none">future offers!</p>
+							</div>
+						</div>
+						<img data-dismiss="modal" aria-label="Close" class="svg position-absolute sweepstakes-popup__close text-white"
+							src="icons/close.svg" data-dismiss="modal" replace-to-svg />
+						<div class="row justify-content-end">
+							<form class="sweepstakes-popup__form col-lg-6 pl-lg-0" data-thank-you-message="You are in!">
+								<div class="input-group form-group mb-25">
+									<input id="sweepstakes-popup__email" class="form-control" type="email" placeholder="Email">
+								</div>
+								<div id="email-error" class="d-none input-error text-danger font-size-xs">Please enter a valid email address</div>
+								<div class="form-group text-center mb-25 sweepstakes-popup__separator">and / or</div>
+								<div class="input-group form-group mb-g">
+									<label for="sweepstakes-popup__country" class="input-group-addon form-control">
+										<span class="position-absolute sweepstakes-popup__country-label align-items-center">+65</span>
+										<img class="svg position-absolute" src="icons/chevron-down.svg" replace-to-svg />
+										<select id="sweepstakes-popup__country" class="custom-select">
+											<option value="" disabled="">Select Country</option>
+											<option value="KH" data-code="855">Cambodia</option>
+											<option value="HK" data-code="852">Hong Kong</option>
+											<option value="IL" data-code="972">Israel</option>
+											<option value="JP" data-code="81">Japan</option>
+											<option value="KR" data-code="82">South Korea</option>
+											<option value="LA" data-code="856">Laos</option>
+											<option value="MO" data-code="853">Macau</option>
+											<option value="MY" data-code="60">Malaysia</option>
+											<option value="MV" data-code="960">Maldives</option>
+											<option value="MM" data-code="95">Myanmar</option>
+											<option value="PG" data-code="675">Papua New Guinea</option>
+											<option value="PH" data-code="63">Philippines</option>
+											<option value="RE" data-code="262">Réunion</option>
+											<option value="RU" data-code="7">Russia</option>
+											<option value="SG" data-code="65" selected="">Singapore</option>
+											<option value="LK" data-code="94">Sri Lanka</option>
+											<option value="TW" data-code="886">Taiwan</option>
+											<option value="TR" data-code="90">Turkey</option>
+											<option value="VN" data-code="84">Vietnam</option>
+										</select>
+									</label>
+									<input id="sweepstakes-popup__phone" class="form-control border-left-0" type="phone" placeholder="Phone number">
+								</div>
+								<button type="submit" class="btn btn-lg btn-primary btn-block">Submit</button>
+								<p class="sweepstakes-popup__toc font-size-sm text-center mt-1 mb-0 font-size-sm">By signing up, you agree to receive exclusive offers via email or automated marketing SMS (4/mth). For more info see our Privacy Policy (opt out any time). Msg & data rates may apply. </p>
+							</form>
+							<div class="sweepstakes-popup__thank-you text-center col-lg-6 d-none flex-column align-items-center justify-content-center">
+								<p class="mb-g sweepstakes-popup__title font-weight-bold">You’re in!</p>
+								<p class="mb-3">Stay tuned for our biggest sale ever!</p>
+								<a href="#" class="btn btn-lg btn-primary btn-block">Shop now</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{{> js jquery=true popper=true bootstrap=true main=true }}
+</body>
+</html>

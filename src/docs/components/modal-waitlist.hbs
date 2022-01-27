@@ -10,7 +10,12 @@
 		<h1>Modal Waitlist</h1>
     <button class="btn btn-primary" data-toggle="modal" data-target="#productWaitlist">Open Modal</button>
     {{>compounds/modal-waitlist}}
+
+    <h1>Modal Sweepstakes</h1>
+    <button class="btn btn-primary" data-toggle="modal" data-target="#modal-sweepstakes">Launch Modal</button>
   </div>
+  {{> compounds/modal-waitlist}}
+  {{> components/modal-sweepstakes }}
   {{> js jquery=true bootstrap=true main=true }}
 </body>
 </html>
