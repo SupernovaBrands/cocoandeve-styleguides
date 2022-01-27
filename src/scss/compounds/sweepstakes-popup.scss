@@ -1,13 +1,13 @@
 .sweepstakes-popup {
 	.modal-content {
-		background-image: url(asset-url('bfcm-signup-popup-mobile.jpg'));
+		background-image: url(https://cdn.shopify.com/s/files/1/0243/8817/3888/files/bfcm-signup-popup-mobile.jpg?v=1643272858);
 		background-size: 100%;
 		background-position: top center;
 		background-repeat: no-repeat;
 		border-radius: calc-em(22.5, $unit: 1rem);
 
 		@include media-breakpoint-up(lg) {
-			background-image: url(asset-url('bfcm-signup-popup-desktop.jpg'));
+			background-image: url(https://cdn.shopify.com/s/files/1/0243/8817/3888/files/bfcm-signup-popup-desktop.jpg?v=1643272858);
 			background-position: center;
 			background-size: cover;
 		}
@@ -44,15 +44,6 @@
 		}
 	}
 
-	&__title {
-
-		@include font-size($h1-font-size);
-
-		@include media-breakpoint-up(lg) {
-		    @include font-size($h3-font-size-lg);
-		}
-	}
-
 	&__close {
 		top: $grid-gutter-width;
 		right: $grid-gutter-width;
@@ -82,6 +73,7 @@
 
 	&__thank-you {
 		color: $gray-600;
+		margin-top: 10em;
 
 		@include media-breakpoint-up(lg) {
 			color: white;
