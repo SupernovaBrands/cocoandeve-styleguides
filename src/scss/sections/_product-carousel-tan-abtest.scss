@@ -1,11 +1,23 @@
-html.us-store, html.uk-store {
+html.us-store {
     .homepage-product-carousel-tan-abtest {
-        .product-carousel-tan-abtest {
-            display: block !important;
+        .product-carousel {
+            .nav-item span:not(.d-none) {
+                display: none;
+            }
+
+            .nav-item span.d-none {
+                display: block !important;
+            }
         }
 
-        #product-carousel-ab-original:not(.product-carousel-tan-abtest) {
-            display: none !important;
+        .tab-abtest {
+            .carousel-inner:not(.d-none) {
+                display: none;
+            }
+
+            .carousel-inner.d-none {
+                display: flex !important;
+            }
         }
     }
 }
