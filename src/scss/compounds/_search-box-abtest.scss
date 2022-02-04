@@ -256,5 +256,12 @@ html.uk-store {
                 max-height: calc(100vh - 1.5rem);
             }
         }
+
+        .cookies-banner-show .search-panel {
+            &__home,
+            &__result {
+                padding-bottom: calc-em(117);
+            }
+        }
     }
 }
