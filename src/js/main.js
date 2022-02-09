@@ -544,7 +544,7 @@ if ($('.search-panel').length > 0) {
 }
 
 if ($('.product-subscription').length > 0) {
-	import(/* webpackChunkName: 'product-subscription-abtest' */ '~mod/product-subscription-abtest');
+	import(/* webpackChunkName: 'product-subscription' */ '~mod/product-subscription');
 }
 
 if ($('.sweepstakes-popup').length > 0) {

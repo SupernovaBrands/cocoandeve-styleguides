@@ -50,10 +50,23 @@
 		.custom-control-input {
 			&:checked {
 				~ .custom-control-label {
-					background-color: $primary-light-second;
+					background-color: #fff;
 				}
 			}
+		}
 
+		&-selected {
+			.custom-control-input:checked ~ .custom-control-label {
+				background-color: $primary-light-second;
+			}
+
+			.product-variant__title {
+				display: none;
+
+				&-subscription {
+					display: block !important;
+				}
+			}
 		}
 	}
 
