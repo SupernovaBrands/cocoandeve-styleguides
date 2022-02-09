@@ -9,7 +9,7 @@
 
 	.custom-control-label::before,
 	.custom-control-label::after {
-		border-color: $primary;
+		border-color: $primary !important;
 		border-radius: calc-em(2);
 		width: calc-em(16);
 		height: calc-em(16);
