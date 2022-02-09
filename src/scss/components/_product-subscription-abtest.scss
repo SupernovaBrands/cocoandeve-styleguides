@@ -1,59 +1,9 @@
-html.us-store {
+html.au-store {
+	.product-subscription {
+		display: none;
+	}
 
-	.product-subscription--abtest {
-		.popover {
-			top: -(calc-em(10)) !important;
-		}
-
-		.product-subscription {
-			display: flex !important;
-			background-image: url(asset-url('subscription-radial-backround.svg'));
-			background-color: $primary-light-second;
-
-			@include media-breakpoint-up(lg) {
-				border-radius: $border-radius;
-			}
-
-			.custom-control-label::before,
-			.custom-control-label::after {
-				border-color: $primary;
-				border-radius: calc-em(2);
-				width: calc-em(16);
-				height: calc-em(16);
-				top: 50%;
-				transform: translateY(-50%);
-			}
-
-			.custom-control-input:checked ~ .custom-control-label {
-				&::before {
-					background-color: $primary;
-				}
-
-				&::after {
-					background-image: url(icon-svg('check.svg', '#fff'));
-				}
-			}
-		}
-
-		.product-variant--subscription {
-
-			.custom-control-input:checked ~ .custom-control-label {
-				background-color: #fff;
-			}
-
-			&-selected {
-				.custom-control-input:checked ~ .custom-control-label {
-					background-color: $primary-light-second;
-				}
-
-				.product-variant__title {
-					display: none;
-
-					&-subscription {
-						display: block !important;
-					}
-				}
-			}
-		}
+	.product-subscription--abtest .product-subscription {
+		display: flex;
 	}
 }

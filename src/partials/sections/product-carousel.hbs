@@ -7,7 +7,7 @@
     </li>
     <li class="nav-item">
       <a class="nav-link text-decoration-none h4 mb-0 font-weight-normal active" data-toggle="tab" href="#bestsellers"
-        role="tab" aria-controls="bestsellers">Bestsellers</a>
+        role="tab" aria-controls="bestsellers"><span>Bestsellers</span><span class="d-none">Featured</span></a>
     </li>
     <li class="nav-item">
       <a class="nav-link text-decoration-none h4 mb-0 font-weight-normal" data-toggle="tab" href="#value-sets"
@@ -40,13 +40,23 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
-    <div class="tab-pane fade show active carousel slide carousel--loop" id="bestsellers" role="tabpanel"
+    <div class="tab-pane fade show active carousel slide carousel--loop tab-abtest" id="bestsellers" role="tabpanel"
       aria-labelledby="bestsellers-tab" data-slide-number="4">
       <div class="carousel--centered pt-2">
         <div class="carousel-inner row flex-nowrap" role="listbox">
           {{> components/product-card-carousel active="active" title="Like a Virgin Hair Masque" compare_price="$44.90" price="$34.90" carousel=true }}
           {{> components/product-card-carousel title="Sunny Honey Bronzing Bundle" compare_price="$44.90" price="$34.90" swatch="true" swatch_modal="true" carousel=true }}
           {{> components/product-card-carousel title="Like a Virgin Hair Masque" compare_price="$44.90" price="$34.90" swatch="true" swatch_modal="true" badge="true" badge_image="badge-25.svg" carousel=true }}
+          {{> components/product-card-carousel title="Like a Virgin Hair Masque" compare_price="$44.90" price="$34.90" carousel=true }}
+          {{> components/product-card-carousel title="Like a Virgin Hair Masque" compare_price="$44.90" price="$34.90" carousel=true }}
+          {{> components/product-card-carousel title="Like a Virgin Hair Masque" compare_price="$44.90" price="$34.90" carousel=true }}
+          {{> components/product-card-carousel title="Like a Virgin Hair Masque" compare_price="$44.90" price="$34.90" carousel=true }}
+          {{> components/product-card-carousel title="Like a Virgin Hair Masque" compare_price="$44.90" price="$34.90" carousel=true }}
+        </div>
+        <div class="carousel-inner row flex-nowrap d-none" role="listbox">
+          {{> components/product-card-carousel active="active" title="Like a Virgin Hair Masque" compare_price="$44.90" price="$34.90" carousel=true }}
+          {{> components/product-card-carousel title="Sunny Honey Bronzing Bundle" compare_price="$44.90" price="$34.90" swatch="true" swatch_modal="true" carousel=true }}
+          {{> components/product-card-carousel title="Like a Virgin (AB Test)" compare_price="$44.90" price="$34.90" swatch="true" swatch_style="true" badge="true" badge_image="badge-25.svg" carousel=true }}
           {{> components/product-card-carousel title="Like a Virgin Hair Masque" compare_price="$44.90" price="$34.90" carousel=true }}
           {{> components/product-card-carousel title="Like a Virgin Hair Masque" compare_price="$44.90" price="$34.90" carousel=true }}
           {{> components/product-card-carousel title="Like a Virgin Hair Masque" compare_price="$44.90" price="$34.90" carousel=true }}

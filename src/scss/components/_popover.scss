@@ -1,6 +1,7 @@
 .popover {
 	z-index: $zindex-fixed;
 	box-shadow: $popover-box-shadow;
+	top: -(calc-em(10)) !important;
 
 	.modal-open & {
 		z-index: $zindex-modal;

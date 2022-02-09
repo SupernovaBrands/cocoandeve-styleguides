@@ -42,14 +42,17 @@
 		}
 	}
 
-	&--subscription {
-		.custom-control-input {
-			&:checked {
-				~ .custom-control-label {
-					background-color: $primary-light-second;
-				}
-			}
+	&--subscription-selected {
+		.custom-control-input:checked ~ .custom-control-label {
+			background-color: $primary-light-second;
+		}
 
+		.product-variant__title {
+			display: none;
+
+			&-subscription {
+				display: block !important;
+			}
 		}
 	}
 
