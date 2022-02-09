@@ -46,26 +46,16 @@
 		}
 	}
 
-	&--subscription {
-		.custom-control-input {
-			&:checked {
-				~ .custom-control-label {
-					background-color: #fff;
-				}
-			}
+	&--subscription-selected {
+		.custom-control-input:checked ~ .custom-control-label {
+			background-color: $primary-light-second;
 		}
 
-		&-selected {
-			.custom-control-input:checked ~ .custom-control-label {
-				background-color: $primary-light-second;
-			}
+		.product-variant__title {
+			display: none;
 
-			.product-variant__title {
-				display: none;
-
-				&-subscription {
-					display: block !important;
-				}
+			&-subscription {
+				display: block !important;
 			}
 		}
 	}
