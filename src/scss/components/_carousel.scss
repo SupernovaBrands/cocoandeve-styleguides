@@ -356,6 +356,14 @@
 		}
 	}
 
+	&__item {
+		&.carousel-item-prev.carousel-item-right {
+			@include media-breakpoint-down(md) {
+				width: calc-em(75);
+			}
+		}
+	}
+
 	@include media-breakpoint-up(lg) {
 		%transform-negative-y {
 			position: relative;
