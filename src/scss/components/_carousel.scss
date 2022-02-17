@@ -355,12 +355,9 @@
 			opacity: 0;
 		}
 	}
-
-	&__item {
-		@include media-breakpoint-down(md) {
-			&.carousel-item-prev.carousel-item-right {
-				width: calc-em(75);
-			}
+	@include media-breakpoint-down(md) {
+		&__item.carousel-item-prev.carousel-item-right {
+			width: calc-em(75);
 		}
 	}
 
