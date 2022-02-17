@@ -357,8 +357,8 @@
 	}
 
 	&__item {
-		&.carousel-item-prev.carousel-item-right {
-			@include media-breakpoint-down(md) {
+		@include media-breakpoint-down(md) {
+			&.carousel-item-prev.carousel-item-right {
 				width: calc-em(75);
 			}
 		}
