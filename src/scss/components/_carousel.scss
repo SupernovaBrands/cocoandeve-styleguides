@@ -355,11 +355,6 @@
 			opacity: 0;
 		}
 	}
-	@include media-breakpoint-down(md) {
-		&__item.carousel-item-prev.carousel-item-right {
-			width: calc-em(75);
-		}
-	}
 
 	@include media-breakpoint-up(lg) {
 		%transform-negative-y {
