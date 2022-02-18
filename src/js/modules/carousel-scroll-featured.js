@@ -17,8 +17,10 @@ const adjustScrollThumb = (thumb, inner, scrollParent) => {
 	}
 
 	if (inner.classList.contains('container-fluid-scroll')) {
-		inner.classList.remove('justify-content-center');
-		scrollParent.classList.remove('d-none');
+		setTimeout(function () {
+			inner.classList.remove('justify-content-center');
+			scrollParent.classList.remove('d-none');
+		}, 500);
 	}
 };
 
