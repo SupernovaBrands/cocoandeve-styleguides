@@ -34,16 +34,16 @@ html.au-store {
 
 			.carousel-control {
 				top: calc-em(135);
-			}
 
-			.carousel-control-prev {
-				left: container-fluid-scroll();
-				transform: translateX(-(map-get($spacers, 2)));
-			}
+				&-prev {
+					left: container-fluid-scroll();
+					transform: translateX(-(map-get($spacers, 2)));
+				}
 
-			.carousel-control-next {
-				right: container-fluid-scroll();
-				transform: translateX(map-get($spacers, 2));
+				&-next {
+					right: container-fluid-scroll();
+					transform: translateX(map-get($spacers, 2));
+				}
 			}
 		}
 	}
