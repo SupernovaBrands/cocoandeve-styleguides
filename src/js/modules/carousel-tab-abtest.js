@@ -1,4 +1,4 @@
-import { checkCarouselNav } from '~mod/carousel-scroll';
+import { checkCarouselNav } from '~mod/carousel-scroll-featured';
 
 $('.product-featured-abtest a[data-toggle="tab"]').on('shown.bs.tab', function () {
 	$('.carousel--scroll__featured').each((index, carousel) => {
