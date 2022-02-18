@@ -1,0 +1,72 @@
+html.au-store {
+	.product-featured--abtest {
+
+		@function container-fluid-scroll($max-widths: $container-max-widths, $breakpoints: $grid-breakpoints, $size: "md") {
+			$gap: 0;
+			@each $breakpoint, $container-max-width in $max-widths {
+				@if $breakpoint == $size {
+					$gap: calc(((100% - #{$container-max-width}) / 2) + #{$grid-gutter-width});
+				}
+			}
+			@return $gap;
+		}
+
+		.product-carousel {
+			display: none;
+		}
+
+		.carousel-tab-abtest {
+			display: block !important;
+		}
+
+		.carousel--scroll .scrollbar {
+			background-color: $gray-400;
+		}
+
+		@include media-breakpoint-up(lg) {
+
+			.container-fluid-scroll {
+				padding-left: container-fluid-scroll($size: 'lg');
+				padding-right: container-fluid-scroll($size: 'lg');
+			}
+
+			.carousel-control {
+				top: calc-em(105);
+
+				&-prev {
+					left: container-fluid-scroll($size: 'lg');
+					transform: translateX(-(map-get($spacers, 2)));
+				}
+
+				&-next {
+					right: container-fluid-scroll($size: 'lg');
+					transform: translateX(map-get($spacers, 2));
+				}
+			}
+		}
+
+		@include media-breakpoint-up(xl) {
+
+			.btn__submit {
+				@include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+			}
+
+			.container-fluid-scroll {
+				padding-left: container-fluid-scroll($size: 'xl');
+				padding-right: container-fluid-scroll($size: 'xl');
+			}
+
+			.carousel-control {
+				top: calc-em(135);
+
+				&-prev {
+					left: container-fluid-scroll($size: 'xl');
+				}
+
+				&-next {
+					right: container-fluid-scroll($size: 'xl');
+				}
+			}
+		}
+	}
+}
