@@ -551,8 +551,8 @@ if ($('.sweepstakes-popup').length > 0) {
 	import(/* webpackChunkName: 'sweepstakes-popup' */ '~mod/sweepstakes-popup');
 }
 
-if ($('.carousel--scroll').length > 0) {
-	import(/* webpackChunkName: 'carousel-scroll' */ '~mod/carousel-scroll');
+if ($('.carousel--scroll__featured').length > 0) {
+	import(/* webpackChunkName: 'carousel-scroll-featured' */ '~mod/carousel-scroll-featured');
 }
 
 if ($('.carousel-tab-abtest').length > 0) {
