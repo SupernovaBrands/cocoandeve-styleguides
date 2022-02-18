@@ -75,7 +75,7 @@ $('.carousel--scroll__featured').each((index, carousel) => {
 	if (scrollThumb) {
 		checkCarouselNav(inner, prevButton, nextButton);
 		// init load
-		scrollThumb.style.width = '33.33%';
+		scrollThumb.style.width = '22.2288%';
 	}
 
 	const innerDrag = (e) => {
