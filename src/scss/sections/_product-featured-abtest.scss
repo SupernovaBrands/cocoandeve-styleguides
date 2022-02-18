@@ -31,7 +31,7 @@ html.au-store {
 			}
 
 			.carousel-control {
-				top: 30.82%;
+				top: calc-em(105);
 
 				&-prev {
 					left: container-fluid-scroll($size: 'lg');
@@ -56,12 +56,16 @@ html.au-store {
 				padding-right: container-fluid-scroll($size: 'xl');
 			}
 
-			.carousel-control-prev {
-				left: container-fluid-scroll($size: 'xl');
-			}
+			.carousel-control {
+				top: calc-em(135);
 
-			.carousel-control-next {
-				right: container-fluid-scroll($size: 'xl');
+				&-prev {
+					left: container-fluid-scroll($size: 'xl');
+				}
+
+				&-next {
+					right: container-fluid-scroll($size: 'xl');
+				}
 			}
 		}
 	}
