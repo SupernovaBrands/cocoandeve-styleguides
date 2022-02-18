@@ -1,0 +1,49 @@
+html.au-store {
+	.product-featured--abtest {
+
+		@function container-fluid-scroll($max-widths: $container-max-widths, $breakpoints: $grid-breakpoints) {
+			@each $breakpoint, $container-max-width in $max-widths {
+				@if $breakpoint == 'xl' {
+					@return calc(((100% - #{$container-max-width}) / 2) + #{$grid-gutter-width});
+				}
+			}
+		}
+
+		.product-carousel {
+			display: none;
+		}
+
+		.carousel-tab-abtest {
+			display: block !important;
+		}
+
+		.carousel--scroll .scrollbar {
+			background-color: $gray-400;
+		}
+
+		@include media-breakpoint-up(lg) {
+			.container-fluid-scroll {
+				padding-left: container-fluid-scroll();
+				padding-right: container-fluid-scroll();
+			}
+
+			.btn__submit {
+				@include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+			}
+
+			.carousel-control {
+				top: calc-em(135);
+			}
+
+			.carousel-control-prev {
+				left: container-fluid-scroll();
+				transform: translateX(-(map-get($spacers, 2)));
+			}
+
+			.carousel-control-next {
+				right: container-fluid-scroll();
+				transform: translateX(map-get($spacers, 2));
+			}
+		}
+	}
+}

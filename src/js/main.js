@@ -550,3 +550,11 @@ if ($('.product-subscription').length > 0) {
 if ($('.sweepstakes-popup').length > 0) {
 	import(/* webpackChunkName: 'sweepstakes-popup' */ '~mod/sweepstakes-popup');
 }
+
+if ($('.carousel--scroll').length > 0) {
+	import(/* webpackChunkName: 'carousel-scroll' */ '~mod/carousel-scroll');
+}
+
+if ($('.carousel-tab-abtest').length > 0) {
+	import(/* webpackChunkName: 'carousel-tab-abtest' */ '~mod/carousel-tab-abtest');
+}
