@@ -1,6 +1,14 @@
 html.au-store {
 	.product-featured--abtest {
 
+		@function container-fluid-scroll($max-widths: $container-max-widths, $breakpoints: $grid-breakpoints) {
+			@each $breakpoint, $container-max-width in $max-widths {
+				@if $breakpoint == 'xl' {
+					@return calc(((100% - #{$container-max-width}) / 2) + #{$grid-gutter-width});
+				}
+			}
+		}
+
 		.product-carousel {
 			display: none;
 		}
@@ -14,14 +22,6 @@ html.au-store {
 		}
 
 		@include media-breakpoint-up(lg) {
-
-			@function container-fluid-scroll($max-widths: $container-max-widths, $breakpoints: $grid-breakpoints) {
-				@each $breakpoint, $container-max-width in $max-widths {
-					@if $breakpoint == 'lg' {
-						@return calc(((100% - #{$container-max-width}) / 2) + #{$grid-gutter-width});
-					}
-				}
-			}
 
 			.container-fluid-scroll {
 				padding-left: container-fluid-scroll();
