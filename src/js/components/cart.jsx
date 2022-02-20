@@ -605,9 +605,21 @@ export default class Cart extends React.Component {
 
 						{!loadingInit && (itemCount === 0 ? (
 							<div className="pt-3 text-center">
-								<div className="container px-g">
+								<div className="container px-g cart-empty-shop-cta">
 									<p className="my-3 text-center">{tStrings.cart_empty}</p>
 									<a href="/collections" className="btn btn-primary" data-cy="shop-all-btn">Shop all products</a>
+								</div>
+								<div className='cart-empty-discount-form container text-left d-none'>
+									<CartDiscountForm
+										isApplied={discountData.applied}
+										code={discountData.code}
+										isAutoDiscount={discountData.isAuto}
+										loading={loadingDiscount}
+										error={discountData.error}
+										errorExtra={discountData.errorExtra}
+										onApply={this.onApplyDiscountCode}
+										onRemove={this.onRemoveDiscountCode}
+									/>
 								</div>
 								{recentProducts.length > 0 && (
 									<>
