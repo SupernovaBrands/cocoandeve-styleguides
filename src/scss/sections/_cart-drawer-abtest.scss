@@ -7,6 +7,10 @@ html.eu-store {
         .cart-empty-discount-form {
             display: block !important;
         }
+
+        .tooltip--discount-applied:before {
+            border-color: transparent transparent $secondary transparent;
+        }
     }
     
 }
