@@ -13,7 +13,9 @@ const swatchRender = function (target, content) {
 
 $('.btn-choose__swatch').click(function () {
 	const btn = $(this);
-	if (window.innerWidth < screenLG) {
+	const showOnlyDesktop = $(btn).data('modal-mobile');
+
+	if (window.innerWidth < screenLG && !showOnlyDesktop) {
 		swatchRender($('.collection-swatch'), btn.siblings('.swatch-overlay').html());
 		$('.collection-swatch').addClass('show');
 		$('.collection-swatch > div').addClass('d-none');
