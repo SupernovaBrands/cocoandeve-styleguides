@@ -84,4 +84,19 @@ $grid-column-width-xl: minmax(0, (map-get($container-max-widths, xl) - $grid-gut
 			@include make-col(3, 5);
 		}
 	}
+
+	.bali-bundle-variants {
+		img {
+			width: calc-em(40);
+			margin-right: $grid-gutter-width-lg / 2;
+		}
+
+		h4 {
+			@include make-col(9);
+			
+			@include media-breakpoint-up(lg) {
+				@include make-col(10);
+			}
+		}
+	}
 }
