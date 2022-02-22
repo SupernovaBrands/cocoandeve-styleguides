@@ -24,11 +24,33 @@ $(document).ready(function () {
 			const xDiff = xDown - xUp;
 			const yDiff = yDown - yUp;
 
+			const isProductThumb = $(carousel).hasClass('product-image-carousel__indicator');
+			const thumbsLength = $(carousel).find('.product-image-carousel__indicator__item').length;
+			const activeThumb = $(carousel).find('.active').data('index');
 			if (Math.abs(xDiff) > Math.abs(yDiff)) {
 				if (xDiff > 0) {
-					$(carousel).carousel('next');
+					if (isProductThumb) {
+						if (activeThumb + 5 === thumbsLength + 1) {
+							$(carousel).carousel('dispose');
+						} else {
+							$(carousel).carousel('cycle');
+							$(carousel).carousel('next');
+						}
+					} else {
+						$(carousel).carousel('next');
+					}
 				} else {
-					$(carousel).carousel('prev');
+					console.log('swipe left');
+					if (isProductThumb) {
+						if (activeThumb === 1) {
+							$(carousel).carousel('dispose');
+						} else {
+							$(carousel).carousel('cycle');
+							$(carousel).carousel('prev');
+						}
+					} else {
+						$(carousel).carousel('prev');
+					}
 				}
 			} else {
 				xDown = null;
