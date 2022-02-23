@@ -10,6 +10,11 @@
 // Grey 100 background color
 @include bg-variant(".bg-gray-100", $gray-100, true);
 
+// Border color
+.border-bg-primary-light-second {
+	border-color: $primary-light-second !important;
+}
+
 // Sticky sidebar at bottom
 .sticky-bottom {
 	top: auto;

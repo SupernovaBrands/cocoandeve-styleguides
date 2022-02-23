@@ -8,14 +8,16 @@
 		</picture>
 	</noscript>
 
-	<div class="position-relative flex-grow-1">
-		<form action="" class="product-form d-flex flex-column h-100">
-			<div class="pl-3 pr-g pt-g pt-lg-0">
+	<div class="position-relative container">
+		<form action="" class="product-form flex-column h-100 row">
+			<div class="pl-2 pr-g pt-g pt-lg-0">
 				<h3 class="my-2 d-none d-lg-block">Bronzing Face Drops</h3>
-				<p class="font-weight-bold mb-2 d-none d-lg-block">Select shades:</p>
+				<p class="font-weight-bold mb-2 d-none d-lg-block w-100">Select shades:</p>
 				<figure class="media mb-2">
-					<img class="mr-2" src="https://via.placeholder.com/70x90" alt="Generic placeholder image">
-					<div class="media-body">
+					<picture class="col-3 pl-0">
+						<img class="mr-2 w-100" src="https://via.placeholder.com/70x90" alt="{{ product.title }}" loading="lazy">
+					</picture>
+					<div class="media-body col-9 pl-0">
 						<p class="font-weight-bold mt-0 mb-1">Bronzing Face Drops</p>
 						<div class="product-swatch mb-0">
 							<button type="button" class="variant-swatch medium mr-1 border-primary" data-value="foam-medium"
@@ -37,8 +39,10 @@
 					</div>
 				</figure>
 				<figure class="media mb-2">
-					<img class="mr-2" src="https://via.placeholder.com/70x90" alt="Generic placeholder image">
-					<div class="media-body">
+					<picture class="col-3 pl-0">
+						<img class="mr-2 w-100" src="https://via.placeholder.com/70x90" alt="{{ product.title }}" loading="lazy">
+					</picture>
+					<div class="media-body col-9 pl-0">
 						<p class="font-weight-bold mt-0 mb-1">Bronzing Face Drops</p>
 						<div class="product-swatch mb-0">
 							<button type="button" class="variant-swatch medium mr-1 border-primary" data-value="foam-medium"

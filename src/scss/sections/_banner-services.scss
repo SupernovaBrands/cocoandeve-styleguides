@@ -11,7 +11,7 @@ $bg-mb-height: 50;
     &::before,
     &::after {
         content: " ";
-        background-image: url('../../../images/palm-leaf.svg');
+        background-image: url(asset-url('palm-leaf.svg'));
         background-size: 100%;
         background-position: center;
         background-repeat: no-repeat;
