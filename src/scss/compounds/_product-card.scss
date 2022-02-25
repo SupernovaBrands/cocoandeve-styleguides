@@ -29,4 +29,26 @@
 	.btn-choose:focus {
 		box-shadow: none;
 	}
+
+	&--search-result {
+		> a {
+			@include media-breakpoint-up(lg) {
+				flex: none;
+				max-width: none;
+			}
+		}
+
+		picture {
+			flex-basis: 20%;
+		}
+
+		img {
+			max-height: calc-em(85, 16);
+			object-fit: cover;
+
+			@include media-breakpoint-up(lg) {
+				max-height: none;
+			}
+		}
+	}
 }
