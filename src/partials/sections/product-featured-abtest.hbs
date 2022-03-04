@@ -1,15 +1,17 @@
 <section class="mt-3 mt-lg-4 d-none carousel-tab-abtest">
-	<ul class="nav justify-content-center" role="tablist">
-		<li class="nav-item">
-			<a class="nav-link h4 font-weight-bold mb-0" id="featured-new-tab" data-toggle="tab" href="#FeaturedNew" role="tab" aria-controls="new" aria-selected="false">New</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link h4 font-weight-bold mb-0 active" id="featured-bestseller-tab" data-toggle="tab" href="#FeaturedBestSellers" role="tab" aria-controls="bestsellers" aria-selected="true">Bestsellers</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link h4 font-weight-bold mb-0" id="featured-valueset-tab" data-toggle="tab" href="#FeaturedValueSets" role="tab" aria-controls="valuesets" aria-selected="false">Value Sets</a>
-		</li>
-	</ul>
+	<div class="container d-flex justify-content-center px-g">
+		<ul class="product-info-tab nav nav-tabs justify-content-between border-0 col-12 col-lg-6 px-0" role="tablist">
+			<li class="nav-item text-center">
+				<a class="nav-link h4 font-weight-bold mb-0 pb-1 border-0" id="featured-new-tab" data-toggle="tab" href="#FeaturedNew" role="tab" aria-controls="new" aria-selected="false">New</a>
+			</li>
+			<li class="nav-item text-center">
+				<a class="nav-link h4 font-weight-bold mb-0 pb-1 border-0 active" id="featured-bestseller-tab" data-toggle="tab" href="#FeaturedBestSellers" role="tab" aria-controls="bestsellers" aria-selected="true">Bestsellers</a>
+			</li>
+			<li class="nav-item text-center">
+				<a class="nav-link h4 font-weight-bold mb-0 pb-1 border-0" id="featured-valueset-tab" data-toggle="tab" href="#FeaturedValueSets" role="tab" aria-controls="valuesets" aria-selected="false">Value Sets</a>
+			</li>
+		</ul>
+	</div>
 	<div class="tab-content">
 		<div class="tab-pane fade" id="FeaturedNew" role="tabpanel" aria-labelledby="featured-new-tab">
 			{{#> sections/carousel-scroll-abtest id="featured-products-new"}}
