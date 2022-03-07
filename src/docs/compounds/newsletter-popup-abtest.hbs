@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{{> html-head title="Newsletter Signup Popup" }}
+</head>
+<body>
+	<div class="container">
+		<h1>Newsletter Signup Popup</h1>
+
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newsletterModal">Launch modal</button>
+
+		{{> compounds/newsletter-popup-abtest}}
+	</div>
+	{{> js jquery=true popper=true bootstrap=true main=true }}
+</body>
+</html>
