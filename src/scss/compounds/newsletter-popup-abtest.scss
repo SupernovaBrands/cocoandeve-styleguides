@@ -24,6 +24,16 @@
         font-size: calc-em(10, 16);
         margin-left: calc-em(10, 16);
     }
+
+    .close {
+        top: 1em;
+        right: 1em;
+        opacity: 1;
+
+        @include media-breakpoint-up(lg) {
+            color: #fff;
+        }
+    }
     
 
     select {
