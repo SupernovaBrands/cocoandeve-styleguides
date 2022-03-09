@@ -17,6 +17,10 @@ html.au-store {
 
 		.carousel-tab-abtest {
 			display: block !important;
+
+			.fade {
+				transition-duration: 0.05s;
+			}
 		}
 
 		.carousel--scroll .scrollbar {
