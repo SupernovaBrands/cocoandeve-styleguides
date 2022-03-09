@@ -2,7 +2,7 @@
 	<div class="container d-flex justify-content-center px-g">
 		<ul class="product-info-tab nav nav-tabs justify-content-between border-0 col-12 col-lg-5 px-0" role="tablist">
 			<li class="nav-item text-center">
-				<a class="nav-link h4 font-weight-bold mb-0 pb-1 border-0" id="featured-new-tab" data-toggle="tab" href="#FeaturedNew" role="tab" aria-controls="new" aria-selected="false">New</a>
+				<a class="nav-link h4 font-weight-bold mb-0 pb-1 border-0" id="featured-trending-tab" data-toggle="tab" href="#FeaturedTrending" role="tab" aria-controls="trending" aria-selected="false">Trending</a>
 			</li>
 			<li class="nav-item text-center">
 				<a class="nav-link h4 font-weight-bold mb-0 pb-1 border-0 active" id="featured-bestseller-tab" data-toggle="tab" href="#FeaturedBestSellers" role="tab" aria-controls="bestsellers" aria-selected="true">Bestsellers</a>
@@ -13,8 +13,8 @@
 		</ul>
 	</div>
 	<div class="tab-content">
-		<div class="tab-pane fade" id="FeaturedNew" role="tabpanel" aria-labelledby="featured-new-tab">
-			{{#> sections/carousel-scroll-abtest id="featured-products-new"}}
+		<div class="tab-pane fade" id="FeaturedTrending" role="tabpanel" aria-labelledby="featured-trending-tab">
+			{{#> sections/carousel-scroll-abtest id="featured-products-trending"}}
 				{{> compounds/product-card-abtest text="1" class="carousel-item mb-0" title="Smoothie Shower Gel"}}
 				{{> compounds/product-card-abtest text="2" swatch_style="true" swatch="Choose Style" class="carousel-item mb-0" title="Oh My Hair Kit"}}
 				{{> compounds/product-card-abtest text="3" swatch_color="true" swatch="Choose Shade" class="carousel-item mb-0" title="Tanning Goddess Kit"}}
@@ -29,7 +29,7 @@
 		<div class="tab-pane fade show active" id="FeaturedBestSellers" role="tabpanel" aria-labelledby="featured-bestseller-tab">
 			{{#> sections/carousel-scroll-abtest id="featured-products-bestseller"}}
 				{{> compounds/product-card-abtest text="1" class="carousel-item mb-0" title="Deep Clean Scalp Scrub"}}
-				{{> compounds/product-card-abtest text="2" swatch_style="true" swatch="Choose Style" class="carousel-item mb-0" title="Super Hydrating Shampoo"}}
+				{{> compounds/product-card-abtest text="2" swatch_style="true" swatch="Choose Style" class="carousel-item mb-0" title="Super Hydrating Shampoo & Conditioner Set"}}
 				{{> compounds/product-card-abtest text="3" swatch_color="true" swatch="Choose Shade" class="carousel-item mb-0" title="Silky Hair Set"}}
 				{{> compounds/product-card-abtest text="4" class="carousel-item mb-0" title="Miracle Hair Elixir"}}
 				{{> compounds/product-card-abtest text="5" class="carousel-item mb-0" title="Tanning Goddess Kit"}}
