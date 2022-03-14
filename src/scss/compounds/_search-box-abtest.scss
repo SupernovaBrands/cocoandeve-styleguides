@@ -162,19 +162,21 @@
     }
 
     @include media-breakpoint-up(md) {
-        .carousel-control {
-            transform: none;
-        }
+        .carousel--scroll {
+            .carousel-control {
+                transform: none;
+            }
 
-        .carousel-control-next {
-            top: auto;
-            right: 1%;
-        }
+            .carousel-control-next {
+                top: auto;
+                right: 1%;
+            }
 
-        .carousel-control-prev {
-            top: auto;
-            left: auto;
-            right: 3%;
+            .carousel-control-prev {
+                top: auto;
+                left: auto;
+                right: 3%;
+            }
         }
     }
 
