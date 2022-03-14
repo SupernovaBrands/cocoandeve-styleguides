@@ -156,7 +156,8 @@
         }
     }
 
-        @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(md) {
+        .carousel--scroll {
             .carousel-control {
                 transform: none;
             }
