@@ -560,5 +560,5 @@ if ($('.carousel-tab-abtest').length > 0) {
 }
 
 if ($('.newsletter-bigger-popup').length > 0) {
-	import(/* webpackChunkName: 'newsletter-popup-abtest' */ '~mod/newsletter-popup-abtest');
+	import(/* webpackChunkName: 'newsletter-popup-abtest' */ '~mod/newsletter-popup');
 }
