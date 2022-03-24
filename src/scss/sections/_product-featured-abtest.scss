@@ -1,4 +1,5 @@
-html.ca-store {
+html.ca-store,
+html.au-store {
 	.product-featured--abtest {
 
 		@function container-fluid-scroll($max-widths: $container-max-widths, $breakpoints: $grid-breakpoints, $size: "md") {
