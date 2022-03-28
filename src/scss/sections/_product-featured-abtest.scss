@@ -72,6 +72,10 @@ html.au-store {
 					right: container-fluid-scroll($size: 'xl');
 				}
 			}
+
+			.product-card__title {
+				min-height: calc-em(40);
+			}
 		}
 	}
 }
