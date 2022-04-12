@@ -1,7 +1,7 @@
 @font-face {
 	font-family: "sofia-pro";
-	src: url(font-url('SofiaPro-Bold.woff2')) format("woff2"),
-	url(font-url('SofiaPro-Bold.woff')) format("woff");
+	src: url("https://cdn.shopify.com/s/files/1/0286/1327/9779/t/122/assets/SofiaPro-Bold.woff2") format("woff2"),
+	url("https://cdn.shopify.com/s/files/1/0286/1327/9779/t/122/assets/SofiaPro-Bold.woff2") format("woff");
 	font-display: swap;
 	font-style: normal;
 	font-weight: 700;
@@ -9,18 +9,10 @@
 
 @font-face {
 	font-family: "sofia-pro";
-	src: url(font-url('SofiaPro-Regular.woff2')) format("woff2"),
-	url(font-url('SofiaPro-Regular.woff')) format("woff");
+	src: url("https://cdn.shopify.com/s/files/1/0286/1327/9779/t/122/assets/SofiaPro-Regular.woff2") format("woff2"),
+	url("https://cdn.shopify.com/s/files/1/0286/1327/9779/t/122/assets/SofiaPro-Regular.woff2") format("woff");
 	font-display: swap;
 	font-style: normal;
 	font-weight: 400;
 }
 
-@font-face {
-	font-family: "sofia-pro";
-	src: url(font-url('SofiaPro-Light.woff2')) format("woff2"),
-	url(font-url('SofiaPro-Light.woff')) format("woff");
-	font-display: swap;
-	font-style: normal;
-	font-weight: 300;
-}
