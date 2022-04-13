@@ -22,14 +22,15 @@ footer {
 	grid-template-rows: auto auto auto auto;
 	grid-template-areas: "newsletter newsletter"
 			"aboutus helplinks"
-			"support followus"
-			"currency item";
+			"currency followus"
+			"item item";
 
 	@include media-breakpoint-up(lg) {
 		grid-template-columns: 2fr 1fr 1fr 1fr;
-		grid-template-rows: auto auto;
-		grid-template-areas: "newsletter aboutus helplinks support"
-				"newsletter followus currency item";
+		grid-template-rows: auto auto auto;
+		grid-template-areas: "newsletter aboutus helplinks followus"
+				"newsletter aboutus helplinks currency"
+				"newsletter aboutus helplinks item";
 		grid-column-gap: $grid-gutter-width-lg;
 	}
 
