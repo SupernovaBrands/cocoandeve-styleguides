@@ -7,7 +7,7 @@
 
 <body class="template-product">
 	{{> sections/header}}
-
+	<p class="h1 text-center my-2">We found your perfect match!</p>
 	<div class="container px-g mb-4 mt-lg-5">
 		<div class="row align-items-start">
 			{{> components/product-image-carousel totalSlide=8}}
@@ -71,7 +71,12 @@
 						</div>
 					</div>
 
-					{{> components/product-subscription}}
+					{{> components/product-subscription }}
+
+					<div class="results-swatch py-2 border border-primary-light-second border-left-0 border-right-0 mb-2 d-flex align-items-center">
+						<button type="button" class="variant-swatch variant-swatch--lg medium mr-2 border-primary" data-value="medium" data-id="32068892295203"></button>
+						<p class="mb-0"><strong>Your perfect shade – Medium</strong> <br/> will give you subtle glow</p>
+					</div>
 
 					<div class="product-swatch-mobile__trigger">
 						<div class="product-form-submit mb-3 position-relative">
@@ -82,6 +87,9 @@
 							<p id="oos-alert" class="mt-1 mb-0 text-danger d-none">Oh nuts! You got the last one!</p>
 						</div>
 					</div>
+
+					{{> components/save-results }}
+
 					<ul class="pdp-services-abtest order-lg-2 list-unstyled row mt-3 my-4 text-center d-none d-lg-flex">
 						<li class="col-4 px-0 d-flex flex-column">
 							<img class="svg h1 text-secondary" src="icons/fast-delivery.svg" replace-to-svg />
