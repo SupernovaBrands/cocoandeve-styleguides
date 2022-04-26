@@ -555,10 +555,6 @@ if ($('.carousel--scroll__featured').length > 0) {
 	import(/* webpackChunkName: 'carousel-scroll-featured' */ '~mod/carousel-scroll-featured');
 }
 
-if ($('.carousel-tab-abtest').length > 0) {
-	import(/* webpackChunkName: 'carousel-tab-abtest' */ '~mod/carousel-tab-abtest');
-}
-
 if ($('.newsletter-bigger-popup').length > 0) {
 	import(/* webpackChunkName: 'newsletter-popup' */ '~mod/newsletter-popup');
 }
