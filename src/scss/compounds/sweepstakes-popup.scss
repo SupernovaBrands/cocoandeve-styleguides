@@ -1,13 +1,13 @@
 .sweepstakes-popup {
 	.modal-content {
-		background-image: url(https://cdn.shopify.com/s/files/1/0243/8817/3888/files/bfcm-signup-popup-mobile.jpg?v=1643272858);
+		background-image: url(https://cdn.shopify.com/s/files/1/0075/2163/2309/files/Sweepstakes-LEAVEINMobile_WIN_pop-up.jpg);
 		background-size: 100%;
 		background-position: top center;
 		background-repeat: no-repeat;
 		border-radius: calc-em(22.5, $unit: 1rem);
 
 		@include media-breakpoint-up(lg) {
-			background-image: url(https://cdn.shopify.com/s/files/1/0243/8817/3888/files/bfcm-signup-popup-desktop.jpg?v=1643272858);
+			background-image: url(https://cdn.shopify.com/s/files/1/0075/2163/2309/files/Sweepstakes-LEAVEINDesktop_WIN_pop-up.jpg);
 			background-position: center;
 			background-size: cover;
 		}
