@@ -230,3 +230,7 @@ if (productWaitlistForm.length > 0 && productWaitlistSubmitted.length > 0) {
 }
 
 popopOver();
+
+$('#login-on-result').on('click', () => {
+
+});
