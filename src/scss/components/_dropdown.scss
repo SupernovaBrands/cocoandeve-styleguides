@@ -34,8 +34,16 @@
 			border-color: transparent !important;
 			position: fixed;
 			width: 100%;
-			top: calc-em(100);
+			top: calc-em(96);
 			z-index: $zindex-fixed;
+
+      .scrolled-up & {
+        top: calc-em(51);
+      }
+
+      .scrolled-down & {
+        top: calc-em(145);
+      }
 
 			&:not(.dropdown-menu__logged-in) {
 				@include media-breakpoint-up(lg) {
@@ -48,6 +56,14 @@
 				.cookies-banner-show & {
 					top: calc-em(210);
 				}
+
+        .cookies-banner-show .scrolled-up & {
+          top: calc-em(170);
+        }
+
+        .cookies-banner-show .scrolled-down & {
+          top: calc-em(260);
+        }
 			
 				.cookies-banner-show--expanded & {
 					top: calc-em(410);

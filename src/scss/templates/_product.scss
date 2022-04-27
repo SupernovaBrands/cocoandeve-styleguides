@@ -86,3 +86,11 @@
 		font-size: 3em;
 	}
 }
+
+.quiz-result-title {
+	font-size: $h2-font-size;
+	font-weight: $headings-font-weight;
+	@include media-breakpoint-up(lg) {
+		font-size: $h1-font-size;
+	}
+}

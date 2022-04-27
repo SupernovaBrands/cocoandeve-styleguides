@@ -26,6 +26,12 @@
 	border-color: $primary-light-second !important;
 }
 
+.bg-sm-primary-light-second {
+	@include media-breakpoint-down(lg) {
+		background: $primary-light-second;
+	}
+}
+
 // Hover overlay for image
 .hover-overlay {
 	position: relative;
