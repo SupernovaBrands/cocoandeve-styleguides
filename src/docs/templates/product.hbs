@@ -7,7 +7,7 @@
 
 <body class="template-product">
 	{{> sections/header}}
-	<p class="h1 text-center my-2">We found your perfect match!</p>
+	<p class="text-center my-2 quiz-result-title">We found your perfect match!</p>
 	<div class="container px-g mb-4 mt-lg-5">
 		<div class="row align-items-start">
 			{{> components/product-image-carousel totalSlide=8}}
@@ -324,6 +324,7 @@
 	</div>
 	{{> compounds/modal-waitlist}}
 	{{> js jquery=true popper=true bootstrap=true main=true }}
+	{{> components/modal-login }}
 </body>
 
 </html>

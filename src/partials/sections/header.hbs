@@ -81,21 +81,14 @@
 					<a class="nav-link h4 m-0 text-uppercase font-weight-bold" href="#" data-cy="tracking-order">Track My Order</a>
 				</li>
 				<li class="nav-item dropdown dropdown--account pl-1 mr-1 mr-lg-0">
-					<a class="nav-link h4 m-0 d-flex text-uppercase font-weight-bold" href="#" data-cy="account-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<a class="nav-link h4 m-0 d-flex text-uppercase font-weight-bold d-sm-none d-lg-block" href="#" data-cy="account-icon">
 						<img class="svg mr-25" src="icons/account.svg" replace-to-svg /> <span class="d-none d-lg-inline">Account</span>
 					</a>
-					<div class="dropdown-menu border-0 rounded-0 pt-lg-g pb-0 mt-sm-6 mt-lg-0">
-						<form id="dropdown__login" class="p-g shadow collapse show" data-parent="#dropdownMenuForm">
-							<p class="font-weight-bold text-center px-2 mb-2">Log In to your account</p>
-							<div class="form-group">
-								<input type="email" class="form-control font-size-sm" id="dropdownLoginFormEmail" placeholder="Email">
-							</div>
-							<div class="form-group mt-2">
-								<input type="password" class="form-control font-size-sm" id="dropdownLoginFormPassword" placeholder="Password">
-							</div>
-							<button type="submit" class="btn btn-primary btn-block mt-3 mb-0">Log In</button>
-							<a href="#" class="text-underline text-primary text-center mx-auto d-block mt-2 mb-1">Forgot your password?</a>
-						</form>
+					<a class="nav-link h4 m-0 d-flex text-uppercase font-weight-bold d-lg-none" href="#" data-cy="account-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<img class="svg mr-25" src="icons/account.svg" replace-to-svg /> <span class="d-none d-lg-inline">Account</span>
+					</a>
+					<div class="dropdown-menu border-0 rounded-0 pb-0 mt-sm-6 mt-lg-0 d-lg-none pt-0">
+						{{> components/login-form }}
 					</div>
 				</li>
 				<li class="nav-item">
@@ -109,21 +102,14 @@
 			</ul>
 			<ul class="navbar-nav d-none flex-row justify-content-end search-feature-component-abtest align-items-center">
 				<li class="nav-item dropdown dropdown--account pl-1 mr-1 mr-lg-0">
-					<a class="nav-link h4 m-0 d-flex text-uppercase font-weight-bold" href="#" data-cy="account-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<a class="nav-link h4 m-0 d-flex text-uppercase font-weight-bold d-sm-none d-lg-block" href="#" data-cy="account-icon">
+						<img class="svg mr-25" src="icons/account.svg" replace-to-svg />Account
+					</a>
+					<a class="nav-link h4 m-0 d-flex text-uppercase font-weight-bold d-lg-none" href="#" data-cy="account-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						<img class="svg mr-25" src="icons/account.svg" replace-to-svg />
 					</a>
-					<div class="dropdown-menu border-0 rounded-0 pt-lg-g pb-0 mt-sm-6 mt-lg-0">
-						<form id="dropdown__login" class="p-g shadow collapse show" data-parent="#dropdownMenuForm">
-							<p class="font-weight-bold text-center px-2 mb-2">Log In to your account</p>
-							<div class="form-group">
-								<input type="email" class="form-control font-size-sm" id="dropdownLoginFormEmail" placeholder="Email">
-							</div>
-							<div class="form-group mt-2">
-								<input type="password" class="form-control font-size-sm" id="dropdownLoginFormPassword" placeholder="Password">
-							</div>
-							<button type="submit" class="btn btn-primary btn-block mt-3 mb-0">Log In</button>
-							<a href="#" class="text-underline text-primary text-center mx-auto d-block mt-2 mb-1">Forgot your password?</a>
-						</form>
+					<div class="dropdown-menu border-0 rounded-0 pb-0 mt-sm-6 mt-lg-0 d-lg-none pt-0">
+						{{> components/login-form }}
 					</div>
 				</li>
 				<li class="nav-item search-feature-component-abtest pr-1">
