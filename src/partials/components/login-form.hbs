@@ -1,4 +1,4 @@
-<form id="dropdown__login" class="p-g shadow collapse show" data-parent="#dropdownMenuForm">
+<form id="{{id}}" class="p-g shadow collapse show" data-parent="#{{parent}}">
 	<p class="font-weight-bold text-center px-2 mb-2">Log In to your account</p>
 	<div class="form-group">
 	    <input type="email" class="form-control font-size-sm" id="dropdownLoginFormEmail" placeholder="Email">
@@ -9,6 +9,6 @@
 	<button type="submit" class="btn btn-primary btn-block mt-3 mb-0" disabled>Log In</button>
     <div class="d-flex justify-content-between mt-2 mb-1">
     	<a href="#" class="text-underline text-primary">Forgot your password?</a>
-    	<a href="#" class="text-underline text-primary">Sign Up</a>
+        <a href="#{{targetLink}}" class="text-underline text-primary" data-toggle="collapse">Sign Up</a>
     </div>
 </form>

@@ -80,15 +80,13 @@
 				<li class="nav-item d-none d-lg-block">
 					<a class="nav-link h4 m-0 text-uppercase font-weight-bold" href="#" data-cy="tracking-order">Track My Order</a>
 				</li>
-				<li class="nav-item dropdown dropdown--account pl-1 mr-1 mr-lg-0">
-					<a class="nav-link h4 m-0 d-flex text-uppercase font-weight-bold d-sm-none d-lg-block" href="#" data-cy="account-icon">
+				<li id="dropdownMenuForm" class="nav-item dropdown dropdown--account pl-1 mr-1 mr-lg-0">
+					<a class="nav-link h4 m-0 d-flex text-uppercase font-weight-bold" href="#" data-cy="account-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						<img class="svg mr-25" src="icons/account.svg" replace-to-svg /> <span class="d-none d-lg-inline">Account</span>
 					</a>
-					<a class="nav-link h4 m-0 d-flex text-uppercase font-weight-bold d-lg-none" href="#" data-cy="account-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						<img class="svg mr-25" src="icons/account.svg" replace-to-svg /> <span class="d-none d-lg-inline">Account</span>
-					</a>
-					<div class="dropdown-menu border-0 rounded-0 pb-0 mt-sm-6 mt-lg-0 d-lg-none pt-0">
-						{{> components/login-form }}
+					<div class="dropdown-menu dropdown-menu-right border-0 rounded-0 pb-0 mt-sm-6 mt-lg-0 pt-0">
+						{{> components/login-form parent="dropdownMenuForm" id="dropdown__login" targetLink="dropdown__register"}}
+		                {{> components/register-form parent="dropdownMenuForm" id="dropdown__register" targetLink="dropdown__login"}}
 					</div>
 				</li>
 				<li class="nav-item">
@@ -101,15 +99,13 @@
 				</li>
 			</ul>
 			<ul class="navbar-nav d-none flex-row justify-content-end search-feature-component-abtest align-items-center">
-				<li class="nav-item dropdown dropdown--account pl-1 mr-1 mr-lg-0">
-					<a class="nav-link h4 m-0 d-flex text-uppercase font-weight-bold d-sm-none d-lg-block" href="#" data-cy="account-icon">
-						<img class="svg mr-25" src="icons/account.svg" replace-to-svg />Account
-					</a>
-					<a class="nav-link h4 m-0 d-flex text-uppercase font-weight-bold d-lg-none" href="#" data-cy="account-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<li id="dropdownMenuFormAbtest" class="nav-item dropdown dropdown--account pl-1 mr-1 mr-lg-0">
+					<a class="nav-link h4 m-0 d-flex text-uppercase font-weight-bold" href="#" data-cy="account-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						<img class="svg mr-25" src="icons/account.svg" replace-to-svg />
 					</a>
-					<div class="dropdown-menu border-0 rounded-0 pb-0 mt-sm-6 mt-lg-0 d-lg-none pt-0">
-						{{> components/login-form }}
+					<div class="dropdown-menu dropdown-menu-right border-0 rounded-0 pb-0 mt-sm-6 mt-lg-0 pt-0">
+						{{> components/login-form parent="dropdownMenuFormAbtest" id="dropdown__loginabtest" targetLink="dropdown__registerabtest"}}
+		                {{> components/register-form parent="dropdownMenuFormAbtest"	 id="dropdown__registerabtest" targetLink="dropdown__loginabtest"}}
 					</div>
 				</li>
 				<li class="nav-item search-feature-component-abtest pr-1">
