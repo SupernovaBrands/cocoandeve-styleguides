@@ -37,12 +37,6 @@
 			top: calc-em(96);
 			z-index: $zindex-fixed;
 
-      .search-feature-with-suggestion-abtest-active & {
-        @include media-breakpoint-up(lg) {
-          left: -#{calc-em(100)};
-        }
-      }
-
       .scrolled-up & {
         top: calc-em(51);
       }
