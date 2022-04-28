@@ -1,0 +1,27 @@
+<form id="{{id}}" class="px-3 py-g shadow collapse" data-parent="#{{parent}}">
+    <p class="font-weight-bold text-center px-2 mb-2">Registration</p>
+    <div class="row">
+        <div class="form-group col-6 pr-1">
+            <input type="text" class="form-control font-size-sm" id="dropdownFormFName" placeholder="First Name">
+        </div>
+        <div class="form-group col-6 pl-1">
+            <input type="text" class="form-control font-size-sm" id="dropdownRegisterFormLName" placeholder="Last Name">
+        </div>
+        <div class="form-group col-12 mt-1">
+            <input type="email" class="form-control font-size-sm" id="dropdownRegisterFormEmail" placeholder="Email">
+        </div>
+        <div class="form-group col-12 mt-1">
+            <input type="text" class="form-control font-size-sm" id="dropdownRegisterFormPassword" placeholder="Password">
+        </div>
+    </div>
+    <div class="custom-control custom-checkbox d-flex justify-content-start mt-1">
+        <input type="checkbox" name="agreement" value="true" class="custom-control-input" id="agreement" required="" aria-required="true" aria-invalid="true">
+        <label class="custom-control-label font-size-xs" for="agreement">
+            By clicking here, I agree to the <a href="#" class="text-body font-weight-bold">Terms of Use</a> and <a href="#" class="text-body font-weight-bold">Privacy Policy</a>
+        </label>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block mt-g">Create Account</button>
+    <div class="form-group text-center mt-2">
+        <a href="#{{targetLink}}" class="text-underline text-primary" data-toggle="collapse">Back to login</a>
+    </div>
+</form>
