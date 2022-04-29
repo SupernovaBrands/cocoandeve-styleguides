@@ -34,6 +34,10 @@
         @include media-breakpoint-up(lg) {
             color: #fff;
         }
+
+        .svg {
+            height: calc-em(26);
+        }
     }
     
 
