@@ -12,13 +12,13 @@ const ReviewStar = (props) => {
 
 	const stars = [];
 	for (let x = 0; x < full; x += 1) {
-		stars.push(<SvgFull key={`full-${x}`} className={`svg text-primary ${stars.length === 0 ? '' : 'ml-25'}`} />);
+		stars.push(<SvgFull key={`full-${x}`} role="presentation" className={`svg text-primary ${stars.length === 0 ? '' : 'ml-25'}`} />);
 	}
 	for (let x = 0; x < half; x += 1) {
-		stars.push(<SvgHalf key={`half-${x}`} className={`svg text-primary ${stars.length === 0 ? '' : 'ml-25'}`} />);
+		stars.push(<SvgHalf key={`half-${x}`} role="presentation" className={`svg text-primary ${stars.length === 0 ? '' : 'ml-25'}`} />);
 	}
 	for (let x = 0; x < line; x += 1) {
-		stars.push(<SvgLine key={`line-${x}`} className={`svg text-primary ${stars.length === 0 ? '' : 'ml-25'}`} />);
+		stars.push(<SvgLine key={`line-${x}`} role="presentation" className={`svg text-primary ${stars.length === 0 ? '' : 'ml-25'}`} />);
 	}
 
 	return (
