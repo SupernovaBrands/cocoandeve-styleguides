@@ -1,0 +1,24 @@
+@include media-breakpoint-up(lg) {
+	html.uk-store {
+		.nav-desktop--abtest {
+
+			.navbar__main {
+				display: none !important;
+			}
+
+			.search-feature-component-abtest,
+			.navbar__secondary {
+				display: flex !important;
+			}
+
+			.navbar__secondary {
+				flex-basis: auto;
+			}
+
+			.navbar-expand-lg .navbar-nav:not(.navbar__secondary),
+			.navbar-brand {
+				flex-basis: 15%;
+			}
+		}
+	}
+}
