@@ -9,7 +9,7 @@
 				<span class="d-block"></span>
 			</button>
 
-			<ul class="navbar-nav align-items-center d-none d-lg-flex">
+			<ul class="navbar-nav align-items-center d-none d-lg-flex navbar__main">
 				<li class="nav-item nav-item--mega-menu">
 					<a href="#" class="btn btn-primary align-items-center mr-1">Shop <img class="svg font-size-xs" src="icons/chevron-down.svg" replace-to-svg /></a>
 					<div class="mega-menu position-absolute bg-white w-100">
@@ -76,7 +76,9 @@
 			<a href="#" class="navbar-brand mx-0">
 				{{> components/svg-logo}}
 			</a>
-			<ul class="navbar-nav d-flex justify-content-end flex-row align-items-center">
+			{{> compounds/nav-desktop-abtest}}
+
+			<ul class="navbar-nav d-flex justify-content-end flex-row align-items-center navbar__main">
 				<li class="nav-item d-none d-lg-block">
 					<a class="nav-link h4 m-0 text-uppercase font-weight-bold" href="#" data-cy="tracking-order">Track My Order</a>
 				</li>
