@@ -1,0 +1,103 @@
+html.eu-store {
+    .product-images-carousel-dots {
+        @include media-breakpoint-down(md) {
+            .product-image-carousel__indicator {
+                display: none;
+            }
+
+            .product-image-carousel__container {
+                .carousel-indicators {
+                    background-color: $gray-100;
+                    border-radius: 2em;
+                    width: max-content;
+                    display: flex !important;
+                }
+
+                li {
+                    background-color: $gray-700;
+                }
+            }
+        }
+    }
+
+    .product-images-carousel-half-next-slide {
+        @include media-breakpoint-down(md) {
+            .product-image-carousel__indicator {
+                display: none;
+            }
+
+            .product-image-carousel__container {
+                .carousel-inner {
+                    display: flex;
+                    width: calc(100% - 5px);
+                    overflow: visible;
+                }
+                .carousel-item {
+                    flex: 0 0 80%;
+                    max-width: 80%;
+                }
+
+                .carousel-item {
+                    margin-right: 0;
+
+                    img {
+                        padding-right: 5px;
+                    }
+                }
+        
+                .carousel-item-next,
+                .carousel-item-prev {
+                    position: relative;
+                    transform: translate3d(0, 0, 0);
+                }
+        
+                .carousel-item-prev:not(.carousel-item-right) {
+                    transform: translateX(-100%);
+                }
+        
+                .active.carousel-item-left + .carousel-item-next.carousel-item-left {
+                    position: relative;
+                    transform: translate3d(-100%, 0, 0);
+                    visibility: visible;
+                }
+        
+                .active.carousel-item-right + .carousel-item-prev.carousel-item-right {
+                    position: relative;
+                    transform: translate3d(100%, 0, 0);
+                    visibility: visible;
+                    display: block;
+                }
+
+                @include carousel-item-level('.carousel-item.active', '.carousel-item', 7) {
+                    display: block;
+                }
+        
+                @include carousel-item-level('.carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)', '.carousel-item:not(.carousel-item--last)', 7) {
+                    transition: none;
+                }
+        
+                @include carousel-item-level('.carousel-item-next.carousel-item-left', '.carousel-item', 7, false) {
+                    position: relative;
+                    transform: translate3d(-100%, 0, 0);
+                    visibility: visible;
+                }
+        
+                @include carousel-item-level('.carousel-item-prev.carousel-item-right', '.carousel-item', 7, false) {
+                    position: relative;
+                    transform: translate3d(100%, 0, 0);
+                    visibility: visible;
+                    display: block;
+                }
+
+                .carousel-item-prev.carousel-item-right {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+                    display: block;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}
