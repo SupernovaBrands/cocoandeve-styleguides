@@ -1,4 +1,5 @@
-html.eu-store {
+html.eu-store,
+html.ca-store {
     .product-images-carousel-dots {
         @include media-breakpoint-down(md) {
             .product-image-carousel__indicator {
