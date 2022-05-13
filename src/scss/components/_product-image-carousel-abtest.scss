@@ -27,6 +27,10 @@ html.ca-store {
                 display: none;
             }
 
+            .product-image-carousel {
+                overflow: hidden;
+            }
+
             .product-image-carousel__container {
                 .carousel-inner {
                     display: flex;
