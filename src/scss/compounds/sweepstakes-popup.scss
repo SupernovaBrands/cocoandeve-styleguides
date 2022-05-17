@@ -1,13 +1,13 @@
 .sweepstakes-popup {
 	.modal-content {
-		background-image: url(https://cdn.shopify.com/s/files/1/0075/2163/2309/files/Mobile_WIN_pop-up.jpg?v=1650949701);
+		background-image: url(https://cdn.shopify.com/s/files/1/0243/8817/3888/files/Pop-Up_MOB.jpg?v=1652438600);
 		background-size: 100%;
 		background-position: top center;
 		background-repeat: no-repeat;
 		border-radius: calc-em(22.5, $unit: 1rem);
 
 		@include media-breakpoint-up(lg) {
-			background-image: url(https://cdn.shopify.com/s/files/1/0075/2163/2309/files/Sweepstakes-LEAVEINDesktop_WIN_pop-up.jpg);
+			background-image: url(https://cdn.shopify.com/s/files/1/0243/8817/3888/files/Pop-Up_DESK.jpg?v=1652438600);
 			background-position: center;
 			background-size: cover;
 		}
@@ -58,19 +58,8 @@
 		}
 	}
 
-	&__separator {
-		color: $primary;
-
-		@include media-breakpoint-up(lg) {
-			color: white;
-		}
-	}
-
 	&__thank-you {
-		color: $gray-600;
-
 		@include media-breakpoint-up(lg) {
-			color: white;
 			min-height: calc-em(300);
 		}
 	}
