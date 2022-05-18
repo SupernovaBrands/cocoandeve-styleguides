@@ -4,6 +4,11 @@ html.us-store {
         .btn-primary {
             background-color: $darker-pink;
             border-color: $darker-pink;
+
+            &:hover {
+                background-color: $primary-dark;
+                border-color: $primary-dark;
+            }
         }
 
         .btn-outline-primary {
@@ -16,13 +21,21 @@ html.us-store {
             }
         }
 
-        .nav-tabs .nav-link.active:not([data-toggle]),
-        .nav-tabs .nav-item.show .nav-link {
+        .nav-tabs.nav-tabs--product .nav-link:not(.active):hover {
+            color: $darker-pink;
+        }
+
+        .nav-tabs.nav-tabs--product .nav-link.active,
+        .nav-tabs.nav-tabs--product .nav-item.show .nav-link {
             background-color: $darker-pink;
         }
 
         .nav-blog .nav-link.active {
             color: $darker-pink;
+
+            &:hover {
+                color: $primary-dark;
+            }
         }
 
         .list-check li:before {
@@ -36,6 +49,10 @@ html.us-store {
 
         a:not(.btn-primary):not(.btn-outline-primary):not(.nav-link):not(.hair):not(.tan):not(.body):not(.bundle) {
             color: $darker-pink;
+
+            &:hover {
+                color: $primary-dark;
+            }
         }
 
         .progress-bar {
@@ -53,13 +70,17 @@ html.us-store {
         .product-subscription .custom-control-label::before, .product-subscription .custom-control-label::after {
             border-color: $darker-pink !important;
         }
-        
+
         .product-info-tab .nav-link.active {
             border-color: $darker-pink !important;
         }
 
         .product-variant .custom-control-input:checked ~ .custom-control-label {
             border-color: $darker-pink;
+        }
+
+        .variant-swatch.oos:after {
+            background-color: $darker-pink;
         }
 
         .bg-primary {
