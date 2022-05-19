@@ -121,4 +121,19 @@
 			background-image: url(asset-url('scent-lychee-dragonfruit.svg'));
 		}
 	}
+	&.mini-comb {
+		&:before {
+			background-image: url(asset-url('ce-comb.svg'));
+		}
+	}
+	&.shampoo-brush {
+		&:before {
+			background-image: url(asset-url('ce-brush.svg'));
+		}
+	}
+	&.tangle-tamer {
+		&:before {
+			background-image: url(asset-url('ce-tangle-teaser.svg'));
+		}
+	}
 }
