@@ -77,7 +77,7 @@ export default class CartItem extends React.Component {
 						wrapper={(children) => <a href={item.url} className="col-3">{children}</a>}
 					>
 						<picture className={models.isFree ? 'col-3' : ''}>
-							<img src={models.image} className="w-100" alt={item.product_title} />
+							<img src="https://via.placeholder.com/150x150/EFADBA" className="w-100" alt={item.product_title} />
 						</picture>
 					</ConditionWrapper>
 					<figcaption className="col-9">
