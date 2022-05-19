@@ -21,12 +21,15 @@ html.us-store {
             }
         }
 
-        .nav-tabs.nav-tabs--product .nav-link:not(.active):hover {
+        .nav-tabs.nav-tabs--product .nav-link:not(.active):hover,
+        .nav-tabs.nav-tabs--real-results .nav-link:not(.active):hover {
             color: $darker-pink;
         }
 
         .nav-tabs.nav-tabs--product .nav-link.active,
-        .nav-tabs.nav-tabs--product .nav-item.show .nav-link {
+        .nav-tabs.nav-tabs--product .nav-item.show .nav-link,
+        .nav-tabs.nav-tabs--real-results .nav-link.active,
+        .nav-tabs.nav-tabs--real-results .nav-item.show .nav-link {
             background-color: $darker-pink;
         }
 
