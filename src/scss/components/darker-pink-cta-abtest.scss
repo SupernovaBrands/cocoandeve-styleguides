@@ -124,6 +124,11 @@ html.us-store {
                 &.active {
                     color: $white !important;
                 }
+
+                &:hover {
+                    background-color: $darker-pink;
+                    color: $white !important;
+                }
             }
         }
     }
