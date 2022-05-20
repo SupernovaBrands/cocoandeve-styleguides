@@ -139,12 +139,12 @@
 	}
 	&.shampoo-brush {
 		&:before {
-			background-image: url(asset-url('ce-brush.svg'));
+			background-image: url(asset-url('ce-tangle-teaser.svg'));
 		}
 	}
 	&.tangle-tamer {
 		&:before {
-			background-image: url(asset-url('ce-tangle-teaser.svg'));
+			background-image: url(asset-url('ce-brush.svg'));
 		}
 	}
 }
