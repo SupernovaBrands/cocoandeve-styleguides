@@ -50,7 +50,7 @@ html.us-store {
             color: $darker-pink !important;
         }
 
-        a:not(.btn-primary):not(.btn-outline-primary):not(.nav-link):not(.hair):not(.tan):not(.body):not(.bundle) {
+        a:not(.btn-primary):not(.btn-outline-primary):not(.nav-link):not(.hair):not(.tan):not(.body):not(.bundles):not(.link-secondary) {
             color: $darker-pink;
 
             &:hover {
@@ -59,6 +59,10 @@ html.us-store {
         }
 
         .progress-bar {
+            background-color: $darker-pink;
+        }
+
+        .dropdown-item.active {
             background-color: $darker-pink;
         }
 
@@ -98,7 +102,7 @@ html.us-store {
             color: $body-color !important;
         }
 
-        .mega-menu a {
+        .mega-menu a:not(.hair):not(.tan):not(.body):not(.bundles) {
             color: $body-color !important;
 
             &:hover {
@@ -109,8 +113,23 @@ html.us-store {
             color: $secondary !important;
         }
 
-        footer a {
-            color: white !important;
+        footer {
+            a {
+                color: white !important;
+            }
+
+            .dropdown-item {
+                color: $body-color !important;
+
+                &.active {
+                    color: $white !important;
+                }
+
+                &:hover {
+                    background-color: $darker-pink;
+                    color: $white !important;
+                }
+            }
         }
     }
 }
