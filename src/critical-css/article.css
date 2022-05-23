@@ -266,7 +266,7 @@ h1{font-size:2em}
 .tooltip:before{content:"";position:absolute;border-style:solid;border-width:0 .6875em .6875em;border-color:transparent transparent #f4436c;top:0;right:.625em;transform:translateY(-90%)}
 .tooltip .svg{position:absolute;right:.5em;top:50%;transform:translateY(-50%);font-size:1.1875em}
 .announcement-bar{padding:.59375em 0}
-.announcement-bar a{color:#00635b;font-size:1.125em}
+.announcement-bar a{color:#00635b;}
 .upsell{background:#faf9f9}
 .upsell picture{width:4.6875em}
 .upsell__title{margin-bottom:.4375em;margin-top:auto;font-weight:600;color:#151515}

@@ -295,7 +295,7 @@ h3{font-size:1em}
 }
 .tooltip .svg{position:absolute;right:.5em;top:50%;transform:translateY(-50%);font-size:1.1875em}
 .announcement-bar{padding:.59375em 0}
-.announcement-bar a{color:#00635b;font-size:1.125em}
+.announcement-bar a{color:#00635b}
 .main-header{z-index:1030;width:100%;top:0;position:relative}
 @media (max-width:1259.98px){
 .main-header .h4{font-size:1em}

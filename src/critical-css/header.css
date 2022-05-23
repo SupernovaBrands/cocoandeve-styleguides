@@ -212,8 +212,8 @@ input[type=checkbox]{box-sizing:border-box;padding:0}
 .tooltip:before{content:"";position:absolute;border-style:solid;border-width:0 .6875em .6875em;border-color:transparent transparent #f4436c;top:0;right:.625em;transform:translateY(-90%)}
 .tooltip .svg{position:absolute;right:.5em;top:50%;transform:translateY(-50%);font-size:1.1875em}
 .announcement-bar{padding:.59375em 0}
-.announcement-bar a{color:#00635b;font-size:1.125em}
-.main-header{z-index:1030;width:100%;top:0;position:relative}
+.announcement-bar a{color:#00635b;}
+.main-header{z-index:1050}
 @media (max-width:1259.98px){
 .main-header .h4{font-size:1em}
 }
