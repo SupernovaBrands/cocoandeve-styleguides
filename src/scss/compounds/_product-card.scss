@@ -59,4 +59,20 @@
 			left: calc-em(25, 12);
 		}
 	}
+
+	&--quiz {
+		@include media-breakpoint-down(lg) {
+			max-height: calc-em(150);
+		}
+
+		&__title {
+			max-width: calc-em(180);
+		}
+
+		.embed-responsive {
+			@include media-breakpoint-up(lg) {
+				border-radius: $border-radius-lg;
+			}
+		}
+	}
 }
