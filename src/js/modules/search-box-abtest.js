@@ -335,3 +335,25 @@ $('.carousel--scroll:not(.carousel--scroll__featured)').each((index, carousel) =
 		nextButton.addEventListener('mousedown', scrollItem('right'));
 	}
 });
+
+// safari overlay scroll fix
+const searchPanelScroll = document.getElementById('searchPanel');
+
+const addScrollPixel = () => {
+	if (searchPanelScroll.scrollTop === 0) {
+		// element is at the top of its scroll position
+		searchPanelScroll.scrollTop = 1;
+	}
+
+	if (searchPanelScroll.scrollHeight - searchPanelScroll.scrollTop === searchPanelScroll.clientHeight) {
+		// element is at the bottom of its scroll position
+		searchPanelScroll.scrollTop -= 1;
+	}
+};
+
+if (window.addEventListener) {
+	// Avoid just launching a function on every scroll event as it could affect performance.
+	searchPanelScroll.addEventListener('scroll', addScrollPixel, true);
+} else if (window.attachEvent) {
+	searchPanelScroll.attachEvent('scroll', addScrollPixel);
+}
