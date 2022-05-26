@@ -21,6 +21,10 @@
 				{{> compounds/launch-waitlist class="order-lg-2"}}
 
 				<form class="product-form order-lg-2 mt-1">
+					<p class="bg-primary-light py-1 text-center">
+						Not Sure which shade to get? <a href="#" class="text-primary d-block d-lg-inline text-underline">Take our Tan Quiz</a>
+					</p>
+
 					{{#> components/product-variant name="product-variant" title="1x Sunny Honey Bali Bronzing Foam" value="1-x-sunny-honey-bali-bronzing-foam" checked=true class="mb-1" titleClass="font-weight-bold"}}
 						<button type="button" class="variant-swatch medium mr-1 border-primary" data-image="https://via.placeholder.com/150x150/EFADBA?text=1" data-value="medium" data-id="32068891541539"></button>
 						<button type="button" class="variant-swatch dark mr-1" data-image="https://via.placeholder.com/150x150/EFADBA?text=2" data-value="dark" data-id="32068891607075"></button>
@@ -292,7 +296,7 @@
 
 	{{> sections/pdp-banner-tan-different }}
 	{{> sections/pdp-banner-services }}
-	
+
 	{{> sections/footer}}
 
 	<div class="modal fade" id="shipping-modal" tabindex="-1">
