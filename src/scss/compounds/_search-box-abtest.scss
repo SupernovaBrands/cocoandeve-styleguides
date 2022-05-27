@@ -135,7 +135,10 @@
     &__result,
     &__home {
         overflow-y: scroll;
-        max-height: calc(100vh - 4rem);
+
+        @include media-breakpoint-down(md) {
+            max-height: calc(100vh - calc(2 * 4rem));
+        }
 
         @include media-breakpoint-up(lg) {
             overflow-y: unset;
