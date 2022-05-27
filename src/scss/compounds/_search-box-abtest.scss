@@ -275,7 +275,7 @@
             padding-bottom: calc-em(117);
 
             @include media-breakpoint-down(md) {
-                max-height: calc(100vh - calc(3 * 4rem));
+                max-height: calc(100vh - calc(4 * 4rem));
             }
         }
     }
