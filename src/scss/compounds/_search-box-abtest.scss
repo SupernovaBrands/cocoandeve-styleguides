@@ -1,6 +1,14 @@
 .search-panel-active {
     overflow: hidden;
 
+    // safari overlay scroll fix
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+
     @include media-breakpoint-up(lg) {
         overflow: auto;
     }
@@ -127,7 +135,10 @@
     &__result,
     &__home {
         overflow-y: scroll;
-        max-height: calc(100vh - 4rem);
+
+        @include media-breakpoint-down(md) {
+            max-height: calc(100vh - calc(2 * 4rem));
+        }
 
         @include media-breakpoint-up(lg) {
             overflow-y: unset;
