@@ -45,6 +45,7 @@ const SearchBox = {
 		$('body').toggleClass('search-panel-active');
 		if (SearchBox.isSearchOpen()) {
 			$('.search-panel input[name="q"]').focus();
+			$('.main-header').addClass('scrolled-up').removeClass('scrolled-down');
 		}
 	},
 	keywordListener(input) {
@@ -335,3 +336,25 @@ $('.carousel--scroll').each((index, carousel) => {
 		nextButton.addEventListener('mousedown', scrollItem('right'));
 	}
 });
+
+const searchPanelScroll = document.getElementById('searchPanel');
+
+const addScrollPixel = () => {
+	if (searchPanelScroll.scrollTop === 0) {
+		// element is at the top of its scroll position, so scroll 1 pixel down
+		searchPanelScroll.scrollTop = 1;
+	}
+
+	if (searchPanelScroll.scrollHeight - searchPanelScroll.scrollTop === searchPanelScroll.clientHeight) {
+		// element is at the bottom of its scroll position, so scroll 1 pixel up
+		searchPanelScroll.scrollTop -= 1;
+	}
+};
+
+if (window.addEventListener) {
+	// Avoid just launching a function on every scroll event as it could affect performance.
+	// You should add a "debounce" to limit how many times the function is fired
+	searchPanelScroll.addEventListener('scroll', addScrollPixel, true);
+} else if (window.attachEvent) {
+	searchPanelScroll.attachEvent('scroll', addScrollPixel);
+}
