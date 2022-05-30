@@ -325,20 +325,26 @@ $(document).ready(function () {
 	$(window).on('scroll', function () {
 		scrollTop = $(this).scrollTop();
 
-		if (scrollTop < lastScrollTop) {
-			navbarEl.removeClass('scrolled-down').addClass('scrolled-up');
-			if (scrollTop <= 0) {
-				// remove scrolled up for mobile menu show properly
-				navbarEl.removeClass('scrolled-up');
-			}
-		} else if (scrollTop <= 0) {
-			// safari fix bounce effect
-			navbarEl.removeClass('scrolled-up');
-		} else {
-			navbarEl.removeClass('scrolled-up').addClass('scrolled-down');
-		}
+		const isSearchOpen = $('.search-panel').hasClass('show');
 
-		lastScrollTop = scrollTop;
+		if (!isSearchOpen) {
+			if (scrollTop < lastScrollTop) {
+				navbarEl.removeClass('scrolled-down').addClass('scrolled-up');
+				if (scrollTop <= 0) {
+					// remove scrolled up for mobile menu show properly
+					navbarEl.removeClass('scrolled-up');
+				}
+			} else if (scrollTop <= 0) {
+				// safari fix bounce effect
+				navbarEl.removeClass('scrolled-up');
+			} else {
+				navbarEl.removeClass('scrolled-up').addClass('scrolled-down');
+			}
+
+			lastScrollTop = scrollTop;
+		} else {
+			navbarEl.removeClass('scrolled-down scrolled-up');
+		}
 	});
 
 	$('.nav-item--mega-menu').hover(function () {
