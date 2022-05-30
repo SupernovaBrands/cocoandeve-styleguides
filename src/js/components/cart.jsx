@@ -18,7 +18,6 @@ import {
 	isFreeItem,
 	isItemHasProp,
 	isSameText,
-	kebabCase,
 	intersectTwo,
 	formatMoney,
 } from '~mod/utils';
@@ -232,6 +231,10 @@ export default class Cart extends React.Component {
 				name = 'Shade';
 			} else if (name.toLowerCase().includes('style') || name.toLowerCase().includes('scent')) {
 				name = 'Style';
+			} else if (name.toLowerCase().includes('style')) {
+				name = 'Style';
+			} else if (name.toLowerCase().includes('scent')) {
+				name = 'Scent';
 			}
 			return { ...opt, name };
 		});
@@ -258,7 +261,6 @@ export default class Cart extends React.Component {
 				selected = positions.map((pos) => currentOptions[pos - 1]);
 			}
 		});
-
 		return {
 			selected,
 			swatches,
@@ -533,7 +535,10 @@ export default class Cart extends React.Component {
 		});
 	}
 
-	getStock = (var_id) => snCart.getVariantInProducts(var_id).inv
+	// eslint-disable-next-line arrow-body-style, camelcase
+	getStock = (var_id) => {
+		return snCart.getVariantInProducts(var_id).inv;
+	}
 
 	handleKeyDown = (e) => {
 		if (e.keyCode === 13) {
