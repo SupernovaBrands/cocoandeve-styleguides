@@ -562,3 +562,7 @@ if ($('.newsletter-bigger-popup').length > 0) {
 if ($('.product-images-carousel-half-next-slide .product-image-carousel').length > 0) {
 	import(/* webpackChunkName: 'carousel-loop' */ '~mod/product-image-carousel-abtest');
 }
+
+if ($('.collection-template').length >= 0) {
+	import(/* webpackChunkName: 'collection' */ '~mod/collection-template');
+}

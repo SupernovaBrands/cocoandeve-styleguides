@@ -1,0 +1,70 @@
+html.uk-store {
+    .mega-menu-collection-abtest-active {
+        .mega-menu {
+            .container:not(.mega-menu-collection-variant) {
+                display: none;
+            }
+    
+            .mega-menu-collection-variant {
+                display: block !important;
+            }
+        }
+
+        .collection-template {
+            .imagewtext {
+                display: none;
+            }
+
+            h2 {
+                margin-bottom: 0;
+                align-self: center;
+                font-size: calc-em(32);
+            }
+        }
+
+        .collection-banner {
+            display: block !important;
+
+            &__content {
+                top: 0;
+                bottom: 0;
+            }
+        }
+
+        .collection-sidebar:not(.collection-sidebar-variant) {
+            display: none;
+        }
+
+        .collection-sidebar {
+            background-color: transparent;
+            margin-top: calc-em(60);
+        }
+
+        .collection-sidebar-variant {
+            display: block !important;
+            border: 1px solid $body-color;
+        }
+
+        .collection-grid__tags {
+            display: flex !important;
+            overflow-x: scroll;
+            width: auto;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            span {
+                background-color: $gray-400;
+                border-radius: calc-em(20);
+                white-space: nowrap;
+                cursor: pointer;
+
+                &.active {
+                    background-color: $primary;
+                    color: white;
+                }
+            }
+        }
+    }
+}

@@ -7,6 +7,15 @@
 
 <body class="darker-pink-cta-active">
 	{{> sections/header}}
+	<figure class="collection-banner container-fluid d-none position-relative align-items-center px-0">
+		<picture>
+			<source srcset="https://via.placeholder.com/1440x200" media="(min-width: 992px)" />
+			<img src="https://via.placeholder.com/375x200" class="w-100">
+		</picture>
+		<figcaption class="collection-banner__content col-12 d-flex d-lg-none position-absolute w-auto align-items-center my-auto top-0 bottom-0">
+			<h1 class="mb-0">Shop All</h1>
+		</figcaption>
+	</figure>
 	<div class="container collection-template">
 		<figure class="imagewtext mobile-wrapper row position-relative align-items-center mb-lg-2 mt-lg-5">
 			<div class="col-12 col-lg-8 order-lg-last">
@@ -28,12 +37,21 @@
 			<aside class="col-3 d-none d-lg-block">
 				<ul class="list-unstyled collection-sidebar p-3">
 					<li class="mb-1"><a href="javascript:void(0)" class="font-weight-bold">Filter By</a></li>
-					<li class="mb-1"><a href="javascript:void(0)">Tan</a></li>
+					<li class="mb-1" data-collection="Tan"><a href="javascript:void(0)">Tan</a></li>
 					<li class="mb-1"><a href="javascript:void(0)">Hair</a></li>
 					<li class="mb-1"><a href="javascript:void(0)" class="active">Body</a></li>
 					<li class="mb-1"><a href="javascript:void(0)">Kits & Gift</a></li>
 					<li class="mb-1"><a href="javascript:void(0)">All Accesories</a></li>
 					<li><a href="javascript:void(0)">Shop All</a></li>
+				</ul>
+				<ul class="list-unstyled collection-sidebar collection-sidebar-variant d-none p-3 col-8 rounded">
+					<li class="mb-1"><a href="javascript:void(0)" class="font-weight-bold">Filter By</a></li>
+					<li class="mb-1" data-collection="tan" data-title="Tan"><a href="javascript:void(0)">Tan</a></li>
+					<li class="mb-1" data-collection="hair" data-title="Hair"><a href="javascript:void(0)">Hair</a></li>
+					<li class="mb-1" data-collection="body" data-title="Body"><a href="javascript:void(0)" class="active">Body</a></li>
+					<li class="mb-1" data-collection="kits-gifts" data-title="Kits & Gift"><a href="javascript:void(0)">Kits & Gift</a></li>
+					<li class="mb-1" data-collection="all-accessories" data-title="All Accesories"><a href="javascript:void(0)">All Accesories</a></li>
+					<li data-collection="all" data-title="Shop All"><a href="javascript:void(0)">Shop All</a></li>
 				</ul>
 			</aside>
 			<div class="col-12 col-lg-9">
@@ -63,7 +81,16 @@
 						</select>
 					</div>
 					<h2 class="col-12 col-lg-7 order-lg-first">Shop All</h2>
-					<div class="col-12 mt-1 mb-1"><hr class=" mt-0"></div>
+					<div class="col-12 mt-1 mb-1">
+						<hr class=" mt-0">
+						<div class="collection-grid__tags mb-4 d-none">
+							<span class="mr-1 py-1 px-2 active" data-collection="all">All</span>
+							<span class="mr-1 py-1 px-2" data-collection="shapoo-conditioner" data-title="Shampoo & Conditioner">Shampoo & Conditioner</span>
+							<span class="mr-1 py-1 px-2" data-collection="treatments" data-title="Treatments">Treatments</span>
+							<span class="mr-1 py-1 px-2" data-collection="body" data-title="Body">Body</span>
+						</div>
+					</div>
+					<div class="col-12 loading collapse text-center"><div class="spinner-border mb-3" role="status" aria-label="Loading..."></div></div>
 
 					{{> components/product-card-carousel title="Like a Virgin Hair Masque Like a Virgin Hair Masque" compare_price="$44.90" price="$34.90" collection="true" }}
 
