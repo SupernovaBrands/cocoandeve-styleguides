@@ -1,15 +1,5 @@
 html.uk-store {
     .mega-menu-collection-abtest-active {
-        .mega-menu {
-            .container:not(.mega-menu-collection-variant) {
-                display: none;
-            }
-    
-            .mega-menu-collection-variant {
-                display: block !important;
-            }
-        }
-
         .collection-template {
             .imagewtext {
                 display: none;
