@@ -44,7 +44,7 @@ html.uk-store {
                 display: none;
             }
 
-            span {
+            a {
                 background-color: $gray-400;
                 border-radius: calc-em(20);
                 white-space: nowrap;
@@ -52,7 +52,7 @@ html.uk-store {
 
                 &.active {
                     background-color: $primary;
-                    color: white;
+                    color: white !important;
                 }
             }
         }
