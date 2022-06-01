@@ -109,6 +109,53 @@
 									<a href="#" class="col-3"><img class="w-100" src="//via.placeholder.com/290x190/EFADBA"></a>
 								</div>
 							</div>
+							<div class="container d-none mega-menu-collection-variant">
+								<div class="row flex-grow-1 py-1">
+									<div class="col-3">
+										<h5 class="h1 mb-1"><a href="#" class="hair">Hair</a></h5>
+										<ul class="list-unstyled">
+											<li><a href="#">Shampoo & Conditioner</a></li>
+											<li><a href="#">Treatments</a></li>
+											<li><a href="#">Hair Styling</a></li>
+											<li><a href="#">Accesories</a></li>
+										</ul>
+									</div>
+									<div class="col-3">
+										<h5 class="h1 mb-1"><a href="#" class="tan">Tan</a></h5>
+										<ul class="list-unstyled">
+											<li><a href="#">Body Tan</a></li>
+											<li><a href="#">Face Tan</a></li>
+											<li><a href="#">Tanning Mitt</a></li>
+											<li><a href="#">Accesories</a></li>
+										</ul>
+									</div>
+									<div class="col-3">
+										<h5 class="h1 mb-1"><a href="#" class="body">Body</a></h5>
+										<ul class="list-unstyled">
+											<li><a href="#">Body Wash</a></li>
+											<li><a href="#">Moisturisers</a></li>
+											<li><a href="#">Esfoliators</a></li>
+											<li><a href="#">Bali Bod Bundle</a></li>
+											<li><a href="#">Accesories</a></li>
+										</ul>
+									</div>
+									<div class="col-3">
+										<h5 class="h1 mb-1"><a href="#" class="bundles">Bundles</a></h5>
+										<ul class="list-unstyled">
+											<li><a href="#">Gift sets</a></li>
+											<li><a href="#">Hair sets</a></li>
+											<li><a href="#">Tan sets</a></li>
+											<li><a href="#">Body sets</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="row pt-1 pb-2">
+									<a href="#" class="col-3"><img class="w-100" src="//via.placeholder.com/290x190/EFADBA"></a>
+									<a href="#" class="col-3"><img class="w-100" src="//via.placeholder.com/290x190/EFADBA"></a>
+									<a href="#" class="col-3"><img class="w-100" src="//via.placeholder.com/290x190/EFADBA"></a>
+									<a href="#" class="col-3"><img class="w-100" src="//via.placeholder.com/290x190/EFADBA"></a>
+								</div>
+							</div>
 						</div>
 					</li>
 					<li class="nav-item">
@@ -596,6 +643,15 @@
 	
 	<div class="modal fade cart-drawer" id="cart-drawer" tabindex="-1" aria-hidden="true"></div>
 	
+	<figure class="collection-banner container-fluid d-none position-relative align-items-center px-0">
+		<picture>
+			<source srcset="https://via.placeholder.com/1440x200" media="(min-width: 992px)" />
+			<img src="https://via.placeholder.com/375x200" class="w-100">
+		</picture>
+		<figcaption class="collection-banner__content col-12 d-flex d-lg-none position-absolute w-auto align-items-center my-auto top-0 bottom-0">
+			<h1 class="mb-0">Shop All</h1>
+		</figcaption>
+	</figure>
 	<div class="container collection-template">
 		<figure class="imagewtext mobile-wrapper row position-relative align-items-center mb-lg-2 mt-lg-5">
 			<div class="col-12 col-lg-8 order-lg-last">
@@ -617,11 +673,20 @@
 			<aside class="col-3 d-none d-lg-block">
 				<ul class="list-unstyled collection-sidebar p-3">
 					<li class="mb-1"><a href="javascript:void(0)" class="font-weight-bold">Filter By</a></li>
-					<li class="mb-1"><a href="javascript:void(0)">Tan</a></li>
+					<li class="mb-1" data-collection="Tan"><a href="javascript:void(0)">Tan</a></li>
 					<li class="mb-1"><a href="javascript:void(0)">Hair</a></li>
 					<li class="mb-1"><a href="javascript:void(0)" class="active">Body</a></li>
 					<li class="mb-1"><a href="javascript:void(0)">Kits & Gift</a></li>
 					<li class="mb-1"><a href="javascript:void(0)">All Accesories</a></li>
+					<li><a href="javascript:void(0)">Shop All</a></li>
+				</ul>
+				<ul class="list-unstyled collection-sidebar collection-sidebar-variant d-none p-3 col-8 rounded">
+					<li class="mb-1"><a href="" class="font-weight-bold">Filter By</a></li>
+					<li class="mb-1"><a href="">Tan</a></li>
+					<li class="mb-1"><a href="">Hair</a></li>
+					<li class="mb-1"><a href="" class="active">Body</a></li>
+					<li class="mb-1"><a href="">Kits & Gift</a></li>
+					<li class="mb-1"><a href="">All Accesories</a></li>
 					<li><a href="javascript:void(0)">Shop All</a></li>
 				</ul>
 			</aside>
@@ -652,7 +717,16 @@
 						</select>
 					</div>
 					<h2 class="col-12 col-lg-7 order-lg-first">Shop All</h2>
-					<div class="col-12 mt-1 mb-1"><hr class=" mt-0"></div>
+					<div class="col-12 mt-1 mb-1">
+						<hr class=" mt-0">
+						<div class="collection-grid__tags mb-4 d-none">
+							<a class="mr-1 py-1 px-2 text-body text-decoration-none active">All</a>
+							<a class="mr-1 py-1 px-2 text-body text-decoration-none">Shampoo & Conditioner</a>
+							<a class="mr-1 py-1 px-2 text-body text-decoration-none">Treatments</a>
+							<a class="mr-1 py-1 px-2 text-body text-decoration-none">Body</a>
+						</div>
+					</div>
+					<div class="col-12 loading collapse text-center"><div class="spinner-border mb-3" role="status" aria-label="Loading..."></div></div>
 
 					<div class=" d-flex flex-column  col-6 col-md-4 mb-5   product-card text-center  ">
 						<a href="#">
