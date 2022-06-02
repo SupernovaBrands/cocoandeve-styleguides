@@ -1,6 +1,10 @@
 {
   "name": "cocoandeve-styleguides",
+<<<<<<< HEAD
   "version": "1.5.87",
+=======
+  "version": "1.5.89",
+>>>>>>> check-carousel-translate
   "description": "Here we have all the CORE, COMPONENTS, COMPOUND, SECTIONS and TEMPLATE scss-code organized in the same waas is done on the Shopify repo.",
   "main": "index.html",
   "scripts": {
