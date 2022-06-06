@@ -445,11 +445,11 @@
 		top: 28%;
 
 		@include media-breakpoint-up(lg) {
-			top: percentage(100 / 492);
+			top: calc-em(100);
 		}
 
 		@include media-breakpoint-up(xl) {
-			top: percentage(130 / 502);
+			top: calc-em(130);
 		}
 	}
 }
