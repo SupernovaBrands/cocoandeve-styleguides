@@ -115,12 +115,11 @@
 		overflow: hidden;
 
 		.carousel-inner {
-			width: calc(100% + #{$grid-gutter-width});
+			width: 100%;
 			overflow: visible;
 			@include make-carousel-centered(9, $grid-columns);
 
 			@include media-breakpoint-up(md) {
-				width: calc(100% + #{$grid-gutter-width-lg});
 
 				@include make-carousel-centered(3, $grid-columns);
 
