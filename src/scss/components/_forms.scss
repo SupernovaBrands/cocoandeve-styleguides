@@ -1,4 +1,10 @@
 .form-control {
+	background-color: $gray-400;
+
+	&:focus {
+		background-color: $gray-400;
+	}
+
 	&:disabled,
 	&:disabled::placeholder,
 	&[readonly],
@@ -29,7 +35,7 @@
 	& .input-group-prepend &__icon,
 	& .input-group-append &__close {
 		padding: $search-icon-padding-y-sm;
-		background-color: transparent;
+		background-color: $gray-400;
 		border: 0;
 	}
 
@@ -59,7 +65,7 @@
 
 	.form-control {
 		border: 0;
-		background: transparent;
+		background-color: $gray-400;
 	}
 
 	.input-group-append .btn {
