@@ -75,4 +75,10 @@
 			}
 		}
 	}
+
+	&--quiz-three-lines {
+		@include media-breakpoint-down(lg) {
+			max-height: calc-em(165);
+		}
+	}
 }
