@@ -37,6 +37,17 @@
 		border-radius: 50%;
 	}
 
+	&--lg {
+		width: calc-em(40);
+		height: calc-em(40);
+
+		&:before {
+			width: calc-em(30);
+			height: calc-em(30);
+		}
+	}
+
+
 	&.custom-control-label {
 		&::before,
 		&::after {
