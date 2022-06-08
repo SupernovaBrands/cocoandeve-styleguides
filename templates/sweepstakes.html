@@ -204,37 +204,122 @@
     					<a href="#" class="nav-link m-0 font-weight-bold">Help</a>
     				</li>
     			</ul>
-    
-    			<ul class="navbar-nav d-none d-lg-flex justify-content-end navbar__main">
-    				<li class="nav-item">
+    			<ul class="navbar-nav d-flex justify-content-end flex-row align-items-center navbar__main">
+    				<li class="nav-item d-none d-lg-block">
     					<a class="nav-link h4 m-0 text-uppercase font-weight-bold" href="#" data-cy="tracking-order">Track My Order</a>
     				</li>
-    				<li class="nav-item">
-    					<a class="nav-link h4 m-0 d-flex text-uppercase font-weight-bold" href="#" data-cy="account-icon"><svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 22" class="svg mr-25"><path d="M19.1 18.2c0-1.8-.8-3.7-2.1-4.9-1.3-1.3-3.1-2-5-2H7.1c-1.9 0-3.6.7-5 2C.8 14.6 0 16.4 0 18.2v3.2h19.1v-3.2zm-12-4.9H12c1.3 0 2.6.5 3.6 1.4.9.9 1.5 2.2 1.5 3.5v1.2h-15v-1.2c0-1.3.5-2.6 1.5-3.5.9-.9 2.2-1.4 3.5-1.4zM9.5 10.1c.1 0 .1 0 0 0 1.4 0 2.7-.5 3.7-1.5 1-.9 1.5-2.2 1.5-3.6 0-1.3-.5-2.6-1.5-3.6C12.3.5 11 0 9.6 0h-.1C8.2 0 6.9.5 6 1.5 5 2.4 4.4 3.7 4.4 5c0 1.4.5 2.7 1.5 3.6 1 1 2.3 1.5 3.6 1.5zM6.4 5c0-.8.3-1.6.9-2.2.6-.5 1.4-.8 2.2-.8.8 0 1.6.3 2.2.9l.2.1c.6.6.9 1.3.8 2.1 0 .8-.3 1.6-.9 2.1-.6.6-1.4.9-2.2.9-.8 0-1.6-.3-2.2-.9-.6-.5-1-1.3-1-2.2z"></path></svg> Account</a>
+    				<li id="dropdownMenuForm" class="nav-item dropdown dropdown--account pl-1 mr-1 mr-lg-0">
+    					<a class="nav-link h4 m-0 d-flex text-uppercase font-weight-bold" href="#" data-cy="account-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    						<svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 22" class="svg mr-25"><path d="M19.1 18.2c0-1.8-.8-3.7-2.1-4.9-1.3-1.3-3.1-2-5-2H7.1c-1.9 0-3.6.7-5 2C.8 14.6 0 16.4 0 18.2v3.2h19.1v-3.2zm-12-4.9H12c1.3 0 2.6.5 3.6 1.4.9.9 1.5 2.2 1.5 3.5v1.2h-15v-1.2c0-1.3.5-2.6 1.5-3.5.9-.9 2.2-1.4 3.5-1.4zM9.5 10.1c.1 0 .1 0 0 0 1.4 0 2.7-.5 3.7-1.5 1-.9 1.5-2.2 1.5-3.6 0-1.3-.5-2.6-1.5-3.6C12.3.5 11 0 9.6 0h-.1C8.2 0 6.9.5 6 1.5 5 2.4 4.4 3.7 4.4 5c0 1.4.5 2.7 1.5 3.6 1 1 2.3 1.5 3.6 1.5zM6.4 5c0-.8.3-1.6.9-2.2.6-.5 1.4-.8 2.2-.8.8 0 1.6.3 2.2.9l.2.1c.6.6.9 1.3.8 2.1 0 .8-.3 1.6-.9 2.1-.6.6-1.4.9-2.2.9-.8 0-1.6-.3-2.2-.9-.6-.5-1-1.3-1-2.2z"></path></svg> <span class="d-none d-lg-inline">Account</span>
+    					</a>
+    					<div class="dropdown-menu dropdown-menu-right border-0 rounded-0 pb-0 mt-sm-6 mt-lg-0 pt-0">
+    						<form id="dropdown__login" class="p-g shadow collapse show" data-parent="#dropdownMenuForm">
+    							<p class="font-weight-bold text-center px-2 mb-2">Log In to your account</p>
+    							<div class="form-group">
+    							    <input type="email" class="form-control font-size-sm" id="dropdownLoginFormEmail" placeholder="Email">
+    							</div>
+    							<div class="form-group mt-2">
+    							    <input type="password" class="form-control font-size-sm" id="dropdownLoginFormPassword" placeholder="Password">
+    							</div>
+    							<button type="submit" class="btn btn-primary btn-block mt-3 mb-0" disabled>Log In</button>
+    						    <div class="d-flex justify-content-between mt-2 mb-1">
+    						    	<a href="#" class="text-underline text-primary">Forgot your password?</a>
+    						        <a href="#dropdown__register" class="text-underline text-primary" data-toggle="collapse">Sign Up</a>
+    						    </div>
+    						</form>		                <form id="dropdown__register" class="px-3 py-g shadow collapse" data-parent="#dropdownMenuForm">
+    		                    <p class="font-weight-bold text-center px-2 mb-2">Registration</p>
+    		                    <div class="row">
+    		                        <div class="form-group col-6 pr-1">
+    		                            <input type="text" class="form-control font-size-sm" id="dropdownFormFName" placeholder="First Name">
+    		                        </div>
+    		                        <div class="form-group col-6 pl-1">
+    		                            <input type="text" class="form-control font-size-sm" id="dropdownRegisterFormLName" placeholder="Last Name">
+    		                        </div>
+    		                        <div class="form-group col-12 mt-1">
+    		                            <input type="email" class="form-control font-size-sm" id="dropdownRegisterFormEmail" placeholder="Email">
+    		                        </div>
+    		                        <div class="form-group col-12 mt-1">
+    		                            <input type="text" class="form-control font-size-sm" id="dropdownRegisterFormPassword" placeholder="Password">
+    		                        </div>
+    		                    </div>
+    		                    <div class="custom-control custom-checkbox d-flex justify-content-start mt-1">
+    		                        <input type="checkbox" name="agreement" value="true" class="custom-control-input" id="agreement" required="" aria-required="true" aria-invalid="true">
+    		                        <label class="custom-control-label font-size-xs" for="agreement">
+    		                            By clicking here, I agree to the <a href="#" class="text-body font-weight-bold">Terms of Use</a> and <a href="#" class="text-body font-weight-bold">Privacy Policy</a>
+    		                        </label>
+    		                    </div>
+    		                    <button type="submit" class="btn btn-primary btn-block mt-g">Create Account</button>
+    		                    <div class="form-group text-center mt-2">
+    		                        <a href="#dropdown__login" class="text-underline text-primary" data-toggle="collapse">Back to login</a>
+    		                    </div>
+    		                </form>					</div>
     				</li>
     				<li class="nav-item">
-    					<a class="nav-link h4 m-0 d-flex text-uppercase font-weight-bold" data-toggle="modal" data-target="#cart-drawer" role="button" data-cy="cart-icon"><svg role="presentation" viewBox="0 0 22 25" xmlns="http://www.w3.org/2000/svg" class="svg mr-25"><path d="m11.001 0 .219.005c2.606.11 4.711 2.191 4.826 4.784l.003.145h4.078l.12.007c.472.053.86.412.937.885l.013.12.8 16.508c.03.609-.122 1.157-.479 1.599l-.127.144-.133.127c-.506.442-1.197.642-2.022.672l-.228.004H2.995l-.229-.004c-.825-.03-1.516-.23-2.024-.675l-.134-.128-.126-.143c-.316-.391-.47-.87-.481-1.397l.002-.2L.8 5.945c.025-.535.44-.949.95-1.005l.12-.006h4.082C5.994 2.201 8.246 0 11.002 0Zm8.109 7.064H2.894l-.748 15.492v.064l.003.048.013.062.063.034.1.036c.105.032.27.064.525.073l.147.002H19.01c.268 0 .455-.023.583-.05l.126-.036a.735.735 0 0 0 .045-.017l.074-.039.009-.007.01-.05a.538.538 0 0 0 .005-.05l-.001-.067-.751-15.495Zm-8.109-4.937-.17.005a2.903 2.903 0 0 0-2.733 2.705l-.003.097h5.813c-.04-1.494-1.236-2.715-2.736-2.802l-.17-.005Z"></path></svg> Cart (<span class="cart-drawer__count">0</span>)</a>
+    					<a class="d-none d-lg-block nav-link h4 m-0 d-lg-flex text-uppercase font-weight-bold" data-toggle="modal" data-target="#cart-drawer" role="button" data-cy="cart-icon"><svg role="presentation" viewBox="0 0 22 25" xmlns="http://www.w3.org/2000/svg" class="svg mr-25"><path d="m11.001 0 .219.005c2.606.11 4.711 2.191 4.826 4.784l.003.145h4.078l.12.007c.472.053.86.412.937.885l.013.12.8 16.508c.03.609-.122 1.157-.479 1.599l-.127.144-.133.127c-.506.442-1.197.642-2.022.672l-.228.004H2.995l-.229-.004c-.825-.03-1.516-.23-2.024-.675l-.134-.128-.126-.143c-.316-.391-.47-.87-.481-1.397l.002-.2L.8 5.945c.025-.535.44-.949.95-1.005l.12-.006h4.082C5.994 2.201 8.246 0 11.002 0Zm8.109 7.064H2.894l-.748 15.492v.064l.003.048.013.062.063.034.1.036c.105.032.27.064.525.073l.147.002H19.01c.268 0 .455-.023.583-.05l.126-.036a.735.735 0 0 0 .045-.017l.074-.039.009-.007.01-.05a.538.538 0 0 0 .005-.05l-.001-.067-.751-15.495Zm-8.109-4.937-.17.005a2.903 2.903 0 0 0-2.733 2.705l-.003.097h5.813c-.04-1.494-1.236-2.715-2.736-2.802l-.17-.005Z"></path></svg> Cart (<span class="cart-drawer__count">0</span>)</a>
+    					<a class="d-lg-none nav-link cart d-flex justify-content-end px-0 d-lg-none nav-link__cart" data-toggle="modal" data-target="#cart-drawer" role="button">
+    						<span class="position-relative">
+    							<svg role="presentation" viewBox="0 0 22 25" xmlns="http://www.w3.org/2000/svg" class="svg"><path d="m11.001 0 .219.005c2.606.11 4.711 2.191 4.826 4.784l.003.145h4.078l.12.007c.472.053.86.412.937.885l.013.12.8 16.508c.03.609-.122 1.157-.479 1.599l-.127.144-.133.127c-.506.442-1.197.642-2.022.672l-.228.004H2.995l-.229-.004c-.825-.03-1.516-.23-2.024-.675l-.134-.128-.126-.143c-.316-.391-.47-.87-.481-1.397l.002-.2L.8 5.945c.025-.535.44-.949.95-1.005l.12-.006h4.082C5.994 2.201 8.246 0 11.002 0Zm8.109 7.064H2.894l-.748 15.492v.064l.003.048.013.062.063.034.1.036c.105.032.27.064.525.073l.147.002H19.01c.268 0 .455-.023.583-.05l.126-.036a.735.735 0 0 0 .045-.017l.074-.039.009-.007.01-.05a.538.538 0 0 0 .005-.05l-.001-.067-.751-15.495Zm-8.109-4.937-.17.005a2.903 2.903 0 0 0-2.733 2.705l-.003.097h5.813c-.04-1.494-1.236-2.715-2.736-2.802l-.17-.005Z"></path></svg><span class="cart-drawer__count font-size-sm"></span>
+    						</span>
+    					</a>
     				</li>
     			</ul>
-    			<ul class="navbar-nav d-none flex-row justify-content-end search-feature-component-abtest">
-    				<li class="nav-item d-none d-lg-flex">
-    					<a class="nav-link h4 m-0 d-flex text-uppercase font-weight-bold" href="#" data-cy="account-icon"><svg viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg mr-25"><mask id="a" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="12" width="22" height="12"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.112 12h5.816c2.216 0 4.234.936 5.698 2.441A8.415 8.415 0 0 1 22 20.34V24H0v-3.661c0-2.319.91-4.392 2.374-5.898C3.838 12.936 5.856 12 8.112 12Zm5.816 1.872H8.112c-1.741 0-3.324.733-4.472 1.87a6.727 6.727 0 0 0-1.82 4.597v1.83h18.4v-1.83a6.58 6.58 0 0 0-1.86-4.596c-1.148-1.138-2.69-1.871-4.432-1.871Z" fill="#fff"></path></mask><g mask="url(#a)"><mask id="b" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="-820" y="-55" width="1253" height="5053"><path d="M-819.492 4997.74H432.662V-54.345H-819.492V4997.74Z" fill="#000"></path></mask><g mask="url(#b)"><path d="M-4.583 7.217h31.166v21.566H-4.583V7.218Z" fill="#000"></path></g></g><mask id="c" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="5" y="0" width="12" height="12"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.98 0c1.679 0 3.194.655 4.259 1.761C16.346 2.827 17 4.341 17 5.98c0 1.679-.654 3.194-1.761 4.26-1.065 1.105-2.58 1.76-4.26 1.76-1.638 0-3.154-.655-4.218-1.76C5.655 9.173 5 7.658 5 5.98c0-1.64.655-3.153 1.761-4.219C7.825.655 9.341 0 10.979 0Zm2.948 3.072c-.737-.779-1.801-1.229-2.949-1.229-1.146 0-2.17.45-2.908 1.23-.778.736-1.228 1.76-1.228 2.907 0 1.188.45 2.211 1.228 2.948.738.779 1.762 1.23 2.909 1.23 1.147 0 2.211-.451 2.948-1.23a4.138 4.138 0 0 0 1.23-2.948c0-1.147-.492-2.17-1.23-2.908Z" fill="#fff"></path></mask><g mask="url(#c)"><mask id="d" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="-849" y="-54" width="1297" height="5087"><path d="M-848.672 5032.88H447.447V-53.94H-848.672v5086.82Z" fill="#000"></path></mask><g mask="url(#d)"><path d="M.255-4.816h21.488v21.633H.255V-4.816Z" fill="#000"></path></g></g></svg></a>
+    			<ul class="navbar-nav d-none flex-row justify-content-end search-feature-component-abtest align-items-center">
+    				<li id="dropdownMenuFormAbtest" class="nav-item dropdown dropdown--account pl-1 mr-1 mr-lg-0">
+    					<a class="nav-link h4 m-0 d-flex text-uppercase font-weight-bold" href="#" data-cy="account-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    						<svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 22" class="svg mr-25"><path d="M19.1 18.2c0-1.8-.8-3.7-2.1-4.9-1.3-1.3-3.1-2-5-2H7.1c-1.9 0-3.6.7-5 2C.8 14.6 0 16.4 0 18.2v3.2h19.1v-3.2zm-12-4.9H12c1.3 0 2.6.5 3.6 1.4.9.9 1.5 2.2 1.5 3.5v1.2h-15v-1.2c0-1.3.5-2.6 1.5-3.5.9-.9 2.2-1.4 3.5-1.4zM9.5 10.1c.1 0 .1 0 0 0 1.4 0 2.7-.5 3.7-1.5 1-.9 1.5-2.2 1.5-3.6 0-1.3-.5-2.6-1.5-3.6C12.3.5 11 0 9.6 0h-.1C8.2 0 6.9.5 6 1.5 5 2.4 4.4 3.7 4.4 5c0 1.4.5 2.7 1.5 3.6 1 1 2.3 1.5 3.6 1.5zM6.4 5c0-.8.3-1.6.9-2.2.6-.5 1.4-.8 2.2-.8.8 0 1.6.3 2.2.9l.2.1c.6.6.9 1.3.8 2.1 0 .8-.3 1.6-.9 2.1-.6.6-1.4.9-2.2.9-.8 0-1.6-.3-2.2-.9-.6-.5-1-1.3-1-2.2z"></path></svg>
+    					</a>
+    					<div class="dropdown-menu dropdown-menu-right border-0 rounded-0 pb-0 mt-sm-6 mt-lg-0 pt-0">
+    						<form id="dropdown__loginabtest" class="p-g shadow collapse show" data-parent="#dropdownMenuFormAbtest">
+    							<p class="font-weight-bold text-center px-2 mb-2">Log In to your account</p>
+    							<div class="form-group">
+    							    <input type="email" class="form-control font-size-sm" id="dropdownLoginFormEmail" placeholder="Email">
+    							</div>
+    							<div class="form-group mt-2">
+    							    <input type="password" class="form-control font-size-sm" id="dropdownLoginFormPassword" placeholder="Password">
+    							</div>
+    							<button type="submit" class="btn btn-primary btn-block mt-3 mb-0" disabled>Log In</button>
+    						    <div class="d-flex justify-content-between mt-2 mb-1">
+    						    	<a href="#" class="text-underline text-primary">Forgot your password?</a>
+    						        <a href="#dropdown__registerabtest" class="text-underline text-primary" data-toggle="collapse">Sign Up</a>
+    						    </div>
+    						</form>		                <form id="dropdown__registerabtest" class="px-3 py-g shadow collapse" data-parent="#dropdownMenuFormAbtest">
+    		                    <p class="font-weight-bold text-center px-2 mb-2">Registration</p>
+    		                    <div class="row">
+    		                        <div class="form-group col-6 pr-1">
+    		                            <input type="text" class="form-control font-size-sm" id="dropdownFormFName" placeholder="First Name">
+    		                        </div>
+    		                        <div class="form-group col-6 pl-1">
+    		                            <input type="text" class="form-control font-size-sm" id="dropdownRegisterFormLName" placeholder="Last Name">
+    		                        </div>
+    		                        <div class="form-group col-12 mt-1">
+    		                            <input type="email" class="form-control font-size-sm" id="dropdownRegisterFormEmail" placeholder="Email">
+    		                        </div>
+    		                        <div class="form-group col-12 mt-1">
+    		                            <input type="text" class="form-control font-size-sm" id="dropdownRegisterFormPassword" placeholder="Password">
+    		                        </div>
+    		                    </div>
+    		                    <div class="custom-control custom-checkbox d-flex justify-content-start mt-1">
+    		                        <input type="checkbox" name="agreement" value="true" class="custom-control-input" id="agreement" required="" aria-required="true" aria-invalid="true">
+    		                        <label class="custom-control-label font-size-xs" for="agreement">
+    		                            By clicking here, I agree to the <a href="#" class="text-body font-weight-bold">Terms of Use</a> and <a href="#" class="text-body font-weight-bold">Privacy Policy</a>
+    		                        </label>
+    		                    </div>
+    		                    <button type="submit" class="btn btn-primary btn-block mt-g">Create Account</button>
+    		                    <div class="form-group text-center mt-2">
+    		                        <a href="#dropdown__loginabtest" class="text-underline text-primary" data-toggle="collapse">Back to login</a>
+    		                    </div>
+    		                </form>					</div>
     				</li>
-    				<li class="nav-item d-none search-feature-component-abtest pr-1">
+    				<li class="nav-item search-feature-component-abtest pr-1">
     					<a class="nav-link search h4 m-0 d-flex text-uppercase font-weight-bold search-panel__open" href="#" data-cy="search-icon"><svg viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg mr-25"><path d="m23.707 22.793-6.825-6.825A9.454 9.454 0 0 0 19 10C19 4.762 14.738.5 9.5.5S0 4.762 0 10s4.262 9.5 9.5 9.5c2.26 0 4.335-.796 5.968-2.118l6.825 6.825a.997.997 0 0 0 1.414 0 .999.999 0 0 0 0-1.414ZM9.5 17.5C5.364 17.5 2 14.136 2 10s3.364-7.5 7.5-7.5S17 5.864 17 10s-3.364 7.5-7.5 7.5Z" fill="#000"></path></svg></a>
     				</li>
-    				<li class="nav-item d-none search-feature-component-abtest ">
-    					<a class="nav-link cart h4 mb-0 d-flex justify-content-end px-0 d-lg-none search-feature-component-abtest position-relative font-weight-normal" data-toggle="modal" data-target="#cart-drawer" role="button" data-cy="cart-icon">
+    				<li class="nav-item d-flex search-feature-component-abtest ">
+    					<a class="nav-link cart h4 mb-0 d-flex justify-content-end px-0 search-feature-component-abtest position-relative font-weight-normal" data-toggle="modal" data-target="#cart-drawer" role="button" data-cy="cart-icon">
     						<svg role="presentation" viewBox="0 0 22 25" xmlns="http://www.w3.org/2000/svg" class="svg mr-0"><path d="m11.001 0 .219.005c2.606.11 4.711 2.191 4.826 4.784l.003.145h4.078l.12.007c.472.053.86.412.937.885l.013.12.8 16.508c.03.609-.122 1.157-.479 1.599l-.127.144-.133.127c-.506.442-1.197.642-2.022.672l-.228.004H2.995l-.229-.004c-.825-.03-1.516-.23-2.024-.675l-.134-.128-.126-.143c-.316-.391-.47-.87-.481-1.397l.002-.2L.8 5.945c.025-.535.44-.949.95-1.005l.12-.006h4.082C5.994 2.201 8.246 0 11.002 0Zm8.109 7.064H2.894l-.748 15.492v.064l.003.048.013.062.063.034.1.036c.105.032.27.064.525.073l.147.002H19.01c.268 0 .455-.023.583-.05l.126-.036a.735.735 0 0 0 .045-.017l.074-.039.009-.007.01-.05a.538.538 0 0 0 .005-.05l-.001-.067-.751-15.495Zm-8.109-4.937-.17.005a2.903 2.903 0 0 0-2.733 2.705l-.003.097h5.813c-.04-1.494-1.236-2.715-2.736-2.802l-.17-.005Z"></path></svg>
     						<span class="cart-drawer__count font-size-xs h-100"></span>
     					</a>
     				</li>
     			</ul>
-    			<a class="nav-link cart d-flex justify-content-end px-0 d-lg-none nav-link__cart" data-toggle="modal" data-target="#cart-drawer" role="button">
-    				<span class="position-relative">
-    					<svg role="presentation" viewBox="0 0 22 25" xmlns="http://www.w3.org/2000/svg" class="svg"><path d="m11.001 0 .219.005c2.606.11 4.711 2.191 4.826 4.784l.003.145h4.078l.12.007c.472.053.86.412.937.885l.013.12.8 16.508c.03.609-.122 1.157-.479 1.599l-.127.144-.133.127c-.506.442-1.197.642-2.022.672l-.228.004H2.995l-.229-.004c-.825-.03-1.516-.23-2.024-.675l-.134-.128-.126-.143c-.316-.391-.47-.87-.481-1.397l.002-.2L.8 5.945c.025-.535.44-.949.95-1.005l.12-.006h4.082C5.994 2.201 8.246 0 11.002 0Zm8.109 7.064H2.894l-.748 15.492v.064l.003.048.013.062.063.034.1.036c.105.032.27.064.525.073l.147.002H19.01c.268 0 .455-.023.583-.05l.126-.036a.735.735 0 0 0 .045-.017l.074-.039.009-.007.01-.05a.538.538 0 0 0 .005-.05l-.001-.067-.751-15.495Zm-8.109-4.937-.17.005a2.903 2.903 0 0 0-2.733 2.705l-.003.097h5.813c-.04-1.494-1.236-2.715-2.736-2.802l-.17-.005Z"></path></svg><span class="cart-drawer__count font-size-sm"></span>
-    				</span>
-    			</a>
     		</div>
     	</nav>
     
