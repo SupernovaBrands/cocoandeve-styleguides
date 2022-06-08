@@ -5,22 +5,50 @@ html.us-store {
 			display: none;
 		}
 
-		@include media-breakpoint-up(lg) {
-			.playground--simple__square{
-				position: relative;
+		.playground--simple {
+			display: block !important;
 
-				&:before {
-					content: "";
-					padding-top: 100%;
-					display: block;
+			&-square {
+
+				picture {
+					bottom: 0;
+					right: 0;
 				}
 
+				p {
+					@include font-size($font-size-sm);
+
+					@include media-breakpoint-up(md) {
+						@include font-size($font-size-base);
+					}
+				}
+
+				@include media-breakpoint-up(md) {
+					&:before {
+						content: "";
+						display: block;
+						padding-top: 100%;
+					}
+
+					figcaption {
+						position: absolute;
+						top: 0;
+						left: 0;
+						bottom: 0;
+						right: 0;
+					}
+				}
 			}
 		}
-
 	}
 
 	.range-abtest--split {
+		.playground--original {
+			display: none;
+		}
 
+		.playground--split {
+			display: block !important;
+		}
 	}
 }
