@@ -1,0 +1,26 @@
+html.us-store {
+	.range-abtest--simple {
+
+		.playground--original {
+			display: none;
+		}
+
+		@include media-breakpoint-up(lg) {
+			.playground--simple__square{
+				position: relative;
+
+				&:before {
+					content: "";
+					padding-top: 100%;
+					display: block;
+				}
+
+			}
+		}
+
+	}
+
+	.range-abtest--split {
+
+	}
+}
