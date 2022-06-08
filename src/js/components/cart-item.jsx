@@ -14,6 +14,9 @@ import {
 
 import SvgTrash from '~svg/trash.svg';
 import SvgRecurring from '~svg/recurring.svg';
+import SvgChevronDown from '~svg/chevron-down.svg';
+
+import VariantQuantity from '~mod/variant-quantity.json';
 
 export default class CartItem extends React.Component {
 	constructor(props) {
@@ -21,21 +24,20 @@ export default class CartItem extends React.Component {
 		this.state = {
 			editingVariant: false,
 			inventory: snCart.getItem(this.props.item.id),
+			isAccordionOpen: false,
 		};
-
-		if (props.item.models && props.item.models.variantOptions) {
-			this.state.variantOptions = props.item.models.variantOptions;
-			this.state.selectedVariant = this.state.variantOptions.find((opt) => opt.id === props.item.id);
-		}
 	}
 
 	onSelectVariant(variant, swatchIndex) {
+		const itemProps = this.props.item;
+		const lastStock = VariantQuantity.filter((item) => item.id === variant.id && itemProps.quantity > item.quantity);
+
 		if (variant.available) {
 			this.setState({
 				editingVariant: variant.id !== this.props.item.id ? swatchIndex : false,
 			}, () => {
 				if (this.state.editingVariant !== false) {
-					this.props.onChangeVariant(this.props.item, variant.id);
+					this.props.onChangeVariant(this.props.item, variant.id, lastStock);
 				}
 			});
 		}
@@ -52,13 +54,20 @@ export default class CartItem extends React.Component {
 		});
 	}
 
+	onAccordionOpen = () => {
+		this.setState((prevState) => ({
+			isAccordionOpen: !prevState.isAccordionOpen,
+		}));
+	}
+
 	render() {
 		const { item } = this.props;
-		const { editingVariant } = this.state;
+		const { editingVariant, isAccordionOpen } = this.state;
 		const { models } = item;
 		const { swatches, variants, selectedSwatch } = models;
 		const showSwatches = variants && variants.length > 1 && !models.isFree;
 		const isMultiOptions = models.swatches.length > 1;
+		const showAccordion = item.handle === 'glow-essentials-bundle';
 
 		return (
 			<li className="cart-item">
@@ -89,53 +98,70 @@ export default class CartItem extends React.Component {
 									</span>
 								)}
 							</p>
-							{!models.isFree && (<button className="cart-item__remove btn-unstyled d-flex" type="button" aria-label="Remove" onClick={this.onRemoveItem} data-cy="cart-remove-icon"><SvgTrash className="svg" /></button>)}
+							{!models.isFree && (<button className="cart-item__remove btn-unstyled d-flex text-body" type="button" aria-label="Remove" onClick={this.onRemoveItem} data-cy="cart-remove-icon"><SvgTrash className="svg" /></button>)}
 						</div>
 
-						{swatches.map((opt, index) => {
-							const selected = selectedSwatch[index];
-
-							return (
-								<div key={opt.id} className={`mb-1 ${isMultiOptions && index === 0 ? 'border-bottom' : ''}`}>
-
-									{isMultiOptions && (
-										<p className="font-size-sm mb-1">1x Bronzing Face Drops 30ml</p>
-									)}
-
-									<p className="d-flex mb-1 align-items-center">
-
-										{!showSwatches && (
-											<i className={`d-block variant-swatch ${kebabCase(selected)}`} />
-										)}
-										{showSwatches && opt.values.map((val) => {
-											const o = [...selectedSwatch];
-											o[index] = val;
-											const variant = variants.find((v) => v.option.join() === o.join());
-											return (
-												<button
-													key={`${opt.id}-${kebabCase(val)}`}
-													className={`variant-swatch pr-0 mr-1 ${kebabCase(val)} ${selected === val && 'border-primary'} ${!variant.available ? 'oos' : ''}`}
-													type="button"
-													tabIndex="-1"
-													disabled={!variant.available || editingVariant !== false}
-													aria-label={kebabCase(val)}
-													onClick={() => this.onSelectVariant(variant, index)}
-												/>
-											);
-										})}
-
-										{editingVariant === index && (
-											<span className="spinner-border spinner-border-sm text-primary ml-1" role="status" />
-										)}
-
-										<span className={editingVariant === index ? 'd-none' : 'font-size-sm'}>
-											{` - ${selected.replace(': limited edition!', '')} ${opt.name}`}
-										</span>
-									</p>
+						<ConditionWrapper
+							condition={showAccordion}
+							wrapper={(children) => (
+								<div className="pb-1">
+									<a onClick={this.onAccordionOpen} className="d-inline-block text-primary text-underline card-header p-0 border-bottom-0 position-relative collapsed pr-2 mb-1" data-toggle="collapse" href={`#cart-drawer__shade-${item.id}`} role="button" aria-expanded="false" aria-controls={`#cart-drawer__shade-${item.id}`}>
+										{isAccordionOpen ? 'Hide details' : 'Show details'}
+										<SvgChevronDown className="svg chevron-down ml-1" width="12" height="12" />
+									</a>
+									<div className="collapse text-body" id={`cart-drawer__shade-${item.id}`}>
+										{children}
+									</div>
 								</div>
+							)}
+						>
 
-							);
-						})}
+							{swatches.map((opt, index) => {
+								const selected = selectedSwatch[index];
+
+								return (
+									<div key={opt.id} className={`mb-1 ${isMultiOptions && index === 0 ? 'border-bottom' : ''}`}>
+
+										{isMultiOptions && (
+											<p className="font-size-sm mb-1">1x Bronzing Face Drops 30ml</p>
+										)}
+
+										<p className="d-flex mb-1 align-items-center">
+
+											{!showSwatches && (
+												<i className={`d-block variant-swatch ${kebabCase(selected)}`} />
+											)}
+											{showSwatches && opt.values.map((val) => {
+												const o = [...selectedSwatch];
+												o[index] = val;
+												const variant = variants.find((v) => v.option.join() === o.join());
+												return (
+													<button
+														key={`${opt.id}-${kebabCase(val)}`}
+														className={`variant-swatch pr-0 mr-1 ${kebabCase(val)} ${selected === val && 'border-primary'} ${!variant.available ? 'oos' : ''}`}
+														type="button"
+														tabIndex="-1"
+														disabled={!variant.available || editingVariant !== false}
+														aria-label={kebabCase(val)}
+														onClick={() => this.onSelectVariant(variant, index)}
+													/>
+												);
+											})}
+
+											{editingVariant === index && (
+												<span className="spinner-border spinner-border-sm text-primary ml-1" role="status" />
+											)}
+
+											<span className={editingVariant === index ? 'd-none' : 'font-size-sm'}>
+												{` - ${selected.replace(': limited edition!', '')} ${opt.name}`}
+											</span>
+										</p>
+									</div>
+
+								);
+							})}
+
+						</ConditionWrapper>
 
 						{models.properties && Object.keys(models.properties).map((key) => (<p key={key} className="mb-1">{`${key}: ${item.properties[key]}`}</p>))}
 

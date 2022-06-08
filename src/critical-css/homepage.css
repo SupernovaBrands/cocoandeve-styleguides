@@ -51,6 +51,7 @@ input[type=checkbox]{box-sizing:border-box;padding:0}
 .btn-outline-dark{color:#343a40;border-color:#343a40}
 .btn-lg{padding:.8125em 3.375em;font-size:1em;line-height:1.25;border-radius:.5rem}
 .btn-block{display:block;width:100%}
+.btn-block+.btn-block{margin-top:.5rem}
 .fade:not(.show){opacity:0}
 .collapse:not(.show){display:none}
 .input-group{position:relative;display:flex;flex-wrap:wrap;align-items:stretch;width:100%}

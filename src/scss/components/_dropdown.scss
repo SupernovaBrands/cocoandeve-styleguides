@@ -5,3 +5,79 @@
     background-color: $primary;
   }
 }
+
+.dropdown {
+	&--onhover {
+		&:hover {
+			.svg {
+				transform: rotate(180deg) translateX(0%);
+			}
+
+			.dropdown-menu {
+				transition: height .5s ease;
+				height: 16.5em;
+				visibility: visible;
+				margin-top: -0.5em;
+				z-index: $zindex-fixed; //above blog sticky sidebar
+			}
+
+      
+		}
+	}
+
+	&--account {
+		.dropdown-toggle:after {
+			content: none;
+		}
+
+		.dropdown-menu {
+			border-color: transparent !important;
+			position: fixed;
+			width: 100%;
+			top: calc-em(96);
+			z-index: $zindex-fixed;
+
+      .scrolled-up & {
+        top: calc-em(51);
+      }
+
+      .scrolled-down & {
+        top: calc-em(145);
+      }
+
+			&:not(.dropdown-menu__logged-in) {
+				@include media-breakpoint-up(lg) {
+					width: calc-em(330);
+          top: calc-em(50);
+				}
+			}
+
+			@include media-breakpoint-down(lg) {
+				.cookies-banner-show & {
+					top: calc-em(210);
+				}
+
+        .cookies-banner-show .scrolled-up & {
+          top: calc-em(170);
+        }
+
+        .cookies-banner-show .scrolled-down & {
+          top: calc-em(260);
+        }
+			
+				.cookies-banner-show--expanded & {
+					top: calc-em(410);
+				}
+			}
+		}
+
+		.collapsing {
+			transition: none;
+		}
+
+		label.error {
+			color: $primary;
+			font-size: $font-size-xs;
+		}
+	}
+}

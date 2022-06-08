@@ -1,0 +1,45 @@
+$bg-dt-width: 288;
+$bg-dt-height: 241;
+$bg-mb-width: 109;
+$bg-mb-height: 50;
+
+.banner-services {
+    &::after {
+        display: none;
+    }
+
+    &::before,
+    &::after {
+        content: " ";
+        background-image: url(asset-url('palm-leaf.svg'));
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: -#{map-get($spacers, g)};
+        width: calc-em($bg-mb-width);
+        height: calc-em($bg-mb-height);
+        left: calc(50% - #{calc-em($bg-mb-width)} / 2); 
+    }
+    
+    @include media-breakpoint-up(lg) {
+        &::before {
+            left: -#{calc-em($bg-dt-width/2)};
+            top: calc(50% - #{calc-em($bg-dt-height)} / 2)
+        }
+        
+        &::after {
+            display: block;
+            left: unset;
+            right: -#{calc-em($bg-dt-width/2.5)};
+            transform: rotate(160deg);
+            top: calc(50% - #{calc-em($bg-dt-height)} / 2);
+        }
+
+        &::before,
+        &::after {
+            width: calc-em($bg-dt-width);
+            height: calc-em($bg-dt-height);
+        }
+    } 
+}

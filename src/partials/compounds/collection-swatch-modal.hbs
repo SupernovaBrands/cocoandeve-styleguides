@@ -1,13 +1,48 @@
-<div class="modal-content rounded-0 flex-row">
-	<img src="https://via.placeholder.com/370x470" alt="Slide 0" class="w-auto">
-	<div class="position-relative flex-grow-1">
-		<form action="" class="product-form">
-			<div class="pl-3 pr-g">
-				<h3 class="my-2">Bronzing Face Drops</h3>
-				<p class="font-weight-bold mb-2">Select shades:</p>
+<div class="modal-content rounded-0 flex-lg-row">
+	<h3 class="p-g d-lg-none m-0">Bronzing Face Drops</h3>
+	<noscript class="loading-lazy">
+		<picture class="embed-responsive bg-shimmer collection-swatch__img">
+			<img class="embed-responsive-item fit--cover" alt="/" 
+				src="https://cdn.shopify.com/s/files/1/0286/1327/9779/products/DewyGlowBundle-SHWhip_828x.jpg?v=1644810274"
+				loading="lazy" />
+		</picture>
+	</noscript>
+
+	<div class="position-relative container">
+		<form action="" class="product-form flex-column h-100 row">
+			<div class="pl-2 pr-g pt-g pt-lg-0">
+				<h3 class="my-2 d-none d-lg-block">Bronzing Face Drops</h3>
+				<p class="font-weight-bold mb-2 d-none d-lg-block w-100">Select shades:</p>
 				<figure class="media mb-2">
-					<img class="mr-2" src="https://via.placeholder.com/70x90" alt="Generic placeholder image">
-					<div class="media-body">
+					<picture class="col-3 pl-0">
+						<img class="mr-2 w-100" src="https://via.placeholder.com/70x90" alt="{{ product.title }}" loading="lazy">
+					</picture>
+					<div class="media-body col-9 pl-0">
+						<p class="font-weight-bold mt-0 mb-1">Bronzing Face Drops</p>
+						<div class="product-swatch mb-0">
+							<button type="button" class="variant-swatch medium mr-1 border-primary" data-value="foam-medium"
+								data-id="32068891541539"></button>
+							<button type="button" class="variant-swatch oos waitlist dark mr-1" data-value="foam-dark"
+								data-id="32068891607075"></button>
+							<button type="button" class="variant-swatch ultra-dark" data-value="foam-ultra-dark"
+								data-id="32068891639843"></button>
+							<p class="font-size-sm w-100 mt-1 mb-0 swatch-label-foam-medium"><b>Medium</b> - Subtle
+								glow, lighter
+								skin tones</p>
+							<p class="font-size-sm w-100 mt-1 mb-0 swatch-label-foam-dark d-none"><b>Dark</b> -
+								Subtle glow,
+								lighter skin tones</p>
+							<p class="font-size-sm w-100 mt-1 mb-0 swatch-label-foam-ultra-dark d-none"><b>Ultra
+									Dark</b> -
+								Subtle glow, lighter skin tones</p>
+						</div>
+					</div>
+				</figure>
+				<figure class="media mb-2">
+					<picture class="col-3 pl-0">
+						<img class="mr-2 w-100" src="https://via.placeholder.com/70x90" alt="{{ product.title }}" loading="lazy">
+					</picture>
+					<div class="media-body col-9 pl-0">
 						<p class="font-weight-bold mt-0 mb-1">Bronzing Face Drops</p>
 						<div class="product-swatch mb-0">
 							<button type="button" class="variant-swatch medium mr-1 border-primary" data-value="foam-medium"
@@ -29,16 +64,16 @@
 					</div>
 				</figure>
 			</div>
-			<div class="collection-swatch__price position-absolute px-g pb-2 pt-g">
+			<div class="collection-swatch__price px-g pb-2 pt-g">
 				<div class="d-flex justify-content-between">
 					<span class="h4">Price</span>
 					<span class="h4">$99.90</span>
 				</div>
 				<button type="button" class="btn btn-primary btn-lg btn-block">Add To Cart</button>
 			</div>
-			<img data-dismiss="modal" aria-label="Close" class="svg position-absolute collection-swatch__close"
-				src="icons/close.svg" replace-to-svg />
 		</form>
 		{{> components/product-waitlist-oos class="collection-swatch__waitlist order-lg-2 d-none position-absolute pb-2 px-g pt-g" showtext=true}}
 	</div>
+	<img data-dismiss="modal" aria-label="Close" class="svg position-absolute collection-swatch__close"
+				src="icons/close.svg" replace-to-svg />
 </div>

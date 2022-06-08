@@ -534,7 +534,7 @@ if ($('.carousel--sfw').length > 0 || $('.product-card-abtest').length > 0) {
 }
 
 if ($('.btn-choose__swatch').length > 0) {
-	import(/* webpackChunkName: 'collection-swatch-abtest' */ '~mod/collection-swatch');
+	import(/* webpackChunkName: 'collection-swatch' */ '~mod/collection-swatch');
 }
 
 if ($('.announcement-bar__timer').length > 0) {

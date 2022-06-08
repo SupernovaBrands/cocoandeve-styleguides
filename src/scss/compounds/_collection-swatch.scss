@@ -22,11 +22,16 @@
 
 	&__price {
 		box-shadow: 0 -0.25em 0.3125em 0 rgba(0, 0, 0, .04);
+		width: 100%;
+		margin-top: auto;
 	}
 
 	&__price,
 	&__waitlist {
 		min-height: calc-em(120);
+		bottom: 0;
+		left: 0;
+		right: 0;
 	}
 
 	.fixed-bottom {
@@ -45,6 +50,12 @@
 		}
 	}
 
+	&__img {
+		width: 100%;
+		&::before {
+			padding-top: calc-em(220);
+		}
+	}
 	@include media-breakpoint-up(lg) {
 		&__modal .modal-lg {
 			max-width: calc-em(770);
@@ -52,15 +63,16 @@
 
 		&__modal-subscription {
 			.modal-content {
-				min-height: calc-em(574);
+				min-height: calc-em(564);
 			}
 		}
 
-		&__price,
-		&__waitlist {
-			bottom: 0;
-			left: 0;
-			right: 0;
+		&__img {
+			width: calc-em(370);
+			min-width: calc-em(370);
+			&::before {
+				padding-top: calc-em(470);
+			}
 		}
 	}
 }

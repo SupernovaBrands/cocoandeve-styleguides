@@ -27,6 +27,28 @@
 		box-shadow: none;
 	}
 
+	&--search-result {
+		> a {
+			@include media-breakpoint-up(lg) {
+				flex: none;
+				max-width: none;
+			}
+		}
+
+		picture {
+			flex-basis: 20%;
+		}
+
+		img {
+			max-height: calc-em(85, 16);
+			object-fit: cover;
+
+			@include media-breakpoint-up(lg) {
+				max-height: none;
+			}
+		}
+	}
+
 	.badge {
 		z-index: $zindex-dropdown;
 		top: calc-em(5, 12);
@@ -35,6 +57,22 @@
 		@include media-breakpoint-up(lg) {
 			top: calc-em(10, 12);
 			left: calc-em(25, 12);
+		}
+	}
+
+	&--quiz {
+		@include media-breakpoint-down(lg) {
+			max-height: calc-em(150);
+		}
+
+		&__title {
+			max-width: calc-em(180);
+		}
+
+		.embed-responsive {
+			@include media-breakpoint-up(lg) {
+				border-radius: $border-radius-lg;
+			}
 		}
 	}
 }
