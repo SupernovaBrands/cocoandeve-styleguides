@@ -1,5 +1,7 @@
 .dropdown-item {
 
+	background-color: $white;
+
   &:hover {
     color: $white;
     background-color: $primary;
@@ -21,7 +23,7 @@
 				z-index: $zindex-fixed; //above blog sticky sidebar
 			}
 
-      
+
 		}
 	}
 
@@ -64,7 +66,7 @@
         .cookies-banner-show .scrolled-down & {
           top: calc-em(260);
         }
-			
+
 				.cookies-banner-show--expanded & {
 					top: calc-em(410);
 				}
