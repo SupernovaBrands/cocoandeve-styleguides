@@ -6,7 +6,7 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ master ]
+    branches: [ 2g5mwvw-update-styleguide ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -29,7 +29,7 @@ jobs:
           COMMIT_EMAIL: lusia.purnama@supernovabrands.com
           COMMIT_NAME: Lusia Kristiana Purnama
           ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BASE_BRANCH: master
+          BASE_BRANCH: 2g5mwvw-update-styleguide
           DEPLOY_BRANCH: gh-pages
           BUILD_SCRIPT: npm install && npm run build
           FOLDER: dist
