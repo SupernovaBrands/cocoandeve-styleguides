@@ -7,6 +7,7 @@ import {
 	kebabCase,
 	decodeHtml,
 	updateItemInArray,
+	objectToQueryString,
 } from '~mod/utils';
 
 import ReviewStar from '~comp/review-star';
@@ -24,8 +25,10 @@ import SvgThumbsUp from '~svg/thumbs-up.svg';
 import SvgThumbsDown from '~svg/thumbs-down.svg';
 import SvgChevronPrev from '~svg/chevron-prev.svg';
 import SvgChevronNext from '~svg/chevron-next.svg';
+import SvgTranslate from '~svg/translate.svg';
 
 const { yotpoKey } = tSettings;
+const localeParam = 'en';
 
 const getCustomQuestions = (productId, callback) => {
 	$.post('https://staticw2.yotpo.com/batch/',
@@ -69,6 +72,8 @@ const formatDate = (serverDate) => {
 };
 
 const YotpoReviewWidget = (props) => {
+	const apiUrl = 'https://supernova-reviews.herokuapp.com/api';
+
 	const {
 		productId,
 		productName,
@@ -76,6 +81,7 @@ const YotpoReviewWidget = (props) => {
 		productImage,
 		productDesc,
 		canCreate,
+		productSkus,
 	} = props;
 
 	const [init, setInit] = useState(false);
@@ -84,6 +90,7 @@ const YotpoReviewWidget = (props) => {
 	const [totalQa, setTotalQa] = useState(0);
 
 	const [customQs, setCustomQs] = useState([]);
+	const [customFilter, setCustomFilter] = useState([]);
 
 	const [reviews, setReviews] = useState([]);
 	const [revLoading, setRevLoading] = useState(false);
@@ -156,14 +163,14 @@ const YotpoReviewWidget = (props) => {
 
 	const getReviews = (page = 1) => {
 		setRevLoading(true);
-		$.get(`https://api-cdn.yotpo.com/v1/widget/${yotpoKey}/products/${productId}/reviews.json`, { page }, function (data) {
+		$.get(`${apiUrl}/reviews.json?sku=${productSkus}`, { page, lang: localeParam }, function (data) {
 			processReviews(data.response);
 		});
 	};
 
 	const getQuestions = (page = 1) => {
 		setQnaLoading(true);
-		$.get(`https://api-cdn.yotpo.com/products/${yotpoKey}/${productId}/questions.json`, { page }, function (data) {
+		$.get(`${apiUrl}/questions.json?sku=${productSkus}`, { page, lang: localeParam }, function (data) {
 			setQuestions(data.response.questions);
 
 			const pagination = processPagination({
@@ -178,18 +185,29 @@ const YotpoReviewWidget = (props) => {
 	};
 
 	const getTopics = () => {
-		$.post(`https://api-cdn.yotpo.com/v1/topic/${yotpoKey}/topics.json`, { domain_key: productId }, function (data) {
-			setTopics(data.response.top_topics.top_mention_topics.slice(0, 24));
+		$.get(`${apiUrl}/product/custom_fields.json`, { sku: productSkus, lang: localeParam }, function (data) {
+			setTopics(data.response.topics.slice(0, 24));
+			setCustomFilter(data.response.custom_fields);
 		});
 	};
 
 	const doFilter = (page = 1) => {
 		setRevLoading(true);
+		const dataJson = {
+			page,
+			sku: productSkus,
+			...selectedFilter,
+			topic_names: selectedTopic !== '' ? [selectedTopic] : [],
+			lang: localeParam,
+		};
+
+		const params = objectToQueryString(dataJson);
+
 		$.ajax({
 			crossDomain: true,
 			contentType: 'application/json',
-			url: `https://api-cdn.yotpo.com/v1/reviews/${yotpoKey}/filter.json`,
-			method: 'POST',
+			url: `${apiUrl}/reviews.json?${params}`,
+			method: 'GET',
 			headers: {
 				'content-type': 'application/json',
 				'cache-control': 'no-cache',
@@ -220,11 +238,11 @@ const YotpoReviewWidget = (props) => {
 		if (pictured) filter.pictured = pictured;
 
 		const crfs = [];
-		customQs.forEach((q) => {
+		customFilter.forEach((q) => {
 			const selected = form.querySelector(`select[name='${q.slug}']`).value;
 			if (selected !== '') {
 				crfs.push({
-					question_id: q.slug.replace('--', ''),
+					custom_field_id: q.id,
 					answers: [selected],
 				});
 			}
@@ -279,24 +297,52 @@ const YotpoReviewWidget = (props) => {
 	};
 
 	const onVote = (type, id, vote = 'up') => {
+		const target = type === 'reviews' ? reviews.find((rev) => rev.id === id) : questions.find((question) => question.id === id);
+
 		if (['reviews', 'answers'].indexOf(type) !== -1) {
 			const key = `${type}-${id}`;
 			const prevVote = votes[key];
+			const pathVote = type === 'reviews' ? `/reviews/${id}/votes` : `/questions/${id}/answer/votes`;
+
 			if (!prevVote) {
-				$.post(`https://api-cdn.yotpo.com/${type}/${id}/vote/${vote}`);
+				if (vote === 'up' && target) {
+					target.votes_up += 1;
+				} else if (vote === 'down' && target && target.votes_down > 0) {
+					target.votes_down -= 1;
+				}
+
+				$.post(`${apiUrl}${pathVote}?vote_type=${vote}`);
 				setVotes({
 					...votes,
 					[key]: vote,
 				});
 			} else if (prevVote === vote) {
-				$.post(`https://api-cdn.yotpo.com/${type}/${id}/vote/${vote}/true`);
+				if (vote === 'up' && target && target.votes_up > 0) {
+					target.votes_up -= 1;
+				} else if (vote === 'down' && target && target.votes_down > 0) {
+					target.votes_down -= 1;
+				}
+
+				$.post(`${apiUrl}${pathVote}?vote_type=${vote}&reduce=true`);
 				setVotes({
 					...votes,
 					[key]: null,
 				});
 			} else {
-				$.post(`https://api-cdn.yotpo.com/${type}/${id}/vote/${prevVote}/true`);
-				$.post(`https://api-cdn.yotpo.com/${type}/${id}/vote/${vote}`);
+				if (prevVote === 'up' && target && target.votes_up > 0) {
+					target.votes_up -= 1;
+				} else if (prevVote === 'down' && target && target.votes_down > 0) {
+					target.votes_down -= 1;
+				}
+
+				if (vote === 'up' && target) {
+					target.votes_up += 1;
+				} else if (vote === 'down' && target) {
+					target.votes_down += 1;
+				}
+
+				$.post(`${apiUrl}${pathVote}?vote_type=${prevVote}&reduce=true`);
+				$.post(`${apiUrl}${pathVote}?vote_type=${vote}`);
 				setVotes({
 					...votes,
 					[key]: vote,
@@ -344,6 +390,8 @@ const YotpoReviewWidget = (props) => {
 		onRevPageChange(1);
 	}, [selectedFilter, selectedTopic]);
 
+	const translateText = () => ['Revue traduite', 'Translate review', 'übersetzen'][Math.floor(Math.random() * 3)];
+
 	return !init ? (
 		<div className="d-flex justify-content-center mt-4">
 			<div className="spinner-border" role="status" aria-hidden="true" />
@@ -351,7 +399,7 @@ const YotpoReviewWidget = (props) => {
 	) : (
 		<>
 			<div className="d-flex align-items-center justify-content-lg-center">
-				<span className="yotpo-widget__score mr-25">{score.toFixed(1)}</span>
+				<span className="yotpo-widget__score mr-25">{score ? score.toFixed(1) : 0}</span>
 				<div className="d-lg-flex ml-lg-1">
 					<ReviewStar score={score} />
 					<span className="d-block yotpo-widget__total mt-lg-0 ml-lg-1">{`${total} ${tStrings.yotpo.reviews}, ${totalQa} ${tStrings.yotpo.qnas}`}</span>
@@ -496,7 +544,7 @@ const YotpoReviewWidget = (props) => {
 						<div className="input-group row mt-1">
 							<div className="col-6 col-lg-3">
 								<select className="custom-select my-1" name="scores" onChange={() => { onFilterChange(); }}>
-									<option value="" selected>{tStrings.yotpo.rating}</option>
+									<option value="">{tStrings.yotpo.rating}</option>
 									<option value="5">5 Stars</option>
 									<option value="4">4 Stars</option>
 									<option value="3">3 Stars</option>
@@ -506,16 +554,16 @@ const YotpoReviewWidget = (props) => {
 							</div>
 							<div className="col-6 col-lg-3">
 								<select className="custom-select my-1" name="pictured" onChange={() => { onFilterChange(); }}>
-									<option value="" selected>{tStrings.yotpo.imageVideo}</option>
+									<option value="">{tStrings.yotpo.imageVideo}</option>
 									<option value="true">{tStrings.yotpo.withImageVideo}</option>
 								</select>
 							</div>
-							{customQs.map((q) => (
+							{customFilter.map((q) => q.filter !== '' && (
 								<div key={q.slug} className="col-6 col-lg-3">
 									<select className="custom-select my-1" name={q.slug} onChange={() => { onFilterChange(); }}>
-										<option value="" selected>{q.filter}</option>
+										<option value="">{q.filter}</option>
 										{q.options.map((o) => (
-											<option key={o} value={o}>{o}</option>
+											<option key={o} value={o}>{o.replace('/', ' / ')}</option>
 										))}
 									</select>
 								</div>
@@ -563,24 +611,28 @@ const YotpoReviewWidget = (props) => {
 									<div key={review.id} className="border-bottom py-3 row">
 										<div className="col-lg-3">
 											<h4 className="mb-0 d-flex align-items-center">
-												{review.user.display_name}
+												{review.user_name}
 												{review.verified_buyer && <SvgVerified className="svg font-size-xs ml-25 text-secondary" />}
 											</h4>
 											{review.verified_buyer && <p className="font-size-sm mb-0">{tStrings.yotpo.verifiedBuyer}</p>}
 											<p className="font-size-sm mb-1">
 												{formatDate(review.created_at)}
 											</p>
-											{review.custom_fields !== null && Object.values(review.custom_fields).map((field) => (
-												<p key={kebabCase(field.title)} className="font-size-sm mb-0">
+											{review.custom_fields !== null && Object.entries(review.custom_fields).map((field) => (
+												<p key={kebabCase(field[0])} className="font-size-sm mb-0">
 													<strong>
-														{field.title}
+														{field[0]}
 														:
 													</strong>
 													<span className="ml-25">
-														{field.value}
+														{field[1] ? field[1].join(', ') : ''}
 													</span>
 												</p>
 											))}
+											<span className="font-size-sm bg-gray-400 d-inline-flex font-size-sm my-2 py-1 px-2">
+												<SvgTranslate className="svg mr-1" />
+												{ translateText() }
+											</span>
 										</div>
 										<div className="col-lg-9">
 											<div className="d-flex text-secondary mt-1 mt-lg-0">
@@ -605,7 +657,7 @@ const YotpoReviewWidget = (props) => {
 												<div className="d-flex flex-nowrap row w-auto overflow-auto px-g">
 													{review.images_data.map((image, index) => (
 														<button key={image.id} type="button" className="d-inline-block btn-unstyled mx-1 mb-g" data-toggle="modal" data-target="#yotpoImageModal" onClick={() => { setReviewModal(review); }}>
-															<img src={image.thumb_url.replace('https:', '')} alt={`${review.user.display_name} ${index}`} />
+															<img src={image.thumb_url.replace('https:', '')} alt={`${review.user_name} ${index}`} />
 														</button>
 													))}
 												</div>
@@ -672,7 +724,7 @@ const YotpoReviewWidget = (props) => {
 
 					{!qnaLoading && questions.length > 0 && questions.map((question) => (
 						<div key={question.id} className="pt-3 pb-4 border-bottom">
-							<h4 className="mb-0">{question.asker.display_name}</h4>
+							<h4 className="mb-0">{question.user_name}</h4>
 							<p className="font-size-sm mb-0">{tStrings.yotpo.verifiedReviewer}</p>
 							<p className="font-size-sm ml-auto">
 								{formatDate(question.created_at)}
@@ -730,14 +782,14 @@ const YotpoReviewWidget = (props) => {
 							<div className="row align-items-center">
 								<div className="col-lg-6 pr-lg-0">
 									{reviewModal.images_data.length === 1 ? (
-										<img src={reviewModal.images_data[0].original_url.replace('https:', '')} alt="Slide 1" className="d-block w-100" />
+										<img src={reviewModal.images_data[0].image_url.replace('https:', '')} alt="Slide 1" className="d-block w-100" />
 									) : (
 										<>
 											<div id="carouselYotpoImage" className="carousel slide" data-ride="carousel">
 												<div className="carousel-inner">
 													{reviewModal.images_data.map((image, i) => (
 														<div key={image.id} className={`carousel-item ${(i === 0) ? 'active' : ''}`}>
-															<img src={image.original_url.replace('https:', '')} alt={`Slide ${i + 1}`} className="d-block w-100" />
+															<img src={image.image_url.replace('https:', '')} alt={`Slide ${i + 1}`} className="d-block w-100" />
 														</div>
 													))}
 												</div>
@@ -756,7 +808,7 @@ const YotpoReviewWidget = (props) => {
 								<div className="col-lg-6 pl-lg-0 ">
 									<div className="px-3 py-3">
 										<div className="d-flex">
-											<h4 className="mb-0 font-size-sm">{reviewModal.user.display_name}</h4>
+											<h4 className="mb-0 font-size-sm">{reviewModal.user_name}</h4>
 											{reviewModal.verified_buyer && (<span className="ml-1 font-size-sm">{tStrings.yotpo.verifiedBuyer}</span>)}
 											<span className="ml-auto font-size-sm">{formatDate(reviewModal.created_at)}</span>
 										</div>
@@ -793,6 +845,7 @@ YotpoReviewWidget.propTypes = {
 	productUrl: PropTypes.string.isRequired,
 	productImage: PropTypes.string.isRequired,
 	productDesc: PropTypes.string.isRequired,
+	productSkus: PropTypes.string.isRequired,
 	canCreate: PropTypes.bool.isRequired,
 };
 
