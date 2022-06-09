@@ -28,9 +28,8 @@ html.us-store {
 		.playground--simple {
 			display: flex !important;
 
-			&-square {
-
-				@include media-breakpoint-up(md) {
+			@include media-breakpoint-up(md) {
+				&-square {
 					&:before {
 						content: "";
 						display: block;
