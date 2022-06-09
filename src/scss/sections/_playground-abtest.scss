@@ -1,4 +1,24 @@
 html.us-store {
+	.range-abtest--simple,
+	.range-abtest--split {
+		.playground {
+
+			picture {
+				bottom: 0;
+				right: 0;
+			}
+
+			&__subtitle {
+				@include font-size($font-size-sm);
+
+				@include media-breakpoint-up(md) {
+					@include font-size($font-size-base);
+				}
+			}
+
+		}
+	}
+
 	.range-abtest--simple {
 
 		.playground--original {
@@ -9,19 +29,6 @@ html.us-store {
 			display: block !important;
 
 			&-square {
-
-				picture {
-					bottom: 0;
-					right: 0;
-				}
-
-				p {
-					@include font-size($font-size-sm);
-
-					@include media-breakpoint-up(md) {
-						@include font-size($font-size-base);
-					}
-				}
 
 				@include media-breakpoint-up(md) {
 					&:before {
@@ -49,6 +56,35 @@ html.us-store {
 
 		.playground--split {
 			display: block !important;
+
+			.carousel-control-prev,
+			.carousel-control-next {
+				svg {
+					height: 1.25em;
+				}
+			}
+
+			.carousel-control-prev {
+				left: 7.5%;
+
+				@include media-breakpoint-up(md) {
+					left: 0;
+				}
+			}
+
+			.carousel-control-next {
+				right: 7.5%;
+
+				@include media-breakpoint-up(md) {
+					right: 0;
+				}
+			}
+
+			@include media-breakpoint-up(md) {
+				.carousel--centered .carousel-inner {
+					transform: none;
+				}
+			}
 		}
 	}
 }
