@@ -47,6 +47,7 @@ widgets.forEach((el) => {
 			productImage: el.dataset.imageUrl || '',
 			productDesc: el.dataset.description || '',
 			canCreate: el.dataset.canCreate === 'true',
+			productSkus: el.dataset.sku,
 		}, null),
 		el,
 	);

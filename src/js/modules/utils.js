@@ -16,6 +16,21 @@ export const waitFor = (condition, cb) => {
 	}
 };
 
+export const objectToQueryString = (obj, prefix) => {
+	const str = []; let
+		p;
+	// eslint-disable-next-line no-restricted-syntax
+	for (p in obj) {
+		// eslint-disable-next-line no-prototype-builtins
+		if (obj.hasOwnProperty(p)) {
+			const k = prefix ? `${prefix}[${p}]` : p;
+			const v = obj[p];
+			str.push((v !== null && typeof v === 'object') ? objectToQueryString(v, k) : `${encodeURIComponent(k)}=${encodeURIComponent(v)}`);
+		}
+	}
+	return str.join('&');
+};
+
 export const kebabCase = (text) => (typeof text === 'string' ? text.match(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)
 	.map((x) => x.toLowerCase())
 	.join('-') : '');
