@@ -9,6 +9,10 @@ html.uk-store {
                 margin-bottom: 0;
                 align-self: center;
                 font-size: calc-em(32);
+
+                @include media-breakpoint-down(md) {
+                    display: none;
+                }
             }
         }
 
@@ -18,6 +22,18 @@ html.uk-store {
             &__content {
                 top: 0;
                 bottom: 0;
+            }
+        }
+
+        .collection-grid {
+            @include media-breakpoint-down(md) {
+                select {
+                    margin-bottom: 0 !important;
+                }
+
+                hr {
+                    display: none !important;
+                }
             }
         }
 
