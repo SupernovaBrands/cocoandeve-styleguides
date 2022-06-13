@@ -9,6 +9,10 @@ html.uk-store {
                 margin-bottom: 0;
                 align-self: center;
                 font-size: calc-em(32);
+
+                @include media-breakpoint-down(md) {
+                    display: none;
+                }
             }
         }
 
@@ -21,13 +25,29 @@ html.uk-store {
             }
         }
 
+        .collection-grid {
+            @include media-breakpoint-down(md) {
+                select {
+                    margin-bottom: 0 !important;
+                }
+
+                hr {
+                    display: none !important;
+                }
+            }
+        }
+
         .collection-sidebar:not(.collection-sidebar-variant) {
             display: none;
         }
 
+        .collection-sidebar-label {
+            margin-top: calc-em(30);
+            display: block !important;
+        }
+
         .collection-sidebar {
             background-color: transparent;
-            margin-top: calc-em(60);
         }
 
         .collection-sidebar-variant {
