@@ -41,9 +41,13 @@ html.uk-store {
             display: none;
         }
 
+        .collection-sidebar-label {
+            margin-top: calc-em(30);
+            display: block !important;
+        }
+
         .collection-sidebar {
             background-color: transparent;
-            margin-top: calc-em(60);
         }
 
         .collection-sidebar-variant {
