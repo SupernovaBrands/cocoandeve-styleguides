@@ -37,7 +37,8 @@ html.uk-store {
             }
         }
 
-        .collection-sidebar:not(.collection-sidebar-variant) {
+        .collection-sidebar:not(.collection-sidebar-variant),
+        .collection-selection-mobile:not(.collection-selection-variant) {
             display: none;
         }
 
@@ -53,6 +54,10 @@ html.uk-store {
         .collection-sidebar-variant {
             display: block !important;
             border: 1px solid $body-color;
+        }
+
+        .collection-selection-variant {
+            display: block !important;
         }
 
         .collection-grid__tags {
