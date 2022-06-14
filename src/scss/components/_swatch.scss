@@ -1,7 +1,7 @@
 .variant-swatch {
 	flex-shrink: 0;
-	width: calc-em(30);
-	height: calc-em(30);
+	width: calc-em(40);
+	height: calc-em(40);
 	border-radius: 50%;
 	border: 2px solid #fff;
 	background-color: white;
@@ -26,8 +26,8 @@
 	&:before {
 		content: ' ';
 		position: absolute;
-		width: calc-em(20);
-		height: calc-em(20);
+		width: calc-em(30);
+		height: calc-em(30);
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: center;
