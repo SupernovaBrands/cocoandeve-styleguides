@@ -9,5 +9,15 @@ html.uk-store {
                 display: block !important;
             }
         }
+
+        .mobile-nav__menu {
+            &:not(.mega-menu-collection-variant) {
+                display: none;
+            }
+
+            &.mega-menu-collection-variant {
+                display: block !important;
+            }
+        }
     }
 }
