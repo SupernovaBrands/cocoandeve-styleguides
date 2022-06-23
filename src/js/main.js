@@ -566,6 +566,3 @@ if ($('.newsletter-bigger-popup').length > 0) {
 	import(/* webpackChunkName: 'newsletter-popup' */ '~mod/newsletter-popup');
 }
 
-if ($('.product-images-carousel-half-next-slide .product-image-carousel').length > 0) {
-	import(/* webpackChunkName: 'carousel-loop' */ '~mod/product-image-carousel-abtest');
-}
