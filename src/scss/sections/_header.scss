@@ -170,8 +170,14 @@
 	}
 }
 
+.navbar-nav--right {
+	@include media-breakpoint-down(md) {
+		flex-basis: 30%; 
+	}
+}
+
 .navbar-toggler {
-	flex-basis: 20%;
+	flex-basis: 30%; 
 
 	span {
 		width: calc-em(25, 20);
