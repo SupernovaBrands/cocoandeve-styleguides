@@ -1,23 +1,25 @@
 <div class="product-image-carousel__container col-12 col-lg-6 order-lg-2">
-	<figure id="product-image-carousel{{#if num}}{{num}}{{/if}}" class="product-image-carousel carousel slide mb-1 mb-lg-0 no-gutters__in-container" data-ride="carousel" data-interval="false" data-indicator="#product-image-carousel__indicator{{#if num}}{{num}}{{/if}}">
+	<figure id="product-image-carousel{{#if num}}{{num}}{{/if}}" class="product-image-carousel carousel carousel--product-preview slide mb-1 mb-lg-0 no-gutters__in-container" data-ride="carousel" data-interval="false" data-indicator="#product-image-carousel__indicator{{#if num}}{{num}}{{/if}}">
 		<div class="carousel-inner">
 			{{#times totalSlide}}
-			<div class="carousel-item {{#if @first}}active{{/if}}">
-				{{#if @first}}{{else}}<noscript class="loading-lazy">{{/if}}
-				<picture class="embed-responsive embed-responsive-1by1 bg-shimmer {{#if @last}}with-video{{/if}}">
-					<source srcset="https://via.placeholder.com/1140x1260/EFADBA?text=1140x1260+Slide+{{@index}}" media="(min-width: 992px)">
-					<img src="https://via.placeholder.com/750x750/EFADBA?text=750x750+Slide+{{@index}}" alt="Slide {{@index}}" class="w-100 embed-responsive-item fit--cover" {{#if @first}}{{else}}loading="lazy"{{/if}} />
-					{{#if @last}}<img class="svg text-white" src="icons/play.svg" replace-to-svg />{{/if}}
-				</picture>
-				{{#if @first}}{{else}}</noscript>{{/if}}
+			<div class="col-12 px-0 carousel-item {{#if @first}}active{{/if}}">
+				<div class="item-third">
+					<picture class="embed-responsive embed-responsive-1by1 bg-shimmer {{#if @last}}with-video{{/if}}">
+						<source srcset="https://via.placeholder.com/1140x1260/EFADBA?text=1140x1260+Slide+{{@index}}" media="(min-width: 992px)">
+						<img src="https://via.placeholder.com/750x750/EFADBA?text=750x750+Slide+{{@index}}" alt="Slide {{@index}}" class="w-100 embed-responsive-item fit--cover" {{#if @first}}{{else}}loading="lazy"{{/if}} />
+						{{#if @last}}<img class="svg text-white" src="icons/play.svg" replace-to-svg />{{/if}}
+					</picture>
+				</div>
+				<div class="item-third d-lg-none">
+					<picture class="embed-responsive embed-responsive-1by1 bg-shimmer {{#if @last}}with-video{{/if}}">
+						<source srcset="https://via.placeholder.com/1140x1260/EFADBA?text=1140x1260+Slide+{{@index}}" media="(min-width: 992px)">
+						<img src="https://via.placeholder.com/750x750/EFADBA?text=750x750+Slide+{{@index}}" alt="Slide {{@index}}" class="w-100 embed-responsive-item fit--cover" {{#if @first}}{{else}}loading="lazy"{{/if}} />
+						{{#if @last}}<img class="svg text-white" src="icons/play.svg" replace-to-svg />{{/if}}
+					</picture>
+				</div>
 			</div>
 			{{/times}}
 		</div>
-		<ol class="carousel-indicators d-none px-1 mx-auto">
-			<li data-target="#product-image-carousel" data-slide-to="0" class="rounded-circle active"></li>
-			<li data-target="#product-image-carousel" data-slide-to="1" class="rounded-circle"></li>
-			<li data-target="#product-image-carousel" data-slide-to="2" class="rounded-circle"></li>
-		</ol>
 	</figure>
 	<picture class="circle-badge position-absolute rounded-circle bg-primary d-flex p-1 mr-0 mt-2 mr-lg-1 mt-lg-1">
 		<img class="w-100" src="../images/badge-25.svg" />
@@ -28,7 +30,7 @@
 	</div>
 </div>
 
-<div id="product-image-carousel__indicator{{#if num}}{{num}}{{/if}}" class="product-image-carousel__indicator carousel--swipe col-12 col-lg-1 order-lg-1 carousel slide carousel--loop mb-1 mb-lg-0 px-0 px-lg-g" {{#if (gt totalSlide 5)}}data-slide-number="5" data-ride="carousel" data-interval="false"{{/if}}>
+<div id="product-image-carousel__indicator{{#if num}}{{num}}{{/if}}" class="product-image-carousel__indicator d-none d-lg-block carousel--swipe col-12 col-lg-1 order-lg-1 carousel slide carousel--loop mb-1 mb-lg-0 px-0 px-lg-g" {{#if (gt totalSlide 5)}}data-slide-number="5" data-ride="carousel" data-interval="false"{{/if}}>
 	{{#if (gt totalSlide 5)}}
 	<button class="carousel-indicator chevron-up btn-unstyled d-none d-lg-flex mx-auto mb-1 mb-lg-3 text-center align-items-center" href="#product-image-carousel__indicator{{#if num}}{{num}}{{/if}}" data-slide="prev" aria-hidden="true" disabled>
 		<img class="svg text-primary" src="icons/chevron-up.svg" replace-to-svg />
