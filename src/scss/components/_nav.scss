@@ -6,6 +6,10 @@
 		&.active,
 		&:hover {
 			color: $primary;
+
+			path {
+				fill: $primary;
+			}
 		}
 	}
 
@@ -14,6 +18,18 @@
 
 		@include media-breakpoint-up(lg) {
 			margin-right: calc-em(5, 16);
+		}
+	}
+
+	.cart-drawer__count {
+		font-family: Arial, Helvetica, sans-serif;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -7.5%);
+		line-height: 1;
+		@include media-breakpoint-up(lg) {
+			transform: translate(-50%, -12.5%);
 		}
 	}
 
@@ -133,5 +149,12 @@
 			background: none;
 			border-bottom: 2px solid $primary !important;
 		}
+	}
+}
+
+
+.nav-link--caption {
+	svg {
+		height: calc-em(16);
 	}
 }
