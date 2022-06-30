@@ -6,6 +6,10 @@
 		&.active,
 		&:hover {
 			color: $primary;
+
+			path {
+				fill: $primary;
+			}
 		}
 	}
 
@@ -145,5 +149,12 @@
 			background: none;
 			border-bottom: 2px solid $primary !important;
 		}
+	}
+}
+
+
+.nav-link--caption {
+	svg {
+		height: calc-em(16);
 	}
 }
