@@ -17,6 +17,18 @@
 		}
 	}
 
+	.cart-drawer__count {
+		font-family: Arial, Helvetica, sans-serif;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -7.5%);
+		line-height: 1;
+		@include media-breakpoint-up(lg) {
+			transform: translate(-50%, -12.5%);
+		}
+	}
+
 	@include media-breakpoint-down(md) {
 		&.cart {
 			flex-basis: 20%;
