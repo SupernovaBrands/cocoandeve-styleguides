@@ -125,29 +125,12 @@
 			</a>
 
 			{{> compounds/nav-desktop-abtest}}
-			<ul class="navbar-nav navbar-nav--right d-flex justify-content-end flex-row align-items-center navbar__main">
-				<li class="nav-item d-none d-lg-block">
-					<a class="nav-link h4 m-0 text-uppercase font-weight-bold" href="#" data-cy="tracking-order">Track My Order</a>
+			
+			<ul class="navbar-nav navbar-nav--right flex-row justify-content-end  align-items-center">
+				<li class="nav-item d-none d-lg-flex">
+					<span class="nav-link h4 m-0 d-flex font-weight-bold" href="#">Bali Beauty Club<img class="svg ml-1 mr-1" src="icons/small-palm-tree.svg" replace-to-svg /></span>
 				</li>
-				<li id="dropdownMenuForm" class="nav-item dropdown dropdown--account pl-1 mr-1 mr-lg-0">
-					<a class="nav-link h4 m-0 d-flex text-uppercase font-weight-bold" href="#" data-cy="account-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						<img class="svg mr-25" src="icons/account.svg" replace-to-svg /> <span class="d-none d-lg-inline">Account</span>
-					</a>
-					<div class="dropdown-menu dropdown-menu-right border-0 rounded-0 pb-0 mt-sm-6 mt-lg-0 pt-0">
-						{{> components/login-form parent="dropdownMenuForm" id="dropdown__login" targetLink="dropdown__register"}}
-		                {{> components/register-form parent="dropdownMenuForm" id="dropdown__register" targetLink="dropdown__login"}}
-					</div>
-				</li>
-				<li class="nav-item">
-					<a class="d-none d-lg-block nav-link h4 m-0 d-lg-flex text-uppercase font-weight-bold" data-toggle="modal" data-target="#cart-drawer" role="button" data-cy="cart-icon"><img class="svg mr-25" src="icons/cart.svg" replace-to-svg /> Cart (<span class="cart-drawer__count">0</span>)</a>
-					<a class="d-lg-none nav-link cart d-flex justify-content-end px-0 d-lg-none nav-link__cart" data-toggle="modal" data-target="#cart-drawer" role="button">
-						<span class="position-relative">
-							<img class="svg" src="icons/cart.svg" replace-to-svg /><span class="cart-drawer__count font-size-sm"></span>
-						</span>
-					</a>
-				</li>
-			</ul>
-			<ul class="navbar-nav navbar-nav--right d-none flex-row justify-content-end search-feature-component-abtest align-items-center">
+				<span class="separator mr-1 d-none d-lg-flex"></span>
 				<li id="dropdownMenuFormAbtest" class="nav-item dropdown dropdown--account pl-1 mr-1 mr-lg-0">
 					<a class="nav-link h4 m-0 d-flex text-uppercase font-weight-bold" href="#" data-cy="account-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						<img class="svg mr-25" src="icons/account.svg" replace-to-svg />
@@ -261,7 +244,8 @@
 					<li><a href="#">Shop all Kits & Gifts</a></li>
 				</ul>
 			</li>
-			<li><hr class="my-1 mx-0" ></li>
+			<li><hr class="my-1 mx-0" >Bali Beauty Club<img class="svg ml-1 mr-1" src="icons/small-palm-tree.svg" replace-to-svg /></li>
+			<li><a href="#">My Account</a></li>
 			<li><a href="#">My Account</a></li>
 			<li><a href="#">Track My Order</a></li>
 			<li><a href="#">Blog</a></li>
