@@ -61,7 +61,7 @@
 	}
 
 	.blog-post-grid__newsletter--submitted svg {
-		height: 1em;
+		height: calc-em(14);
 
 		@include media-breakpoint-down(md) {
 			margin-left: -1.6em;
