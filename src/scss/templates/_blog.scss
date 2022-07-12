@@ -59,6 +59,14 @@
 	&__sidebar {
 		grid-area: sidebar;
 	}
+
+	.blog-post-grid__newsletter--submitted svg {
+		height: calc-em(14);
+
+		@include media-breakpoint-down(md) {
+			margin-left: -1.6em;
+		}
+	}
 }
 
 .article__content {
