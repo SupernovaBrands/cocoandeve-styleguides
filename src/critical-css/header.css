@@ -188,7 +188,7 @@ input[type=checkbox]{box-sizing:border-box;padding:0}
 .navbar-expand-lg>.container{padding-right:0;padding-left:0}
 .nav-link.cart{flex-basis:20%}
 .nav-link.cart .svg{font-size:1.5625em}
-.nav-link.cart .cart-drawer__count{position:absolute;top:.5em;left:50%;transform:translateX(-50%)}
+.nav-link.cart .cart-drawer__count{position:absolute;top:50%;left:50%;transform:translate(-50%,-7.5%);line-height:1;}
 }
 .navbar-brand{color:#00635b}
 .navbar-brand:before{font-size:1.7em}
