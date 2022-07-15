@@ -43,8 +43,8 @@ export default class CartUpsell extends React.Component {
 									data-widths="[370,270]"
 								/>
 							</picture>
-							<figcaption className="col-7 mx-0 pt-0">
-								<p className="font-weight-bold mb-1"><a className="text-body" href={item.url}>{item.settings.bundle_ad_product_name}</a></p>
+							<figcaption className="col-7 mx-0 pt-0 pl-0 font-size-base">
+								<p className="font-weight-bold mb-25"><a className="text-body" href={item.url}>{item.settings.bundle_ad_product_name}</a></p>
 
 								{item.option1 && (
 									<em className="d-flex align-items-baseline">
@@ -59,15 +59,15 @@ export default class CartUpsell extends React.Component {
 									</em>
 								)}
 
-								<p className="mb-1" dangerouslySetInnerHTML={{ __html: item.settings.bundle_ad_product_desc }} />
+								<p className="mb-25" dangerouslySetInnerHTML={{ __html: item.settings.bundle_ad_product_desc }} />
 
-								<p className="mb-1">
+								<p className="mb-25">
 									{item.comparePrice > 0 && (
 										<span className="text-linethrough">{formatMoney(item.comparePrice)}</span>
 									)}
-									<span className={`text-primary font-weight-bold ${item.comparePrice > 0 ? 'ml-2' : ''}`}>{formatMoney(item.price)}</span>
+									<span className={`text-primary font-weight-bold ${item.comparePrice > 0 ? 'ml-g' : ''}`}>{formatMoney(item.price)}</span>
 								</p>
-								<button className="btn btn-outline-primary col-8 col-lg-7 text-nowrap" onClick={(e) => { this.handleClick(item, e); }} type="button">
+								<button className="btn btn-outline-primary text-nowrap" onClick={(e) => { this.handleClick(item, e); }} type="button">
 									{this.state.isLoading === item.targetId ? <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true" /> : item.settings.bundle_txt_button}
 								</button>
 							</figcaption>
