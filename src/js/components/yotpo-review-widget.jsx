@@ -28,6 +28,7 @@ import SvgThumbsDown from '~svg/thumbs-down.svg';
 import SvgChevronPrev from '~svg/chevron-prev.svg';
 import SvgChevronNext from '~svg/chevron-next.svg';
 import SvgTranslate from '~svg/translate.svg';
+import SvgCloseCircle from '~svg/close-rounded.svg';
 
 const { yotpoKey } = tSettings;
 const localeParam = 'en';
@@ -787,7 +788,7 @@ const YotpoReviewWidget = (props) => {
 					<div className="modal-dialog modal-lg modal-dialog-centered" role="document">
 						<div className="modal-content mx-3 mx-lg-0">
 							<div className="row align-items-center">
-								<div className="col-lg-6 pr-lg-0">
+								<div className="col-lg-6 px-lg-0">
 									{reviewModal.images_data.length === 1 ? (
 										<img src={reviewModal.images_data[0].image_url.replace('https:', '')} alt="Slide 1" className="d-block w-100" />
 									) : (
@@ -801,16 +802,23 @@ const YotpoReviewWidget = (props) => {
 													))}
 												</div>
 											</div>
-											<a className="carousel-control-prev text-secondary d-flex" href="#carouselYotpoImage" role="button" data-slide="prev">
-												<SvgChevronPrev className="svg" />
+											<a className="carousel-control-prev text-primary carousel-control--background" href="#carouselYotpoImage" role="button" data-slide="prev">
+												<span className="carousel-control-prev-icon d-flex justify-content-center align-items-center">
+													<SvgChevronPrev className="svg" />
+												</span>
 												<span className="sr-only">Previous</span>
 											</a>
-											<a className="carousel-control-next text-secondary d-flex" href="#carouselYotpoImage" role="button" data-slide="next">
-												<SvgChevronNext className="svg" />
+											<a className="carousel-control-next text-primary carousel-control--background" href="#carouselYotpoImage" role="button" data-slide="next">
+												<span className="carousel-control-next-icon d-flex justify-content-center align-items-center">
+													<SvgChevronNext className="svg" />
+												</span>
 												<span className="sr-only">Next</span>
 											</a>
 										</>
 									)}
+									<button type="button" className="close position-absolute d-flex d-lg-none mr-25" data-dismiss="modal" aria-label="Close">
+										<SvgCloseCircle className="svg" />
+									</button>
 								</div>
 								<div className="col-lg-6 pl-lg-0 ">
 									<div className="px-3 py-3">
@@ -835,7 +843,7 @@ const YotpoReviewWidget = (props) => {
 									</div>
 								</div>
 							</div>
-							<button type="button" className="close position-absolute d-flex font-size-base" data-dismiss="modal" aria-label="Close">
+							<button type="button" className="close position-absolute font-size-base d-none d-lg-flex" data-dismiss="modal" aria-label="Close">
 								<SvgClose className="svg" />
 							</button>
 						</div>
