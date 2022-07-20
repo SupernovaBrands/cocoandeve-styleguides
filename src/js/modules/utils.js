@@ -1,11 +1,28 @@
 /* global tSettings screenLG */
 
+import CryptoJS from 'crypto-js';
+// eslint-disable-next-line import/no-unresolved,import/extensions
+import secrets from '../config/secret';
+
+export const currentTime = () => new Date().getTime();
+
 export const get = (obj, path, defValue) => {
 	if (!path) return undefined;
 	const pathArray = Array.isArray(path) ? path : path.match(/([^[.\]])+/g);
 	return (
 		pathArray.reduce((prevObj, key) => prevObj && prevObj[key], obj) || defValue
 	);
+};
+
+export const encryptParam = (content) => {
+	const encryptedMessage = {};
+	const code = CryptoJS.AES.encrypt(content, CryptoJS.enc.Utf8.parse(secrets.key), {
+		iv: CryptoJS.enc.Utf8.parse(secrets.vector),
+		mode: CryptoJS.mode.CBC,
+		padding: CryptoJS.pad.Pkcs7,
+	});
+	encryptedMessage.data = code.ciphertext.toString(CryptoJS.enc.Base64);
+	return encryptedMessage.data;
 };
 
 export const waitFor = (condition, cb) => {
