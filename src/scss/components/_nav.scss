@@ -69,7 +69,7 @@
 
 	@include media-breakpoint-up(lg) {
 		.navbar-nav {
-			flex-basis: 15%;
+			flex-basis: auto;
 
 			.nav-link {
 				line-height: calc-em(22, 16);
@@ -77,10 +77,6 @@
 				&:hover {
 					text-decoration: none;
 				}
-			}
-
-			&.navbar__secondary {
-				flex-basis: auto;
 			}
 		}
 
