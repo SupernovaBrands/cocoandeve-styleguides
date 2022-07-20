@@ -8,6 +8,8 @@ import {
 	decodeHtml,
 	updateItemInArray,
 	objectToQueryString,
+	currentTime,
+	encryptParam,
 } from '~mod/utils';
 
 import ReviewStar from '~comp/review-star';
@@ -163,14 +165,16 @@ const YotpoReviewWidget = (props) => {
 
 	const getReviews = (page = 1) => {
 		setRevLoading(true);
-		$.get(`${apiUrl}/reviews.json?sku=${productSkus}`, { page, lang: localeParam }, function (data) {
+		const signature = encryptParam(`{sku:'${productSkus}',time:${currentTime()}}`);
+		$.get(`${apiUrl}/reviews.json?sku=${productSkus}`, { signature, page, lang: localeParam }, function (data) {
 			processReviews(data.response);
 		});
 	};
 
 	const getQuestions = (page = 1) => {
 		setQnaLoading(true);
-		$.get(`${apiUrl}/questions.json?sku=${productSkus}`, { page, lang: localeParam }, function (data) {
+		const signature = encryptParam(`{sku:'${productSkus}',time:${currentTime()}}`);
+		$.get(`${apiUrl}/questions.json?sku=${productSkus}`, { signature, page, lang: localeParam }, function (data) {
 			setQuestions(data.response.questions);
 
 			const pagination = processPagination({
@@ -185,7 +189,8 @@ const YotpoReviewWidget = (props) => {
 	};
 
 	const getTopics = () => {
-		$.get(`${apiUrl}/product/custom_fields.json`, { sku: productSkus, lang: localeParam }, function (data) {
+		const signature = encryptParam(`{sku:'${productSkus}',time:${currentTime()}}`);
+		$.get(`${apiUrl}/product/custom_fields.json`, { signature, sku: productSkus, lang: localeParam }, function (data) {
 			setTopics(data.response.topics.slice(0, 24));
 			setCustomFilter(data.response.custom_fields);
 		});
@@ -193,7 +198,9 @@ const YotpoReviewWidget = (props) => {
 
 	const doFilter = (page = 1) => {
 		setRevLoading(true);
+		const signature = encryptParam(`{sku:'${productSkus}',time:${currentTime()}}`);
 		const dataJson = {
+			signature,
 			page,
 			sku: productSkus,
 			...selectedFilter,
