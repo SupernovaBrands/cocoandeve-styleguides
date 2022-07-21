@@ -23,21 +23,11 @@
 			opacity: 1;
 		}
 
-		.carousel-control {
-			&-next {
-				margin-right: $grid-gutter-width / 2;
-			}
-
-			&-prev {
-				margin-left: $grid-gutter-width / 2;
-			}
-
-			&--background {
-				top: 50%;
-				transform: translateY(-50%);
-				bottom: auto;
-				width: calc-em(40);
-			}
+		.carousel-control--background {
+			top: 50%;
+			transform: translateY(-50%);
+			bottom: auto;
+			width: calc-em(40);
 		}
 	}
 }
