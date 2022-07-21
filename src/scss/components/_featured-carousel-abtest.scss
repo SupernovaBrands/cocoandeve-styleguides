@@ -1,0 +1,48 @@
+html.us-store {
+	.carousel-v1--abtest .product-carousel {
+
+		.carousel-control {
+			&-next-icon,
+			&-prev-icon {
+				background-color: $primary-light-second;
+			}
+		}
+
+		@include media-breakpoint-up(lg) {
+			.tab-content {
+				padding-left: 0 !important;
+				padding-right: 0 !important;
+			}
+
+			.carousel--centered .carousel-inner {
+				transform: none;
+			}
+
+			.floating-out {
+				&-right {
+					right: -($spacer * 0.25);
+				}
+
+				&-left {
+					left: -($spacer * 0.25);
+				}
+			}
+		}
+	}
+
+	@include media-breakpoint-down(md) {
+		.carousel-v2--abtest .product-carousel {
+			.tab-content {
+				padding-left: $grid-gutter-width / 2 !important;
+			}
+
+			.carousel--centered .carousel-inner {
+				transform: none;
+			}
+
+			.carousel-control {
+				display: none !important;
+			}
+		}
+	}
+}
