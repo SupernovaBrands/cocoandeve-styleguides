@@ -8,6 +8,8 @@ import {
 	decodeHtml,
 	updateItemInArray,
 	objectToQueryString,
+	currentTime,
+	encryptParam,
 } from '~mod/utils';
 
 import ReviewStar from '~comp/review-star';
@@ -26,6 +28,7 @@ import SvgThumbsDown from '~svg/thumbs-down.svg';
 import SvgChevronPrev from '~svg/chevron-prev.svg';
 import SvgChevronNext from '~svg/chevron-next.svg';
 import SvgTranslate from '~svg/translate.svg';
+import SvgCloseCircle from '~svg/close-rounded.svg';
 
 const { yotpoKey } = tSettings;
 const localeParam = 'en';
@@ -163,14 +166,16 @@ const YotpoReviewWidget = (props) => {
 
 	const getReviews = (page = 1) => {
 		setRevLoading(true);
-		$.get(`${apiUrl}/reviews.json?sku=${productSkus}`, { page, lang: localeParam }, function (data) {
+		const signature = encryptParam(`{sku:'${productSkus}',time:${currentTime()}}`);
+		$.get(`${apiUrl}/reviews.json?sku=${productSkus}`, { signature, page, lang: localeParam }, function (data) {
 			processReviews(data.response);
 		});
 	};
 
 	const getQuestions = (page = 1) => {
 		setQnaLoading(true);
-		$.get(`${apiUrl}/questions.json?sku=${productSkus}`, { page, lang: localeParam }, function (data) {
+		const signature = encryptParam(`{sku:'${productSkus}',time:${currentTime()}}`);
+		$.get(`${apiUrl}/questions.json?sku=${productSkus}`, { signature, page, lang: localeParam }, function (data) {
 			setQuestions(data.response.questions);
 
 			const pagination = processPagination({
@@ -185,7 +190,8 @@ const YotpoReviewWidget = (props) => {
 	};
 
 	const getTopics = () => {
-		$.get(`${apiUrl}/product/custom_fields.json`, { sku: productSkus, lang: localeParam }, function (data) {
+		const signature = encryptParam(`{sku:'${productSkus}',time:${currentTime()}}`);
+		$.get(`${apiUrl}/product/custom_fields.json`, { signature, sku: productSkus, lang: localeParam }, function (data) {
 			setTopics(data.response.topics.slice(0, 24));
 			setCustomFilter(data.response.custom_fields);
 		});
@@ -193,7 +199,9 @@ const YotpoReviewWidget = (props) => {
 
 	const doFilter = (page = 1) => {
 		setRevLoading(true);
+		const signature = encryptParam(`{sku:'${productSkus}',time:${currentTime()}}`);
 		const dataJson = {
+			signature,
 			page,
 			sku: productSkus,
 			...selectedFilter,
@@ -654,9 +662,9 @@ const YotpoReviewWidget = (props) => {
 												)}
 											</p>
 											{review.images_data && review.images_data.length > 0 && (
-												<div className="d-flex flex-nowrap row w-auto overflow-auto px-g">
+												<div className="d-flex flex-nowrap row w-auto overflow-auto pr-g">
 													{review.images_data.map((image, index) => (
-														<button key={image.id} type="button" className="d-inline-block btn-unstyled mx-1 mb-g" data-toggle="modal" data-target="#yotpoImageModal" onClick={() => { setReviewModal(review); }}>
+														<button key={image.id} type="button" className={`d-inline-block btn-unstyled ${index === 0 ? 'ml-1 ml-lg-g mr-1' : 'mx-1'} mb-g`} data-toggle="modal" data-target="#yotpoImageModal" onClick={() => { setReviewModal(review); }}>
 															<img src={image.thumb_url.replace('https:', '')} alt={`${review.user_name} ${index}`} />
 														</button>
 													))}
@@ -784,7 +792,7 @@ const YotpoReviewWidget = (props) => {
 									{reviewModal.images_data.length === 1 ? (
 										<img src={reviewModal.images_data[0].image_url.replace('https:', '')} alt="Slide 1" className="d-block w-100" />
 									) : (
-										<>
+										<div className="position-relative">
 											<div id="carouselYotpoImage" className="carousel slide" data-ride="carousel">
 												<div className="carousel-inner">
 													{reviewModal.images_data.map((image, i) => (
@@ -794,16 +802,23 @@ const YotpoReviewWidget = (props) => {
 													))}
 												</div>
 											</div>
-											<a className="carousel-control-prev text-secondary d-flex" href="#carouselYotpoImage" role="button" data-slide="prev">
-												<SvgChevronPrev className="svg" />
+											<a className="carousel-control-prev text-primary carousel-control--background" href="#carouselYotpoImage" role="button" data-slide="prev">
+												<span className="carousel-control-prev-icon d-flex justify-content-center align-items-center">
+													<SvgChevronPrev className="svg" />
+												</span>
 												<span className="sr-only">Previous</span>
 											</a>
-											<a className="carousel-control-next text-secondary d-flex" href="#carouselYotpoImage" role="button" data-slide="next">
-												<SvgChevronNext className="svg" />
+											<a className="carousel-control-next text-primary carousel-control--background" href="#carouselYotpoImage" role="button" data-slide="next">
+												<span className="carousel-control-next-icon d-flex justify-content-center align-items-center">
+													<SvgChevronNext className="svg" />
+												</span>
 												<span className="sr-only">Next</span>
 											</a>
-										</>
+										</div>
 									)}
+									<button type="button" className="close position-absolute d-flex d-lg-none mr-25" data-dismiss="modal" aria-label="Close">
+										<SvgCloseCircle className="svg" />
+									</button>
 								</div>
 								<div className="col-lg-6 pl-lg-0 ">
 									<div className="px-3 py-3">
@@ -828,7 +843,7 @@ const YotpoReviewWidget = (props) => {
 									</div>
 								</div>
 							</div>
-							<button type="button" className="close position-absolute d-flex font-size-base" data-dismiss="modal" aria-label="Close">
+							<button type="button" className="close position-absolute font-size-base d-none d-lg-flex" data-dismiss="modal" aria-label="Close">
 								<SvgClose className="svg" />
 							</button>
 						</div>

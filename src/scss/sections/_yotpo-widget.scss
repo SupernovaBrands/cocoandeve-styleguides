@@ -20,6 +20,14 @@
 		.close {
 			top: map-get($spacers, 1);
 			right: map-get($spacers, 1);
+			opacity: 1;
+		}
+
+		.carousel-control--background {
+			top: 50%;
+			transform: translateY(-50%);
+			bottom: auto;
+			width: calc-em(40);
 		}
 	}
 }
