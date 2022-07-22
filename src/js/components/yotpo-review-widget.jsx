@@ -662,9 +662,9 @@ const YotpoReviewWidget = (props) => {
 												)}
 											</p>
 											{review.images_data && review.images_data.length > 0 && (
-												<div className="d-flex flex-nowrap row w-auto overflow-auto px-g">
+												<div className="d-flex flex-nowrap row w-auto overflow-auto pr-g">
 													{review.images_data.map((image, index) => (
-														<button key={image.id} type="button" className="d-inline-block btn-unstyled mx-1 mb-g" data-toggle="modal" data-target="#yotpoImageModal" onClick={() => { setReviewModal(review); }}>
+														<button key={image.id} type="button" className={`d-inline-block btn-unstyled ${index === 0 ? 'ml-1 ml-lg-g mr-1' : 'mx-1'} mb-g`} data-toggle="modal" data-target="#yotpoImageModal" onClick={() => { setReviewModal(review); }}>
 															<img src={image.thumb_url.replace('https:', '')} alt={`${review.user_name} ${index}`} />
 														</button>
 													))}
@@ -788,11 +788,11 @@ const YotpoReviewWidget = (props) => {
 					<div className="modal-dialog modal-lg modal-dialog-centered" role="document">
 						<div className="modal-content mx-3 mx-lg-0">
 							<div className="row align-items-center">
-								<div className="col-lg-6 px-lg-0">
+								<div className="col-lg-6 pr-lg-0">
 									{reviewModal.images_data.length === 1 ? (
 										<img src={reviewModal.images_data[0].image_url.replace('https:', '')} alt="Slide 1" className="d-block w-100" />
 									) : (
-										<>
+										<div className="position-relative">
 											<div id="carouselYotpoImage" className="carousel slide" data-ride="carousel">
 												<div className="carousel-inner">
 													{reviewModal.images_data.map((image, i) => (
@@ -814,7 +814,7 @@ const YotpoReviewWidget = (props) => {
 												</span>
 												<span className="sr-only">Next</span>
 											</a>
-										</>
+										</div>
 									)}
 									<button type="button" className="close position-absolute d-flex d-lg-none mr-25" data-dismiss="modal" aria-label="Close">
 										<SvgCloseCircle className="svg" />
