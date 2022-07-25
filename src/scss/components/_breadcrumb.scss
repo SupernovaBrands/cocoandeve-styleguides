@@ -1,6 +1,7 @@
 .breadcrumb {
 	flex-wrap: nowrap;
 	@include font-size($font-size-base);
+	text-overflow: ellipsis;
 }
 
 .breadcrumb-item {
@@ -9,15 +10,10 @@
 		color: $body-color;
 	}
 
-	&:last-child {
-		overflow: hidden;
-		white-space: nowrap;
-		text-overflow: ellipsis;
-	}
-
 	& + .breadcrumb-item {
 		&::before {
 			content: '/';
+			float: none;
 		}
 	}
 }
