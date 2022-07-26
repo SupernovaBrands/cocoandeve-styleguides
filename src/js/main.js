@@ -567,5 +567,9 @@ if ($('.newsletter-bigger-popup').length > 0) {
 }
 
 if ($('.video-loop').length) {
-	import(/* webpackChunkName: 'newsletter-popup' */ '~mod/video-loop');
+	import(/* webpackChunkName: 'video-loop' */ '~mod/video-loop');
+}
+
+if ($('.video-loop-gif').length) {
+	import(/* webpackChunkName: 'video-loop-gif' */ '~mod/video-loop-gif');
 }
