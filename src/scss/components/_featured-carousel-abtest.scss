@@ -8,6 +8,20 @@ html.us-store {
 			}
 		}
 
+		.carousel--centered .carousel-inner {
+			transform: translate(-75%);
+		}
+
+		.product-card__title {
+			min-height: calc-em(64);
+		}
+
+		@include media-breakpoint-down(md) {
+			.col-carousel {
+				@include make-col(10.5);
+			}
+		}
+
 		@include media-breakpoint-up(lg) {
 			.tab-content {
 				padding-left: 0 !important;
@@ -42,6 +56,10 @@ html.us-store {
 
 			.carousel-control {
 				display: none !important;
+			}
+
+			.product-card__title {
+				min-height: calc-em(64);
 			}
 		}
 	}
