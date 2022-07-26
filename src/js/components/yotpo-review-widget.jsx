@@ -487,10 +487,10 @@ const YotpoReviewWidget = (props) => {
 			)}
 
 			<ul className="product-info-tab nav nav-tabs mt-3" role="tablist">
-				<li className="nav-item text-center flex-grow-0">
+				<li className="nav-item text-center flex-grow-0" role="presentation">
 					<a className="nav-link border-0 text-body text-decoration-none pt-0 pb-1 px-2 active" id="yotpo-widget__reviews-tab" data-toggle="tab" href="#yotpo-widget__reviews" role="tab" aria-selected="true" aria-controls="yotpo-widget__reviews">{tStrings.yotpo.reviews}</a>
 				</li>
-				<li className="nav-item text-center flex-grow-0">
+				<li className="nav-item text-center flex-grow-0" role="presentation">
 					<a className="nav-link border-0 text-body text-decoration-none pt-0 pb-1 px-2" id="yotpo-widget__questions-tab" data-toggle="tab" href="#yotpo-widget__questions" role="tab" aria-selected="false" aria-controls="yotpo-widget__questions">{tStrings.yotpo.questions}</a>
 				</li>
 			</ul>
