@@ -4,10 +4,10 @@ $(document).ready(function () {
 			const video = $(this).parent().find('video').get(0);
 			if (video.paused) {
 				video.play();
-				$(this).removeClass('video-loop__action--pause').addClass('video-loop__action--play');
+				$(this).attr('aria-label', 'Pause');
 			} else {
 				video.pause();
-				$(this).removeClass('video-loop__action--play').addClass('video-loop__action--pause');
+				$(this).attr('aria-label', 'Play');
 			}
 		});
 	});
