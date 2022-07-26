@@ -488,10 +488,10 @@ const YotpoReviewWidget = (props) => {
 
 			<ul className="product-info-tab nav nav-tabs mt-3" role="tablist">
 				<li className="nav-item text-center flex-grow-0">
-					<a className="nav-link border-0 text-body text-decoration-none pt-0 pb-1 px-2 active" id="yotpo-widget__reviews-tab" data-toggle="tab" href="#yotpo-widget__reviews" role="tab" aria-controls="yotpo-widget__reviews" aria-selected="true">{tStrings.yotpo.reviews}</a>
+					<a className="nav-link border-0 text-body text-decoration-none pt-0 pb-1 px-2 active" id="yotpo-widget__reviews-tab" data-toggle="tab" href="#yotpo-widget__reviews" role="tab" aria-selected="true" aria-controls="yotpo-widget__reviews">{tStrings.yotpo.reviews}</a>
 				</li>
 				<li className="nav-item text-center flex-grow-0">
-					<a className="nav-link border-0 text-body text-decoration-none pt-0 pb-1 px-2" id="yotpo-widget__questions-tab" data-toggle="tab" href="#yotpo-widget__questions" role="tab" aria-controls="yotpo-widget__questions" aria-selected="false">{tStrings.yotpo.questions}</a>
+					<a className="nav-link border-0 text-body text-decoration-none pt-0 pb-1 px-2" id="yotpo-widget__questions-tab" data-toggle="tab" href="#yotpo-widget__questions" role="tab" aria-selected="false" aria-controls="yotpo-widget__questions">{tStrings.yotpo.questions}</a>
 				</li>
 			</ul>
 
@@ -616,7 +616,7 @@ const YotpoReviewWidget = (props) => {
 							<p className="font-weight-bold mb-0">{`${total} Review${total !== 1 ? 's' : ''}`}</p>
 							<div className="" role="list">
 								{reviews.map((review) => (
-									<div key={review.id} className="border-bottom py-3 row">
+									<div key={review.id} className="border-bottom py-3 row" role="listitem">
 										<div className="col-lg-3">
 											<h4 className="mb-0 d-flex align-items-center">
 												{review.user_name}
