@@ -1,0 +1,49 @@
+.video-loop{
+	line-height: 0;
+	position: relative; //use class TODO:
+
+	&__action{
+		position: absolute;
+		bottom: 3%;
+		right: 3%;
+		opacity: .6;
+		background-color: black;//use vars
+		border: .2em solid white;//use vars
+		width: 3em;
+		height: 3em;
+
+		&::before,
+		&::after{
+			content: "";
+			position: absolute;
+			background-color: white;//use vars
+		}
+	}
+
+	&__action--pause{  //todo: use svg?
+		&::before{
+			top: 0.65em;
+			left: 0.7em;
+			width: 0.4em;
+			height: 1.2em;
+		}
+		&::after{
+			top: 0.65em;
+			left: 1.4em;
+			width: 0.4em;
+			height: 1.2em;
+		}
+	}
+
+	&__action--play{	
+		&::before{
+			top: 0.50em;
+			left: 1em;
+			width: 0;
+			height: 0;
+			border-top: 0.9em solid black;
+			border-bottom: 0.9em solid black;
+			border-left: 0.9em solid white;
+		}
+	}
+}

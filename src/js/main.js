@@ -565,3 +565,7 @@ if ($('.carousel--scroll__featured').length > 0) {
 if ($('.newsletter-bigger-popup').length > 0) {
 	import(/* webpackChunkName: 'newsletter-popup' */ '~mod/newsletter-popup');
 }
+
+if ($('.video-loop').length) {
+	import(/* webpackChunkName: 'newsletter-popup' */ '~mod/video-loop');
+}
