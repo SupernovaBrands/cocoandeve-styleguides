@@ -3,10 +3,20 @@
 	<a href="#">
 	<noscript class="loading-lazy">
 		<picture class="embed-responsive embed-responsive-1by1 bg-shimmer m-0">
+			{{#if collectiontemplate}}
+			<source srcset="https://via.placeholder.com/540x540" media="(min-width: 992px)" />
+			{{else}}
+			<source srcset="https://via.placeholder.com/520x520" media="(min-width: 992px)" />
+			{{/if}}
 			<img class="embed-responsive-item fit--cover"
 			alt="Image Alt"
 			loading="lazy"
-			src="https://via.placeholder.com/243x243">
+			{{#if collectiontemplate}}
+			src="https://via.placeholder.com/384x384"
+			{{else}}
+			src="https://via.placeholder.com/592x592"
+			{{/if}}
+			>
 		</picture>
 	</noscript>
 	{{#if badge }}
