@@ -11,6 +11,10 @@
     @include media-breakpoint-up(lg) {
       padding-top: 100%;
     }
+
+    &::before {
+      border: 1px solid transparent;
+    }
   }
 }
 
