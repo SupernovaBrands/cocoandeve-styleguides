@@ -1,7 +1,7 @@
 $(document).ready(function () {
 	$('.video-loop').each(() => {
 		$(this).find('.video-loop__action').on('click', function () {
-			const video = $(this).parent().find('video').get(0);
+			const video = $(this).parent().find('video').eq(0)[0];
 			if (video.paused) {
 				video.play();
 				$(this).attr('aria-label', 'Pause');
