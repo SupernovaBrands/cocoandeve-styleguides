@@ -551,7 +551,7 @@ const YotpoReviewWidget = (props) => {
 
 						<div className="input-group row mt-1">
 							<div className="col-6 col-lg-3">
-								<select className="custom-select my-1" name="scores" onChange={() => { onFilterChange(); }}>
+								<select className="custom-select my-1" name="scores" onChange={() => { onFilterChange(); }} aria-label="Select rating">
 									<option value="">{tStrings.yotpo.rating}</option>
 									<option value="5">5 Stars</option>
 									<option value="4">4 Stars</option>
@@ -561,14 +561,14 @@ const YotpoReviewWidget = (props) => {
 								</select>
 							</div>
 							<div className="col-6 col-lg-3">
-								<select className="custom-select my-1" name="pictured" onChange={() => { onFilterChange(); }}>
+								<select className="custom-select my-1" name="pictured" onChange={() => { onFilterChange(); }} aria-label="Select reviews">
 									<option value="">{tStrings.yotpo.imageVideo}</option>
 									<option value="true">{tStrings.yotpo.withImageVideo}</option>
 								</select>
 							</div>
 							{customFilter.map((q) => q.filter !== '' && (
 								<div key={q.slug} className="col-6 col-lg-3">
-									<select className="custom-select my-1" name={q.slug} onChange={() => { onFilterChange(); }}>
+									<select className="custom-select my-1" name={q.slug} onChange={() => { onFilterChange(); }} aria-label="Custom select">
 										<option value="">{q.filter}</option>
 										{q.options.map((o) => (
 											<option key={o} value={o}>{o.replace('/', ' / ')}</option>
