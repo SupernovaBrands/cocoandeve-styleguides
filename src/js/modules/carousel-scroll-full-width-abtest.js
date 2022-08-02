@@ -31,10 +31,6 @@ const checkNavButton = (inner, prevButton, nextButton) => {
 	}
 };
 
-window.addEventListener('resize', () => {
-	carousels.forEach((s) => s.dispatchEvent(new CustomEvent('adjustThumb')));
-});
-
 $('.carousel--sfw').each((index, carousel) => {
 	const inner = carousel.querySelector('.carousel-inner');
 	const scrollbar = carousel.querySelector('.scrollbar');
