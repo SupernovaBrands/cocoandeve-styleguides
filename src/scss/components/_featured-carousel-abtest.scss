@@ -16,10 +16,6 @@ html.us-store {
 		}
 
 		@include media-breakpoint-up(lg) {
-			.tab-content {
-				padding-left: 0 !important;
-				padding-right: 0 !important;
-			}
 
 			.floating-out {
 				&-right {
