@@ -139,15 +139,6 @@ $(document).ready(function () {
 			sidebarCarousel.addClass('carousel');
 			sidebarCarousel.find('.rounded-circle.active').click();
 		}
-
-		$(window).on('resize', function () {
-			if (window.innerWidth >= screenLG) {
-				sidebarCarousel.removeClass('carousel');
-			} else {
-				sidebarCarousel.addClass('carousel');
-				sidebarCarousel.find('.rounded-circle.active').click();
-			}
-		});
 	}
 
 	// video modal
@@ -501,15 +492,6 @@ $(document).ready(function () {
 			sustainabilityCarousel.addClass('carousel');
 			sustainabilityCarousel.find('.active').click();
 		}
-
-		$(window).on('resize', function () {
-			if (window.innerWidth >= screenLG) {
-				sustainabilityCarousel.removeClass('carousel');
-			} else {
-				sustainabilityCarousel.addClass('carousel');
-				sustainabilityCarousel.find('.rounded-circle.active').click();
-			}
-		});
 	}
 
 	const bannerSlider = $('.sustainability-image-slider .carousel');

@@ -16,22 +16,6 @@ export default class CartManualGwp extends React.Component {
 		};
 	}
 
-	componentDidMount() {
-		window.addEventListener('resize', this.onWindowResize);
-	}
-
-	componentWillUnmount() {
-		window.removeEventListener('resize', this.onWindowResize);
-	}
-
-	onWindowResize = () => {
-		if (this.scrollRef.clientWidth < this.scrollRef.scrollWidth && !this.state.showScroll) {
-			this.setState({ showScroll: true });
-		} else if (this.scrollRef.clientWidth >= this.scrollRef.scrollWidth && this.state.showScroll) {
-			this.setState({ showScroll: false });
-		}
-	}
-
 	scroll = (direction) => {
 		const el = this.scrollRef;
 		const left = el.scrollLeft;

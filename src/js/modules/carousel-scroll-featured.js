@@ -24,10 +24,6 @@ const adjustScrollThumb = (thumb, inner, scrollParent) => {
 	}
 };
 
-window.addEventListener('resize', () => {
-	carousels.forEach((s) => s.dispatchEvent(new CustomEvent('adjustThumb')));
-});
-
 // eslint-disable-next-line import/prefer-default-export
 export const checkCarouselNav = (inner, prevButton, nextButton) => {
 	if (inner.scrollLeft === 0) {
