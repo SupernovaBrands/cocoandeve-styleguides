@@ -206,12 +206,8 @@ const extractCriticalCss = function () {
 						height: 667,
 						width: 375,
 					},
-					{
-						height: 948,
-						width: 1440,
-					},
 				],
-				minify: false,
+				minify: true,
 				ignore: {
 					atrule: ['@font-face'],
 					rule: [/:root/],
