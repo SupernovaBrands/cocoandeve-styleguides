@@ -1,4 +1,5 @@
-html.us-store {
+html.us-store,
+html.uk-store {
 	.range-abtest--simple,
 	.range-abtest--split {
 		.playground {
@@ -82,6 +83,10 @@ html.us-store {
 			@include media-breakpoint-up(md) {
 				.carousel--centered .carousel-inner {
 					transform: none;
+				}
+
+				.product-card__title {
+					min-height: calc-em(50);
 				}
 			}
 		}
