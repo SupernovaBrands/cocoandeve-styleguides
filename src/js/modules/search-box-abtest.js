@@ -220,10 +220,6 @@ const adjustScrollThumb = (thumb, inner, scrollParent) => {
 	}
 };
 
-window.addEventListener('resize', () => {
-	carousels.forEach((s) => s.dispatchEvent(new CustomEvent('adjustThumb')));
-});
-
 $('.carousel--scroll:not(.carousel--scroll__featured)').each((index, carousel) => {
 	const inner = carousel.querySelector('.carousel-inner');
 	const scrollbar = carousel.querySelector('.scrollbar');
