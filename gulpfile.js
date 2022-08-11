@@ -214,10 +214,7 @@ const extractCriticalCss = function () {
 				},
 			}),
 		)
-		.pipe(cleancss({
-			format: 'keep-breaks',
-			level: 2,
-		}))
+		.pipe(cleancss())
 		.on('error', (err) => {
 			console.error(err.message);
 		})
