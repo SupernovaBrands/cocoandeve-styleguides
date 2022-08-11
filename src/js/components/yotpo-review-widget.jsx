@@ -643,7 +643,7 @@ const YotpoReviewWidget = (props) => {
 											</span>
 										</div>
 										<div className="col-lg-9">
-											<div className="d-flex text-secondary mt-1 mt-lg-0">
+											<div className="d-flex text-secondary mt-1 mt-lg-0" aria-label={`${tStrings.yotpo.rating} ${review.score}`}>
 												<ReviewStar score={review.score} />
 											</div>
 											<h4 className="mb-1 mt-1">
