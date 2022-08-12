@@ -487,16 +487,16 @@ const YotpoReviewWidget = (props) => {
 			)}
 
 			<ul className="product-info-tab nav nav-tabs mt-3" role="tablist">
-				<li className="nav-item text-center flex-grow-0">
-					<a className="nav-link border-0 text-body text-decoration-none pt-0 pb-1 px-2 active" id="yotpo-widget__reviews-tab" data-toggle="tab" href="#yotpo-widget__reviews" role="tab" aria-controls="yotpo-widget__reviews" aria-selected="true">{tStrings.yotpo.reviews}</a>
+				<li className="nav-item text-center flex-grow-0" role="presentation">
+					<a className="nav-link border-0 text-body text-decoration-none pt-0 pb-1 px-2 active" id={`yotpo-widget__reviews-tab-${productId}`} data-toggle="tab" href={`#yotpo-widget__reviews-${productId}`} role="tab" aria-controls={`yotpo-widget__reviews-${productId}`} aria-selected="true">{tStrings.yotpo.reviews}</a>
 				</li>
-				<li className="nav-item text-center flex-grow-0">
-					<a className="nav-link border-0 text-body text-decoration-none pt-0 pb-1 px-2" id="yotpo-widget__questions-tab" data-toggle="tab" href="#yotpo-widget__questions" role="tab" aria-controls="yotpo-widget__questions" aria-selected="false">{tStrings.yotpo.questions}</a>
+				<li className="nav-item text-center flex-grow-0" role="presentation">
+					<a className="nav-link border-0 text-body text-decoration-none pt-0 pb-1 px-2" id={`yotpo-widget__questions-tab-${productId}`} data-toggle="tab" href={`#yotpo-widget__questions-${productId}`} role="tab" aria-controls={`yotpo-widget__questions-${productId}`} aria-selected="false">{tStrings.yotpo.questions}</a>
 				</li>
 			</ul>
 
 			<div className="tab-content mt-2 pb-4" id="yotpo-widget__tabContent">
-				<div id="yotpo-widget__reviews" className="tab-pane fade show active" role="tabpanel" aria-labelledby="yotpo-widget__reviews-tab">
+				<div id={`yotpo-widget__reviews-${productId}`} className="tab-pane fade show active" role="tabpanel" aria-labelledby={`yotpo-widget__reviews-tab-${productId}`}>
 					<div id="yotpoFilterForm">
 						<p className="font-weight-bold mb-2">{tStrings.yotpo.filterReviews}</p>
 						<div className="input-group col-lg-6 px-0">
@@ -551,7 +551,7 @@ const YotpoReviewWidget = (props) => {
 
 						<div className="input-group row mt-1">
 							<div className="col-6 col-lg-3">
-								<select className="custom-select my-1" name="scores" onChange={() => { onFilterChange(); }}>
+								<select className="custom-select my-1" name="scores" onChange={() => { onFilterChange(); }} aria-label="Select rating">
 									<option value="">{tStrings.yotpo.rating}</option>
 									<option value="5">5 Stars</option>
 									<option value="4">4 Stars</option>
@@ -561,14 +561,14 @@ const YotpoReviewWidget = (props) => {
 								</select>
 							</div>
 							<div className="col-6 col-lg-3">
-								<select className="custom-select my-1" name="pictured" onChange={() => { onFilterChange(); }}>
+								<select className="custom-select my-1" name="pictured" onChange={() => { onFilterChange(); }} aria-label="Select reviews">
 									<option value="">{tStrings.yotpo.imageVideo}</option>
 									<option value="true">{tStrings.yotpo.withImageVideo}</option>
 								</select>
 							</div>
 							{customFilter.map((q) => q.filter !== '' && (
 								<div key={q.slug} className="col-6 col-lg-3">
-									<select className="custom-select my-1" name={q.slug} onChange={() => { onFilterChange(); }}>
+									<select className="custom-select my-1" name={q.slug} onChange={() => { onFilterChange(); }} aria-label="Custom select">
 										<option value="">{q.filter}</option>
 										{q.options.map((o) => (
 											<option key={o} value={o}>{o.replace('/', ' / ')}</option>
@@ -616,7 +616,7 @@ const YotpoReviewWidget = (props) => {
 							<p className="font-weight-bold mb-0">{`${total} Review${total !== 1 ? 's' : ''}`}</p>
 							<div className="" role="list">
 								{reviews.map((review) => (
-									<div key={review.id} className="border-bottom py-3 row">
+									<div key={review.id} className="border-bottom py-3 row" role="listitem">
 										<div className="col-lg-3">
 											<h4 className="mb-0 d-flex align-items-center">
 												{review.user_name}
@@ -643,7 +643,7 @@ const YotpoReviewWidget = (props) => {
 											</span>
 										</div>
 										<div className="col-lg-9">
-											<div className="d-flex text-secondary mt-1 mt-lg-0">
+											<div className="d-flex text-secondary mt-1 mt-lg-0" aria-label={`${tStrings.yotpo.rating} ${review.score}`}>
 												<ReviewStar score={review.score} />
 											</div>
 											<h4 className="mb-1 mt-1">
@@ -705,7 +705,7 @@ const YotpoReviewWidget = (props) => {
 					)}
 				</div>
 
-				<div id="yotpo-widget__questions" className="tab-pane fade" role="tabpanel" aria-labelledby="yotpo-widget__questions-tab">
+				<div id={`yotpo-widget__questions-${productId}`} className="tab-pane fade" role="tabpanel" aria-labelledby={`yotpo-widget__questions-tab-${productId}`}>
 					{qnaLoading && (
 						<div className="d-flex justify-content-center mt-4">
 							<div className="spinner-border" role="status" aria-hidden="true" />

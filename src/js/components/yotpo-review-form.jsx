@@ -91,6 +91,7 @@ const YotpoReviewForm = (props) => {
 						return (
 							<SvgFull
 								role="button"
+								aria-label={`${tStrings.yotpo.rating} ${i}`}
 								key={i}
 								className={`svg font-size-lg pr-1 mb-1 ${i <= (hoverStar || score) ? 'text-primary' : 'text-muted'}`}
 								onClick={() => setScore(i)}
