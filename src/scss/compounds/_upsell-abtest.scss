@@ -1,0 +1,15 @@
+html.int-store,
+html.de-store,
+html.eu-store,
+html.ca-store,
+html.fr-store,
+html.my-store {
+    .body-product-upsell-abtest {
+        ul.list-unstyled.mb-0.order-lg-2:not(.product-upsell-abtest) {
+            display: none;
+        }
+        .product-upsell-abtest {
+            display: block !important;
+        }
+    }
+}
