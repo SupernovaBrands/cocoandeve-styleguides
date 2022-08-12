@@ -488,15 +488,15 @@ const YotpoReviewWidget = (props) => {
 
 			<ul className="product-info-tab nav nav-tabs mt-3" role="tablist">
 				<li className="nav-item text-center flex-grow-0">
-					<a className="nav-link border-0 text-body text-decoration-none pt-0 pb-1 px-2 active" id="yotpo-widget__reviews-tab" data-toggle="tab" href="#yotpo-widget__reviews" role="tab" aria-controls="yotpo-widget__reviews" aria-selected="true">{tStrings.yotpo.reviews}</a>
+					<a className="nav-link border-0 text-body text-decoration-none pt-0 pb-1 px-2 active" id={`yotpo-widget__reviews-tab-${productId}`} data-toggle="tab" href={`#yotpo-widget__reviews-${productId}`} role="tab" aria-controls={`yotpo-widget__reviews-${productId}`} aria-selected="true">{tStrings.yotpo.reviews}</a>
 				</li>
 				<li className="nav-item text-center flex-grow-0">
-					<a className="nav-link border-0 text-body text-decoration-none pt-0 pb-1 px-2" id="yotpo-widget__questions-tab" data-toggle="tab" href="#yotpo-widget__questions" role="tab" aria-controls="yotpo-widget__questions" aria-selected="false">{tStrings.yotpo.questions}</a>
+					<a className="nav-link border-0 text-body text-decoration-none pt-0 pb-1 px-2" id={`yotpo-widget__questions-tab-${productId}`} data-toggle="tab" href={`#yotpo-widget__questions-${productId}`} role="tab" aria-controls={`yotpo-widget__questions-${productId}`} aria-selected="false">{tStrings.yotpo.questions}</a>
 				</li>
 			</ul>
 
 			<div className="tab-content mt-2 pb-4" id="yotpo-widget__tabContent">
-				<div id="yotpo-widget__reviews" className="tab-pane fade show active" role="tabpanel" aria-labelledby="yotpo-widget__reviews-tab">
+				<div id={`yotpo-widget__reviews-${productId}`} className="tab-pane fade show active" role="tabpanel" aria-labelledby={`yotpo-widget__reviews-tab-${productId}`}>
 					<div id="yotpoFilterForm">
 						<p className="font-weight-bold mb-2">{tStrings.yotpo.filterReviews}</p>
 						<div className="input-group col-lg-6 px-0">
@@ -705,7 +705,7 @@ const YotpoReviewWidget = (props) => {
 					)}
 				</div>
 
-				<div id="yotpo-widget__questions" className="tab-pane fade" role="tabpanel" aria-labelledby="yotpo-widget__questions-tab">
+				<div id={`yotpo-widget__questions-${productId}`} className="tab-pane fade" role="tabpanel" aria-labelledby={`yotpo-widget__questions-tab-${productId}`}>
 					{qnaLoading && (
 						<div className="d-flex justify-content-center mt-4">
 							<div className="spinner-border" role="status" aria-hidden="true" />
