@@ -721,8 +721,8 @@ export default class Cart extends React.Component {
 					{!loadingInit && itemCount > 0 && (
 						<div className="modal-footer px-g">
 							<div className="row no-gutters w-100">
-								<span className="col-8 font-size-lg font-weight-bold" data-cy="cart-total-label">{tStrings.cart_total}</span>
-								<span className="col-4 font-size-lg font-weight-bold text-right" data-cy="cart-total-value">{formatMoney(totalPrice)}</span>
+								<strong className="col-8 font-size-lg" data-cy="cart-total-label">{tStrings.cart_total}</strong>
+								<strong className="col-4 font-size-lg text-right" data-cy="cart-total-value">{formatMoney(totalPrice)}</strong>
 								<div className="col-12 my-1">
 									<button
 										type="button"

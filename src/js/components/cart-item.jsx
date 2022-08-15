@@ -178,10 +178,10 @@ export default class CartItem extends React.Component {
 							<div className="d-flex flex-column text-right">
 								{models.comparePrice > 0 && (
 									<span className="text-linethrough">{formatMoney(models.comparePrice)}</span>)}
-								<span className="font-weight-bold">
+								<strong>
 									{formatMoney(item.original_price)}
 									{models.recurring && ('/month')}
-								</span>
+								</strong>
 							</div>
 						</div>
 
