@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{{> html-head title="Birthday Popup" }}
+</head>
+<body>
+	<div class="container">
+		<h1>Birthday Popup</h1>
+
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#birthdayModal">Launch birthday modal</button>
+
+		{{> compounds/birthday-popup}}
+	</div>
+	{{> js jquery=true popper=true bootstrap=true main=true }}
+</body>
+</html>
