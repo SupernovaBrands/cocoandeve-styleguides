@@ -6,8 +6,9 @@ $(document).ready(function () {
 		$('body').addClass('cookies-banner-show--expanded');
 	});
 
-	$('.cookies-banner .use-default').click(function () {
+	$('.cookies-banner .use-default').click(function (event) {
 		const parentEl = $('.cookies-banner');
+		event.preventDefault();
 		if (parentEl.find('#ads').prop('checked') && parentEl.find('#performance').prop('checked')) {
 			$('.cookies-banner .accept-cookie').click();
 		} else {
