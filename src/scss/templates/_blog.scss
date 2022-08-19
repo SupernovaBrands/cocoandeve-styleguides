@@ -73,4 +73,12 @@
 	img, iframe {
 		max-width: 100%;
 	}
+
+	&__banner {
+		width: 100%;
+
+		@include media-breakpoint-up(lg) {
+			width: auto;
+		}
+	}
 }
