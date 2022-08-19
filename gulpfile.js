@@ -207,14 +207,13 @@ const extractCriticalCss = function () {
 						width: 375,
 					},
 				],
-				minify: true,
+				minify: false,
 				ignore: {
 					atrule: ['@font-face'],
 					rule: [/:root/],
 				},
 			}),
 		)
-		.pipe(cleancss())
 		.on('error', (err) => {
 			console.error(err.message);
 		})
