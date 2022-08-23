@@ -11,6 +11,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const handlebars = require('gulp-compile-handlebars');
 const rename = require('gulp-rename');
 const critical = require('critical').stream;
+const cleancss = require('gulp-clean-css');
 const replace = require('gulp-replace');
 const cheerio = require('cheerio');
 const fs = require('fs');
@@ -213,6 +214,10 @@ const extractCriticalCss = function () {
 				},
 			}),
 		)
+		.pipe(cleancss({
+			format: 'keep-breaks',
+			level: 2,
+		}))
 		.on('error', (err) => {
 			console.error(err.message);
 		})
