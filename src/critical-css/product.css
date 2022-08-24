@@ -199,7 +199,13 @@ button.close{padding:0;background-color:transparent;border:0}
 .cart-drawer{z-index:1070}
 .carousel--loop .carousel-item{margin-right:0}
 .carousel--loop .carousel-item.active,.carousel--loop .carousel-item.active+.carousel-item,.carousel--loop .carousel-item.active+.carousel-item+.carousel-item,.carousel--loop .carousel-item.active+.carousel-item+.carousel-item+.carousel-item,.carousel--loop .carousel-item.active+.carousel-item+.carousel-item+.carousel-item+.carousel-item,.carousel--loop .carousel-item.active+.carousel-item+.carousel-item+.carousel-item+.carousel-item+.carousel-item,.carousel--loop .carousel-item.active+.carousel-item+.carousel-item+.carousel-item+.carousel-item+.carousel-item+.carousel-item{display:flex;flex-flow:column}
-
+@media (max-width:991.98px){
+.carousel--product-preview{overflow:hidden}
+.carousel--product-preview .carousel-inner{width:150%;left:0;margin-left:-2px;margin-right:-2px}
+.carousel--product-preview .item-third{display:block;float:left;min-height:1px;position:relative;width:50%;padding-left:2px;padding-right:2px}
+.product-image-carousel__indicator__item{flex:0 0 20%;max-width:20%}
+.search-feature-component-abtest .nav-link.search .svg{font-size:1.5625em}
+}
 .product-image-carousel__indicator .carousel-indicator{font-size:1.6875em}
 .product-image-carousel__indicator .carousel-indicator:disabled{opacity:0}
 .product-image-carousel .with-video .svg,.product-image-carousel__indicator .with-video .svg{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:1.875em}
