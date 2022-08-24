@@ -22,24 +22,6 @@
 				<p class="mb-2 mb-lg-4 font-size-lg order-lg-0">Anti-cellulite, anti-aging self tan</p>
 
 				<form class="product-form order-lg-2 mt-1">
-					{{#> components/product-variant name="product-variant" title="1x Sunny Honey Bali Bronzing Foam" value="1-x-sunny-honey-bali-bronzing-foam" checked=true class="mb-1"}}
-						<button type="button" class="variant-swatch medium mr-2 border-primary" data-value="medium" data-id="32068891541539"></button>
-						<button type="button" class="variant-swatch dark mr-2" data-value="dark" data-id="32068891607075"></button>
-						<button type="button" class="variant-swatch ultra-dark" data-value="ultra-dark" data-id="32068891639843"></button>
-						<p class="font-size-sm w-100 mt-2 mb-0 swatch-label-medium"><b>Medium</b> - Subtle glow, lighter skin tones</p>
-						<p class="font-size-sm w-100 mt-2 mb-0 swatch-label-dark d-none"><b>Dark</b> - Subtle glow, lighter skin tones</p>
-						<p class="font-size-sm w-100 mt-2 mb-0 swatch-label-ultra-dark d-none"><b>Ultra Dark</b> - Subtle glow, lighter skin tones</p>
-					{{/ components/product-variant}}
-					{{#> components/product-variant name="product-variant" title="1x Sunny Honey Bali Bronzing Bundle" value="1-x-sunny-honey-bali-bronzing-bundle" compare=true class="mb-1" note="Ultra dark OOS waitlist, dark oos"}}
-						<button type="button" class="variant-swatch medium mr-2 border-primary" data-value="medium" data-id="32068892295203"></button>
-						<button type="button" class="variant-swatch dark mr-2 oos" data-value="dark" data-id="32068892327971"></button>
-						<button type="button" class="variant-swatch ultra-dark oos waitlist" data-value="ultra-dark" data-id="32068892360739"></button>
-						<p class="font-size-sm w-100 mt-2 mb-0 swatch-label-medium"><b>Medium</b> - Subtle glow, lighter skin tones</p>
-						<p class="font-size-sm w-100 mt-2 mb-0 swatch-label-dark d-none"><b>Dark</b> - Subtle glow, lighter skin tones</p>
-						<p class="font-size-sm w-100 mt-2 mb-0 swatch-label-ultra-dark d-none"><b>Ultra Dark</b> - Subtle glow, lighter skin
-							tones</p>
-					{{/ components/product-variant}}
-
 					<div class="product-swatch-mobile fixed-bottom d-lg-none mx-g mb-2 show">
 						<div id="product-swatch-mobile"
 							class="product-swatch-mobile__collapse position-relative collapse bg-white border border-primary border-bottom-0 rounded-top">
@@ -60,64 +42,7 @@
 							<a class="scroll-to-element btn btn-lg btn-primary btn-block d-none m-0" role="button" href="#product-waitlist-form-oos">Waitlist Me</a>
 						</div>
 					</div>
-
-					<div class="product-swatch-mobile__trigger">
-						<div class="product-form-submit mb-3">
-							<div class="d-flex">
-								<div class="react-quantity-box"></div>
-								<button class="btn btn-lg btn-primary btn-block ml-1 ml-lg-g" type="submit">Add to Cart</button>
-							</div>
-						</div>
-					</div>
-
-					<div class="product-form-submit mb-3 mb-lg-4">
-						<div class="mb-1">
-							or 4 interest-free installments of $15.70 by
-							<img src="{{ imageUrl }}/logo-klarna.svg" height="15px" class="ml-1 d-inline-block align-baseline" />
-						</div>
-
-						<div>Fast shipping worldwide</div>
-					</div>
 				</form>
-
-				{{> components/product-waitlist-oos class="order-lg-2 mb-3 mb-lg-4 d-none"}}
-
-				<figure class="d-flex order-lg-2 mb-3 mb-lg-4">
-					<picture class="flex-shrink-0 col-5 col-lg-4 p-0">
-						<source srcset="https://via.placeholder.com/340x260.jpg/EFADBA" media="(min-width: 992px)" />
-						<img src="https://via.placeholder.com/280x200.jpg/EFADBA" class="w-100">
-					</picture>
-					<figcaption class="col-7 col-lg-8 px-2 py-1 py-lg-2 bg-gray-400 d-flex flex-column">
-						<h4 class="mb-0">Free Deluxe Exfoliating Mitt</h4>
-						<p class="font-size-xs font-size-dt-base mb-0 flex-grow-1">min. spend of $30</p>
-						<p class="font-size-sm font-size-dt-lg mb-0 text-primary justify-self-end">Use code: <b>BESTPREP</b></p>
-					</figcaption>
-				</figure>
-
-				<div class="order-lg-1 mb-3 mb-lg-4">
-					<ul class="product-info-tab nav nav-tabs justify-content-between" id="product-info-tab" role="tablist">
-						<li class="nav-item text-center" role="presentation">
-							<a class="nav-link border-0 text-body text-decoration-none pt-0 pb-1 active" id="product-benefits-tab" data-toggle="tab" href="#product-benefits" role="tab" aria-controls="product-benefits" aria-selected="true">Benefits</a>
-						</li>
-						<li class="nav-item text-center" role="presentation">
-							<a class="nav-link border-0 text-body text-decoration-none pt-0 pb-1" id="product-proudtobe-tab" data-toggle="tab" href="#product-proudtobe" role="tab" aria-controls="product-proudtobe" aria-selected="false">Proud to be</a>
-						</li>
-						<li class="nav-item text-center" role="presentation">
-							<a class="nav-link border-0 text-body text-decoration-none pt-0 pb-1" id="product-ingredients-tab" data-toggle="tab" href="#product-ingredients" role="tab" aria-controls="product-ingredients" aria-selected="false">Ingredients</a>
-						</li>
-					</ul>
-					<div class="tab-content mt-2" id="product-benefits">
-						<div class="tab-pane fade show active" id="product-benefits" role="tabpanel" aria-labelledby="product-benefits-tab">
-							<ul class="list-check mb-0">
-								<li>Blurs Pigmentation and Perfects Skin.</li>
-								<li>Tropical Mango and Guava Scent.</li>
-								<li>Lightweight, non-sticky formula.</li>
-								<li>Fast drying and develops in just 2 hours</li>
-								<li>Vegan. 100% Natural DHA. No Nasties</li>
-							</ul>
-						</div>
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>

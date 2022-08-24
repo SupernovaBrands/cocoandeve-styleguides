@@ -10,9 +10,6 @@
 	{{> sections/header critical=true}}
 	<div class="mobile-wrapper">
 		<div class="container mt-4">
-			<div class="reading-proggress-bar position-fixed d-lg-none no-gutters__in-container w-100">
-				<div class="reading-proggress-bar__proggress"></div>
-			</div>
 			<div class="text-center nav-blog nav-blog--pink nav-blog--sticky d-lg-none no-gutters__in-container w-100 position-fixed p-2">
 				<ul class="nav justify-content-center align-items-center">
 					<li class="nav-item">
@@ -42,7 +39,7 @@
 					</div>
 					<input type="text" class="form-control" id="exampleSearch" placeholder="Search">
 					<div class="input-group-append">
-						<a class="input-group-text search-box__close align-items-center" href="#" role="button" aria-label="Close search box">
+						<a class="input-group-text search-box__close align-items-center" href="#" role="button">
 						<img class="svg" src="icons/close.svg" replace-to-svg />
 						</a>
 					</div>
@@ -52,117 +49,24 @@
 				</div>
 			</div>
 			<nav aria-label="breadcrumb">
-				<ol class="breadcrumb mb-0">
-					<li class="breadcrumb-item">
+				<ol class="breadcrumb mb-0 d-block overflow-hidden text-nowrap">
+					<li class="breadcrumb-item d-inline">
 						<a class="text-underline breadcrumb-item__link" href="/cocoandeve-styleguides/docs/templates/blog.html">Home</a>
 					</li>
-					<li class="breadcrumb-item">
+					<li class="breadcrumb-item d-inline">
 						<a class="text-underline breadcrumb-item__link" href="/cocoandeve-styleguides/docs/templates/blog.html">Category</a>
 					</li>
-					<li class="breadcrumb-item active d-block" aria-current="page">The 5 Rules of Hair Masking The 5 Rules of Hair Masking</li>
+					<li class="breadcrumb-item active d-inline" aria-current="page">The 5 Rules of Hair Masking The 5 Rules of Hair Masking</li>
 				</ol>
 			</nav>
-
 			<article class="blog-post-grid row mt-2 mt-lg-3 mb-4">
 				<div class="blog-post-grid__content col-12 d-lg-block">
-					<h1 class="text-center h3">The 5 Rules of Hair Masking</h1>
+					<h1 class="text-center">The 5 Rules of Hair Masking</h1>
 					<picture class="d-block mt-2 mb-1 no-gutters__in-container">
 						<source srcset="https://via.placeholder.com/1540x800.jpg/EFADBA" media="(min-width: 992px)" />
 						<img class="w-100" src="https://via.placeholder.com/750x446.jpg/EFADBA">
 					</picture>
-					<div class="text-center mb-3 mx-3 mb-lg-4">Super popular in recent years, and a lifesaver for stressed tresses during lockdown(!), hair masking is everyone’s favourite #selfcaresunday ritual.</div>
-				</div>
-
-
-				<aside class="blog-post-grid__sidebar position-lg-sticky sticky-bottom col-12 mt-2 mt-lg-0 mb-3 mb-lg-0 align-self-end d-flex d-lg-block flex-wrap">
-					<section class="no-gutters__in-container sidebar order-2 bg-primary-light-second">
-						<h2 class="mb-3 h1 text-center text-lg-left">Popular Reads</h2>
-						<div class="slide carousel--sidebar">
-							<ol class="carousel-indicators carousel-indicators--primary mb-0 d-lg-none">
-								<li data-target=".carousel--sidebar" data-slide-to="0" class="rounded-circle border-0 active"></li>
-								<li data-target=".carousel--sidebar" data-slide-to="1" class="rounded-circle border-0 active"></li>
-							</ol>
-							<ul class="list-unstyled carousel-inner mb-0 pb-1">
-								<li class="carousel-item active">
-									<article class="post-card mb-2 mb-lg-3">
-										<h3><a href="/cocoandeve-styleguides/docs/templates/article.html" class="link-secondary">5 things you’re doing wrong with your hair care routine</a></h3>
-										<p class="mt-1 mb-0">Give these myths the brush off for a healthy scalp & shiny hair!</p>
-									</article>
-									<article class="post-card mb-2 mb-lg-3">
-										<h3><a href="/cocoandeve-styleguides/docs/templates/article.html" class="link-secondary">5 things you’re doing wrong with your hair care routine</a></h3>
-										<p class="mt-1 mb-0">Give these myths the brush off for a healthy scalp & shiny hair!</p>
-									</article>
-								</li>
-								<li class="carousel-item">
-									<article class="post-card mb-2 mb-lg-0">
-										<h3><a href="/cocoandeve-styleguides/docs/templates/article.html" class="link-secondary">5 things you’re doing wrong with your hair care routine</a></h3>
-										<p class="mt-1 mb-0">Give these myths the brush off for a healthy scalp & shiny hair!</p>
-									</article>
-								</li>
-							</ul>
-						</div>
-					</section>
-					<section class="no-gutters__in-container sidebar mt-3 mt-lg-n2 pt-lg-0 bg-primary-light">
-						<h4 class="text-center text-lg-left mb-2 h2 true">Shop The Article</h4>
-						<ul class="list-unstyled mb-0">
-							<li class="mb-2">
-								<form class="upsell d-flex align-items-center">
-									<figure class="d-flex flex-grow-1 mb-0">
-										<picture class="flex-shrink-0">
-											<source srcset="https://via.placeholder.com/112x136.jpg/EFADBA" media="(min-width: 992px)" />
-											<img src="https://via.placeholder.com/150x208.jpg/EFADBA" class="w-100" />
-										</picture>
-										<figcaption class="d-flex flex-column font-size-sm">
-											<a class="upsell__title font-weight-bold" href="{{product.url}}">That’s a wrap bundle</a>
-											<span class="upsell__price">
-												<span class="compare text-primary font-weight-bold">£XX.XX</span>
-												£XX.XX
-											</span>
-										</figcaption>
-									</figure>
-									<a href="#" class="flex-column flex-shrink-0 d-flex justify-content-center align-items-center mr-1 ml-1 upsell_addbtn upsell__add">
-										<img class="svg text-primary" src="icons/plus-circle.svg" replace-to-svg />
-									</a>
-									<span class="flex-column flex-shrink-0 justify-content-center align-items-center mr-1 ml-1 upsell_spinner upsell__spinner">
-										<img class="svg text-primary" src="icons/loading.svg" replace-to-svg />
-									</span>
-									<span class="flex-column flex-shrink-0 justify-content-center align-items-center mr-1 ml-1 upsell_removebtn upsell__remove">
-										<img class="svg text-primary" src="icons/check-circle.svg" replace-to-svg />
-										<span class="text-primary"><b>Remove</b></span>
-									</span>
-								</form>
-							</li>
-							<li>
-								<form class="upsell d-flex align-items-center">
-									<figure class="d-flex flex-grow-1 mb-0">
-										<picture class="flex-shrink-0">
-											<source srcset="https://via.placeholder.com/112x136.jpg/EFADBA" media="(min-width: 992px)" />
-											<img src="https://via.placeholder.com/150x208.jpg/EFADBA" class="w-100" />
-										</picture>
-										<figcaption class="d-flex flex-column font-size-sm">
-											<a class="upsell__title font-weight-bold" href="{{product.url}}">Sunny Honey Bali Bronzing Foam</a>
-											<span class="upsell__price">
-												<span class="text-linetrough">£XX.XX</span>
-												<span class="text-primary font-weight-bold">£XX.XX</span>
-												<span class="save text-primary font-weight-bold d-block">(Save 20%)</span>
-											</span>
-										</figcaption>
-									</figure>
-									<a href="#" class="flex-column flex-shrink-0 d-flex justify-content-center align-items-center mr-1 ml-1 upsell_addbtn upsell__add">
-										<img class="svg text-primary" src="icons/plus-circle.svg" replace-to-svg />
-									</a>
-									<span class="flex-column flex-shrink-0 justify-content-center align-items-center mr-1 ml-1 upsell_spinner upsell__spinner">
-										<img class="svg text-primary" src="icons/loading.svg" replace-to-svg />
-									</span>
-									<span class="flex-column flex-shrink-0 justify-content-center align-items-center mr-1 ml-1 upsell_removebtn upsell__remove">
-										<img class="svg text-primary" src="icons/check-circle.svg" replace-to-svg />
-										<span class="text-primary"><b>Remove</b></span>
-									</span>
-								</form>
-							</li>
-						</ul>
-					</section>
-				</aside>
+					<div class="text-center mb-3 mx-3 mb-lg-4 h4">Super popular in recent years, and a lifesaver for stressed tresses during lockdown(!), hair masking is everyone’s favourite #selfcaresunday ritual.</div>
 			</article>
 		</div>
 	</div>

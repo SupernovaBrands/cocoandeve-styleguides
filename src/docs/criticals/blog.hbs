@@ -6,38 +6,22 @@
 
   <link rel="stylesheet" href="{{ criticalUrl }}/blog.css">
 </head>
-<body>
+<body  class="mobile-wrapper">
 
 	{{> sections/header critical=true}}
 	<div class="container mt-4">
-		<h1 class="text-center mb-0 h3">COCO AND EVE JOURNAL</h1>
-		<ul class="mt-1 mb-2 nav nav-category justify-content-center align-items-center">
+		<h1 class="text-center mb-0">COCO AND EVE JOURNAL</h1>
+		<ul class="mt-1 mb-2 nav nav-category justify-content-center align-items-center nav-blog">
 			<li class="nav-item"><a href="/cocoandeve-styleguides/templates/blog.html" class="nav-link pb-0 pt-0 h4 font-weight-normal px-lg-1">ALL</a></li>
 			<li class="nav-item"><a href="/cocoandeve-styleguides/templates/blog-filtered.html" class="nav-link active pb-0 pt-0 h4 font-weight-normal px-lg-1">HAIR</a></li>
 			<li class="nav-item"><a href="/cocoandeve-styleguides/templates/blog-filtered.html" class="nav-link pb-0 pt-0 h4 font-weight-normal px-lg-1">TAN</a></li>
 			<li class="nav-item"><a href="/cocoandeve-styleguides/templates/blog-filtered.html" class="nav-link pb-0 pt-0 h4 font-weight-normal px-lg-1">BODY</a></li>
 			<li class="nav-item"><a href="/cocoandeve-styleguides/templates/blog.html#how-to" class="nav-link pb-0 pt-0 h4 font-weight-normal px-lg-1">HOW TO'S</a></li>
-
-			<div class="search-box input-group input-group-sm d-lg-none d-none mt-2">
-				<div class="input-group-prepend">
-					<span class="input-group-text search-box__icon">
-						<img class="svg" src="icons/search.svg" replace-to-svg />
-					</span>
-				</div>
-				<input type="text" class="form-control" id="exampleSearch" placeholder="Search">
-				<div class="input-group-append">
-					<a class="input-group-text search-box__close align-items-center" href="#" role="button" aria-label="Close search box">
-						<img class="svg" src="icons/close.svg" replace-to-svg />
-					</a>
-				</div>
-				<div class="input-group-append">
-					<button class="search-box-btn btn btn-primary" type="submit">Search</button>
-				</div>
-			</div>
 		</ul>
+
 		<div class="blog-grid row mt-3 mt-lg-4 mb-lg-4">
 			<div class="blog-grid__search col d-none d-lg-block mb-2 align-items-start">
-				<div class="sidebar py-2 bg-primary-light">
+				<div class="sidebar py-2  bg-primary-light-second">
 					<div class="search-box input-group input-group-sm">
 						<div class="input-group-prepend">
 							<span class="input-group-text search-box__icon">
@@ -46,7 +30,7 @@
 						</div>
 						<input type="text" class="form-control" id="exampleSearch" placeholder="Search">
 						<div class="input-group-append">
-							<a class="input-group-text search-box__close align-items-center" href="#" role="button" aria-label="Close search box">
+							<a class="input-group-text search-box__close align-items-center" href="#" role="button">
 								<img class="svg" src="icons/close.svg" replace-to-svg />
 							</a>
 						</div>
@@ -60,46 +44,13 @@
 			<article class="blog-grid__post1 post-card col-12 d-lg-block mb-4 mb-lg-3">
 				<figure class="mb-2 no-gutters__in-container">
 					<a href="/cocoandeve-styleguides/templates/article.html" class="hover-overlay d-block">
-						<img src="https://via.placeholder.com/375x190.jpg/EFADBA" class="w-100" alt="Img Alt">
+						<img src="https://via.placeholder.com/375x190.jpg/EFADBA" class="w-100">
 					</a>
 				</figure>
 				<time class="d-block mb-1 font-size-sm">04 May, 2020</time>
 				<h3><a href="/cocoandeve-styleguides/templates/article.html" class="link-secondary">5 things you’re doing wrong with your hair care routine</a></h3>
 				<p class="mt-1 mb-0">Give these myths the brush off for a healthy scalp & shiny hair!</p>
 			</article>
-
-			<div class="blog-grid__sidebar col-12 d-lg-block mb-4 mb-lg-0">
-				<aside class="position-sticky sticky-top">
-					<div class="no-gutters__in-container sidebar bg-primary-light-second">
-						<h2 class="mb-3 h1 text-center text-lg-left">Popular Reads</h4>
-						<div class="slide carousel--sidebar">
-							<ol class="carousel-indicators carousel-indicators--primary mb-0 d-lg-none">
-								<li data-target=".carousel--sidebar" data-slide-to="0" class="rounded-circle border-0 active"></li>
-								<li data-target=".carousel--sidebar" data-slide-to="1" class="rounded-circle border-0"></li>
-							</ol>
-							<ul class="list-unstyled carousel-inner mb-0 pb-1">
-								<li class="carousel-item active">
-									<article class="post-card mb-2 mb-lg-3">
-										<h3><a href="/cocoandeve-styleguides/templates/article.html" class="link-secondary">5 things you’re doing wrong with your hair care routine</a></h3>
-										<p class="mt-1 mb-0">Give these myths the brush off for a healthy scalp & shiny hair!</p>
-									</article>
-									<article class="post-card mb-2 mb-lg-3">
-										<h3><a href="/cocoandeve-styleguides/templates/article.html" class="link-secondary">5 things you’re doing wrong with your hair care routine</a></h3>
-										<p class="mt-1 mb-0">Give these myths the brush off for a healthy scalp & shiny hair!</p>
-									</article>
-								</li>
-								<li class="carousel-item">
-									<article class="post-card mb-2 mb-lg-0">
-										<h3><a href="/cocoandeve-styleguides/templates/article.html" class="link-secondary">5 things you’re doing wrong with your hair care routine</a></h3>
-										<p class="mt-1 mb-0">Give these myths the brush off for a healthy scalp & shiny hair!</p>
-									</article>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</aside>
-			</div>
-
 		</div>
 	</div>
 </body>
