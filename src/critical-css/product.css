@@ -173,12 +173,6 @@ button.close{padding:0;background-color:transparent;border:0}
 }
 .navbar-brand{color:#00635b}
 .dropdown--account .dropdown-menu{border-color:transparent!important;position:fixed;width:100%;top:6em;z-index:1030}
-.variant-swatch{flex-shrink:0;width:2.5em;height:2.5em;border-radius:50%;border:2px solid #fff;background-color:#fff;background-size:1.875em;position:relative}
-.tooltip{left:0;right:0;top:100%;transform:translateY(-100%);visibility:hidden;width:auto;z-index:1050}
-.tooltip:before{content:"";position:absolute;border-style:solid;border-width:0 .6875em .6875em;border-color:transparent transparent #d62e55;top:0;right:.625em;transform:translateY(-90%)}
-.tooltip--sold-out{top:auto;bottom:2em;z-index:0;left:0;transform:translateY(170%)}
-.tooltip--sold-out:before{content:"";position:absolute;border-style:solid;border-width:.75em .75em 0;border-color:#00635b transparent transparent;bottom:0;left:.625em;transform:translateY(99%);right:auto}
-.tooltip .svg{position:absolute;right:.5em;top:50%;transform:translateY(-50%);font-size:1.1875em}
 .announcement-bar{padding:.59375em 0}
 .announcement-bar a{color:#00635b}
 .main-header{z-index:1030;width:100%;top:0;position:relative}

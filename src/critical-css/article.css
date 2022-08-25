@@ -142,9 +142,7 @@ h1{margin-top:0;font-size:2em}
 .nav-blog--sticky{z-index:1020;top:0;transform:translateY(-100%)}
 .nav-blog a.active{text-decoration:underline}
 .dropdown--account .dropdown-menu{border-color:transparent!important;position:fixed;width:100%;top:6em;z-index:1030}
-.tooltip{left:0;right:0;top:100%;transform:translateY(-100%);visibility:hidden;width:auto;z-index:1050}
-.tooltip:before{content:"";position:absolute;border-style:solid;border-width:0 .6875em .6875em;border-color:transparent transparent #d62e55;top:0;right:.625em;transform:translateY(-90%)}
-.tooltip .svg{position:absolute;right:.5em;top:50%;transform:translateY(-50%);font-size:1.1875em}
+
 .announcement-bar{padding:.59375em 0}
 .announcement-bar a{color:#00635b}
 .main-header{z-index:1030;width:100%;top:0;position:relative}
