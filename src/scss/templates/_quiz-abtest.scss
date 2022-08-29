@@ -1,0 +1,53 @@
+html.us-store {
+	.quiz-result--abtest-v1,
+	.quiz-result--abtest-v2 {
+
+		.results-swatch {
+			display: none !important;
+		}
+
+		.quiz-banner__title {
+			@include font-size($h2-font-size);
+
+			@include media-breakpoint-up(lg) {
+				@include font-size($h1-font-size-lg);
+			}
+		}
+
+		.product-carousel--abtest,
+		.quiz-banner--abtest {
+			display: block !important;
+		}
+	}
+
+	// variant 1
+	.quiz-result--abtest-v1 {
+
+		.results-swatch__abtest-v1 {
+			display: flex !important;
+		}
+
+		.quiz-result__tag {
+			min-width: calc-em(110);
+			height: calc-em(27, 16);
+			border-radius: calc-em(22);
+		}
+	}
+
+	// variant 2
+	.quiz-result--abtest-v2 {
+		.results-swatch__abtest-v2 {
+			display: block !important;
+
+			a {
+				&::after {
+					content: "-";
+				}
+
+				&.collapsed::after {
+					content: "+";
+				}
+			}
+		}
+	}
+}
