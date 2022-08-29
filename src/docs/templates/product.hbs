@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html class="">
+<html>
 
 <head>
 	{{> html-head title="Product Page" maincss="product" }}
 </head>
 
-<body class="template-product ">
+<body class="template-product">
 	{{> sections/header}}
 	<p class="text-center my-2 quiz-result-title">We found your perfect match!</p>
 	<div class="container px-g mb-4 mt-lg-5">
@@ -81,6 +81,11 @@
 						<button type="button" class="variant-swatch variant-swatch--lg medium mr-2 border-primary" data-value="medium" data-id="32068892295203"></button>
 						<p class="mb-0"><strong>Your perfect shade – Medium</strong> <br/> will give you subtle glow</p>
 					</div>
+
+					<!-- Begin AB Test code -->
+					{{> compounds/result-swatch-v1-abtest }}
+					{{> compounds/result-swatch-v2-abtest }}
+					<!-- End AB Test code -->
 
 					<div class="product-swatch-mobile__trigger">
 						<div class="product-form-submit mb-3 position-relative">
@@ -258,7 +263,7 @@
 				<ul class="list-unstyled mb-0 order-lg-2">
 					<li class="mb-2 mb-lg-3">{{> compounds/upsell-pdp remove=true}}</li>
 					<li>{{> compounds/upsell-pdp}}</li>
-				</ul>	
+				</ul>
 				<ul class="product-upsell-abtest list-unstyled mb-0 order-lg-2 d-none">
 					<li class="mb-2 mb-lg-3">{{> compounds/upsell-pdp remove=true}}</li>
 					<li>{{> compounds/upsell-pdp}}</li>
@@ -266,6 +271,9 @@
 			</div>
 		</div>
 	</div>
+
+	{{> sections/quiz-banner-abtest class="d-none quiz-banner--abtest" }}
+	{{> sections/product-carousel noTabs=true noShopAll=true class="d-none product-carousel--abtest"}}
 
 	{{> sections/pdp-banner-tan-1 class="mb-4"}}
 
