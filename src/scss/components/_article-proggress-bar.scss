@@ -3,7 +3,7 @@
 	content: ' ';
 	height: calc-em(4);
 	top: 0;
-	z-index: $zindex-sticky;
+	z-index: $zindex-fixed;
 
 	&__proggress {
 		background-color: $secondary;
