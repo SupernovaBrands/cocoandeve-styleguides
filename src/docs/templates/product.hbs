@@ -7,7 +7,7 @@
 
 <body class="template-product ">
 	{{> sections/header}}
-	<p class="text-center my-2 quiz-result-title">We found your perfect match!</p>
+	<p class="text-center my-2 quiz-result-title d-none">We found your perfect match!</p>
 	<div class="container px-g mb-4 mt-lg-5">
 		<div class="row align-items-start">
 			{{> components/product-image-carousel totalSlide=8}}
@@ -22,7 +22,7 @@
 
 				<form class="product-form order-lg-2 mt-1">
 					<p class="bg-primary-light py-1 text-center">
-						Not Sure which shade to get? <a href="#" class="text-primary d-block d-lg-inline text-underline">Take our Tan Quiz</a>
+						Not Sure which shade to get? <a href="#" class="take-quiz-line text-primary d-block d-lg-inline text-underline">Take our Tan Quiz</a>
 					</p>
 
 					{{#> components/product-variant name="product-variant" title="1x Sunny Honey Bali Bronzing Foam" value="1-x-sunny-honey-bali-bronzing-foam" checked=true class="mb-1" titleClass="font-weight-bold"}}
@@ -77,7 +77,7 @@
 
 					{{> components/product-subscription }}
 
-					<div class="results-swatch py-2 border border-primary-light-second border-left-0 border-right-0 mb-2 d-flex align-items-center">
+					<div class="results-swatch d-none py-2 border border-primary-light-second border-left-0 border-right-0 mb-2 d-flex align-items-center">
 						<button type="button" class="variant-swatch variant-swatch--lg medium mr-2 border-primary" data-value="medium" data-id="32068892295203"></button>
 						<p class="mb-0"><strong>Your perfect shade – Medium</strong> <br/> will give you subtle glow</p>
 					</div>
@@ -94,7 +94,7 @@
 
 					{{> components/save-results }}
 
-					<ul class="pdp-services-abtest order-lg-2 list-unstyled row mt-3 my-4 text-center d-none d-lg-flex">
+					<ul class="pdp-services order-lg-2 list-unstyled row mt-3 my-4 text-center d-none d-lg-flex">
 						<li class="col-4 px-0 d-flex flex-column">
 							<img class="svg h1 text-secondary" src="icons/fast-delivery.svg" replace-to-svg />
 							Delivery from<br> US warehouse
