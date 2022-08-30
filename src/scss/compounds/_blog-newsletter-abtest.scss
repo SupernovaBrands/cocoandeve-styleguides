@@ -1,0 +1,19 @@
+html.uk-store {
+    @include media-breakpoint-down(lg) {
+        .blog-newsletter-no-image {
+            .blog-post-grid__newsletter picture {
+                display: none;
+            }
+        }
+
+        .blog-newsletter-half-image {
+            .blog-post-grid__newsletter picture:not(.d-none) {
+                display: none;
+            }
+
+            .blog-post-grid__newsletter picture.d-none {
+                display: block !important;
+            }
+        }
+    }
+}
