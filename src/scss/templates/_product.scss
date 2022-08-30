@@ -96,7 +96,9 @@
 }
 
 .show-survey-result {
-	.quiz-result-title {
+	.quiz-result-title,
+	.quiz-price,
+	.survey-note {
 		display: block !important;
 	}
 
@@ -104,7 +106,8 @@
 		display: flex !important;
 	}
 
-	.pdp-services, .swatch, .take-quiz-line {
-		display: none;
+	.pdp-services,
+	.swatch {
+		display: none !important;
 	}
 }
