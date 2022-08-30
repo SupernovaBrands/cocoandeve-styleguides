@@ -6,7 +6,8 @@ html.us-store {
 			display: none !important;
 		}
 
-		.quiz-banner__title {
+		.quiz-banner__title,
+		.quiz-result--carousel-title {
 			@include font-size($h2-font-size);
 
 			@include media-breakpoint-up(lg) {
@@ -17,6 +18,10 @@ html.us-store {
 		.product-carousel--abtest,
 		.quiz-banner--abtest {
 			display: block !important;
+		}
+
+		.quiz-result--carousel .product-card__title {
+			min-height: calc-em(50);
 		}
 	}
 
@@ -31,6 +36,7 @@ html.us-store {
 			min-width: calc-em(110);
 			height: calc-em(27, 16);
 			border-radius: calc-em(22);
+			display: inline-flex;
 		}
 	}
 
