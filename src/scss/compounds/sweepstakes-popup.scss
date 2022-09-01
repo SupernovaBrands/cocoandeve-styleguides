@@ -51,10 +51,10 @@
 	}
 
 	&__toc {
-		color: $text-muted;
+		color: $gray-600;
 
 		@include media-breakpoint-up(lg) {
-			color: white;
+			color: $gray-600;
 		}
 	}
 
