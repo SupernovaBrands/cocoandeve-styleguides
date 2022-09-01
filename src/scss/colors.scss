@@ -35,3 +35,12 @@
 @include make-box('gray-500', $gray-500);
 @include make-box('gray-400', $gray-400);
 @include make-box('gray-100', $gray-100);
+@include make-box('sh-purple', $sh-purple);
+@include make-box('sh-purple-light', $sh-purple-light);
+@include make-box('bali-bod-blue', $bali-bod-blue);
+@include make-box('bali-bod-blue-light', $bali-bod-blue-light);
+@include make-box('sh-orange', $sh-orange);
+@include make-box('sh-orange-light', $sh-orange-light);
+@include make-box('green-light', $green-light);
+@include make-box('yellow-light', $yellow-light);
+@include make-box('pink-light', $pink-light);
