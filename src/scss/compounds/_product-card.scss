@@ -61,7 +61,7 @@
 	}
 
 	&--quiz {
-		@include media-breakpoint-down(lg) {
+		@include media-breakpoint-down(sm) {
 			max-height: calc-em(150);
 		}
 
