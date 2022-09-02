@@ -1,13 +1,13 @@
 .sweepstakes-popup {
 	.modal-content {
-		background-image: url(https://cdn.shopify.com/s/files/1/0243/8817/3888/files/Pop-Up_MOB.jpg?v=1652438600);
+		background-image: url(https://cdn.shopify.com/s/files/1/0073/5186/1332/files/Pop-Up_MOB_VER4.jpg?v=1662090446);
 		background-size: 100%;
 		background-position: top center;
 		background-repeat: no-repeat;
 		border-radius: calc-em(22.5, $unit: 1rem);
 
 		@include media-breakpoint-up(lg) {
-			background-image: url(https://cdn.shopify.com/s/files/1/0243/8817/3888/files/Pop-Up_DESK.jpg?v=1652438600);
+			background-image: url(https://cdn.shopify.com/s/files/1/0073/5186/1332/files/Pop-Up_DESK_VER4.jpg?v=1662090446);
 			background-position: center;
 			background-size: cover;
 		}
