@@ -4,6 +4,10 @@ html.uk-store {
             .blog-post-grid__newsletter picture {
                 display: none;
             }
+
+            .font-size-sm {
+                font-size: calc-em(12) !important;
+            }
         }
 
         .blog-newsletter-half-image {
@@ -13,6 +17,10 @@ html.uk-store {
 
             .blog-post-grid__newsletter picture.d-none {
                 display: block !important;
+            }
+
+            .font-size-sm {
+                font-size: calc-em(12) !important;
             }
         }
     }
