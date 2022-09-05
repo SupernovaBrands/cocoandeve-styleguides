@@ -79,3 +79,14 @@ html.dev-store {
 		}
 	}
 }
+
+html.fr-store,
+html.de-store {
+	.sweepstakes-popup .modal-content {
+		background-image: url(https://cdn.shopify.com/s/files/1/0286/1327/9779/files/Pop-Up_MOB_VER4_1_2.jpg?v=1662347012);
+
+		@include media-breakpoint-up(lg) {
+			background-image: url(https://cdn.shopify.com/s/files/1/0286/1327/9779/files/Pop-Up_DESK_VER4_2.jpg?v=1662347012);
+		}
+	}
+}
