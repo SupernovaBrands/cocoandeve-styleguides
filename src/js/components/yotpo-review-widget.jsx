@@ -495,7 +495,7 @@ const YotpoReviewWidget = (props) => {
 				</li>
 			</ul>
 
-			<div className="tab-content mt-2 pb-4" id="yotpo-widget__tabContent">
+			<div className="tab-content mt-2" id="yotpo-widget__tabContent">
 				<div id="yotpo-widget__reviews" className="tab-pane fade show active" role="tabpanel" aria-labelledby="yotpo-widget__reviews-tab">
 					<div id="yotpoFilterForm">
 						<p className="font-weight-bold mb-2">{tStrings.yotpo.filterReviews}</p>
