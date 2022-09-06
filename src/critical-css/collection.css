@@ -5,7 +5,7 @@ body{margin:0;font-family:sofia-pro,"Helvetica Neue",Arial,sans-serif;font-size:
 h1,h2{margin-top:0}
 p,ul{margin-top:0;margin-bottom:1rem}
 b,strong{font-weight:bolder}
-a{color:#d62e55;text-decoration:none;background-color:transparent}
+a{color:#d62e55;background-color:transparent}
 figure{margin:0 0 1rem}
 img{vertical-align:middle;border-style:none}
 svg{overflow:hidden;vertical-align:middle}
