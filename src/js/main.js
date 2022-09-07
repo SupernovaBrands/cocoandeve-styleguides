@@ -473,7 +473,7 @@ $(document).ready(function () {
 	}
 
 	// tooltip
-	$('#tooltip__close').on('click', function () {
+	$('.tooltip__close').on('click', function () {
 		$(this).parent().removeClass('show');
 		setTimeout(function () {
 			$('header').addClass('overflow-hidden');
