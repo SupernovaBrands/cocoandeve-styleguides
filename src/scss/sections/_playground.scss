@@ -25,3 +25,78 @@
     @include font-size($hero-banner-font-size-lg);
   }
 }
+
+.playground {
+
+  picture {
+    bottom: 0;
+    right: 0;
+  }
+
+  &__subtitle {
+    @include font-size($font-size-sm);
+
+    @include media-breakpoint-up(md) {
+      @include font-size($font-size-base);
+    }
+  }
+
+  &--simple {
+    display: flex !important;
+  
+    @include media-breakpoint-up(md) {
+      &-square {
+        &:before {
+          content: "";
+          display: block;
+          padding-top: 100%;
+        }
+  
+        figcaption {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+        }
+      }
+    }
+  }
+
+  &--split {
+    display: block !important;
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      svg {
+        height: 1.25em;
+      }
+    }
+
+    .carousel-control-prev {
+      left: 7.5%;
+
+      @include media-breakpoint-up(md) {
+        left: 0;
+      }
+    }
+
+    .carousel-control-next {
+      right: 7.5%;
+
+      @include media-breakpoint-up(md) {
+        right: 0;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      .carousel--centered .carousel-inner {
+        transform: none;
+      }
+
+      .product-card__title {
+        min-height: calc-em(50);
+      }
+    }
+  }
+}
