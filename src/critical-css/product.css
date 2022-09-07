@@ -4,7 +4,7 @@ figure,header,nav,section{display:block}
 body{margin:0;font-family:sofia-pro,"Helvetica Neue",Arial,sans-serif;font-size:1em;font-weight:400;line-height:1.25;color:#151515;text-align:left;background-color:#fff}
 p,ul{margin-top:0;margin-bottom:1rem}
 b,strong{font-weight:bolder}
-a{color:#d62e55;text-decoration:none;background-color:transparent}
+a{color:#d62e55;background-color:transparent}
 figure{margin:0 0 1rem}
 img{vertical-align:middle;border-style:none}
 svg{overflow:hidden;vertical-align:middle}
