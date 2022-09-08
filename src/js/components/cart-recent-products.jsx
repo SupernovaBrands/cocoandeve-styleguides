@@ -29,7 +29,7 @@ const RecentProducts = (props) => {
 				<figcaption className="mt-2 flex-grow-1 d-flex flex-column">
 					<YotpoStar productId={4543113265187} showTotal={false} showScore={false} extraClass="justify-content-center" />
 					<p className="product-card__title flex-grow-1 d-flex flex-column justify-content-center h4 h-100 font-weight-normal">
-						<a href="#" className="text-dark text-decoration-none">{product.title}</a>
+						<a href="#" className="text-dark">{product.title}</a>
 					</p>
 					<p className="text-center">
 						{product.comparePrice > 0 && <span className="text-linethrough h4 m-1">{formatMoney(product.comparePrice)}</span>}
