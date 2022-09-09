@@ -19,10 +19,10 @@
 }
 
 .playground-font-size {
-  @include font-size($playground-font-size);
+  @include font-size($h1-font-size-lg);
 
   @include media-breakpoint-up(lg) {
-    @include font-size($hero-banner-font-size-lg);
+    @include font-size($playground-font-size);
   }
 }
 
