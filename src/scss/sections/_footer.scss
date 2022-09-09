@@ -14,6 +14,15 @@ footer {
 	hr {
 		border-color: $white;
 	}
+
+	.footer__hr-bottom {
+		border-color: $white;
+		opacity: .2;
+	}
+
+	.footer__note {
+		opacity: .6;
+	}
 }
 
 .footer-grid-newsletter {
@@ -39,13 +48,15 @@ footer {
 
 .footer-grid-nav {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-	grid-template-rows: auto;
-	grid-template-areas: "nav-shop nav-about nav-help item nav-follow nav-currency";
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto auto auto;
+	grid-template-areas: "nav-shop nav-about"
+		"nav-help item"
+		"nav-follow nav-currency";
 
 	@include media-breakpoint-up(lg) {
 		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-		grid-template-rows: auto auto;
+		grid-template-rows: auto;
 		grid-template-areas: "nav-shop nav-about nav-help item nav-follow nav-currency";
 	}
 
