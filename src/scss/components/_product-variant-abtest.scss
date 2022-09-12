@@ -1,0 +1,29 @@
+html.uk-store {
+	// increase price font size
+	.product-variant--abtest-increase-price {
+		.product-variant__price-label {
+			font-size: $font-size-base !important;
+		}
+	}
+
+	// swatch expandable
+	.product-variant--abtest-swatch-expandable {
+		.product-variant .custom-control-input {
+			~ .custom-control-label .product-variant__description {
+				display: none;
+			}
+
+			&:checked ~ .custom-control-label .product-variant__description {
+				display: block;
+			}
+		}
+	}
+
+	// change variant position
+	.product-variant--abtest-swatch-position {
+		.product-form .swatch {
+			display: flex;
+			flex-wrap: wrap-reverse;
+		}
+	}
+}
