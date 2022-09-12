@@ -14,48 +14,66 @@ footer {
 	hr {
 		border-color: $white;
 	}
+
+	.footer__hr-bottom {
+		border-color: $white;
+		opacity: .2;
+	}
+
+	.footer__note {
+		opacity: .6;
+	}
 }
 
-.footer-grid {
+.footer-grid-newsletter {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: auto auto auto auto;
-	grid-template-areas: "newsletter newsletter"
-		"aboutus helplinks"
-		"currency followus"
-		"item item";
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	grid-template-areas: "newsletter-heading"
+		"newsletter-form";
 
 	@include media-breakpoint-up(lg) {
-		grid-template-columns: 2fr 1fr 1fr 1fr;
-		grid-template-rows: auto auto auto;
-		grid-template-areas: "newsletter aboutus helplinks followus"
-				"newsletter aboutus helplinks currency"
-				"newsletter aboutus helplinks item";
-		grid-column-gap: $grid-gutter-width-lg;
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas: "newsletter-heading newsletter-form";
 	}
 
-	&__newsletter {
-		grid-area: newsletter;
+	&__newsletter-heading {
+		grid-area: newsletter-heading;
 	}
 
-	&__about-us {
-		grid-area: aboutus;
+	&__newsletter-form {
+		grid-area: newsletter-form;
+	}
+}
+
+.footer-grid-nav {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto auto auto;
+	grid-template-areas: "nav-shop nav-about"
+		"nav-help item"
+		"nav-follow nav-currency";
+
+	@include media-breakpoint-up(lg) {
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+		grid-template-rows: auto;
+		grid-template-areas: "nav-shop nav-about nav-help item nav-follow nav-currency";
 	}
 
-	&__help-links {
-		grid-area: helplinks;
+	&__shop {
+		grid-area: nav-shop;
 	}
-
-	 &__followus {
-		grid-area: followus;
+	&__about {
+		grid-area: nav-about;
 	}
-
+	&__help {
+		grid-area: nav-help;
+	}
+	&__follow {
+		grid-area: nav-follow;
+	}
 	&__currency {
-		grid-area: currency;
-	}
-
-	&__support {
-		grid-area: support;
+		grid-area: nav-currency;
 	}
 
 	.dropdown .dropdown-menu {
@@ -74,3 +92,4 @@ footer {
 		top: 0;
 	}
 }
+
