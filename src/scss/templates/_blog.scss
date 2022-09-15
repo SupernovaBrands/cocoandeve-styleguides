@@ -77,6 +77,12 @@
 			margin-left: -1.6em;
 		}
 	}
+
+	@include media-breakpoint-down(md) {
+		.font-size-sm {
+			font-size: calc-em(12) !important;
+		}
+	}
 }
 
 .article__content {
