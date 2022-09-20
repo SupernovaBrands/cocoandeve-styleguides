@@ -1,0 +1,21 @@
+html.au-store {
+	.yotpo-review--abtest {
+
+		li {
+			margin-right: calc-em(8);
+		}
+
+		.col:last-child,
+		li:last-child {
+			img {
+				opacity: .2;
+			}
+
+			span {
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+	}
+}

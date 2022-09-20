@@ -547,3 +547,7 @@ if ($('.carousel--scroll__featured').length > 0) {
 if ($('.newsletter-bigger-popup').length > 0) {
 	import(/* webpackChunkName: 'newsletter-popup' */ '~mod/newsletter-popup');
 }
+
+if ($('.yotpo-review--abtest').length > 0) {
+	import(/* webpackChunkName: 'yotpo-review-abtest' */ '~mod/yotpo-review-abtest');
+}
