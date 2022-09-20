@@ -131,6 +131,10 @@
 					&--last {
 						transform: translate3d(100%, 0, 0);
 					}
+
+					.product-card__title {
+						min-height: calc-em(50);
+					}
 				}
 			}
 		}
