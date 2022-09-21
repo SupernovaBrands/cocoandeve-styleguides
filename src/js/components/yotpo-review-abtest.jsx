@@ -144,7 +144,7 @@ const YotpoReviewTest = (props) => {
 											</div>
 											{!isFirstReview && (
 												<a className="carousel-control-prev text-primary carousel-control--background" href="#None" role="button" onClick={() => { setPrevNextReview(reviewModal.prev_id); }}>
-													<span className="carousel-control-prev-icon d-flex justify-content-center align-items-center">
+													<span className="carousel-control-prev-icon d-flex justify-content-center align-items-center bg-pink-light">
 														<SvgChevronPrev className="svg" />
 													</span>
 													<span className="sr-only">
@@ -154,7 +154,7 @@ const YotpoReviewTest = (props) => {
 											)}
 											{!isLastReview && (
 												<a className="carousel-control-next text-primary carousel-control--background" href="#None" role="button" onClick={() => { setPrevNextReview(reviewModal.next_id); }}>
-													<span className="carousel-control-next-icon d-flex justify-content-center align-items-center">
+													<span className="carousel-control-next-icon d-flex justify-content-center align-items-center bg-pink-light">
 														<SvgChevronNext className="svg" />
 													</span>
 													<span className="sr-only">
@@ -179,7 +179,7 @@ const YotpoReviewTest = (props) => {
 
 											{!isFirstReview && (
 												<a className="carousel-control-prev text-primary carousel-control--background" href="#None" role="button" onClick={() => { setPrevNextReview(reviewModal.prev_id); }}>
-													<span className="carousel-control-prev-icon d-flex justify-content-center align-items-center">
+													<span className="carousel-control-prev-icon d-flex justify-content-center align-items-center bg-pink-light">
 														<SvgChevronPrev className="svg" />
 													</span>
 													<span className="sr-only">
@@ -190,7 +190,7 @@ const YotpoReviewTest = (props) => {
 
 											{!isLastReview && (
 												<a className="carousel-control-next text-primary carousel-control--background" href="#None" role="button" onClick={() => { setPrevNextReview(reviewModal.next_id); }}>
-													<span className="carousel-control-next-icon d-flex justify-content-center align-items-center">
+													<span className="carousel-control-next-icon d-flex justify-content-center align-items-center bg-pink-light">
 														<SvgChevronNext className="svg" />
 													</span>
 													<span className="sr-only">
@@ -201,7 +201,7 @@ const YotpoReviewTest = (props) => {
 
 											{carouselCount > 1 && (
 												<a href="#carouselYotpoImageAbtest" className="carousel-control-prev text-primary carousel-control--background" role="button" data-slide="prev" onClick={(e) => { e.preventDefault(); slideCarousel('prev'); }}>
-													<span className="carousel-control-prev-icon d-flex justify-content-center align-items-center">
+													<span className="carousel-control-prev-icon d-flex justify-content-center align-items-center bg-pink-light">
 														<SvgChevronPrev className="svg" />
 													</span>
 													<span className="sr-only">
@@ -211,7 +211,7 @@ const YotpoReviewTest = (props) => {
 											)}
 											{carouselCount < reviewModal.images_data.length && (
 												<a href="#carouselYotpoImageAbtest" className="carousel-control-next text-primary carousel-control--background" role="button" data-slide="next" onClick={(e) => { e.preventDefault(); slideCarousel('next'); }}>
-													<span className="carousel-control-next-icon d-flex justify-content-center align-items-center">
+													<span className="carousel-control-next-icon d-flex justify-content-center align-items-center bg-pink-light">
 														<SvgChevronNext className="svg" />
 													</span>
 													<span className="sr-only">
