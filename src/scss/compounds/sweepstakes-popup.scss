@@ -1,13 +1,15 @@
 .sweepstakes-popup {
+	// --sweepstakes-popup-bg & --sweepstakes-popup-bg-lg set on liquid inline
+	// value based on theme settings
 	.modal-content {
-		background-image: url(https://cdn.shopify.com/s/files/1/0286/1327/9779/files/Pop-Up_MOB_ROW.jpg?v=1662112218);
+		background-image: var(--sweepstakes-popup-bg);
 		background-size: 100%;
 		background-position: top center;
 		background-repeat: no-repeat;
 		border-radius: calc-em(22.5, $unit: 1rem);
 
 		@include media-breakpoint-up(lg) {
-			background-image: url(https://cdn.shopify.com/s/files/1/0286/1327/9779/files/Pop-Up_DESK_ROW.jpg?v=1662112220);
+			background-image: var(--sweepstakes-popup-bg-lg);
 			background-position: center;
 			background-size: cover;
 		}
@@ -66,36 +68,5 @@
 
 	select {
 		opacity: 0;
-	}
-}
-
-html.us-store,
-html.dev-store {
-	.sweepstakes-popup .modal-content {
-		background-image: url(https://cdn.shopify.com/s/files/1/0286/1327/9779/files/Pop-Up_MOB_US.jpg?v=1662112218);
-
-		@include media-breakpoint-up(lg) {
-			background-image: url(https://cdn.shopify.com/s/files/1/0286/1327/9779/files/Pop-Up_DESK_US.jpg?v=1662112220);
-		}
-	}
-}
-
-html.fr-store {
-	.sweepstakes-popup .modal-content {
-		background-image: url(https://cdn.shopify.com/s/files/1/0286/1327/9779/files/POP-UP_MOB_FR.jpg?v=1662365873);
-
-		@include media-breakpoint-up(lg) {
-			background-image: url(https://cdn.shopify.com/s/files/1/0286/1327/9779/files/POP-UP_DESK_FR.jpg?v=1662365874);
-		}
-	}
-}
-
-html.de-store {
-	.sweepstakes-popup .modal-content {
-		background-image: url(https://cdn.shopify.com/s/files/1/0286/1327/9779/files/POP-UP_DESK_GER.jpg?v=1662366228);
-
-		@include media-breakpoint-up(lg) {
-			background-image: url(https://cdn.shopify.com/s/files/1/0286/1327/9779/files/POP-UP_DESK_GER.jpg?v=1662366228);
-		}
 	}
 }

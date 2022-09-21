@@ -11,14 +11,13 @@ html[lang="fr"] {
 		}
     }
 
-    .playground-font-size {
-        @include font-size(2.5em);
+    .playground--simple-square strong {
+        @include font-size(2em);
 
         @include media-breakpoint-up(lg) {
-            @include font-size(3.25em);
+            @include font-size(2.625em);
         }
     }
-
 }
 
 #btt-button {
