@@ -6,6 +6,7 @@ import {
 	currentTime,
 	encryptParam,
 	decodeHtml,
+	waitFor,
 } from '~mod/utils';
 
 import SvgClose from '~svg/close.svg';
@@ -60,11 +61,11 @@ const YotpoReviewTest = (props) => {
 
 	const setPrevNextReview = (reviewId) => {
 		// get single review
-		setTimeout(() => {
+		waitFor(() => allReviews, () => {
 			const reviewToShow = allReviews.find((r) => r.id === reviewId);
 			setCarouselCount(1);
 			setReviewModal(reviewToShow);
-		}, 500);
+		});
 		return false;
 	};
 
