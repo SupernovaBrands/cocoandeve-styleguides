@@ -1,20 +1,26 @@
 html.au-store {
-	.yotpo-review--abtest {
+	.yotpo-review-section--abtest {
 
-		li {
-			margin-right: calc-em(8);
-		}
+		.yotpo-review--abtest {
+			display: block !important;
 
-		.col:last-child,
-		li:last-child {
-			img {
-				opacity: .2;
+			.col:last-child,
+			li:last-child {
+				img {
+					opacity: .2;
+				}
+
+				span {
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
 			}
 
-			span {
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
+			@include media-breakpoint-up(lg) {
+				li {
+					margin-right: calc-em(8);
+				}
 			}
 		}
 	}
