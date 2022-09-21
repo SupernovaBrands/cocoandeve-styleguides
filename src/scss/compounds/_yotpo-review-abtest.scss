@@ -4,8 +4,11 @@ html.au-store {
 		.yotpo-review--abtest {
 			display: block !important;
 
-			.col:last-child,
-			li:last-child {
+			.col--review {
+				@include make-col(1, 5);
+			}
+
+			.yotpo-review__last {
 				img {
 					opacity: .2;
 				}
@@ -19,6 +22,7 @@ html.au-store {
 
 			@include media-breakpoint-up(lg) {
 				li {
+					max-width: calc-em(57);
 					margin-right: calc-em(8);
 				}
 			}
