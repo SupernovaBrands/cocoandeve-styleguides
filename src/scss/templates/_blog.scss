@@ -80,14 +80,6 @@
 			border-top-right-radius: $border-radius-lg;
 			border-bottom-right-radius: $border-radius-lg;
 		}
-
-		&--submitted svg.checkmark {
-			height: calc-em(14);
-
-			@include media-breakpoint-down(md) {
-				margin-left: -1.6em;
-			}
-		}
 	}
 }
 
