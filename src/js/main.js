@@ -529,7 +529,7 @@ if ($('.announcement-bar__timer').length > 0) {
 // }
 
 if ($('.search-panel').length > 0) {
-	import(/* webpackChunkName: 'predictive-search' */ '~mod/search-box-abtest');
+	import(/* webpackChunkName: 'predictive-search' */ '~mod/search-box');
 }
 
 if ($('.product-subscription').length > 0) {
