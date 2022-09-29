@@ -198,7 +198,7 @@
     }
 }
 
-.search-feature-component-abtest {
+.navbar-nav--right {
     @include media-breakpoint-up(lg) {
         .nav-link {
             line-height: calc-em(16, 16);
@@ -225,37 +225,6 @@
                 transform: translate(-50%, -12.5%);
             }
         }
-    }
-}
-
-
-.search-feature-with-suggestion-abtest-active {
-    .search-feature-component-abtest {
-        display: flex !important;
-    }
-
-    .navbar-nav.justify-content-end:not(.search-feature-component-abtest),
-    .nav-link.cart:not(.search-feature-component-abtest) {
-        display: none !important;
-    }
-}
-
-.search-feature-without-suggestion-abtest-active {
-    .search-feature-component-abtest {
-        display: flex !important;
-    }
-
-    .search-panel__home {
-        display: none;
-    }
-
-    .search-panel {
-        height: auto;
-    }
-
-    .navbar-nav.justify-content-end:not(.search-feature-component-abtest),
-    .nav-link.cart:not(.search-feature-component-abtest) {
-        display: none !important;
     }
 }
 
