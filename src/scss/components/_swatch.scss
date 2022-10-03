@@ -79,11 +79,6 @@
 		outline: none; // to remove focus border on button
 	}
 
-	&.disabled,
-	&[disabled] {
-		opacity: 0.5;
-	}
-
 	@each $color, $value in $shade-colors {
 		&.#{$color} {
 			&:before {

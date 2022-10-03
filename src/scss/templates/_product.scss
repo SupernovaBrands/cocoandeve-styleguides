@@ -94,3 +94,20 @@
 		font-size: $h1-font-size;
 	}
 }
+
+.show-survey-result {
+	.quiz-result-title,
+	.quiz-price,
+	.survey-note {
+		display: block !important;
+	}
+
+	.results-swatch__original {
+		display: flex !important;
+	}
+
+	.pdp-services,
+	.swatch {
+		display: none !important;
+	}
+}

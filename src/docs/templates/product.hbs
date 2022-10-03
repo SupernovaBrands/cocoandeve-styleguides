@@ -7,7 +7,7 @@
 
 <body class="template-product">
 	{{> sections/header}}
-	<p class="text-center my-2 quiz-result-title">We found your perfect match!</p>
+	<p class="text-center my-2 quiz-result-title d-none">We found your perfect match!</p>
 	<div class="container px-g mb-4 mt-lg-5">
 		<div class="row align-items-start">
 			{{> components/product-image-carousel totalSlide=8}}
@@ -18,41 +18,45 @@
 				<h1 class="mb-2 order-lg-0">Sunny Honey Bali Bronzing Foam</h1>
 				<p class="mb-2 mb-lg-4 font-size-lg order-lg-0">Anti-cellulite, anti-aging self tan</p>
 
+				{{> compounds/review-abtest class="d-none mb-1 yotpo-review--abtest"}}
+
 				{{> compounds/launch-waitlist class="order-lg-2"}}
 
 				<form class="product-form order-lg-2 mt-1">
-					<p class="bg-primary-light py-1 text-center">
-						Not Sure which shade to get? <a href="#" class="text-primary d-block d-lg-inline text-underline">Take our Tan Quiz</a>
+					<p class="bg-gray-400 py-1 text-center">
+						Not Sure which shade to get? <a href="#" class="take-quiz-line text-body d-block d-lg-inline text-underline">Take our Tan Quiz</a>
 					</p>
 
-					{{#> components/product-variant name="product-variant" title="1x Sunny Honey Bali Bronzing Foam" value="1-x-sunny-honey-bali-bronzing-foam" checked=true class="mb-1" titleClass="font-weight-bold"}}
-						<button type="button" class="variant-swatch medium mr-1 border-primary" data-image="https://via.placeholder.com/150x150/EFADBA?text=1" data-value="medium" data-id="32068891541539"></button>
-						<button type="button" class="variant-swatch dark mr-1" data-image="https://via.placeholder.com/150x150/EFADBA?text=2" data-value="dark" data-id="32068891607075"></button>
-						<button type="button" class="variant-swatch ultra-dark" data-image="https://via.placeholder.com/150x150/EFADBA?text=3" data-value="ultra-dark" data-id="32068891639843"></button>
-						<p class="font-size-sm w-100 mt-2 mb-0 swatch-label-medium"><b>Medium</b> - Subtle glow, lighter skin tones</p>
-						<p class="font-size-sm w-100 mt-2 mb-0 swatch-label-dark d-none"><b>Dark</b> - Subtle glow, lighter skin tones</p>
-						<p class="font-size-sm w-100 mt-2 mb-0 swatch-label-ultra-dark d-none"><b>Ultra Dark</b> - Subtle glow, lighter skin tones</p>
-					{{/ components/product-variant}}
-					{{#> components/product-variant name="product-variant" title="1x Sunny Honey Bali Bronzing Bundle" value="1-x-sunny-honey-bali-bronzing-bundle" compare=true class="mb-1" titleClass="font-weight-bold" note="Ultra dark OOS waitlist, dark oos"}}
-						<button type="button" class="variant-swatch medium mr-1 border-primary" data-value="medium" data-id="32068892295203"></button>
-						<button type="button" class="variant-swatch dark mr-1 oos" data-value="dark" data-id="32068892327971"></button>
-						<button type="button" class="variant-swatch ultra-dark oos waitlist" data-value="ultra-dark" data-id="32068892360739"></button>
-						<p class="font-size-sm w-100 mt-2 mb-0 swatch-label-medium"><b>Medium</b> - Subtle glow, lighter skin tones</p>
-						<p class="font-size-sm w-100 mt-2 mb-0 swatch-label-dark d-none"><b>Dark</b> - Subtle glow, lighter skin tones</p>
-						<p class="font-size-sm w-100 mt-2 mb-0 swatch-label-ultra-dark d-none"><b>Ultra Dark</b> - Subtle glow, lighter skin
-							tones</p>
-					{{/ components/product-variant}}
-					{{#> components/product-variant name="product-variant" title="Bronzing Face Drops" value="bronzing-face-drops" compare=true class="mb-1" titleClass="font-weight-bold" note="No shade swatch test"}}
-						<button type="button" class="variant-swatch medium mr-1 border-primary" data-value="medium" data-id="32363243831331"></button>
-						<p class="font-size-sm w-100 mt-2 mb-0 swatch-label-medium"><b>Medium</b> - Subtle glow, lighter skin tones</p>
-					{{/ components/product-variant}}
+					<div class="swatch">
+						{{#> components/product-variant name="product-variant" title="1x Sunny Honey Bali Bronzing Foam" value="1-x-sunny-honey-bali-bronzing-foam" checked=true class="mb-1" titleClass="font-weight-bold"}}
+							<button type="button" class="variant-swatch medium mr-1 border-primary" data-image="https://via.placeholder.com/150x150/EFADBA?text=1" data-value="medium" data-id="32068891541539"></button>
+							<button type="button" class="variant-swatch dark mr-1" data-image="https://via.placeholder.com/150x150/EFADBA?text=2" data-value="dark" data-id="32068891607075"></button>
+							<button type="button" class="variant-swatch ultra-dark" data-image="https://via.placeholder.com/150x150/EFADBA?text=3" data-value="ultra-dark" data-id="32068891639843"></button>
+							<p class="font-size-sm w-100 mt-2 mb-0 swatch-label-medium"><b>Medium</b> - Subtle glow, lighter skin tones</p>
+							<p class="font-size-sm w-100 mt-2 mb-0 swatch-label-dark d-none"><b>Dark</b> - Subtle glow, lighter skin tones</p>
+							<p class="font-size-sm w-100 mt-2 mb-0 swatch-label-ultra-dark d-none"><b>Ultra Dark</b> - Subtle glow, lighter skin tones</p>
+						{{/ components/product-variant}}
+						{{#> components/product-variant name="product-variant" title="1x Sunny Honey Bali Bronzing Bundle" value="1-x-sunny-honey-bali-bronzing-bundle" compare=true class="mb-1" titleClass="font-weight-bold" note="Ultra dark OOS waitlist, dark oos"}}
+							<button type="button" class="variant-swatch medium mr-1 border-primary" data-value="medium" data-id="32068892295203"></button>
+							<button type="button" class="variant-swatch dark mr-1 oos" data-value="dark" data-id="32068892327971"></button>
+							<button type="button" class="variant-swatch ultra-dark oos waitlist" data-value="ultra-dark" data-id="32068892360739"></button>
+							<p class="font-size-sm w-100 mt-2 mb-0 swatch-label-medium"><b>Medium</b> - Subtle glow, lighter skin tones</p>
+							<p class="font-size-sm w-100 mt-2 mb-0 swatch-label-dark d-none"><b>Dark</b> - Subtle glow, lighter skin tones</p>
+							<p class="font-size-sm w-100 mt-2 mb-0 swatch-label-ultra-dark d-none"><b>Ultra Dark</b> - Subtle glow, lighter skin
+								tones</p>
+						{{/ components/product-variant}}
+						{{#> components/product-variant name="product-variant" title="Bronzing Face Drops" value="bronzing-face-drops" compare=true class="mb-1" titleClass="font-weight-bold" note="No shade swatch test"}}
+							<button type="button" class="variant-swatch medium mr-1 border-primary" data-value="medium" data-id="32363243831331"></button>
+							<p class="font-size-sm w-100 mt-2 mb-0 swatch-label-medium"><b>Medium</b> - Subtle glow, lighter skin tones</p>
+						{{/ components/product-variant}}
 
-					{{#> components/product-variant name="product-variant" title="Shampoo & Conditioner Set" titleClass="product-variant__title" title_subscription="Monthly Subscription" titleSubsClass="product-variant__title-subscription d-none" value="shampoo-conditioner-set" compare=true class="mb-1 product-variant--subscription" note="Super Hydrating Shampoo (250ml)" hideSwatch="true"}}
-						<button type="button" class="variant-swatch medium mr-2 border-primary" data-value="medium" data-id="32363243831331"></button>
-						<p class="font-size-sm w-100 mt-2 mb-0 swatch-label-medium"><b>Medium</b> - Subtle glow, lighter skin tones</p>
-					{{/ components/product-variant}}
+						{{#> components/product-variant name="product-variant" title="Shampoo & Conditioner Set" titleClass="product-variant__title" title_subscription="Monthly Subscription" titleSubsClass="product-variant__title-subscription d-none" value="shampoo-conditioner-set" compare=true class="mb-1 product-variant--subscription" note="Super Hydrating Shampoo (250ml)" hideSwatch="true"}}
+							<button type="button" class="variant-swatch medium mr-2 border-primary" data-value="medium" data-id="32363243831331"></button>
+							<p class="font-size-sm w-100 mt-2 mb-0 swatch-label-medium"><b>Medium</b> - Subtle glow, lighter skin tones</p>
+						{{/ components/product-variant}}
 
-					{{> components/product-variant-bundle name="product-variant" title="Glow Essentials Bundle" value="glow essentials bundle" compare=true class="mb-3"}}
+						{{> components/product-variant-bundle name="product-variant" title="Glow Essentials Bundle" value="glow essentials bundle" compare=true class="mb-3"}}
+					</div>
 
 					<div class="product-swatch-mobile fixed-bottom d-lg-none mx-g mb-2 show">
 						<div id="product-swatch-mobile"
@@ -77,7 +81,7 @@
 
 					{{> components/product-subscription }}
 
-					<div class="results-swatch py-2 border border-primary-light-second border-left-0 border-right-0 mb-2 d-flex align-items-center">
+					<div class="results-swatch d-none py-2 border border-primary-light-second border-left-0 border-right-0 mb-2 d-flex align-items-center">
 						<button type="button" class="variant-swatch variant-swatch--lg medium mr-2 border-primary" data-value="medium" data-id="32068892295203"></button>
 						<p class="mb-0"><strong>Your perfect shade – Medium</strong> <br/> will give you subtle glow</p>
 					</div>
@@ -94,7 +98,7 @@
 
 					{{> components/save-results }}
 
-					<ul class="pdp-services-abtest order-lg-2 list-unstyled row mt-3 my-4 text-center d-none d-lg-flex">
+					<ul class="pdp-services order-lg-2 list-unstyled row mt-3 my-4 text-center d-none d-lg-flex">
 						<li class="col-4 px-0 d-flex flex-column">
 							<img class="svg h1 text-secondary" src="icons/fast-delivery.svg" replace-to-svg />
 							Delivery from<br> US warehouse
@@ -109,7 +113,7 @@
 						</li>
 					</ul>
 
-					<div class="product-form-submit mb-3 mb-lg-4">
+					<div class="product-form-submit pay-wrapper mb-3 mb-lg-4">
 						<div class="mb-1">
 							or 4 interest-free installments of $15.70 by
 							<img src="{{ imageUrl }}/logo-klarna.svg" height="15px" class="ml-1 d-inline-block align-baseline" />
@@ -121,7 +125,7 @@
 
 				{{> components/product-waitlist-oos class="order-lg-2 mb-3 mb-lg-4 d-none"}}
 
-				<figure class="d-flex order-lg-2 mb-3 mb-lg-4">
+				<figure class="pdp-banner d-flex order-lg-2 mb-3 mb-lg-4">
 					<picture class="flex-shrink-0 col-5 col-lg-4 p-0">
 						<source srcset="https://via.placeholder.com/260x260.jpg/EFADBA" media="(min-width: 992px)" />
 						<img src="https://via.placeholder.com/280x200.jpg/EFADBA" class="w-100">
@@ -259,10 +263,6 @@
 					<li class="mb-2 mb-lg-3">{{> compounds/upsell-pdp remove=true}}</li>
 					<li>{{> compounds/upsell-pdp}}</li>
 				</ul>
-				<ul class="product-upsell-abtest list-unstyled mb-0 order-lg-2 d-none">
-					<li class="mb-2 mb-lg-3">{{> compounds/upsell-pdp remove=true}}</li>
-					<li>{{> compounds/upsell-pdp}}</li>
-				</ul>
 			</div>
 		</div>
 	</div>
@@ -272,7 +272,7 @@
 	{{> sections/real-result-carousel}}
 	{{> sections/sustainability}}
 
-	<div class="py-4 bg-light">
+	<div class="pt-4 pb-2 bg-light">
 		<div class="container">
 			<div class="row">
 				<h2 class="h1 mb-2 col-12 text-center">Customer Reviews</h2>

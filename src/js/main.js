@@ -473,7 +473,7 @@ $(document).ready(function () {
 	}
 
 	// tooltip
-	$('#tooltip__close').on('click', function () {
+	$('.tooltip__close').on('click', function () {
 		$(this).parent().removeClass('show');
 		setTimeout(function () {
 			$('header').addClass('overflow-hidden');
@@ -529,7 +529,7 @@ if ($('.announcement-bar__timer').length > 0) {
 // }
 
 if ($('.search-panel').length > 0) {
-	import(/* webpackChunkName: 'predictive-search' */ '~mod/search-box-abtest');
+	import(/* webpackChunkName: 'predictive-search' */ '~mod/search-box');
 }
 
 if ($('.product-subscription').length > 0) {
@@ -546,4 +546,8 @@ if ($('.carousel--scroll__featured').length > 0) {
 
 if ($('.newsletter-bigger-popup').length > 0) {
 	import(/* webpackChunkName: 'newsletter-popup' */ '~mod/newsletter-popup');
+}
+
+if ($('.yotpo-review--abtest').length > 0) {
+	import(/* webpackChunkName: 'yotpo-review-abtest' */ '~mod/yotpo-review-abtest');
 }

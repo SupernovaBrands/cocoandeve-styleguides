@@ -10,17 +10,17 @@
 		{{#if title_subscription}}
 		<p class="mb-1 font-weight-bold {{#if titleSubsClass}}{{titleSubsClass}}{{/if}}">{{ title_subscription }}</p>
 		{{/if}}
-		<p class="mb-1 font-size-sm">1x Masque + Brush</p>
+		<p class="product-variant__description mb-1 font-size-sm">1x Masque + Brush</p>
 		{{#if note}}
-		<p class="mb-1 font-size-sm">1x Other items</p>
-		<p class="mb-1 font-size-sm">1x {{note}}</p>
+		<p class="product-variant__description mb-1 font-size-sm">1x Other items</p>
+		<p class="product-variant__description mb-1 font-size-sm">1x {{note}}</p>
 		{{/if}}
 		<div class="product-swatch mb-1 {{#if hideSwatch}}d-none{{/if}}">
 			{{#if @partial-block}}
 			{{> @partial-block }}
 			{{/if}}
 		</div>
-		<p class="mb-0 font-size-sm font-weight-bold">
+		<p class="product-variant__price-label mb-0 font-size-sm font-weight-bold">
 			{{#if compare}}
 			<span class="text-linethrough mr-25 text-nowrap">$89.80</span>
 			{{/if}}
