@@ -11,20 +11,9 @@
 @include bg-variant(".bg-gray-100", $gray-100, true);
 @include bg-variant(".bg-gray-400", $gray-400, true);
 
-// Position
-.top-30 {
-	top: 30%;
-}
-
 // Border color
 .border-bg-primary-light-second {
 	border-color: $primary-light-second !important;
-}
-
-
-// Border gray
-.border-bg-gray-300 {
-	border-color: $gray-300 !important;
 }
 
 // Sticky sidebar at bottom
@@ -41,6 +30,10 @@
 // borders
 .border-primary-light-second {
 	border-color: $primary-light-second !important;
+}
+
+.border-secondary-light {
+	border-color: $secondary-light !important;
 }
 
 .bg-sm-primary-light-second {
