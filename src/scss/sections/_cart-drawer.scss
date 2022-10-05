@@ -61,6 +61,28 @@
 	.modal-footer > * {
 		margin: 0;
 	}
+
+	&__swell-redemption-item {
+		min-width: calc-em(141);
+
+		&-btn {
+			border-radius: calc-em(84);
+			height: calc-em(40);
+			border-color: $body-color !important;
+
+			&:disabled {
+				opacity: .4;
+			}
+
+			strong {
+				margin-left: calc-em(5);
+			}
+		}
+
+		&-heading {
+			max-height: calc-em(101);
+		}
+	}
 }
 
 .manual-gwp {
