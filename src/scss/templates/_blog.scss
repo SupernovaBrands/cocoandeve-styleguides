@@ -96,3 +96,35 @@
 		}
 	}
 }
+
+.badge-blog {
+	line-height: calc-em(20, 16);
+	padding: calc-em(2) calc-em(8);
+}
+
+.blog-nav-tags {
+	margin-bottom: calc-em(50, $unit: 1rem);
+	overflow-x: scroll;
+	width: auto;
+
+	@include media-breakpoint-up(lg) {
+		justify-content: center;
+	}
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	a {
+		background-color: $gray-400;
+		border-radius: calc-em(20);
+		white-space: nowrap;
+		cursor: pointer;
+
+		&.active {
+			background-color: $primary;
+			color: white !important;
+		}
+	}
+
+}
