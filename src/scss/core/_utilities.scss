@@ -85,6 +85,20 @@
 	opacity: 0;
 }
 
+// Special padding for text spacing
+.pr-25, .px-25 {
+	padding-right: $spacer * 0.25 !important;
+}
+.pl-25, .px-25 {
+	padding-left: $spacer * 0.25 !important;
+}
+.pt-25, .py-25 {
+	margin-top: $spacer * 0.25 !important;
+}
+.pb-25, .py-25 {
+	margin-bottom: $spacer * 0.25 !important;
+}
+
 // Special margin for text spacing
 .mr-25, .mx-25 {
 	margin-right: $spacer * 0.25 !important;
