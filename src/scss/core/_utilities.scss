@@ -85,6 +85,20 @@
 	opacity: 0;
 }
 
+// Special padding for text spacing, ht : half ten
+.pr-ht, .px-ht {
+	padding-right: $spacer * 0.25 !important;
+}
+.pl-ht, .px-ht {
+	padding-left: $spacer * 0.25 !important;
+}
+.pt-ht, .py-ht {
+	margin-top: $spacer * 0.25 !important;
+}
+.pb-ht, .py-ht {
+	margin-bottom: $spacer * 0.25 !important;
+}
+
 // Special margin for text spacing
 .mr-25, .mx-25 {
 	margin-right: $spacer * 0.25 !important;
