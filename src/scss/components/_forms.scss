@@ -133,3 +133,9 @@
 		}
 	}
 }
+
+.product-waitlist-form-oos {
+	input::placeholder {
+		color: $gray-600;
+	}
+}
