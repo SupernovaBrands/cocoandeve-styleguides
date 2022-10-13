@@ -529,7 +529,7 @@ if ($('.announcement-bar__timer').length > 0) {
 // }
 
 if ($('.search-panel').length > 0) {
-	import(/* webpackChunkName: 'predictive-search' */ '~mod/search-box-abtest');
+	import(/* webpackChunkName: 'predictive-search' */ '~mod/search-box');
 }
 
 if ($('.product-subscription').length > 0) {
@@ -550,4 +550,8 @@ if ($('.newsletter-bigger-popup').length > 0) {
 
 if ($('.video-loop').length) {
 	import(/* webpackChunkName: 'video-loop' */ '~mod/video-loop');
+}
+
+if ($('.yotpo-review--abtest').length > 0) {
+	import(/* webpackChunkName: 'yotpo-review-abtest' */ '~mod/yotpo-review-abtest');
 }

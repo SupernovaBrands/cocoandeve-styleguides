@@ -50,7 +50,7 @@ $h4-font-size-lg: calc-em(20);
 
 $hero-banner-font-size: calc-em(32);
 $hero-banner-font-size-lg: calc-em(72);
-$playground-font-size: calc-em(56);
+$playground-font-size: calc-em(52);
 
 // Colors
 $primary: #D62E55;
@@ -67,7 +67,7 @@ $sh-orange: #FF9900;
 $sh-orange-light: #FCF6E4;
 $green-light: #00B67A;
 $yellow-light: #f9eeca;
-$pink-light: #F9F8F8;
+$pink-light: #FFF2F4;
 
 $body-color: #151515;
 
@@ -85,6 +85,7 @@ $theme-colors: (
   'secondary': $secondary,
   'gray-400': $gray-400,
   'gray-600': $gray-600,
+  'sh-purple': $sh-purple,
 );
 
 $shade-colors: (

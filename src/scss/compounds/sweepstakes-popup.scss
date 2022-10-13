@@ -1,13 +1,15 @@
 .sweepstakes-popup {
+	// --sweepstakes-popup-bg & --sweepstakes-popup-bg-lg set on liquid inline
+	// value based on theme settings
 	.modal-content {
-		background-image: url(https://cdn.shopify.com/s/files/1/0243/8817/3888/files/Pop-Up_MOB.jpg?v=1652438600);
+		background-image: var(--sweepstakes-popup-bg);
 		background-size: 100%;
 		background-position: top center;
 		background-repeat: no-repeat;
 		border-radius: calc-em(22.5, $unit: 1rem);
 
 		@include media-breakpoint-up(lg) {
-			background-image: url(https://cdn.shopify.com/s/files/1/0243/8817/3888/files/Pop-Up_DESK.jpg?v=1652438600);
+			background-image: var(--sweepstakes-popup-bg-lg);
 			background-position: center;
 			background-size: cover;
 		}
@@ -51,10 +53,10 @@
 	}
 
 	&__toc {
-		color: $text-muted;
+		color: $gray-600;
 
 		@include media-breakpoint-up(lg) {
-			color: white;
+			color: $gray-600;
 		}
 	}
 

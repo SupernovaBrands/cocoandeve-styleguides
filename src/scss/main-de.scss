@@ -25,3 +25,13 @@ iframe#launcher {
 		}
     }
 }
+
+html[lang="de"] {
+    .playground--simple-square strong {
+        @include font-size(2em);
+
+        @include media-breakpoint-up(lg) {
+            @include font-size(2.625em);
+        }
+    }
+}

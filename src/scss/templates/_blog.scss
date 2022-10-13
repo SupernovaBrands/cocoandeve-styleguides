@@ -29,6 +29,12 @@
 		grid-area: sidebar;
 		top: 0;
 		z-index: $zindex-dropdown;
+
+		aside {
+			@include media-breakpoint-up(lg) {
+				top: 0;
+			}
+		}
 	}
 
 	.nav-link {
@@ -58,13 +64,21 @@
 
 	&__sidebar {
 		grid-area: sidebar;
+
+		@include media-breakpoint-up(lg) {
+			top: 0;
+		}
 	}
 
-	.blog-post-grid__newsletter--submitted svg {
-		height: calc-em(14);
+	.blog-post-grid__newsletter {
 
-		@include media-breakpoint-down(md) {
-			margin-left: -1.6em;
+		.form-control {
+			border-radius: $border-radius-lg;
+		}
+
+		.input-group-append .btn {
+			border-top-right-radius: $border-radius-lg;
+			border-bottom-right-radius: $border-radius-lg;
 		}
 	}
 }
