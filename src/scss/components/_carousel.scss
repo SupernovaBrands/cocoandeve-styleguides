@@ -497,9 +497,9 @@
 .blog-carousel {
 	.carousel-control-prev-icon,
 	.carousel-control-next-icon {
-		top: 22%;
+		top: calc(178px/2 - 20px);
 		@include media-breakpoint-up(lg) {
-			top: 30%;
+			top: calc(298px/2 - 20px);
 		}
 	}
 
