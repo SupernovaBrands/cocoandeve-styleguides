@@ -473,6 +473,17 @@
 			padding-top: percentage(733 / 1920);
 		}
 	}
+
+	&__note {
+		left: 0;
+		right: 0;
+		margin: 0 $grid-gutter-width;
+		transform: translateY(-100%);
+
+		@include media-breakpoint-up(md) {
+			margin: 0 10%;
+		}
+	}
 }
 
 .product-carousel,
