@@ -480,8 +480,12 @@
 		margin: 0 $grid-gutter-width;
 		transform: translateY(-100%);
 
+		@include media-breakpoint-down(md) {
+			@include font-size($font-size-sm);
+		}
+
 		@include media-breakpoint-up(md) {
-			margin: 0 10%;
+			margin: 0 map-get($spacers, 3);
 		}
 	}
 }
