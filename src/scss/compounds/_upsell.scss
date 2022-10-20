@@ -91,6 +91,13 @@
 
 .product-upsell {
 
+	&__title {
+		@include font-size($h2-font-size-lg);
+		@include media-breakpoint-up(lg) {
+			@include font-size($h2-font-size);
+		}
+	}
+
 	.btn-outline-primary {
 		border-width: 2px;
 	}
