@@ -17,6 +17,10 @@
 			src="https://via.placeholder.com/592x592"
 			{{/if}}
 			>
+			{{# if showTip }}
+				<span class="product-card__image-tip position-absolute text-white font-size-xs p-1 d-none d-lg-block">👻 Get 3 for 2 with code: HALLOWEEN 👻</span>
+				<span class="product-card__image-tip position-absolute text-white font-size-xs p-1 d-block d-lg-none rounded">👻 3 for 2</span>
+			{{/if}}
 		</picture>
 	</noscript>
 	{{#if badge }}
