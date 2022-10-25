@@ -1,0 +1,15 @@
+html.uk-store {
+	.modal-cookies--abtest {
+		.modal-cookies__text {
+			@include font-size($font-size-sm);
+			@include media-breakpoint-up(lg) {
+				@include font-size($font-size-base);
+			}
+		}
+
+		@include media-breakpoint-down(md) {
+			position: fixed;
+			bottom: $grid-gutter-width;
+		}
+	}
+}
