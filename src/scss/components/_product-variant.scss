@@ -33,10 +33,18 @@
 			border-color: $primary;
 		}
 
+		~ .custom-control-label .product-variant__description {
+			display: none;
+		}
+
 		&:checked ~ .custom-control-label {
 			border-color: $primary !important;
 			.product-swatch,
 			.product-variant__note {
+				display: block;
+			}
+
+			.product-variant__description {
 				display: block;
 			}
 		}
@@ -58,5 +66,12 @@
 
 	.text-linethrough {
 		color: $body-color;
+	}
+}
+
+@include media-breakpoint-down(md) {
+	.product-form .swatch {
+		display: flex;
+		flex-wrap: wrap-reverse;
 	}
 }
