@@ -23,7 +23,7 @@ html.uk-store {
 				border-color: $primary;
 				width: calc-em(16);
 				height: calc-em(16);
-				margin-top: calc-em(5);
+				margin-top: $spacer * 0.25;
 			}
 
 			.custom-control-input:checked ~ .custom-control-label {
