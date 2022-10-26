@@ -1,9 +1,29 @@
 <div class="modal fade" id="cookiesBannerModal" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-cookies--abtest modal-md mx-g mx-lg-auto" role="document">
-        <div class="modal-content position-relative overflow-hidden border-0 rounded-sm px-3 px-lg-0 py-g">
-			<p class="modal-cookies__text text-center mb-g">We use cookies to enhance your browsing experience, analyse traffic and serve tailored advertisements. <a href="#" class="text-body text-underline">Find out more</a></p>
+        <div class="modal-content position-relative overflow-hidden border-0 rounded-sm px-2 py-g">
+			<p class="modal-cookies__text text-center mb-g px-1 px-lg-0">We use cookies to enhance your browsing experience, analyse traffic and serve tailored advertisements. <a href="#" class="text-body text-underline">Find out more</a></p>
+			<div class="collapse px-lg-1" id="cookieBannerCollapse">
+				<div class="custom-control custom-checkbox">
+					<input type="checkbox" checked="checked" class="custom-control-input" value="" id="cookieBanner1">
+					<label class="custom-control-label mb-1" for="cookieBanner1">
+						<span class="font-size-xs">Functional: These cookies are required for basic site functionality and are therefore always enabled.</span>
+					</label>
+				</div>
+				<div class="custom-control custom-checkbox">
+					<input type="checkbox" checked="checked" class="custom-control-input" value="" id="cookieBanner2">
+					<label class="custom-control-label mb-1" for="cookieBanner2">
+						<span class="font-size-xs">Perfomance: These cookies allow us to improve the site’s functionality by tracking usage on this website.</span>
+					</label>
+				</div>
+				<div class="custom-control custom-checkbox">
+					<input type="checkbox" checked="checked" class="custom-control-input" value="" id="cookieBanner3">
+					<label class="custom-control-label mb-3" for="cookieBanner3">
+						<span class="font-size-xs">Social Media & Advertising: These cookies collect imformation to help better tailor advertising to your interests, both within and beyond Coco & Eve website.</span>
+					</label>
+				</div>
+			</div>
 			<div class="d-flex align-items-center justify-content-center">
-				<a href="#" class="text-body font-size-sm text-underline mx-1">Change</a>
+				<a data-toggle="collapse" href="#cookieBannerCollapse" role="button" aria-expanded="false" aria-controls="cookieBannerCollapse" class="text-body font-size-sm text-underline mx-1">Change</a>
 				<a href="#" class="btn btn-sm btn-primary mx-1" data-dismiss="modal">Got it</a>
 			</div>
 		</div>
