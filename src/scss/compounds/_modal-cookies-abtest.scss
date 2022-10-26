@@ -1,0 +1,40 @@
+html.uk-store {
+	.cookies-banner--abtest {
+		.cookies-banner {
+			display: none;
+		}
+
+		.modal-cookies-banner {
+
+			@include media-breakpoint-down(md) {
+				position: fixed;
+				bottom: $grid-gutter-width;
+			}
+
+			.modal-cookies__text {
+				@include font-size($font-size-sm);
+				@include media-breakpoint-up(lg) {
+					@include font-size($font-size-base);
+				}
+			}
+
+			.custom-control-label::before,
+			.custom-control-label::after {
+				border-color: $primary;
+				width: calc-em(16);
+				height: calc-em(16);
+				margin-top: $spacer * 0.25;
+			}
+
+			.custom-control-input:checked ~ .custom-control-label {
+				&::before {
+					background-color: $primary;
+				}
+
+				&::after {
+					background-image: url(icon-svg('check.svg', '#fff'));
+				}
+			}
+		}
+	}
+}
