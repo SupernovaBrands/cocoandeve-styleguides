@@ -1,33 +1,39 @@
 html.uk-store {
-	.modal-cookies--abtest {
-
-		@include media-breakpoint-down(md) {
-			position: fixed;
-			bottom: $grid-gutter-width;
+	.cookies-banner--abtest {
+		.cookies-banner {
+			display: none;
 		}
 
-		.modal-cookies__text {
-			@include font-size($font-size-sm);
-			@include media-breakpoint-up(lg) {
-				@include font-size($font-size-base);
-			}
-		}
+		.modal-cookies-banner {
 
-		.custom-control-label::before,
-		.custom-control-label::after {
-			border-color: $primary;
-			width: calc-em(16);
-			height: calc-em(16);
-			margin-top: calc-em(5);
-		}
-
-		.custom-control-input:checked ~ .custom-control-label {
-			&::before {
-				background-color: $primary;
+			@include media-breakpoint-down(md) {
+				position: fixed;
+				bottom: $grid-gutter-width;
 			}
 
-			&::after {
-				background-image: url(icon-svg('check.svg', '#fff'));
+			.modal-cookies__text {
+				@include font-size($font-size-sm);
+				@include media-breakpoint-up(lg) {
+					@include font-size($font-size-base);
+				}
+			}
+
+			.custom-control-label::before,
+			.custom-control-label::after {
+				border-color: $primary;
+				width: calc-em(16);
+				height: calc-em(16);
+				margin-top: calc-em(5);
+			}
+
+			.custom-control-input:checked ~ .custom-control-label {
+				&::before {
+					background-color: $primary;
+				}
+
+				&::after {
+					background-image: url(icon-svg('check.svg', '#fff'));
+				}
 			}
 		}
 	}
