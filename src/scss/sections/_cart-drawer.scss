@@ -61,6 +61,10 @@
 	.modal-footer > * {
 		margin: 0;
 	}
+
+	&__items-tip {
+		background-color: $body-color;
+	}
 }
 
 .manual-gwp {

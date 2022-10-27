@@ -47,6 +47,9 @@ export default class Cart extends React.Component {
 			shippingMeter: {},
 			discountMeter: {},
 			recentProducts: [],
+			cartItemsTip: {
+				enabled: true,
+			},
 		};
 	}
 
@@ -566,6 +569,7 @@ export default class Cart extends React.Component {
 			shippingMeter,
 			discountMeter,
 			recentProducts,
+			cartItemsTip,
 		} = this.state;
 		return (
 			<div className="modal-dialog modal-dialog-scrollable modal-md m-0 w-100 mh-100 float-right">
@@ -654,6 +658,17 @@ export default class Cart extends React.Component {
 										/>
 									))}
 								</ul>
+
+								{cartItemsTip.enabled && (
+									<div className="p-1 cart-drawer__items-tip text-white rounded text-center">
+										<p className="mb-0">
+											<span className="mr-2 font-size-sm">👻</span>
+											Add one more item,
+											<span className="ml-2 font-size-sm">👻</span>
+										</p>
+										<p className="mb-0">and get the third FREE* with code: XXXX</p>
+									</div>
+								)}
 
 								{manualGwp.enabled && (
 									<>
