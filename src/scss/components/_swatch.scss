@@ -142,4 +142,14 @@
 			background-image: url(asset-url('ce-brush.svg'));
 		}
 	}
+	&.hot-pink {
+		&:before {
+			background-color: #D62E55;
+		}
+	}
+	&.powder-pink {
+		&:before {
+			background-color: #F5DADF;
+		}
+	}
 }
