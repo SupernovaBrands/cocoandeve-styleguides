@@ -551,3 +551,7 @@ if ($('.newsletter-bigger-popup').length > 0) {
 if ($('.video-loop').length) {
 	import(/* webpackChunkName: 'video-loop' */ '~mod/video-loop');
 }
+
+if ($('#exit-intent-popup').length > 0) {
+	import(/* webpackChunkName: 'exit-intent' */ '~mod/exit-intent');
+}
