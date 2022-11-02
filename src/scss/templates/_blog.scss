@@ -81,6 +81,22 @@
 			border-bottom-right-radius: $border-radius-lg;
 		}
 	}
+
+	&__tags {
+		overflow-x: scroll;
+		width: auto;
+		
+		a {
+			background-color: $gray-400;
+			border-radius: 1.25em;
+			white-space: nowrap;
+
+			&.active {
+				background-color: $primary;
+    			color: $white !important;
+			}
+		}
+	}
 }
 
 .article__content {
