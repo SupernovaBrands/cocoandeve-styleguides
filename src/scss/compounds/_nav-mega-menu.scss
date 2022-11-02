@@ -1,33 +1,27 @@
 .nav-mega-menu {
-    left: 0;
-    border-top: 1px solid #000000;
-    margin-top: 18px;
+	left: 0;
+	border-top: 1px solid #000000;
+	margin-top: 18px;
 
-    &:before {
-        content: ' ';
-        background-color: transparent;
-        width: 100%;
-        height: 20px;
-        position: absolute;
-        margin-top: -20px;
-    }
-
-    .container {
-        max-width: 1000px;
-    }
-
-
+	&:before {
+		content: ' ';
+		background-color: transparent;
+		width: 100%;
+		height: calc-em(20);
+		position: absolute;
+		margin-top: -#{calc-em(20)};
+	}
 }
 html.au-store {
-    .navigation-dropdown-abtest {
-        .navbar__secondary {
-            .nav-item {
-                &:hover {
-                    .nav-mega-menu {
-                        display: block !important;
-                    }
-                }
-            }
-        }
-    }
+	.navigation-dropdown-abtest {
+		.navbar__secondary {
+			.nav-item {
+				&:hover {
+					.nav-mega-menu {
+						display: block !important;
+					}
+				}
+			}
+		}
+	}
 }
