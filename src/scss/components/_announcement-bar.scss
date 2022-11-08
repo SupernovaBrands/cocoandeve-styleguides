@@ -4,7 +4,36 @@
         color: $secondary;
     }
 
-    &__timer ul {
-        border-bottom: 2px solid #fff;
+    &__timer {
+        &__title {
+            @include media-breakpoint-down(lg) {
+                font-size: 12px;
+                text-align: left;
+                width: 25%;
+            }
+        }
+
+        .list-inline-item {
+            @include media-breakpoint-down(lg) {
+                font-size: calc-em(20);
+            }
+            &:not(:first-child) {
+                &:before {
+                    content: ':';
+                    position: absolute;
+                    left: -15px;
+                }
+            }
+            
+            span {
+                display: block;
+                font-size: calc-em(9);
+                font-weight: normal;
+
+                @include media-breakpoint-up(lg) {
+                    font-size: calc-em(10);
+                }
+            }
+        }
     }
 }
