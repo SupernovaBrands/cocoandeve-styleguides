@@ -23,4 +23,8 @@
 		opacity: 0;
 	}
 
+	.btn-primary[disabled] {
+		background-color: $gray-500;
+		border-color: $gray-500;
+	}
 }
