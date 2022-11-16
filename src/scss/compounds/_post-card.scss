@@ -11,6 +11,36 @@
       }
     }
   }
+  
+  &__tags a {
+    padding: calc-em(4, 12) calc-em(10, 12);
+    margin-right: calc-em(4, 12);
+
+    &.new {
+      background-color: $secondary;
+      color: $white;
+    }
+
+    &.hot {
+      background-color: $primary;
+      color: $white;
+    }
+
+    &.tan {
+      background-color: $yellow-light;
+      color: $body-color;
+    }
+
+    &.hair {
+      background-color: $secondary-light;
+      color: $body-color;
+    }
+
+    &.body {
+      background-color: $pink-light;
+      color: $body-color;
+    }
+  }
 
   .blog__sidebar & {
     @include media-breakpoint-down(md) {
