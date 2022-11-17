@@ -104,6 +104,10 @@
 	}
 
 	&__recomendation {
+		article {
+			height: 100%;
+		}
+
 		@include media-breakpoint-down(lg) {
 			background-color: white !important;
 		}
