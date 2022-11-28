@@ -78,6 +78,12 @@
 		&-heading {
 			max-height: calc-em(101);
 		}
+
+		picture {
+			background-color: $pink-product;
+			border-top-right-radius: $border-radius-lg;
+			border-top-left-radius: $border-radius-lg;
+		}
 	}
 }
 
