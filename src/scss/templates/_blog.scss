@@ -113,19 +113,17 @@
 		}
 	}
 
-	.blog-post-table {
-		&__content {
-			.table-item {
-				color: $body-color;
-				border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
-				&:hover {
-					text-decoration: none;
-				}
-				& + .table-item {
-					&::before {
-						content: '|';
-						float: none;
-					}
+	.blog-post-table__content {
+		.table-item {
+			color: $body-color;
+			border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
+			&:hover {
+				text-decoration: none;
+			}
+			& + .table-item {
+				&::before {
+					content: '|';
+					float: none;
 				}
 			}
 		}
@@ -194,7 +192,7 @@
 		color: $primary;
 	}
 
-	body.btt-btn--show & {
+	&.btt-btn--show {
 		opacity: 1;
 		display: flex;
 	}
