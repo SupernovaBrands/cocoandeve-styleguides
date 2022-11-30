@@ -162,7 +162,6 @@
 }
 
 .how-to-wrapper {
-	picture svg,
 	figure svg {
 		left: 0;
 		right: 0;
@@ -178,7 +177,7 @@
 		}
 	}
 
-	figure svg {
+	.list-unstyled figure svg {
 		width: calc-em(52);
 		height: calc-em(52);
 	}
