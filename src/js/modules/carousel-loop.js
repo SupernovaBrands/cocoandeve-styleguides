@@ -25,8 +25,9 @@ $(document).ready(function () {
 				idx += 1;
 
 				// special case for carousel centered we would need plus 1, as we have negative offset x on carousel-inner
-				if (e.direction === 'right') {
-					$(this).find(`.carousel-item:nth-child(${$(this).find('.carousel-item.active').index() + 1 + itemsPerSlide})`).addClass('carousel-item--last');
+				// move the last carousel item to the first element when direction left and active element is first index
+				if (e.direction === 'right' && idx === 1) {
+					$(this).find('.carousel-item:last-child').prependTo($(this).find('.carousel-inner'));
 				}
 			}
 
@@ -43,8 +44,15 @@ $(document).ready(function () {
 			}
 		});
 
-		$('.carousel--loop').on('slid.bs.carousel', function () {
-			$(this).find('.carousel-item--last').removeClass('carousel-item--last');
+		/*
+			fix direction left
+			moving carousel item to the before active element when active element is on first index when load page
+		*/
+		$('.carousel--loop').each(function () {
+			const activeIndex = $(this).find('.carousel-item.active').index();
+			if (activeIndex === 0) {
+				$(this).find('.carousel-item:last-child').prependTo($(this).find('.carousel-inner'));
+			}
 		});
 	}
 });

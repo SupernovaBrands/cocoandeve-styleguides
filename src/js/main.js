@@ -480,7 +480,7 @@ $(document).ready(function () {
 		}, 500);
 	});
 
-	$('#tooltip__show').on('click', function () {
+	$('.tooltip__show').on('click', function () {
 		$('.navbar > .container').addClass('position-relative');
 		$('.tooltip:not(.tooltip--discount-applied)').addClass('show');
 		$('header').removeClass('overflow-hidden');
@@ -546,6 +546,10 @@ if ($('.carousel--scroll__featured').length > 0) {
 
 if ($('.newsletter-bigger-popup').length > 0) {
 	import(/* webpackChunkName: 'newsletter-popup' */ '~mod/newsletter-popup');
+}
+
+if ($('.video-loop').length) {
+	import(/* webpackChunkName: 'video-loop' */ '~mod/video-loop');
 }
 
 if ($('#exit-intent-popup').length > 0) {

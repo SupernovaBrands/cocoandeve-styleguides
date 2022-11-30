@@ -41,7 +41,7 @@
 					</div>
 					<input type="text" class="form-control" id="exampleSearch" placeholder="Search">
 					<div class="input-group-append">
-						<a class="input-group-text search-box__close align-items-center" href="#" role="button">
+						<a class="input-group-text search-box__close align-items-center" href="#" role="button" aria-label="Close search box">
 						<img class="svg" src="icons/close.svg" replace-to-svg />
 						</a>
 					</div>
@@ -50,17 +50,14 @@
 					</div>
 				</div>
 			</div>
-			<nav aria-label="breadcrumb">
-				<ol class="breadcrumb mb-0 d-block overflow-hidden text-nowrap">
-					<li class="breadcrumb-item d-inline">
-						<a class="text-underline breadcrumb-item__link" href="/cocoandeve-styleguides/docs/templates/blog.html">Home</a>
-					</li>
-					<li class="breadcrumb-item d-inline">
-						<a class="text-underline breadcrumb-item__link" href="/cocoandeve-styleguides/docs/templates/blog.html">Category</a>
-					</li>
-					<li class="breadcrumb-item active d-inline" aria-current="page">The 5 Rules of Hair Masking The 5 Rules of Hair Masking</li>
-				</ol>
-			</nav>
+			<h1 class="text-center mb-2">COCO &amp; EVE BLOG</h1>
+			<div class="blog-nav-tags mb-4 d-flex mt-2">
+				<a class="mr-1 py-1 px-2 text-decoration-none active">All</a>
+				<a class="mr-1 py-1 px-2 text-decoration-none">Hair</a>
+				<a class="mr-1 py-1 px-2 text-decoration-none">Tan</a>
+				<a class="mr-1 py-1 px-2 text-decoration-none">Body</a>
+				<a class="mr-1 py-1 px-2 text-decoration-none">How to's</a>
+			</div>
 			<article class="blog-post-grid row mt-2 mt-lg-3 mb-4">
 				<div class="blog-post-grid__content col-12 d-lg-block">
 					<h1 class="text-center">The 5 Rules of Hair Masking</h1>
@@ -138,92 +135,57 @@
 				</div>
 
 				<aside class="blog-post-grid__sidebar position-lg-sticky col-12 mt-2 mt-lg-0 mb-3 mb-lg-auto align-self-end d-flex d-lg-block flex-wrap">
-					<section class="no-gutters__in-container sidebar order-2 bg-primary-light">
-						<h2 class="mb-3 text-center text-lg-left d-none d-lg-block h1">Popular reads</h2>
+					<section class="no-gutters__in-container sidebar order-2 bg-gray-400">
+						<h2 class="mb-3 text-center d-none d-lg-block h1">Popular reads</h2>
 						<div class="slide carousel--sidebar">
 							<ol class="carousel-indicators carousel-indicators--primary mb-0 d-lg-none">
 								<li data-target=".carousel--sidebar" data-slide-to="0" class="rounded-circle border-0 active"></li>
 								<li data-target=".carousel--sidebar" data-slide-to="1" class="rounded-circle border-0 active"></li>
 							</ol>
+							
 							<ul class="list-unstyled carousel-inner mb-0 pb-1">
 								<li class="carousel-item active">
-									<article class="post-card mb-2 mb-lg-3">
-										<h3><a href="/cocoandeve-styleguides/docs/templates/article.html" class="link-secondary">5 things you’re doing wrong with your hair care routine</a></h3>
-										<p class="mt-1 mb-0">Give these myths the brush off for a healthy scalp & shiny hair!</p>
+									<article class="post-card d-flex flex-grow-1 mb-3">
+										<picture class="flex-shrink-0 mr-1">
+											<source srcset="//cdn.shopify.com/s/files/1/0243/8817/3888/products/PDP_BondBuildingPre-Shampoo_90x90_crop_center.jpg?v=1663207008" media="(min-width: 992px)">
+											<a href="/products/bond-building-pre-shampoo-treatment">
+												<img src="//cdn.shopify.com/s/files/1/0243/8817/3888/products/PDP_BondBuildingPre-Shampoo_90x90_crop_center.jpg?v=1663207008" class="w-100" loading="lazy" alt="Bond Building Pre-Shampoo Treatment">
+											</a>
+										</picture>
+										<figcaption class="d-flex flex-column font-size-sm">
+											<h3><a href="/cocoandeve-styleguides/docs/templates/article.html" class="link-secondary">6 Scalp Care Myths – Busted!</a></h3>
+											<p class="mb-0">Give these myths the brush off for a healthy scalp & shiny hair!</p>
+										</figcaption>
 									</article>
-									<article class="post-card mb-2 mb-lg-3">
-										<h3><a href="/cocoandeve-styleguides/docs/templates/article.html" class="link-secondary">5 things you’re doing wrong with your hair care routine</a></h3>
-										<p class="mt-1 mb-0">Give these myths the brush off for a healthy scalp & shiny hair!</p>
+									<article class="post-card d-flex flex-grow-1 mb-3">
+										<picture class="flex-shrink-0 mr-1">
+											<source srcset="//cdn.shopify.com/s/files/1/0243/8817/3888/products/PDP_BondBuildingPre-Shampoo_90x90_crop_center.jpg?v=1663207008" media="(min-width: 992px)">
+											<a href="/products/bond-building-pre-shampoo-treatment">
+												<img src="//cdn.shopify.com/s/files/1/0243/8817/3888/products/PDP_BondBuildingPre-Shampoo_90x90_crop_center.jpg?v=1663207008" class="w-100" loading="lazy" alt="Bond Building Pre-Shampoo Treatment">
+											</a>
+										</picture>
+										<figcaption class="d-flex flex-column font-size-sm">
+											<h3><a href="/cocoandeve-styleguides/docs/templates/article.html" class="link-secondary">6 Scalp Care Myths – Busted!</a></h3>
+											<p class="mb-0">Give these myths the brush off for a healthy scalp & shiny hair!</p>
+										</figcaption>
 									</article>
 								</li>
-								<li class="carousel-item">
-									<article class="post-card mb-2 mb-lg-0">
-										<h3><a href="/cocoandeve-styleguides/docs/templates/article.html" class="link-secondary">5 things you’re doing wrong with your hair care routine</a></h3>
-										<p class="mt-1 mb-0">Give these myths the brush off for a healthy scalp & shiny hair!</p>
+								<li class="carousel-item active">
+									<article class="post-card d-flex flex-grow-1 mb-0">
+										<picture class="flex-shrink-0 mr-1">
+											<source srcset="//cdn.shopify.com/s/files/1/0243/8817/3888/products/PDP_BondBuildingPre-Shampoo_90x90_crop_center.jpg?v=1663207008" media="(min-width: 992px)">
+											<a href="/products/bond-building-pre-shampoo-treatment">
+												<img src="//cdn.shopify.com/s/files/1/0243/8817/3888/products/PDP_BondBuildingPre-Shampoo_90x90_crop_center.jpg?v=1663207008" class="w-100" loading="lazy" alt="Bond Building Pre-Shampoo Treatment">
+											</a>
+										</picture>
+										<figcaption class="d-flex flex-column font-size-sm">
+											<h3><a href="/cocoandeve-styleguides/docs/templates/article.html" class="link-secondary">6 Scalp Care Myths – Busted!</a></h3>
+											<p class="mb-0">Give these myths the brush off for a healthy scalp & shiny hair!</p>
+										</figcaption>
 									</article>
 								</li>
 							</ul>
 						</div>
-					</section>
-					<section class="no-gutters__in-container sidebar mt-3 mt-lg-n2 pt-lg-0 bg-primary-light">
-						<h4 class="text-center text-lg-left mb-2 h1 true">Shop The Article</h4>
-						<ul class="list-unstyled mb-0">
-							<li class="mb-2">
-								<form class="upsell d-flex align-items-center">
-									<figure class="d-flex flex-grow-1 mb-0">
-										<picture class="flex-shrink-0">
-											<source srcset="https://via.placeholder.com/112x136.jpg/EFADBA" media="(min-width: 992px)" />
-											<img src="https://via.placeholder.com/150x208.jpg/EFADBA" class="w-100" />
-										</picture>
-										<figcaption class="d-flex flex-column font-size-sm">
-											<a class="upsell__title font-weight-bold" href="{{product.url}}">That’s a wrap bundle</a>
-											<span class="upsell__price">
-												<span class="compare text-primary font-weight-bold">£XX.XX</span>
-												£XX.XX
-											</span>
-										</figcaption>
-									</figure>
-									<a href="#" class="flex-column flex-shrink-0 d-flex justify-content-center align-items-center mr-1 ml-1 upsell_addbtn upsell__add">
-										<img class="svg text-primary" src="icons/plus-circle.svg" replace-to-svg />
-									</a>
-									<span class="flex-column flex-shrink-0 justify-content-center align-items-center mr-1 ml-1 upsell_spinner upsell__spinner">
-										<img class="svg text-primary" src="icons/loading.svg" replace-to-svg />
-									</span>
-									<span class="flex-column flex-shrink-0 justify-content-center align-items-center mr-1 ml-1 upsell_removebtn upsell__remove">
-										<img class="svg text-primary" src="icons/check-circle.svg" replace-to-svg />
-										<span class="text-primary"><b>Remove</b></span>
-									</span>
-								</form>
-							</li>
-							<li>
-								<form class="upsell d-flex align-items-center">
-									<figure class="d-flex flex-grow-1 mb-0">
-										<picture class="flex-shrink-0">
-											<source srcset="https://via.placeholder.com/112x136.jpg/EFADBA" media="(min-width: 992px)" />
-											<img src="https://via.placeholder.com/150x208.jpg/EFADBA" class="w-100" />
-										</picture>
-										<figcaption class="d-flex flex-column font-size-sm">
-											<a class="upsell__title font-weight-bold" href="{{product.url}}">Sunny Honey Bali Bronzing Foam</a>
-											<span class="upsell__price">
-												<span class="text-linetrough">£XX.XX</span>
-												<span class="text-primary font-weight-bold">£XX.XX</span>
-												<span class="save text-primary font-weight-bold d-block">(Save 20%)</span>
-											</span>
-										</figcaption>
-									</figure>
-									<a href="#" class="flex-column flex-shrink-0 d-flex justify-content-center align-items-center mr-1 ml-1 upsell_addbtn upsell__add">
-										<img class="svg text-primary" src="icons/plus-circle.svg" replace-to-svg />
-									</a>
-									<span class="flex-column flex-shrink-0 justify-content-center align-items-center mr-1 ml-1 upsell_spinner upsell__spinner">
-										<img class="svg text-primary" src="icons/loading.svg" replace-to-svg />
-									</span>
-									<span class="flex-column flex-shrink-0 justify-content-center align-items-center mr-1 ml-1 upsell_removebtn upsell__remove">
-										<img class="svg text-primary" src="icons/check-circle.svg" replace-to-svg />
-										<span class="text-primary"><b>Remove</b></span>
-									</span>
-								</form>
-							</li>
-						</ul>
 					</section>
 				</aside>
 
@@ -253,44 +215,82 @@
 		</div>
 	</div>
 
-	<div class="mobile-wrapper bg-primary-light">
+	<div class="blog-post-grid__shop-articles py-5">
+		<div class="container">
+			<h4 class="h1 text-center">Shop this article</h4>
+			<div class="carousel slide carousel--loop" id="new" role="tabpanel" data-slide-number="4">
+				<div class="carousel--centered pt-2">
+					<div class="carousel-inner row flex-nowrap mx-0" role="listbox">
+						{{> components/product-card-carousel active="active" title="Sunny Honey Bali Bronzing Bundle" compare_price="$44.90" price="$34.90" carousel=true }}
+						{{> components/product-card-carousel title="Bronzing Face Drops" compare_price="$44.90" price="$34.90" swatch="true" swatch_shade="true" carousel=true square_badge="New" }}
+						{{> components/product-card-carousel title="Sunny Honey Bali Bronzing Foam" compare_price="$44.90" price="$34.90" swatch="true" swatch_style="true" carousel=true }}
+						{{> components/product-card-carousel title="Like A Virgin Hair Masque" compare_price="$44.90" price="$34.90" carousel=true }}
+					</div>
+				</div>
+				<a class="carousel-control carousel-control-prev carousel-control--background floating-out-left justify-content-start text-primary d-lg-none"
+					href="#new" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon d-flex justify-content-center align-items-center" aria-hidden="true"><img class="svg" src="icons/chevron-prev.svg" replace-to-svg /></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control carousel-control-next carousel-control--background floating-out-right justify-content-end text-primary d-lg-none"
+					href="#new" role="button" data-slide="next">
+					<span class="carousel-control-next-icon d-flex justify-content-center align-items-center" aria-hidden="true"><img class="svg" src="icons/chevron-next.svg" replace-to-svg /></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="blog-post-grid__recomendation mobile-wrapper bg-pink-light">
 		<div class="container pt-3 pb-lg-1">
 			<h3 class="text-center h1">You might also like</h3>
-			<ul class="row mt-2 mt-lg-3 mb-0 list-unstyled">
+			<ul class="row mt-2 mt-lg-3 mb-0 mb-lg-4 list-unstyled">
 				<li class="col-12 col-lg-4">
-					<article class="post-card mb-4 mb-lg-3">
-						<figure class="mb-2 no-gutters__in-container">
+					<article class="post-card mb-4 mb-lg-0 bg-white no-gutters__in-container">
+						<figure class="mb-2">
 							<a href="/cocoandeve-styleguides/docs/templates/article.html" class="hover-overlay d-block">
-								<img src="https://via.placeholder.com/375x190.jpg/EFADBA" class="w-100">
+								<img src="https://via.placeholder.com/375x190.jpg/EFADBA" class="w-100" alt="Img Alt">
 							</a>
 						</figure>
-						<time class="d-block mb-1">04 May, 2020</time>
-						<h2><a href="/cocoandeve-styleguides/docs/templates/article.html" class="link-secondary">5 things you’re doing wrong with your hair care routine</a></h2>
-						<p class="mt-1 mb-0">Give these myths the brush off for a healthy scalp & shiny hair!</p>
+						<div class="post-card__tags px-3 mb-2">
+							<a href="/blogs/news/tagged/tan" class="text-decoration-none rounded tan">Tan</a>
+							<a href="/blogs/news/tagged/tan" class="text-decoration-none rounded hot">Hot</a>
+						</div>
+						<h2 class="px-3"><a href="/cocoandeve-styleguides/docs/templates/article.html" class="link-secondary">5 things you’re doing wrong with your hair care routine</a></h2>
+						<p class="mt-1 mb-0 px-3 pb-1">Give these myths the brush off for a healthy scalp & shiny hair!</p>
+						<a href="" class="px-3 pb-2 d-block">Read more <img class="svg font-size-xs" src="icons/chevron-next.svg" replace-to-svg></a>
 					</article>
 				</li>
 				<li class="col-12 col-lg-4">
-					<article class="post-card mb-4 mb-lg-3">
-						<figure class="mb-2 no-gutters__in-container">
+					<article class="post-card mb-4 mb-lg-0 bg-white no-gutters__in-container">
+						<figure class="mb-2">
 							<a href="/cocoandeve-styleguides/docs/templates/article.html" class="hover-overlay d-block">
-								<img src="https://via.placeholder.com/375x190.jpg/EFADBA" class="w-100">
+								<img src="https://via.placeholder.com/375x190.jpg/EFADBA" class="w-100" alt="Img Alt">
 							</a>
 						</figure>
-						<time class="d-block mb-1">04 May, 2020</time>
-						<h2><a href="/cocoandeve-styleguides/docs/templates/article.html" class="link-secondary">5 things you’re doing wrong with your hair care routine</a></h2>
-						<p class="mt-1 mb-0">Give these myths the brush off for a healthy scalp & shiny hair!</p>
+						<div class="post-card__tags px-3 mb-2">
+							<a href="/blogs/news/tagged/tan" class="text-decoration-none rounded tan">Tan</a>
+							<a href="/blogs/news/tagged/tan" class="text-decoration-none rounded hair">Hair</a>
+						</div>
+						<h2 class="px-3"><a href="/cocoandeve-styleguides/docs/templates/article.html" class="link-secondary">5 things you’re doing wrong with your hair care routine</a></h2>
+						<p class="mt-1 mb-0 px-3 pb-1">Give these myths</p>
+						<a href="" class="px-3 pb-2 d-block">Read more <img class="svg font-size-xs" src="icons/chevron-next.svg" replace-to-svg></a>
 					</article>
 				</li>
 				<li class="col-12 col-lg-4">
-					<article class="post-card mb-4 mb-lg-3">
-						<figure class="mb-2 no-gutters__in-container">
+					<article class="post-card mb-4 mb-lg-0 bg-white no-gutters__in-container">
+						<figure class="mb-2">
 							<a href="/cocoandeve-styleguides/docs/templates/article.html" class="hover-overlay d-block">
-								<img src="https://via.placeholder.com/375x190.jpg/EFADBA" class="w-100">
+								<img src="https://via.placeholder.com/375x190.jpg/EFADBA" class="w-100" alt="Img Alt">
 							</a>
 						</figure>
-						<time class="d-block mb-1">04 May, 2020</time>
-						<h2><a href="/cocoandeve-styleguides/docs/templates/article.html" class="link-secondary">5 things you’re doing wrong with your hair care routine</a></h2>
-						<p class="mt-1 mb-0">Give these myths the brush off for a healthy scalp & shiny hair!</p>
+						<div class="post-card__tags px-3 mb-2">
+							<a href="/blogs/news/tagged/tan" class="text-decoration-none rounded tan">Tan</a>
+							<a href="/blogs/news/tagged/tan" class="text-decoration-none rounded hair">Hair</a>
+						</div>
+						<h2 class="px-3"><a href="/cocoandeve-styleguides/docs/templates/article.html" class="link-secondary">5 things you’re doing wrong with your hair care routine</a></h2>
+						<p class="mt-1 mb-0 px-3 pb-1">Give these myths the brush off for a healthy scalp & shiny hair!</p>
+						<a href="" class="px-3 pb-2 d-block">Read more <img class="svg font-size-xs" src="icons/chevron-next.svg" replace-to-svg></a>
 					</article>
 				</li>
 			</ul>
