@@ -112,22 +112,6 @@
 			background-color: white !important;
 		}
 	}
-
-	.blog-post-table__content {
-		.table-item {
-			color: $body-color;
-			border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
-			&:hover {
-				text-decoration: none;
-			}
-			& + .table-item {
-				&::before {
-					content: '|';
-					float: none;
-				}
-			}
-		}
-	}
 }
 
 .article__content {
@@ -175,6 +159,20 @@
 		}
 	}
 
+}
+
+.blog-post-quick-links {
+	color: $body-color;
+	border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
+	&:hover {
+		text-decoration: none;
+	}
+	& + .blog-post-quick-links {
+		&::before {
+			content: '|';
+			float: none;
+		}
+	}
 }
 
 .blog-back-to-top {
