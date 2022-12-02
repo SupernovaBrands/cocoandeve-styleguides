@@ -161,6 +161,28 @@
 
 }
 
+.how-to-wrapper {
+	figure svg {
+		left: 0;
+		right: 0;
+		margin: auto;
+		top: 0;
+		bottom: 0;
+		width: calc-em(52);
+		height: calc-em(52);
+
+		@include media-breakpoint-up(lg) {
+			width: calc-em(64);
+			height: calc-em(64);
+		}
+	}
+
+	.list-unstyled figure svg {
+		width: calc-em(52);
+		height: calc-em(52);
+	}
+}
+
 .blog-post-quick-links {
 	color: $body-color;
 	border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
