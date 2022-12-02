@@ -178,28 +178,28 @@
 .blog-back-to-top {
 	position: fixed;
 	bottom: calc-em(20);
-    right: calc-em(15);
-    cursor: pointer;
-    z-index: $zindex-dropdown;
+	right: calc-em(15);
+	cursor: pointer;
+	z-index: $zindex-dropdown;
 	opacity: 0;
 	transition: 0.4s ease-in;
 	transition-property: opacity, bottom;
 	display: none;
 
+	@include media-breakpoint-up(lg) {
+		right: calc-em(40);
+	}
+	
 	&:hover {
 		color: $primary;
 	}
 
-	&.btt-btn--show {
+	&.btn--show {
 		opacity: 1;
 		display: flex;
 	}
 
 	.svg {
 		font-size: calc-em(40);
-	}
-
-	@include media-breakpoint-up(lg) {
-		right: calc-em(40);
 	}
 }
