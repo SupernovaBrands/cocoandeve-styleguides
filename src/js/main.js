@@ -555,3 +555,7 @@ if ($('.video-loop').length) {
 if ($('#exit-intent-popup').length > 0) {
 	import(/* webpackChunkName: 'exit-intent' */ '~mod/exit-intent');
 }
+
+if ($('.blog-nav-tags').length > 0) {
+	import(/* webpackChunkName: 'blog-nav-tags' */ '~mod/blog');
+}
