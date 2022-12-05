@@ -205,7 +205,6 @@
 	z-index: $zindex-dropdown;
 	opacity: 0;
 	transition: 0.4s ease-in;
-	transition-property: opacity, bottom;
 	display: none;
 
 	@include media-breakpoint-up(lg) {

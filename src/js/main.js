@@ -293,6 +293,42 @@ $(document).ready(function () {
 		});
 	}
 
+	// Back To Top
+
+	$('#back-to-top').on('click', function (a) {
+		a.preventDefault();
+		$('html, body').animate({
+			scrollTop: 0,
+		}, '300');
+	});
+
+	$('.blog-post-quick-links').on('click', function (a) {
+		const href = $(this).attr('href');
+		a.preventDefault();
+		$('html, body').animate({
+			scrollTop: $(href).offset().top - 500,
+		}, '300');
+	});
+
+	$(window).scroll(function () {
+		const pageheight = $('body').height();
+		if ($(window).width() >= 768 && pageheight > 3600) {
+			if ($(window).scrollTop() > 500) {
+				$('#back-to-top').addClass('btn--show');
+			} else {
+				$('#back-to-top').removeClass('btn--show');
+			}
+		} else if ($(window).width() < 768 && pageheight > 2560) {
+			if ($(window).scrollTop() > 700) {
+				$('#back-to-top').addClass('btn--show');
+			} else {
+				$('#back-to-top').removeClass('btn--show');
+			}
+		} else {
+			$('#back-to-top').removeClass('btn--show');
+		}
+	});
+
 	// mobile menu toggle
 
 	function mobileMenuToggler() {
