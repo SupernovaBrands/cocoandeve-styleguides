@@ -1436,7 +1436,7 @@ eval("module.exports = JSON.parse('[{\"id\":39456711245859,\"quantity\":6},{\"id
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "chunk." + chunkId + ".js?h=" + {"nav-category":"44deaed68e8472f5d45f","carousel-loop":"0d7c316456b29658d3fe","carousel-swipe":"163dfa81ce13bb2db8f5","modal-waitlist":"8468d025a1a2754c817d","page-reviews":"3661dd41dd1fb525aa61","products":"4a6f89666e33d4926b45","collection-swatch":"4a072ca93b03bc912bbb","announcement-timer":"b28f0dcd37fa64d99287","predictive-search":"cd08f9fcbb8361e02e46","product-subscription":"d22d4d0e0c9455597509","sweepstakes-popup":"d0033ed7120e07ab75a9","carousel-scroll-featured":"114cb7b33f755f6cab0c","newsletter-popup":"27c952758d7bf8facfa2","exit-intent":"2f70b68c6548d6434b4e"}[chunkId] + "";
+/******/ 			return "chunk." + chunkId + ".js?h=" + {"nav-category":"44deaed68e8472f5d45f","carousel-loop":"42a8210222ad07579562","carousel-swipe":"163dfa81ce13bb2db8f5","modal-waitlist":"8468d025a1a2754c817d","page-reviews":"3661dd41dd1fb525aa61","products":"4a6f89666e33d4926b45","collection-swatch":"4a072ca93b03bc912bbb","announcement-timer":"b28f0dcd37fa64d99287","predictive-search":"cd08f9fcbb8361e02e46","product-subscription":"d22d4d0e0c9455597509","sweepstakes-popup":"d0033ed7120e07ab75a9","carousel-scroll-featured":"114cb7b33f755f6cab0c","newsletter-popup":"27c952758d7bf8facfa2","exit-intent":"2f70b68c6548d6434b4e"}[chunkId] + "";
 /******/ 		};
 /******/ 	})();
 /******/ 	
