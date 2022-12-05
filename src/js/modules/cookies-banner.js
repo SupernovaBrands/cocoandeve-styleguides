@@ -1,28 +1,32 @@
-$(document).ready(function () {
-	$('.cookies-banner #collapseCookieBanner').on('show.bs.collapse', function () {
-		const parentEl = $('.cookies-banner');
+function initCookieBanner(el) {
+	el.find('#collapseCookieBanner').on('show.bs.collapse', function () {
+		const parentEl = el;
 		parentEl.find('[data-toggle="collapse"]').addClass('d-none');
 		parentEl.find('.use-default').removeClass('d-none');
 		$('body').addClass('cookies-banner-show--expanded');
 	});
 
-	$('.cookies-banner .use-default').click(function () {
-		const parentEl = $('.cookies-banner');
+	el.find('.use-default').click(function () {
+		const parentEl = el;
 		if (parentEl.find('#ads').prop('checked') && parentEl.find('#performance').prop('checked')) {
-			$('.cookies-banner .accept-cookie').click();
+			parentEl.find('.accept-cookie').click();
 		} else {
 			parentEl.find('#ads').prop('checked', true);
 			parentEl.find('#performance').prop('checked', true);
 		}
 	});
 
-	$('.cookies-banner .accept-cookie').click(function () {
-		$('.cookies-banner').addClass('d-none');
+	el.find('.accept-cookie').click(function () {
+		el.addClass('d-none');
 		$('body').removeClass('cookies-banner-show cookies-banner-show--expanded');
 	});
 
 	setTimeout(function () {
-		$('.cookies-banner').removeClass('d-none');
+		el.removeClass('d-none');
 		$('body').addClass('cookies-banner-show');
 	}, 2000); // same with shopify theme showing banner after 2 seconds
+}
+
+$(document).ready(function () {
+	initCookieBanner($('.cookies-banner:not(.cookies-banner--bottom)'));
 });
