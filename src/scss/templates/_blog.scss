@@ -81,6 +81,37 @@
 			border-bottom-right-radius: $border-radius-lg;
 		}
 	}
+
+	&__shop-articles {
+		.carousel-control-prev-icon, .carousel-control-next-icon {
+			top: 28%;
+			background-color: $pink-light;
+		}
+
+		.carousel-control-prev-icon {
+			left: calc-em(25);
+		}
+
+		.carousel-control-next-icon {
+			right: calc-em(25);
+		}
+
+		.carousel--centered .carousel-inner {
+			@include media-breakpoint-up(lg) {
+				transform: translateX(0);
+			}
+		}
+	}
+
+	&__recomendation {
+		article {
+			height: 100%;
+		}
+
+		@include media-breakpoint-down(lg) {
+			background-color: white !important;
+		}
+	}
 }
 
 .article__content {
@@ -120,11 +151,34 @@
 		border-radius: calc-em(20);
 		white-space: nowrap;
 		cursor: pointer;
+		color: $body-color;
 
 		&.active {
 			background-color: $primary;
-			color: white !important;
+			color: $white;
 		}
 	}
 
+}
+
+.how-to-wrapper {
+	figure svg {
+		left: 0;
+		right: 0;
+		margin: auto;
+		top: 0;
+		bottom: 0;
+		width: calc-em(52);
+		height: calc-em(52);
+
+		@include media-breakpoint-up(lg) {
+			width: calc-em(64);
+			height: calc-em(64);
+		}
+	}
+
+	.list-unstyled figure svg {
+		width: calc-em(52);
+		height: calc-em(52);
+	}
 }
