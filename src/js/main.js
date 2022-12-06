@@ -547,3 +547,11 @@ if ($('.carousel--scroll__featured').length > 0) {
 if ($('.newsletter-bigger-popup').length > 0) {
 	import(/* webpackChunkName: 'newsletter-popup' */ '~mod/newsletter-popup');
 }
+
+if ($('#exit-intent-popup').length > 0) {
+	import(/* webpackChunkName: 'exit-intent' */ '~mod/exit-intent');
+}
+
+if ($('.blog-nav-tags').length > 0) {
+	import(/* webpackChunkName: 'blog-nav-tags' */ '~mod/blog');
+}

@@ -34,10 +34,10 @@ const startCount = (endAt) => {
 		const minutes = Math.floor((distance % hour) / minute);
 		const seconds = Math.floor((distance % minute) / second);
 
-		$('#timerDays').html(`${days} ${days > 1 ? 'DAYS' : 'DAY'}`);
-		$('#timerHrs').html(`${hours} ${hours > 1 ? 'HRS' : 'HR'}`);
-		$('#timerMin').html(`${minutes} MIN`);
-		$('#timerSec').html(`${seconds} SEC`);
+		$('#timerDays').html(`${days} ${days > 1 ? '<span>Days</span>' : '<span>Day</span>'}`);
+		$('#timerHrs').html(`${hours} ${hours > 1 ? '<span>Hours</span>' : '<span>Hour</span>'}`);
+		$('#timerMin').html(`${minutes}<span>Minutes</span>`);
+		$('#timerSec').html(`${seconds}<span>Seconds</span>`);
 	};
 
 	timer = setInterval(showRemaining, 1000);
@@ -45,8 +45,8 @@ const startCount = (endAt) => {
 
 $(document).ready(function () {
 	// start & end from settings
-	const startDate = '2021-11-15 00:00:00';
-	const endDate = '2021-12-02 23:59:00';
+	const startDate = '2022-10-15 00:00:00';
+	const endDate = '2022-12-02 23:59:00';
 	const startAt = getUtcTime(`${startDate.replace(' ', 'T')}Z`);
 	const endAt = getUtcTime(`${endDate.replace(' ', 'T')}Z`);
 	const now = nowUtcTime();

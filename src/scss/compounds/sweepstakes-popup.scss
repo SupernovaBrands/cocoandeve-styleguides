@@ -50,6 +50,7 @@
 		top: $grid-gutter-width;
 		right: $grid-gutter-width;
 		cursor: pointer;
+		height: calc-em(22);
 	}
 
 	&__toc {

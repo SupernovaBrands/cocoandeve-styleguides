@@ -85,6 +85,10 @@
 			border-top-left-radius: $border-radius-lg;
 		}
 	}
+
+	&__items-tip {
+		background-color: $body-color;
+	}
 }
 
 .manual-gwp {

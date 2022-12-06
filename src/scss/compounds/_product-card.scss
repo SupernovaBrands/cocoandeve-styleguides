@@ -81,4 +81,15 @@
 			max-height: calc-em(165);
 		}
 	}
+
+	&__image-tip {
+		background-color: $body-color;
+		bottom: 0;
+		left: 0;
+
+		@include media-breakpoint-up(lg) {
+			width: 100%;
+			border-radius: 0 !important;
+		}
+	}
 }
