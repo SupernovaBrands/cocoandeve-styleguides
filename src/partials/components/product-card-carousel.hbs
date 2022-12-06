@@ -3,10 +3,20 @@
 	<a href="#">
 	<noscript class="loading-lazy">
 		<picture class="embed-responsive embed-responsive-1by1 bg-shimmer m-0">
+			{{#if collectiontemplate}}
+			<source srcset="https://via.placeholder.com/540x540" media="(min-width: 992px)" />
+			{{else}}
+			<source srcset="https://via.placeholder.com/520x520" media="(min-width: 992px)" />
+			{{/if}}
 			<img class="embed-responsive-item fit--cover"
 			alt="Image Alt"
 			loading="lazy"
-			src="https://via.placeholder.com/243x243">
+			{{#if collectiontemplate}}
+			src="https://via.placeholder.com/384x384"
+			{{else}}
+			src="https://via.placeholder.com/592x592"
+			{{/if}}
+			>
 			{{# if showTip }}
 				<span class="product-card__image-tip position-absolute text-white font-size-xs p-1 d-none d-lg-block">👻 Get 3 for 2 with code: HALLOWEEN 👻</span>
 				<span class="product-card__image-tip position-absolute text-white font-size-xs p-1 d-block d-lg-none rounded">👻 3 for 2</span>
@@ -23,7 +33,7 @@
 		<div class="d-flex justify-content-center mb-1">
 			<div class="react-yotpo-star" data-product-id="4543113265187"></div>
 		</div>
-		<p class="product-card__title flex-grow-1 d-flex flex-column justify-content-center h4 h-100 font-weight-normal">
+		<p class="product-card__title mx-n2 flex-grow-1 d-flex flex-column justify-content-center h4 h-100 font-weight-normal">
 			<a href="#" class="text-dark">{{title}}</a>
 		</p>
 		<p class="text-center">
@@ -34,9 +44,11 @@
 		<button type="button" class="btn btn-lg btn-primary btn-choose__swatch btn-choose__swatch-subscription btn-block px-0">Quick Shop</button>
 		{{/if}}
 
+
 		{{#if swatch_link}}
 		<a href="product.html#product-form" class="btn btn-lg btn-primary btn-choose btn-block px-0">Choose Shade</a>
 		{{/if}}
+
 		{{#if swatch_shade }}
 		<button type="button" class="btn btn-lg btn-primary btn-choose btn-block px-0">Choose Shade</button>
 		<div class="swatch-overlay flex-column align-items-center justify-content-end w-100 pb-0 position-absolute {{#if collection }} px-lg-2 {{else}} px-2 {{/if}}">
