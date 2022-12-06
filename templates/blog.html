@@ -908,164 +908,304 @@
 	<div class="container mt-4">
 		<h1 class="text-center mb-0">COCO & EVE BLOG</h1>
 		<div class="blog-nav-tags mb-4 d-flex mt-2">
-			<a class="mr-1 py-1 px-2 text-body text-decoration-none active">All</a>
-			<a class="mr-1 py-1 px-2 text-body text-decoration-none">Hair</a>
-			<a class="mr-1 py-1 px-2 text-body text-decoration-none">Tan</a>
-			<a class="mr-1 py-1 px-2 text-body text-decoration-none">Body</a>
-			<a class="mr-1 py-1 px-2 text-body text-decoration-none">How to's</a>
+			<a class="mr-1 py-1 px-2 text-decoration-none active">All</a>
+			<a class="mr-1 py-1 px-2 text-decoration-none">Hair</a>
+			<a class="mr-1 py-1 px-2 text-decoration-none">Tan</a>
+			<a class="mr-1 py-1 px-2 text-decoration-none">Body</a>
+			<a class="mr-1 py-1 px-2 text-decoration-none" id="how-to">How to's</a>
+		</div>
+		
+		<div class="how-to-wrapper row mb-lg-4 d-none" id="how-to-wrapper">
+			<div id="carouselLoopCenteredHowTo" class="carousel slide d-flex carousel--loop carousel--swipe blog-carousel" data-slide-number="4">
+			    <div class="carousel-inner d-flex flex-nowrap" role="listbox">
+			        <div class="col-12 col-lg-6 carousel-item mr-lg-0 active">
+			            <figure class="border border-secondary-light">
+			                <noscript class="loading-lazy">
+			                    <picture class="embed-responsive embed-responsive-16by9 bg-shimmer m-0 blog-carousel__image">
+			                        <img class="embed-responsive-item fit--cover" alt="Image Alt" loading="lazy"
+			                            src="https://via.placeholder.com/375x340.jpg/EFADBA">
+			                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 54" class="svg position-absolute text-white"><path d="M27 0a27 27 0 1027 27A27 27 0 0027 0zm11.371 27.86a1.929 1.929 0 01-.866.866v.01L22.076 36.45a1.929 1.929 0 01-2.791-1.736V19.286a1.929 1.929 0 012.791-1.726L37.5 25.274a1.928 1.928 0 01.871 2.586z"></path></svg>
+			                    </picture>
+			                </noscript>
+			                <figcaption class="p-2">
+			                    <span class="badge badge--square badge-blog bg-yellow-light text-gray-600 font-weight-normal">TAN</span>
+			                    <span class="badge badge--square badge-blog bg-secondary text-white font-weight-normal">NEW</span>
+			                    <p class="h2 mt-2">5 things you’re doing wrong with your hair care routine</p>
+			                </figcaption>
+			            </figure>
+			        </div>
+			        <div class="col-12 col-lg-6 carousel-item mr-lg-0">
+			            <figure class="border border-secondary-light">
+			                <noscript class="loading-lazy">
+			                    <picture class="embed-responsive embed-responsive-16by9 bg-shimmer m-0 blog-carousel__image">
+			                        <img class="embed-responsive-item fit--cover" alt="Image Alt" loading="lazy"
+			                            src="https://via.placeholder.com/375x340.jpg/EFADBA">
+			                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 54" class="svg position-absolute text-white"><path d="M27 0a27 27 0 1027 27A27 27 0 0027 0zm11.371 27.86a1.929 1.929 0 01-.866.866v.01L22.076 36.45a1.929 1.929 0 01-2.791-1.736V19.286a1.929 1.929 0 012.791-1.726L37.5 25.274a1.928 1.928 0 01.871 2.586z"></path></svg>
+			                    </picture>
+			                </noscript>
+			                <figcaption class="p-2">
+			                    <span class="badge badge--square badge-blog bg-secondary-light text-gray-600 font-weight-normal">HAIR</span>
+			                    <span class="badge badge--square badge-blog bg-primary text-white font-weight-normal">HOT</span>
+			                    <p class="h2 mt-2">5 things you’re doing wrong with your hair care routine</p>
+			                </figcaption>
+			            </figure>
+			        </div>
+			        <div class="col-12 col-lg-6 carousel-item mr-lg-0">
+			            <figure class="border border-secondary-light">
+			                <noscript class="loading-lazy">
+			                    <picture class="embed-responsive embed-responsive-16by9 bg-shimmer m-0 blog-carousel__image">
+			                        <img class="embed-responsive-item fit--cover" alt="Image Alt" loading="lazy"
+			                            src="https://via.placeholder.com/375x340.jpg/EFADBA">
+			                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 54" class="svg position-absolute text-white"><path d="M27 0a27 27 0 1027 27A27 27 0 0027 0zm11.371 27.86a1.929 1.929 0 01-.866.866v.01L22.076 36.45a1.929 1.929 0 01-2.791-1.736V19.286a1.929 1.929 0 012.791-1.726L37.5 25.274a1.928 1.928 0 01.871 2.586z"></path></svg>
+			                    </picture>
+			                </noscript>
+			                <figcaption class="p-2">
+			                    <span class="badge badge--square badge-blog bg-pink-light text-gray-600 font-weight-normal">BODY</span>
+			                    <span class="badge badge--square badge-blog bg-gray-400 text-gray-600 font-weight-normal">FEATURED</span>
+			                    <p class="h2 mt-2">5 things you’re doing wrong with your hair care routine</p>
+			                </figcaption>
+			            </figure>
+			        </div>
+			        <div class="col-12 col-lg-6 carousel-item mr-lg-0">
+			            <figure class="border border-secondary-light">
+			                <noscript class="loading-lazy">
+			                    <picture class="embed-responsive embed-responsive-16by9 bg-shimmer m-0 blog-carousel__image">
+			                        <img class="embed-responsive-item fit--cover" alt="Image Alt" loading="lazy"
+			                            src="https://via.placeholder.com/375x340.jpg/EFADBA">
+			                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 54" class="svg position-absolute text-white"><path d="M27 0a27 27 0 1027 27A27 27 0 0027 0zm11.371 27.86a1.929 1.929 0 01-.866.866v.01L22.076 36.45a1.929 1.929 0 01-2.791-1.736V19.286a1.929 1.929 0 012.791-1.726L37.5 25.274a1.928 1.928 0 01.871 2.586z"></path></svg>
+			                    </picture>
+			                </noscript>
+			                <figcaption class="p-2">
+			                    <span class="badge badge--square badge-blog bg-secondary-light text-gray-600 font-weight-normal">HAIR</span>
+			                    <span class="badge badge--square badge-blog bg-primary text-white font-weight-normal">HOT</span>
+			                    <p class="h2 mt-2">5 things you’re doing wrong with your hair care routine</p>
+			                </figcaption>
+			            </figure>
+			        </div>
+			        <div class="col-12 col-lg-6 carousel-item mr-lg-0">
+			            <figure class="border border-secondary-light">
+			                <noscript class="loading-lazy">
+			                    <picture class="embed-responsive embed-responsive-16by9 bg-shimmer m-0 blog-carousel__image">
+			                        <img class="embed-responsive-item fit--cover" alt="Image Alt" loading="lazy"
+			                            src="https://via.placeholder.com/375x340.jpg/EFADBA">
+			                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 54" class="svg position-absolute text-white"><path d="M27 0a27 27 0 1027 27A27 27 0 0027 0zm11.371 27.86a1.929 1.929 0 01-.866.866v.01L22.076 36.45a1.929 1.929 0 01-2.791-1.736V19.286a1.929 1.929 0 012.791-1.726L37.5 25.274a1.928 1.928 0 01.871 2.586z"></path></svg>
+			                    </picture>
+			                </noscript>
+			                <figcaption class="p-2">
+			                    <span class="badge badge--square badge-blog bg-secondary-light text-gray-600 font-weight-normal">HAIR</span>
+			                    <span class="badge badge--square badge-blog bg-primary text-white font-weight-normal">HOT</span>
+			                    <p class="h2 mt-2">5 things you’re doing wrong with your hair care routine</p>
+			                </figcaption>
+			            </figure>
+			        </div>
+			    </div>
+			
+			    <a class="carousel-control carousel-control-prev carousel-control--background floating-out-left justify-content-start text-primary ml-lg-2" href="#carouselLoopCenteredHowTo" role="button" data-slide="prev">
+			        <span class="carousel-control-prev-icon d-flex justify-content-center align-items-center" aria-hidden="true"><svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.627 22.627" class="svg"><path d="M16.2 1.885l-9.428 9.428 9.428 9.428-1.886 1.886L3 11.313 14.314 0z"></path></svg></span>
+			        <span class="sr-only">Previous</span>
+			    </a>
+			    <a class="carousel-control carousel-control-next carousel-control--background floating-out-right justify-content-end text-primary mr-lg-2" href="#carouselLoopCenteredHowTo" role="button" data-slide="next">
+			        <span class="carousel-control-next-icon d-flex justify-content-center align-items-center" aria-hidden="true"><svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.627 22.627" class="svg"><path d="M5.428 20.742l9.428-9.428-9.428-9.428L7.314 0l11.314 11.314L7.314 22.627z"></path></svg></span>
+			        <span class="sr-only">Next</span>
+			    </a>
+			</div>			<ul class="d-flex list-unstyled flex-wrap mb-0 mt-2">
+				<li class="col-12 col-lg-4">
+					<article class="mb-4 mb-lg-3">
+						<figure class="mb-2 no-gutters__in-container border border-secondary-light">
+							<picture class="embed-responsive bg-shimmer m-0 cursor-pointer">
+								<img src="https://via.placeholder.com/375x190.jpg/EFADBA" class="w-100">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 54" class="svg position-absolute text-white"><path d="M27 0a27 27 0 1027 27A27 27 0 0027 0zm11.371 27.86a1.929 1.929 0 01-.866.866v.01L22.076 36.45a1.929 1.929 0 01-2.791-1.736V19.286a1.929 1.929 0 012.791-1.726L37.5 25.274a1.928 1.928 0 01.871 2.586z"></path></svg>
+							</picture>
+							<figcaption class="p-2">
+								<span class="badge badge--square badge-blog bg-pink-light text-gray-600 font-weight-normal">BODY</span>
+								<span class="badge badge--square badge-blog bg-gray-400 text-gray-600 font-weight-normal">FEATURED</span>
+								<p class="h2 mt-2">5 things you’re doing wrong with your hair care routine</p>
+							</figcaption>
+						</figure>
+					</article>
+				</li>
+				<li class="col-12 col-lg-4">
+					<article class="mb-4 mb-lg-3">
+						<figure class="mb-2 no-gutters__in-container border border-secondary-light">
+							<picture class="embed-responsive bg-shimmer m-0 cursor-pointer">
+								<img src="https://via.placeholder.com/375x190.jpg/EFADBA" class="w-100">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 54" class="svg position-absolute text-white"><path d="M27 0a27 27 0 1027 27A27 27 0 0027 0zm11.371 27.86a1.929 1.929 0 01-.866.866v.01L22.076 36.45a1.929 1.929 0 01-2.791-1.736V19.286a1.929 1.929 0 012.791-1.726L37.5 25.274a1.928 1.928 0 01.871 2.586z"></path></svg>
+							</picture>
+							<figcaption class="p-2">
+								<span class="badge badge--square badge-blog bg-pink-light text-gray-600 font-weight-normal">BODY</span>
+								<span class="badge badge--square badge-blog bg-gray-400 text-gray-600 font-weight-normal">FEATURED</span>
+								<p class="h2 mt-2">5 things you’re doing wrong with your hair care routine</p>
+							</figcaption>
+						</figure>
+					</article>
+				</li>
+				<li class="col-12 col-lg-4">
+					<article class="mb-4 mb-lg-3">
+						<figure class="mb-2 no-gutters__in-container border border-secondary-light">
+							<picture class="embed-responsive bg-shimmer m-0 cursor-pointer">
+								<img src="https://via.placeholder.com/375x190.jpg/EFADBA" class="w-100">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 54" class="svg position-absolute text-white"><path d="M27 0a27 27 0 1027 27A27 27 0 0027 0zm11.371 27.86a1.929 1.929 0 01-.866.866v.01L22.076 36.45a1.929 1.929 0 01-2.791-1.736V19.286a1.929 1.929 0 012.791-1.726L37.5 25.274a1.928 1.928 0 01.871 2.586z"></path></svg>
+							</picture>
+							<figcaption class="p-2">
+								<span class="badge badge--square badge-blog bg-pink-light text-gray-600 font-weight-normal">BODY</span>
+								<span class="badge badge--square badge-blog bg-gray-400 text-gray-600 font-weight-normal">FEATURED</span>
+								<p class="h2 mt-2">5 things you’re doing wrong with your hair care routine</p>
+							</figcaption>
+						</figure>
+					</article>
+				</li>
+				<li class="col-12 col-lg-4">
+					<article class="mb-4 mb-lg-3">
+						<figure class="mb-2 no-gutters__in-container border border-secondary-light">
+							<picture class="embed-responsive bg-shimmer m-0 cursor-pointer">
+								<img src="https://via.placeholder.com/375x190.jpg/EFADBA" class="w-100">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 54" class="svg position-absolute text-white"><path d="M27 0a27 27 0 1027 27A27 27 0 0027 0zm11.371 27.86a1.929 1.929 0 01-.866.866v.01L22.076 36.45a1.929 1.929 0 01-2.791-1.736V19.286a1.929 1.929 0 012.791-1.726L37.5 25.274a1.928 1.928 0 01.871 2.586z"></path></svg>
+							</picture>
+							<figcaption class="p-2">
+								<span class="badge badge--square badge-blog bg-pink-light text-gray-600 font-weight-normal">BODY</span>
+								<span class="badge badge--square badge-blog bg-gray-400 text-gray-600 font-weight-normal">FEATURED</span>
+								<p class="h2 mt-2">5 things you’re doing wrong with your hair care routine</p>
+							</figcaption>
+						</figure>
+					</article>
+				</li>
+			</ul>
 		</div>
 
-		<div class="row mb-lg-4">
+		<div class="article-list-wrapper row mb-lg-4">
 			<div id="carouselLoopCentered1" class="carousel slide d-flex carousel--loop carousel--swipe blog-carousel" data-slide-number="4">
-				<div class="carousel-inner d-flex flex-nowrap" role="listbox">
-						<div class="col-12 col-lg-6 carousel-item mr-lg-0 active">
-							<figure class="border border-secondary-light">
-								<noscript class="loading-lazy">
-									<picture class="embed-responsive embed-responsive-16by9 bg-shimmer m-0 blog-carousel__image">
-										<img class="embed-responsive-item fit--cover" alt="Image Alt" loading="lazy"
-											src="https://via.placeholder.com/375x340.jpg/EFADBA">
-									</picture>
-								</noscript>
-								<figcaption class="p-2">
-									<span class="badge badge--square badge-blog bg-yellow-light text-gray-600 font-weight-normal">TAN</span>
-									<span class="badge badge--square badge-blog bg-secondary text-white font-weight-normal">NEW</span>
-									<p class="h2 mt-2">5 things you’re doing wrong with your hair care routine</p>
-									<p>Give these myths the brush off for a healthy scalp & shiny hair!</p>
-									<a href="#" class="text-primary">read more</a>
-								</figcaption>
-							</figure>
-						</div>
-						<div class="col-12 col-lg-6 carousel-item mr-lg-0">
-							<figure class="border border-secondary-light">
-								<noscript class="loading-lazy">
-									<picture class="embed-responsive embed-responsive-16by9 bg-shimmer m-0 blog-carousel__image">
-										<img class="embed-responsive-item fit--cover" alt="Image Alt" loading="lazy"
-											src="https://via.placeholder.com/375x340.jpg/EFADBA">
-									</picture>
-								</noscript>
-								<figcaption class="p-2">
-									<span class="badge badge--square badge-blog bg-secondary-light text-gray-600 font-weight-normal">HAIR</span>
-									<span class="badge badge--square badge-blog bg-primary text-white font-weight-normal">HOT</span>
-									<p class="h2 mt-2">5 things you’re doing wrong with your hair care routine</p>
-									<p>Give these myths the brush off for a healthy scalp & shiny hair!</p>
-									<a href="#" class="text-primary">read more</a>
-								</figcaption>
-							</figure>
-						</div>
-						<div class="col-12 col-lg-6 carousel-item mr-lg-0">
-							<figure class="border border-secondary-light">
-								<noscript class="loading-lazy">
-									<picture class="embed-responsive embed-responsive-16by9 bg-shimmer m-0 blog-carousel__image">
-										<img class="embed-responsive-item fit--cover" alt="Image Alt" loading="lazy"
-											src="https://via.placeholder.com/375x340.jpg/EFADBA">
-									</picture>
-								</noscript>
-								<figcaption class="p-2">
-									<span class="badge badge--square badge-blog bg-pink-light text-gray-600 font-weight-normal">BODY</span>
-									<span class="badge badge--square badge-blog bg-gray-400 text-gray-600 font-weight-normal">FEATURED</span>
-									<p class="h2 mt-2">5 things you’re doing wrong with your hair care routine</p>
-									<p>Give these myths the brush off for a healthy scalp & shiny hair!</p>
-									<a href="#" class="text-primary">read more</a>
-								</figcaption>
-							</figure>
-						</div>
-						<div class="col-12 col-lg-6 carousel-item mr-lg-0">
-							<figure class="border border-secondary-light">
-								<noscript class="loading-lazy">
-									<picture class="embed-responsive embed-responsive-16by9 bg-shimmer m-0 blog-carousel__image">
-										<img class="embed-responsive-item fit--cover" alt="Image Alt" loading="lazy"
-											src="https://via.placeholder.com/375x340.jpg/EFADBA">
-									</picture>
-								</noscript>
-								<figcaption class="p-2">
-									<span class="badge badge--square badge-blog bg-secondary-light text-gray-600 font-weight-normal">HAIR</span>
-									<span class="badge badge--square badge-blog bg-primary text-white font-weight-normal">HOT</span>
-									<p class="h2 mt-2">5 things you’re doing wrong with your hair care routine</p>
-									<p>Give these myths the brush off for a healthy scalp & shiny hair!</p>
-									<a href="#" class="text-primary">read more</a>
-								</figcaption>
-							</figure>
-						</div>
-						<div class="col-12 col-lg-6 carousel-item mr-lg-0">
-							<figure class="border border-secondary-light">
-								<noscript class="loading-lazy">
-									<picture class="embed-responsive embed-responsive-16by9 bg-shimmer m-0 blog-carousel__image">
-										<img class="embed-responsive-item fit--cover" alt="Image Alt" loading="lazy"
-											src="https://via.placeholder.com/375x340.jpg/EFADBA">
-									</picture>
-								</noscript>
-								<figcaption class="p-2">
-									<span class="badge badge--square badge-blog bg-pink-light text-gray-600 font-weight-normal">BODY</span>
-									<span class="badge badge--square badge-blog bg-gray-400 text-gray-600 font-weight-normal">FEATURED</span>
-									<p class="h2 mt-2">5 things you’re doing wrong with your hair care routine</p>
-									<p>Give these myths the brush off for a healthy scalp & shiny hair!</p>
-									<a href="#" class="text-primary">read more</a>
-								</figcaption>
-							</figure>
-						</div>
-						<div class="col-12 col-lg-6 carousel-item mr-lg-0">
-							<figure class="border border-secondary-light">
-								<noscript class="loading-lazy">
-									<picture class="embed-responsive embed-responsive-16by9 bg-shimmer m-0 blog-carousel__image">
-										<img class="embed-responsive-item fit--cover" alt="Image Alt" loading="lazy"
-											src="https://via.placeholder.com/375x340.jpg/EFADBA">
-									</picture>
-								</noscript>
-								<figcaption class="p-2">
-									<span class="badge badge--square badge-blog bg-secondary-light text-gray-600 font-weight-normal">HAIR</span>
-									<span class="badge badge--square badge-blog bg-primary text-white font-weight-normal">HOT</span>
-									<p class="h2 mt-2">5 things you’re doing wrong with your hair care routine</p>
-									<p>Give these myths the brush off for a healthy scalp & shiny hair!</p>
-									<a href="#" class="text-primary">read more</a>
-								</figcaption>
-							</figure>
-						</div>
-						<div class="col-12 col-lg-6 carousel-item mr-lg-0">
-							<figure class="border border-secondary-light">
-								<noscript class="loading-lazy">
-									<picture class="embed-responsive embed-responsive-16by9 bg-shimmer m-0 blog-carousel__image">
-										<img class="embed-responsive-item fit--cover" alt="Image Alt" loading="lazy"
-											src="https://via.placeholder.com/375x340.jpg/EFADBA">
-									</picture>
-								</noscript>
-								<figcaption class="p-2">
-									<span class="badge badge--square badge-blog bg-pink-light text-gray-600 font-weight-normal">BODY</span>
-									<span class="badge badge--square badge-blog bg-gray-400 text-gray-600 font-weight-normal">FEATURED</span>
-									<p class="h2 mt-2">5 things you’re doing wrong with your hair care routine</p>
-									<p>Give these myths the brush off for a healthy scalp & shiny hair!</p>
-									<a href="#" class="text-primary">read more</a>
-								</figcaption>
-							</figure>
-						</div>
-						<div class="col-12 col-lg-6 carousel-item mr-lg-0">
-							<figure class="border border-secondary-light">
-								<noscript class="loading-lazy">
-									<picture class="embed-responsive embed-responsive-16by9 bg-shimmer m-0 blog-carousel__image">
-										<img class="embed-responsive-item fit--cover" alt="Image Alt" loading="lazy"
-											src="https://via.placeholder.com/375x340.jpg/EFADBA">
-									</picture>
-								</noscript>
-								<figcaption class="p-2">
-									<span class="badge badge--square badge-blog bg-pink-light text-gray-600 font-weight-normal">BODY</span>
-									<span class="badge badge--square badge-blog bg-gray-400 text-gray-600 font-weight-normal">FEATURED</span>
-									<p class="h2 mt-2">5 things you’re doing wrong with your hair care routine</p>
-									<p>Give these myths the brush off for a healthy scalp & shiny hair!</p>
-									<a href="#" class="text-primary">read more</a>
-								</figcaption>
-							</figure>
-						</div>
-				</div>
-
-				<a class="carousel-control carousel-control-prev carousel-control--background floating-out-left justify-content-start text-primary ml-1 ml-lg-4" href="#carouselLoopCentered1" role="button" data-slide="prev">
-					<span class="carousel-control-prev-icon d-flex justify-content-center align-items-center bg-pink-light" aria-hidden="true"><svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.627 22.627" class="svg"><path d="M16.2 1.885l-9.428 9.428 9.428 9.428-1.886 1.886L3 11.313 14.314 0z"></path></svg></span>
-					<span class="sr-only">Previous</span>
-				</a>
-				<a class="carousel-control carousel-control-next carousel-control--background floating-out-right justify-content-end text-primary mr-1 mr-lg-4" href="#carouselLoopCentered1" role="button" data-slide="next">
-					<span class="carousel-control-next-icon d-flex justify-content-center align-items-center bg-pink-light" aria-hidden="true"><svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.627 22.627" class="svg"><path d="M5.428 20.742l9.428-9.428-9.428-9.428L7.314 0l11.314 11.314L7.314 22.627z"></path></svg></span>
-					<span class="sr-only">Next</span>
-				</a>
-			</div>
-			<div class="col-12 my-4">
+			    <div class="carousel-inner d-flex flex-nowrap" role="listbox">
+			            <div class="col-12 col-lg-6 carousel-item mr-lg-0 active">
+			                <figure class="border border-secondary-light">
+			                    <noscript class="loading-lazy">
+			                        <picture class="embed-responsive embed-responsive-16by9 bg-shimmer m-0 blog-carousel__image">
+			                            <img class="embed-responsive-item fit--cover" alt="Image Alt" loading="lazy"
+			                                src="https://via.placeholder.com/375x340.jpg/EFADBA">
+			                        </picture>
+			                    </noscript>
+			                    <figcaption class="p-2">
+			                        <span class="badge badge--square badge-blog bg-yellow-light text-gray-600 font-weight-normal">TAN</span>
+			                        <span class="badge badge--square badge-blog bg-secondary text-white font-weight-normal">NEW</span>
+			                        <p class="h2 mt-2">5 things you’re doing wrong with your hair care routine</p>
+			                    </figcaption>
+			                </figure>
+			            </div>
+			            <div class="col-12 col-lg-6 carousel-item mr-lg-0">
+			                <figure class="border border-secondary-light">
+			                    <noscript class="loading-lazy">
+			                        <picture class="embed-responsive embed-responsive-16by9 bg-shimmer m-0 blog-carousel__image">
+			                            <img class="embed-responsive-item fit--cover" alt="Image Alt" loading="lazy"
+			                                src="https://via.placeholder.com/375x340.jpg/EFADBA">
+			                        </picture>
+			                    </noscript>
+			                    <figcaption class="p-2">
+			                        <span class="badge badge--square badge-blog bg-secondary-light text-gray-600 font-weight-normal">HAIR</span>
+			                        <span class="badge badge--square badge-blog bg-primary text-white font-weight-normal">HOT</span>
+			                        <p class="h2 mt-2">5 things you’re doing wrong with your hair care routine</p>
+			                    </figcaption>
+			                </figure>
+			            </div>
+			            <div class="col-12 col-lg-6 carousel-item mr-lg-0">
+			                <figure class="border border-secondary-light">
+			                    <noscript class="loading-lazy">
+			                        <picture class="embed-responsive embed-responsive-16by9 bg-shimmer m-0 blog-carousel__image">
+			                            <img class="embed-responsive-item fit--cover" alt="Image Alt" loading="lazy"
+			                                src="https://via.placeholder.com/375x340.jpg/EFADBA">
+			                        </picture>
+			                    </noscript>
+			                    <figcaption class="p-2">
+			                        <span class="badge badge--square badge-blog bg-pink-light text-gray-600 font-weight-normal">BODY</span>
+			                        <span class="badge badge--square badge-blog bg-gray-400 text-gray-600 font-weight-normal">FEATURED</span>
+			                        <p class="h2 mt-2">5 things you’re doing wrong with your hair care routine</p>
+			                    </figcaption>
+			                </figure>
+			            </div>
+			            <div class="col-12 col-lg-6 carousel-item mr-lg-0">
+			                <figure class="border border-secondary-light">
+			                    <noscript class="loading-lazy">
+			                        <picture class="embed-responsive embed-responsive-16by9 bg-shimmer m-0 blog-carousel__image">
+			                            <img class="embed-responsive-item fit--cover" alt="Image Alt" loading="lazy"
+			                                src="https://via.placeholder.com/375x340.jpg/EFADBA">
+			                        </picture>
+			                    </noscript>
+			                    <figcaption class="p-2">
+			                        <span class="badge badge--square badge-blog bg-secondary-light text-gray-600 font-weight-normal">HAIR</span>
+			                        <span class="badge badge--square badge-blog bg-primary text-white font-weight-normal">HOT</span>
+			                        <p class="h2 mt-2">5 things you’re doing wrong with your hair care routine</p>
+			                    </figcaption>
+			                </figure>
+			            </div>
+			            <div class="col-12 col-lg-6 carousel-item mr-lg-0">
+			                <figure class="border border-secondary-light">
+			                    <noscript class="loading-lazy">
+			                        <picture class="embed-responsive embed-responsive-16by9 bg-shimmer m-0 blog-carousel__image">
+			                            <img class="embed-responsive-item fit--cover" alt="Image Alt" loading="lazy"
+			                                src="https://via.placeholder.com/375x340.jpg/EFADBA">
+			                        </picture>
+			                    </noscript>
+			                    <figcaption class="p-2">
+			                        <span class="badge badge--square badge-blog bg-pink-light text-gray-600 font-weight-normal">BODY</span>
+			                        <span class="badge badge--square badge-blog bg-gray-400 text-gray-600 font-weight-normal">FEATURED</span>
+			                        <p class="h2 mt-2">5 things you’re doing wrong with your hair care routine</p>
+			                    </figcaption>
+			                </figure>
+			            </div>
+			            <div class="col-12 col-lg-6 carousel-item mr-lg-0">
+			                <figure class="border border-secondary-light">
+			                    <noscript class="loading-lazy">
+			                        <picture class="embed-responsive embed-responsive-16by9 bg-shimmer m-0 blog-carousel__image">
+			                            <img class="embed-responsive-item fit--cover" alt="Image Alt" loading="lazy"
+			                                src="https://via.placeholder.com/375x340.jpg/EFADBA">
+			                        </picture>
+			                    </noscript>
+			                    <figcaption class="p-2">
+			                        <span class="badge badge--square badge-blog bg-secondary-light text-gray-600 font-weight-normal">HAIR</span>
+			                        <span class="badge badge--square badge-blog bg-primary text-white font-weight-normal">HOT</span>
+			                        <p class="h2 mt-2">5 things you’re doing wrong with your hair care routine</p>
+			                    </figcaption>
+			                </figure>
+			            </div>
+			            <div class="col-12 col-lg-6 carousel-item mr-lg-0">
+			                <figure class="border border-secondary-light">
+			                    <noscript class="loading-lazy">
+			                        <picture class="embed-responsive embed-responsive-16by9 bg-shimmer m-0 blog-carousel__image">
+			                            <img class="embed-responsive-item fit--cover" alt="Image Alt" loading="lazy"
+			                                src="https://via.placeholder.com/375x340.jpg/EFADBA">
+			                        </picture>
+			                    </noscript>
+			                    <figcaption class="p-2">
+			                        <span class="badge badge--square badge-blog bg-pink-light text-gray-600 font-weight-normal">BODY</span>
+			                        <span class="badge badge--square badge-blog bg-gray-400 text-gray-600 font-weight-normal">FEATURED</span>
+			                        <p class="h2 mt-2">5 things you’re doing wrong with your hair care routine</p>
+			                    </figcaption>
+			                </figure>
+			            </div>
+			            <div class="col-12 col-lg-6 carousel-item mr-lg-0">
+			                <figure class="border border-secondary-light">
+			                    <noscript class="loading-lazy">
+			                        <picture class="embed-responsive embed-responsive-16by9 bg-shimmer m-0 blog-carousel__image">
+			                            <img class="embed-responsive-item fit--cover" alt="Image Alt" loading="lazy"
+			                                src="https://via.placeholder.com/375x340.jpg/EFADBA">
+			                        </picture>
+			                    </noscript>
+			                    <figcaption class="p-2">
+			                        <span class="badge badge--square badge-blog bg-pink-light text-gray-600 font-weight-normal">BODY</span>
+			                        <span class="badge badge--square badge-blog bg-gray-400 text-gray-600 font-weight-normal">FEATURED</span>
+			                        <p class="h2 mt-2">5 things you’re doing wrong with your hair care routine</p>
+			                    </figcaption>
+			                </figure>
+			            </div>
+			    </div>
+			
+			    <a class="carousel-control carousel-control-prev carousel-control--background floating-out-left justify-content-start text-primary ml-lg-2" href="#carouselLoopCentered1" role="button" data-slide="prev">
+			        <span class="carousel-control-prev-icon d-flex justify-content-center align-items-center" aria-hidden="true"><svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.627 22.627" class="svg"><path d="M16.2 1.885l-9.428 9.428 9.428 9.428-1.886 1.886L3 11.313 14.314 0z"></path></svg></span>
+			        <span class="sr-only">Previous</span>
+			    </a>
+			    <a class="carousel-control carousel-control-next carousel-control--background floating-out-right justify-content-end text-primary mr-lg-2" href="#carouselLoopCentered1" role="button" data-slide="next">
+			        <span class="carousel-control-next-icon d-flex justify-content-center align-items-center" aria-hidden="true"><svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.627 22.627" class="svg"><path d="M5.428 20.742l9.428-9.428-9.428-9.428L7.314 0l11.314 11.314L7.314 22.627z"></path></svg></span>
+			        <span class="sr-only">Next</span>
+			    </a>
+			</div>			<div class="col-12 my-4">
 				<div class="bg-secondary-light p-3 no-gutters__in-container">
 					<p class="h1 text-center">You may also like</p>
 					<ul class="list-unstyled row mt-3 mb-0">
@@ -1294,7 +1434,7 @@
 				</a>
 			</div>
 		</section>
-		<ul class="row list-unstyled flex-wrap mb-1 mt-2">
+		<ul class="article-list-wrapper row list-unstyled flex-wrap mb-1 mt-2">
 				<li class="col-12 col-lg-4">
 					<article class="mb-4 mb-lg-3">
 						<figure class="mb-2 no-gutters__in-container border border-secondary-light">
