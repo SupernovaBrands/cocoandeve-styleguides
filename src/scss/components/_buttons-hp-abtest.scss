@@ -46,7 +46,7 @@ html.us-store {
 
 	.price-cta-variant-3 {
 		.btn-abtest {
-			border-color: $body-color;
+			border-color: $body-color !important;
 
 			&__prices {
 				border-color: $body-color;
