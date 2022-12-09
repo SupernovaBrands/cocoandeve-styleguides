@@ -6,6 +6,15 @@ html.us-store {
 				padding-left: 0 !important;
 				padding-right: 0 !important;
 			}
+
+			.product-card__title {
+				margin-right: 0.625rem;
+				margin-left: 0.625rem;
+			}
+
+			.position-relative.flex-grow-1 .text-center {
+				display: none;
+			}
 		}
 
 		.btn-abtest {
