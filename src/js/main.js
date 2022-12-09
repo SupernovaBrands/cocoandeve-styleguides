@@ -303,10 +303,19 @@ $(document).ready(function () {
 	});
 
 	$('.blog-post-quick-links').on('click', function (a) {
-		const href = $(this).attr('href');
 		a.preventDefault();
+		const href = $(this).attr('href');
+		const $main = $('.article__content');
+		let scrollTop = 0;
+
+		if ($(window).width() >= 768) {
+			scrollTop = $('.cookies-banner').hasClass('d-none') ? 120 : 220;
+		} else {
+			scrollTop = $('.cookies-banner').hasClass('d-none') ? 160 : 280;
+		}
+		
 		$('html, body').animate({
-			scrollTop: $(href).offset().top - 500,
+			scrollTop: $(href).offset().top - ($main.scrollTop()) - scrollTop,
 		}, '300');
 	});
 
