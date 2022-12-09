@@ -313,7 +313,7 @@ $(document).ready(function () {
 		} else {
 			scrollTop = $('.cookies-banner').hasClass('d-none') ? 160 : 280;
 		}
-		
+
 		$('html, body').animate({
 			scrollTop: $(href).offset().top - ($main.scrollTop()) - scrollTop,
 		}, '300');
