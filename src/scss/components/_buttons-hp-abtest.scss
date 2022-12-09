@@ -12,7 +12,7 @@ html.us-store {
 				margin-left: 0.625rem;
 			}
 
-			.position-relative.flex-grow-1 .text-center {
+			.position-relative.flex-grow-1 .text-center:not(.w-100) {
 				display: none;
 			}
 		}
