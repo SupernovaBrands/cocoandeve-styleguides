@@ -1,0 +1,111 @@
+html.us-store {
+	.price-cta-abtest {
+		.carousel-item {
+			.position-relative.flex-grow-1.px-2,
+			.swatch-overlay  {
+				padding-left: 0 !important;
+				padding-right: 0 !important;
+			}
+
+			.product-card__title {
+				margin-right: 0.625rem;
+				margin-left: 0.625rem;
+			}
+
+			.position-relative.flex-grow-1 .text-center:not(.w-100) {
+				display: none;
+			}
+		}
+
+		.btn-abtest {
+			padding: 0;
+			border-radius: 50rem !important;
+			display: flex;
+			border-width: 1px;
+			
+			&__prices {
+				width: 50%;
+				display: inline-block !important;
+				border-right: 1px solid white;
+				padding-top: $btn-padding-y-lg;
+				padding-bottom: $btn-padding-y-lg;
+			}
+	
+			&__text {
+				width: 50%;
+				padding-top: $btn-padding-y-lg;
+				padding-bottom: $btn-padding-y-lg;
+			}
+
+			.text-linethrough {
+				font-weight: normal;
+			}
+		}
+	}
+
+	.price-cta-variant-2 {
+		.btn-abtest {
+			&__prices {
+				border-radius: $rounded-pill 0 0 $rounded-pill;
+				background-color: white;
+				color: $body-color;
+			}
+		}
+	}
+
+	.price-cta-variant-3 {
+		.btn-abtest {
+			border-color: $body-color !important;
+
+			&__prices {
+				border-color: $body-color;
+				background-color: white;
+				color: $body-color;
+				border-radius: $rounded-pill 0 0 $rounded-pill;
+			}
+			&__text {
+				background-color: white;
+				color: $body-color;
+				border-radius: 0 $rounded-pill $rounded-pill 0;
+			}
+		}
+	}
+
+	.price-cta-variant-4 {
+		.btn-abtest {
+			border-radius: .5rem !important;
+		}
+	}
+
+	.price-cta-variant-5 {
+		.btn-abtest {
+			border-radius: $border-radius-lg !important;
+
+			&__prices {
+				border-radius: $border-radius-lg 0 0 $border-radius-lg;
+				background-color: white;
+				color: $body-color;
+			}
+		}
+	}
+
+	.price-cta-variant-6 {
+		.btn-abtest {
+			border-radius: $border-radius-lg !important;
+			border-color: $body-color !important;
+			background-color: white !important;
+
+			&__prices {
+				border-radius: $border-radius-lg 0 0 $border-radius-lg;
+				color: $body-color;
+				border-color: $body-color;
+			}
+
+			&__text {
+				color: $body-color;
+				border-radius: 0 $border-radius-lg $border-radius-lg 0;
+				
+			}
+		}
+	}
+}
