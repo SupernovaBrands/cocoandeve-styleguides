@@ -1,0 +1,268 @@
+<header class="main-header">
+	<nav class="bg-white navbar navbar-expand-lg">
+
+		<div class="container">
+			<button class="navbar-toggler" type="button" data-cy="menu-icon">
+				<span class="d-block"></span>
+			</button>
+
+            <ul class="navbar-nav d-none d-lg-flex navbar__secondary">
+				<li class="nav-item">
+					<a href="#" class="nav-link m-0 font-weight-bold">Shop All</a>
+				</li>
+                <li class="nav-item">
+					<a href="#" class="nav-link m-0 font-weight-bold">My Account</a>
+				</li>
+			</ul>
+
+
+			<a href="#" class="navbar-brand mx-auto mx-lg-0">
+				{{> components/svg-logo}}
+			</a>
+
+			<ul class="navbar-nav navbar-nav--right flex-row justify-content-end align-items-center">
+				<li class="nav-item pr-1">
+					<a class="nav-link search h4 m-0 d-flex text-uppercase font-weight-bold search-panel__open" href="#" data-cy="search-icon"><img class="svg mr-25" src="icons/search-abtest.svg" replace-to-svg /></a>
+				</li>
+				<li class="nav-item d-flex">
+					<a class="nav-link cart h4 mb-0 d-flex justify-content-end px-0 position-relative font-weight-normal" data-toggle="modal" data-target="#cart-drawer" role="button" data-cy="cart-icon">
+						<img class="svg mr-0" src="icons/cart.svg" replace-to-svg />
+						<span class="cart-drawer__count font-size-xs h-100"></span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<nav class="mobile-nav position-fixed d-lg-none">
+		<img class="mobile-nav__close svg text-white" src="icons/close.svg" replace-to-svg />
+		{{#unless critical}}
+		<ul id="mobileMenu" class="mobile-nav__menu accordion position-fixed h-100 col-9 bg-white list-unstyled py-2 mb-0"
+			role="tablist" aria-multiselectable="true">
+			<li class="mb-1">
+				<a href="#" class="btn btn-primary btn-block" data-cy="shopall-btn">Shop All</a>
+			</li>
+			<li class="card">
+				<figure id="headingHair" class="media card-header position-relative collapsed p-0"
+					data-toggle="collapse" data-target="#hairCare" aria-expanded="false" aria-controls="hairCare">
+					<img class="rounded" src="https://via.placeholder.com/40x40/EFADBA" alt="Generic placeholder image">
+					<figcaption class="media-body ml-1">
+						<small>Haircare</small>
+						<h4 class="m-0">Like a Virgin</h4>
+					</figcaption>
+					<img class="svg font-size-xs chevron-down" src="icons/chevron-down.svg" replace-to-svg />
+				</figure>
+				<ul id="hairCare" class="collapse list-unstyled card-body p-0"
+					role="tabpanel" aria-labelledby="headingHair" data-parent="#mobileMenu">
+					<li><a href="#">Nourishing Hair Masque</a></li>
+					<li><a href="#">Hair Heroes Gift Set</a></li>
+					<li><a href="#">That's A Wrap Bundle</a></li>
+					<li><a href="#">Microfibre Hair Towel Wrap</a></li>
+					<li><a href="#">Moisture Boost Shower Cap</a></li>
+					<li><a href="#">Hair Kits & Gifts</a></li>
+					<li><a href="#"><strong>Shop All Hair</strong></a></li>
+				</ul>
+			</li>
+			<li class="card">
+				<figure id="headingSkin" class="media card-header position-relative collapsed p-0"
+					data-toggle="collapse" data-target="#skinCare" aria-expanded="false" aria-controls="skinCare">
+					<img class="rounded" src="https://via.placeholder.com/40x40/EFADBA" alt="Generic placeholder image">
+					<figcaption class="media-body ml-1">
+						<small>Self Tanner</small>
+						<h4 class="m-0">Sunny Honey</h4>
+					</figcaption>
+					<img class="svg font-size-xs chevron-down" src="icons/chevron-down.svg" replace-to-svg />
+				</figure>
+				<ul id="skinCare" class="collapse list-unstyled card-body p-0"
+					role="tabpanel" aria-labelledby="headingSkin" data-parent="#mobileMenu">
+					<li><a href="#">Bali Bronzing Bundle</a></li>
+					<li><a href="#">Bali Bronzing Foam</a></li>
+					<li><a href="#">Bronzing Face Drops</a></li>
+					<li><a href="#">Self Tan Travel Kit</a></li>
+					<li><a href="#">Deluxe Vegan Kabuki Brush</a></li>
+					<li><a href="#">Soft Velvet Tanning Mitt</a></li>
+					<li><a href="#"><strong>Shop All Tan</strong></a></li>
+				</ul>
+			</li>
+			<li class="card">
+				<figure id="headingBody" class="media card-header position-relative collapsed p-0"
+					data-toggle="collapse" data-target="#bodyCare" aria-expanded="false" aria-controls="bodyCare">
+					<img class="rounded" src="https://via.placeholder.com/40x40/EFADBA" alt="Generic placeholder image">
+					<figcaption class="media-body ml-1">
+						<small>Bodycare</small>
+						<h4 class="m-0">Glow Figure</h4>
+					</figcaption>
+					<img class="svg font-size-xs chevron-down" src="icons/chevron-down.svg" replace-to-svg />
+				</figure>
+				<ul id="bodyCare" class="collapse list-unstyled card-body p-0"
+					role="tabpanel" aria-labelledby="headingTwo" data-parent="#mobileMenu">
+					<li><a href="#">Bali Bod Bundle</a></li>
+					<li><a href="#">Bali Buffing Sugar</a></li>
+					<li><a href="#">Body Moisture Whip</a></li>
+					<li><a href="#">Bounce Body Masque</a></li>
+					<li><a href="#">Jelly Massage Mitt</a></li>
+					<li><a href="#">Smooth-on Shell Scoop</a></li>
+					<li><a href="#"><strong>Shop All Body</strong></a></li>
+				</ul>
+			</li>
+			<li class="card">
+				<figure id="headingBundles" class="media card-header position-relative collapsed p-0"
+					data-toggle="collapse" data-target="#collapseBundle" aria-expanded="false" aria-controls="collapseBundle">
+					<img class="rounded" src="https://via.placeholder.com/40x40/EFADBA" alt="Generic placeholder image">
+					<figcaption class="media-body ml-1">
+						<small>Bundles</small>
+						<h4 class="m-0">Value Kits</h4>
+					</figcaption>
+					<img class="svg font-size-xs chevron-down" src="icons/chevron-down.svg" replace-to-svg />
+				</figure>
+				<ul id="collapseBundle" class="collapse list-unstyled card-body p-0" role="tabpanel"
+					aria-labelledby="headingBundles" data-parent="#mobileMenu">
+					<li><a href="#">Hair Heroes Gift Set</a></li>
+					<li><a href="#">Bali Bod Bundle</a></li>
+					<li><a href="#">Taste of the Tropics Kit</a></li>
+					<li><a href="#">Mini Mask Duo</a></li>
+					<li><a href="#">Shop all Products</a></li>
+					<li><a href="#">Shop all Kits & Gifts</a></li>
+				</ul>
+			</li>
+			<li><hr class="my-1 mx-0" ></li>
+			<li><a href="#">My Account</a></li>
+			<li><a href="#">Track My Order</a></li>
+			<li><a href="#">Blog</a></li>
+			<li><a href="#">FAQ</a></li>
+			<li><a href="#">Result IRL</a></li>
+			<li><a href="#">Contact Us</a></li>
+			<li class="border-bottom border-top card py-1 my-g">
+				<h4 id="countrySelect" class="card-header position-relative collapsed p-0 mb-25 mt-25" data-toggle="collapse" data-target="#collapseCountry" aria-expanded="false" aria-controls="collapseCountry">
+					Rest of the World (SGD)
+					<img class="svg font-size-xs chevron-down" src="icons/chevron-down.svg" replace-to-svg />
+				</h4>
+				<ul id="collapseCountry" class="collapse list-unstyled card-body p-0" role="tabpanel"
+					aria-labelledby="countrySelect" data-parent="#mobileMenu">
+					<li class="pt-g"><a href="#">USA (USD)</a></li>
+					<li><a href="#">United Kingdom (GBP)</a></li>
+					<li><a href="#">Canada (CAD)</a></li>
+					<li><a href="#">Australia (AUD)</a></li>
+					<li><a href="#">Europe (EUR)</a></li>
+					<li><a href="#">Germany (EUR)</a></li>
+					<li><a href="#">France (EUR)</a></li>
+					<li><a href="#">Rest of the World (SGD)</a></li>
+				</ul>
+			</li>
+		</ul>
+		<ul id="mobileMenuVariant" class="mobile-nav__menu accordion position-fixed h-100 col-9 bg-white list-unstyled py-2 mb-0 d-none mega-menu-collection-variant"
+			role="tablist" aria-multiselectable="true">
+			<li class="mb-1">
+				<a href="#" class="btn btn-primary btn-block" data-cy="shopall-btn">Shop All</a>
+			</li>
+			<li class="card">
+				<figure id="headingHair" class="media card-header position-relative collapsed p-0"
+					data-toggle="collapse" data-target="#hairCare" aria-expanded="false" aria-controls="hairCare">
+					<img class="rounded" src="https://via.placeholder.com/40x40/EFADBA" alt="Generic placeholder image">
+					<figcaption class="media-body ml-1">
+						<small>Haircare</small>
+						<h4 class="m-0">Like a Virgin</h4>
+					</figcaption>
+					<img class="svg font-size-xs chevron-down" src="icons/chevron-down.svg" replace-to-svg />
+				</figure>
+				<ul id="hairCare" class="collapse list-unstyled card-body p-0"
+					role="tabpanel" aria-labelledby="headingHair" data-parent="#mobileMenu">
+					<li><a href="#">Shampoo & Conditioner</a></li>
+					<li><a href="#">Treatments</a></li>
+					<li><a href="#">Hair Styling</a></li>
+					<li><a href="#">Accesories</a></li>
+				</ul>
+			</li>
+			<li class="card">
+				<figure id="headingSkin" class="media card-header position-relative collapsed p-0"
+					data-toggle="collapse" data-target="#skinCare" aria-expanded="false" aria-controls="skinCare">
+					<img class="rounded" src="https://via.placeholder.com/40x40/EFADBA" alt="Generic placeholder image">
+					<figcaption class="media-body ml-1">
+						<small>Self Tanner</small>
+						<h4 class="m-0">Sunny Honey</h4>
+					</figcaption>
+					<img class="svg font-size-xs chevron-down" src="icons/chevron-down.svg" replace-to-svg />
+				</figure>
+				<ul id="skinCare" class="collapse list-unstyled card-body p-0"
+					role="tabpanel" aria-labelledby="headingSkin" data-parent="#mobileMenu">
+					<li><a href="#">Body Tan</a></li>
+					<li><a href="#">Face Tan</a></li>
+					<li><a href="#">Tanning Mitt</a></li>
+					<li><a href="#">Accesories</a></li>
+				</ul>
+			</li>
+			<li class="card">
+				<figure id="headingBody" class="media card-header position-relative collapsed p-0"
+					data-toggle="collapse" data-target="#bodyCare" aria-expanded="false" aria-controls="bodyCare">
+					<img class="rounded" src="https://via.placeholder.com/40x40/EFADBA" alt="Generic placeholder image">
+					<figcaption class="media-body ml-1">
+						<small>Bodycare</small>
+						<h4 class="m-0">Glow Figure</h4>
+					</figcaption>
+					<img class="svg font-size-xs chevron-down" src="icons/chevron-down.svg" replace-to-svg />
+				</figure>
+				<ul id="bodyCare" class="collapse list-unstyled card-body p-0"
+					role="tabpanel" aria-labelledby="headingTwo" data-parent="#mobileMenu">
+					<li><a href="#">Body Wash</a></li>
+					<li><a href="#">Moisturisers</a></li>
+					<li><a href="#">Esfoliators</a></li>
+					<li><a href="#">Bali Bod Bundle</a></li>
+					<li><a href="#">Accesories</a></li>
+				</ul>
+			</li>
+			<li class="card">
+				<figure id="headingBundles" class="media card-header position-relative collapsed p-0"
+					data-toggle="collapse" data-target="#collapseBundle" aria-expanded="false" aria-controls="collapseBundle">
+					<img class="rounded" src="https://via.placeholder.com/40x40/EFADBA" alt="Generic placeholder image">
+					<figcaption class="media-body ml-1">
+						<small>Bundles</small>
+						<h4 class="m-0">Value Kits</h4>
+					</figcaption>
+					<img class="svg font-size-xs chevron-down" src="icons/chevron-down.svg" replace-to-svg />
+				</figure>
+				<ul id="collapseBundle" class="collapse list-unstyled card-body p-0" role="tabpanel"
+					aria-labelledby="headingBundles" data-parent="#mobileMenu">
+					<li><a href="#">Gift sets</a></li>
+					<li><a href="#">Hair sets</a></li>
+					<li><a href="#">Tan sets</a></li>
+					<li><a href="#">Body sets</a></li>
+				</ul>
+			</li>
+			<li><hr class="my-1 mx-0" ></li>
+			<li><a href="#">My Account</a></li>
+			<li><a href="#">Track My Order</a></li>
+			<li><a href="#">Blog</a></li>
+			<li><a href="#">FAQ</a></li>
+			<li><a href="#">Result IRL</a></li>
+			<li><a href="#">Contact Us</a></li>
+			<li class="border-bottom border-top card py-1 my-g">
+				<h4 id="countrySelect" class="card-header position-relative collapsed p-0 mb-25 mt-25" data-toggle="collapse" data-target="#collapseCountry" aria-expanded="false" aria-controls="collapseCountry">
+					Rest of the World (SGD)
+					<img class="svg font-size-xs chevron-down" src="icons/chevron-down.svg" replace-to-svg />
+				</h4>
+				<ul id="collapseCountry" class="collapse list-unstyled card-body p-0" role="tabpanel"
+					aria-labelledby="countrySelect" data-parent="#mobileMenu">
+					<li class="pt-g"><a href="#">USA (USD)</a></li>
+					<li><a href="#">United Kingdom (GBP)</a></li>
+					<li><a href="#">Canada (CAD)</a></li>
+					<li><a href="#">Australia (AUD)</a></li>
+					<li><a href="#">Europe (EUR)</a></li>
+					<li><a href="#">Germany (EUR)</a></li>
+					<li><a href="#">France (EUR)</a></li>
+					<li><a href="#">Rest of the World (SGD)</a></li>
+				</ul>
+			</li>
+		</ul>
+		{{/unless}}
+	</nav>
+	{{> components/tooltip}}
+	{{> components/tooltip-discount-applied-abtest}}
+	{{> compounds/search-box-abtest}}
+</header>
+
+<div class="modal fade cart-drawer" id="cart-drawer" tabindex="-1" aria-hidden="true"></div>
+
+{{!-- Adding this to include bg-shimmer related classes in critical css --}}
+{{#if critical}}
+<div class="d-none embed-responsive bg-shimmer"><img class="embed-responsive-item fit--cover" /></div>
+{{/if}}
