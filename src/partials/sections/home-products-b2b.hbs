@@ -1,0 +1,82 @@
+<div class="b2b-home-products-template container px-g mt-5">
+    <div class="row justify-content-between align-items-center mb-4">
+        <h1 id="collection__title" class="col-6 mb-0">Shop All</h1>
+        <div class="col-6">
+            <div class="floating-label position-relative d-lg-none">
+                <select id="selectInput" class="custom-select mb-0 pt-3 pb-1">
+                    <option selected>Bestsellers</option>
+                    <option>Lowest price</option>
+                    <option>Highest price</option>
+                    <option>Top rated</option>
+                </select>
+                <label for="selectInput" class="floating-label__text mb-0 position-absolute font-size-sm">Sort by:</label>
+            </div>
+        </div>
+    </div>
+
+    <nav class="col d-none d-lg-block px-0">
+        <ul class="tab nav nav-tabs tab--scroll mb-3 mb-lg-4 align-items-end" id="scrolltab" role="tablist">
+            <li class="nav-item text-center mb-0 pr-g">
+                <a class="nav-link mb-0 border-0 px-0 pb-1 text-body active" data-toggle="tab" href="#collection__all"
+                    role="tab" aria-controls="collection__all" aria-selected="true">Shop All</a>
+            </li>
+            <li class="nav-item text-center mb-0 px-g">
+                <a class="nav-link mb-0 border-0 px-0 pb-1 text-body" data-toggle="tab" href="#collection__value-kits" role="tab"
+                    aria-controls="collection__value-kits" aria-selected="false">Hair</a>
+            </li>
+            <li class="nav-item text-center mb-0 px-g">
+                <a class="nav-link mb-0 border-0 px-0 pb-1 text-body" data-toggle="tab" href="#collection__face-mask" role="tab"
+                    aria-controls="collection__face-mask" aria-selected="false">Tan</a>
+            </li>
+            <li class="nav-item text-center mb-0 px-g">
+                <a class="nav-link mb-0 border-0 px-0 pb-1 text-body" data-toggle="tab" href="#collection__serum" role="tab"
+                    aria-controls="collection__serum" aria-selected="false">Value Kits</a>
+            </li>
+            <li class="nav-item text-center mb-0 px-g">
+                <a class="nav-link mb-0 border-0 px-0 pb-1 text-body" data-toggle="tab" href="#collection__cleanser" role="tab"
+                    aria-controls="collection__cleanser" aria-selected="false">Limited edition</a>
+            </li>
+            <li class="nav-item text-center mb-0 pl-g ml-auto tab--filter">
+                <div class="floating-label position-relative mb-2">
+                    <select id="selectInputLg" class="custom-select mb-0">
+                        <option selected>Bestsellers</option>
+                        <option>Lowest price</option>
+                        <option>Highest price</option>
+                        <option>Top rated</option>
+                    </select>
+                    <label for="selectInputLg" class="floating-label__text mb-0 position-absolute font-size-xs">Sort by:</label>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="tab-content">
+        <div class="tab-pane active collection__featured mb-g" id="collection__featured" role="tabpanel" aria-labelledby="collection__featured">
+            <h4 class="mb-3 d-lg-none">Featured</h4>
+            <h4 class="h2 mb-3 d-none d-lg-block">Featured</h4>
+            <div class="row">
+                {{> components/product-card-b2b title="Like a Virgin Hair Masque Like a Virgin Hair Masque" compare_price="$44.90" price="$34.90" collection="true" showTip="true" }}
+
+                {{> components/product-card-b2b title="Like a Virgin Hair Masque" compare_price="$44.90" price="$34.90" swatch="true" swatch_style="true" collection="true"}}
+
+                {{> components/product-card-b2b title="Like a Virgin Hair Masque" compare_price="$44.90" price="$34.90" swatch="true" swatch_style="true" collection="true"}}
+
+                {{> components/product-card-b2b title="Satin Eye Mask" compare_price="$44.90" price="$34.90" swatch="true" swatch_shade="true" collection="true"}}
+
+                {{> components/product-card-b2b title="Like a Virgin Hair Masque" compare_price="$44.90" price="$34.90" swatch="true" swatch_style="true" collection="true"}}
+
+                {{> components/product-card-b2b title="Satin Eye Mask" compare_price="$44.90" price="$34.90" swatch="true" swatch_style_eyemask="true" collection="true"}}
+
+                {{> components/product-card-b2b title="Smoothie Shower Gel" compare_price="$44.90" price="$34.90" swatch="true" swatch_scent="true" collection="true"}}
+
+                {{> components/product-card-b2b title="Smoothie Shower Gel" compare_price="$44.90" price="$34.90" swatch_shade="true" swatch_scent="true" collection="true"}}
+
+                {{> components/product-card-b2b title="Shampo & Conditioner" compare_price="$44.90" price="$34.90" swatch="true" collection="true" quick_shop="true"}}
+
+                {{> components/product-card-b2b title="Glow Essentials Bundle" compare_price="$44.90" price="$34.90" swatch="true" swatch_modal="true" collection="true"}}
+
+                {{> components/product-card-b2b title="Dewy Glow Bundle" compare_price="$44.90" price="$34.90" swatch="true" swatch_modal="true" collection="true" swatch_modal_mobile="true"}}
+            </div>
+        </div>
+    </section>
+</div>
