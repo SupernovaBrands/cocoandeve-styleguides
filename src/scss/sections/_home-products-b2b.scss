@@ -47,7 +47,7 @@
     }
 
     .nav__secondary {
-        box-shadow: 0 0.25em 0.3125em 0 rgb(0 0 0 / 6%);
+        box-shadow: 0 calc-em(4) calc-em(5) 0 rgba(0, 0, 0, .06);
 
         ul {
             overflow-x: scroll;
