@@ -1,42 +1,25 @@
-<div class="d-flex flex-column col-6 col-md-1o5 mb-5 {{active}} product-card text-center {{#if col_lg }}col-lg-{{col_lg}}{{/if}} {{#if col }}col-{{col}}{{/if}}">
-	{{# if square_badge}}<span class="badge bg-white position-absolute font-weight-normal font-size-sm">{{ square_badge }}</span>{{/if}}
+<div class="d-flex flex-column col-6 col-md-1o5 mb-5 {{active}} product-card">
 	<a href="#">
-	<noscript class="loading-lazy">
-		<picture class="embed-responsive embed-responsive-1by1 bg-shimmer m-0">
-			<img class="embed-responsive-item fit--cover"
-			alt="Image Alt"
-			loading="lazy"
-			src="https://via.placeholder.com/243x243">
-			{{# if showTip }}
-				<span class="product-card__image-tip position-absolute text-white font-size-xs p-1 d-none d-lg-block">👻 Get 3 for 2 with code: HALLOWEEN 👻</span>
-				<span class="product-card__image-tip position-absolute text-white font-size-xs p-1 d-block d-lg-none rounded">👻 3 for 2</span>
-			{{/if}}
-		</picture>
-	</noscript>
-	{{#if badge }}
-		<picture class="circle-badge position-absolute rounded-circle bg-primary d-flex p-1">
-			<img class="w-100" src="../images/{{ badge_image }}"/>
-		</picture>
-	{{/if}}
+        <picture class="embed-responsive embed-responsive-1by1 bg-shimmer m-0">
+            <img class="embed-responsive-item fit--cover"
+            alt="Image Alt"
+            loading="lazy"
+            src="https://via.placeholder.com/243x243">
+        </picture>
 	</a>
-	<div class="pt-2 pb-0 position-relative flex-grow-1 d-flex flex-column {{#if collection }} px-lg-2 {{else}} px-2 {{/if}}">
-		<div class="d-flex justify-content-center mb-1">
-			<div class="react-yotpo-star" data-product-id="4543113265187"></div>
-		</div>
-		<p class="product-card__title flex-grow-1 d-flex flex-column justify-content-center h4 h-100 font-weight-normal">
+	<div class="pt-2 pb-0 position-relative flex-grow-1 d-flex flex-column">
+		<p class="product-card__title flex-grow-1 d-flex flex-column h3 h-100 font-weight-bold mb-0">
 			<a href="#" class="text-dark">{{title}}</a>
 		</p>
-		<p class="text-center">
-			{{#if compare_price }}<span class="text-linethrough h4 m-1">{{compare_price}}</span>{{/if}}<span class="text-primary h4">{{price}}</span>
+        <p>Size: 60g</p>
+        <p>10PCs/ case</p>
+		<p class="">
+			{{#if compare_price }}<span class="text-linethrough h3 mr-1">{{compare_price}}</span>{{/if}}<span class="text-primary h3 font-weight-bold">{{price}}</span>
 		</p>
 		{{#if swatch }}
-		{{#if quick_shop }}
-		<button type="button" class="btn btn-lg btn-primary btn-choose__swatch btn-choose__swatch-subscription btn-block px-0">Quick Shop</button>
-		{{/if}}
-
-		{{#if swatch_link}}
-		<a href="product.html#product-form" class="btn btn-lg btn-primary btn-choose btn-block px-0">Choose Shade</a>
-		{{/if}}
+            {{#if swatch_link}}
+            <a href="product.html#product-form" class="btn btn-lg btn-primary btn-choose btn-block px-0">Choose Shade</a>
+            {{/if}}
 		{{#if swatch_shade }}
 		<button type="button" class="btn btn-lg btn-primary btn-choose btn-block px-0">Choose Shade</button>
 		<div class="swatch-overlay flex-column align-items-center justify-content-end w-100 pb-0 position-absolute {{#if collection }} px-lg-2 {{else}} px-2 {{/if}}">

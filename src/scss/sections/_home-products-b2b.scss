@@ -15,12 +15,16 @@
 
         &__text {
             top: 28%;
-            left: calc-em(20, 14);
+            left: calc-em(17, 14);
             color: $gray-600;
             transform: translateY(-50%);
             transform-origin: left;
             transition: transform 100ms linear,
             top 100ms linear;
+
+            @include media-breakpoint-up(lg) {
+                left: calc-em(20, 14);
+            }
         }
 
         input:focus + &__text,
@@ -40,6 +44,19 @@
                 bottom: 1em;
             }
         }
+    }
+
+    .nav__secondary {
+        box-shadow: 0 0.25em 0.3125em 0 rgb(0 0 0 / 6%);
+
+        ul {
+            overflow-x: scroll;
+            justify-content: unset;
+        }
+    }
+
+    .nav-tabs {
+        border-bottom: 1px solid $gray-400;
     }
 
     .tab {
