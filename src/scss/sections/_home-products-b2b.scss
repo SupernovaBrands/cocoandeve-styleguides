@@ -1,0 +1,93 @@
+.b2b-home-products-template {
+    .floating-label {
+        input, select {
+            padding-top: calc-em(20.5);
+            padding-bottom: calc-em(10);
+            &::placeholder {
+                color: transparent;
+            }
+        }
+
+        input.font-size-sm {
+            padding: calc-em(20.5, 14) calc-em(16, 14) calc-em(10, 14);
+            height: calc-em(50, 14);
+        }
+
+        &__text {
+            top: 28%;
+            left: calc-em(17, 14);
+            color: $gray-600;
+            transform: translateY(-50%);
+            transform-origin: left;
+            transition: transform 100ms linear,
+            top 100ms linear;
+
+            @include media-breakpoint-up(lg) {
+                left: calc-em(20, 14);
+            }
+        }
+
+        input:focus + &__text,
+        input:not(:placeholder-shown) + &__text,
+        select + &__text {
+            top: calc-em(15);
+            transform: translateY(-50%) scale(0.85);
+        }
+
+        &.validated {
+            &::after {
+                position: absolute;
+                content: url(icon-svg('check-circle.svg', #{$primary}, #{$font-size-xs}));
+                width: $font-size-xs;
+                height: $font-size-xs;
+                right: calc-em(10);
+                bottom: 1em;
+            }
+        }
+    }
+
+    .nav__secondary {
+        box-shadow: 0 0.25em 0.3125em 0 rgb(0 0 0 / 6%);
+
+        ul {
+            overflow-x: scroll;
+            justify-content: unset;
+        }
+    }
+
+    .nav-tabs {
+        border-bottom: 1px solid $gray-400;
+    }
+
+    .tab {
+        .nav-link {
+            border-bottom: 2px solid transparent !important;
+
+            &.active {
+                border-bottom-color: $primary !important;
+                font-weight: bold;
+                background-color: white;
+            }
+        }
+
+        &--scroll {
+            overflow: auto hidden;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        &--filter {
+            min-width: calc-em(270, 16);
+        }
+    }
+
+    .col-md-1o5 {
+        @include media-breakpoint-up(lg) {
+            @include make-col(1, 5);
+            padding-left: 7.5px;
+            padding-right: 7.5px;
+        }
+    }
+}
