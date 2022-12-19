@@ -210,7 +210,7 @@
 	@include media-breakpoint-up(lg) {
 		right: calc-em(40);
 	}
-
+	
 	&:hover {
 		color: $primary;
 	}
