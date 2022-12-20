@@ -4,10 +4,8 @@
     box-shadow: 0px 0px 32px rgba(70, 68, 68, 0.5);
 }
 
-html.uk-store {
-    .cookie-banner-bottom-abtest {
-        .cookies-banner:not(.cookies-banner--bottom) {
-            display: none !important;
-        }
+.cookies-banner:not(.cookies-banner--bottom) {
+    @include media-breakpoint-down(md) {
+        display: none !important;
     }
 }
