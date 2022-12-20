@@ -1,0 +1,23 @@
+.au-store {
+    .new-variant-abtest {
+        .product-variant {
+            .custom-control-label {
+                border: 0 !important;
+            }
+
+            &__price-label-abtest {
+                display: block !important;
+            }
+
+            &__price-label span {
+                display: none;
+            }
+
+            &__price-badge-abtest {
+                display: inline-block !important;
+                padding-top: calc-em(2);
+                padding-bottom: calc-em(2);
+            }
+        }
+    }
+}
