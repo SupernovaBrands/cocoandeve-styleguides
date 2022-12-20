@@ -1,3 +1,5 @@
+/* global screenLG */
+
 function initCookieBanner(el) {
 	el.find('#collapseCookieBanner').on('show.bs.collapse', function () {
 		const parentEl = el;
@@ -28,5 +30,9 @@ function initCookieBanner(el) {
 }
 
 $(document).ready(function () {
-	initCookieBanner($('.cookies-banner:not(.cookies-banner--bottom)'));
+	if (window.innerWidth > screenLG) {
+		initCookieBanner($('.cookies-banner:not(.cookies-banner--bottom)'));
+	} else {
+		initCookieBanner($('.cookies-banner--bottom'));
+	}
 });
