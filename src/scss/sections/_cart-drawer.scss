@@ -71,7 +71,9 @@
 	&__item img {
 		max-width: calc-em(170);
 	}
-
+	.variant-swatch:before {
+		cursor: auto;
+	}
 }
 
 .manual-gwp {
