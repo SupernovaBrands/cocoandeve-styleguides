@@ -5,13 +5,6 @@
     }
 
     &__timer {
-        &__title {
-            @include media-breakpoint-down(lg) {
-                font-size: 12px;
-                text-align: left;
-                width: 25%;
-            }
-        }
 
         .list-inline-item {
             @include media-breakpoint-down(lg) {
@@ -24,7 +17,7 @@
                     left: -15px;
                 }
             }
-            
+
             span {
                 display: block;
                 font-size: calc-em(9);

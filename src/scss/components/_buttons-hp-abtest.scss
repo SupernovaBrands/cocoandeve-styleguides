@@ -1,4 +1,4 @@
-html.us-store {
+html.uk-store {
 	.price-cta-abtest {
 		.carousel-item {
 			.position-relative.flex-grow-1.px-2,
@@ -105,6 +105,10 @@ html.us-store {
 				color: $body-color;
 				border-radius: 0 $border-radius-lg $border-radius-lg 0;
 				
+			}
+
+			&:focus {
+				box-shadow: none;
 			}
 		}
 	}
