@@ -12,15 +12,12 @@
 		margin-top: -#{calc-em(20)};
 	}
 }
-html.au-store {
-	.navigation-dropdown-abtest {
-		.navbar__secondary {
-			.nav-item {
-				&:hover {
-					.nav-mega-menu {
-						display: block !important;
-					}
-				}
+
+.navbar__secondary {
+	.nav-item {
+		&:hover {
+			.nav-mega-menu {
+				display: block !important;
 			}
 		}
 	}
