@@ -39,6 +39,7 @@ html.au-store {
 
 			.text-linethrough {
 				font-weight: normal;
+				margin-right: calc-em(5);
 			}
 		}
 	}
@@ -86,6 +87,16 @@ html.au-store {
 				background-color: white;
 				color: $body-color;
 			}
+
+			&:focus {
+				box-shadow: none;
+			}
+
+			&:hover {
+				.btn-abtest__prices {
+					background-color: $pink-light !important;
+				}
+			}
 		}
 	}
 
@@ -109,6 +120,16 @@ html.au-store {
 
 			&:focus {
 				box-shadow: none;
+			}
+
+			&:hover {
+				background-color: $primary !important;
+				border-color: $primary !important;
+
+				.btn-abtest__prices, .btn-abtest__text {
+					color: white !important;
+					border-color: white;
+				}
 			}
 		}
 	}
