@@ -69,6 +69,21 @@ html.au-store {
 				color: $body-color;
 				border-radius: 0 $rounded-pill $rounded-pill 0;
 			}
+
+			&:focus, &:active {
+				box-shadow: none !important;
+			}
+
+			&:hover {
+				background-color: $primary !important;
+				border-color: $primary !important;
+
+				.btn-abtest__prices, .btn-abtest__text {
+					color: white !important;
+					border-color: white;
+					background-color: $primary !important;
+				}
+			}
 		}
 	}
 
@@ -88,8 +103,8 @@ html.au-store {
 				color: $body-color;
 			}
 
-			&:focus {
-				box-shadow: none;
+			&:focus, &:active {
+				box-shadow: none !important;
 			}
 
 			&:hover {
@@ -118,8 +133,8 @@ html.au-store {
 				
 			}
 
-			&:focus {
-				box-shadow: none;
+			&:focus, &:active {
+				box-shadow: none !important;
 			}
 
 			&:hover {
