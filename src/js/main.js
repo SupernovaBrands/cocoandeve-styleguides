@@ -293,6 +293,51 @@ $(document).ready(function () {
 		});
 	}
 
+	// Back To Top
+
+	$('#back-to-top').on('click', function (a) {
+		a.preventDefault();
+		$('html, body').animate({
+			scrollTop: 0,
+		}, '300');
+	});
+
+	$('.blog-post-quick-links').on('click', function (a) {
+		a.preventDefault();
+		const href = $(this).attr('href');
+		const $main = $('.article__content');
+		let scrollTop = 0;
+
+		if ($(window).width() >= 768) {
+			scrollTop = $('.cookies-banner').hasClass('d-none') ? 120 : 220;
+		} else {
+			scrollTop = $('.cookies-banner').hasClass('d-none') ? 160 : 280;
+		}
+
+		$('html, body').animate({
+			scrollTop: $(href).offset().top - ($main.scrollTop()) - scrollTop,
+		}, '300');
+	});
+
+	$(window).scroll(function () {
+		const pageheight = $('body').height();
+		if ($(window).width() >= 768 && pageheight > 3600) {
+			if ($(window).scrollTop() > 500) {
+				$('#back-to-top').addClass('btn--show');
+			} else {
+				$('#back-to-top').removeClass('btn--show');
+			}
+		} else if ($(window).width() < 768 && pageheight > 2560) {
+			if ($(window).scrollTop() > 700) {
+				$('#back-to-top').addClass('btn--show');
+			} else {
+				$('#back-to-top').removeClass('btn--show');
+			}
+		} else {
+			$('#back-to-top').removeClass('btn--show');
+		}
+	});
+
 	// mobile menu toggle
 
 	function mobileMenuToggler() {
@@ -546,6 +591,10 @@ if ($('.carousel--scroll__featured').length > 0) {
 
 if ($('.newsletter-bigger-popup').length > 0) {
 	import(/* webpackChunkName: 'newsletter-popup' */ '~mod/newsletter-popup');
+}
+
+if ($('.video-loop').length) {
+	import(/* webpackChunkName: 'video-loop' */ '~mod/video-loop');
 }
 
 if ($('#exit-intent-popup').length > 0) {

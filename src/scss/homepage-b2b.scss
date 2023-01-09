@@ -1,3 +1,8 @@
+@import 'core';
+@import 'bootstrap/common';
+@import 'bootstrap/main';
+
+//COMMONS
 @import 'core/fonts';
 @import 'core/type';
 @import 'core/grid';
@@ -19,16 +24,10 @@
 @import 'compounds/upsell';
 @import 'compounds/search-box';
 @import 'compounds/sweepstakes-popup';
-@import 'compounds/newsletter-popup';
-@import 'compounds/birthday-popup';
-// @import 'compounds/modal-cookies-abtest';
-@import 'compounds/nav-mega-menu';
-@import 'compounds/exit-intent';
-@import 'compounds/nav-mega-menu';
-@import 'compounds/cookies-banner-bottom';
 
-@import 'components/buttons-hp-abtest';
-
-@import 'sections/header';
+@import 'sections/header-b2b';
 @import 'sections/cart-drawer';
-@import 'sections/footer';
+@import 'sections/footer-b2b';
+// END COMMONS
+
+
