@@ -144,6 +144,7 @@ class SNCart {
 					options.push(variant.option3);
 					options_with_values.push({ name: product.options[2].name, value: variant.option3 });
 				}
+
 				items.splice(0, 0, {
 					id,
 					key: `${id}:abcd`,

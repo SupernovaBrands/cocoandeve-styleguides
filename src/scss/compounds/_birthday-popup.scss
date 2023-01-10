@@ -1,0 +1,16 @@
+.birthday-popup {
+    .modal-content {
+        background-color: $primary-light-second;
+    }
+
+    .close {
+        top: 1em;
+        right: 1em;
+        opacity: 1;
+        z-index: $zindex-sticky;
+    }
+
+    .svg { 
+        height: calc-em(26);
+    }
+}

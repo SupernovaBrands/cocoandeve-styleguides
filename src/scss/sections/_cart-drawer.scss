@@ -62,6 +62,30 @@
 		margin: 0;
 	}
 
+	&__swell-redemption-item {
+		min-width: calc-em(141);
+
+		&-btn {
+			border-radius: calc-em(84);
+			height: calc-em(40);
+			border-color: $body-color !important;
+
+			&:disabled {
+				opacity: .4;
+			}
+		}
+
+		&-heading {
+			max-height: calc-em(101);
+		}
+
+		picture {
+			background-color: $pink-product;
+			border-top-right-radius: $border-radius-lg;
+			border-top-left-radius: $border-radius-lg;
+		}
+	}
+
 	&__items-tip {
 		background-color: $body-color;
 	}
