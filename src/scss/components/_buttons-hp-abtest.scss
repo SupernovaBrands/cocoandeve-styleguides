@@ -1,4 +1,6 @@
-html.au-store {
+html.au-store,
+html.uk-store,
+html.us-store {
 	.price-cta-abtest {
 		.carousel-item {
 			.position-relative.flex-grow-1.px-2,
@@ -68,6 +70,21 @@ html.au-store {
 				color: $body-color;
 				border-radius: 0 $rounded-pill $rounded-pill 0;
 			}
+
+			&:focus, &:active {
+				box-shadow: none !important;
+			}
+
+			&:hover {
+				background-color: $primary !important;
+				border-color: $primary !important;
+
+				.btn-abtest__prices, .btn-abtest__text {
+					color: white !important;
+					border-color: white;
+					background-color: $primary !important;
+				}
+			}
 		}
 	}
 
@@ -85,6 +102,16 @@ html.au-store {
 				border-radius: $border-radius-lg 0 0 $border-radius-lg;
 				background-color: white;
 				color: $body-color;
+			}
+
+			&:focus, &:active {
+				box-shadow: none !important;
+			}
+
+			&:hover {
+				.btn-abtest__prices {
+					background-color: $pink-light !important;
+				}
 			}
 		}
 	}
@@ -107,8 +134,18 @@ html.au-store {
 				
 			}
 
-			&:focus {
-				box-shadow: none;
+			&:focus, &:active {
+				box-shadow: none !important;
+			}
+
+			&:hover {
+				background-color: $primary !important;
+				border-color: $primary !important;
+
+				.btn-abtest__prices, .btn-abtest__text {
+					color: white !important;
+					border-color: white;
+				}
 			}
 		}
 	}
