@@ -1,0 +1,13 @@
+<div class="product-upsell-2 py-5 d-none">
+    <div class="container">
+        <h2 class="h1 col-12 text-center mb-3">Plays well with</h2>
+
+        <figure id="product-upsell-2" class="carousel carousel--product-preview slide mb-1 mb-lg-0 no-gutters__in-container" data-ride="carousel" data-interval="false" data-indicator="#product-image-carousel__indicator{{#if num}}{{num}}{{/if}}">
+            <div class="carousel-inner mx-g">
+                {{> compounds/product-card-upsell active="active" title="Step 1" text="1 Line description" nexttitle="Step 2" nexttext="1 Line description" compare_price="$44.90" price="$34.90" carousel=true }}
+                {{> compounds/product-card-upsell title="Step 2" text="1 Line description" nexttitle="Step 3" nexttext="1 Line description" compare_price="$44.90" price="$34.90" carousel=true }}
+                {{> compounds/product-card-upsell title="Step 3" text="1 Line description" nexttitle="Step 1" nexttext="1 Line description" compare_price="$44.90" price="$34.90" carousel=true }}
+            </div>
+        </figure>
+    </div>
+</div>
