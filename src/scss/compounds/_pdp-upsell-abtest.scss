@@ -1,15 +1,32 @@
 .product-upsell-1 {
     @include media-breakpoint-up(lg) {
         .carousel--centered .carousel-inner {
-            transform: translateX(0);
+            transform: translateX(0) !important;
         }
     }
 }
 
 .product-upsell-2 {
     button {
-        &:hover {
-            
+        &:focus {
+            box-shadow: none;
+        }
+
+        max-width: calc-em(144);
+
+        @include media-breakpoint-up(lg) {
+            max-width: calc-em(196);
+        }
+    }
+    .carousel-item {
+        &.active,
+        &.carousel-item-left,
+        &.carousel-item-right,
+        &.carousel-item-prev,
+        &.carousel-item-next {
+            @include media-breakpoint-down(md) {
+                display: flex !important;
+            }
         }
     }
 
@@ -28,17 +45,17 @@
         .item-third {
             &:first-child {
                 padding-left: 0;
-                padding-right: 7.5px;
+                margin-right: 7.5px;
             }
             &:last-child {
-                padding-left: 7.5px;
+                margin-left: 7.5px;
                 padding-right: 0;
             }
         }
     }
 }
 
-html.uk-store {
+html.us-store {
     .pdp-upsell-abtest-variant-1 {
         .product-upsell-1 {
             display: block !important;
