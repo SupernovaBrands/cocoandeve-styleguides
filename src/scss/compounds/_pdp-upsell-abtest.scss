@@ -8,8 +8,14 @@
 
 .product-upsell-2 {
     button {
-        &:hover {
-            
+        &:focus {
+            box-shadow: none;
+        }
+
+        max-width: calc-em(144);
+
+        @include media-breakpoint-up(lg) {
+            max-width: calc-em(196);
         }
     }
     .carousel-item {
@@ -49,7 +55,7 @@
     }
 }
 
-html.uk-store {
+html.us-store {
     .pdp-upsell-abtest-variant-1 {
         .product-upsell-1 {
             display: block !important;
