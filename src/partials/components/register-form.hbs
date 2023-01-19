@@ -1,4 +1,4 @@
-<form id="{{id}}" class="px-3 py-g shadow collapse" data-parent="#{{parent}}">
+<form id="{{id}}" class="p-g shadow collapse" data-parent="#{{parent}}">
     <p class="font-weight-bold text-center px-2 mb-2">Registration</p>
     <div class="row">
         <div class="form-group col-6 pr-1">
@@ -7,17 +7,23 @@
         <div class="form-group col-6 pl-1">
             <input type="text" class="form-control font-size-sm" id="dropdownRegisterFormLName" placeholder="Last Name" aria-label="Last Name">
         </div>
-        <div class="form-group col-12 mt-1">
-            <input type="email" class="form-control font-size-sm" id="dropdownRegisterFormEmail" placeholder="Email" aria-label="Email">
+        <div class="form-group col-12">
+            <input type="email" class="form-control font-size-sm" id="dropdownRegisterFormEmail" placeholder="Email">
         </div>
-        <div class="form-group col-12 mt-1">
-            <input type="text" class="form-control font-size-sm" id="dropdownRegisterFormPassword" placeholder="Password" aria-label="Password">
+        <div class="form-group col-12">
+            <input type="text" class="form-control font-size-sm" id="dropdownRegisterFormPassword" placeholder="Password">
         </div>
     </div>
-    <div class="custom-control custom-checkbox d-flex justify-content-start mt-1">
+    <div class="custom-control custom-checkbox d-flex justify-content-start font-size-sm mb-1">
+        <input type="checkbox" name="offers" value="true" class="custom-control-input" id="offers" required="" aria-required="true" aria-invalid="true">
+        <label class="custom-control-label" for="offers">
+            Keep me up to date on news and exclusive offers
+        </label>
+    </div>
+    <div class="custom-control custom-checkbox d-flex justify-content-start font-size-sm">
         <input type="checkbox" name="agreement" value="true" class="custom-control-input" id="agreement" required="" aria-required="true" aria-invalid="true">
-        <label class="custom-control-label font-size-xs" for="agreement">
-            By clicking here, I agree to the <a href="#" class="text-body font-weight-bold">Terms of Use</a> and <a href="#" class="text-body font-weight-bold">Privacy Policy</a>
+        <label class="custom-control-label" for="agreement">
+            By clicking here, I agree to the <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>
         </label>
     </div>
     <button type="submit" class="btn btn-primary btn-block mt-g">Create Account</button>
