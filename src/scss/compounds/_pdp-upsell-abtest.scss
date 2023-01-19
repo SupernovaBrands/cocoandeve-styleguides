@@ -4,6 +4,11 @@
             transform: translateX(0) !important;
         }
     }
+
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+        top: 28%;
+    }
 }
 
 .product-upsell-2 {
@@ -60,11 +65,19 @@ html.us-store {
         .product-upsell-1 {
             display: block !important;
         }
+
+        .upsell_product {
+            display: none;
+        }
     }
 
     .pdp-upsell-abtest-variant-2 {
         .product-upsell-2 {
             display: block !important;
+        }
+
+        .upsell_product {
+            display: none;
         }
     }
 }
