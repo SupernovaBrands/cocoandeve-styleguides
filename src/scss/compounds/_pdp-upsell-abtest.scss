@@ -24,9 +24,22 @@
         }
     }
 
+    .bg-pink-light {
+        &:hover,
+        &:focus {
+            background-color: $pink-light !important   ;
+        }
+    }
+
     .product-card:hover {
         a {
             text-decoration: none;
+        }
+    }
+    
+    picture {
+        @include media-breakpoint-down(md) {
+            max-width: calc-em(145);
         }
     }
 
