@@ -23,6 +23,12 @@
             max-width: calc-em(196);
         }
     }
+
+    .product-card:hover {
+        a {
+            text-decoration: none;
+        }
+    }
     .carousel-item {
         &.active,
         &.carousel-item-left,

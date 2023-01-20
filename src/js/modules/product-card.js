@@ -26,4 +26,10 @@ $(document).ready(function () {
 			}, 1000);
 		});
 	}
+
+	$('#product-upsell-2').on('click', function(e) {
+		if ($(e.target).hasClass('product-card__button')) {
+			e.preventDefault();
+		}
+	});
 });
