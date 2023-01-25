@@ -17,10 +17,22 @@
             box-shadow: none;
         }
 
-        max-width: calc-em(144);
+        max-width: calc-em(164);
 
         @include media-breakpoint-up(lg) {
-            max-width: calc-em(196);
+            max-width: calc-em(216);
+        }
+    }
+
+    .swatch-overlay {
+        left: 0;
+        right: 0;
+        max-width: calc-em(164);
+        border: 1px solid $primary-dark;
+        border-radius: calc-em(8);
+
+        @include media-breakpoint-up(lg) {
+            max-width: calc-em(216);
         }
     }
 
