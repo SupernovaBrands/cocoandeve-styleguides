@@ -43,11 +43,11 @@
         }
     }
 
-    .product-card__content {
-        @include media-breakpoint-down(md) {
-            min-height: calc-em(290);   
-        }
+    .product-card__title {
+        min-height: calc-em(40);
     }
+
+
     .carousel-item {
         &.active,
         &.carousel-item-left,
