@@ -47,6 +47,9 @@
         min-height: calc-em(40);
     }
 
+    .product-card__content {
+        min-height: calc-em(310);
+    }
 
     .carousel-item {
         &.active,
