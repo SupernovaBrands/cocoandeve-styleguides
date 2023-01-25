@@ -43,13 +43,9 @@
         }
     }
 
-    .product-card__title {
-        min-height: calc-em(40);
-    }
-
     .product-card__content {
         @include media-breakpoint-down(md) {
-            min-height: calc-em(320);
+            min-height: calc-em(300);
         }
     }
 
