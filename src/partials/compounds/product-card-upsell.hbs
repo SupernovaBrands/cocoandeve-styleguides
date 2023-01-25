@@ -1,6 +1,6 @@
 <div class="col-12 col-lg-4 carousel-item {{active}} product-card flex-grow-1 w-100">
-    <a href="#" class="item-third pl-lg-0 d-flex flex-grow-1 flex-column bg-pink-light text-body">
-        <span class="badge badge--square bg-white position-absolute font-weight-normal font-size-sm percentage-badge">{{step}}</span>
+    <a href="#" class="item-third pl-lg-0 d-flex flex-grow-1 flex-column bg-pink-light text-body position-relative">
+        <span class="badge badge--square bg-white position-absolute font-weight-normal font-size-sm product-card__tag">{{step}}</span>
         <noscript class="loading-lazy">
             <picture class="embed-responsive embed-responsive-1by1 bg-shimmer mx-auto my-0 mx-lg-0">
                 <source srcset="https://cdn.shopify.com/s/files/1/0286/1327/9779/products/MasqueTravelSize_614x614.jpg?v=1644810671" media="(min-width: 992px)" />
@@ -11,7 +11,7 @@
             </picture>
         </noscript>
         <div class="product-card__content pb-0 position-relative flex-grow-1 d-flex flex-column px-2 px-lg-3 bg-pink-light">
-            <p class="product-card__title font-weight-bold text-center text-dark font-size-lg">{{title}}</p>
+            <p class="product-card__title font-weight-bold text-center text-dark">{{title}}</p>
             <p class="text-center font-weight-normal d-flex flex-column">{{text}}</p>
             <p class="text-center d-flex flex-row flex-grow-1 justify-content-center align-items-end">
                 {{#if compare_price }}<span class="text-linethrough h4 m-1">{{compare_price}}</span>{{/if}}<span class="text-primary h4 my-1">{{price}}</span>
@@ -22,7 +22,7 @@
         </div>
     </a>
     <div class="item-third pl-lg-0 d-flex d-lg-none flex-grow-1 flex-column bg-pink-light">
-        <span class="badge badge--square bg-white position-absolute font-weight-normal font-size-sm percentage-badge">{{nextStep}}</span>
+        <span class="badge badge--square bg-white position-absolute font-weight-normal font-size-sm product-card__tag">{{nextStep}}</span>
         <noscript class="loading-lazy">
             <picture class="embed-responsive embed-responsive-1by1 bg-shimmer mx-auto my-0 mx-lg-0">
                 <source srcset="https://cdn.shopify.com/s/files/1/0286/1327/9779/products/MasqueTravelSize_614x614.jpg?v=1644810671" media="(min-width: 992px)" />
@@ -33,7 +33,7 @@
             </picture>
         </noscript>
         <div class="product-card__content pb-0 position-relative flex-grow-1 d-flex flex-column px-2 px-lg-3 bg-pink-light">
-            <p class="product-card__title font-weight-bold text-center text-dark font-size-lg">{{nexttitle}}</p>
+            <p class="product-card__title font-weight-bold text-center text-dark">{{nexttitle}}</p>
             <p class="text-center font-weight-normal d-flex flex-column">{{nexttext}}</p>
             <p class="text-center d-flex flex-row flex-grow-1 justify-content-center align-items-end">
                 {{#if compare_price }}<span class="text-linethrough h4 m-1">{{compare_price}}</span>{{/if}}<span class="text-primary h4 my-1">{{price}}</span>
