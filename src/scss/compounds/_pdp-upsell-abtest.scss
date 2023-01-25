@@ -48,7 +48,9 @@
     }
 
     .product-card__content {
-        min-height: calc-em(310);
+        @include media-breakpoint-down(md) {
+            min-height: calc-em(320);
+        }
     }
 
     .carousel-item {
