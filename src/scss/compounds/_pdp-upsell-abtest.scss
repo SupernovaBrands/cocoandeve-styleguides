@@ -53,6 +53,11 @@
         }
     }
 
+    .product-card__tag {
+        top: calc-em(15);
+        left: calc-em(15);
+    }
+
     .carousel-item {
         &.active,
         &.carousel-item-left,
