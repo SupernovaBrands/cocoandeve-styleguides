@@ -4,9 +4,9 @@
 
         <figure id="product-upsell-2" class="carousel carousel--product-preview slide mb-1 mb-lg-0 no-gutters__in-container" data-ride="carousel" data-interval="false" data-indicator="#product-image-carousel__indicator{{#if num}}{{num}}{{/if}}">
             <div class="carousel-inner mx-g d-flex">
-                {{> compounds/product-card-upsell active="active d-lg-flex" title="Step 1" text="1 Line description" nexttitle="Step 2" nexttext="1 Line description" compare_price="$44.90" price="$34.90" carousel=true }}
-                {{> compounds/product-card-upsell active="d-lg-flex" title="Step 2" text="1 Line description" nexttitle="Step 3" nexttext="1 Line description" compare_price="$44.90" price="$34.90" carousel=true }}
-                {{> compounds/product-card-upsell active="d-lg-flex" title="Step 3" text="1 Line description" nexttitle="Step 1" nexttext="1 Line description" compare_price="$44.90" price="$34.90" carousel=true last="true" }}
+                {{> compounds/product-card-upsell active="active d-lg-flex" step="Step 1" nextStep="Step 2" title="Deluxe Exfoliating Mitt" text="Exfoliates and lifts dead skin cells to preps skin for the perfect, streak-free self-tan" nexttitle="Sunny Honey Bali Bronzing Bundle" nexttext="Perfects and bronzes skin with a gorgeous self-tan without the bad tan smells, and orange tones! " compare_price="$44.90" price="$34.90" carousel=true }}
+                {{> compounds/product-card-upsell active="d-lg-flex" step="Step 2" nextStep="Step 3" title="Sunny Honey Bali Bronzing Bundle" text="Perfects and bronzes skin with a gorgeous self-tan without the bad tan smells, and orange tones! " nexttitle="Antioxidant Face Tanning Micromist" nexttext="Innovative micromist technology allows for an even, hands-free face-tanning experience for a flawless, long-lasting glow." compare_price="$44.90" price="$34.90" carousel=true }}
+                {{> compounds/product-card-upsell active="d-lg-flex" step="Step 3" nextStep="Step 1" title="Antioxidant Face Tanning Micromist" text="Innovative micromist technology allows for an even, hands-free face-tanning experience for a flawless, long-lasting glow." nexttitle="Deluxe Exfoliating Mitt" nexttext="Exfoliates and lifts dead skin cells to preps skin for the perfect, streak-free self-tan" compare_price="$44.90" price="$34.90" carousel=true last="true" }}
             </div>
         </figure>
     </div>

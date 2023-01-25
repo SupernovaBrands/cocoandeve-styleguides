@@ -2,7 +2,7 @@
     <a href="#" class="item-third pl-lg-0 d-flex flex-grow-1 flex-column bg-pink-light text-body">
         <span class="badge badge--square bg-white position-absolute font-weight-normal font-size-sm percentage-badge">{{step}}</span>
         <noscript class="loading-lazy">
-            <picture class="embed-responsive embed-responsive-1by1 bg-shimmer m-auto">
+            <picture class="embed-responsive embed-responsive-1by1 bg-shimmer mx-auto my-0 mx-lg-0">
                 <source srcset="https://cdn.shopify.com/s/files/1/0286/1327/9779/products/MasqueTravelSize_614x614.jpg?v=1644810671" media="(min-width: 992px)" />
                 <img class="embed-responsive-item fit--cover px-3 bg-pink-light"
                 alt="Image Alt"
@@ -10,9 +10,9 @@
                 src="https://cdn.shopify.com/s/files/1/0286/1327/9779/products/MasqueTravelSize_614x614.jpg?v=1644810671">
             </picture>
         </noscript>
-        <div class="pb-0 position-relative flex-grow-1 d-flex flex-column px-3 bg-pink-light">
+        <div class="product-card__content pb-0 position-relative flex-grow-1 d-flex flex-column px-3 bg-pink-light">
             <div class="d-flex flex-column">
-                <p class="h4 font-weight-normal h-100 text-center text-dark">{{title}}</p>
+                <p class="h4 font-weight-bold font-size-lg h-100 text-center text-dark">{{title}}</p>
                 <p class="text-center h-100 font-weight-normal">{{text}}</p>
             </div>
             <p class="text-center flex-grow-1 d-flex flex-row justify-content-center align-items-end">
@@ -26,7 +26,7 @@
     <div class="item-third pl-lg-0 d-flex d-lg-none flex-grow-1 flex-column bg-pink-light">
         <span class="badge badge--square bg-white position-absolute font-weight-normal font-size-sm percentage-badge">{{nextStep}}</span>
         <noscript class="loading-lazy">
-            <picture class="embed-responsive embed-responsive-1by1 bg-shimmer m-auto">
+            <picture class="embed-responsive embed-responsive-1by1 bg-shimmer mx-auto my-0 mx-lg-0">
                 <source srcset="https://cdn.shopify.com/s/files/1/0286/1327/9779/products/MasqueTravelSize_614x614.jpg?v=1644810671" media="(min-width: 992px)" />
                 <img class="embed-responsive-item fit--cover px-3 bg-pink-light"
                 alt="Image Alt"
@@ -34,13 +34,13 @@
                 src="https://cdn.shopify.com/s/files/1/0286/1327/9779/products/MasqueTravelSize_614x614.jpg?v=1644810671">
             </picture>
         </noscript>
-        <div class="pb-0 position-relative flex-grow-1 d-flex flex-column px-3 bg-pink-light">
+        <div class="product-card__content pb-0 position-relative flex-grow-1 d-flex flex-column px-3 bg-pink-light">
             <div class="d-flex flex-column">
-                <p class="h4 font-weight-normal h-100 text-center text-dark">{{nexttitle}}</p>
+                <p class="h4 font-weight-bold font-size-lg h-100 text-center text-dark">{{nexttitle}}</p>
                 <p class="text-center h-100 font-weight-normal">{{nexttext}}</p>
             </div>
             <p class="text-center flex-grow-1 d-flex flex-row justify-content-center align-items-end">
-                {{#if compare_price }}<span class="text-linethrough h4 m-1">{{compare_price}}</span>{{/if}}<span class="text-primary h4">{{price}}</span>
+                {{#if compare_price }}<span class="text-linethrough h4 m-1">{{compare_price}}</span>{{/if}}<span class="text-primary h4 my-1">{{price}}</span>
             </p>
             <button type="button" class="product-card__button mx-auto btn btn-lg add-to-cart btn-block px-0 btn-outline-primary bg-white mb-2 text-primary">
                 Add To Cart
