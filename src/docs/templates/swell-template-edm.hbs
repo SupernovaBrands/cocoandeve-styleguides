@@ -38,7 +38,7 @@
         padding: 0;
         -webkit-text-size-adjust: 100%;
         -ms-text-size-adjust: 100%;
-        font-family: "sofia-pro";
+        font-family: "sofia-pro", "Helvetica Neue", Arial, sans-serif;
       }
 
       img {
@@ -95,69 +95,7 @@
 
       /* ========== end css reset ========== */
 
-      /* ========== utilities ========== */
-
-      .desktop-hide {
-        display: none;
-        padding: 0;
-        max-height: 0;
-        overflow: hidden;
-        float: left;
-        font-size: 0;
-        line-height: 0;
-        mso-hide: all;
-      }
-
-      .desktop-hide img,
-      img.desktop-hide {
-        max-height: 0;
-        width: 0;
-      }
-
-      .align-left {
-        text-align: left;
-      }
-      .align-center {
-        text-align: center;
-      }
-      .align-right {
-        text-align: right;
-      }
-
-      #navigation {
-        background-color: #ffffff;
-        border-top: 1px solid #cacaca;
-        border-left: 1px solid #cacaca;
-        border-bottom: 1px solid #cacaca;
-        border-right: 1px solid #cacaca;
-      }
-
-      #navigation td {
-        text-align: center;
-      }
-
-      #navigation td a {
-        color: #606060;
-        font-family: Arial, Helvetica, sans-serif;
-        font-style: italic;
-        font-size: 16px;
-        text-decoration: none;
-      }
-
-      #navigation .nav-spacer {
-        background-color: #cacaca;
-      }
-
-      /* ========== end utilities ========== */
-
       /* ========== scaffolding ========== */
-
-      .row,
-      .spacer {
-      }
-
-      .fixed-row {
-      }
 
       .block-content {
         width: 100%; /* fills column width */
@@ -327,54 +265,6 @@
           -webkit-text-size-adjust: none;
         }
 
-        /* ========== utilities ========== */
-
-        /* makes images responsive inside columns on mobile devices */
-        .flex-image {
-          width: 100% !important;
-          height: auto;
-        }
-
-        .flex-button {
-          max-width: 600px !important;
-          width: 100% !important;
-        }
-
-        .flex-button a {
-          display: block !important;
-          font-size: 18px !important;
-        }
-
-        .mobile-hide {
-          display: none !important;
-        }
-
-        .desktop-hide {
-          display: table !important;
-          max-height: none !important;
-          overflow: visible !important;
-          float: none !important;
-          font-size: 12px !important;
-          line-height: 1.5 !important;
-        }
-
-        .desktop-hide td,
-        td.desktop-hide {
-          display: inline-table !important;
-        }
-
-        .desktop-hide img,
-        img.desktop-hide {
-          max-height: none !important;
-          width: auto !important;
-        }
-
-        .desktop-hide .flex-image {
-          width: 100% !important;
-        }
-
-        /* ========== end utilities ========== */
-
         /* ========== scaffolding ========== */
         #content-table,
         .row,
@@ -446,6 +336,14 @@
         /* ========== custom styles ============= */
         .brand-referral h2, .brand-referral p, .brand-referral-content .img-wrapper, .brand-referral-content h2, .brand-referral-content p {
             text-align: center;
+        }
+
+        .brand-referral-content h2 {
+            margin: 0;
+        }
+
+        .brand-referral-content p {
+            margin: 0 0 15px 0;
         }
 
         /* ========== end custom styles ========== */
