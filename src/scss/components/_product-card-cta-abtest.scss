@@ -47,6 +47,73 @@ html.us-store {
 				display: none;
 			}
 		}
+
+		@include media-breakpoint-down(md) {
+			.product-card:not(.carousel-item) {
+				.btn-abtest {
+					flex-flow: column;
+					font-size: calc-em(14);
+
+					&__prices {
+						padding-top: 0;
+						padding-bottom: calc-em(5);
+						width: 100%;
+					}
+
+					&__text {
+						padding-bottom: 0;
+						padding-top: calc-em(5);
+						width: 100%;
+					}
+				}
+			}
+		}
+
+		.swatch-overlay {
+			height: auto;
+			border: 1px solid $primary-dark;
+			padding: 0 !important;
+			margin-bottom: calc-em(24) !important;
+			border-radius: $border-radius-lg;
+			background-color: white;
+			margin-left: calc-em(5) !important;
+			margin-right: calc-em(5) !important;
+			width: calc(100% - 10px) !important;
+
+			@include media-breakpoint-up(lg) {
+				margin-left: calc-em(20) !important;
+				margin-right: calc-em(20) !important;
+				width: calc(100% - 2.5em) !important;
+				margin-bottom: calc-em(26) !important;
+			}
+
+			div.pt-2.pb-lg-2 {
+				padding-top: calc-em(10) !important;
+				padding-bottom: calc-em(10) !important;
+			}
+
+			ul {
+				margin-bottom: 0 !important;
+			}
+
+			.product-variant-swatch__item {
+				padding: 0;
+			}
+
+			label {
+				margin-bottom: calc-em(10) !important;
+
+				@include media-breakpoint-up(lg) {
+
+				}
+			}
+
+			button {
+				margin-bottom: calc-em(-17) !important;
+				border-color: $primary !important;
+				width: calc(100% + 2px);
+			}
+		}
 	}
 
 	.price-cta-variant-1 {
@@ -86,32 +153,6 @@ html.us-store {
 
 			&:hover {
 				border-color: $primary !important;
-			}
-		}
-		@include media-breakpoint-down(md) {
-			.product-card:not(.carousel-item) {
-				.btn-abtest {
-					flex-flow: column;
-					font-size: calc-em(14);
-
-					&__prices {
-						padding-top: 0;
-						padding-bottom: calc-em(5);
-						width: 100%;
-					}
-
-					&__text {
-						padding-bottom: 0;
-						padding-top: calc-em(5);
-						width: 100%;
-					}
-				}
-
-				.position-relative.flex-grow-1.px-2,
-				.swatch-overlay  {
-					padding-left: calc-em(10) !important;
-					padding-right: calc-em(10) !important;
-				}
 			}
 		}
 	}
