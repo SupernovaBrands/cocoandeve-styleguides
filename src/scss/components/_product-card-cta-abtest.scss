@@ -24,10 +24,12 @@ html.us-store {
 
         .product-card__content {
             background-color: $pink-light;
+			padding-left: calc-em(10) !important;
+			padding-right: calc-em(10) !important;
 
 			@include media-breakpoint-down(md) {
-				padding-left: calc-em(5);
-				padding-right: calc-em(5);
+				padding-left: calc-em(5) !important;
+				padding-right: calc-em(5) !important;
 			}
 
 			.text-center:not(.w-100) {
@@ -94,9 +96,9 @@ html.us-store {
 			width: calc(100% - 10px) !important;
 
 			@include media-breakpoint-up(lg) {
-				margin-left: calc-em(20) !important;
-				margin-right: calc-em(20) !important;
-				width: calc(100% - 2.5em) !important;
+				margin-left: calc-em(10) !important;
+				margin-right: calc-em(10) !important;
+				width: calc(100% - 1.25em) !important;
 				margin-bottom: calc-em(26) !important;
 			}
 
