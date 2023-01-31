@@ -29,6 +29,10 @@ html.us-store {
 				padding-left: calc-em(5);
 				padding-right: calc-em(5);
 			}
+
+			.text-center:not(.w-100) {
+				display: none;
+			}
         }
 
 		.carousel-item {
