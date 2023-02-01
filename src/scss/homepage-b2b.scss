@@ -1,0 +1,43 @@
+@import 'core';
+@import 'bootstrap/common';
+@import 'bootstrap/main';
+
+//COMMONS
+@import 'core/fonts';
+@import 'core/type';
+@import 'core/grid';
+@import 'core/utilities';
+
+@import 'components/svgs';
+@import 'components/buttons';
+@import 'components/forms';
+@import 'components/custom-forms';
+@import 'components/nav';
+@import 'components/dropdown';
+@import 'components/swatch';
+@import 'components/accordion';
+@import 'components/tooltip';
+@import 'components/announcement-bar';
+@import 'components/carousel';
+
+@import 'compounds/product-card';
+@import 'compounds/upsell';
+@import 'compounds/search-box';
+@import 'compounds/sweepstakes-popup';
+
+@import 'sections/header-b2b';
+@import 'sections/cart-drawer';
+@import 'sections/footer-b2b';
+// END COMMONS
+
+@import 'components/social-icons';
+@import 'components/hr';
+@import 'components/badge';
+@import 'components/modal-waitlist';
+@import 'components/tabs';
+@import 'components/carousel';
+@import 'components/product-variant';
+
+@import 'sections/home-products-b2b';
+
+

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {{> html-head title="Homepage" maincss="homepage-b2b" }}
+</head>
+<body>
+  {{> sections/header-b2b secondnav="true"}}
+  <main>
+    {{> sections/home-products-b2b}}
+  </main>
+  {{> sections/footer-b2b}}
+
+  {{> js jquery=true popper=true bootstrap=true main=true }}
+</body>
+</html>
