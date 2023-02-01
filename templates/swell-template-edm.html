@@ -15,23 +15,6 @@
     */
 
       /* ========== css reset styles to normalize behaviour ========== */
-      @font-face {
-        font-family: "sofia-pro";
-        src: url("https://cdn.shopify.com/s/files/1/0286/1327/9779/t/122/assets/SofiaPro-Bold.woff2") format("woff2"),
-        url("https://cdn.shopify.com/s/files/1/0286/1327/9779/t/122/assets/SofiaPro-Bold.woff2") format("woff");
-        font-display: swap;
-        font-style: normal;
-        font-weight: 700;
-      }
-
-      @font-face {
-        font-family: "sofia-pro";
-        src: url("https://cdn.shopify.com/s/files/1/0286/1327/9779/t/122/assets/SofiaPro-Regular.woff2") format("woff2"),
-        url("https://cdn.shopify.com/s/files/1/0286/1327/9779/t/122/assets/SofiaPro-Regular.woff2") format("woff");
-        font-display: swap;
-        font-style: normal;
-        font-weight: 400;
-      }
       
       body {
         margin: 0;
@@ -40,7 +23,7 @@
         line-height: 1.2;
         -webkit-text-size-adjust: 100%;
         -ms-text-size-adjust: 100%;
-        font-family: "sofia-pro", "Helvetica Neue", Arial, sans-serif;
+        font-family: Arial, Helvetica, sans-serif;
       }
 
       h1,
@@ -99,51 +82,6 @@
 
       /* ========== scaffolding ========== */
 
-        .fluid-row .col-1,
-        .md-fluid-row .col-1 {
-            width: 8.25% !important;
-        }
-        .fluid-row .col-2,
-        .md-fluid-row .col-2 {
-            width: 16.5% !important;
-        }
-        .fluid-row .col-3,
-        .md-fluid-row .col-3 {
-            width: 25% !important;
-        }
-        .fluid-row .col-4,
-        .md-fluid-row .col-4 {
-            width: 33% !important;
-        }
-        .fluid-row .col-5,
-        .md-fluid-row .col-5 {
-            width: 41.25% !important;
-        }
-        .fluid-row .col-6,
-        .md-fluid-row .col-6 {
-            width: 50% !important;
-        }
-        .fluid-row .col-7,
-        .md-fluid-row .col-7 {
-            width: 57.75% !important;
-        }
-        .fluid-row .col-8,
-        .md-fluid-row .col-8 {
-            width: 66% !important;
-        }
-        .fluid-row .col-9,
-        .md-fluid-row .col-8 {
-            width: 74.25% !important;
-        }
-        .fluid-row .col-10,
-        .md-fluid-row .col-10 {
-            width: 82.5% !important;
-        }
-        .fluid-row .col-11,
-        .md-fluid-row .col-11 {
-            width: 90.75% !important;
-        }
-
       .block-content {
         width: 100%; /* fills column width */
         text-align: center; /* centers numbers not necessary for production */
@@ -166,11 +104,11 @@
       }
 
       .brand-content h2 {
-        font-size: 60px;
+        font-size: 40px;
       }
 
       .brand-content span {
-        font-size: 30px;
+        font-size: 25px;
       }
 
       .btn {
@@ -210,6 +148,14 @@
         padding: 35px 30px 35px;
         font-size: 40px;
         color: #151515;
+      }
+
+      .brand-benefits img {
+        height: 80px;
+      }
+
+      .brand-benefits p {
+        margin-top: 10px;
       }
 
       .brand-benefits p, .brand-work h2, .brand-icons h2 {
@@ -305,21 +251,31 @@
         background-color: #00635B;
       }
 
-      .brand-follow h2 {
-        font-size: 24px;
-        color: #FFFFFF;
+      .brand-follow {
+        padding: 10px;
       }
 
-      .brand-follow, .brand-delivery {
-        padding: 20px 0px;
+      .brand-follow-heading h2 {
+        font-size: 24px;
+        color: #FFFFFF;
+        margin: 16px 0;
       }
 
       .brand-follow span img {
         margin-right: 15px;
       }
 
-      .brand-delivery span {
-        margin: 10px 0 0 10px;
+      .brand-delivery, .brand-delivery-icon {
+        padding: 20px 0;
+      }
+
+      .brand-delivery-icon {
+        text-align: left;
+        margin-left: 10px;
+      }
+
+      .brand-delivery {
+        text-align: right;
       }
 
       .brand-reviews {
@@ -372,28 +328,117 @@
         a,
         li,
         span,
-        td {
-          -webkit-text-size-adjust: none;
+        td { -webkit-text-size-adjust:none; }
+
+        /* ========== utilities ========== */
+
+        /* makes images responsive inside columns on mobile devices */
+        .flex-image {
+            width: 100% !important;
+            height: auto;
         }
+
+        .flex-button {
+            max-width:600px !important;
+            width:100% !important;
+        }
+
+        .flex-button a {
+            display: block !important;
+            font-size: 18px !important;
+        }
+
+        .mobile-hide { display: none !important; }
+
+        .desktop-hide {
+            display: table !important;
+            max-height: none !important;
+            overflow: visible !important;
+            float: none !important;
+            font-size: 12px !important;
+            line-height: 1.5 !important;
+        }
+
+        .desktop-hide td,
+        td.desktop-hide {
+            display: inline-table !important;
+        }
+
+        .desktop-hide img,
+        img.desktop-hide {
+            max-height: none !important;
+            width: auto !important;
+        }
+
+        .desktop-hide .flex-image {
+            width: 100% !important;
+        }
+
+        /* ========== end utilities ========== */
 
         /* ========== scaffolding ========== */
+        .main,
+        .row,
+        .fluid-row,
+        .md-fluid-row,
+        .row-spacer,
+        #navigation,
+        .row .col-1,
+        .row .col-2,
+        .row .col-3,
+        .row .col-4,
+        .row .col-5,
+        .row .col-6,
+        .row .col-7,
+        .row .col-8,
+        .row .col-9,
+        .row .col-10,
+        .row .col-11,
+        .col-12 { width: 100% !important; }
 
+        .fluid-row .col-1,
+        .md-fluid-row .col-1 { width: 8.25% !important;}
+        .fluid-row .col-2,
+        .md-fluid-row .col-2 { width: 16.5% !important;}
+        .fluid-row .col-3,
+        .md-fluid-row .col-3 { width: 25% !important;}
+        .fluid-row .col-4,
+        .md-fluid-row .col-4 { width: 33% !important;}
+        .fluid-row .col-5,
+        .md-fluid-row .col-5 { width: 41.25% !important;}
+        .fluid-row .col-6,
+        .md-fluid-row .col-6 { width: 50% !important;}
+        .fluid-row .col-7,
+        .md-fluid-row .col-7 { width: 57.75% !important;}
+        .fluid-row .col-8,
+        .md-fluid-row .col-8 { width: 66% !important;}
+        .fluid-row .col-9,
+        .md-fluid-row .col-8 { width: 74.25% !important;}
+        .fluid-row .col-10,
+        .md-fluid-row .col-10 { width: 82.5% !important; }
+        .fluid-row .col-11,
+        .md-fluid-row .col-11 { width: 90.75% !important;}
         /* ========== end scaffolding ========== */
+
+        .banner {
+            padding: 30px;
+        }
+        
+        .brand-work {
+            padding: 10px;
+        }
+
+        .brand-work h2 {
+            font-size: 16px;
+        }
+
+        .brand-benefits p {
+            padding: 10px;
+        }
+
         /* ========== custom styles ============= */
-        .brand-referral h2, .brand-referral p, .brand-referral-content .img-wrapper, .brand-referral-content h2, .brand-referral-content p {
-            text-align: center;
         }
-
-        .brand-referral-content h2 {
-            margin: 0;
-        }
-
-        .brand-referral-content p {
-            margin: 0 0 15px 0;
-        }
-
-        /* ========== end custom styles ========== */
-    }
+        
     </style>
     <style type="text/css" media="only screen and (max-width: 481px)">
       @media screen and (max-width: 481px) {
@@ -488,14 +533,20 @@
                                 <tr>
                                     <td>
                                         <!-- First Column | left sidebar -->
-                                        <table class="col-3" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
+                                        <table class="col-3" width="150" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
                                             <tr>
                                                 <td>
                                                     <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
                                                         <tr>
                                                             <td>
                                                                 <div class="brand-benefits">
-                                                                    <img src="../images/Points.png" width="80" />
+                                                                    <img src="../images/Points.png" />
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="brand-benefits">
                                                                     <p>Earn & Redeem Points</p>
                                                                 </div>
                                                             </td>
@@ -507,15 +558,21 @@
                                         <!-- end first column -->
 
                                         <!-- Second Column | large center content -->
-                                        <table class="col-3" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
+                                        <table class="col-3" width="150" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
                                             <tr>
                                                 <td>
                                                     <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
                                                         <tr>
                                                             <td>
                                                                 <div class="brand-benefits">
-                                                                    <img src="../images/Cake.png" width="80" />
-                                                                    <p style="margin: 0;">Birthday discounts</p>
+                                                                    <img src="../images/Cake.png" />
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="brand-benefits">
+                                                                    <p>Birthday discounts</p>
                                                                 </div>
                                                             </td>
                                                         </tr>
@@ -526,14 +583,20 @@
                                         <!-- end second column -->
 
                                         <!-- Third Column | right sidebar -->
-                                        <table class="col-3" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
+                                        <table class="col-3" width="150" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
                                             <tr>
                                                 <td>
                                                     <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
                                                         <tr>
                                                             <td>
                                                                 <div class="brand-benefits">
-                                                                    <img src="../images/Mail.png" width="80" />
+                                                                    <img src="../images/Mail.png" />
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="brand-benefits">
                                                                     <p>Exclusive Vouchers</p>
                                                                 </div>
                                                             </td>
@@ -545,14 +608,20 @@
                                         <!-- end third column -->
 
                                         <!-- Fourth Column | right sidebar -->
-                                        <table class="col-3" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
+                                        <table class="col-3" width="150" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
                                             <tr>
                                                 <td>
                                                     <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
                                                         <tr>
                                                             <td>
                                                                 <div class="brand-benefits">
-                                                                    <img src="../images/Coconut.png" width="80" />
+                                                                    <img src="../images/Coconut.png" />
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="brand-benefits">
                                                                     <p>Early Access To Sales</p>
                                                                 </div>
                                                             </td>
@@ -586,7 +655,7 @@
                         </td>
                     </tr>
                 </table>
-                <table class="col-12 " width="600" align="center" cellspacing="0" cellpadding="0" border="0">
+                <table class="col-12" width="600" align="center" cellspacing="0" cellpadding="0" border="0">
                     <tr>
                         <td>
                             <table class="block-content ">
@@ -604,7 +673,7 @@
                                 <tr>
                                     <td>
                                         <!-- First Column | left sidebar -->
-                                        <table class="col-4" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
+                                        <table class="col-4" width="200" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
                                             <tr>
                                                 <td>
                                                     <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
@@ -625,7 +694,7 @@
                                         <!-- end first column -->
 
                                         <!-- Second Column | large center content -->
-                                        <table class="col-4" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
+                                        <table class="col-4" width="200" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
                                             <tr>
                                                 <td>
                                                     <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
@@ -646,7 +715,7 @@
                                         <!-- end second column -->
 
                                         <!-- Third Column | right sidebar -->
-                                        <table class="col-4" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
+                                        <table class="col-4" width="200" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
                                             <tr>
                                                 <td>
                                                     <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
@@ -751,7 +820,7 @@
                     <tr>
                         <td>
                             <!-- First Column | left sidebar -->
-                            <table class="col-4" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
+                            <table class="col-4" width="200" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
                                 <tr>
                                     <td>
                                         <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
@@ -772,7 +841,7 @@
                             <!-- end first column -->
 
                             <!-- Second Column | large center content -->
-                            <table class="col-4" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
+                            <table class="col-4" width="200" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
                                 <tr>
                                     <td>
                                         <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
@@ -793,7 +862,7 @@
                             <!-- end second column -->
 
                             <!-- Third Column | right sidebar -->
-                            <table class="col-4" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
+                            <table class="col-4" width="200" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
                                 <tr>
                                     <td>
                                         <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
@@ -819,13 +888,13 @@
                     <tr>
                         <td>
                             <!-- First Column | left sidebar -->
-                            <table class="col-6" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
+                            <table class="col-6" width="300" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
                                 <tr>
                                     <td>
                                         <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
                                             <tr>
                                                 <td>
-                                                    <div class="brand-follow">
+                                                    <div class="brand-follow-heading">
                                                         <h2>Follow us</h2>
                                                     </div>
                                                 </td>
@@ -837,20 +906,34 @@
                             <!-- end first column -->
 
                             <!-- Second Column | large center content -->
-                            <table class="col-6" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
+                            <table class="col-6" width="300" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
                                 <tr>
                                     <td>
                                         <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
                                             <tr>
                                                 <td>
                                                     <div class="brand-follow">
-                                                        <span>
-                                                            <a href="#"><img src="../images/ig.png" /></a>
-                                                            <a href="#"><img src="../images/fb.png" /></a>
-                                                            <a href="#"><img src="../images/tt.png" /></a>
-                                                            <a href="#"><img src="../images/yt.png" /></a>
-                                                            <a href="#"><img src="../images/pi.png" /></a>
-                                                        </span>
+                                                        <a href="#"><img src="../images/ig.png" /></a>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="brand-follow">
+                                                        <a href="#"><img src="../images/fb.png" /></a>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="brand-follow">
+                                                        <a href="#"><img src="../images/tt.png" /></a>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="brand-follow">
+                                                        <a href="#"><img src="../images/yt.png" /></a>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="brand-follow">
+                                                        <a href="#"><img src="../images/pi.png" /></a>
                                                     </div>
                                                 </td>
                                             </tr>
@@ -862,18 +945,38 @@
                         </td>
                     </tr>
                 </table>
-                <table class="col-12" width="600" align="center" cellspacing="0" cellpadding="0" border="0">
+                <table class="col-12 fluid-row" width="600" align="center" cellspacing="0" cellpadding="0" border="0">
                     <tr>
                         <td>
-                            <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
+                            <table class="col-8" width="350" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
                                 <tr>
                                     <td>
-                                        <div class="brand-delivery">
-                                            <span class="text">
-                                                Fast worldwide delivery
-                                            </span> 
-                                            <span><img src="../images/delivery.png" /></span>
-                                        </div>
+                                        <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
+                                            <tr>
+                                                <td>
+                                                    <div class="brand-delivery">
+                                                        <p class="text">
+                                                            Fast worldwide delivery
+                                                        </p> 
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="col-4" width="200" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
+                                <tr>
+                                    <td>
+                                        <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
+                                            <tr>
+                                                <td>
+                                                    <div class="brand-delivery-icon">
+                                                        <img src="../images/delivery.png" />
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
                                     </td>
                                 </tr>
                             </table>
