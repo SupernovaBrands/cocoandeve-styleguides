@@ -362,6 +362,11 @@
         margin-top: 10px;
       }
 
+      .refer-friend p {
+        margin: 20px;
+        text-align: right;
+      }
+
       .footer-content .descpiption .mail {
         text-decoration: underline;
         color: #000;
@@ -369,14 +374,6 @@
       /* ========== end custom styles ========== */
     </style>
     <!-- end desktop styles -->
-    <style>
-        @media (max-width: 768px) {
-            body,html {
-                max-width: 100%;
-                min-width: 100%;
-            }
-        }
-    </style>
     <!-- responsive styles -->
     <style type="text/css" media="only screen and (max-width: 600px)">
     @media screen and (max-width: 600px) {
@@ -485,10 +482,6 @@
             padding: 10px;
         }
 
-        .brand-work h2 {
-            font-size: 16px;
-        }
-
         .brand-benefits p {
             margin: 15px 0;
             font-size: 16px;
@@ -503,11 +496,7 @@
         }
 
         .brand-follow-heading h2 {
-            margin: 7px 0;
-        }
-
-        .brand-referral h2 {
-            font-size: 20px;
+            margin: 35px 0;
         }
 
         .brand-referral p {
@@ -516,15 +505,24 @@
         }
 
         .brand-referral .action {
-            margin: 20px 0 0 0;
+            margin: 30px 0;
         }
-        
-        .brand-referral a {
-            padding: 10px 30px;
+    
+        .brand-follow {
+            padding: 35px 5px;
         }
 
-        .brand-follow {
-            padding: 6px;
+        .refer-friend p {
+            margin: 20px;
+            text-align: center;
+        }
+
+        .refer-friend, .refer-friend h2, .refer-friend-content h2, .refer-friend-content p {
+            text-align: center;
+        }
+
+        .refer-friend-content h2 br {
+            display: none;
         }
 
         /* ========== custom styles ============= */
@@ -760,7 +758,7 @@
                                     </td>
                                 </tr>
                             </table>
-                            <table class="fluid-row" align="center" cellspacing="0" cellpadding="0" border="0">
+                            <table class="fluid-row md-fluid-row" align="center" cellspacing="0" cellpadding="0" border="0">
                                 <tr>
                                     <td>
                                         <!-- First Column | left sidebar -->
@@ -840,7 +838,7 @@
                         </td>
                     </tr>
                 </table>
-                <table class="col-12 fluid-row bg-primary" align="center" cellspacing="0" cellpadding="0" border="0">
+                <table class="col-12 fluid-row md-fluid-row bg-primary" align="center" cellspacing="0" cellpadding="0" border="0">
                     <tr>
                         <td>
                             <!-- First Column -->
@@ -850,9 +848,11 @@
                                         <table class="block-content brand-referral-content" align="center" cellspacing="0" cellpadding="0" border="0">
                                             <tr>
                                                 <td>
-                                                    <p style="margin: 20px; text-align: right">
-                                                        <img src="../images/image2x.png" width="220" class="flex-image" />
-                                                    </p>
+                                                    <div class="refer-friend">
+                                                        <p>
+                                                            <img src="../images/image2x.png" width="220" class="flex-image" />
+                                                        </p>
+                                                    </div>
                                                 </td>
                                             </tr>
                                         </table>
@@ -868,13 +868,15 @@
                                         <table class="block-content brand-referral" align="center" cellspacing="0" cellpadding="0" border="0">
                                             <tr>
                                                 <td>
-                                                    <h2>Refer a friend <br> & get rewarded</h2>
-                                                    <p>
-                                                        Get $5 for every successful referral you make!
-                                                    </p>
-                                                    <p class="action">
-                                                        <a href="#">Refer a friend</a>
-                                                    </p>
+                                                    <div class="refer-friend-content">
+                                                        <h2>Refer a friend <br> & get rewarded</h2>
+                                                        <p>
+                                                            Get $5 for every successful referral you make!
+                                                        </p>
+                                                        <p class="action">
+                                                            <a href="#">Refer a friend</a>
+                                                        </p>
+                                                    </div>
                                                 </td>
                                             </tr>
                                         </table>
