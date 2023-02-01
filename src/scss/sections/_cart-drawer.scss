@@ -91,6 +91,15 @@
 	}
 }
 
+.cart-table {
+	&__item img {
+		max-width: calc-em(170);
+	}
+	.variant-swatch:before {
+		cursor: auto;
+	}
+}
+
 .manual-gwp {
 	&__container {
 		overflow: hidden;
