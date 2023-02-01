@@ -301,14 +301,10 @@
         background-color: #00635B;
       }
 
-      .brand-follow {
-        padding: 10px;
-      }
-
       .brand-follow-heading h2 {
         font-size: 24px;
         color: #FFFFFF;
-        margin: 16px 0;
+        margin-left: 10px;
       }
 
       .brand-follow span img {
@@ -371,6 +367,23 @@
         text-decoration: underline;
         color: #000;
       }
+
+        .brand-reviews p, .brand-reviews-stars {
+            margin-top: 10px;
+            margin-left: 5px;
+        }
+
+        .brand-follow-heading, .brand-follow-icons {
+            text-align: center;
+        }
+
+        .brand-follow-icons a {
+            margin-right: 5px;
+        }
+
+        .brand-follow-icons a img {
+            vertical-align: middle;
+        }
       /* ========== end custom styles ========== */
     </style>
     <!-- end desktop styles -->
@@ -390,6 +403,10 @@
         .flex-image {
             max-width: 100% !important;
             height: auto;
+        }
+
+        .banner-img {
+            width: 100%;
         }
 
         .flex-button {
@@ -495,10 +512,6 @@
             height: auto;
         }
 
-        .brand-follow-heading h2 {
-            margin: 35px 0;
-        }
-
         .brand-referral p {
             font-size: 15px;
             margin: 10px 0 0 0;
@@ -574,7 +587,7 @@
                                 <tr>
                                     <td>
                                         <div class="banner">
-                                            <img src="../images/Swell_EDM_1.png" width="500" class="flex-image" />
+                                            <img src="../images/banner_1.jpg" width="500" class="flex-image" />
                                         </div>
                                     </td>
                                 </tr>
@@ -850,7 +863,7 @@
                                                 <td>
                                                     <div class="refer-friend">
                                                         <p>
-                                                            <img src="../images/image2x.png" width="220" class="flex-image" />
+                                                            <img src="../images/banner_2.jpg" width="220" class="flex-image banner-img" />
                                                         </p>
                                                     </div>
                                                 </td>
@@ -981,59 +994,30 @@
                     <tr>
                         <td>
                             <!-- First Column | left sidebar -->
-                            <table class="col-5" align="left" cellspacing="0" cellpadding="0" border="0" >
+                            <table class="col-12" align="left" cellspacing="0" cellpadding="0" border="0" >
+                                <tr height="23"></tr>
                                 <tr>
                                     <td>
-                                        <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
-                                            <tr>
-                                                <td>
-                                                    <div class="brand-follow-heading">
-                                                        <h2>Follow us</h2>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </table>
+                                        <div class="brand-follow-heading">
+                                            <h2>Follow us</h2>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="brand-follow-icons">
+                                            <a href="#"><img src="../images/ig.png" class="flex-image" /></a>
+                                            <a href="#"><img src="../images/fb.png" class="flex-image" /></a>
+                                            <a href="#"><img src="../images/tt.png" class="flex-image" /></a>
+                                            <a href="#"><img src="../images/yt.png" class="flex-image" /></a>
+                                            <a href="#"><img src="../images/pi.png" class="flex-image" /></a>
+                                        </div>    
                                     </td>
                                 </tr>
+                                <tr height="23"></tr>
                             </table>
                             <!-- end first column -->
 
                             <!-- Second Column | large center content -->
-                            <table class="col-6" align="left" cellspacing="0" cellpadding="0" border="0" >
-                                <tr>
-                                    <td>
-                                        <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
-                                            <tr>
-                                                <td>
-                                                    <div class="brand-follow">
-                                                        <a href="#"><img src="../images/ig.png" class="flex-image" /></a>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="brand-follow">
-                                                        <a href="#"><img src="../images/fb.png" class="flex-image" /></a>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="brand-follow">
-                                                        <a href="#"><img src="../images/tt.png" class="flex-image" /></a>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="brand-follow">
-                                                        <a href="#"><img src="../images/yt.png" class="flex-image" /></a>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="brand-follow">
-                                                        <a href="#"><img src="../images/pi.png" class="flex-image" /></a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
+                            
                             <!-- end second column -->
                         </td>
                     </tr>
@@ -1058,7 +1042,7 @@
                                     </td>
                                 </tr>
                             </table>
-                            <table class="col-4" align="left" cellspacing="0" cellpadding="0" border="0" >
+                            <table class="col-4 col-2" align="left" cellspacing="0" cellpadding="0" border="0" >
                                 <tr>
                                     <td>
                                         <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
@@ -1076,39 +1060,70 @@
                         </td>
                     </tr>
                 </table>
-                <table class="col-12" align="center" cellspacing="0" cellpadding="0" border="0">
+                <table class="md-fluid-row col-12" align="center" cellspacing="0" cellpadding="0" border="0">
                     <tr>
                         <td>
-                            <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
+                            <table class="col-3"  align="left" cellspacing="0" cellpadding="0" border="0" >
                                 <tr>
                                     <td>
-                                        <div class="brand-reviews">
-                                            <span><img src="../images/yotpo.png" /></span>
-                                        </div>
+                                        <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
+                                            <tr>
+                                                <td>
+                                                    <div class="brand-reviews">
+                                                        <span><img src="../images/yotpo.png" class="flex-image" /></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
                                     </td>
+                                </tr>
+                            </table>
+                            <table class="col-3" align="left" cellspacing="0" cellpadding="0" border="0" >
+                                <tr>
                                     <td>
-                                        <div class="brand-reviews">
-                                            <span>|</span>
-                                        </div>
+                                        <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
+                                            <tr>
+                                                <td>
+                                                    <div class="brand-reviews">
+                                                        <p>Our customers say</p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
                                     </td>
+                                </tr>
+                            </table>
+                            <table class="col-3" align="left" cellspacing="0" cellpadding="0" border="0" >
+                                <tr>
                                     <td>
-                                        <div class="brand-reviews">
-                                            <span>Our customers say</span>
-                                        </div>
+                                        <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
+                                            <tr>
+                                                <td>
+                                                    <div class="brand-reviews-stars">
+                                                        <span><img src="../images/star.png" class="flex-image" /></span>
+                                                        <span><img src="../images/star.png" class="flex-image" /></span>
+                                                        <span><img src="../images/star.png" class="flex-image" /></span>
+                                                        <span><img src="../images/star.png" class="flex-image" /></span>
+                                                        <span><img src="../images/star.png" class="flex-image" /></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
                                     </td>
+                                </tr>
+                            </table>
+                            <table class="col-3" align="left" cellspacing="0" cellpadding="0" border="0" >
+                                <tr>
                                     <td>
-                                        <div class="brand-reviews">
-                                            <span><img src="../images/star.png" /></span>
-                                            <span><img src="../images/star.png" /></span>
-                                            <span><img src="../images/star.png" /></span>
-                                            <span><img src="../images/star.png" /></span>
-                                            <span><img src="../images/star.png" /></span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="brand-reviews">
-                                            <span>7.4 out of 60k reviews</span>
-                                        </div>
+                                        <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
+                                            <tr>
+                                                <td>
+                                                    <div class="brand-reviews">
+                                                        <p>7.4 out of 60k reviews</p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
                                     </td>
                                 </tr>
                             </table>
