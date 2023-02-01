@@ -15,7 +15,24 @@
     */
 
       /* ========== css reset styles to normalize behaviour ========== */
-      
+      @font-face {
+        font-family: "sofia-pro";
+        src: url("https://cdn.shopify.com/s/files/1/0286/1327/9779/t/122/assets/SofiaPro-Bold.woff2") format("woff2"),
+        url("https://cdn.shopify.com/s/files/1/0286/1327/9779/t/122/assets/SofiaPro-Bold.woff2") format("woff");
+        font-display: swap;
+        font-style: normal;
+        font-weight: 700;
+      }
+
+      @font-face {
+        font-family: "sofia-pro";
+        src: url("https://cdn.shopify.com/s/files/1/0286/1327/9779/t/122/assets/SofiaPro-Regular.woff2") format("woff2"),
+        url("https://cdn.shopify.com/s/files/1/0286/1327/9779/t/122/assets/SofiaPro-Regular.woff2") format("woff");
+        font-display: swap;
+        font-style: normal;
+        font-weight: 400;
+      }
+
       body {
         margin: 0;
         padding: 0;
@@ -23,7 +40,7 @@
         line-height: 1.2;
         -webkit-text-size-adjust: 100%;
         -ms-text-size-adjust: 100%;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: "sofia-pro",Arial, Helvetica, "Helvetica Neue", Arial, sans-serif;
       }
 
       h1,
@@ -90,7 +107,43 @@
       /* ========== end scaffolding ========== */
 
       /* ========== custom styles ========== */
-      
+      .main {
+        width: 600px;
+        margin: 0 auto;
+      }
+
+      .fluid-row .col-2 {
+        width: 125px;
+      }
+
+      .fluid-row .col-3 {
+        width: 150px;
+      }
+
+      .fluid-row .col-4 {
+        width: 200px;
+      }
+
+      .fluid-row .col-5 {
+        width: 250px;
+      }
+
+      .fluid-row .col-6 {
+        width: 300px;
+      }
+
+      .fluid-row .col-8 {
+        width: 400px;
+      }
+
+      .width-500 {
+        width: 500px;
+      }
+
+      .width-500 .col-3 {
+        width: 125px;
+      }
+
       .bg-primary {
         background-color: #FFF2F4;
       }
@@ -104,11 +157,11 @@
       }
 
       .brand-content h2 {
-        font-size: 40px;
+        font-size: 50px;
       }
 
       .brand-content span {
-        font-size: 25px;
+        font-size: 30px;
       }
 
       .btn {
@@ -395,7 +448,7 @@
         .row .col-9,
         .row .col-10,
         .row .col-11,
-        .col-12 { width: 100% !important; }
+        .col-12 { width: 100%; height: auto; }
 
         .fluid-row .col-1,
         .md-fluid-row .col-1 { width: 8.25% !important;}
@@ -465,7 +518,7 @@
     <!-- end responsive styles -->
   </head>
   <body>
-    <table class="main" width="600" align="center" cellspacing="0" cellpadding="0" border="0">
+    <table class="main" cellspacing="0" cellpadding="0" border="0">
         <tr>
             <td>
                 <table class="col-12" align="center" cellspacing="0" cellpadding="0" border="0">
@@ -534,11 +587,11 @@
                                     </td>
                                 </tr>
                             </table>
-                            <table class="fluid-row bg-secondary" width="600" align="center" cellspacing="0" cellpadding="0" border="0">
+                            <table class="fluid-row bg-secondary width-500" align="center" cellspacing="0" cellpadding="0" border="0">
                                 <tr>
                                     <td>
                                         <!-- First Column | left sidebar -->
-                                        <table class="col-3" width="150" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
+                                        <table class="col-3" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
                                             <tr>
                                                 <td>
                                                     <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
@@ -563,7 +616,7 @@
                                         <!-- end first column -->
 
                                         <!-- Second Column | large center content -->
-                                        <table class="col-3" width="150" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
+                                        <table class="col-3" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
                                             <tr>
                                                 <td>
                                                     <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
@@ -588,7 +641,7 @@
                                         <!-- end second column -->
 
                                         <!-- Third Column | right sidebar -->
-                                        <table class="col-3" width="150" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
+                                        <table class="col-3" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
                                             <tr>
                                                 <td>
                                                     <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
@@ -613,7 +666,7 @@
                                         <!-- end third column -->
 
                                         <!-- Fourth Column | right sidebar -->
-                                        <table class="col-3" width="150" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
+                                        <table class="col-3" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
                                             <tr>
                                                 <td>
                                                     <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
@@ -638,7 +691,7 @@
                                         <!-- end Fourth column -->
 
                                         <!-- Single Column -->
-                                        <table class="col-12" width="600" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
+                                        <table class="col-12" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
                                             <tr>
                                                 <td>
                                                     <table class="block-content brand-benefits" align="center" cellspacing="0" cellpadding="0" border="0">
@@ -674,11 +727,11 @@
                                     </td>
                                 </tr>
                             </table>
-                            <table class="fluid-row" width="600" align="center" cellspacing="0" cellpadding="0" border="0">
+                            <table class="fluid-row" align="center" cellspacing="0" cellpadding="0" border="0">
                                 <tr>
                                     <td>
                                         <!-- First Column | left sidebar -->
-                                        <table class="col-4" width="200" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
+                                        <table class="col-4" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
                                             <tr>
                                                 <td>
                                                     <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
@@ -699,7 +752,7 @@
                                         <!-- end first column -->
 
                                         <!-- Second Column | large center content -->
-                                        <table class="col-4" width="200" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
+                                        <table class="col-4" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
                                             <tr>
                                                 <td>
                                                     <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
@@ -720,7 +773,7 @@
                                         <!-- end second column -->
 
                                         <!-- Third Column | right sidebar -->
-                                        <table class="col-4" width="200" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
+                                        <table class="col-4" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
                                             <tr>
                                                 <td>
                                                     <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
@@ -758,7 +811,7 @@
                     <tr>
                         <td>
                             <!-- First Column -->
-                            <table class="col-6" width="298" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
+                            <table class="col-6" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
                                 <tr>
                                     <td>
                                         <table class="block-content brand-referral-content" align="center" cellspacing="0" cellpadding="0" border="0">
@@ -776,7 +829,7 @@
                             <!-- end first column -->
 
                             <!-- Second Column -->
-                            <table class="col-6" width="260" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
+                            <table class="col-6" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
                                 <tr>
                                     <td>
                                         <table class="block-content brand-referral" align="center" cellspacing="0" cellpadding="0" border="0">
@@ -825,7 +878,7 @@
                     <tr>
                         <td>
                             <!-- First Column | left sidebar -->
-                            <table class="col-4" width="200" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
+                            <table class="col-4" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
                                 <tr>
                                     <td>
                                         <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
@@ -846,7 +899,7 @@
                             <!-- end first column -->
 
                             <!-- Second Column | large center content -->
-                            <table class="col-4" width="200" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
+                            <table class="col-4" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
                                 <tr>
                                     <td>
                                         <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
@@ -867,7 +920,7 @@
                             <!-- end second column -->
 
                             <!-- Third Column | right sidebar -->
-                            <table class="col-4" width="200" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
+                            <table class="col-4" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
                                 <tr>
                                     <td>
                                         <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
@@ -893,7 +946,7 @@
                     <tr>
                         <td>
                             <!-- First Column | left sidebar -->
-                            <table class="col-6" width="300" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
+                            <table class="col-5" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
                                 <tr>
                                     <td>
                                         <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
@@ -911,7 +964,7 @@
                             <!-- end first column -->
 
                             <!-- Second Column | large center content -->
-                            <table class="col-6" width="300" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
+                            <table class="col-6" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
                                 <tr>
                                     <td>
                                         <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
@@ -953,7 +1006,7 @@
                 <table class="col-12 fluid-row" align="center" cellspacing="0" cellpadding="0" border="0">
                     <tr>
                         <td>
-                            <table class="col-8" width="350" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
+                            <table class="col-8"  align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
                                 <tr>
                                     <td>
                                         <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
@@ -970,7 +1023,7 @@
                                     </td>
                                 </tr>
                             </table>
-                            <table class="col-4" width="200" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
+                            <table class="col-4" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace:0; mso-table-rspace:0; border-left: 1px; border-right: 1px;">
                                 <tr>
                                     <td>
                                         <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
