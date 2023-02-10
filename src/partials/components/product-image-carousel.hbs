@@ -23,7 +23,7 @@
 		<span class="product-card__image-tip position-absolute text-white p-1 w-100 text-center">👻 Get 3 for 2 with code: HALLOWEEN 👻</span>
 	</figure>
 	<picture class="circle-badge position-absolute rounded-circle bg-primary d-flex p-1 mr-0 mt-2 mr-lg-1 mt-lg-1">
-		<img class="w-100" src="../images/badge-25.svg" alt="25% Off"/>
+		<img class="w-100" src="../images/badge-25.svg" />
 	</picture>
 	<div class="tooltip tooltip--sold-out bg-secondary p-1 rounded col-5 col-lg-3 text-white text-center ml-1">
 		<span class="d-block font-weight-bold">25</span>
@@ -33,9 +33,9 @@
 
 <div id="product-image-carousel__indicator{{#if num}}{{num}}{{/if}}" class="product-image-carousel__indicator d-none d-lg-block carousel--swipe col-12 col-lg-1 order-lg-1 carousel slide carousel--loop mb-1 mb-lg-0 px-0 px-lg-g" {{#if (gt totalSlide 5)}}data-slide-number="5" data-ride="carousel" data-interval="false"{{/if}}>
 	{{#if (gt totalSlide 5)}}
-	<button class="carousel-indicator chevron-up btn-unstyled d-none d-lg-flex mx-auto mb-1 mb-lg-3 text-center align-items-center" href="#product-image-carousel__indicator{{#if num}}{{num}}{{/if}}" data-slide="prev" disabled>
+	<a class="carousel-indicator chevron-up flex-column d-none d-lg-flex mx-auto mb-1 mb-lg-3 text-center align-items-center" href="#product-image-carousel__indicator{{#if num}}{{num}}{{/if}}" data-slide="prev" aria-hidden="true" disabled>
 		<img class="svg text-primary" src="icons/chevron-up.svg" replace-to-svg />
-	</button>
+	</a>
 	{{/if}}
 
 	<div class="carousel-inner d-flex flex-nowrap flex-lg-column {{#if (gt totalSlide 5)}}{{else}}justify-content-center justify-content-lg-start{{/if}}">
@@ -52,8 +52,8 @@
 	</div>
 
 	{{#if (gt totalSlide 5)}}
-	<button class="carousel-indicator chevron-down btn-unstyled d-none d-lg-flex mx-auto mt-1 mt-lg-3 text-center align-items-center" href="#product-image-carousel__indicator{{#if num}}{{num}}{{/if}}" data-slide="next">
+	<a class="carousel-indicator chevron-down flex-column d-none d-lg-flex mx-auto mt-1 mt-lg-3 text-center align-items-center" href="#product-image-carousel__indicator{{#if num}}{{num}}{{/if}}" data-slide="next" aria-hidden="true">
 		<img class="svg text-primary" src="icons/chevron-down.svg" replace-to-svg />
-	</button>
+	</a>
 	{{/if}}
 </div>

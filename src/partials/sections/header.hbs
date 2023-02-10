@@ -5,11 +5,11 @@
 	<nav class="bg-white navbar navbar-expand-lg">
 
 		<div class="container">
-			<button class="navbar-toggler" type="button" data-cy="menu-icon" aria-label="Mobile navbar toggler">
+			<button class="navbar-toggler" type="button" data-cy="menu-icon">
 				<span class="d-block"></span>
 			</button>
 
-			<a href="#" class="navbar-brand mx-auto mx-lg-0"  aria-label="Visit Coco and Eve homepage">
+			<a href="#" class="navbar-brand mx-auto mx-lg-0">
 				{{> components/svg-logo}}
 			</a>
 
@@ -78,7 +78,7 @@
 		<img class="mobile-nav__close svg text-white" src="icons/close.svg" replace-to-svg />
 		{{#unless critical}}
 		<ul id="mobileMenu" class="mobile-nav__menu accordion position-fixed h-100 col-9 bg-white list-unstyled py-2 mb-0"
-			>
+			role="tablist" aria-multiselectable="true">
 			<li class="mb-1">
 				<a href="#" class="btn btn-primary btn-block" data-cy="shopall-btn">Shop All</a>
 			</li>
@@ -92,8 +92,7 @@
 					</figcaption>
 					<img class="svg font-size-xs chevron-down" src="icons/chevron-down.svg" replace-to-svg />
 				</figure>
-				<ul id="hairCare" class="collapse list-unstyled card-body p-0"
-					role="tabpanel" aria-labelledby="headingHair" data-parent="#mobileMenu">
+				<ul id="hairCare" class="collapse list-unstyled card-body p-0" aria-labelledby="headingHair" data-parent="#mobileMenu">
 					<li><a href="#">Nourishing Hair Masque</a></li>
 					<li><a href="#">Hair Heroes Gift Set</a></li>
 					<li><a href="#">That's A Wrap Bundle</a></li>
@@ -113,8 +112,7 @@
 					</figcaption>
 					<img class="svg font-size-xs chevron-down" src="icons/chevron-down.svg" replace-to-svg />
 				</figure>
-				<ul id="skinCare" class="collapse list-unstyled card-body p-0"
-					role="tabpanel" aria-labelledby="headingSkin" data-parent="#mobileMenu">
+				<ul id="skinCare" class="collapse list-unstyled card-body p-0" aria-labelledby="headingSkin" data-parent="#mobileMenu">
 					<li><a href="#">Bali Bronzing Bundle</a></li>
 					<li><a href="#">Bali Bronzing Foam</a></li>
 					<li><a href="#">Bronzing Face Drops</a></li>
@@ -125,7 +123,7 @@
 				</ul>
 			</li>
 			<li class="card">
-				<figure id="headingBodycareTwo" class="media card-header position-relative collapsed p-0"
+				<figure id="headingBody" class="media card-header position-relative collapsed p-0"
 					data-toggle="collapse" data-target="#bodyCare" aria-expanded="false" aria-controls="bodyCare">
 					<img class="rounded" src="https://via.placeholder.com/40x40/EFADBA" alt="Generic placeholder image">
 					<figcaption class="media-body ml-1">
@@ -134,8 +132,7 @@
 					</figcaption>
 					<img class="svg font-size-xs chevron-down" src="icons/chevron-down.svg" replace-to-svg />
 				</figure>
-				<ul id="bodyCare" class="collapse list-unstyled card-body p-0"
-					role="tabpanel" aria-labelledby="headingBodycareTwo" data-parent="#mobileMenu">
+				<ul id="bodyCare" class="collapse list-unstyled card-body p-0" aria-labelledby="headingTwo" data-parent="#mobileMenu">
 					<li><a href="#">Bali Bod Bundle</a></li>
 					<li><a href="#">Bali Buffing Sugar</a></li>
 					<li><a href="#">Body Moisture Whip</a></li>
@@ -155,8 +152,7 @@
 					</figcaption>
 					<img class="svg font-size-xs chevron-down" src="icons/chevron-down.svg" replace-to-svg />
 				</figure>
-				<ul id="collapseBundle" class="collapse list-unstyled card-body p-0" role="tabpanel"
-					aria-labelledby="headingBundles" data-parent="#mobileMenu">
+				<ul id="collapseBundle" class="collapse list-unstyled card-body p-0" aria-labelledby="headingBundles" data-parent="#mobileMenu">
 					<li><a href="#">Hair Heroes Gift Set</a></li>
 					<li><a href="#">Bali Bod Bundle</a></li>
 					<li><a href="#">Taste of the Tropics Kit</a></li>
@@ -178,7 +174,7 @@
 					Rest of the World (SGD)
 					<img class="svg font-size-xs chevron-down" src="icons/chevron-down.svg" replace-to-svg />
 				</h4>
-				<ul id="collapseCountry" class="collapse list-unstyled card-body p-0" role="tabpanel"
+				<ul id="collapseCountry" class="collapse list-unstyled card-body p-0"
 					aria-labelledby="countrySelect" data-parent="#mobileMenu">
 					<li class="pt-g"><a href="#">USA (USD)</a></li>
 					<li><a href="#">United Kingdom (GBP)</a></li>
@@ -191,7 +187,8 @@
 				</ul>
 			</li>
 		</ul>
-		<ul id="mobileMenuVariant" class="mobile-nav__menu accordion position-fixed h-100 col-9 bg-white list-unstyled py-2 mb-0 d-none mega-menu-collection-variant">
+		<ul id="mobileMenuVariant" class="mobile-nav__menu accordion position-fixed h-100 col-9 bg-white list-unstyled py-2 mb-0 d-none mega-menu-collection-variant"
+			role="tablist" aria-multiselectable="true">
 			<li class="mb-1">
 				<a href="#" class="btn btn-primary btn-block" data-cy="shopall-btn">Shop All</a>
 			</li>
@@ -232,7 +229,7 @@
 				</ul>
 			</li>
 			<li class="card">
-				<figure id="headingBodyCare" class="media card-header position-relative collapsed p-0"
+				<figure id="headingBody" class="media card-header position-relative collapsed p-0"
 					data-toggle="collapse" data-target="#bodyCare" aria-expanded="false" aria-controls="bodyCare">
 					<img class="rounded" src="https://via.placeholder.com/40x40/EFADBA" alt="Generic placeholder image">
 					<figcaption class="media-body ml-1">
@@ -242,7 +239,7 @@
 					<img class="svg font-size-xs chevron-down" src="icons/chevron-down.svg" replace-to-svg />
 				</figure>
 				<ul id="bodyCare" class="collapse list-unstyled card-body p-0"
-					role="tabpanel" aria-labelledby="headingBodyCare" data-parent="#mobileMenu">
+					role="tabpanel" aria-labelledby="headingTwo" data-parent="#mobileMenu">
 					<li><a href="#">Body Wash</a></li>
 					<li><a href="#">Moisturisers</a></li>
 					<li><a href="#">Esfoliators</a></li>
