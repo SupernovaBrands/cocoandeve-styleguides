@@ -27,7 +27,7 @@ $(document).ready(function () {
 		});
 	}
 
-	$('#product-upsell-2').on('click', function(e) {
+	$('#product-upsell-2').on('click', function (e) {
 		if ($(e.target).hasClass('product-card__button')) {
 			e.preventDefault();
 		}
