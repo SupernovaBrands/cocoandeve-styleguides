@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <!-- stops ios from altering phone numbers please remember to use <a href="tel:1-800...">1-800...</a> -->
+    <!-- desktop styles -->
+    <style type="text/css">
+      /*
+    >>>>> CSS standards <<<<<
+        1. Public Broadcast TeleVision | List css as: position, box-model, typographic, visual;
+        2. Attributes with a single property should appear inline
+        3. List comma separated selectors
+        4. Pre-mailer will make all styles inline before send
+    */
+
+      /* ========== css reset styles to normalize behaviour ========== */
+      @font-face {
+        font-family: "sofia-pro";
+        src: url("https://cdn.shopify.com/s/files/1/0286/1327/9779/t/122/assets/SofiaPro-Bold.woff2") format("woff2"),
+        url("https://cdn.shopify.com/s/files/1/0286/1327/9779/t/122/assets/SofiaPro-Bold.woff2") format("woff");
+        font-display: swap;
+        font-style: normal;
+        font-weight: 700;
+      }
+
+      @font-face {
+        font-family: "sofia-pro";
+        src: url("https://cdn.shopify.com/s/files/1/0286/1327/9779/t/122/assets/SofiaPro-Regular.woff2") format("woff2"),
+        url("https://cdn.shopify.com/s/files/1/0286/1327/9779/t/122/assets/SofiaPro-Regular.woff2") format("woff");
+        font-display: swap;
+        font-style: normal;
+        font-weight: 400;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        line-height: 1.2;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        font-family: "sofia-pro",Arial, Helvetica, "Helvetica Neue", Arial, sans-serif;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      a {
+        margin: 0;
+      }
+
+      img {
+        border: 0 none;
+        height: auto;
+        line-height: 100%;
+        text-decoration: none;
+        outline: none;
+        -ms-interpolation-mode: bicubic;
+      }
+
+      a img {
+        border: 0 none;
+      }
+
+      table,
+      td {
+        border-collapse: collapse;
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+      }
+
+      /* fixes outlook appended ExternalClass to elements */
+
+      .ExternalClass {
+        width: 100%;
+      }
+
+      .ExternalClass,
+      .ExternalClass p,
+      .ExternalClass span,
+      .ExternalClass font,
+      .ExternalClass td,
+      .ExternalClass div {
+        line-height: 100%;
+      }
+
+      /* normalizes outlook generated view in browser link */
+
+      #outlook a {
+        padding: 0;
+      }
+
+      /* ========== end css reset ========== */
+
+      /* ========== scaffolding ========== */
+
+      .block-content {
+        width: 100%; /* fills column width */
+        text-align: center; /* centers numbers not necessary for production */
+      }
+
+      /* ========== end scaffolding ========== */
+
+      /* ========== custom styles ========== */
+      .main, .main .col-12 {
+        width: 600px;
+        margin: 0 auto;
+      }
+
+      .fluid-row .col-2 {
+        width: 125px;
+      }
+
+      .fluid-row .col-3 {
+        width: 150px;
+      }
+
+      .fluid-row .col-4 {
+        width: 200px;
+      }
+
+      .fluid-row .col-5 {
+        width: 250px;
+      }
+
+      .fluid-row .col-6 {
+        width: 300px;
+      }
+
+      .fluid-row .col-8 {
+        width: 400px;
+      }
+
+      .width-500 .col-3 {
+        width: 150px;
+      }
+
+      .bg-primary {
+        background-color: #FFF2F4;
+      }
+
+      .brand-content .logo {
+        padding: 20px 30px;
+      }
+
+      .brand-content .heading {
+        padding: 15px 30px;
+      }
+
+      .brand-content h2 {
+        font-size: 50px;
+      }
+
+      .brand-content span {
+        font-size: 30px;
+      }
+
+      .btn {
+        padding: 40px 0 40px 0;
+      }
+
+      .btn-primary {
+        padding: 15px 54px;
+        background: #D62E55;
+        color: #FFFFFF;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 16px;
+      }
+
+      .brand-how-it-works p {
+        padding-top: 30px;
+      }
+
+      .brand-icons {
+        padding: 30px 0;
+      }
+
+      .brand-description p {
+        margin: 0;
+        padding: 40px 30px;
+        font-size: 20px;
+        text-align: center;
+      }
+
+      .bg-secondary {
+        background-color: #E9D8FC;
+      }
+
+      .brand-heading h2 {
+        font-weight: 700;
+        padding: 35px 30px 35px;
+        font-size: 40px;
+        color: #151515;
+      }
+
+      .brand-benefits img {
+        height: 80px;
+      }
+
+      .brand-benefits p {
+        margin-top: 10px;
+      }
+
+      .brand-benefits p, .brand-work h2, .brand-icons h2 {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        color: #151515;
+      }
+
+      .brand-benefits .text {
+        font-style: italic;
+        font-weight: 400;
+        font-size: 24px;
+        padding: 20px 0;
+      }
+
+      .brand-work p {
+        font-size: 16px;
+        margin-top: 5px;
+      }
+
+      .brand-referral h2 {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        text-align: left;
+        padding-top: 20px;
+      }
+
+      .brand-referral p {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        text-align: left;
+        margin: 20px 0 0 0;
+      }
+
+      .brand-referral .action {
+        margin: 30px 0 0 0;
+      }
+
+      .brand-referral a {
+        padding: 15px 54px;
+        background: #FFFFFF;
+        border: 2px solid #D62E55;
+        border-radius: 8px; 
+        text-decoration: none;
+        color: #D62E55;
+        margin: 20px 0 0 0;
+        font-size: 16px;
+      }
+
+      .brand-referral-content img {
+        border-radius: 8px;
+      }
+
+      .brand-referral-content .img-wrapper {
+        margin: 10px;
+        text-align: right;
+      }
+
+      .brand-referral-content h2 {
+        text-align: left;
+        margin: 40px 0 5px 10px;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+      }
+
+      .brand-referral-content p {
+        text-align: left;
+        margin-left: 5px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        margin: 0 0 0 15px;
+      }
+
+      .brand-club h2 {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 40px;
+        color: #151515;
+        font-style: normal;
+        margin: 25px 0 10px 0;
+      }
+
+      .brand-club p {
+        padding: 15px 0 30px 0;
+      }
+
+      .bg-green {
+        background-color: #00635B;
+      }
+
+      .brand-follow-heading h2 {
+        font-size: 24px;
+        color: #FFFFFF;
+        margin-left: 10px;
+      }
+
+      .brand-follow span img {
+        margin-right: 15px;
+      }
+
+      .brand-delivery, .brand-delivery-icon {
+        padding: 20px 0;
+      }
+
+      .brand-delivery-icon {
+        text-align: left;
+        margin-left: 10px;
+      }
+
+      .brand-delivery {
+        text-align: right;
+      }
+
+      .brand-reviews {
+        padding-right: 6px;
+      }
+
+      .footer-content {
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      .footer-content .text-lead {
+        font-weight: 700;
+      }
+
+      .footer-content .text-lead a, .brand-delivery .text a, .links a {
+        text-decoration: none;
+        color: #000;
+      }
+
+      .footer-content .links {
+        margin-top: 20px;
+      }
+
+      .footer-content .links span a, .footer-content .descpiption {
+        font-size: 12px;
+      }
+
+      .footer-content .links span a {
+        padding: 0 7px 0 7px;
+        border-right: 1px solid #000;
+      }
+
+      .footer-content .links span:last-child a {
+            border-right: none;
+        }
+
+      .footer-content .descpiption {
+        margin-top: 10px;
+        padding: 0 5px;
+      }
+
+      .refer-friend p {
+        margin: 20px;
+        text-align: right;
+      }
+
+      .footer-content .descpiption .mail {
+        text-decoration: underline;
+        color: #000;
+      }
+
+        .brand-reviews p, .brand-reviews-stars {
+            margin-top: 10px;
+            margin-left: 5px;
+        }
+
+        .brand-follow-heading, .brand-follow-icons {
+            text-align: center;
+        }
+
+        .brand-follow-icons a {
+            margin-right: 13px;
+        }
+
+        .brand-follow-icons a img {
+            vertical-align: middle;
+        }
+      /* ========== end custom styles ========== */
+    </style>
+    <!-- end desktop styles -->
+    <!-- responsive styles -->
+    <style type="text/css" media="only screen and (max-width: 600px)">
+    @media screen and (max-width: 600px) {
+        div,
+        p,
+        a,
+        li,
+        span,
+        td { -webkit-text-size-adjust:none; }
+
+        /* ========== utilities ========== */
+
+        /* makes images responsive inside columns on mobile devices */
+        .flex-image {
+            max-width: 100% !important;
+            height: auto;
+        }
+
+        .banner-img {
+            width: 100%;
+        }
+
+        .flex-button {
+            max-width:600px !important;
+            width:100% !important;
+        }
+
+        .flex-button a {
+            display: block !important;
+            font-size: 18px !important;
+        }
+
+        .mobile-hide { display: none !important; }
+
+        .desktop-hide {
+            display: table !important;
+            max-height: none !important;
+            overflow: visible !important;
+            float: none !important;
+            font-size: 12px !important;
+            line-height: 1.5 !important;
+        }
+
+        .desktop-hide td,
+        td.desktop-hide {
+            display: inline-table !important;
+        }
+
+        .desktop-hide img,
+        img.desktop-hide {
+            max-height: none !important;
+            width: auto !important;
+        }
+
+        .desktop-hide .flex-image {
+            width: 100% !important;
+        }
+
+        /* ========== end utilities ========== */
+
+        /* ========== scaffolding ========== */
+        .main,
+        .row,
+        .fluid-row,
+        .md-fluid-row,
+        .row-spacer,
+        #navigation,
+        .row .col-1,
+        .row .col-2,
+        .row .col-3,
+        .row .col-4,
+        .row .col-5,
+        .row .col-6,
+        .row .col-7,
+        .row .col-8,
+        .row .col-9,
+        .row .col-10,
+        .row .col-11,
+        .col-12 { width: 100% !important; height: auto; }
+
+        .fluid-row .col-1,
+        .md-fluid-row .col-1 { width: 8.25% !important;}
+        .fluid-row .col-2,
+        .md-fluid-row .col-2 { width: 16.5% !important;}
+        .fluid-row .col-3,
+        .md-fluid-row .col-3 { width: 25% !important;}
+        .fluid-row .col-4,
+        .md-fluid-row .col-4 { width: 33% !important;}
+        .fluid-row .col-5,
+        .md-fluid-row .col-5 { width: 41.25% !important;}
+        .fluid-row .col-6,
+        .md-fluid-row .col-6 { width: 50% !important;}
+        .fluid-row .col-7,
+        .md-fluid-row .col-7 { width: 57.75% !important;}
+        .fluid-row .col-8,
+        .md-fluid-row .col-8 { width: 66% !important;}
+        .fluid-row .col-9,
+        .md-fluid-row .col-8 { width: 74.25% !important;}
+        .fluid-row .col-10,
+        .md-fluid-row .col-10 { width: 82.5% !important; }
+        .fluid-row .col-11,
+        .md-fluid-row .col-11 { width: 90.75% !important;}
+        /* ========== end scaffolding ========== */
+
+        .banner {
+            padding: 30px;
+        }
+        
+        .brand-work {
+            padding: 10px;
+        }
+
+        .brand-benefits p {
+            margin: 15px 0;
+            font-size: 16px;
+        }
+
+        .brand-work p {
+            font-size: 15px;
+        }
+
+        .brand-benefits img {
+            height: auto;
+        }
+
+        .brand-referral p {
+            font-size: 15px;
+            margin: 10px 0 0 0;
+        }
+
+        .brand-referral .action {
+            margin: 30px 0;
+        }
+    
+        .brand-follow {
+            padding: 35px 5px;
+        }
+
+        .refer-friend p {
+            margin: 20px;
+            text-align: center;
+        }
+
+        .refer-friend, .refer-friend h2, .refer-friend-content h2, .refer-friend-content p {
+            text-align: center;
+        }
+
+        .refer-friend-content h2 br {
+            display: none;
+        }
+
+        .brand-follow-icons a {
+            margin-right: 5px;
+        }
+
+        /* ========== custom styles ============= */
+        }
+        
+    </style>
+    <style type="text/css" media="only screen and (max-width: 481px)">
+      @media screen and (max-width: 481px) {
+        .md-fluid-row .col-1,
+        .md-fluid-row .col-2,
+        .md-fluid-row .col-3,
+        .md-fluid-row .col-4,
+        .md-fluid-row .col-5,
+        .md-fluid-row .col-6,
+        .md-fluid-row .col-7,
+        .md-fluid-row .col-8,
+        .md-fluid-row .col-9,
+        .md-fluid-row .col-10,
+        .md-fluid-row .col-11 {
+          width: 100% !important;
+        }
+      }
+    </style>
+    <!-- end responsive styles -->
+  </head>
+  <body>
+    <table class="main" align="center" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+            <td>
+                <table class="col-12" align="center" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td>
+                            <table class="block-content bg-primary brand-content">
+                                <tr>
+                                    <td>
+                                        <img src="../images/logo.png" class="logo"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="heading">
+                                            <h2>
+                                                The hottest loyalty club
+                                            </h2>
+                                            <span>in the Beauty sphere is here!</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="banner">
+                                            <img src="../images/banner_1.jpg" width="500" class="flex-image" alt="Bali Beauty Club" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="btn">
+                                            <a href="#" class="btn-primary">Join Now!</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <table class="col-12" align="center" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td>
+                            <table class="block-content brand-description">
+                                <tr>
+                                    <td>
+                                        <p>
+                                            Sign up and get rewarded for all the good things you've been doing to your hair and bod'. Being part of the club allows you to collect points, redeem gifts, and strike gold in Coco coin for friend referrals. Tempting? For sure. And it doesn't stop there.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <table class="col-12 bg-secondary" align="center" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td>
+                            <table class="block-content brand-benefits bg-secondary">
+                                <tr>
+                                    <td>
+                                        <div class="brand-heading">
+                                            <h2>
+                                                Club Benefits
+                                            </h2>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="fluid-row bg-secondary width-500" align="center" cellspacing="0" cellpadding="0" border="0">
+                                <tr>
+                                    <td>
+                                        <!-- First Column | left sidebar -->
+                                        <table class="col-3 col-6" align="left" cellspacing="0" cellpadding="0" border="0" >
+                                            <tr>
+                                                <td>
+                                                    <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
+                                                        <tr>
+                                                            <td>
+                                                                <div class="brand-benefits">
+                                                                    <img src="../images/Points.png" class="flex-image" />
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="brand-benefits">
+                                                                    <p>Earn & Redeem Points</p>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!-- end first column -->
+
+                                        <!-- Second Column | large center content -->
+                                        <table class="col-3 col-6" align="left" cellspacing="0" cellpadding="0" border="0" >
+                                            <tr>
+                                                <td>
+                                                    <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
+                                                        <tr>
+                                                            <td>
+                                                                <div class="brand-benefits">
+                                                                    <img src="../images/Cake.png" class="flex-image" />
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="brand-benefits">
+                                                                    <p>Birthday discounts</p>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!-- end second column -->
+
+                                        <!-- Third Column | right sidebar -->
+                                        <table class="col-3 col-6" align="left" cellspacing="0" cellpadding="0" border="0" >
+                                            <tr>
+                                                <td>
+                                                    <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
+                                                        <tr>
+                                                            <td>
+                                                                <div class="brand-benefits">
+                                                                    <img src="../images/Mail.png" class="flex-image" />
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="brand-benefits">
+                                                                    <p>Exclusive Vouchers</p>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!-- end third column -->
+
+                                        <!-- Fourth Column | right sidebar -->
+                                        <table class="col-3 col-6" align="left" cellspacing="0" cellpadding="0" border="0" >
+                                            <tr>
+                                                <td>
+                                                    <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
+                                                        <tr>
+                                                            <td>
+                                                                <div class="brand-benefits">
+                                                                    <img src="../images/Coconut.png" class="flex-image" />
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="brand-benefits">
+                                                                    <p>Early Access To Sales</p>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!-- end Fourth column -->
+
+                                        <!-- Single Column -->
+                                        <table class="col-12" align="left" cellspacing="0" cellpadding="0" border="0" >
+                                            <tr>
+                                                <td>
+                                                    <table class="block-content brand-benefits" align="center" cellspacing="0" cellpadding="0" border="0">
+                                                        <tr>
+                                                            <td>
+                                                                <p class="text">
+                                                                    ….and so much MORE
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!-- end single column -->
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <table class="col-12" align="center" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td>
+                            <table class="block-content ">
+                                <tr>
+                                    <td>
+                                        <div class="brand-heading">
+                                            <h2>
+                                                How it works
+                                            </h2>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="fluid-row md-fluid-row" align="center" cellspacing="0" cellpadding="0" border="0">
+                                <tr>
+                                    <td>
+                                        <!-- First Column | left sidebar -->
+                                        <table class="col-4" align="left" cellspacing="0" cellpadding="0" border="0" >
+                                            <tr>
+                                                <td>
+                                                    <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
+                                                        <tr>
+                                                            <td>
+                                                                <div class="brand-work">
+                                                                    <h2>
+                                                                        1. Create an account
+                                                                    </h2>
+                                                                    <p>to start collecting points</p>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!-- end first column -->
+
+                                        <!-- Second Column | large center content -->
+                                        <table class="col-4" align="left" cellspacing="0" cellpadding="0" border="0" >
+                                            <tr>
+                                                <td>
+                                                    <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
+                                                        <tr>
+                                                            <td>
+                                                                <div class="brand-work">
+                                                                    <h2>
+                                                                        2. Earn points
+                                                                    </h2>
+                                                                    <p>with every purchase, or action made</p>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!-- end second column -->
+
+                                        <!-- Third Column | right sidebar -->
+                                        <table class="col-4" align="left" cellspacing="0" cellpadding="0" border="0" >
+                                            <tr>
+                                                <td>
+                                                    <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
+                                                        <tr>
+                                                            <td>
+                                                                <div class="brand-work">
+                                                                    <h2>
+                                                                        3. Redeem rewards
+                                                                    </h2>
+                                                                    <p>such as products, or discounts off your cart</p>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <table class="col-12 block-content ">
+                                            <tr>
+                                                <td>
+                                                    <div class="btn">
+                                                        <a href="#" class="btn-primary">Learn more</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!-- end third column -->
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <table class="col-12 fluid-row md-fluid-row bg-primary" align="center" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td>
+                            <!-- First Column -->
+                            <table class="col-6" align="left" cellspacing="0" cellpadding="0" border="0" >
+                                <tr>
+                                    <td>
+                                        <table class="block-content brand-referral-content" align="center" cellspacing="0" cellpadding="0" border="0">
+                                            <tr>
+                                                <td>
+                                                    <div class="refer-friend">
+                                                        <p>
+                                                            <img src="../images/referral_image.jpg" width="220" class="flex-image" alt="Refer a friend and get rewarded" />
+                                                        </p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <!-- end first column -->
+
+                            <!-- Second Column -->
+                            <table class="col-6" align="left" cellspacing="0" cellpadding="0" border="0" >
+                                <tr>
+                                    <td>
+                                        <table class="block-content brand-referral" align="center" cellspacing="0" cellpadding="0" border="0">
+                                            <tr>
+                                                <td>
+                                                    <div class="refer-friend-content">
+                                                        <h2>Refer a friend <br> & get rewarded</h2>
+                                                        <p>
+                                                            Get $5 for every successful referral you make!
+                                                        </p>
+                                                        <p class="action">
+                                                            <a href="#">Refer a friend</a>
+                                                        </p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <!-- end second column -->
+                        </td>
+                    </tr>
+                </table>
+                <table class="col-12" align="center" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td>
+                            <table class="block-content brand-club bg-secondary" align="center" cellspacing="0" cellpadding="0" border="0">
+                                <tr>
+                                    <td>
+                                        <h2>
+                                            What are you waiting for?
+                                        </h2>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>
+                                            <a href="#" class="btn-primary">Join the club!</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <table class="col-12 fluid-row" align="center" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td>
+                            <!-- First Column | left sidebar -->
+                            <table class="col-4" align="left" cellspacing="0" cellpadding="0" border="0" >
+                                <tr>
+                                    <td>
+                                        <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
+                                            <tr>
+                                                <td>
+                                                    <div class="brand-icons">
+                                                        <img src="../images/cruelty.png" class="flex-image" />
+                                                        <h2>
+                                                            Cruelty Free
+                                                        </h2>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <!-- end first column -->
+
+                            <!-- Second Column | large center content -->
+                            <table class="col-4" align="left" cellspacing="0" cellpadding="0" border="0" >
+                                <tr>
+                                    <td>
+                                        <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
+                                            <tr>
+                                                <td>
+                                                    <div class="brand-icons">
+                                                        <img src="../images/awards.png" class="flex-image" />
+                                                        <h2>
+                                                            Winner of<br>18 Beauty Awards
+                                                        </h2>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <!-- end second column -->
+
+                            <!-- Third Column | right sidebar -->
+                            <table class="col-4" align="left" cellspacing="0" cellpadding="0" border="0" >
+                                <tr>
+                                    <td>
+                                        <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
+                                            <tr>
+                                                <td>
+                                                    <div class="brand-icons">
+                                                        <img src="../images/returns.png" class="flex-image" />
+                                                        <h2>
+                                                            Easy<br>Returns
+                                                        </h2>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <!-- end third column -->
+                        </td>
+                    </tr>
+                </table>
+                <table class="col-12 fluid-row bg-green" align="center" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td>
+                            <!-- First Column | left sidebar -->
+                            <table class="col-12" align="left" cellspacing="0" cellpadding="0" border="0" >
+                                <tr height="23"></tr>
+                                <tr>
+                                    <td>
+                                        <div class="brand-follow-heading">
+                                            <h2>Follow us</h2>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="brand-follow-icons">
+                                            <a href="#"><img src="../images/ig.png" class="flex-image" /></a>
+                                            <a href="#"><img src="../images/fb.png" class="flex-image" /></a>
+                                            <a href="#"><img src="../images/tt.png" class="flex-image" /></a>
+                                            <a href="#"><img src="../images/yt.png" class="flex-image" /></a>
+                                            <a href="#"><img src="../images/pi.png" class="flex-image" /></a>
+                                        </div>    
+                                    </td>
+                                </tr>
+                                <tr height="23"></tr>
+                            </table>
+                            <!-- end first column -->
+
+                            <!-- Second Column | large center content -->
+                            
+                            <!-- end second column -->
+                        </td>
+                    </tr>
+                </table>
+                <table class="col-12 fluid-row" align="center" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td>
+                            <table class="col-8"  align="left" cellspacing="0" cellpadding="0" border="0" >
+                                <tr>
+                                    <td>
+                                        <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
+                                            <tr>
+                                                <td>
+                                                    <div class="brand-delivery">
+                                                        <p class="text">
+                                                            <a href="https://support.cocoandeve.com/hc/en-us/sections/4408151039385-Delivery-Cost">Fast worldwide delivery</a>
+                                                        </p> 
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="col-4 col-2" align="left" cellspacing="0" cellpadding="0" border="0" >
+                                <tr>
+                                    <td>
+                                        <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
+                                            <tr>
+                                                <td>
+                                                    <div class="brand-delivery-icon">
+                                                        <a href="https://support.cocoandeve.com/hc/en-us/sections/4408151039385-Delivery-Cost"><img src="../images/delivery.png" /></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <table class="md-fluid-row col-12" align="center" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td>
+                            <table class="col-3"  align="left" cellspacing="0" cellpadding="0" border="0" >
+                                <tr>
+                                    <td>
+                                        <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
+                                            <tr>
+                                                <td>
+                                                    <div class="brand-reviews">
+                                                        <span><img src="../images/yotpo.png" class="flex-image" /></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="col-3" align="left" cellspacing="0" cellpadding="0" border="0" >
+                                <tr>
+                                    <td>
+                                        <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
+                                            <tr>
+                                                <td>
+                                                    <div class="brand-reviews">
+                                                        <p>Our customers say</p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="col-3" align="left" cellspacing="0" cellpadding="0" border="0" >
+                                <tr>
+                                    <td>
+                                        <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
+                                            <tr>
+                                                <td>
+                                                    <div class="brand-reviews-stars">
+                                                        <span><a href="https://www.cocoandeve.com/pages/reviews"><img src="../images/star.png" class="flex-image" /></a></span>
+                                                        <span><a href="https://www.cocoandeve.com/pages/reviews"><img src="../images/star.png" class="flex-image" /></a></span>
+                                                        <span><a href="https://www.cocoandeve.com/pages/reviews"><img src="../images/star.png" class="flex-image" /></a></span>
+                                                        <span><a href="https://www.cocoandeve.com/pages/reviews"><img src="../images/star.png" class="flex-image" /></a></span>
+                                                        <span><a href="https://www.cocoandeve.com/pages/reviews"><img src="../images/star.png" class="flex-image" /></a></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="col-3" align="left" cellspacing="0" cellpadding="0" border="0" >
+                                <tr>
+                                    <td>
+                                        <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
+                                            <tr>
+                                                <td>
+                                                    <div class="brand-reviews">
+                                                        <p>7.4 out of 60k reviews</p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <table class="col-12" align="center" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td>
+                            <table class="block-content" align="center" cellspacing="0" cellpadding="0" border="0">
+                                <tr>
+                                    <div class="footer-content">
+                                        <p class="text-lead">
+                                            <span><a href="https://cocoandeve.com/">cocoandeve.com .</a></span>
+                                            <span><a href="https://cocoandeve.com/collections/all">shop .</a></span>
+                                            <span><a href="https://cocoandeve.com/pages/reviews">reviews .</a></span>
+                                            <span><a href="https://support.cocoandeve.com/hc/en-us">help</a></span>
+                                        </p>
+                                        <p class="links">
+                                            <span>
+                                                <a href="https://int.cocoandeve.com/pages/privacy-policy">Privacy Policy</a>
+                                            </span>
+                                            <span>
+                                                <a href="https://int.cocoandeve.com/pages/terms-and-conditions">Terms & Conditions</a>
+                                            </span>
+                                            <span>
+                                                <a>Copyright &#169; Coco & Eve </a>
+                                            </span>
+                                        </p>
+                                        <p class="descpiption">
+                                            Add hello@e-news.cocoandeve.com to your address book to ensure that you revieve our emails in your inbox.
+                                            <br>
+                                            
+                                        </p>
+                                        <p class="descpiption">
+                                            Questions? Let's chat at <a href="#" class="mail">hello@cocoandeve.com</a>
+                                        </p>
+                                        <p class="descpiption">
+                                            Coco and Eve Limited | Suite 1, 7th Floor 50 Broadway London SW1H 0BL 
+                                        </p>
+                                        <p class="descpiption">
+                                            If you want to unsubscribe from our mailing list, click <a href="#" class="mail">here</a>
+                                        </p>
+                                    </div>
+                                    
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+  </body>
+</html>

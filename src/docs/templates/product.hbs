@@ -128,18 +128,19 @@
 				</form>
 
 				{{> components/product-waitlist-oos class="order-lg-2 mb-3 mb-lg-4 d-none"}}
-
-				<figure class="pdp-banner d-flex order-lg-2 mb-3 mb-lg-4">
-					<picture class="flex-shrink-0 col-5 col-lg-4 p-0">
-						<source srcset="https://via.placeholder.com/314x314.jpg/EFADBA" media="(min-width: 992px)" />
-						<img src="https://via.placeholder.com/320x228.jpg/EFADBA" class="w-100">
-					</picture>
-					<figcaption class="col-7 col-lg-8 px-2 py-1 py-lg-2 bg-gray-400 d-flex flex-column">
-						<h4 class="mb-0">Halloween Sale!</h4>
-						<p class="font-size-xs font-size-dt-base mb-0 flex-grow-1">*min. spend of $50 applies.</p>
-						<p class="font-size-sm mb-0 text-primary justify-self-end">Pick your gift with code: <br>CIRCLE <br>TRIANGLE <br>SQUARE</p>
-					</figcaption>
-				</figure>
+				<a hreh="/"  class="text-decoration-none">
+					<figure class="pdp-banner d-flex order-lg-2 mb-3 mb-lg-4">
+						<picture class="flex-shrink-0 col-5 col-lg-4 p-0">
+							<source srcset="https://via.placeholder.com/314x314.jpg/EFADBA" media="(min-width: 992px)" />
+							<img src="https://via.placeholder.com/320x228.jpg/EFADBA" class="w-100">
+						</picture>
+						<figcaption class="col-7 col-lg-8 px-2 py-1 py-lg-2 bg-gray-400 d-flex flex-column">
+							<h4 class="mb-0">Halloween Sale!</h4>
+							<p class="font-size-xs font-size-dt-base mb-0 flex-grow-1 text-decoration-none">*min. spend of $50 applies.</p>
+							<p class="font-size-sm mb-0 text-primary justify-self-end text-decoration-none">Pick your gift with code: <br>CIRCLE <br>TRIANGLE <br>SQUARE</p>
+						</figcaption>
+					</figure>
+				</a>
 
 				<div class="order-lg-1 mb-3 mb-lg-4">
 					<ul class="product-info-tab nav nav-tabs justify-content-between" id="product-info-tab" role="tablist">
@@ -273,7 +274,8 @@
 			</div>
 		</div>
 	</div>
-
+	{{> sections/pdp-upsell-1 class="mb-4"}}
+	{{> sections/pdp-upsell-2 class="mb-4"}}
 	{{> sections/pdp-banner-tan-1 class="mb-4"}}
 
 	{{> sections/real-result-carousel}}

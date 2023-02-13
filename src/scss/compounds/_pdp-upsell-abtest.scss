@@ -1,0 +1,130 @@
+.product-upsell-1 {
+    @include media-breakpoint-up(lg) {
+        .carousel--centered .carousel-inner {
+            transform: translateX(0) !important;
+        }
+    }
+
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+        top: 28%;
+    }
+}
+
+.product-upsell-2 {
+    button {
+        &:focus {
+            box-shadow: none;
+        }
+
+        max-width: calc-em(164);
+
+        @include media-breakpoint-up(lg) {
+            max-width: calc-em(216);
+        }
+    }
+
+    .swatch-overlay {
+        left: 0;
+        right: 0;
+        max-width: calc-em(164);
+        border: 1px solid $primary-dark;
+        border-radius: calc-em(8);
+
+        @include media-breakpoint-up(lg) {
+            max-width: calc-em(216);
+        }
+    }
+
+    .bg-pink-light {
+        &:hover,
+        &:focus {
+            background-color: $pink-light !important   ;
+        }
+    }
+
+    .product-card:hover {
+        a {
+            text-decoration: none;
+        }
+    }
+    
+    picture {
+        @include media-breakpoint-down(md) {
+            max-width: calc-em(145);
+        }
+    }
+
+    .product-card__title {
+        min-height: calc-em(40);
+    }
+
+    .product-card__content {
+        @include media-breakpoint-down(md) {
+            min-height: calc-em(300);
+        }
+    }
+
+    .product-card__tag {
+        top: calc-em(15);
+        left: calc-em(15);
+    }
+
+    .carousel-item {
+        &.active,
+        &.carousel-item-left,
+        &.carousel-item-right,
+        &.carousel-item-prev,
+        &.carousel-item-next {
+            @include media-breakpoint-down(md) {
+                display: flex !important;
+            }
+        }
+    }
+
+    .carousel--centered .carousel-inner {
+		transform: translateX(0);
+	}
+
+    .carousel--product-preview {
+        @include media-breakpoint-up(lg) {
+            .carousel-item {
+                display: block;
+                margin-right: 0;
+            }
+        }
+
+        .item-third {
+            &:first-child {
+                padding-left: 0;
+                margin-right: 7.5px;
+            }
+            &:last-child {
+                margin-left: 7.5px;
+                padding-right: 0;
+            }
+        }
+    }
+}
+
+html.us-store {
+    .pdp-upsell-abtest-variant-1 {
+        .product-upsell-1 {
+            display: block !important;
+        }
+
+        .upsell_product {
+            display: none;
+        }
+    }
+
+    .pdp-upsell-abtest-variant-2 {
+        .product-upsell-2 {
+            display: block !important;
+        }
+
+        .upsell_product {
+            display: none;
+        }
+    }
+}
