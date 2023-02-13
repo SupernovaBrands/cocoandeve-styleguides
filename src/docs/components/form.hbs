@@ -19,7 +19,7 @@
 					</div>
 					<input type="text" class="form-control" id="exampleSearch" placeholder="Search">
 					<div class="input-group-append">
-						<a class="input-group-text search-box__close align-items-center" href="#" role="button">
+						<a class="input-group-text search-box__close align-items-center" href="#" role="button" aria-label="Close search box">
 							<img class="svg" src="icons/close.svg" replace-to-svg />
 						</a>
 					</div>
@@ -36,23 +36,23 @@
 				<form>
 					<div class="row">
 						<div class="input-group form-group col-lg-6">
-							<input class="form-control" type="text" placeholder="Name*" required />
+							<input class="form-control" type="text" placeholder="Name*" required aria-label="Name"/>
 						</div>
 						<div class="input-group form-group col-lg-6">
-							<input class="form-control" type="email" placeholder="Email*" required />
-						</div>
-					</div>
-					<div class="row">
-						<div class="input-group form-group col-lg-6">
-							<input class="form-control" type="text" placeholder="Name disabled" disabled />
-						</div>
-						<div class="input-group form-group col-lg-6">
-							<input class="form-control" type="email" placeholder="Email disabled" value="Email disabled with value" disabled />
+							<input class="form-control" type="email" placeholder="Email*" required aria-label="Email"/>
 						</div>
 					</div>
 					<div class="row">
 						<div class="input-group form-group col-lg-6">
-							<select class="custom-select">
+							<input class="form-control" type="text" placeholder="Name disabled" disabled aria-label="Disabled"/>
+						</div>
+						<div class="input-group form-group col-lg-6">
+							<input class="form-control" type="email" placeholder="Email disabled" value="Email disabled with value" disabled  aria-label="Email Disabled"/>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-group form-group col-lg-6">
+							<select class="custom-select" aria-label="Custom select">
 								<option selected>Select</option>
 								<option>Option 1</option>
 								<option>Option 2</option>
@@ -60,7 +60,7 @@
 							</select>
 						</div>
 						<div class="input-group form-group col-lg-6">
-							<select class="custom-select" disabled>
+							<select class="custom-select" disabled aria-label="Custom select">
 								<option selected>Select</option>
 								<option>Option 1</option>
 								<option>Option 2</option>
@@ -70,7 +70,7 @@
 					</div>
 					<div class="row">
 						<div class="input-group form-group col">
-							<textarea class="form-control" placeholder="Your comment" rows="7" required></textarea>
+							<textarea class="form-control" placeholder="Your comment" rows="7" required  aria-label="Your comment"></textarea>
 						</div>
 					</div>
 
@@ -83,7 +83,7 @@
 
 					<div class="row">
 						<div class="form-group col">
-							<button class="btn btn-lg btn-primary" type="submit">Submit form</button>
+							<button class="btn btn-lg btn-primary" type="submit" >Submit form</button>
 						</div>
 					</div>
 				</form>
