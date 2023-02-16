@@ -10,13 +10,13 @@
 		</div>
 		<span class="d-block mb-1">or</span>
 		<div class="row">
-			<div class="input-group col-4 col-lg-3 mb-1">
+			<label for="selectCountryOptions" class="input-group col-4 col-lg-3 mb-1">
 				<span class="masking-select position-absolute rounded border-0">+65</span>
 				{{> components/countries-options }}
-			</div>
-			<div class="input-group col-8 col-lg-9 pl-0 mb-1">
-				<input class="form-control border-0" type="text" name="phone" placeholder="Enter your phone number">
-			</div>
+			</label>
+			<label for="phoneNumber" class="input-group col-8 col-lg-9 pl-0 mb-1">
+				<input id="phoneNumber" class="form-control border-0" type="text" name="phone" placeholder="Enter your phone number">
+			</label>
 			<small class="col-12 text-danger phone-error d-none">Please enter a valid phone number</small>
 		</div>
 		<div class="row">
@@ -30,7 +30,7 @@
 		</div>
 		<div class="row">
 			<div class="form-group col mt-1">
-				<button class="btn btn-lg btn-primary btn-block" type="submit">Submit form</button>
+				<input class="btn btn-lg btn-primary btn-block" type="submit" value="Submit form" />
 			</div>
 		</div>
 		<p class="font-size-xs">By signing up via text you agree to receive recurring automated marketing messages at the phone number provided. Consent is not a condition of purchase. Reply STOP to unsubscribe. HELP for help. Msg & Data rates may apply. View Privacy Policy & ToS.</p>

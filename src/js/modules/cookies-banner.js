@@ -1,7 +1,7 @@
 /* global screenLG */
 
 function initCookieBanner(el) {
-	el.find('#collapseCookieBanner').on('show.bs.collapse', function () {
+	el.find('.collapse--cookie-banner').on('show.bs.collapse', function () {
 		const parentEl = el;
 		parentEl.find('[data-toggle="collapse"]').addClass('d-none');
 		parentEl.find('.use-default').removeClass('d-none');
