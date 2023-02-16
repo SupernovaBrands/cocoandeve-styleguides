@@ -1,32 +1,34 @@
 <form id="{{id}}" class="p-g shadow collapse" data-parent="#{{parent}}">
     <p class="font-weight-bold text-center px-2 mb-2">Registration</p>
     <div class="row">
-        <div class="form-group col-6 pr-1">
-            <input type="text" class="form-control font-size-sm" id="dropdownFormFName" placeholder="First Name">
-        </div>
-        <div class="form-group col-6 pl-1">
-            <input type="text" class="form-control font-size-sm" id="dropdownRegisterFormLName" placeholder="Last Name">
-        </div>
-        <div class="form-group col-12">
-            <input type="email" class="form-control font-size-sm" id="dropdownRegisterFormEmail" placeholder="Email">
-        </div>
-        <div class="form-group col-12">
-            <input type="text" class="form-control font-size-sm" id="dropdownRegisterFormPassword" placeholder="Password">
-        </div>
+        <label for="dropdownFormFName" class="d-block form-group col-6 pr-1">
+            <span id="dropdownFormFNameLabel" class="sr-only">First name</span>
+            <input type="text" class="form-control font-size-sm" id="dropdownFormFName" placeholder="First Name" aria-labelledby="dropdownFormFNameLabel" />
+        </label>
+        <label for="dropdownRegisterFormLName" class="d-block form-group col-6 pl-1">
+            <span id="dropdownRegisterFormLNameLabel" class="sr-only">Last Name</span>
+            <input type="text" class="form-control font-size-sm" id="dropdownRegisterFormLName" placeholder="Last Name" aria-labelledby="dropdownRegisterFormLNameLabel" />
+        </label>
+        <label for="dropdownRegisterFormEmail" class="d-block form-group col-12">
+            <span id="dropdownRegisterFormEmailLabel" class="sr-only">Email</span>
+            <input type="email" class="form-control font-size-sm" id="dropdownRegisterFormEmail" placeholder="Email" aria-labelledby="dropdownRegisterFormEmailLabel" />
+        </label>
+        <label for="dropdownRegisterFormPassword" class="d-block form-group col-12">
+            <span id="dropdownRegisterFormPasswordLabel" class="sr-only">Password</span>
+            <input type="text" class="form-control font-size-sm" id="dropdownRegisterFormPassword" placeholder="Password" aria-labelledby="dropdownRegisterFormPasswordLabel" />
+        </label>
     </div>
-    <div class="custom-control custom-checkbox d-flex justify-content-start font-size-sm mb-1">
+    <label for="offers" class="custom-control custom-checkbox d-flex justify-content-start font-size-sm mb-1">
         <input type="checkbox" name="offers" value="true" class="custom-control-input" id="offers" required="" aria-required="true" aria-invalid="true">
-        <label class="custom-control-label" for="offers">
-            Keep me up to date on news and exclusive offers
-        </label>
-    </div>
-    <div class="custom-control custom-checkbox d-flex justify-content-start font-size-sm">
+        <span class="custom-control-label">Keep me up to date on news and exclusive offers</span>
+    </label>
+    <label for="agreement" class="custom-control custom-checkbox d-flex justify-content-start font-size-sm">
         <input type="checkbox" name="agreement" value="true" class="custom-control-input" id="agreement" required="" aria-required="true" aria-invalid="true">
-        <label class="custom-control-label" for="agreement">
-            By clicking here, I agree to the <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>
-        </label>
-    </div>
-    <button type="submit" class="btn btn-primary btn-block mt-g">Create Account</button>
+        <div class="custom-control-label">
+            <span>By clicking here, I agree to the <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></span>
+        </div>
+    </label>
+    <input type="submit" class="btn btn-primary btn-block mt-g" value="Create Account" />
     <div class="form-group text-center mt-2">
         <a href="#{{targetLink}}" class="text-underline text-primary" data-toggle="collapse">Back to login</a>
     </div>
