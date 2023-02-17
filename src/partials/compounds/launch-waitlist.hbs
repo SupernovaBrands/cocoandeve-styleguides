@@ -14,9 +14,10 @@
 				<span class="masking-select position-absolute rounded border-0">+65</span>
 				{{> components/countries-options }}
 			</div>
-			<label for="phoneNumber" class="input-group col-8 col-lg-9 pl-0 mb-1">
-				<input id="phoneNumber" class="form-control border-0" type="text" name="phone" placeholder="Enter your phone number">
-			</label>
+			<div class="input-group col-8 col-lg-9 pl-0 mb-1">
+				<label for="phoneNumber" id="phoneNumberLabel" class="sr-only">Phone number</label>
+				<input id="phoneNumber" class="form-control border-0" type="text" name="phone" placeholder="Enter your phone number" aria-labelledby="phoneNumberLabel" />
+			</div>
 			<small class="col-12 text-danger phone-error d-none">Please enter a valid phone number</small>
 		</div>
 		<div class="row">
