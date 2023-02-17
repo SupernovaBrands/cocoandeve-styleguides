@@ -16,15 +16,15 @@
 				<a class="nav-link text-decoration-none active h4" href="#all" aria-controls="all">All</a>
 			</li>
 		</ul>
-		<label for="rangeResultSelect" class="mb-4 mx-auto col-6 d-sm-block d-md-none">
-			<span id="rangeResultSelectLabel" class="sr-only">Range Real Result</span>
+		<div class="mb-4 mx-auto col-6 d-sm-block d-md-none">
+			<label for="rangeResultSelect" id="rangeResultSelectLabel" class="sr-only">Range Real Result</label>
 			<select id="rangeResultSelect" data-toggle="select" class="custom-select custom-select-lg" aria-labelledby="rangeResultSelectLabel">
 				<option value="#all" selected>All</option>
 				<option value="#tan">Tan</option>
 				<option value="#hair">Hair</option>
 				<option value="#body">Body</option>
 			</select>
-		</label>
+		</div>
 		{{/if}}
 
 		<div class="carousel slide carousel--loop carousel--real-result" id="real-result-carousel" data-slide-number="4" role="tabpanel" aria-labelledby="tan-tab">
