@@ -56,12 +56,15 @@
     <div class="container mt-4">
         <h1>Tabs Result Long - FR</h1>
     </div>
-    <select data-toggle="select" class="custom-select custom-select-lg mb-4 mx-auto col-6 d-block d-md-none">
-        <option value="#all" selected="">All</option>
-        <option value="#autobronzants">Autobronzants</option>
-        <option value="#produits-capillaires">Produits capillaires</option>
-        <option value="#produits-corporels">Produits corporels</option>
-    </select>
+    <div class="mb-4 mx-auto col-6 d-block d-md-none">
+        <label for="rangeResultSelect" id="rangeResultSelectLabel" class="sr-only">Range Real Result</label>
+        <select id="rangeResultSelect" data-toggle="select" class="custom-select custom-select-lg" aria-labelledby="rangeResultSelectLabel">
+            <option value="#all" selected="">All</option>
+            <option value="#autobronzants">Autobronzants</option>
+            <option value="#produits-capillaires">Produits capillaires</option>
+            <option value="#produits-corporels">Produits corporels</option>
+        </select>
+    </div>
     <ul class="nav nav-tabs mx-auto nav-tabs--real-results text-center mb-5 justify-content-center d-none d-md-flex" role="tablist">
         <li class="nav-item" role="presentation">
             <a class="nav-link text-decoration-none h4 mb-0 font-weight-normal px-g w-auto" data-toggle="tab" href="#tan" role="tab" aria-controls="tan">Autobronzants</a>

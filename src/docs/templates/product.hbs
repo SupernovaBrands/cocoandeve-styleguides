@@ -78,7 +78,7 @@
 						</div>
 						<button class="product-swatch-mobile__toggle btn btn-lg btn-primary btn-block m-0" type="button" data-toggle="collapse" data-target="#product-swatch-mobile">Select Shade</button>
 						<div class="product-swatch-mobile__action bg-white rounded-lg d-none">
-							<button class="product-form-submit btn btn-lg btn-primary btn-block m-0" type="submit">Add to Cart</button>
+							<input class="product-form-submit btn btn-lg btn-primary btn-block m-0" type="submit" value="Add to Cart" />
 							<button type="button" class="scroll-to-element btn btn-lg btn-primary btn-block d-none m-0" role="button" data-toggle="modal" data-target="#productWaitlist">Waitlist Me</button>
 						</div>
 					</div>
@@ -94,7 +94,7 @@
 						<div class="product-form-submit mb-3 position-relative">
 							<div class="d-flex">
 								<div class="react-quantity-box"  data-inventory="10" data-id="32068892426275"></div>
-								<button class="btn btn-lg btn-primary btn-block ml-1 ml-lg-g" type="submit">Add to Cart</button>
+								<input class="btn btn-lg btn-primary btn-block ml-1 ml-lg-g" type="submit" value="Add to Cart" />
 							</div>
 							<p id="oos-alert" class="mt-1 mb-0 text-danger d-none">Oh nuts! You got the last one!</p>
 						</div>
@@ -245,16 +245,20 @@
 						<div id="product-collapse-3" class="product-collapse font-size-sm collapse" aria-labelledby="product-collapse-3__toggle" data-parent="#product-collapse">
 							<p class="mt-3 mb-2">Enjoy FREE shipping on orders over $39.*</p>
 							<table class="shipping-table table table-bordered text-center mt-3 mb-2">
-								<tr>
-									<th>Country<br>(Minimum Spend)</th>
-									<th>Over<br>Minimum Spend</th>
-									<th>Below<br>Minimum Spend</th>
-								</tr>
-								<tr>
-									<td>Austria<br>(€48)</td>
-									<td>FREE<br>3 - 4 days</td>
-									<td>€7.90<br>3 - 4 days</td>
-								</tr>
+								<thead>
+									<tr>
+										<th>Country<br>(Minimum Spend)</th>
+										<th>Over<br>Minimum Spend</th>
+										<th>Below<br>Minimum Spend</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Austria<br>(€48)</td>
+										<td>FREE<br>3 - 4 days</td>
+										<td>€7.90<br>3 - 4 days</td>
+									</tr>
+								</tbody>
 							</table>
 							<p class="mb-3">Rest of the countries, <a href="#shipping-modal" data-toggle="modal">click here.</a></p>
 							<p class="mb-2">Return & Refund Policy</p>

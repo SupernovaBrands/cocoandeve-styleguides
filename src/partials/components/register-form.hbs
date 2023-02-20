@@ -2,31 +2,33 @@
     <p class="font-weight-bold text-center px-2 mb-2">Registration</p>
     <div class="row">
         <div class="form-group col-6 pr-1">
-            <input type="text" class="form-control font-size-sm" id="dropdownFormFName" placeholder="First Name" aria-label="First Name">
+            <label for="dropdownFormFName" id="dropdownFormFNameLabel" class="sr-only">First name</label>
+            <input type="text" class="form-control font-size-sm" id="dropdownFormFName" placeholder="First Name" aria-labelledby="dropdownFormFNameLabel" />
         </div>
         <div class="form-group col-6 pl-1">
-            <input type="text" class="form-control font-size-sm" id="dropdownRegisterFormLName" placeholder="Last Name" aria-label="Last Name">
+            <label for="dropdownRegisterFormLName" id="dropdownRegisterFormLNameLabel" class="sr-only">Last Name</label>
+            <input type="text" class="form-control font-size-sm" id="dropdownRegisterFormLName" placeholder="Last Name" aria-labelledby="dropdownRegisterFormLNameLabel" />
         </div>
         <div class="form-group col-12">
-            <input type="email" class="form-control font-size-sm" id="dropdownRegisterFormEmail" placeholder="Email">
+            <label for="dropdownRegisterFormEmail" id="dropdownRegisterFormEmailLabel" class="sr-only">Email</label>
+            <input type="email" class="form-control font-size-sm" id="dropdownRegisterFormEmail" placeholder="Email" aria-labelledby="dropdownRegisterFormEmailLabel" />
         </div>
         <div class="form-group col-12">
-            <input type="text" class="form-control font-size-sm" id="dropdownRegisterFormPassword" placeholder="Password">
+            <label for="dropdownRegisterFormPassword" id="dropdownRegisterFormPasswordLabel" class="sr-only">Password</label>
+            <input type="text" class="form-control font-size-sm" id="dropdownRegisterFormPassword" placeholder="Password" aria-labelledby="dropdownRegisterFormPasswordLabel" />
         </div>
     </div>
     <div class="custom-control custom-checkbox d-flex justify-content-start font-size-sm mb-1">
         <input type="checkbox" name="offers" value="true" class="custom-control-input" id="offers" required="" aria-required="true" aria-invalid="true">
-        <label class="custom-control-label" for="offers">
-            Keep me up to date on news and exclusive offers
-        </label>
+        <label for="offers" class="custom-control-label">Keep me up to date on news and exclusive offers</label>
     </div>
     <div class="custom-control custom-checkbox d-flex justify-content-start font-size-sm">
         <input type="checkbox" name="agreement" value="true" class="custom-control-input" id="agreement" required="" aria-required="true" aria-invalid="true">
-        <label class="custom-control-label" for="agreement">
-            By clicking here, I agree to the <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>
+        <label for="agreement" class="custom-control-label">
+            <span>By clicking here, I agree to the <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></span>
         </label>
     </div>
-    <button type="submit" class="btn btn-primary btn-block mt-g">Create Account</button>
+    <input type="submit" class="btn btn-primary btn-block mt-g" value="Create Account" />
     <div class="form-group text-center mt-2">
         <a href="#{{targetLink}}" class="text-underline text-primary" data-toggle="collapse">Back to login</a>
     </div>
