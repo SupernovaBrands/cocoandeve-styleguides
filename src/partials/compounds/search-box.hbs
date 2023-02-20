@@ -5,10 +5,10 @@
 			<div class="container position-relative d-flex align-items-center px-0 px-lg-g">
 				<img class="svg search-panel__input-search-icon position-absolute h2 mb-0" src="icons/search-abtest.svg" replace-to-svg />
 				<input type="text" placeholder="Search" name="q" class="col-12  border-0 py-2 pl-4 pl-lg-4" aria-label="search">
-				<a class="search-panel__clear position-absolute align-items-center disabled" href="javascript:void(0)">Clear</a>
-				<a class="search-panel__close position-absolute align-items-center font-weight-bold d-flex" href="javascript:void(0)">
+				<span class="search-panel__clear position-absolute align-items-center disabled" role="button">Clear</span>
+				<span class="search-panel__close position-absolute align-items-center font-weight-bold d-flex" role="button">
 					<img class="svg" src="icons/close.svg" replace-to-svg />
-				</a>
+				</span>
 			</div>
 		</div>
 	</div>
@@ -31,25 +31,25 @@
 				<span class="search-panel__tag p-1 mr-1 d-inline-block mb-1 rounded bg-gray-400 text-gray-600">Mitt</span>
 				<span class="search-panel__tag p-1 mr-1 d-inline-block mb-1 rounded bg-gray-400 text-gray-600">Bali Bod Bundle</span>
 			</div>
-			{{> compounds/search-box-product-card-abtest class="mb-1 order-4" title="Bali Bronzing Foam in two lines"}}
-			{{> compounds/search-box-product-card-abtest class="mb-1 order-4" title="Bali Bronzing Foam"}}
-			{{> compounds/search-box-product-card-abtest class="mb-1 order-4" title="Bali Bronzing Foam"}}
-			{{> compounds/search-box-product-card-abtest class="mb-4 mb-lg-1 pb-5 pb-lg-0 order-4" title="Bali Bronzing Foam"}}
+			{{> compounds/search-box-product-card class="mb-1 order-4" title="Bali Bronzing Foam in two lines"}}
+			{{> compounds/search-box-product-card class="mb-1 order-4" title="Bali Bronzing Foam"}}
+			{{> compounds/search-box-product-card class="mb-1 order-4" title="Bali Bronzing Foam"}}
+			{{> compounds/search-box-product-card class="mb-4 mb-lg-1 pb-5 pb-lg-0 order-4" title="Bali Bronzing Foam"}}
 		</div>
 	</div>
 	<div class="search-panel__result container mt-lg-2 px-g" style="display: none;">
 		<div class="row">
 			<h4 class="container mt-2 mt-lg-0 font-size-base">X results</h4>
 			{{#> sections/carousel-scroll class="mb-5 ml-lg-3" id="search-products" no-scrollbar="true" controlclass="carousel-control d-none d-lg-flex" footerTextAbTest=true}}
-				{{> compounds/search-box-product-card-abtest class="carousel-item mb-1 active" title="Bali Bronzing Foam in two lines"}}
-				{{> compounds/search-box-product-card-abtest class="carousel-item mb-1" title="Bali Bronzing Foam in two lines long lines"}}
-				{{> compounds/search-box-product-card-abtest class="carousel-item mb-1" title="Bali Bronzing Foam in two lines"}}
-				{{> compounds/search-box-product-card-abtest class="carousel-item mb-1" title="Bali Bronzing Foam in two lines"}}
-				{{> compounds/search-box-product-card-abtest class="carousel-item mb-1" title="Bali Bronzing Foam in two lines"}}
-				{{> compounds/search-box-product-card-abtest class="carousel-item mb-1" title="Bali Bronzing Foam in two lines"}}
-				{{> compounds/search-box-product-card-abtest class="carousel-item mb-1" title="Bali Bronzing Foam in two lines"}}
-				{{> compounds/search-box-product-card-abtest class="carousel-item mb-1" title="Bali Bronzing Foam in two lines"}}
-				{{> compounds/search-box-product-card-abtest class="carousel-item mb-1" title="Bali Bronzing Foam in two lines"}}
+				{{> compounds/search-box-product-card class="carousel-item mb-1 active" title="Bali Bronzing Foam in two lines"}}
+				{{> compounds/search-box-product-card class="carousel-item mb-1" title="Bali Bronzing Foam in two lines long lines"}}
+				{{> compounds/search-box-product-card class="carousel-item mb-1" title="Bali Bronzing Foam in two lines"}}
+				{{> compounds/search-box-product-card class="carousel-item mb-1" title="Bali Bronzing Foam in two lines"}}
+				{{> compounds/search-box-product-card class="carousel-item mb-1" title="Bali Bronzing Foam in two lines"}}
+				{{> compounds/search-box-product-card class="carousel-item mb-1" title="Bali Bronzing Foam in two lines"}}
+				{{> compounds/search-box-product-card class="carousel-item mb-1" title="Bali Bronzing Foam in two lines"}}
+				{{> compounds/search-box-product-card class="carousel-item mb-1" title="Bali Bronzing Foam in two lines"}}
+				{{> compounds/search-box-product-card class="carousel-item mb-1" title="Bali Bronzing Foam in two lines"}}
 			{{/ sections/carousel-scroll}}
 		</div>
 

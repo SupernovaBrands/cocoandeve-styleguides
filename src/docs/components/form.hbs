@@ -11,7 +11,7 @@
 		<div class="row mt-4">
 			<div class="col mb-3">
 
-				<div class="search-box input-group input-group-sm">
+				<label for="exampleSearch" class="search-box input-group input-group-sm">
 					<div class="input-group-prepend">
 						<span class="input-group-text search-box__icon">
 							<img class="svg" src="icons/search.svg" replace-to-svg />
@@ -24,9 +24,9 @@
 						</a>
 					</div>
 					<div class="input-group-append">
-						<button class="search-box-btn btn btn-primary" type="submit">Search</button>
+						<input class="search-box-btn btn btn-primary" type="submit" value="Search" />
 					</div>
-				</div>
+				</label>
 
 			</div>
 		</div>
@@ -35,55 +35,55 @@
 			<div class="col">
 				<form>
 					<div class="row">
-						<div class="input-group form-group col-lg-6">
-							<input class="form-control" type="text" placeholder="Name*" required />
-						</div>
-						<div class="input-group form-group col-lg-6">
-							<input class="form-control" type="email" placeholder="Email*" required />
-						</div>
+						<label for="name" class="d-block form-group col-lg-6">
+							<input id="name" class="form-control" type="text" placeholder="Name*" required />
+						</label>
+						<label for="email" class="d-block form-group col-lg-6">
+							<input id="email" class="form-control" type="email" placeholder="Email*" required />
+						</label>
 					</div>
 					<div class="row">
-						<div class="input-group form-group col-lg-6">
-							<input class="form-control" type="text" placeholder="Name disabled" disabled />
-						</div>
-						<div class="input-group form-group col-lg-6">
-							<input class="form-control" type="email" placeholder="Email disabled" value="Email disabled with value" disabled />
-						</div>
+						<label for="nameDisabled" class="d-block form-group col-lg-6">
+							<input id="nameDisabled" class="form-control" type="text" placeholder="Name disabled" disabled />
+						</label>
+						<label for="emailDisabled" class="d-block form-group col-lg-6">
+							<input id="emailDisabled" class="form-control" type="email" placeholder="Email disabled" value="Email disabled with value" disabled />
+						</label>
 					</div>
 					<div class="row">
-						<div class="input-group form-group col-lg-6">
-							<select class="custom-select">
+						<label for="options" class="d-block form-group col-lg-6">
+							<select id="options" class="custom-select">
 								<option selected>Select</option>
 								<option>Option 1</option>
 								<option>Option 2</option>
 								<option>Option 3</option>
 							</select>
-						</div>
-						<div class="input-group form-group col-lg-6">
-							<select class="custom-select" disabled>
+						</label>
+						<label for="optionsDisabled" class="input-group form-group col-lg-6">
+							<select id="optionsDisabled" class="custom-select" disabled>
 								<option selected>Select</option>
 								<option>Option 1</option>
 								<option>Option 2</option>
 								<option>Option 3</option>
 							</select>
-						</div>
+						</label>
 					</div>
 					<div class="row">
-						<div class="input-group form-group col">
-							<textarea class="form-control" placeholder="Your comment" rows="7" required></textarea>
-						</div>
+						<label for="comment" class="form-group col">
+							<textarea id="comment" class="form-control" placeholder="Your comment" rows="7" required></textarea>
+						</label>
 					</div>
 
 					<div class="row">
-						<div class="custom-control custom-checkbox col d-flex justify-content-center my-1">
+						<label for="agreement" class="custom-control custom-checkbox col d-flex justify-content-center my-1">
 							<input type="checkbox" name="tos" class="custom-control-input" id="agreement" />
-							<label class="custom-control-label font-size-sm" for="agreement">I agree to <a href="#">Privacy Policy & ToS</a></label>
-						</div>
+							<span class="custom-control-label font-size-sm">I agree to <a href="#">Privacy Policy & ToS</a></span>
+						</label>
 					</div>
 
 					<div class="row">
 						<div class="form-group col">
-							<button class="btn btn-lg btn-primary" type="submit">Submit form</button>
+							<input class="btn btn-lg btn-primary" type="submit" value="Submit form" />
 						</div>
 					</div>
 				</form>
