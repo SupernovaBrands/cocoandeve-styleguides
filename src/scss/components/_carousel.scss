@@ -520,12 +520,12 @@
 		}
 
 		.swatch-overlay  {
-			margin-left: calc-em(10) !important;
-			margin-right: calc-em(10) !important;
-			width: calc(100% - 1.25em) !important;
+			margin-left: calc-em(10);
+			margin-right: calc-em(10);
+			width: calc(100% - 1.25em);
 
 			@include media-breakpoint-down(md) {
-				margin-bottom: 1.625em !important;
+				margin-bottom: 1.625em;
 			}
 		}
 
