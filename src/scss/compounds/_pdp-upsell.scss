@@ -21,6 +21,10 @@
         @include media-breakpoint-up(lg) {
             max-width: calc-em(216);
         }
+
+        button {
+            margin-bottom: 0px;
+        }
     }
 
     .bg-pink-light {
