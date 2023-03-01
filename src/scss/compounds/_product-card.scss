@@ -136,6 +136,10 @@
 
 	&__content {
 		background-color: $pink-light;
+		@include media-breakpoint-down(md) {
+			padding-left: calc-em(5) !important;
+			padding-right: calc-em(5) !important;
+		}
 
 		.text-center:not(.w-100) {
 			display: none;
