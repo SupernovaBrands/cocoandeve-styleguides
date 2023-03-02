@@ -1,4 +1,10 @@
-html.au-store,
+html.dev-store,
+html.eu-store,
+html.fr-store,
+html.de-store,
+html.int-store,
+html.my-store,
+html.ca-store,
 html.uk-store,
 html.us-store {
 	.price-cta-abtest {
@@ -103,7 +109,11 @@ html.us-store {
 			}
 
 			div.pt-2.pb-lg-2 {
-				padding: calc-em(10) !important;
+				padding-top: calc-em(10) !important;
+				padding-bottom: calc-em(10) !important;
+				@include media-breakpoint-up(lg) {
+					padding: calc-em(10) !important;
+				}
 			}
 
 			ul {
