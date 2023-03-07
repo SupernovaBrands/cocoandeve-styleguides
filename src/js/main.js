@@ -309,6 +309,11 @@ $(document).ready(function () {
 		mobileMenuToggler();
 	});
 
+	document.querySelector('.nav-sidebar--abtest__toggle').addEventListener('click', () => {
+		document.querySelector('.nav-sidebar-menu')?.classList.toggle('show');
+		document.body.classList.toggle('sidebar-menu-show');
+	});
+
 	// header navbar detect scroll top or down
 	let lastScrollTop;
 	let scrollTop = 0;
