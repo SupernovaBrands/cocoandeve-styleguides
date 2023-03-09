@@ -1,0 +1,87 @@
+html.us-store {
+    .mobile-nav-abtest {
+        height: 100vh;
+        .navbar {
+            padding: 0 map-get($spacers, 2);
+        }
+
+        &.offcanvas-active {
+            .navbar-toggler {
+                .menu-icon {
+                    display: none !important;
+                }
+
+                .close-icon {
+                    display: block !important;
+                }
+            }
+        }
+
+        .mobile-nav {
+            &--original {
+                display: none !important;
+            }
+
+            &--abtest {
+                &.show {
+                    display: block !important;
+                }
+            }
+
+            input:checked {
+                & ~ ul {
+                    transform: translateX(0);
+                    transition: transform 0.15s ease-in-out;
+                    visibility: visible;
+                }
+            }
+
+            &__menu {
+                li {
+                    border-bottom: 1px solid $gray-400;
+
+                    > .svg:not(.range-icon), fieldset .next-icon {
+                        position: absolute;
+                        right: calc-em(20);
+                        font-size: .75em;
+                    }
+                }
+
+                hr {
+                    border-color: $gray-400;
+                }
+
+                a:not(.btn):not(.text-underline) {
+                    color: $body-color;
+                    text-decoration: none;
+                }
+
+            }
+
+            &__menu-child {
+                transform: translateX(100%);
+                transition: transform 0.15s ease-in-out;
+                visibility: hidden;
+                left: 0;
+                z-index: $zindex-dropdown;
+                height: 100vh !important;
+                top: 0;
+
+                .quiz-image {
+                    right: map-get($spacers, 2);
+                }
+            }
+
+            &__menu-image {
+                img {
+                    width: calc-em(56);
+                    height: calc-em(56);
+                }
+
+                .svg {
+                    right: 0;
+                }
+            }
+        }
+    }
+}
