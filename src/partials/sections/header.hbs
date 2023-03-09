@@ -6,7 +6,8 @@
 
 		<div class="container">
 			<button class="navbar-toggler" type="button" data-cy="menu-icon">
-				<span class="d-block"></span>
+				<span class="d-block menu-icon"></span>
+				<img class="svg mr-25 d-none close-icon" src="icons/close.svg" replace-to-svg />
 			</button>
 
 			<a href="#" class="navbar-brand mx-auto mx-lg-0">
@@ -74,7 +75,7 @@
 		</div>
 	</nav>
 
-	<nav class="mobile-nav position-fixed d-lg-none">
+	<nav class="mobile-nav mobile-nav--original position-fixed d-lg-none">
 		<img class="mobile-nav__close svg text-white" src="icons/close.svg" replace-to-svg />
 		{{#unless critical}}
 		<ul id="mobileMenu" class="mobile-nav__menu accordion position-fixed h-100 col-9 bg-white list-unstyled py-2 mb-0"
@@ -296,6 +297,7 @@
 		</ul>
 		{{/unless}}
 	</nav>
+	{{> components/mobile-menu-abtest }}
 	{{> components/tooltip}}
 	{{> components/tooltip-discount-applied-abtest}}
 	<nav class="text-center mobile-secnav p-g bg-white d-lg-none">
