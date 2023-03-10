@@ -309,11 +309,6 @@ $(document).ready(function () {
 		mobileMenuToggler();
 	});
 
-	document.querySelector('.nav-sidebar--abtest__toggle').addEventListener('click', () => {
-		document.querySelector('.nav-sidebar-menu')?.classList.toggle('show');
-		document.body.classList.toggle('sidebar-menu-show');
-	});
-
 	// header navbar detect scroll top or down
 	let lastScrollTop;
 	let scrollTop = 0;
@@ -336,12 +331,24 @@ $(document).ready(function () {
 				navbarEl.removeClass('scrolled-up');
 			} else {
 				navbarEl.removeClass('scrolled-up').addClass('scrolled-down');
+				if (document.querySelector('.desktop-nav--abtest-v2')) {
+					navbarEl.addClass('scrolled-up').removeClass('scrolled-down');
+				}
 			}
 
 			lastScrollTop = scrollTop;
 		} else {
 			navbarEl.removeClass('scrolled-down scrolled-up');
 		}
+	});
+
+	document.querySelector('.nav-sidebar--abtest__toggle').addEventListener('click', () => {
+		document.querySelector('.nav-sidebar-menu')?.classList.toggle('show');
+		document.body.classList.toggle('sidebar-menu-show');
+		document.querySelector('.nav-sidebar--abtest__toggle').classList.toggle('open');
+		const header = document.querySelector('.main-header');
+		header.classList.remove('scrolled-down');
+		header.classList.add('scrolled-up');
 	});
 
 	$('.nav-item--mega-menu').hover(function () {

@@ -1,3 +1,4 @@
+{{> compounds/desktop-sidebar-abtest}}
 <header class="main-header">
 	{{> components/cookies-banner }}
 
@@ -10,8 +11,12 @@
 			</button>
 
 			<ul class="d-none navbar-nav align-items-center nav-sidebar--abtest">
-				<li class="nav-item"><a href="#" class="nav-sidebar--abtest__toggle">Open</a></li>
-				<li class="nav-item">
+				<li class="nav-item pr-1">
+					<button class="navbar-toggler nav-sidebar--abtest__toggle" type="button">
+						<span class="d-block"></span>
+					</button>
+				</li>
+				<li class="nav-item pl-1">
 					<a href="#" class="navbar-brand mx-auto mx-lg-0">{{> components/svg-logo}}</a>
 				</li>
 			</ul>
