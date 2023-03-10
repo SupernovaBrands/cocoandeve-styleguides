@@ -62,7 +62,8 @@
     
     		<div class="container">
     			<button class="navbar-toggler" type="button" data-cy="menu-icon">
-    				<span class="d-block"></span>
+    				<span class="d-block menu-icon"></span>
+    				<svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" class="svg mr-25 d-none close-icon"><path d="M12 1l-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1-5-5z"></path></svg>
     			</button>
     
     			<a href="#" class="navbar-brand mx-auto mx-lg-0">
@@ -404,8 +405,336 @@
     		</div>
     	</nav>
     
-    	<nav class="mobile-nav position-fixed d-lg-none">
+    	<nav class="mobile-nav mobile-nav--original position-fixed d-lg-none">
     		<svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" class="mobile-nav__close svg text-white"><path d="M12 1l-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1-5-5z"></path></svg>
+    	</nav>
+    	<nav class="mobile-nav mobile-nav--abtest mt-1 bg-white position-relative d-lg-none d-none">
+    	    <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" class="svg mobile-nav__close"><path d="M12 1l-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1-5-5z"></path></svg>
+    	    <ul id="mobileMenu" class="mobile-nav__menu h-100 col-12 bg-white list-unstyled p-0 pb-4">
+    	        <li class="px-2 py-2 d-flex align-items-center w-100">
+    	            <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.627 22.627" class="svg"><path d="M5.428 20.742l9.428-9.428-9.428-9.428L7.314 0l11.314 11.314L7.314 22.627z"></path></svg>
+    	            <input type="radio" name="menu" class="d-none" id="hair-care">
+    	            <label class="font-weight-bold position-relative m-0 w-100" for="hair-care">Hair Care</label>
+    	            <ul class="mobile-nav__menu-child position-absolute bg-white col-12 list-unstyled p-0 h-100">
+    	                <input type="radio" name="menu" id="back-to-menu-hair-care" class="d-none">
+    	                <label for="back-to-menu-hair-care" class="mobile-nav__back px-2 py-2 m-0 d-flex align-items-center">
+    	                    <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.627 22.627" class="svg font-size-sm mr-1"><path d="M16.2 1.885l-9.428 9.428 9.428 9.428-1.886 1.886L3 11.313 14.314 0z"></path></svg>
+    	                    Back
+    	                </label>
+    	                <li class="px-2 py-0 border-0">
+    	                    <figure class="mobile-nav__menu-image d-flex align-items-center">
+    	                        <img class="rounded" src="https://via.placeholder.com/56x56/EFADBA"/>
+    	                        <label class="font-weight-bold ml-1 mb-0 w-100 d-inline-block" for="back-to-menu-hair-care">
+    	                            Hair Care
+    	                            <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.6 22.6" class="svg font-size-sm mr-1 position-absolute"><path d="M20.7 17.2l-9.4-9.4-9.4 9.4L0 15.3 11.3 4l11.3 11.3-1.9 1.9z"></path></svg>
+    	                        </label>
+    	                    </figure>
+    	                </li>
+    	                <li class="px-2 py-1 border-0 d-flex align-items-center w-100">
+    	                    <a href="#">Shampoo & Conditioner</a>
+    	                </li>
+    	                <li class="px-2 py-1 border-0 d-flex align-items-center w-100">
+    	                    <a href="#">Treatments</a>
+    	                </li>
+    	                <li class="px-2 py-1 border-0 d-flex align-items-center w-100">
+    	                    <a href="#">Hair Styling</a>
+    	                </li>
+    	                <li class="px-2 py-1 border-0 d-flex align-items-center w-100">
+    	                    <a href="#">Accessories</a>
+    	                </li>
+    	                <li class="px-2 py-1 border-0 d-flex align-items-center w-100">
+    	                    <a href="#" class="text-underline text-primary">Shop All</a>
+    	                </li>
+    	                <li class="px-2 py-0 border-0 mt-1">
+    	                    <figure class="mobile-nav__menu-image d-flex align-items-center">
+    	                        <img class="rounded" src="https://via.placeholder.com/56x56/EFADBA"/>
+    	                        <label class="font-weight-bold ml-1 mb-0 w-100 d-inline-block" for="back-to-menu-hair-care">
+    	                            Hair Benefits
+    	                            <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.6 22.6" class="svg font-size-sm mr-1 position-absolute"><path d="M20.7 17.2l-9.4-9.4-9.4 9.4L0 15.3 11.3 4l11.3 11.3-1.9 1.9z"></path></svg>
+    	                        </label>
+    	                    </figure>
+    	                </li>
+    	                <li class="px-2 py-1 border-0 d-flex align-items-center w-100">
+    	                    <a href="#">Scalp Care</a>
+    	                </li>
+    	                <li class="px-2 py-1 border-0 d-flex align-items-center w-100">
+    	                    <a href="#">Shine</a>
+    	                </li>
+    	                <li class="px-2 py-1 border-0 d-flex align-items-center w-100">
+    	                    <a href="#">Smooth</a>
+    	                </li>
+    	                <li class="px-2 py-1 border-0 d-flex align-items-center w-100">
+    	                    <a href="#">De-frizz</a>
+    	                </li>
+    	                <li class="px-2 py-1 border-0 d-flex align-items-center w-100">
+    	                    <a href="#">Repar</a>
+    	                </li>
+    	                <li class="px-2 py-1 border-0 d-flex align-items-center w-100">
+    	                    <a href="#">De-tangle</a>
+    	                </li>
+    	                <li class="px-2 py-1 border-0 d-flex align-items-center w-100">
+    	                    <a href="#" class="text-underline text-primary">Shop All</a>
+    	                </li>
+    	            </ul>
+    	        </li>
+    	        <li class="px-2 py-2 d-flex align-items-center w-100">
+    	            <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.627 22.627" class="svg"><path d="M5.428 20.742l9.428-9.428-9.428-9.428L7.314 0l11.314 11.314L7.314 22.627z"></path></svg>
+    	            <input type="radio" name="menu" class="d-none" id="self-tan">
+    	            <label class="font-weight-bold position-relative m-0 w-100" for="self-tan">Self Tan</label>
+    	            <ul class="mobile-nav__menu-child position-absolute bg-white col-12 list-unstyled p-0 h-100">
+    	                <input type="radio" name="menu" id="back-to-menu-self-tan" class="d-none">
+    	                <label for="back-to-menu-self-tan" class="mobile-nav__back px-2 py-2 m-0 d-flex align-items-center">
+    	                    <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.627 22.627" class="svg font-size-sm mr-1"><path d="M16.2 1.885l-9.428 9.428 9.428 9.428-1.886 1.886L3 11.313 14.314 0z"></path></svg>
+    	                    Back
+    	                </label>
+    	                <li class="px-2 py-0 border-0">
+    	                    <figure class="mobile-nav__menu-image d-flex align-items-center">
+    	                        <img class="rounded" src="https://via.placeholder.com/56x56/EFADBA"/>
+    	                        <label class="font-weight-bold ml-1 mb-0 w-100 d-inline-block" for="back-to-menu-self-tan">
+    	                            Self Tan
+    	                            <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.6 22.6" class="svg font-size-sm mr-1 position-absolute"><path d="M20.7 17.2l-9.4-9.4-9.4 9.4L0 15.3 11.3 4l11.3 11.3-1.9 1.9z"></path></svg>
+    	                        </label>
+    	                    </figure>
+    	                </li>
+    	                <li class="px-2 py-1 border-0 d-flex align-items-center w-100">
+    	                    <a href="#">Body Tan</a>
+    	                </li>
+    	                <li class="px-2 py-1 border-0 d-flex align-items-center w-100">
+    	                    <a href="#">Face Tan</a>
+    	                </li>
+    	                <li class="px-2 py-1 border-0 d-flex align-items-center w-100">
+    	                    <a href="#">Tanning Mitts</a>
+    	                </li>
+    	                <li class="px-2 py-1 border-0 d-flex align-items-center w-100">
+    	                    <a href="#">Accessories</a>
+    	                </li>
+    	                <li class="px-2 py-1 border-0 d-flex align-items-center w-100">
+    	                    <a href="#" class="text-underline text-primary">Shop All</a>
+    	                </li>
+    	                <li class="mt-3 px-2 py-2 bg-yellow-light border-0 d-flex w-100 flex-column">
+    	                    Find your customised tan color!
+    	                    <a href="#" class="text-underline text-primary">Take our Tan Quiz</a>
+    	                    <img src="../images/tan-quiz.jpg" width="107" class="flex-image position-absolute quiz-image" alt="Tan Quiz" />
+    	                </li>
+    	            </ul>
+    	        </li>
+    	        <li class="px-2 py-2 d-flex align-items-center w-100">
+    	            <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.627 22.627" class="svg"><path d="M5.428 20.742l9.428-9.428-9.428-9.428L7.314 0l11.314 11.314L7.314 22.627z"></path></svg>
+    	            <input type="radio" name="menu" class="d-none" id="body-care">
+    	            <label class="font-weight-bold position-relative m-0 w-100" for="body-care">Body Care</label>
+    	            <ul class="mobile-nav__menu-child position-absolute bg-white col-12 list-unstyled p-0 h-100">
+    	                <input type="radio" name="menu" id="back-to-menu-body-care" class="d-none">
+    	                <label for="back-to-menu-body-care" class="mobile-nav__back px-2 py-2 m-0 d-flex align-items-center">
+    	                    <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.627 22.627" class="svg font-size-sm mr-1"><path d="M16.2 1.885l-9.428 9.428 9.428 9.428-1.886 1.886L3 11.313 14.314 0z"></path></svg>
+    	                    Back
+    	                </label>
+    	                <li class="px-2 py-0 border-0">
+    	                    <figure class="mobile-nav__menu-image d-flex align-items-center">
+    	                        <img class="rounded" src="https://via.placeholder.com/56x56/EFADBA"/>
+    	                        <label class="font-weight-bold ml-1 mb-0 w-100 d-inline-block" for="back-to-menu-body-care">
+    	                            Body Care
+    	                            <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.6 22.6" class="svg font-size-sm mr-1 position-absolute"><path d="M20.7 17.2l-9.4-9.4-9.4 9.4L0 15.3 11.3 4l11.3 11.3-1.9 1.9z"></path></svg>
+    	                        </label>
+    	                    </figure>
+    	                </li>
+    	                <li class="px-2 py-1 border-0 d-flex align-items-center w-100">
+    	                    <a href="#">Body Wash</a>
+    	                </li>
+    	                <li class="px-2 py-1 border-0 d-flex align-items-center w-100">
+    	                    <a href="#">Moisturizers</a>
+    	                </li>
+    	                <li class="px-2 py-1 border-0 d-flex align-items-center w-100">
+    	                    <a href="#">Exfoliators</a>
+    	                </li>
+    	                <li class="px-2 py-1 border-0 d-flex align-items-center w-100">
+    	                    <a href="#">Accessories</a>
+    	                </li>
+    	                <li class="px-2 py-1 border-0 d-flex align-items-center w-100">
+    	                    <a href="#" class="text-underline text-primary">Shop All</a>
+    	                </li>
+    	            </ul>
+    	        </li>
+    	        <li class="px-2 py-2 d-flex align-items-center">
+    	            <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.627 22.627" class="svg"><path d="M5.428 20.742l9.428-9.428-9.428-9.428L7.314 0l11.314 11.314L7.314 22.627z"></path></svg>
+    	            <input type="radio" name="menu" class="d-none" id="value-sets">
+    	            <label class="font-weight-bold position-relative m-0 w-100" for="value-sets">Value Sets <span class="badge bg-primary font-weight-normal font-size-sm text-white ml-1">Save 30%</span></label>
+    	            <ul class="mobile-nav__menu-child position-absolute bg-white col-12 list-unstyled p-0 h-100">
+    	                <input type="radio" name="menu" id="back-to-menu-value-sets" class="d-none">
+    	                <label for="back-to-menu-value-sets" class="mobile-nav__back px-2 py-2 m-0 d-flex align-items-center">
+    	                    <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.627 22.627" class="svg font-size-sm mr-1"><path d="M16.2 1.885l-9.428 9.428 9.428 9.428-1.886 1.886L3 11.313 14.314 0z"></path></svg>
+    	                    Back
+    	                </label>
+    	                <li class="px-2 py-0 border-0">
+    	                    <figure class="mobile-nav__menu-image d-flex align-items-center">
+    	                        <img class="rounded" src="https://via.placeholder.com/56x56/EFADBA"/>
+    	                        <a class="font-weight-bold ml-1 mb-0 w-100 d-inline-block" href="#">
+    	                            Hair Sets
+    	                            <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.6 22.6" class="svg font-size-sm mr-1 position-absolute"><path d="M1.9 5.4l9.4 9.4 9.4-9.4 1.9 1.9-11.3 11.3L0 7.3l1.9-1.9z"></path></svg>
+    	                        </a>
+    	                    </figure>
+    	                </li>
+    	                <li class="px-2 py-0 border-0">
+    	                    <figure class="mobile-nav__menu-image d-flex align-items-center">
+    	                        <img class="rounded" src="https://via.placeholder.com/56x56/EFADBA"/>
+    	                        <a class="font-weight-bold ml-1 mb-0 w-100 d-inline-block" href="#">
+    	                            Tan Sets
+    	                            <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.6 22.6" class="svg font-size-sm mr-1 position-absolute"><path d="M1.9 5.4l9.4 9.4 9.4-9.4 1.9 1.9-11.3 11.3L0 7.3l1.9-1.9z"></path></svg>
+    	                        </a>
+    	                    </figure>
+    	                </li>
+    	                <li class="px-2 py-0 border-0">
+    	                    <figure class="mobile-nav__menu-image d-flex align-items-center">
+    	                        <img class="rounded" src="https://via.placeholder.com/56x56/EFADBA"/>
+    	                        <a class="font-weight-bold ml-1 mb-0 w-100 d-inline-block" href="#">
+    	                            Body Sets
+    	                            <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.6 22.6" class="svg font-size-sm mr-1 position-absolute"><path d="M1.9 5.4l9.4 9.4 9.4-9.4 1.9 1.9-11.3 11.3L0 7.3l1.9-1.9z"></path></svg>
+    	                        </a>
+    	                    </figure>
+    	                </li>
+    	                <li class="px-2 py-0 border-0">
+    	                    <figure class="mobile-nav__menu-image d-flex align-items-center">
+    	                        <img class="rounded" src="https://via.placeholder.com/56x56/EFADBA"/>
+    	                        <a class="font-weight-bold ml-1 mb-0 w-100 d-inline-block" href="#">
+    	                            Gift Sets
+    	                            <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.6 22.6" class="svg font-size-sm mr-1 position-absolute"><path d="M1.9 5.4l9.4 9.4 9.4-9.4 1.9 1.9-11.3 11.3L0 7.3l1.9-1.9z"></path></svg>
+    	                        </a>
+    	                    </figure>
+    	                </li>
+    	            </ul>
+    	        </li>
+    	        <li class="px-2 py-2 d-flex align-items-center">
+    	            <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.627 22.627" class="svg"><path d="M5.428 20.742l9.428-9.428-9.428-9.428L7.314 0l11.314 11.314L7.314 22.627z"></path></svg>
+    	            <input type="radio" name="menu" class="d-none" id="bestsellers">
+    	            <label class="font-weight-bold position-relative m-0 w-100" for="bestsellers">Bestsellers</label>
+    	            <ul class="mobile-nav__menu-child position-absolute bg-white col-12 list-unstyled p-0 h-100">
+    	                <input type="radio" name="menu" id="back-to-menu-bestsellers" class="d-none">
+    	                <label for="back-to-menu-bestsellers" class="mobile-nav__back px-2 py-2 m-0 d-flex align-items-center">
+    	                    <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.627 22.627" class="svg font-size-sm mr-1"><path d="M16.2 1.885l-9.428 9.428 9.428 9.428-1.886 1.886L3 11.313 14.314 0z"></path></svg>
+    	                    Back
+    	                </label>
+    	                <li class="px-2 py-0 border-0">
+    	                    <figure class="mobile-nav__menu-image d-flex align-items-center">
+    	                        <img class="rounded" src="https://via.placeholder.com/56x56/EFADBA"/>
+    	                        <label class="font-weight-bold ml-1 mb-0 w-100 d-inline-block" for="back-to-menu-bestsellers">
+    	                            Bestsellers
+    	                            <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.6 22.6" class="svg font-size-sm mr-1 position-absolute"><path d="M20.7 17.2l-9.4-9.4-9.4 9.4L0 15.3 11.3 4l11.3 11.3-1.9 1.9z"></path></svg>
+    	                        </label>
+    	                    </figure>
+    	                </li>
+    	                <li class="px-2 py-1 border-0 d-flex align-items-center w-100">
+    	                    <a href="#">Super Hydrating Shampoo & Conditioner Set</a>
+    	                </li>
+    	                <li class="px-2 py-1 border-0 d-flex align-items-center w-100">
+    	                    <a href="#">Sweet Repair Hair Mask</a>
+    	                </li>
+    	                <li class="px-2 py-1 border-0 d-flex align-items-center w-100">
+    	                    <a href="#">Silky Hair Set</a>
+    	                </li>
+    	                <li class="px-2 py-1 border-0 d-flex align-items-center w-100">
+    	                    <a href="#">Like A Virgin Hair Masque</a>
+    	                </li>
+    	                <li class="px-2 py-1 border-0 d-flex align-items-center w-100">
+    	                    <a href="#">Ultimate Pamper Bundle</a>
+    	                </li>
+    	                <li class="px-2 py-1 border-0 d-flex align-items-center w-100">
+    	                    <a href="#">Deep Condition Bundle</a>
+    	                </li>
+    	            </ul>
+    	        </li>
+    	        <li class="px-2 py-2 d-flex align-items-center">
+    	            <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.627 22.627" class="svg"><path d="M5.428 20.742l9.428-9.428-9.428-9.428L7.314 0l11.314 11.314L7.314 22.627z"></path></svg>
+    	            <input type="radio" name="menu" class="d-none" id="new-arrivals">
+    	            <label class="font-weight-bold position-relative m-0 w-100" for="new-arrivals">New Arrivals</label>
+    	            <ul class="mobile-nav__menu-child position-absolute bg-white col-12 list-unstyled p-0 h-100">
+    	                <input type="radio" name="menu" id="back-to-menu-new-arrivals" class="d-none">
+    	                <label for="back-to-menu-new-arrivals" class="mobile-nav__back px-2 py-2 m-0 d-flex align-items-center">
+    	                    <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.627 22.627" class="svg font-size-sm mr-1"><path d="M16.2 1.885l-9.428 9.428 9.428 9.428-1.886 1.886L3 11.313 14.314 0z"></path></svg>
+    	                    Back
+    	                </label>
+    	                <li class="px-2 py-0 border-0">
+    	                    <figure class="mobile-nav__menu-image d-flex align-items-center">
+    	                        <img class="rounded" src="https://via.placeholder.com/56x56/EFADBA"/>
+    	                        <label class="font-weight-bold ml-1 mb-0 w-100 d-inline-block" for="back-to-menu-new-arrivals">
+    	                            New Arrivals
+    	                            <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.6 22.6" class="svg font-size-sm mr-1 position-absolute"><path d="M20.7 17.2l-9.4-9.4-9.4 9.4L0 15.3 11.3 4l11.3 11.3-1.9 1.9z"></path></svg>
+    	                        </label>
+    	                    </figure>
+    	                </li>
+    	                <li class="px-2 py-1 border-0 d-flex align-items-center w-100">
+    	                    <a href="#">Date Night Kit</a>
+    	                </li>
+    	                <li class="px-2 py-1 border-0 d-flex align-items-center w-100">
+    	                    <a href="#">Bond Repair & Restore Kit</a>
+    	                </li>
+    	                <li class="px-2 py-1 border-0 d-flex align-items-center w-100">
+    	                    <a href="#">Antioxidant Face Tanning Micromist</a>
+    	                </li>
+    	                <li class="px-2 py-1 border-0 d-flex align-items-center w-100">
+    	                    <a href="#">Limited Edition Hair Necessities Kit</a>
+    	                </li>
+    	                <li class="px-2 py-1 border-0 d-flex align-items-center w-100">
+    	                    <a href="#">Deep Hydration Kit</a>
+    	                </li>
+    	                <li class="px-2 py-1 border-0 d-flex align-items-center w-100">
+    	                    <a href="#">Limited Edition Super Hydration Kit</a>
+    	                </li>
+    	            </ul>
+    	        </li>
+    	        <li class="px-2 py-2 align-items-center">
+    	            <a class="position-relative m-0 font-weight-bold">Coco & Eve Blog</a>
+    	        </li>
+    	        <li class="px-2 py-2 align-items-center">
+    	            <a class="position-relative m-0 btn btn-lg btn-primary w-100">Shop All</a>
+    	        </li>
+    	        <li class="px-2 py-2 d-flex align-items-center w-100 d-flex flex-column">
+    	            <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.6 22.6" class="svg"><path d="M1.9 5.4l9.4 9.4 9.4-9.4 1.9 1.9-11.3 11.3L0 7.3l1.9-1.9z"></path></svg>
+    	            <label class="font-weight-bold position-relative m-0 w-100 d-flex countries" data-toggle="collapse" data-target="#collapseCurrency" aria-expanded="false" aria-controls="collapseCurrency">
+    	                US (USD)
+    	            </label>
+    	            <ul class="collapse list-unstyled w-100 mt-1" id="collapseCurrency">
+    	                <li class="border-0 py-1">
+    	                    <a href="#">Rest of the World (SGD)</a>
+    	                </li>
+    	                <li class="border-0 py-1">
+    	                    <a href="#">United Kingdom (GBP)</a>
+    	                </li>
+    	                <li class="border-0 py-1">
+    	                    <a href="#">Canada (CAD)</a>
+    	                </li>
+    	                <li class="border-0 py-1">
+    	                    <a href="#">Australia (AUD)</a>
+    	                </li>
+    	                <li class="border-0 py-1">
+    	                    <a href="#">Europe (EUR)</a>
+    	                </li>
+    	                <li class="border-0 py-1">
+    	                    <a href="#">Germany (EUR)</a>
+    	                </li>
+    	                <li class="border-0 py-1">
+    	                    <a href="#">France (EUR)</a>
+    	                </li>
+    	                <li class="border-0 py-1">
+    	                    <a href="#">Malaysia (MYR)</a>
+    	                </li>
+    	            </ul>
+    	        </li>
+    	        <li class="mobile-nav__other-menu w-100 border-0">
+    	            <ul class="row list-unstyled px-3 my-2">
+    	                <li class="col-6 px-0 py-1 border-0 nav-item__hide">
+    	                    <a href="" class="position-relative m-0">Track my order</a>
+    	                </li>
+    	                <li class="col-6 px-0 py-1 border-0">
+    	                    <a href="" class="position-relative m-0">Blog</a>
+    	                </li>
+    	                <li class="col-6 px-0 py-1 border-0">
+    	                    <a href="" class="position-relative m-0">Help</a>
+    	                </li>
+    	                <li class="col-6 px-0 py-1 border-0">
+    	                    <a href="" class="position-relative m-0">Results IRL</a>
+    	                </li>
+    	            </ul>
+    	        </li>
+    	    </ul>
     	</nav>
     	<div class="container position-relative">
     		<div class="col-lg-4 tooltip bg-primary text-white text-center py-2 overflow-hidden ">
