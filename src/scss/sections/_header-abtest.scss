@@ -78,6 +78,12 @@
 						padding-left: calculate-left('xl');
 					}
 
+					.quiz-banner {
+						top: 50%;
+						transform: translateY(-50%);
+						left: calc-em(10);
+					}
+
 					hr {
 						border-color: $gray-700;
 					}
