@@ -27,17 +27,20 @@
   				<a class="nav-link text-decoration-none active h4" href="#all" aria-controls="all">All</a>
   			</li>
   		</ul>
-  		<select data-toggle="select" class="custom-select custom-select-lg mb-4 mx-auto col-6 d-sm-block d-md-none">
-  			<option value="#all" selected>All</option>
-  			<option value="#tan">Tan</option>
-  			<option value="#hair">Hair</option>
-  			<option value="#body">Body</option>
-  		</select>
+  		<div class="mb-4 mx-auto col-6 d-sm-block d-md-none">
+  			<label for="rangeResultSelect" id="rangeResultSelectLabel" class="sr-only">Range Real Result</label>
+  			<select id="rangeResultSelect" data-toggle="select" class="custom-select custom-select-lg" aria-labelledby="rangeResultSelectLabel">
+  				<option value="#all" selected>All</option>
+  				<option value="#tan">Tan</option>
+  				<option value="#hair">Hair</option>
+  				<option value="#body">Body</option>
+  			</select>
+  		</div>
   
   		<div class="carousel slide carousel--loop carousel--real-result" id="real-result-carousel" data-slide-number="4" role="tabpanel" aria-labelledby="tan-tab">
   			<div class="carousel--centered">
   				<div class="carousel-inner row flex-nowrap mx-0" role="listbox">
-  					<div class="carousel-item col-9 col-lg-3 result-card active" data-category="#body">
+  					<div class="carousel-item col-9 col-lg-3 result-card active" data-category="#body" role="option">
   					  <noscript class="loading-lazy">
   					  <picture class="embed-responsive bg-shimmer">
   					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
@@ -60,7 +63,7 @@
   					  </div>
   					</div>
   
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#tan">
+  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#tan" role="option">
   					  <noscript class="loading-lazy">
   					  <picture class="embed-responsive bg-shimmer">
   					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
@@ -83,7 +86,7 @@
   					  </div>
   					</div>
   
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#hair">
+  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#hair" role="option">
   					  <noscript class="loading-lazy">
   					  <picture class="embed-responsive bg-shimmer">
   					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
@@ -106,7 +109,7 @@
   					  </div>
   					</div>
   
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#tan">
+  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#tan" role="option">
   					  <noscript class="loading-lazy">
   					  <picture class="embed-responsive bg-shimmer">
   					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
@@ -129,7 +132,7 @@
   					  </div>
   					</div>
   
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#body">
+  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#body" role="option">
   					  <noscript class="loading-lazy">
   					  <picture class="embed-responsive bg-shimmer">
   					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
@@ -152,7 +155,7 @@
   					  </div>
   					</div>
   
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#tan">
+  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#tan" role="option">
   					  <noscript class="loading-lazy">
   					  <picture class="embed-responsive bg-shimmer">
   					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
@@ -175,7 +178,7 @@
   					  </div>
   					</div>
   
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#hair">
+  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#hair" role="option">
   					  <noscript class="loading-lazy">
   					  <picture class="embed-responsive bg-shimmer">
   					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
@@ -198,7 +201,7 @@
   					  </div>
   					</div>
   
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#body">
+  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#body" role="option">
   					  <noscript class="loading-lazy">
   					  <picture class="embed-responsive bg-shimmer">
   					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
@@ -221,7 +224,7 @@
   					  </div>
   					</div>
   
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#tan">
+  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#tan" role="option">
   					  <noscript class="loading-lazy">
   					  <picture class="embed-responsive bg-shimmer">
   					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
@@ -244,7 +247,7 @@
   					  </div>
   					</div>
   
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#tan">
+  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#tan" role="option">
   					  <noscript class="loading-lazy">
   					  <picture class="embed-responsive bg-shimmer">
   					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
@@ -267,7 +270,7 @@
   					  </div>
   					</div>
   
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#hair">
+  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#hair" role="option">
   					  <noscript class="loading-lazy">
   					  <picture class="embed-responsive bg-shimmer">
   					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
@@ -290,7 +293,7 @@
   					  </div>
   					</div>
   
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#tan">
+  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#tan" role="option">
   					  <noscript class="loading-lazy">
   					  <picture class="embed-responsive bg-shimmer">
   					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
@@ -313,7 +316,7 @@
   					  </div>
   					</div>
   
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#body">
+  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#body" role="option">
   					  <noscript class="loading-lazy">
   					  <picture class="embed-responsive bg-shimmer">
   					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
@@ -336,7 +339,7 @@
   					  </div>
   					</div>
   
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#tan">
+  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#tan" role="option">
   					  <noscript class="loading-lazy">
   					  <picture class="embed-responsive bg-shimmer">
   					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
@@ -359,7 +362,7 @@
   					  </div>
   					</div>
   
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#tan">
+  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#tan" role="option">
   					  <noscript class="loading-lazy">
   					  <picture class="embed-responsive bg-shimmer">
   					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
@@ -382,7 +385,7 @@
   					  </div>
   					</div>
   
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#hair">
+  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#hair" role="option">
   					  <noscript class="loading-lazy">
   					  <picture class="embed-responsive bg-shimmer">
   					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
@@ -405,7 +408,7 @@
   					  </div>
   					</div>
   
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#tan">
+  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#tan" role="option">
   					  <noscript class="loading-lazy">
   					  <picture class="embed-responsive bg-shimmer">
   					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
@@ -428,7 +431,7 @@
   					  </div>
   					</div>
   
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#body">
+  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#body" role="option">
   					  <noscript class="loading-lazy">
   					  <picture class="embed-responsive bg-shimmer">
   					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
@@ -451,7 +454,7 @@
   					  </div>
   					</div>
   
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#tan">
+  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#tan" role="option">
   					  <noscript class="loading-lazy">
   					  <picture class="embed-responsive bg-shimmer">
   					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
@@ -474,7 +477,7 @@
   					  </div>
   					</div>
   
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#hair">
+  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#hair" role="option">
   					  <noscript class="loading-lazy">
   					  <picture class="embed-responsive bg-shimmer">
   					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
@@ -497,7 +500,7 @@
   					  </div>
   					</div>
   
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#body">
+  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#body" role="option">
   					  <noscript class="loading-lazy">
   					  <picture class="embed-responsive bg-shimmer">
   					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
@@ -520,7 +523,7 @@
   					  </div>
   					</div>
   
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#tan">
+  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#tan" role="option">
   					  <noscript class="loading-lazy">
   					  <picture class="embed-responsive bg-shimmer">
   					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
@@ -543,7 +546,7 @@
   					  </div>
   					</div>
   
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#hair">
+  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#hair" role="option">
   					  <noscript class="loading-lazy">
   					  <picture class="embed-responsive bg-shimmer">
   					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
@@ -566,7 +569,7 @@
   					  </div>
   					</div>
   
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#body">
+  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#body" role="option">
   					  <noscript class="loading-lazy">
   					  <picture class="embed-responsive bg-shimmer">
   					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
@@ -589,7 +592,7 @@
   					  </div>
   					</div>
   
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#tan">
+  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#tan" role="option">
   					  <noscript class="loading-lazy">
   					  <picture class="embed-responsive bg-shimmer">
   					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
@@ -612,7 +615,7 @@
   					  </div>
   					</div>
   
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#hair">
+  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#hair" role="option">
   					  <noscript class="loading-lazy">
   					  <picture class="embed-responsive bg-shimmer">
   					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
@@ -635,7 +638,7 @@
   					  </div>
   					</div>
   
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#body">
+  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#body" role="option">
   					  <noscript class="loading-lazy">
   					  <picture class="embed-responsive bg-shimmer">
   					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
@@ -658,7 +661,7 @@
   					  </div>
   					</div>
   
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#tan">
+  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#tan" role="option">
   					  <noscript class="loading-lazy">
   					  <picture class="embed-responsive bg-shimmer">
   					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
@@ -681,7 +684,7 @@
   					  </div>
   					</div>
   
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#hair">
+  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#hair" role="option">
   					  <noscript class="loading-lazy">
   					  <picture class="embed-responsive bg-shimmer">
   					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
@@ -704,7 +707,7 @@
   					  </div>
   					</div>
   
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#body">
+  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#body" role="option">
   					  <noscript class="loading-lazy">
   					  <picture class="embed-responsive bg-shimmer">
   					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
@@ -727,7 +730,7 @@
   					  </div>
   					</div>
   
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#tan">
+  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#tan" role="option">
   					  <noscript class="loading-lazy">
   					  <picture class="embed-responsive bg-shimmer">
   					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
@@ -750,7 +753,7 @@
   					  </div>
   					</div>
   
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#hair">
+  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#hair" role="option">
   					  <noscript class="loading-lazy">
   					  <picture class="embed-responsive bg-shimmer">
   					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />

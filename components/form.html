@@ -15,7 +15,7 @@
 		<div class="row mt-4">
 			<div class="col mb-3">
 
-				<div class="search-box input-group input-group-sm">
+				<label for="exampleSearch" class="search-box input-group input-group-sm">
 					<div class="input-group-prepend">
 						<span class="input-group-text search-box__icon">
 							<svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="svg"><path d="M8.671.025a8.671 8.671 0 100 17.343 8.571 8.571 0 004.113-1.016 2.478 2.478 0 00.322.322l2.478 2.478a2.527 2.527 0 103.568-3.568l-2.478-2.478a2.478 2.478 0 00-.4-.322 8.555 8.555 0 001.09-4.113A8.681 8.681 0 008.7 0zm0 2.478a6.165 6.165 0 016.194 6.194 6.213 6.213 0 01-1.635 4.261l-.074.074a2.478 2.478 0 00-.322.322 6.2 6.2 0 01-4.187 1.561 6.194 6.194 0 110-12.388z"></path></svg>
@@ -28,9 +28,9 @@
 						</a>
 					</div>
 					<div class="input-group-append">
-						<button class="search-box-btn btn btn-primary" type="submit">Search</button>
+						<input class="search-box-btn btn btn-primary" type="submit" value="Search" />
 					</div>
-				</div>
+				</label>
 
 			</div>
 		</div>
@@ -39,55 +39,55 @@
 			<div class="col">
 				<form>
 					<div class="row">
-						<div class="input-group form-group col-lg-6">
-							<input class="form-control" type="text" placeholder="Name*" required />
-						</div>
-						<div class="input-group form-group col-lg-6">
-							<input class="form-control" type="email" placeholder="Email*" required />
-						</div>
+						<label for="name" class="d-block form-group col-lg-6">
+							<input id="name" class="form-control" type="text" placeholder="Name*" required />
+						</label>
+						<label for="email" class="d-block form-group col-lg-6">
+							<input id="email" class="form-control" type="email" placeholder="Email*" required />
+						</label>
 					</div>
 					<div class="row">
-						<div class="input-group form-group col-lg-6">
-							<input class="form-control" type="text" placeholder="Name disabled" disabled />
-						</div>
-						<div class="input-group form-group col-lg-6">
-							<input class="form-control" type="email" placeholder="Email disabled" value="Email disabled with value" disabled />
-						</div>
+						<label for="nameDisabled" class="d-block form-group col-lg-6">
+							<input id="nameDisabled" class="form-control" type="text" placeholder="Name disabled" disabled />
+						</label>
+						<label for="emailDisabled" class="d-block form-group col-lg-6">
+							<input id="emailDisabled" class="form-control" type="email" placeholder="Email disabled" value="Email disabled with value" disabled />
+						</label>
 					</div>
 					<div class="row">
-						<div class="input-group form-group col-lg-6">
-							<select class="custom-select">
+						<label for="options" class="d-block form-group col-lg-6">
+							<select id="options" class="custom-select">
 								<option selected>Select</option>
 								<option>Option 1</option>
 								<option>Option 2</option>
 								<option>Option 3</option>
 							</select>
-						</div>
-						<div class="input-group form-group col-lg-6">
-							<select class="custom-select" disabled>
+						</label>
+						<label for="optionsDisabled" class="input-group form-group col-lg-6">
+							<select id="optionsDisabled" class="custom-select" disabled>
 								<option selected>Select</option>
 								<option>Option 1</option>
 								<option>Option 2</option>
 								<option>Option 3</option>
 							</select>
-						</div>
+						</label>
 					</div>
 					<div class="row">
-						<div class="input-group form-group col">
-							<textarea class="form-control" placeholder="Your comment" rows="7" required></textarea>
-						</div>
+						<label for="comment" class="form-group col">
+							<textarea id="comment" class="form-control" placeholder="Your comment" rows="7" required></textarea>
+						</label>
 					</div>
 
 					<div class="row">
-						<div class="custom-control custom-checkbox col d-flex justify-content-center my-1">
+						<label for="agreement" class="custom-control custom-checkbox col d-flex justify-content-center my-1">
 							<input type="checkbox" name="tos" class="custom-control-input" id="agreement" />
-							<label class="custom-control-label font-size-sm" for="agreement">I agree to <a href="#">Privacy Policy & ToS</a></label>
-						</div>
+							<span class="custom-control-label font-size-sm">I agree to <a href="#">Privacy Policy & ToS</a></span>
+						</label>
 					</div>
 
 					<div class="row">
 						<div class="form-group col">
-							<button class="btn btn-lg btn-primary" type="submit">Submit form</button>
+							<input class="btn btn-lg btn-primary" type="submit" value="Submit form" />
 						</div>
 					</div>
 				</form>

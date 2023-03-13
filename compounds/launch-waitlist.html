@@ -29,7 +29,8 @@
 						<div class="row">
 							<div class="input-group col-4 col-lg-3 mb-1">
 								<span class="masking-select position-absolute rounded border-0">+65</span>
-								<select class="custom-select opacity-0" name="country">
+								<label for="selectCountryOptions" class="sr-only" id="selectCountryOptionsLabel">Countries Options</label>
+								<select id="selectCountryOptions" class="custom-select opacity-0" name="country"  aria-labelledby="selectCountryOptionsLabel">
 								  <option value="" disabled="" selected="">Country</option>
 								  <option value="US" data-code="1">United States</option>
 								  <option value="GB" data-code="44">United Kingdom</option>
@@ -264,7 +265,8 @@
 								</select>
 							</div>
 							<div class="input-group col-8 col-lg-9 pl-0 mb-1">
-								<input class="form-control border-0" type="text" name="phone" placeholder="Enter your phone number">
+								<label for="phoneNumber" id="phoneNumberLabel" class="sr-only">Phone number</label>
+								<input id="phoneNumber" class="form-control border-0" type="text" name="phone" placeholder="Enter your phone number" aria-labelledby="phoneNumberLabel" />
 							</div>
 							<small class="col-12 text-danger phone-error d-none">Please enter a valid phone number</small>
 						</div>
@@ -279,7 +281,7 @@
 						</div>
 						<div class="row">
 							<div class="form-group col mt-1">
-								<button class="btn btn-lg btn-primary btn-block" type="submit">Submit form</button>
+								<input class="btn btn-lg btn-primary btn-block" type="submit" value="Submit form" />
 							</div>
 						</div>
 						<p class="font-size-xs">By signing up via text you agree to receive recurring automated marketing messages at the phone number provided. Consent is not a condition of purchase. Reply STOP to unsubscribe. HELP for help. Msg & Data rates may apply. View Privacy Policy & ToS.</p>
