@@ -10,7 +10,17 @@
 				<img class="svg mr-25 d-none close-icon" src="icons/close.svg" replace-to-svg />
 			</button>
 
-			<a href="#" class="navbar-brand mx-auto mx-lg-0">
+			<ul class="d-none navbar-nav align-items-center nav-sidebar--abtest">
+				<li class="nav-item pr-1">
+					<button class="navbar-toggler nav-sidebar--abtest__toggle" type="button">
+						<span class="d-block"></span>
+					</button>
+				</li>
+				<li class="nav-item pl-1">
+					<a href="#" class="navbar-brand mx-auto mx-lg-0">{{> components/svg-logo}}</a>
+				</li>
+			</ul>
+			<a href="#" class="navbar-brand navbar-brand--original mx-auto mx-lg-0">
 				{{> components/svg-logo}}
 			</a>
 
@@ -19,21 +29,37 @@
 					<a href="#" class="nav-link m-0 font-weight-bold">Shop All</a>
 					{{> compounds/nav-mega-menu shopall="Shop all products" }}
 				</li>
-				<li class="nav-item">
+				<li class="nav-item nav-item--original">
 					<a href="#" class="nav-link m-0 font-weight-bold">Hair</a>
 					{{> compounds/nav-mega-menu shopall="Shop all Hair" }}
 				</li>
-				<li class="nav-item">
+				<li class="nav-item d-none nav-item--abtest">
+					<a href="#" class="nav-link m-0 font-weight-bold">Hair</a>
+					{{> compounds/desktop-nav-abtest-v1 centered=true }}
+				</li>
+				<li class="nav-item nav-item--original">
 					<a href="#" class="nav-link m-0 font-weight-bold">Tan</a>
 					{{> compounds/nav-mega-menu shopall="Shop all Tan" }}
 				</li>
-				<li class="nav-item">
+				<li class="nav-item d-none nav-item--abtest">
+					<a href="#" class="nav-link m-0 font-weight-bold">Tan</a>
+					{{> compounds/desktop-nav-abtest-v1 }}
+				</li>
+				<li class="nav-item nav-item--original">
 					<a href="#" class="nav-link m-0 font-weight-bold">Body</a>
 					{{> compounds/nav-mega-menu shopall="Shop all Body" }}
 				</li>
-				<li class="nav-item">
+				<li class="nav-item d-none nav-item--abtest">
+					<a href="#" class="nav-link m-0 font-weight-bold">Body</a>
+					{{> compounds/desktop-nav-abtest-v1 }}
+				</li>
+				<li class="nav-item nav-item--original">
 					<a href="#" class="nav-link m-0 font-weight-bold">Value Sets</a>
 					{{> compounds/nav-mega-menu shopall="Shop all Value Sets" }}
+				</li>
+				<li class="nav-item d-none nav-item--abtest">
+					<a href="#" class="nav-link m-0 font-weight-bold">Value Sets</a>
+					{{> compounds/desktop-nav-abtest-v1 }}
 				</li>
 				<li class="nav-item">
 					<a class="nav-link m-0 font-weight-bold">|</a>
@@ -317,6 +343,7 @@
 	</nav>
 	{{> compounds/search-box}}
 </header>
+{{> compounds/desktop-nav-abtest-v2}}
 
 <div class="modal fade cart-drawer" id="cart-drawer" tabindex="-1" aria-hidden="true"></div>
 
