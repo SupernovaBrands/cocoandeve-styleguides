@@ -8,12 +8,20 @@ html.uk-store {
 		display: flex !important;
 		background-color: $body-color;
 		right: $grid-gutter-width;
-		bottom: calc-em(90);
+		transition: all .3s ease-in-out;
+		bottom: -100%;
 		z-index: $zindex-fixed;
+
+		&.show {
+			bottom: calc-em(90);
+		}
 
 		@include media-breakpoint-up(lg) {
 			right: calculate-right('lg');
-			bottom: calc-em(70);
+
+			&.show {
+				bottom: calc-em(70);
+			}
 		}
 
 		@include media-breakpoint-up(xl) {
