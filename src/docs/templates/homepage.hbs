@@ -49,9 +49,15 @@
     {{> sections/real-result-carousel withFilter=true}}
     <!-- instagram section -->
     {{> sections/instagram bgclass="bg-primary-light"}}
+    <button class="d-none btn text-white modal-newsletter--abtest__btn position-fixed rounded-pill px-g align-items-center">
+      <span data-toggle="modal" data-target="#newsletterModal" class="font-weight-normal">Want 10% off?</span>
+      <img class="svg pl-1 font-size-xs" src="icons/close.svg" replace-to-svg />
+    </button>
   </main>
+
   {{> sections/footer}}
   {{> compounds/cookies-banner-modal-abtest}}
+  {{> compounds/newsletter-popup}}
 
   {{> js jquery=true popper=true bootstrap=true main=true }}
 </body>
