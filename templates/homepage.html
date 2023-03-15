@@ -3927,7 +3927,12 @@
         </div>
       </div>
     </section>
+    <button class="d-none btn text-white modal-newsletter--abtest__btn position-fixed rounded-pill px-g align-items-center">
+      <span data-toggle="modal" data-target="#newsletterModal" class="font-weight-normal">Want 10% off?</span>
+      <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" class="svg pl-1 font-size-xs"><path d="M12 1l-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1-5-5z"></path></svg>
+    </button>
   </main>
+
   <footer class="pt-md-6 pb-md-6 pt-4 pt-lg-4 pb-1 mobile-wrapper">
   	<div class="container mb-4">
   		<div class="footer-grid-newsletter">
@@ -4055,6 +4060,73 @@
   			</div>
   		</div>
   	</div>
+  </div>
+  <div class="modal fade newsletter-bigger-popup" id="newsletterModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg modal-dialog-centered mx-g mx-lg-auto" role="document">
+          <div class="modal-content bg-secondary position-relative  overflow-hidden">
+              <picture class="position-absolute w-100">
+                  <source srcset="https://cdn.shopify.com/s/files/1/0277/5262/8295/files/Rectangle_2241_1.png?v=1646576057" media="(min-width: 992px)" />
+                  <img src="https://cdn.shopify.com/s/files/1/0073/5186/1332/files/newsletter-bigger-mobile.png?v=1646639302" class="w-100">
+              </picture>
+              <div class="modal-body px-g">
+                  <button type="button" class="close position-absolute font-size-sm" data-dismiss="modal">
+                      <svg role="presentation" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg">
+  <circle cx="13" cy="13" r="13" fill="#fff"></circle>
+  <rect x="8.333" y="7" width="15.085" height="1.886" rx=".943" transform="rotate(45 8.333 7)" fill="#151515"></rect>
+  <rect x="7" y="17.666" width="15.085" height="1.886" rx=".943" transform="rotate(-45 7 17.666)" fill="#151515"></rect>
+</svg>
+                  </button>
+                  <div class="row justify-content-end">
+                      <form class="newsletter-bigger-popup__form col-lg-6">
+                          <h2 class="newsletter-bigger-popup__title h1 text-center text-white mb-0">Join the club <br/>& get a FREE hair wrap! </h2>
+                          <p class="text-white text-white font-size-sm mb-g text-center">Get a FREE hair wrap on your first order, plus first access to new product launches, exclusive offers, routines, and beauty tips.</p>
+                          <div class="input-group mb-0">
+                              <input id="newsletter-bigger-popup__email" class="form-control" type="email" placeholder="Email" aria-label="email">
+                          </div>
+                          <p class="text-center newsletter-bigger-popup__separator text-white mb-1 mt-1">and / or</p>
+                          <div class="input-group">
+                              <label for="newsletter-bigger-popup__country" class="input-group-addon form-control">
+                                  <span class="position-absolute newsletter-bigger-popup__country-label align-items-center">+65</span>
+                                  <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.6 22.6" class="svg position-absolute"><path d="M1.9 5.4l9.4 9.4 9.4-9.4 1.9 1.9-11.3 11.3L0 7.3l1.9-1.9z"></path></svg>
+                                  <select id="newsletter-bigger-popup__country" class="custom-select">
+                                      <option value="" disabled="">Select Country</option>
+                                      <option value="KH" data-code="855">Cambodia</option>
+                                      <option value="HK" data-code="852">Hong Kong</option>
+                                      <option value="IL" data-code="972">Israel</option>
+                                      <option value="JP" data-code="81">Japan</option>
+                                      <option value="KR" data-code="82">South Korea</option>
+                                      <option value="LA" data-code="856">Laos</option>
+                                      <option value="MO" data-code="853">Macau</option>
+                                      <option value="MY" data-code="60">Malaysia</option>
+                                      <option value="MV" data-code="960">Maldives</option>
+                                      <option value="MM" data-code="95">Myanmar</option>
+                                      <option value="PG" data-code="675">Papua New Guinea</option>
+                                      <option value="PH" data-code="63">Philippines</option>
+                                      <option value="RE" data-code="262">Réunion</option>
+                                      <option value="RU" data-code="7">Russia</option>
+                                      <option value="SG" data-code="65" selected="">Singapore</option>
+                                      <option value="LK" data-code="94">Sri Lanka</option>
+                                      <option value="TW" data-code="886">Taiwan</option>
+                                      <option value="TR" data-code="90">Turkey</option>
+                                      <option value="VN" data-code="84">Vietnam</option>
+                                  </select>
+                              </label>
+                              <input id="newsletter-bigger-popup__phone" class="form-control border-left-0 mb-g" type="tel" placeholder="Phone number" aria-label="phone">
+                          </div>
+                          <input type="submit" class="btn btn-lg btn-primary btn-block" value="Submit" />
+                          <p class="font-size-xs text-white mt-g text-center mb-0 mx-1">Receive exclusive offers via email or automated marketing SMS (4/mth). For more info see our Privacy Policy (opt out any time). Msg & data rates may apply. Consent not required for purchase.</p>
+                      </form>
+                      <div class="newsletter-bigger-popup__completed col-lg-6 d-none align-items-center justify-content-center">
+                          <div class="d-flex flex-wrap justify-content-center">
+                              <h2 class="newsletter-bigger-popup__title h1 text-center text-white">🎉<br>Sign-up successful! </h2>
+                              <h3 class="newsletter-bigger-popup__title text-center text-white mb-g">Use code for your gift!</h3>
+                              <button class="btn btn-lg btn-block bg-white text-primary">COPY: FREEWRAP <svg width="13" height="15" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg"><path d="M8.111 15H2.516a2.346 2.346 0 0 1-2.344-2.344v-7.94a2.346 2.346 0 0 1 2.344-2.343H8.11a2.346 2.346 0 0 1 2.344 2.344v7.94A2.346 2.346 0 0 1 8.111 15ZM2.516 3.545c-.647 0-1.172.526-1.172 1.172v7.94c0 .645.525 1.171 1.172 1.171H8.11c.646 0 1.172-.526 1.172-1.172v-7.94c0-.645-.526-1.171-1.172-1.171H2.516Zm10.283 7.646V2.344A2.346 2.346 0 0 0 10.455 0H3.951a.586.586 0 1 0 0 1.172h6.504c.646 0 1.172.526 1.172 1.172v8.847a.586.586 0 1 0 1.172 0Z" fill="#F4436C"></path></svg></button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
   </div>
 
   <script src="/cocoandeve-styleguides/js/globals.js"></script>
