@@ -63,6 +63,13 @@
 		@include font-size($hero-banner-font-size-lg);
 	}
 }
+.hero-font-size-v0 {
+	@include font-size(calc-em(32));
+
+	@include media-breakpoint-up(lg) {
+		@include font-size(calc-em(72));
+	}
+}
 
 .playground-font-size {
 	@include font-size($hero-banner-font-size-lg);
