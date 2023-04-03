@@ -23,3 +23,7 @@
 .badge-blue {
   @include badge-variant($bali-bod-blue);
 }
+
+.badge-orange {
+  @include badge-variant($suncare-orange);
+}
