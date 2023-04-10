@@ -1,6 +1,5 @@
 html.us-store {
-    .mobile-nav-abtest {
-        height: 100vh;
+    .mobile-nav--abtest {
         .navbar {
             padding: 0 map-get($spacers, 2);
         }
@@ -28,17 +27,10 @@ html.us-store {
                 }
             }
 
-            input:checked {
-                & ~ ul {
-                    transform: translateX(0);
-                    transition: transform 0.15s ease-in-out;
-                    visibility: visible;
-                }
-            }
-
             &__menu {
+                overflow-x: hidden;
                 li {
-                    border-bottom: 1px solid $gray-400;
+                    border-bottom: 1px solid $gray-500;
 
                     > .svg:not(.range-icon), fieldset .next-icon {
                         position: absolute;
@@ -48,7 +40,7 @@ html.us-store {
                 }
 
                 hr {
-                    border-color: $gray-400;
+                    border-color: $gray-500;
                 }
 
                 a:not(.btn):not(.text-underline) {
@@ -69,6 +61,14 @@ html.us-store {
 
                 .quiz-image {
                     right: map-get($spacers, 2);
+                }
+            }
+
+            &__input:checked {
+                & ~ ul {
+                    transform: translateX(0);
+                    transition: transform 0.15s ease-in-out;
+                    visibility: visible;
                 }
             }
 
