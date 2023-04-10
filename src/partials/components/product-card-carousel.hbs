@@ -1,20 +1,20 @@
 <div class="{{#if carousel }}carousel-item {{else}} d-flex flex-column {{/if}} {{#if carousel }} col-9 {{#if card_bigger}}col-md-4{{else}}col-md-3{{/if}} {{else}}col-6 col-md-4 mb-5 {{/if}} {{active}} product-card text-center {{#if col_lg }}col-lg-{{col_lg}}{{/if}} {{#if col }}col-{{col}}{{/if}}" {{#if carousel }}role="option"{{/if}}>
 	{{# if square_badge}}<span class="badge bg-white position-absolute font-weight-normal font-size-sm">{{ square_badge }}</span>{{/if}}
-	<a href="#">
+	<a href="#" class="product-card__img-link">
 	<noscript class="loading-lazy">
 		<picture class="embed-responsive embed-responsive-1by1 bg-shimmer m-0">
 			{{#if collectiontemplate}}
-			<source srcset="https://via.placeholder.com/540x540" media="(min-width: 992px)" />
+			<source srcset="https://via.placeholder.com/540x540/FFF2F4" media="(min-width: 992px)" />
 			{{else}}
-			<source srcset="https://via.placeholder.com/520x520" media="(min-width: 992px)" />
+			<source srcset="https://via.placeholder.com/520x520/FFF2F4" media="(min-width: 992px)" />
 			{{/if}}
 			<img class="embed-responsive-item fit--cover"
 			alt="Image Alt"
 			loading="lazy"
 			{{#if collectiontemplate}}
-			src="https://via.placeholder.com/384x384"
+			src="https://via.placeholder.com/384x384/FFF2F4"
 			{{else}}
-			src="https://via.placeholder.com/592x592"
+			src="https://via.placeholder.com/592x592/FFF2F4"
 			{{/if}}
 			>
 			{{# if showTip }}
@@ -23,11 +23,6 @@
 			{{/if}}
 		</picture>
 	</noscript>
-	{{#if badge }}
-		<picture class="circle-badge position-absolute rounded-circle bg-primary d-flex p-1">
-			<img class="w-100" src="../images/{{ badge_image }}"/>
-		</picture>
-	{{/if}}
 	</a>
 	<div class="product-card__content pt-2 pb-0 position-relative flex-grow-1 d-flex flex-column {{#if collection }} px-lg-2 {{else}} px-2 {{/if}}">
 		<div class="d-flex justify-content-center mb-1">
@@ -57,7 +52,7 @@
 
 		{{#if swatch_shade }}
 		<button type="button" class="btn btn-lg btn-primary btn-choose btn-block px-0 btn-abtest mb-1">
-			<span class="btn-abtest__text">Add to Cart</span>
+			<span class="btn-abtest__text">Choisir la teinte</span>
 			<span class="btn-abtest__prices d-none">
 				<span class="text-linethrough">{{compare_price}}</span>
 				<span class="">{{price}}</span>
@@ -79,7 +74,7 @@
 				</ul>
 			</div>
 			<button type="button" class="btn btn-lg btn-primary  btn-block px-0 btn-abtest mb-1">
-				<span class="btn-abtest__text">Add to Cart</span>
+				<span class="btn-abtest__text text-nowrap">Ajouter au panier</span>
 				<span class="btn-abtest__prices d-none">
 					<span class="text-linethrough">{{compare_price}}</span>
 					<span class="">{{price}}</span>

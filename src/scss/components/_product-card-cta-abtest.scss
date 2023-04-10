@@ -33,14 +33,24 @@ html.us-store {
 				background-color: $pink-light;
 				padding-left: calc-em(10) !important;
 				padding-right: calc-em(10) !important;
+				padding-top: calc-em(10) !important;
 
 				@include media-breakpoint-down(md) {
 					padding-left: calc-em(5) !important;
 					padding-right: calc-em(5) !important;
+					padding-top: calc-em(10) !important;
 				}
 
 				.text-center:not(.w-100) {
 					display: none;
+				}
+			}
+
+			.product-card__img-link {
+				background-color: $pink-light;
+
+				img {
+					margin-top: calc-em(20);
 				}
 			}
 
