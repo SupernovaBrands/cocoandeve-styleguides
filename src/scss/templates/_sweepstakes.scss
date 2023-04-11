@@ -27,4 +27,10 @@
 		background-color: $gray-500;
 		border-color: $gray-500;
 	}
+
+	&__content {
+		@include media-breakpoint-down(lg) {
+			padding-top: calc-em(250);
+		}
+	}
 }
