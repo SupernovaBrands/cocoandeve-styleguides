@@ -17,14 +17,24 @@
 					</button>
 				</li>
 				<li class="nav-item pl-1">
-					<a href="#" class="navbar-brand mx-auto mx-lg-0" aria-label="CocoAndEve Logo">{{> components/svg-logo}}</a>
+					<div class="navbar-nav d-none navbar__secondary nav-left--abtest">
+						<div class="nav-item">
+							<a href="#" class="nav-link m-0 font-weight-bold" aria-label="Navigate to #">Blog</a>
+						</div>
+						<div class="nav-item">
+							<a href="#" class="nav-link m-0 font-weight-bold" aria-label="Navigate to #">Blog</a>
+						</div>
+						<div class="nav-item">
+							<a href="#" class="nav-link m-0 font-weight-bold" aria-label="Navigate to #">Blog</a>
+						</div>
+					</div>
 				</li>
 			</ul>
-			<a href="#" class="navbar-brand navbar-brand--original mx-auto mx-lg-0" aria-label="Visit Coco and Eve homepage">
+			<a href="#" class="navbar-brand navbar-brand--original mx-auto mx-lg-0 navbar-brand--abtest" aria-label="CocoAndEve Logo">
 				{{> components/svg-logo}}
 			</a>
 
-			<ul class="navbar-nav d-none d-lg-flex navbar__secondary">
+			<ul class="navbar-nav d-none d-lg-flex navbar__secondary navbar-nav--abtest">
 				<li class="nav-item">
 					<a href="#" class="nav-link m-0 font-weight-bold">Shop All</a>
 					{{> compounds/nav-mega-menu shopall="Shop all products" }}
@@ -35,7 +45,7 @@
 				</li>
 				<li class="nav-item d-none nav-item--abtest">
 					<a href="#" class="nav-link m-0 font-weight-bold">Hair</a>
-					{{> compounds/desktop-nav-abtest-v1 centered=true }}
+					{{> compounds/desktop-nav-abtest-v1 centered=true classname="offset-lg-3" }}
 				</li>
 				<li class="nav-item nav-item--original">
 					<a href="#" class="nav-link m-0 font-weight-bold">Tan</a>
@@ -56,6 +66,10 @@
 				<li class="nav-item nav-item--original">
 					<a href="#" class="nav-link m-0 font-weight-bold">Suncare</a>
 					{{> compounds/nav-mega-menu shopall="Shop all Suncare" }}
+				</li>
+				<li class="nav-item nav-item--abtest">
+					<a href="#" class="nav-link m-0 font-weight-bold">Suncare</a>
+					{{> compounds/desktop-nav-abtest-v1 centered=true classname="offset-lg-4"}}
 				</li>
 				<li class="nav-item nav-item--original">
 					<a href="#" class="nav-link m-0 font-weight-bold">Value Sets</a>
@@ -82,7 +96,7 @@
 				</li>
 			</ul>
 
-			<ul class="navbar-nav navbar-nav--right flex-row justify-content-end align-items-center">
+			<ul class="navbar-nav navbar-nav--right flex-row justify-content-end align-items-center nav-right--abtest">
 				<li id="dropdownMenuForm" class="nav-item dropdown dropdown--account pl-1 mr-1 mr-lg-0">
 					<a class="nav-link h4 m-0 d-flex text-uppercase font-weight-bold" href="#" data-cy="account-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						<img class="svg mr-25" src="icons/account.svg" replace-to-svg />
