@@ -230,3 +230,9 @@
 		font-size: calc-em(40);
 	}
 }
+
+@include media-breakpoint-up(lg) {
+	.blog-video-card__title {
+		min-height: calc-em(45);
+	}
+}

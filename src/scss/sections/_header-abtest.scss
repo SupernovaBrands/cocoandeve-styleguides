@@ -130,7 +130,7 @@ html.us-store {
 						padding-left: calculate-left('xl');
 					}
 
-					@media (min-width: 1440px) {
+					@include media-breakpoint-up(xxl) {
 						padding-left: map-get($spacers, 3);
 						max-width: calc-em(500);
 					}
