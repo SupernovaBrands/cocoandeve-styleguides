@@ -29,7 +29,7 @@ html.us-store {
 					flex-basis: 33.33%;
 				}
 			}
-			
+
 			.nav-sidebar--abtest {
 				display: flex !important;
 			}
@@ -50,7 +50,7 @@ html.us-store {
 			.nav-right--abtest {
 				order: 3;
 			}
-			
+
 			.navbar-nav--abtest {
 				flex-basis: 100% !important;
 				justify-content: center;
@@ -128,6 +128,11 @@ html.us-store {
 					padding-left: calculate-left('lg');
 					@include media-breakpoint-up(xl) {
 						padding-left: calculate-left('xl');
+					}
+
+					@include media-breakpoint-up(xxl) {
+						padding-left: map-get($spacers, 3);
+						max-width: calc-em(500);
 					}
 
 					.quiz-banner {
