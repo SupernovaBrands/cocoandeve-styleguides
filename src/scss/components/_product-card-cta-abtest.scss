@@ -49,6 +49,10 @@ html.us-store {
 			.product-card__img-link {
 				background-color: $pink-light;
 
+				picture {
+					background: $pink-light;
+				}
+
 				img {
 					margin-top: calc-em(20);
 					padding-top: 0 !important;
