@@ -1,3 +1,31 @@
+@function calculate-right($breakpoint) {
+	@return calc(((100% - #{map-get($container-max-widths , $breakpoint)}) / 2) + (#{$grid-gutter-width-lg}) - (#{$grid-gutter-width} / 2));
+}
+
+.modal-newsletter--floating-btn {
+    background-color: $body-color;
+    right: $grid-gutter-width;
+    transition: all .3s ease-in-out;
+    bottom: -100%;
+    z-index: $zindex-fixed;
+
+    &.show {
+        bottom: calc-em(90);
+    }
+
+    @include media-breakpoint-up(lg) {
+        right: calculate-right('lg');
+
+        &.show {
+            bottom: calc-em(70);
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        right: calculate-right('xl');
+    }
+}
+
 .newsletter-bigger-popup {
     @include media-breakpoint-up(lg) {
         .modal-lg {
@@ -39,7 +67,7 @@
             height: calc-em(26);
         }
     }
-    
+
 
     select {
         opacity: 0;
