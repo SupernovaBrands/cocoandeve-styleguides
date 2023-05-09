@@ -56,7 +56,6 @@
     .close {
         top: 1em;
         right: 1em;
-        opacity: 1;
         z-index: $zindex-sticky;
 
         @include media-breakpoint-up(lg) {
