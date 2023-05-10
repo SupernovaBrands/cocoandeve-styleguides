@@ -3,11 +3,11 @@
 		<p class="pb-2 mb-0 h1 text-center">Real Results</p>
 		{{#if withFilter}}
 		<ul class="nav nav-tabs mx-auto nav-tabs--real-results text-center mb-5 justify-content-center d-none d-md-flex" role="tablist">
-			<li class="nav-item">
-				<a class="nav-link text-decoration-none h4 mb-0 font-weight-normal" href="#tan" aria-controls="tan">Tan</a>
+			<li class="nav-item" role="presentation">
+				<a class="nav-link text-decoration-none h4 mb-0 font-weight-normal" href="#tan" role="tab">Tan</a>
 			</li>
-			<li class="nav-item">
-				<a class="nav-link text-decoration-none h4 mb-0 font-weight-normal" href="#hair" aria-controls="hair">Hair</a>
+			<li class="nav-item" role="presentation">
+				<a class="nav-link text-decoration-none h4 mb-0 font-weight-normal" href="#hair" role="tab">Hair</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link text-decoration-none h4 mb-0 font-weight-normal" href="#suncare" aria-controls="suncare">Suncare</a>
@@ -15,8 +15,8 @@
 			<li class="nav-item">
 				<a class="nav-link text-decoration-none h4 mb-0 font-weight-normal" href="#body" aria-controls="value-sets">Body</a>
 			</li>
-			<li class="nav-item">
-				<a class="nav-link text-decoration-none active h4" href="#all" aria-controls="all">All</a>
+			<li class="nav-item" role="presentation">
+				<a class="nav-link text-decoration-none active h4" href="#all" role="tab">All</a>
 			</li>
 		</ul>
 		<div class="mb-4 mx-auto col-6 d-sm-block d-md-none">
@@ -32,7 +32,7 @@
 		</div>
 		{{/if}}
 
-		<div class="carousel slide carousel--loop carousel--real-result" id="real-result-carousel" data-slide-number="4" role="tabpanel" aria-labelledby="tan-tab">
+		<div class="carousel slide carousel--loop carousel--real-result carousel--swipe" id="real-result-carousel" data-slide-number="4" role="tabpanel" aria-labelledby="tan-tab">
 			<div class="carousel--centered">
 				<div class="carousel-inner row flex-nowrap mx-0" role="listbox">
 					{{> components/result-card-carousel carousel=true active="active" content='"I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼"' username="@kaylaazjones" badge="Body" badge_color="badge-blue" category="#body"}}

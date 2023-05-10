@@ -5,7 +5,7 @@
 	<nav class="bg-white navbar navbar-expand-lg">
 
 		<div class="container">
-			<button class="navbar-toggler" type="button" data-cy="menu-icon">
+			<button class="navbar-toggler" type="button" data-cy="menu-icon" aria-label="Mobile navbar toggler">
 				<span class="d-block menu-icon"></span>
 				<img class="svg mr-25 d-none close-icon" src="icons/close.svg" replace-to-svg />
 			</button>
@@ -123,7 +123,7 @@
 		<img class="mobile-nav__close svg text-white" src="icons/close.svg" replace-to-svg />
 		{{#unless critical}}
 		<ul id="mobileMenu" class="mobile-nav__menu accordion position-fixed h-100 col-9 bg-white list-unstyled py-2 mb-0"
-			role="tablist" aria-multiselectable="true">
+			>
 			<li class="mb-1">
 				<a href="#" class="btn btn-primary btn-block" data-cy="shopall-btn">Shop All</a>
 			</li>
@@ -168,7 +168,7 @@
 				</ul>
 			</li>
 			<li class="card">
-				<figure id="headingBody" class="media card-header position-relative collapsed p-0"
+				<figure id="headingBodycareTwo" class="media card-header position-relative collapsed p-0"
 					data-toggle="collapse" data-target="#bodyCare" aria-expanded="false" aria-controls="bodyCare">
 					<img class="rounded" src="https://via.placeholder.com/40x40/EFADBA" alt="Generic placeholder image">
 					<figcaption class="media-body ml-1">
@@ -252,8 +252,7 @@
 				</ul>
 			</li>
 		</ul>
-		<ul id="mobileMenuVariant" class="mobile-nav__menu accordion position-fixed h-100 col-9 bg-white list-unstyled py-2 mb-0 d-none mega-menu-collection-variant"
-			role="tablist" aria-multiselectable="true">
+		<ul id="mobileMenuVariant" class="mobile-nav__menu accordion position-fixed h-100 col-9 bg-white list-unstyled py-2 mb-0 d-none mega-menu-collection-variant">
 			<li class="mb-1">
 				<a href="#" class="btn btn-primary btn-block" data-cy="shopall-btn">Shop All</a>
 			</li>
@@ -294,7 +293,7 @@
 				</ul>
 			</li>
 			<li class="card">
-				<figure id="headingBody" class="media card-header position-relative collapsed p-0"
+				<figure id="headingBodyCare" class="media card-header position-relative collapsed p-0"
 					data-toggle="collapse" data-target="#bodyCare" aria-expanded="false" aria-controls="bodyCare">
 					<img class="rounded" src="https://via.placeholder.com/40x40/EFADBA" alt="Generic placeholder image">
 					<figcaption class="media-body ml-1">
@@ -304,7 +303,7 @@
 					<img class="svg font-size-xs chevron-down" src="icons/chevron-down.svg" replace-to-svg />
 				</figure>
 				<ul id="bodyCare" class="collapse list-unstyled card-body p-0"
-					role="tabpanel" aria-labelledby="headingTwo" data-parent="#mobileMenu">
+					role="tabpanel" aria-labelledby="headingBodyCare" data-parent="#mobileMenu">
 					<li><a href="#">Body Wash</a></li>
 					<li><a href="#">Moisturisers</a></li>
 					<li><a href="#">Esfoliators</a></li>
