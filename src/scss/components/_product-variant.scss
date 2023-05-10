@@ -67,6 +67,13 @@
 	.text-linethrough {
 		color: $body-color;
 	}
+
+	.h2-font-size {
+		font-size: 1em;
+		@include media-breakpoint-up(lg) {
+			font-size: 1.25em;
+		}
+	}
 }
 
 @include media-breakpoint-down(md) {
