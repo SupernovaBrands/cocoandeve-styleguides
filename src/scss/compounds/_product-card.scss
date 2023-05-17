@@ -1,7 +1,6 @@
 .product-card {
 
 	.swatch-overlay {
-		height: 100%;
 		display: flex;
 		visibility: hidden;
 		opacity: 0;
@@ -10,10 +9,44 @@
 		padding-bottom: calc-em(58);
 		background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, white 100%);
 		transition: all 300ms ease-in-out;
+		height: auto;
+		border: 1px solid $primary-dark;
+		padding: 0;
+		margin-bottom: calc-em(24);
+		border-radius: $border-radius-lg;
+		background-color: white;
+		margin-left: calc-em(5);
+		margin-right: calc-em(5);
+		width: calc(100% - 10px);
+
+		@include media-breakpoint-up(lg) {
+			margin-left: calc-em(10);
+			margin-right: calc-em(10);
+			width: calc(100% - 1.25em);
+			margin-bottom: calc-em(26);
+		}
 
 		.btn-primary:hover {
 			background-color: $primary-dark;
 			border-color: $primary-dark;
+		}
+
+		ul {
+			margin-bottom: 0 !important;
+		}
+
+		.product-variant-swatch__item {
+			padding: 0;
+		}
+
+		label {
+			margin-bottom: calc-em(10) !important;
+		}
+
+		button {
+			margin-bottom: calc-em(-17) !important;
+			border-color: $primary !important;
+			width: calc(100% + 2px);
 		}
 	}
 
@@ -90,6 +123,73 @@
 		@include media-breakpoint-up(lg) {
 			width: 100%;
 			border-radius: 0 !important;
+		}
+	}
+
+	&__content {
+		background-color: $pink-light;
+		@include media-breakpoint-down(md) {
+			padding-left: calc-em(5) !important;
+			padding-right: calc-em(5) !important;
+		}
+
+		.text-center:not(.w-100) {
+			display: none;
+		}
+	}
+
+	@include media-breakpoint-down(md) {
+		&:not(.carousel-item) {
+			.product-card-btn {
+				flex-flow: column;
+				font-size: calc-em(14);
+
+				&__prices {
+					padding-top: 0;
+					padding-bottom: calc-em(5);
+					width: 100%;
+				}
+
+				&__text {
+					padding-bottom: 0;
+					padding-top: calc-em(5);
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	.product-card-btn {
+		border-radius: 50em !important;
+		padding: 0;
+		display: flex;
+		border-width: 1px;
+
+		&__prices {
+			width: 50%;
+			display: inline-block !important;
+			padding-top: $btn-padding-y-lg;
+			padding-bottom: $btn-padding-y-lg;
+			border-radius: 0 $border-radius-lg $border-radius-lg 0;
+		}
+
+		&__text {
+			width: 50%;
+			padding-top: $btn-padding-y-lg;
+			padding-bottom: $btn-padding-y-lg;
+			border-radius: $border-radius-lg 0 0 $border-radius-lg;
+		}
+
+		.text-linethrough {
+			font-weight: normal;
+		}
+
+		&:focus, &:active {
+			box-shadow: none !important;
+		}
+
+		&:hover {
+			border-color: $primary !important;
 		}
 	}
 }
