@@ -43,6 +43,11 @@
         width: calc-em(90);
       }
     }
+
+    .tab-content {
+      padding-left: calc-em(10) !important;
+      padding-right: calc-em(10);
+    }
   }
 
   &--real-results {

@@ -19,7 +19,7 @@
 		</picture>
 	</noscript>
 	</a>
-	<div class="product-card__content pt-2 pb-0 position-relative flex-grow-1 d-flex flex-column {{#if collection }} px-lg-2 {{else}} px-2 {{/if}} rounded-bottom">
+	<div class="product-card__content pt-2 pb-0 position-relative flex-grow-1 d-flex flex-column {{#if collection }} px-lg-1 {{else}} px-2 {{/if}} rounded-bottom">
 		<div class="d-flex justify-content-center mb-1">
 			<div class="react-yotpo-star" data-product-id="4543113265187"></div>
 		</div>
@@ -31,9 +31,9 @@
 		</p>
 		{{#if swatch }}
 		{{#if quick_shop }}
-		<button type="button" class="btn btn-choose btn-lg btn-primary add-to-cart btn-block px-0 btn-abtest mb-1 justify-content-between px-g">
-			<span class="btn-abtest__text">Quick Shop</span>
-			<span class="btn-abtest__prices d-none">
+		<button type="button" class="btn btn-choose btn-lg btn-primary add-to-cart btn-block px-0 product-card-btn mb-1">
+			<span class="product-card-btn__text">Quick Shop</span>
+			<span class="product-card-btn__prices">
 				<span class="text-linethrough">{{compare_price}}</span>
 				<span class="">{{price}}</span>
 			</span>
@@ -46,15 +46,15 @@
 		{{/if}}
 
 		{{#if swatch_shade }}
-		<button type="button" class="btn btn-lg btn-primary btn-choose btn-block px-0 btn-abtest mb-1 justify-content-between px-25">
-			<span class="btn-abtest__text">Choisir la teinte</span>
-			<span class="btn-abtest__prices d-none">
+		<button type="button" class="btn btn-lg btn-primary btn-choose btn-block px-0 product-card-btn mb-1">
+			<span class="product-card-btn__text">Add to Cart</span>
+			<span class="product-card-btn__prices">
 				<span class="text-linethrough">{{compare_price}}</span>
 				<span class="">{{price}}</span>
 			</span>
 		</button>
-		<div class="swatch-overlay flex-column align-items-center justify-content-end w-100 pb-0 position-absolute">
-			<div class="text-center w-100 pt-2 pb-lg-2">
+		<div class="swatch-overlay flex-column align-items-center justify-content-end pb-0 position-absolute">
+			<div class="text-center w-100 pt-2 pb-lg-2 pb-1 px-lg-1">
 				<label class="mb-2"><strong>Shade: </strong><span data-swatch-label>Dark</span></label>
 				<ul class="list-unstyled product-variant-swatch d-flex justify-content-center">
 					<li class="product-variant-swatch__item available col-3" data-available="available">
@@ -68,9 +68,9 @@
 					</li>
 				</ul>
 			</div>
-			<button type="button" class="btn btn-lg btn-primary  btn-block px-0 btn-abtest mb-1 justify-content-between px-25">
-				<span class="btn-abtest__text text-nowrap">Ajouter au panier</span>
-				<span class="btn-abtest__prices d-none">
+			<button type="button" class="btn btn-lg btn-primary  btn-block px-0 product-card-btn">
+				<span class="product-card-btn__text">Add to Cart</span>
+				<span class="product-card-btn__prices">
 					<span class="text-linethrough">{{compare_price}}</span>
 					<span class="">{{price}}</span>
 				</span>
@@ -79,18 +79,15 @@
 		{{/if}}
 
 		{{#if swatch_style }}
-		<button type="button" class="btn btn-choose btn-lg btn-primary  btn-block px-0 btn-abtest mb-1 justify-content-between px-g">
-			<span class="btn-abtest__text">Add to Cart</span>
-			<span class="btn-abtest__prices d-none">
+		<button type="button" class="btn btn-choose btn-lg btn-primary  btn-block px-0 product-card-btn mb-1">
+			<span class="product-card-btn__text">Add to Cart</span>
+			<span class="product-card-btn__prices">
 				<span class="text-linethrough">{{compare_price}}</span>
 				<span class="">{{price}}</span>
 			</span>
 		</button>
-		{{!-- Original CTA to be revert if original wins on 3xxu1db ABTEST
-			<button type="button" class="btn btn-lg btn-primary btn-choose btn-block px-0">Choose Style</button>
-		--}}
-		<div class="swatch-overlay flex-column align-items-center justify-content-end w-100 pb-0 position-absolute {{#if collection }} px-lg-2 {{else}} px-2 {{/if}}">
-			<div class="text-center w-100 pt-2 pb-lg-2">
+		<div class="swatch-overlay flex-column align-items-center justify-content-end pb-0 position-absolute">
+			<div class="text-center w-100 pt-2 pb-lg-2 pb-1 px-lg-1">
 				<label class="mb-2"><strong>Style: </strong><span data-swatch-label>Girl Print: Limited edition!</span></label>
 				<ul class="list-unstyled product-variant-swatch d-flex justify-content-center">
 					<li class="product-variant-swatch__item available active col-3" data-available="available">
@@ -101,30 +98,25 @@
 					</li>
 				</ul>
 			</div>
-			<button type="button" class="btn btn-lg btn-primary add-to-cart btn-block px-0 btn-abtest mb-1 justify-content-between px-g">
-				<span class="btn-abtest__text">Add to Cart</span>
-				<span class="btn-abtest__prices d-none">
+			<button type="button" class="btn btn-lg btn-primary add-to-cart btn-block px-0 product-card-btn">
+				<span class="product-card-btn__text">Add to Cart</span>
+				<span class="product-card-btn__prices">
 					<span class="text-linethrough">{{compare_price}}</span>
 					<span class="">{{price}}</span>
 				</span>
 			</button>
-			{{!-- Original CTA to be revert if original wins on 3xxu1db ABTEST
-			<button type="button" class="btn btn-lg btn-primary add-to-cart btn-block px-0">
-				Add To Cart
-			</button>
-			--}}
 		</div>
 		{{/if}}
 		{{#if swatch_style_eyemask }}
-		<button type="button" class="btn btn-lg btn-primary btn-choose btn-block px-0 btn-abtest mb-1 justify-content-between px-g">
-			<span class="btn-abtest__text">Choose Style</span>
-			<span class="btn-abtest__prices d-none">
+		<button type="button" class="btn btn-lg btn-primary btn-choose btn-block px-0 product-card-btn mb-1">
+			<span class="product-card-btn__text">Choose Style</span>
+			<span class="product-card-btn__prices">
 				<span class="text-linethrough">{{compare_price}}</span>
 				<span class="">{{price}}</span>
 			</span>
 		</button>
-		<div class="swatch-overlay flex-column align-items-center justify-content-end w-100 pb-0 position-absolute {{#if collection }} px-lg-2 {{else}} px-2 {{/if}}">
-			<div class="text-center w-100 pt-2 pb-lg-2">
+		<div class="swatch-overlay flex-column align-items-center justify-content-end pb-0 position-absolute ">
+			<div class="text-center w-100 pt-2 pb-lg-2 px-lg-1">
 				<label class="mb-2"><strong>Style: </strong><span data-swatch-label>Girl Print: Limited edition!</span></label>
 				<ul class="list-unstyled product-variant-swatch d-flex justify-content-center">
 					<li class="product-variant-swatch__item available active col-3" data-available="available">
@@ -135,9 +127,9 @@
 					</li>
 				</ul>
 			</div>
-			<button type="button" class="btn btn-lg btn-primary add-to-cart btn-block px-0 btn-abtest mb-1 justify-content-between px-g">
-				<span class="btn-abtest__text">Add to Cart</span>
-				<span class="btn-abtest__prices d-none">
+			<button type="button" class="btn btn-lg btn-primary add-to-cart btn-block px-0 product-card-btn">
+				<span class="product-card-btn__text">Add to Cart</span>
+				<span class="product-card-btn__prices">
 					<span class="text-linethrough">{{compare_price}}</span>
 					<span class="">{{price}}</span>
 				</span>
@@ -145,15 +137,15 @@
 		</div>
 		{{/if}}
 		{{#if swatch_scent }}
-		<button type="button" class="btn btn-lg btn-primary btn-choose btn-block px-0 btn-abtest mb-1 justify-content-between px-g">
-			<span class="btn-abtest__text">Choose Scent</span>
-			<span class="btn-abtest__prices d-none">
+		<button type="button" class="btn btn-lg btn-primary btn-choose btn-block px-0 product-card-btn mb-1">
+			<span class="product-card-btn__text">Choose Scent</span>
+			<span class="product-card-btn__prices">
 				<span class="text-linethrough">{{compare_price}}</span>
 				<span class="">{{price}}</span>
 			</span>
 		</button>
-		<div class="swatch-overlay flex-column align-items-center justify-content-end w-100 pb-0 position-absolute {{#if collection }} px-lg-2 {{else}} px-2 {{/if}}">
-			<div class="text-center w-100 pt-2 pb-lg-2">
+		<div class="swatch-overlay flex-column align-items-center justify-content-end pb-0 position-absolute ">
+			<div class="text-center w-100 pt-2 pb-lg-2 pb-1 px-lg-1">
 				<label class="mb-2"><strong>Scent: </strong><span data-swatch-label>Girl Print: Limited edition!</span></label>
 				<ul class="list-unstyled product-variant-swatch d-flex justify-content-center">
 					<li class="product-variant-swatch__item available active col-3" data-available="available">
@@ -164,9 +156,9 @@
 					</li>
 				</ul>
 			</div>
-			<button type="button" class="btn btn-lg btn-primary add-to-cart btn-block px-0 btn-abtest mb-1 justify-content-between px-g">
-				<span class="btn-abtest__text">Add to Cart</span>
-				<span class="btn-abtest__prices d-none">
+			<button type="button" class="btn btn-lg btn-primary add-to-cart btn-block px-0 product-card-btn">
+				<span class="product-card-btn__text">Add to Cart</span>
+				<span class="product-card-btn__prices">
 					<span class="text-linethrough">{{compare_price}}</span>
 					<span class="">{{price}}</span>
 				</span>
@@ -174,18 +166,13 @@
 		</div>
 		{{/if}}
 		{{ else }}
-		<button type="button" class="btn btn-lg btn-primary add-to-cart btn-block px-0 align-items-center btn-abtest mb-1 justify-content-between px-g">
-			<span class="btn-abtest__text">Add to Cart</span>
-			<span class="btn-abtest__prices d-none">
+		<button type="button" class="btn btn-lg btn-primary add-to-cart btn-block px-0 align-items-center product-card-btn  mb-1">
+			<span class="product-card-btn__text">Add to Cart</span>
+			<span class="product-card-btn__prices">
 				<span class="text-linethrough">{{compare_price}}</span>
 				<span class="">{{price}}</span>
 			</span>
 		</button>
-		{{!-- Original CTA to be revert if original wins on 3xxu1db ABTEST
-		<button type="button" class="btn btn-lg btn-primary add-to-cart btn-block px-0">
-			Add To Cart
-		</button>
-		--}}
 		{{/if}}
 	</div>
 </div>
