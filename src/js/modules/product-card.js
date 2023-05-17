@@ -18,7 +18,7 @@ $(document).ready(function () {
 		$('.product-card button.add-to-cart').click(function () {
 			const _ = this;
 			const prevContent = $(this).html();
-			$(this).attr('disabled', 'disabled').html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>');
+			$(this).find('.product-card-btn__text').attr('disabled', 'disabled').html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>');
 
 			// remove spinner after 1 seconds, remove spinner should be after process xhr add to cart completed;
 			setTimeout(function () {
