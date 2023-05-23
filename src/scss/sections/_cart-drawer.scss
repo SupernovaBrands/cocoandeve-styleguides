@@ -62,11 +62,8 @@
 	}
 
 	&__swell-redemption-item {
-		min-width: calc-em(90);
-
-		&-heading {
-			max-height: calc-em(101);
-		}
+		flex: 0 0 calc-em(90);
+		width: calc-em(90);
 
 		picture {
 			background-color: $pink-product;

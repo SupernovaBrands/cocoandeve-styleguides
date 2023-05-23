@@ -21,7 +21,7 @@ const SwellRedemptionCard = (props) => {
 			</picture>
 			<figcaption className="d-flex px-25 align-items-center flex-column h-100 w-100 justify-content-between">
 				<div className="d-flex align-items-center">{`⭐️ ${item.cost_in_points}`}</div>
-				<button type="button" className="btn rounded-pill bg-white d-flex align-items-center w-100 py-1 justify-content-center my-1" onClick={redeemItem}>
+				<button type="button" className="btn btn-sm rounded-pill bg-white w-100 px-1 my-1 font-weight-normal" onClick={redeemItem}>
 					Add
 				</button>
 			</figcaption>
