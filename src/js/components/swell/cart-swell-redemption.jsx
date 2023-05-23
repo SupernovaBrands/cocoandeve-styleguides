@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import SvgChevronPrev from '~svg/chevron-prev.svg';
 import SvgChevronNext from '~svg/chevron-next.svg';
 import BaliBeauty from '~svg/swell-bali-beauty.svg';
@@ -10,6 +10,8 @@ import swellDummyItems from '~mod/swell-data-sample';
 const CartSwellRedemption = () => {
 	const swellRef = useRef(null);
 	const SCROLL_ITEM = 151;
+	const [itemRedeemed, setItemRedeemed] = useState(false);
+	const [errorMessage, setErrorMessage] = useState(false);
 
 	const scroll = (direction) => {
 		const el = swellRef;
@@ -17,11 +19,15 @@ const CartSwellRedemption = () => {
 		const offset = direction === 'left' ? -(SCROLL_ITEM) : SCROLL_ITEM;
 		el.current.scrollTo({ left: left + offset });
 	};
+	const itemAdded = (val) => setItemRedeemed(val);
+	const showError = (val) => setErrorMessage(val);
 	return (
 		<>
 			<div className="position-relative">
 				<strong className="d-block mb-1">You have ⭐ 120 points to redeem:</strong>
-				<p className="font-size-sm text-primary mb-g">You can only redeem 1 reward per order. Remove the current reward first before swapping to another one.</p>
+				{errorMessage && (
+					<p className="font-size-sm text-primary mb-g">You can only redeem 1 reward per order. Remove the current reward first before swapping to another one.</p>
+				)}
 				<button className="position-absolute btn-unstyled text-primary manual-gwp__left mr-3" aria-hidden="true" type="button" onClick={() => scroll('left')}>
 					<SvgChevronPrev class="svg" />
 					<span className="d-none">Left</span>
@@ -32,7 +38,13 @@ const CartSwellRedemption = () => {
 				</button>
 				<div className="manual-gwp__container d-flex mb-0 mt-2 text-center" ref={swellRef}>
 					{swellDummyItems.map((item) => (
-						<SwellRedemptionCard key={item.id} item={item} />
+						<SwellRedemptionCard
+							key={item.id}
+							item={item}
+							itemAdded={itemAdded}
+							itemRedeemed={itemRedeemed}
+							showError={showError}
+						/>
 					))}
 				</div>
 			</div>
