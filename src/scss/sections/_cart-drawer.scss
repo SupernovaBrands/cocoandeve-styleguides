@@ -61,15 +61,9 @@
 		margin: 0;
 	}
 
-	&__swell-redemption-item {
-		flex: 0 0 calc-em(90);
-		width: calc-em(90);
-
-		picture {
-			background-color: $pink-product;
-			border-top-right-radius: $border-radius-lg;
-			border-top-left-radius: $border-radius-lg;
-		}
+	&__swell-redemption-item img {
+		border-top-right-radius: $border-radius-lg;
+		border-top-left-radius: $border-radius-lg;
 	}
 
 	&__items-tip {
