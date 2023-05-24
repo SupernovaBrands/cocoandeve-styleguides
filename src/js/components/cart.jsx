@@ -23,6 +23,7 @@ import {
 } from '~mod/utils';
 
 import SvgClose from '~svg/close.svg';
+import CartSwellRedemption from '~comp/swell/cart-swell-redemption';
 
 export default class Cart extends React.Component {
 	constructor(props) {
@@ -50,6 +51,7 @@ export default class Cart extends React.Component {
 			cartItemsTip: {
 				enabled: true,
 			},
+			pointsEarned: true,
 		};
 	}
 
@@ -572,6 +574,7 @@ export default class Cart extends React.Component {
 			discountMeter,
 			recentProducts,
 			cartItemsTip,
+			pointsEarned,
 		} = this.state;
 		return (
 			<div className="modal-dialog modal-dialog-scrollable modal-md m-0 w-100 mh-100 float-right">
@@ -615,7 +618,7 @@ export default class Cart extends React.Component {
 									<p className="my-3 text-center">{tStrings.cart_empty}</p>
 									<a href="/collections" className="btn btn-primary" data-cy="shop-all-btn">Shop all products</a>
 								</div>
-								<div className='cart-empty-discount-form container text-left d-none'>
+								<div className="cart-empty-discount-form container text-left d-none">
 									<CartDiscountForm
 										isApplied={discountData.applied}
 										code={discountData.code}
@@ -688,6 +691,9 @@ export default class Cart extends React.Component {
 									</>
 								)}
 
+								<CartSwellRedemption />
+								<hr />
+
 								<CartDiscountForm
 									isApplied={discountData.applied}
 									code={discountData.code}
@@ -722,6 +728,13 @@ export default class Cart extends React.Component {
 										<>
 											<p className="col-8 mb-1 font-weight-bold" data-cy="cart-shipping-label">{tStrings.cart_shipping}</p>
 											<p className={`col-4 mb-1 font-weight-bold text-right ${shippingData.amount > 0 ? '' : 'text-primary'}`} data-cy="cart-shipping-value">{shippingData.amount > 0 ? formatMoney(shippingData.amount) : 'Free'}</p>
+										</>
+									)}
+
+									{pointsEarned && (
+										<>
+											<p className="col-8 mb-1 font-weight-bold mt-g">Points earned</p>
+											<p className="col-4 mb-1 font-weight-bold text-right mt-g">⭐ 52</p>
 										</>
 									)}
 								</div>
