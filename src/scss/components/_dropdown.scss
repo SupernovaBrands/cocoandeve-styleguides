@@ -84,8 +84,10 @@
 	}
 }
 
-.timer-bar--show {
-	.dropdown--account .dropdown-menu {
-		top: calc-em(116.5);
+@include media-breakpoint-down(xs) {
+	.timer-bar--show {
+		.dropdown--account .dropdown-menu {
+			top: calc-em(116.5);
+		}
 	}
 }
