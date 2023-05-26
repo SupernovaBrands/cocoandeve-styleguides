@@ -83,3 +83,9 @@
 		}
 	}
 }
+
+.timer-bar--show {
+	.dropdown--account .dropdown-menu {
+		top: calc-em(116.5);
+	}
+}
