@@ -84,7 +84,7 @@
 	}
 }
 
-@include media-breakpoint-down(xs) {
+@include media-breakpoint-down(md) {
 	.timer-bar--show {
 		.dropdown--account .dropdown-menu {
 			top: calc-em(116.5);
