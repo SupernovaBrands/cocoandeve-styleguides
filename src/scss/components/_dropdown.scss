@@ -50,7 +50,7 @@
 			&:not(.dropdown-menu__logged-in) {
 				@include media-breakpoint-up(lg) {
 					width: calc-em(330);
-					top: calc-em(56);
+					top: calc-em(50);
 				}
 			}
 
