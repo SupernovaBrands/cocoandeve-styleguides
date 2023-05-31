@@ -1,0 +1,37 @@
+html.us-store {
+	.quiz-banner--abtest {
+		.product-form--quiz-link {
+			display: none !important;
+		}
+
+		.product-card--quiz {
+			display: none !important;
+
+			&-abtest {
+				display: flex !important;
+			}
+
+			figcaption {
+				bottom: 50%;
+				transform: translateY(50%);
+				left: 0;
+				right: 0;
+
+				@include media-breakpoint-up(lg) {
+					&.product-card--quiz__banner-bottom {
+						bottom: 0;
+						transform: none;
+					}
+				}
+			}
+
+			@include media-breakpoint-up(lg) {
+				img {
+					border-radius: map-get($spacers, 1);
+				}
+			}
+		}
+
+
+	}
+}
