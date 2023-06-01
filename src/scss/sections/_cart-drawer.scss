@@ -61,27 +61,24 @@
 		margin: 0;
 	}
 
-	&__swell-redemption-item {
-		min-width: calc-em(141);
+	&__swell-redemption {
+		&-banner {
+			padding-left: $grid-gutter-width / 2;
 
-		&-btn {
-			border-radius: calc-em(84);
-			height: calc-em(40);
-			border-color: $body-color !important;
-
-			&:disabled {
-				opacity: .4;
+			.popover {
+				top: -100% !important;
 			}
 		}
 
-		&-heading {
-			max-height: calc-em(101);
-		}
+		&-item {
+			flex: 0 0 calc-em(90);
+			width: calc-em(90);
+			border-bottom: 1px solid $gray-400;
 
-		picture {
-			background-color: $pink-product;
-			border-top-right-radius: $border-radius-lg;
-			border-top-left-radius: $border-radius-lg;
+			img {
+				border-top-right-radius: $border-radius-lg;
+				border-top-left-radius: $border-radius-lg;
+			}
 		}
 	}
 

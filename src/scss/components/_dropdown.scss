@@ -50,7 +50,7 @@
 			&:not(.dropdown-menu__logged-in) {
 				@include media-breakpoint-up(lg) {
 					width: calc-em(330);
-					top: calc-em(50);
+					top: calc-em(56);
 				}
 			}
 
@@ -80,6 +80,14 @@
 		label.error {
 			color: $primary;
 			font-size: $font-size-xs;
+		}
+	}
+}
+
+@include media-breakpoint-down(md) {
+	.timer-bar--show {
+		.dropdown--account .dropdown-menu {
+			top: calc-em(116.5);
 		}
 	}
 }
