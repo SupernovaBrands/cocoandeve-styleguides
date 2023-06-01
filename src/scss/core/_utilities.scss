@@ -7,6 +7,7 @@
 @include bg-variant(".bg-primary-light-second", $primary-light-second, true);
 @include bg-variant(".bg-pink-light", $pink-light, true);
 @include bg-variant(".bg-suncare-blue", $suncare-blue, true);
+@include bg-variant(".bg-pink-product", $pink-product, true);
 
 // Grey 100 background color
 @include bg-variant(".bg-gray-100", $gray-100, true);
