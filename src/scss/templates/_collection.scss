@@ -42,6 +42,7 @@
 			border-radius: calc-em(20);
 			white-space: nowrap;
 			cursor: pointer;
+			color: $gray-600;
 
 			&.active {
 				background-color: $primary;

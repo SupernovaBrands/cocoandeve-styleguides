@@ -45,4 +45,9 @@
 
 .custom-select {
   background-color: $gray-400;
+  border-color: $body-color;
+
+  &:focus {
+    border-color: $body-color;
+  }
 }
