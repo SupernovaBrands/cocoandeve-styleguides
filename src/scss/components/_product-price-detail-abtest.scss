@@ -17,7 +17,7 @@
             }
     
             .custom-control-label {
-                padding-top: calc-em(10) !important;
+                padding-top: 0 !important;
                 padding-bottom: calc-em(10) !important;
 
                 &.border {
@@ -39,7 +39,7 @@
 
                 &::before {
                     left: 0;
-                    top: calc-em(10, $unit: 1rem);
+                    top: 0;
                 }
 
                 @include media-breakpoint-up(lg) {
