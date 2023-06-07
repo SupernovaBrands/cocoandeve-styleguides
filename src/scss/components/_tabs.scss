@@ -9,6 +9,7 @@
       border-right: 0;
       padding: 0;
       line-height: calc-em(40, $context: 16, $unit: 1);
+      background-color: #fff;
 
       @include media-breakpoint-up(lg) {
         line-height: calc-em(46, $context: 20, $unit: 1);
