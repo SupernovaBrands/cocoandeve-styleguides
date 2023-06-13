@@ -19,6 +19,13 @@
             .custom-control-label {
                 padding-top: 0 !important;
                 padding-bottom: calc-em(10) !important;
+                padding-left: calc-em(30) !important;
+
+                .save-tag {
+                    display: inline-block !important;
+                    padding-top: 2px;
+                    padding-bottom: 2px;
+                }
 
                 &.border {
                     border: none !important;
