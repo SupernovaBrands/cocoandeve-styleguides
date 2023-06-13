@@ -3,14 +3,11 @@
 		<p class="pb-2 mb-0 h1 text-center">Real Results</p>
 		{{#if withFilter}}
 		<ul class="nav nav-tabs mx-auto nav-tabs--real-results text-center mb-5 justify-content-center d-none d-md-flex" role="tablist">
-			<li class="nav-item" role="presentation">
-				<a class="nav-link text-decoration-none h4 mb-0 font-weight-normal" href="#tan" role="tab">Tan</a>
+			<li class="nav-item">
+				<a class="nav-link text-decoration-none h4 mb-0 font-weight-normal px-3 w-auto" href="#tan" aria-controls="tan">Tan & SPF</a>
 			</li>
 			<li class="nav-item" role="presentation">
 				<a class="nav-link text-decoration-none h4 mb-0 font-weight-normal" href="#hair" role="tab">Hair</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link text-decoration-none h4 mb-0 font-weight-normal" href="#suncare" aria-controls="suncare">Suncare</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link text-decoration-none h4 mb-0 font-weight-normal" href="#body" aria-controls="value-sets">Body</a>
@@ -21,11 +18,10 @@
 		</ul>
 		<div class="mb-4 mx-auto col-6 d-sm-block d-md-none">
 			<label for="rangeResultSelect" id="rangeResultSelectLabel" class="sr-only">Range Real Result</label>
-			<select id="rangeResultSelect" data-toggle="select" class="custom-select custom-select-lg" aria-labelledby="rangeResultSelectLabel">
+			<select id="rangeResultSelect" data-toggle="select" class="custom-select bg-white rounded-lg custom-select-lg" aria-labelledby="rangeResultSelectLabel">
 				<option value="#all" selected>All</option>
-				<option value="#tan">Tan</option>
+				<option value="#tan">Tan & SPF</option>
 				<option value="#hair">Hair</option>
-				<option value="#suncare">Suncare</option>
 				<option value="#body">Body</option>
 				<option value="#suncare">Suncare</option>
 			</select>
