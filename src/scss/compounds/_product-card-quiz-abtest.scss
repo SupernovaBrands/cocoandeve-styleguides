@@ -28,6 +28,7 @@ html.us-store {
 			@include media-breakpoint-up(lg) {
 				img {
 					border-radius: map-get($spacers, 1);
+					height: 100%;
 				}
 			}
 		}
