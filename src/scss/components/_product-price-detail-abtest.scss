@@ -21,10 +21,11 @@
                 padding-bottom: calc-em(10) !important;
                 padding-left: calc-em(30) !important;
 
-                .save-tag {
-                    display: inline-block !important;
-                    padding-top: 2px;
-                    padding-bottom: 2px;
+                @include media-breakpoint-down(lg) {
+                    .font-weight-bold.mb-1 {
+                        display: flex;
+                        justify-content: space-between;
+                    }
                 }
 
                 &.border {
@@ -34,6 +35,15 @@
                 .font-size-sm {
                     font-size: calc-em(16) !important;
                     margin-bottom: 0 !important;
+                }
+
+                .save-tag {
+                    display: inline-block !important;
+                    padding-top: 2px;
+                    padding-bottom: 2px;
+                    font-size: calc-em(14) !important;
+                    align-self: flex-start;
+                    white-space: nowrap;
                 }
 
                 .product-swatch {
