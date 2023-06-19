@@ -9,6 +9,7 @@ html.us-store {
 
 			&-abtest {
 				display: flex !important;
+				max-height: none;
 			}
 
 			figcaption {
@@ -17,7 +18,7 @@ html.us-store {
 				left: 0;
 				right: 0;
 
-				@include media-breakpoint-up(lg) {
+				@include media-breakpoint-up(md) {
 					&.product-card--quiz__banner-bottom {
 						bottom: 0;
 						transform: none;
@@ -25,9 +26,10 @@ html.us-store {
 				}
 			}
 
-			@include media-breakpoint-up(lg) {
+			@include media-breakpoint-up(md) {
 				img {
 					border-radius: map-get($spacers, 1);
+					height: 100%;
 				}
 			}
 		}

@@ -96,7 +96,7 @@ export default class CartDiscountForm extends React.Component {
 				)}
 			</div>
 		) : (
-			<div className="mt-2">
+			<div className="cart-drawer__discount-form-wrapper mt-2">
 				<a className="text-body text-underline collapsed cart-drawer__discount-toggle" data-toggle="collapse" href="#cart-drawer__discount-form" role="button" aria-expanded="false" aria-controls="cart-drawer__discount-form" data-cy="applypromo-text">{tStrings.cart_discount_text}</a>
 				<div className="collapse" id="cart-drawer__discount-form">
 					<div className="input-group py-1">
