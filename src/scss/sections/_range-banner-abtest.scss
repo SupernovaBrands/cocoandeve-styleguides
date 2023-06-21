@@ -1,0 +1,44 @@
+.au-store {
+    .homepage--abtest {
+		.range-banner {
+			&--original {
+				display: none !important;
+			}
+
+			&--variant {
+				display: block !important;
+			}
+
+			img,
+			picture {
+				border-radius: map-get($spacers, 1);
+			}
+
+			figcaption {
+				top: 50%;
+				transform: translateY(-50%);
+				@include media-breakpoint-up(md) {
+					&.hair {
+						top: 0;
+						left: 0;
+						right: 0;
+						transform: none;
+					}
+				}
+			}
+
+			&__title {
+				@include font-size($h2-font-size-lg);
+				@include media-breakpoint-up(md) {
+					@include font-size($h1-font-size-lg);
+				}
+			}
+
+			@include media-breakpoint-up(md) {
+				&__subtitle {
+					@include font-size($h4-font-size-lg, true);
+				}
+			}
+		}
+    }
+}
