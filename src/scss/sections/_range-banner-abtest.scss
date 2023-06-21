@@ -17,9 +17,9 @@
 			figcaption {
 				top: 50%;
 				transform: translateY(-50%);
-				@include media-breakpoint-up(md) {
+				@include media-breakpoint-up(lg) {
 					&.hair {
-						top: 0;
+						top: 20%;
 						left: 0;
 						right: 0;
 						transform: none;
