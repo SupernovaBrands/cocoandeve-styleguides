@@ -1,5 +1,34 @@
 .au-store {
     .homepage--abtest {
+        .product-carousel {
+            .h1.d-none {
+                display: block !important;
+            }
+            .nav-tabs--product {
+                border: none;
+                margin-bottom: 0 !important;
+    
+                .nav-link {
+                    border: none;
+                    font-size: 16   px;
+                    @include media-breakpoint-up(lg) {
+                        font-size: 20px;
+                    }
+                    &.active {
+                        background: none;
+                        color: $body-color;
+                        font-weight: bold !important;
+                    }
+                }
+            }
+        }
 
+        .services-list {
+            background-color: transparent !important;
+
+            .text-secondary {
+                color: $body-color !important;
+            }
+        }
     }
 }
