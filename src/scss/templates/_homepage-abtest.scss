@@ -23,44 +23,69 @@
             }
         }
 
-        .services-list {
+        .section-service-list {
             background-color: transparent !important;
 
             .text-secondary {
                 color: $body-color !important;
             }
         }
-    }
 
-    .instagram {
-        background-color: $pink-light !important;
-
-        img {
-            border-radius: calc-em(10);
+        .instagram {
+            background-color: $pink-light !important;
+    
+            img {
+                border-radius: calc-em(10);
+            }
         }
-    }
-
-    footer {
-        background-color: white;
-        color: $body-color;
-
-        a {
+    
+        footer {
+            background-color: white;
             color: $body-color;
+    
+            a {
+                color: $body-color;
+            }
+    
+            .footer-grid-new__newsletter-form {
+                input {
+                    margin-right: -20px;
+                }
+    
+                button {
+                    border-radius: calc-em(50) !important;
+                    min-width: calc-em(160);
+                }
+            }
+    
+            .d-flex.justify-content-center.align-items-baseline svg {
+                display: none;
+            }
         }
 
-        .footer-grid-new__newsletter-form {
-            input {
-                margin-right: -20px;
+        main {
+            display: flex;
+            flex-flow: column;
+
+            .product-carousel {
+                order: 0;
             }
 
-            button {
-                border-radius: calc-em(50) !important;
-                min-width: calc-em(160);
+            .section-service-list {
+                order: 0;
             }
-        }
 
-        .d-flex.justify-content-center.align-items-baseline svg {
-            display: none;
+            .container.mt-lg-n5.pb-md-5 {
+                order: 1;
+            }
+
+            .section-real-results {
+                order: 1;
+            }
+
+            .instagram {
+                order: 2;
+            }
         }
     }
 }
