@@ -62,30 +62,5 @@
                 display: none;
             }
         }
-
-        main {
-            display: flex;
-            flex-flow: column;
-
-            .product-carousel {
-                order: 0;
-            }
-
-            .section-service-list {
-                order: 0;
-            }
-
-            .container.mt-lg-n5.pb-md-5 {
-                order: 1;
-            }
-
-            .section-real-results {
-                order: 1;
-            }
-
-            .instagram {
-                order: 2;
-            }
-        }
     }
 }
