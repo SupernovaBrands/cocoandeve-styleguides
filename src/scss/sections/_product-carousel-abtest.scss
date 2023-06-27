@@ -21,6 +21,33 @@
                     }
                 }
             }
+
+            .btn-outline-primary {
+                border-radius: 50px;
+                margin-top: calc-em(20) !important;
+            }
+            
+            .carousel-control-next {
+                @include media-breakpoint-down(lg) {
+                    right: 9%;
+                }
+            }
+
+            .carousel-control-prev {
+                @include media-breakpoint-down(lg) {
+                    left: 9%;
+                }
+            }
+
+            .carousel-control-prev-icon,
+            .carousel-control-next-icon {
+                color: $body-color;
+                background-color: transparent;
+
+                @include media-breakpoint-down(lg) {
+                    top: 34%;
+                }
+            }
         }
 
         .section-service-list {
