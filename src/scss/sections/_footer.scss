@@ -83,6 +83,12 @@ footer {
 	&__follow {
 		grid-area: nav-follow;
 	}
+
+	&__follow-js {
+		svg {
+			margin-left: calc-em(3);
+		}
+	}
 	&__currency {
 		grid-area: nav-currency;
 	}
