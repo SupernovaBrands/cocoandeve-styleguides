@@ -1,0 +1,33 @@
+.uk-store {
+    .product-card-shorten-cta {
+        @include media-breakpoint-down(md) {
+            .product-card {
+                .product-card-btn {
+                    display: flex;
+                    flex-flow: row;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                }
+
+                .product-card-btn__text {
+                    display: none;
+                }
+
+                .product-card-btn__text-variant {
+                    display: block !important;
+                }
+
+                .product-card-btn__prices {
+                    padding: 0;
+                    text-align: right;
+                }
+
+                .product-card-btn--waitlist {
+                    .text-linethrough {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
