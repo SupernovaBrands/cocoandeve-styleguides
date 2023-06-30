@@ -1,0 +1,20 @@
+html.au-store {
+	.homepage--abtest {
+		.real-result--original {
+			display: none !important;
+		}
+
+		.instagram-reels--abtest {
+			display: block !important;
+
+			.nav-tabs--instagram a {
+				color: $gray-600;
+
+				&.active {
+					color: $body-color;
+					font-weight: bold !important;
+				}
+			}
+		}
+	}
+}
