@@ -21,6 +21,12 @@
                     padding: 0;
                     text-align: right;
                 }
+
+                .product-card-btn--waitlist {
+                    .text-linethrough {
+                        display: none;
+                    }
+                }
             }
         }
     }
