@@ -665,7 +665,7 @@ const YotpoReviewWidget = (props) => {
 												<div className="d-flex flex-nowrap row w-auto overflow-auto pr-g">
 													{review.images_data.map((image, index) => (
 														<button key={image.id} type="button" className={`d-inline-block btn-unstyled ${index === 0 ? 'ml-1 ml-lg-g mr-1' : 'mx-1'} mb-g`} data-toggle="modal" data-target="#yotpoImageModal" onClick={() => { setReviewModal(review); }}>
-															<img src={image.thumb_url.replace('https:', '')} alt={`${review.user_name} ${index}`} />
+															<img className="object-fit-contain" src={image.thumb_url.replace('https:', '')} alt={`${review.user_name} ${index}`} />
 														</button>
 													))}
 												</div>
