@@ -1,0 +1,93 @@
+.au-store {
+    .homepage--abtest {
+        .product-carousel {
+            .h1.d-none {
+                display: block !important;
+            }
+            .nav-tabs--product {
+                border: none;
+                margin-bottom: 0 !important;
+
+                .nav-link {
+                    border: none;
+                    font-size: 16   px;
+                    @include media-breakpoint-up(lg) {
+                        font-size: 20px;
+                    }
+                    &.active {
+                        background: none;
+                        color: $body-color;
+                        font-weight: bold !important;
+                    }
+                }
+            }
+
+            .btn-outline-primary {
+                border-radius: 50px;
+                margin-top: calc-em(20) !important;
+            }
+            
+            .carousel-control-next {
+                @include media-breakpoint-down(lg) {
+                    right: 9%;
+                }
+            }
+
+            .carousel-control-prev {
+                @include media-breakpoint-down(lg) {
+                    left: 9%;
+                }
+            }
+
+            .carousel-control-prev-icon,
+            .carousel-control-next-icon {
+                color: $body-color;
+                background-color: transparent;
+
+                @include media-breakpoint-down(lg) {
+                    top: 34%;
+                }
+            }
+        }
+
+        .section-service-list {
+            background-color: transparent !important;
+
+            .text-secondary {
+                color: $body-color !important;
+            }
+        }
+
+        .instagram {
+            background-color: $pink-light !important;
+
+            img {
+                border-radius: calc-em(10);
+            }
+        }
+
+        footer {
+            background-color: white;
+            color: $body-color;
+
+            a {
+                color: $body-color;
+            }
+
+            .footer-grid-new__newsletter-form {
+                input {
+                    margin-right: -20px;
+                }
+
+                button {
+                    border-radius: calc-em(50) !important;
+                    min-width: calc-em(160);
+                }
+            }
+
+            .d-flex.justify-content-center.align-items-baseline svg {
+                display: none;
+            }
+        }
+    }
+}
