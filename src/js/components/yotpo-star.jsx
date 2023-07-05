@@ -23,14 +23,20 @@ const YotpoStar = (props) => {
 	}, [props.productId]);
 
 	return init ? (
-		<div className={`d-flex ${props.extraClass}`}>
-			<ReviewStar score={score} />
-			{props.showScore && <span className="ml-25">{`${score.toFixed(1)} stars`}</span>}
+		<div className={`d-flex ${props.extraClass} font-size-sm justify-content-between`}>
+			{props.showScore && (
+				<span>
+					<ReviewStar score={score} />
+					<span className="ml-25">{`${score.toFixed(1)}/5.0`}</span>
+				</span>
+			)}
 			{props.showTotal && (
 				<span className="ml-25">
-					(
-					<a className="link-secondary text-underline" href={`${props.productUrl}#write-a-review`}>{total}</a>
-					)
+					<a className="text-underline" href={`${props.productUrl}#write-a-review`}>
+						{total}
+						{' '}
+						Reviews
+					</a>
 				</span>
 			)}
 		</div>
