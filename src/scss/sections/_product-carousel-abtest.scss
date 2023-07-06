@@ -45,7 +45,7 @@
                 background-color: transparent;
 
                 svg {
-                    height: calc-em(18);
+                    height: calc-em(22);
                 }
 
                 @include media-breakpoint-down(lg) {
@@ -70,6 +70,14 @@
                 .list-unstyled.row {
                     padding-top: 10px !important;
                     padding-bottom: 10px !important;
+
+                    li:first-child, li:nth-child(2) {
+                        margin-bottom: 30px !important;
+                    }
+
+                    li:last-child, li:nth-child(3) {
+                        margin-bottom: 0px !important;
+                    }
                 }
             }
 
@@ -77,10 +85,6 @@
                 .list-unstyled.row {
                     margin-bottom: 40px !important;
                 }
-            }
-
-            i.d-inline-flex {
-                font-size: calc-em(42);
             }
         }
 
