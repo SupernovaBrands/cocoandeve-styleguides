@@ -530,8 +530,10 @@
 		}
 
 		.product-card__title {
-			margin-right: 0.625rem;
-			margin-left: 0.625rem;
+			@include media-breakpoint-up(lg) {
+				margin-right: 0.625rem;
+				margin-left: 0.625rem;
+			}
 		}
 
 		.position-relative.flex-grow-1 .text-center:not(.w-100) {
