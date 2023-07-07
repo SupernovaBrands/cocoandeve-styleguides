@@ -125,6 +125,8 @@
 	&__title {
 		@include media-breakpoint-down(md) {
 			text-align: left;
+			justify-content: start !important;
+			font-size: calc-em(14);
 		}
 	}
 
