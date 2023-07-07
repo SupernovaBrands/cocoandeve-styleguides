@@ -533,10 +533,19 @@
 			}
 		}
 
-		.product-card__title {
-			@include media-breakpoint-up(lg) {
-				margin-right: 0.625rem;
-				margin-left: 0.625rem;
+		.product-card {
+			&__title,
+			&__stars {
+				@include media-breakpoint-down(md) {
+					font-size: $font-size-base;
+				}
+			}
+
+			&__title {
+				@include media-breakpoint-up(lg) {
+					margin-right: 0.625rem;
+					margin-left: 0.625rem;
+				}
 			}
 		}
 
