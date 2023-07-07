@@ -153,6 +153,7 @@
 	&__stars {
 		@include media-breakpoint-down(md) {
 			justify-content: space-between;
+			font-size: calc-em(14);
 		}
 	}
 
