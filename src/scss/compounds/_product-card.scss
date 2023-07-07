@@ -122,6 +122,24 @@
 		}
 	}
 
+	&__title {
+		@include media-breakpoint-down(md) {
+			text-align: left;
+		}
+	}
+
+	&__reviews {
+		@include media-breakpoint-down(md) {
+			flex-flow: column;
+		}
+	}
+
+	&__stars {
+		@include media-breakpoint-down(md) {
+			justify-content: space-between;
+		}
+	}
+
 	@include media-breakpoint-down(md) {
 		&:not(.carousel-item) {
 			.product-card-btn {
@@ -149,4 +167,5 @@
 			border-color: $primary !important;
 		}
 	}
+
 }
