@@ -534,6 +534,9 @@
 			&__stars {
 				@include media-breakpoint-down(md) {
 					font-size: $font-size-base;
+					svg {
+						margin-top: 0;
+					}
 				}
 			}
 

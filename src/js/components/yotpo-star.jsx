@@ -24,9 +24,9 @@ const YotpoStar = (props) => {
 	}, [props.productId]);
 
 	return init ? (
-		<div className={`d-flex ${props.extraClass} product-card__stars`}>
+		<div className={`d-flex ${props.extraClass} ${window.innerWidth < screenLG ? 'product-card__stars' : ''}`}>
 			{window.innerWidth < screenLG && (
-				<span>
+				<span className="d-flex justify-content-center">
 					<ReviewStarSingle score={score} />
 					<span className="ml-25">{`${score.toFixed(1)}/5.0`}</span>
 				</span>
