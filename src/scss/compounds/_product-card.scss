@@ -141,6 +141,11 @@
 			justify-content: space-between;
 			font-size: calc-em(14);
 		}
+		svg {
+			height: 16px;
+			width: 16px;
+			margin-top: -1px;
+		}
 	}
 
 	@include media-breakpoint-down(md) {
