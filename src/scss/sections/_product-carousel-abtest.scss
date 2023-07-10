@@ -63,12 +63,6 @@
             }
 
             .product-card__content-rating {
-                display: none !important;
-
-                &.d-none {
-                    display: flex !important;
-                }
-
                 .svg {
                     @include media-breakpoint-up(lg) {
                         color: $body-color !important;

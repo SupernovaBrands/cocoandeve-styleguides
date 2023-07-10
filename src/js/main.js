@@ -5,7 +5,6 @@ import ReactDOM from 'react-dom';
 import Cart from '~comp/cart';
 import QuantityBox from '~comp/quantity-box';
 import YotpoStar from '~comp/yotpo-star';
-import YotpoStarAb from '~comp/yotpo-star-ab';
 import YotpoReviewWidget from '~comp/yotpo-review-widget';
 
 import { scrollToElement } from '~mod/utils';
@@ -29,19 +28,6 @@ const yotpoStars = document.querySelectorAll('.react-yotpo-star');
 yotpoStars.forEach((el) => {
 	ReactDOM.render(
 		React.createElement(YotpoStar, {
-			productId: parseInt(el.dataset.productId, 10),
-			productUrl: el.dataset.productUrl,
-			showScore: el.dataset.showScore === 'true',
-			showTotal: el.dataset.showTotal === 'true',
-		}, null),
-		el,
-	);
-});
-
-const yotpoStarsAb = document.querySelectorAll('.react-yotpo-star-ab');
-yotpoStarsAb.forEach((el) => {
-	ReactDOM.render(
-		React.createElement(YotpoStarAb, {
 			productId: parseInt(el.dataset.productId, 10),
 			productUrl: el.dataset.productUrl,
 			showScore: el.dataset.showScore === 'true',
