@@ -27,9 +27,10 @@ html.au-store {
 				left: auto;
 
 				li {
-					border-color: $body-color;
-					width: calc-em(16);
-					height: calc-em(16);
+					border-color: $body-color !important;
+					border-width: 2px !important;
+					width: calc-em(12);
+					height: calc-em(12);
 				}
 
 				.active {

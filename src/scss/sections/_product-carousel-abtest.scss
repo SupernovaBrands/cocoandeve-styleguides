@@ -61,6 +61,14 @@
                     font-size: calc-em(20);
                 }
             }
+
+            .product-card__content-rating {
+                .svg {
+                    @include media-breakpoint-up(lg) {
+                        color: $body-color !important;
+                    }
+                }
+            }
         }
 
         .section-service-list {
@@ -114,8 +122,10 @@
             }
 
             .footer__hr-second {
+                border-color: $body-color;
                 @include media-breakpoint-down(lg) {
-                    border-color: $body-color;
+                    margin-bottom: 10px !important;
+                    opacity: 1;
                 }
             }
 
@@ -129,6 +139,10 @@
 
             .footer__copy {
                 margin-top: 20px !important;
+                @include media-breakpoint-down(lg) {
+                    margin-top: 10px !important;
+                    font-size: calc-em(12);
+                }
             }
 
             .footer-grid-new__newsletter-form {
