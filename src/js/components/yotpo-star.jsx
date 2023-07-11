@@ -33,10 +33,10 @@ const YotpoStar = (props) => {
 			)}
 			{window.innerWidth < screenLG && props.showTotal && (
 				<span className="ml-25">
-					<a className="text-underline" href={`${props.productUrl}#write-a-review`}>
+					<a className="link-secondary text-underline" href={`${props.productUrl}#write-a-review`}>
+						(
 						{total}
-						{' '}
-						Reviews
+						)
 					</a>
 				</span>
 			)}
