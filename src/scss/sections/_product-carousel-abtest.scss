@@ -101,9 +101,10 @@
 
         .instagram {
             background-color: $pink-light !important;
-
-            img {
-                border-radius: calc-em(10);
+            @include media-breakpoint-up(lg) {
+                img {
+                    border-radius: calc-em(10);
+                }
             }
         }
 
