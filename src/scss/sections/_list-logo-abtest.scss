@@ -1,0 +1,15 @@
+html.au-store {
+	.homepage--abtest {
+		.list-logo {
+			display: none !important;
+
+			&--abtest {
+				display: block !important;
+
+				@include media-breakpoint-down(md) {
+					overflow-x: scroll;
+				}
+			}
+		}
+	}
+}

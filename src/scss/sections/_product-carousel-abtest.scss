@@ -1,0 +1,212 @@
+.au-store {
+    .homepage--abtest {
+        .product-carousel {
+            .h1.d-none {
+                display: block !important;
+            }
+            .carousel--centered {
+                padding-top: 10px !important;
+            }
+            .nav-tabs--product {
+                border: none;
+                margin-bottom: 0 !important;
+
+                .nav-link {
+                    border: none;
+                    font-size: 16   px;
+                    @include media-breakpoint-up(lg) {
+                        font-size: 20px;
+                    }
+                    &.active {
+                        background: none;
+                        color: $body-color;
+                        font-weight: bold !important;
+                    }
+                }
+            }
+
+            .btn-outline-primary {
+                border-radius: 50px;
+                margin-top: calc-em(20) !important;
+            }
+            
+            .carousel-control-next {
+                @include media-breakpoint-down(lg) {
+                    right: 9%;
+                }
+            }
+
+            .carousel-control-prev {
+                @include media-breakpoint-down(lg) {
+                    left: 9%;
+                }
+            }
+
+            .carousel-control-prev-icon,
+            .carousel-control-next-icon {
+                color: $body-color;
+                background-color: transparent;
+
+                svg {
+                    height: calc-em(22);
+                }
+
+                @include media-breakpoint-down(lg) {
+                    top: 46%;
+                }
+            }
+
+            .product-card__title {
+                @include media-breakpoint-down(lg) {
+                    font-size: calc-em(20);
+                }
+            }
+
+            .product-card__content-rating {
+                .svg {
+                    @include media-breakpoint-up(lg) {
+                        color: $body-color !important;
+                    }
+                }
+            }
+        }
+
+        .section-service-list {
+            background-color: transparent !important;
+
+            .text-secondary {
+                color: $body-color !important;
+            }
+            @include media-breakpoint-down(lg) {
+                .list-unstyled.row {
+                    padding-top: 10px !important;
+                    padding-bottom: 10px !important;
+
+                    li:first-child, li:nth-child(2) {
+                        margin-bottom: 30px !important;
+                    }
+
+                    li:last-child, li:nth-child(3) {
+                        margin-bottom: 0px !important;
+                    }
+                }
+            }
+
+            @include media-breakpoint-up(lg) {
+                .list-unstyled.row {
+                    margin-bottom: 40px !important;
+                }
+            }
+        }
+
+        .instagram {
+            background-color: $pink-light !important;
+
+            img {
+                border-radius: calc-em(10);
+            }
+        }
+
+        footer {
+            background-color: white;
+            color: $body-color;
+
+            a {
+                color: $body-color;
+            }
+
+            .footer__hr-first {
+                @include media-breakpoint-down(lg) {
+                    display: none;
+                }
+            }
+
+            .footer__hr-second {
+                border-color: $body-color;
+                @include media-breakpoint-down(lg) {
+                    margin-bottom: 10px !important;
+                    opacity: 1;
+                }
+            }
+
+            .footer-grid-newsletter__newsletter-heading {
+                @include media-breakpoint-down(lg) {
+                    p {
+                        font-size: calc-em(14);
+                    }
+                }
+            }
+
+            .footer__copy {
+                margin-top: 20px !important;
+                @include media-breakpoint-down(lg) {
+                    margin-top: 10px !important;
+                    font-size: calc-em(12);
+                }
+            }
+
+            .footer-grid-new__newsletter-form {
+                input {
+                    margin-right: -20px;
+
+                    &::placeholder {
+                        color: $gray-600;
+                    }
+
+                    @include media-breakpoint-down(lg) {
+                        border-top-left-radius: 50px;
+                        border-bottom-left-radius: 50px;
+                    }
+                }
+
+                button {
+                    border-radius: calc-em(50) !important;
+                    min-width: calc-em(160);
+                }
+
+                .footer__note {
+                    color: $gray-600;
+                    opacity: 1;
+                    @include media-breakpoint-down(lg) {
+                        font-size: calc-em(16) !important;
+                    }
+                }
+            }
+
+            .footer-grid-nav__follow, .footer-grid-nav__currency {
+                @include media-breakpoint-down(lg) {
+                    margin-bottom: 20px !important;
+                }
+            }
+
+            .d-flex.justify-content-center.align-items-baseline svg {
+                display: none;
+            }
+            
+            .footer-grid-nav {
+                @include media-breakpoint-down(md) {
+                    grid-template-areas: "nav-shop nav-about"
+                        "nav-help nav-banner"
+                        "nav-currency nav-follow";
+                }
+            }
+
+            .footer-grid-newsletter {
+                @include media-breakpoint-down(md) {
+                    &__newsletter-heading {
+                        p {
+                            
+                            font-size: calc-em(14);
+                        }
+                    }
+
+                    &__newsletter-form {
+                        .footer__note {
+                            font-size: calc-em(16);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+html.au-store {
+	.homepage--abtest {
+		.hero-carousel {
+			.carousel-item__link,
+			.carousel-indicators--right {
+				display: none !important;
+			}
+
+			@include make-container($gutter: 0);
+			@include make-container-max-widths();
+			@include media-breakpoint-up(lg) {
+				padding-right: $grid-gutter-width;
+				padding-left: $grid-gutter-width;
+			}
+
+			figure {
+				display: flex !important;
+			}
+
+			img,
+			picture {
+				border-radius: calc-em(10);
+			}
+
+			.carousel-indicators--variant {
+				display: flex !important;
+				left: auto;
+
+				li {
+					border-color: $body-color !important;
+					border-width: 2px !important;
+					width: calc-em(12);
+					height: calc-em(12);
+				}
+
+				.active {
+					background-color: $body-color;
+				}
+
+				@include media-breakpoint-down(md) {
+					position: static;
+				}
+
+				@include media-breakpoint-up(lg) {
+					bottom: calc-em(30);
+				}
+			}
+		}
+	}
+}
