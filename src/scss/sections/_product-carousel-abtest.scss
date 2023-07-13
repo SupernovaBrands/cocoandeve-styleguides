@@ -79,8 +79,8 @@
             }
             @include media-breakpoint-down(lg) {
                 .list-unstyled.row {
-                    padding-top: 10px !important;
-                    padding-bottom: 10px !important;
+                    padding-top: 20px !important;
+                    padding-bottom: 30px !important;
 
                     li:first-child, li:nth-child(2) {
                         margin-bottom: 30px !important;
@@ -101,9 +101,10 @@
 
         .instagram {
             background-color: $pink-light !important;
-
-            img {
-                border-radius: calc-em(10);
+            @include media-breakpoint-up(lg) {
+                img {
+                    border-radius: calc-em(10);
+                }
             }
         }
 
@@ -169,6 +170,7 @@
                     opacity: 1;
                     @include media-breakpoint-down(lg) {
                         font-size: calc-em(16) !important;
+                        margin-top: calc-em(10) !important;
                     }
                 }
             }
