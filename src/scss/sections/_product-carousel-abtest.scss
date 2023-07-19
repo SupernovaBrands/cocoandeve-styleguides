@@ -33,12 +33,14 @@
             .carousel-control-next {
                 @include media-breakpoint-down(lg) {
                     right: 9%;
+                    display: none;
                 }
             }
 
             .carousel-control-prev {
                 @include media-breakpoint-down(lg) {
                     left: 9%;
+                    display: none;
                 }
             }
 
