@@ -86,11 +86,6 @@ if ($('.real-result').length > 0) {
 	import(/* webpackChunkName: 'page-reviews' */ '~mod/page-reviews');
 }
 
-const cookieBanner = $('.cookies-banner');
-if (cookieBanner.length > 0) {
-	import(/* webpackChunkName: 'carousel-loop' */ '~mod/cookies-banner');
-}
-
 if ($('body').hasClass('template-product')) {
 	import(/* webpackChunkName: 'products' */ '~mod/products');
 }
