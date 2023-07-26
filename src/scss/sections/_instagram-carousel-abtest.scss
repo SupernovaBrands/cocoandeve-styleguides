@@ -17,6 +17,14 @@ html.au-store {
 			}
 
 			.lazy-video {
+				max-width: calc-em(255);
+				@include media-breakpoint-up(lg) {
+					max-width: calc-em(270);
+				}
+			}
+
+			.bg-shimmer,
+			.lazy-video {
 				min-height: calc-em(365);
 				@include media-breakpoint-up(lg) {
 					min-height: calc-em(386);
