@@ -59,8 +59,10 @@
             }
 
             .product-card__title {
+                min-height: calc-em(50);
                 @include media-breakpoint-down(lg) {
                     font-size: calc-em(20);
+                    min-height: calc-em(75);
                 }
             }
 
