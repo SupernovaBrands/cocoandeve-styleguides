@@ -23,6 +23,10 @@
 
             .container.mt-lg-n5.pb-md-5 {
                 order: 1;
+
+                @include media-breakpoint-down(lg) {
+                    padding-top: calc-em(40) !important;
+                }
             }
 
             .section-real-results {

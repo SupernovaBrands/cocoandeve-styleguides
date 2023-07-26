@@ -20,4 +20,10 @@
       width: calc(100% - #{$grid-gutter-width-lg});
     }
   }
+
+  &__form {
+    .input-group-addon {
+      max-width: calc-em(80);
+    }
+  }
 }

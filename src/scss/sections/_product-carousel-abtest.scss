@@ -4,6 +4,9 @@
             .h1.d-none {
                 display: block !important;
             }
+            .carousel--centered {
+                padding-top: 10px !important;
+            }
             .nav-tabs--product {
                 border: none;
                 margin-bottom: 0 !important;
@@ -26,16 +29,18 @@
                 border-radius: 50px;
                 margin-top: calc-em(20) !important;
             }
-            
+
             .carousel-control-next {
                 @include media-breakpoint-down(lg) {
                     right: 9%;
+                    display: none;
                 }
             }
 
             .carousel-control-prev {
                 @include media-breakpoint-down(lg) {
                     left: 9%;
+                    display: none;
                 }
             }
 
@@ -54,8 +59,18 @@
             }
 
             .product-card__title {
+                min-height: calc-em(50);
                 @include media-breakpoint-down(lg) {
                     font-size: calc-em(20);
+                    min-height: calc-em(75);
+                }
+            }
+
+            .product-card__content-rating {
+                .svg {
+                    @include media-breakpoint-up(lg) {
+                        color: $body-color !important;
+                    }
                 }
             }
         }
@@ -68,8 +83,8 @@
             }
             @include media-breakpoint-down(lg) {
                 .list-unstyled.row {
-                    padding-top: 10px !important;
-                    padding-bottom: 10px !important;
+                    padding-top: 20px !important;
+                    padding-bottom: 30px !important;
 
                     li:first-child, li:nth-child(2) {
                         margin-bottom: 30px !important;
@@ -90,9 +105,40 @@
 
         .instagram {
             background-color: $pink-light !important;
+            padding-top: calc-em(50) !important;
+            padding-bottom: calc-em(24);
+            @include media-breakpoint-up(lg) {
+                padding-bottom: calc-em(34);
+            }
+            h2 {
+                @include font-size($h1-font-size, true);
+            }
 
-            img {
-                border-radius: calc-em(10);
+            &--text {
+                padding-bottom: calc-em(14) !important;
+
+                &__username {
+                    text-decoration: none !important;
+                    color: $body-color !important;
+                }
+
+                @include media-breakpoint-up(lg) {
+                    .h4 {
+                        @include font-size($font-size-base, true);
+                        font-weight: bold;
+                    }
+                }
+            }
+
+
+            &--feed {
+                padding-top: 0 !important;
+            }
+
+            @include media-breakpoint-up(lg) {
+                img {
+                    border-radius: calc-em(10);
+                }
             }
         }
 
@@ -111,8 +157,10 @@
             }
 
             .footer__hr-second {
+                border-color: $body-color;
                 @include media-breakpoint-down(lg) {
-                    border-color: $body-color;
+                    margin-bottom: 10px !important;
+                    opacity: 1;
                 }
             }
 
@@ -126,6 +174,10 @@
 
             .footer__copy {
                 margin-top: 20px !important;
+                @include media-breakpoint-down(lg) {
+                    margin-top: 10px !important;
+                    font-size: calc-em(12);
+                }
             }
 
             .footer-grid-new__newsletter-form {
@@ -152,6 +204,7 @@
                     opacity: 1;
                     @include media-breakpoint-down(lg) {
                         font-size: calc-em(16) !important;
+                        margin-top: calc-em(10) !important;
                     }
                 }
             }
@@ -165,7 +218,7 @@
             .d-flex.justify-content-center.align-items-baseline svg {
                 display: none;
             }
-            
+
             .footer-grid-nav {
                 @include media-breakpoint-down(md) {
                     grid-template-areas: "nav-shop nav-about"
@@ -178,7 +231,7 @@
                 @include media-breakpoint-down(md) {
                     &__newsletter-heading {
                         p {
-                            
+
                             font-size: calc-em(14);
                         }
                     }

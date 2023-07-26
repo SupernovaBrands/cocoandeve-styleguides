@@ -15,6 +15,14 @@ html.au-store {
 					font-weight: bold !important;
 				}
 			}
+
+			.bg-shimmer,
+			.lazy-video {
+				min-height: calc-em(365);
+				@include media-breakpoint-up(lg) {
+					min-height: calc-em(386);
+				}
+			}
 		}
 	}
 }
