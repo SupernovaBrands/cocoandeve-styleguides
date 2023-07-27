@@ -10,42 +10,6 @@ html.us-store {
 			display: none !important;
 		}
 
-		@include media-breakpoint-down(md) {
-			.review-star {
-				&__text {
-					display: none !important;
-				}
-				&__text-variant {
-					display: block !important;
-				}
-				&__wrapper {
-					@include font-size($font-size-sm);
-				}
-			}
-
-			.product-card__title a {
-				@include font-size($font-size-sm);
-			}
-
-			.product-card-btn {
-				flex-flow: row nowrap;
-				padding: map-get($spacers, 1) !important;
-
-				&__text-variant,
-				&__prices {
-					padding: 0 !important;
-				}
-
-				&__text {
-					display: none !important;
-				}
-
-				&__text-variant {
-					display: block !important;
-				}
-			}
-		}
-
 		.collection-banner--abtest {
 			display: block !important;
 		}
@@ -59,19 +23,6 @@ html.us-store {
 			@include media-breakpoint-up(lg) {
 				@include font-size($h1-font-size-lg);
 			}
-		}
-
-		.product-card__title,
-		.review-stars__number {
-			font-weight: bold !important;
-			@include media-breakpoint-down(md) {
-				text-align: left !important;
-				justify-content: start !important;
-			}
-		}
-
-		.product-card .badge--square {
-			font-weight: bold !important;
 		}
 
 		@include media-breakpoint-up(lg) {
