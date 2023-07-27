@@ -1508,10 +1508,24 @@
 			<h1 class="mb-0">Shop All</h1>
 		</figcaption>
 	</figure>
+	<figure class="d-none collection-banner position-relative align-items-center px-0 collection-banner--abtest">
+		<picture>
+			<source srcset="https://via.placeholder.com/1440x180" media="(min-width: 992px)" />
+			<img src="https://via.placeholder.com/828x290" class="w-100" alt="Collection Banner">
+		</picture>
+		<figcaption class="container">
+			<div class="px-0 col-8 col-lg-auto collection-banner__content d-flex position-absolute flex-column align-items-start justify-content-center">
+				<p class="mb-0 collection-banner__content-subtitle font-size-sm">Hair essentials</p>
+				<p class="h1 mb-0 collection-banner__content-title">Unlock the secret to flawless lock</p>
+				<a href="#" class="d-lg-none font-weight-bold text-underline">Shop Now</a>
+				<a href="#" class="d-none d-lg-block btn btn-white bg-white border-primary text-primary">Shop Now</a>
+			</div>
+		</figcaption>
+	</figure>
 	<div class="container collection-template">
 
 		<div class="row">
-			<aside class="col-3 d-none d-lg-block">
+			<aside class="col-3 d-none d-lg-block collection-template__category">
 				<span class="d-block collection-sidebar-label mb-1 mt-3"><strong>Category</strong></span>
 				<ul class="list-unstyled collection-sidebar p-2 col-8 rounded-lg">
 					<li class="mb-1"><a href="">Tan & SPF</a></li>
@@ -1522,9 +1536,26 @@
 					<li><a href="javascript:void(0)">Shop All</a></li>
 				</ul>
 			</aside>
-			<div class="col-12 col-lg-9">
+			<div class="d-none col-12 col-lg-4 offset-lg-4 collection-template__filter-dropdown">
+				<div class="dropdown collection-template__dropdown border rounded-lg">
+					<div class="dropdown-toggle d-flex justify-content-between align-items-center font-weight-bold font-size-lg px-2 py-1" id="dropdownMenuFilter" data-toggle="dropdown" role="button">
+						<div>
+							<span class="text-gray-600">Shop for</span>
+							all products
+						</div>
+						<svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.6 22.6" class="svg font-size-xs chevron-down"><path d="M1.9 5.4l9.4 9.4 9.4-9.4 1.9 1.9-11.3 11.3L0 7.3l1.9-1.9z"></path></svg>
+					</div>
+					<ul class="list-unstyled px-2 dropdown-menu border-left border-right border-bottom" aria-labelledby="dropdownMenuFilter">
+						<li><a href="#" class="px-0 dropdown-item font-weight-bold font-size-base border-top pt-g">Shampoo & Conditioner</a></li>
+						<li><a href="#" class="px-0 dropdown-item font-weight-bold font-size-base">Treatments</a></li>
+						<li><a href="#" class="px-0 dropdown-item font-weight-bold font-size-base">Hair Styling</a></li>
+						<li><a href="#" class="px-0 dropdown-item font-weight-bold font-size-base">Accessories</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-12 col-lg-9 collection-template__products">
 				<div class="row collection-grid overflow-hidden">
-					<div class="col-6 d-lg-none">
+					<div class="col-6 d-lg-none collection-template__filter">
 						<select class="p-1 rounded-lg bg-white mb-2 custom-select collection-selection-mobile">
 							<option>Filter by</option>
 							<option value="tan">Tan & SPF</option>
@@ -1544,7 +1575,7 @@
 							<option value="all">Shop All</option>
 						</select>
 					</div>
-					<div class="col-6 col-lg-5 d-lg-flex align-items-center justify-content-end">
+					<div class="col-6 col-lg-5 d-lg-flex align-items-center justify-content-end collection-template__filter">
 						<span class="sortby-label d-none d-lg-inline-block font-weight-bold mr-lg-1">Sort By</span>
 						<select class="p-1 rounded-lg mb-2 mb-lg-0 custom-select bg-white pr-1 pr-lg-3">
 							<option value="Manual">Featured</option>
@@ -1557,7 +1588,8 @@
 							<option value="created-descending">Date, new to old</option>
 						</select>
 					</div>
-					<h2 class="h1 d-none d-lg-block col-12 col-lg-7 order-lg-first align-self-center mb-0">Shop All</h2>
+					<h2 class="h1 d-none d-lg-block col-12 col-lg-7 order-lg-first align-self-center mb-0 collection-template__products-title">Shop All</h2>
+					<h2 class="h1 d-none col-12 col-lg-7 order-lg-first align-self-center mb-0 collection-template__products-title--variant">Hair</h2>
 					<div class="col-12 mt-1 mb-1">
 						<hr class=" mt-0">
 						<div class="collection-grid__tags mb-4 d-none mt-1">
@@ -1569,7 +1601,7 @@
 					</div>
 					<div class="col-12 loading collapse text-center"><div class="spinner-border mb-3" role="status" aria-label="Loading..."></div></div>
 
-					<div class=" d-flex flex-column  col-6 col-md-4 mb-5   product-card text-center  " >
+					<div class="collection-template__products-item  d-flex flex-column  col-6 col-md-4 mb-5   product-card text-center  " >
 						
 						<a href="#" class="product-card__img-link rounded-top">
 						<noscript class="loading-lazy">
@@ -1605,7 +1637,7 @@
 						</div>
 					</div>
 
-					<div class=" d-flex flex-column  col-6 col-md-4 mb-5   product-card text-center  " >
+					<div class="collection-template__products-item  d-flex flex-column  col-6 col-md-4 mb-5   product-card text-center  " >
 						<span class="badge bg-white position-absolute font-weight-normal font-size-sm">20% OFF* Code: SAVE20</span>
 						<a href="#" class="product-card__img-link rounded-top">
 						<noscript class="loading-lazy">
@@ -1664,7 +1696,7 @@
 						</div>
 					</div>
 
-					<figure class="col-12 product-card product-card--quiz col-md-4 mb-5 px-0 px-lg-g text-sm-left text-lg-center position-relative">
+					<figure class="collection-template__products-item col-12 product-card product-card--quiz col-md-4 mb-5 px-0 px-lg-g text-sm-left text-lg-center position-relative">
 						<picture class="m-0 h-100">
 					        <source media="(min-width:992px)" srcset="../images/quiz-banner-collection-dt.jpg" />
 					        <img alt="Tan Quiz" class="w-100 h-100" src="../images/quiz-banner-collection-mb.jpg" loading="lazy" />
@@ -1675,7 +1707,7 @@
 						</figcaption>
 					</figure>
 
-					<div class=" d-flex flex-column  col-6 col-md-4 mb-5   product-card text-center  " >
+					<div class="collection-template__products-item  d-flex flex-column  col-6 col-md-4 mb-5   product-card text-center  " >
 						
 						<a href="#" class="product-card__img-link rounded-top">
 						<noscript class="loading-lazy">
@@ -1734,7 +1766,7 @@
 						</div>
 					</div>
 
-					<div class=" d-flex flex-column  col-6 col-md-4 mb-5   product-card text-center  " >
+					<div class="collection-template__products-item  d-flex flex-column  col-6 col-md-4 mb-5   product-card text-center  " >
 						
 						<a href="#" class="product-card__img-link rounded-top">
 						<noscript class="loading-lazy">
@@ -1796,7 +1828,7 @@
 						</div>
 					</div>
 
-					<div class=" d-flex flex-column  col-6 col-md-4 mb-5   product-card text-center  " >
+					<div class="collection-template__products-item  d-flex flex-column  col-6 col-md-4 mb-5   product-card text-center  " >
 						
 						<a href="#" class="product-card__img-link rounded-top">
 						<noscript class="loading-lazy">
@@ -1855,7 +1887,7 @@
 						</div>
 					</div>
 
-					<div class=" d-flex flex-column  col-6 col-md-4 mb-5   product-card text-center  " >
+					<div class="collection-template__products-item  d-flex flex-column  col-6 col-md-4 mb-5   product-card text-center  " >
 						
 						<a href="#" class="product-card__img-link rounded-top">
 						<noscript class="loading-lazy">
@@ -1913,7 +1945,7 @@
 						</div>
 					</div>
 
-					<div class=" d-flex flex-column  col-6 col-md-4 mb-5   product-card text-center  " >
+					<div class="collection-template__products-item  d-flex flex-column  col-6 col-md-4 mb-5   product-card text-center  " >
 						
 						<a href="#" class="product-card__img-link rounded-top">
 						<noscript class="loading-lazy">
@@ -1971,7 +2003,7 @@
 						</div>
 					</div>
 
-					<div class=" d-flex flex-column  col-6 col-md-4 mb-5   product-card text-center  " >
+					<div class="collection-template__products-item  d-flex flex-column  col-6 col-md-4 mb-5   product-card text-center  " >
 						
 						<a href="#" class="product-card__img-link rounded-top">
 						<noscript class="loading-lazy">
@@ -2005,7 +2037,7 @@
 						</div>
 					</div>
 
-					<div class=" d-flex flex-column  col-6 col-md-4 mb-5   product-card text-center  " >
+					<div class="collection-template__products-item  d-flex flex-column  col-6 col-md-4 mb-5   product-card text-center  " >
 						
 						<a href="#" class="product-card__img-link rounded-top">
 						<noscript class="loading-lazy">
@@ -2042,7 +2074,7 @@
 						</div>
 					</div>
 
-					<div class=" d-flex flex-column  col-6 col-md-4 mb-5   product-card text-center  " >
+					<div class="collection-template__products-item  d-flex flex-column  col-6 col-md-4 mb-5   product-card text-center  " >
 						
 						<a href="#" class="product-card__img-link rounded-top">
 						<noscript class="loading-lazy">
@@ -2072,7 +2104,7 @@
 						</div>
 					</div>
 
-					<div class=" d-flex flex-column  col-6 col-md-4 mb-5   product-card text-center  " >
+					<div class="collection-template__products-item  d-flex flex-column  col-6 col-md-4 mb-5   product-card text-center  " >
 						
 						<a href="#" class="product-card__img-link rounded-top">
 						<noscript class="loading-lazy">
