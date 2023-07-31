@@ -6,7 +6,8 @@ html.us-store {
 		.collection-template__category,
 		.collection-grid__tag-wrapper,
 		.collection-grid__original,
-		.collection-template__products-title {
+		.collection-template__products-title,
+		.terms--link__original {
 			display: none !important;
 		}
 
@@ -22,6 +23,12 @@ html.us-store {
 			@include font-size($h2-font-size);
 			@include media-breakpoint-up(lg) {
 				@include font-size($h1-font-size-lg);
+			}
+		}
+
+		@include media-breakpoint-down(md) {
+			.mobile-secnav__abtest {
+				display: block !important;
 			}
 		}
 
@@ -86,6 +93,11 @@ html.us-store {
 				background: none;
 				color: $primary;
 			}
+
+			&-text {
+				border-top: 3px solid transparent;
+				border-bottom: 3px solid transparent;
+			}
 		}
 	}
 
@@ -101,8 +113,18 @@ html.us-store {
 			}
 		}
 
+		@include media-breakpoint-down(md) {
+			.collection-banner--abtest {
+				margin-bottom: map-get($spacers, 2) !important;
+			}
+		}
+
 		.collection-template__products-title--variant-v2 {
 			display: block !important;
+			@include media-breakpoint-down(md) {
+				@include font-size($h2-font-size, true);
+				margin-bottom: map-get($spacers, 2) !important;
+			}
 		}
 	}
 }
