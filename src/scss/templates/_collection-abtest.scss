@@ -93,6 +93,11 @@ html.us-store {
 				background: none;
 				color: $primary;
 			}
+
+			&-text {
+				border-top: 3px solid transparent;
+				border-bottom: 3px solid transparent;
+			}
 		}
 	}
 
