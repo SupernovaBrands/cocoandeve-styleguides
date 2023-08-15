@@ -10,7 +10,15 @@
     z-index: $zindex-fixed;
 
     &.show {
-        bottom: calc-em(90);
+        bottom: calc-em(20);
+
+        .template-product & {
+            bottom: calc-em(90);
+        }
+
+        @include media-breakpoint-up(lg) {
+            bottom: calc-em(90);
+        }
     }
 
     @include media-breakpoint-up(lg) {
