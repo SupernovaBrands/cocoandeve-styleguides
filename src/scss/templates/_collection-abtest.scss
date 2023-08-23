@@ -79,6 +79,11 @@ html.us-store {
 			z-index: $zindex-modal-backdrop;
 		}
 
+		.main-header.scrolled-down {
+			transform: none;
+			box-shadow: 0 0.25em 0.3125em #0000000f;
+		}
+
 		.collection-template {
 			&__filter-dropdown,
 			&__products-title--variant {
