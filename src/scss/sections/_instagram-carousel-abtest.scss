@@ -16,6 +16,7 @@ html.au-store {
 				}
 			}
 
+			.bg-shimmer,
 			.lazy-video {
 				min-height: calc-em(365);
 				@include media-breakpoint-up(lg) {
