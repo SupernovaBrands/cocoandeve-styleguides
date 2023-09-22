@@ -13,6 +13,12 @@
     }
   }
 
+  @include media-breakpoint-up(md) {
+    &__title {
+      @include font-size($playground-font-size);
+    }
+  }
+
   &--simple {
     display: flex !important;
 
