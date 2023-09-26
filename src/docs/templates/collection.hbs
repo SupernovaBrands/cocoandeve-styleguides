@@ -16,11 +16,11 @@
 			<h1 class="d-none mb-0">Shop All</h1>
 		</figcaption>
 	</figure>
-	{{> sections/collection-banner-abtest}}
+
 	<div class="container collection-template">
 
 		<div class="row">
-			<aside class="col-3 d-none d-lg-block collection-template__category">
+			<aside class="col-3 d-none d-lg-block">
 				<span class="d-block collection-sidebar-label mb-1 mt-3"><strong>Category</strong></span>
 				<ul class="list-unstyled collection-sidebar p-2 col-8 rounded-lg">
 					<li><a href="javascript:void(0)">Shop All</a></li>
@@ -32,10 +32,9 @@
 					<li class="mb-1"><a href="">All Accesories</a></li>
 				</ul>
 			</aside>
-			{{> compounds/collection-filter-abtest}}
 			<div class="col-12 col-lg-9 collection-template__products">
 				<div class="row collection-grid overflow-hidden">
-					<div class="col-6 d-lg-none collection-template__filter">
+					<div class="col-6 d-lg-none">
 						<select class="p-1 rounded-lg bg-white mb-2 custom-select collection-selection-mobile">
 							<option>Filter by</option>
 							<option value="all">Shop All</option>
@@ -56,7 +55,7 @@
 							<option value="all">Shop All</option>
 						</select>
 					</div>
-					<div class="col-6 col-lg-5 d-lg-flex align-items-center justify-content-end collection-template__filter">
+					<div class="col-6 col-lg-5 d-lg-flex align-items-center justify-content-end">
 						<span class="sortby-label d-none d-lg-inline-block font-weight-bold mr-lg-1">Sort By</span>
 						<select class="p-1 rounded-lg mb-2 mb-lg-0 custom-select bg-white pr-1 pr-lg-3">
 							<option value="Manual">Featured</option>
@@ -69,8 +68,7 @@
 							<option value="created-descending">Date, new to old</option>
 						</select>
 					</div>
-					<h2 class="h1 d-none d-lg-block col-12 col-lg-7 order-lg-first align-self-center mb-0 collection-template__products-title">Shop All</h2>
-					<h2 class="h1 d-none col-12 col-lg-7 order-lg-first align-self-center mb-0 collection-template__products-title--variant">Hair</h2>
+					<h2 class="h1 d-none d-lg-block col-12 col-lg-7 order-lg-first align-self-center mb-0">Shop All</h2>
 					<div class="col-12 mt-1 mb-1">
 						<div class="collection-grid__tags mb-4 d-none mt-1">
 							<a class="mr-1 py-1 px-2 text-body text-decoration-none active">All</a>
@@ -81,29 +79,29 @@
 					</div>
 					<div class="col-12 loading collapse text-center"><div class="spinner-border mb-3" role="status" aria-label="Loading..."></div></div>
 
-					{{> components/product-card-carousel additionalClass="collection-template__products-item" title="Like a Virgin Hair Masque Like a Virgin Hair Masque" compare_price="$44.90" price="$34.90" collection="true" showTip="true" }}
+					{{> components/product-card-carousel title="Like a Virgin Hair Masque Like a Virgin Hair Masque" compare_price="$44.90" price="$34.90" collection="true" showTip="true" }}
 
-					{{> components/product-card-carousel additionalClass="collection-template__products-item" collectiontemplate=true title="Like a Virgin Hair Masque" square_badge="20% OFF* Code: SAVE20" compare_price="$44.90" price="$34.90" swatch="true" swatch_style="true" badge="true" badge_image="badge-new.svg" collection="true"}}
+					{{> components/product-card-carousel collectiontemplate=true title="Like a Virgin Hair Masque" square_badge="20% OFF* Code: SAVE20" compare_price="$44.90" price="$34.90" swatch="true" swatch_style="true" badge="true" badge_image="badge-new.svg" collection="true"}}
 
-					{{> components/product-card-quiz-v2 additionalClass="collection-template__products-item" }}
+					{{> components/product-card-quiz-v2 }}
 
-					{{> components/product-card-carousel additionalClass="collection-template__products-item" collectiontemplate=true title="Like a Virgin Hair Masque" compare_price="$44.90" price="$34.90" swatch="true" swatch_style="true" collection="true"}}
+					{{> components/product-card-carousel collectiontemplate=true title="Like a Virgin Hair Masque" compare_price="$44.90" price="$34.90" swatch="true" swatch_style="true" collection="true"}}
 
-					{{> components/product-card-carousel additionalClass="collection-template__products-item" collectiontemplate=true title="Satin Eye Mask" compare_price="$44.90" price="$34.90" swatch="true" swatch_shade="true" collection="true"}}
+					{{> components/product-card-carousel collectiontemplate=true title="Satin Eye Mask" compare_price="$44.90" price="$34.90" swatch="true" swatch_shade="true" collection="true"}}
 
-					{{> components/product-card-carousel additionalClass="collection-template__products-item" collectiontemplate=true title="Like a Virgin Hair Masque" compare_price="$44.90" price="$34.90" swatch="true" swatch_style="true" badge="true" badge_image="badge-new.svg" collection="true"}}
+					{{> components/product-card-carousel collectiontemplate=true title="Like a Virgin Hair Masque" compare_price="$44.90" price="$34.90" swatch="true" swatch_style="true" badge="true" badge_image="badge-new.svg" collection="true"}}
 
-					{{> components/product-card-carousel additionalClass="collection-template__products-item" collectiontemplate=true title="Satin Eye Mask" compare_price="$44.90" price="$34.90" swatch="true" swatch_style_eyemask="true" collection="true"}}
+					{{> components/product-card-carousel collectiontemplate=true title="Satin Eye Mask" compare_price="$44.90" price="$34.90" swatch="true" swatch_style_eyemask="true" collection="true"}}
 
-					{{> components/product-card-carousel additionalClass="collection-template__products-item" collectiontemplate=true title="Smoothie Shower Gel" compare_price="$44.90" price="$34.90" swatch="true" swatch_scent="true" collection="true"}}
+					{{> components/product-card-carousel collectiontemplate=true title="Smoothie Shower Gel" compare_price="$44.90" price="$34.90" swatch="true" swatch_scent="true" collection="true"}}
 
-					{{> components/product-card-carousel additionalClass="collection-template__products-item" collectiontemplate=true title="Smoothie Shower Gel" compare_price="$44.90" price="$34.90" swatch_shade="true" swatch_scent="true" collection="true"}}
+					{{> components/product-card-carousel collectiontemplate=true title="Smoothie Shower Gel" compare_price="$44.90" price="$34.90" swatch_shade="true" swatch_scent="true" collection="true"}}
 
-					{{> components/product-card-carousel additionalClass="collection-template__products-item" collectiontemplate=true title="Shampo & Conditioner" compare_price="$44.90" price="$34.90" swatch="true" collection="true" quick_shop="true"}}
+					{{> components/product-card-carousel collectiontemplate=true title="Shampo & Conditioner" compare_price="$44.90" price="$34.90" swatch="true" collection="true" quick_shop="true"}}
 
-					{{> components/product-card-carousel additionalClass="collection-template__products-item" collectiontemplate=true title="Glow Essentials Bundle" compare_price="$44.90" price="$34.90" swatch="true" swatch_modal="true" collection="true"}}
+					{{> components/product-card-carousel collectiontemplate=true title="Glow Essentials Bundle" compare_price="$44.90" price="$34.90" swatch="true" swatch_modal="true" collection="true"}}
 
-					{{> components/product-card-carousel additionalClass="collection-template__products-item" collectiontemplate=true title="Dewy Glow Bundle" compare_price="$44.90" price="$34.90" swatch="true" swatch_modal="true" collection="true" swatch_modal_mobile="true"}}
+					{{> components/product-card-carousel collectiontemplate=true title="Dewy Glow Bundle" compare_price="$44.90" price="$34.90" swatch="true" swatch_modal="true" collection="true" swatch_modal_mobile="true"}}
 				</div>
 			</div>
 		</div>
