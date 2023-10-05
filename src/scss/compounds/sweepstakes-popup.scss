@@ -1,4 +1,4 @@
-.sweepstakes-popup {
+.modal--sweepstakes {
 	// --sweepstakes-popup-bg & --sweepstakes-popup-bg-lg set on liquid inline
 	// value based on theme settings
 	.modal-content {
@@ -6,51 +6,12 @@
 		background-size: 100%;
 		background-position: top center;
 		background-repeat: no-repeat;
-		border-radius: calc-em(22.5, $unit: 1rem);
 
 		@include media-breakpoint-up(lg) {
 			background-image: var(--sweepstakes-popup-bg-lg);
 			background-position: center;
 			background-size: cover;
 		}
-	}
-
-	.form-control {
-		border-width: 2px;
-
-		@include media-breakpoint-up(lg) {
-			border-width: 0;
-		}
-	}
-
-	.input-group-addon {
-
-		+ input {
-			flex-basis: 55%;
-
-			@include media-breakpoint-up(lg) {
-				flex-basis: 57.5%;
-			}
-		}
-
-		svg {
-			color: $gray-600;
-			height: calc-em(12);
-			right: calc-em(10);
-			top: 50%;
-			transform: translateY(-50%);
-		}
-
-		@include media-breakpoint-up(lg) {
-			border-right-width: 2px;
-		}
-	}
-
-	&__close {
-		top: $grid-gutter-width;
-		right: $grid-gutter-width;
-		cursor: pointer;
-		height: calc-em(22);
 	}
 
 	&__toc {
@@ -65,9 +26,5 @@
 		@include media-breakpoint-up(lg) {
 			min-height: calc-em(300);
 		}
-	}
-
-	select {
-		opacity: 0;
 	}
 }
