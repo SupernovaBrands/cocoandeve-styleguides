@@ -487,11 +487,11 @@ const YotpoReviewWidget = (props) => {
 			)}
 
 			<ul className="product-info-tab nav nav-tabs mt-3" role="tablist">
-				<li className="nav-item text-center flex-grow-0">
-					<a className="nav-link border-0 text-body text-decoration-none pt-0 pb-1 px-2 active" id="yotpo-widget__reviews-tab" data-toggle="tab" href="#yotpo-widget__reviews" role="tab" aria-controls="yotpo-widget__reviews" aria-selected="true">{tStrings.yotpo.reviews}</a>
+				<li className="nav-item text-center flex-grow-0" role="presentation">
+					<a className="nav-link border-0 text-body text-decoration-none pt-0 pb-1 px-2 active" id="yotpo-widget__reviews-tab" data-toggle="tab" href="#yotpo-widget__reviews" role="tab" aria-selected="true" aria-controls="yotpo-widget__reviews">{tStrings.yotpo.reviews}</a>
 				</li>
-				<li className="nav-item text-center flex-grow-0">
-					<a className="nav-link border-0 text-body text-decoration-none pt-0 pb-1 px-2" id="yotpo-widget__questions-tab" data-toggle="tab" href="#yotpo-widget__questions" role="tab" aria-controls="yotpo-widget__questions" aria-selected="false">{tStrings.yotpo.questions}</a>
+				<li className="nav-item text-center flex-grow-0" role="presentation">
+					<a className="nav-link border-0 text-body text-decoration-none pt-0 pb-1 px-2" id="yotpo-widget__questions-tab" data-toggle="tab" href="#yotpo-widget__questions" role="tab" aria-selected="false" aria-controls="yotpo-widget__questions">{tStrings.yotpo.questions}</a>
 				</li>
 			</ul>
 
@@ -551,7 +551,7 @@ const YotpoReviewWidget = (props) => {
 
 						<div className="input-group row mt-1">
 							<div className="col-6 col-lg-3">
-								<select className="custom-select my-1" name="scores" onChange={() => { onFilterChange(); }}>
+								<select className="custom-select my-1" name="scores" onChange={() => { onFilterChange(); }} aria-label="Select rating">
 									<option value="">{tStrings.yotpo.rating}</option>
 									<option value="5">5 Stars</option>
 									<option value="4">4 Stars</option>
@@ -561,14 +561,14 @@ const YotpoReviewWidget = (props) => {
 								</select>
 							</div>
 							<div className="col-6 col-lg-3">
-								<select className="custom-select my-1" name="pictured" onChange={() => { onFilterChange(); }}>
+								<select className="custom-select my-1" name="pictured" onChange={() => { onFilterChange(); }} aria-label="Select reviews">
 									<option value="">{tStrings.yotpo.imageVideo}</option>
 									<option value="true">{tStrings.yotpo.withImageVideo}</option>
 								</select>
 							</div>
 							{customFilter.map((q) => q.filter !== '' && (
 								<div key={q.slug} className="col-6 col-lg-3">
-									<select className="custom-select my-1" name={q.slug} onChange={() => { onFilterChange(); }}>
+									<select className="custom-select my-1" name={q.slug} onChange={() => { onFilterChange(); }} aria-label="Custom select">
 										<option value="">{q.filter}</option>
 										{q.options.map((o) => (
 											<option key={o} value={o}>{o.replace('/', ' / ')}</option>
@@ -616,7 +616,7 @@ const YotpoReviewWidget = (props) => {
 							<p className="font-weight-bold mb-0">{`${total} Review${total !== 1 ? 's' : ''}`}</p>
 							<div className="" role="list">
 								{reviews.map((review) => (
-									<div key={review.id} className="border-bottom py-3 row">
+									<div key={review.id} className="border-bottom py-3 row" role="listitem">
 										<div className="col-lg-3">
 											<h4 className="mb-0 d-flex align-items-center">
 												{review.user_name}
@@ -665,7 +665,7 @@ const YotpoReviewWidget = (props) => {
 												<div className="d-flex flex-nowrap row w-auto overflow-auto pr-g">
 													{review.images_data.map((image, index) => (
 														<button key={image.id} type="button" className={`d-inline-block btn-unstyled ${index === 0 ? 'ml-1 ml-lg-g mr-1' : 'mx-1'} mb-g`} data-toggle="modal" data-target="#yotpoImageModal" onClick={() => { setReviewModal(review); }}>
-															<img src={image.thumb_url.replace('https:', '')} alt={`${review.user_name} ${index}`} />
+															<img className="object-fit-contain" src={image.thumb_url.replace('https:', '')} alt={`${review.user_name} ${index}`} />
 														</button>
 													))}
 												</div>
