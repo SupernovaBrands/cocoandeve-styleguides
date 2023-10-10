@@ -1,15 +1,11 @@
-.birthday-popup {
+.modal--birthday {
+    .modal-dialog {
+        @include media-breakpoint-up(lg) {
+            min-width: calc-em(720);
+        }
+    }
+    
     .modal-content {
         background-color: $primary-light-second;
-    }
-
-    .close {
-        top: 1em;
-        right: 1em;
-        z-index: $zindex-sticky;
-    }
-
-    .svg {
-        height: calc-em(26);
     }
 }

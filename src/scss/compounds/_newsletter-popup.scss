@@ -34,7 +34,7 @@
     }
 }
 
-.newsletter-bigger-popup {
+.modal--newsletter {
     @include media-breakpoint-up(lg) {
         .modal-lg {
             min-width: calc-em(771);
@@ -46,12 +46,6 @@
         }
     }
 
-    @include media-breakpoint-down(md) {
-        .modal-body {
-            padding-top: calc-em(160);
-        }
-    }
-
     &__completed {
         min-height: calc-em(400);
     }
@@ -60,46 +54,4 @@
         font-size: calc-em(10, 16);
         margin-left: calc-em(10, 16);
     }
-
-    .close {
-        top: 1em;
-        right: 1em;
-        z-index: $zindex-sticky;
-
-        @include media-breakpoint-up(lg) {
-            color: #fff;
-        }
-
-        .svg {
-            height: calc-em(26);
-        }
-    }
-
-
-    select {
-        opacity: 0;
-    }
-
-    .input-group-addon {
-
-		+ input {
-			flex-basis: 55%;
-
-			@include media-breakpoint-up(lg) {
-				flex-basis: 57.5%;
-			}
-		}
-
-		svg {
-			color: $gray-600;
-			height: calc-em(12);
-			right: calc-em(10);
-			top: 50%;
-			transform: translateY(-50%);
-		}
-
-		@include media-breakpoint-up(lg) {
-			border-right-width: 2px;
-		}
-	}
 }

@@ -3,12 +3,6 @@
 		max-width: 630px;
 	}
 
-	&__close {
-		top: map-get($spacers, 2);
-		right: map-get($spacers, 2);
-		cursor: pointer;
-	}
-
 	figcaption {
 		top: 0;
 		bottom: 0;

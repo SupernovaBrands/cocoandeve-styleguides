@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {{> html-head title="Modal Waitlist" }}
+</head>
+
+<body>
+	<div class="container mt-4">
+		<h1>Modal Waitlist</h1>
+        <button class="btn btn-primary mb-4" data-toggle="modal" data-target="#productWaitlist">Launch Modal</button>
+        
+
+		<h1>Modal Newsletter</h1>
+        <button class="btn btn-primary mb-4" data-toggle="modal" data-target="#newsletterModal">Launch Modal</button>
+
+        <h1>Sweepstakes Signup Popup</h1>
+		<button type="button" class="btn btn-primary mb-4" data-toggle="modal" data-target="#sweepstakesModal">Launch modal</button>
+
+        <h1>Exit intent</h1>
+		<button type="button" class="btn btn-primary mb-4" data-toggle="modal" data-target="#exit-intent-popup">Launch modal</button>
+
+        <h1>Birthday</h1>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#birthdayModal">Launch modal</button>
+
+		{{>compounds/birthday-popup}}
+        {{>compounds/modal-waitlist}}
+        {{>compounds/newsletter-popup}}
+        {{>compounds/sweepstakes-popup}}
+        {{>compounds/exit-intent }}
+    </div>
+  {{> js jquery=true bootstrap=true main=true }}
+</body>
+</html>
