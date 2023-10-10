@@ -169,9 +169,6 @@ input[type=submit].btn-block{width:100%}
 }
 .bg-shimmer{background:#a3a3a3;background:linear-gradient(130deg,#a3a3a3 33%,#faf9f9 50%,#a3a3a3 67%);background-size:1000% 1000%;-webkit-animation:2.5s infinite gradient-shimmer;animation:2.5s infinite gradient-shimmer}
 .bg-shimmer img{opacity:0}
-@media only percy{
-.cookies-banner{display:none!important}
-}
 .svg{height:1em}
 .svg path{fill:currentColor}
 .btn-lg{border-width:2px}
@@ -210,7 +207,6 @@ input[type=submit].btn-block{width:100%}
 .nav-link.cart{flex-basis:20%}
 .nav-link.cart .svg{font-size:1.5625em}
 .nav-link.cart .cart-drawer__count{font-family:Arial,Helvetica,sans-serif;position:absolute;top:50%;left:50%;transform:translate(-50%,-7.5%);line-height:1}
-.cookies-banner:not(.cookies-banner--bottom){display:none!important}
 .navbar-nav--right{flex-basis:30%}
 .navbar-nav--right .nav-link.search .svg{font-size:1.5625em}
 }
