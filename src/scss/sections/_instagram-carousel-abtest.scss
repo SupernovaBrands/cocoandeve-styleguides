@@ -1,4 +1,5 @@
-html.au-store {
+html.au-store,
+html.us-store {
 	.homepage--abtest {
 		.real-result--original {
 			display: none !important;
@@ -16,6 +17,7 @@ html.au-store {
 				}
 			}
 
+			.bg-shimmer,
 			.lazy-video {
 				min-height: calc-em(365);
 				@include media-breakpoint-up(lg) {

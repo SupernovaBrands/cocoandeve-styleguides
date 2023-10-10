@@ -1,4 +1,5 @@
-.au-store {
+.au-store,
+.us-store {
     .homepage--abtest {
         .product-carousel {
             .h1.d-none {
@@ -59,8 +60,10 @@
             }
 
             .product-card__title {
+                min-height: calc-em(50);
                 @include media-breakpoint-down(lg) {
                     font-size: calc-em(20);
+                    min-height: calc-em(75);
                 }
             }
 
