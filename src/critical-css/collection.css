@@ -202,7 +202,6 @@ to{transform:rotate(360deg)}
 .bg-shimmer img{opacity:0}
 @media only percy{
 [loading=lazy],picture.embed-responsive{visibility:hidden!important}
-.cookies-banner{display:none!important}
 }
 .svg{height:1em}
 .svg path{fill:currentColor}
@@ -251,7 +250,6 @@ to{transform:rotate(360deg)}
 .mobile-nav__menu li{padding-top:.3125em;padding-bottom:.3125em}
 .mobile-nav__menu a:not(.btn){color:#151515}
 @media (max-width:991.98px){
-.cookies-banner:not(.cookies-banner--bottom){display:none!important}
 .navbar-nav--right{flex-basis:30%}
 .product-card__content{padding-left:.3125em!important;padding-right:.3125em!important}
 }

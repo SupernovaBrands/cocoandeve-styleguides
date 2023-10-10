@@ -236,24 +236,4 @@
             max-height: calc(100vh - 1.5rem);
         }
     }
-
-    .cookies-banner-show .search-panel {
-        &__home,
-        &__result {
-            padding-bottom: calc-em(117);
-
-            @include media-breakpoint-down(md) {
-                max-height: calc(100vh - calc(4 * 4rem));
-            }
-        }
-    }
-
-    .cookies-banner-show--expanded .search-panel {
-        &__home,
-        &__result {
-            @include media-breakpoint-down(md) {
-                max-height: calc(100vh - calc(6 * 4rem));
-            }
-        }
-    }
 }
