@@ -1,16 +1,14 @@
-<div class="modal fade" id="productWaitlist" tabindex="-1" role="dialog" aria-labelledby="productWaitlist"
+<div class="modal modal--launch-waitlist fade" id="productWaitlist" tabindex="-1" role="dialog" aria-labelledby="productWaitlist"
     aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered waitlist-modal" role="document">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
         <div class="modal-content text-center mx-auto">
-            <div class="modal-header d-flex align-items-center flex-column border-bottom-0">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <div class="modal-body p-3 p-lg-4">
+                <button type="button" class="close position-absolute font-size-sm" data-dismiss="modal" aria-label="Close">
                     <img class="svg" src="icons/close.svg" replace-to-svg />
                 </button>
                 <p class="h1 mx-auto mb-1">Join the waitlist</p>
-                <p class="mb-0">Be the first to get the new Coco &amp; Pooch drop alert. Be quick, it will sell out
+                <p class="mb-2 ">Be the first to get the new Coco &amp; Pooch drop alert. Be quick, it will sell out
                     fast!</p>
-            </div>
-            <div class="modal-body pt-0">
                 <form data-pdp="false" data-product-id="product-id" novalidate>
                     <div class="row">
                         <div class="input-group col mb-1">
@@ -21,14 +19,34 @@
                     </div>
                     <span class="d-block mb-1">or</span>
                     <div class="row">
-                        <div class="input-group mb-1 col-4 col-lg-2">
-                            <span class="masking-select position-absolute rounded border-0">Country</span>
-                            {{> components/countries-options }}
-                        </div>
-                        <div class="input-group mb-1 col-8 col-lg-10 pl-0">
-                            <label id="phoneNumberLabel" for="phoneNumber" class="sr-only">Phone Number</label>
-                            <input id="phoneNumber" class="form-control border-0" type="text" name="phone"
-                                placeholder="Enter your phone number" aria-labelledby="phoneNumberLabel" />
+                        <div class="input-group col mb-1">
+                            <label for="modal--newsletter__country" class="input-group-addon form-control">
+                                <span class="position-absolute modal--newsletter__country-label align-items-center">+65</span>
+                                <img class="svg position-absolute" src="icons/chevron-down.svg" replace-to-svg />
+                                <select id="modal--newsletter__country" class="custom-select">
+                                    <option value="" disabled="">Select Country</option>
+                                    <option value="KH" data-code="855">Cambodia</option>
+                                    <option value="HK" data-code="852">Hong Kong</option>
+                                    <option value="IL" data-code="972">Israel</option>
+                                    <option value="JP" data-code="81">Japan</option>
+                                    <option value="KR" data-code="82">South Korea</option>
+                                    <option value="LA" data-code="856">Laos</option>
+                                    <option value="MO" data-code="853">Macau</option>
+                                    <option value="MY" data-code="60">Malaysia</option>
+                                    <option value="MV" data-code="960">Maldives</option>
+                                    <option value="MM" data-code="95">Myanmar</option>
+                                    <option value="PG" data-code="675">Papua New Guinea</option>
+                                    <option value="PH" data-code="63">Philippines</option>
+                                    <option value="RE" data-code="262">Réunion</option>
+                                    <option value="RU" data-code="7">Russia</option>
+                                    <option value="SG" data-code="65" selected="">Singapore</option>
+                                    <option value="LK" data-code="94">Sri Lanka</option>
+                                    <option value="TW" data-code="886">Taiwan</option>
+                                    <option value="TR" data-code="90">Turkey</option>
+                                    <option value="VN" data-code="84">Vietnam</option>
+                                </select>
+                            </label>
+                            <input id="modal--newsletter__phone" class="form-control border-left-0 mb-1" type="tel" placeholder="Phone number" aria-label="phone">
                         </div>
                         <small class="col-12 text-danger phone-error d-none">Please enter a valid phone number</small>
                     </div>
