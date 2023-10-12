@@ -29,7 +29,7 @@ jobs:
           COMMIT_EMAIL: lusia.purnama@supernovabrands.com
           COMMIT_NAME: Lusia Kristiana Purnama
           ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BASE_BRANCH: master
+          BASE_BRANCH: staging
           DEPLOY_BRANCH: gh-pages
           BUILD_SCRIPT: npm install && npm run build
           FOLDER: dist
