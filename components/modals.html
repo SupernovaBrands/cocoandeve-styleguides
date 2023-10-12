@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Modal Waitlist | Coco &amp; Eve Style Guides</title>
+  
+  <link rel="stylesheet" href="/cocoandeve-styleguides/css/main.css">
+</head>
+
+<body>
+	<div class="container mt-4">
+		<h1>Modal Waitlist</h1>
+        <button class="btn btn-primary mb-4" data-toggle="modal" data-target="#productWaitlist">Launch Modal</button>
+        
+
+		<h1>Modal Newsletter</h1>
+        <button class="btn btn-primary mb-4" data-toggle="modal" data-target="#newsletterModal">Launch Modal</button>
+
+        <h1>Sweepstakes Signup Popup</h1>
+		<button type="button" class="btn btn-primary mb-4" data-toggle="modal" data-target="#sweepstakesModal">Launch modal</button>
+
+        <h1>Exit intent</h1>
+		<button type="button" class="btn btn-primary mb-4" data-toggle="modal" data-target="#exit-intent-popup">Launch modal</button>
+
+        <h1>Birthday</h1>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#birthdayModal">Launch modal</button>
+
+		<div class="modal fade modal--birthday" id="birthdayModal" tabindex="-1" role="dialog">
+		    <div class="modal-dialog modal-lg modal-dialog-centered mx-g mx-lg-auto" role="document">
+		        <div class="modal-content position-relative  overflow-hidden">
+		            <div class="modal-body p-0">
+		                <button type="button" class="close position-absolute font-size-sm" data-dismiss="modal">
+		                    <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" class="svg"><path d="M12 1l-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1-5-5z"></path></svg>
+		                </button>
+		                <div class="row justify-content-end p-0 mx-0">
+		                    <picture class="w-100 col-lg-6 p-0">
+		                        <source srcset="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/DT_db2c8f07-cfcd-47af-b159-d2507acf8e92.png" media="(min-width: 992px)" />
+		                        <img src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/Mobile_29349535-f982-4299-8c2c-ce6aa5b74ae7.png" class="w-100">
+		                    </picture>
+		                    <form class="col-lg-6 pt-lg-5 pb-5 px-3 px-lg-4">
+		                        <h2 class="h1 text-center mb-1">Don’t forget your birthday gift!</h2>
+		                        <p class="font-size-sm mb-3 text-center ">Tell us your birthday and enjoy $10 off to celebrate!</p>
+		                        <div class="row px-g">
+		                            <div class="input-group form-group col-5 col-lg-6 pl-0">
+		                                <input class="form-control" type="number" placeholder="Date" required="">
+		                            </div>
+		                            <div class="input-group form-group col-7 col-lg-6 pl-0">
+		                                <select class="custom-select"  required="">
+		                                    <option selected="">Select</option>
+		                                    <option>1</option>
+		                                    <option>2</option>
+		                                    <option>3</option>
+		                                </select>
+		                            </div>
+		                        </div>
+		                        <div class="row px-g">
+		                            <button class="btn btn-lg btn-block bg-primary text-white mr-lg-g">Submit</button>
+		                        </div>
+		                    </form>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</div>        <div class="modal modal--launch-waitlist fade" id="productWaitlist" tabindex="-1" role="dialog" aria-labelledby="productWaitlist"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                <div class="modal-content text-center mx-auto">
+                    <div class="modal-body p-3 p-lg-4">
+                        <button type="button" class="close position-absolute font-size-sm" data-dismiss="modal" aria-label="Close">
+                            <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" class="svg"><path d="M12 1l-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1-5-5z"></path></svg>
+                        </button>
+                        <p class="h1 mx-auto mb-1">Join the waitlist</p>
+                        <p class="mb-2 ">Be the first to get the new Coco &amp; Pooch drop alert. Be quick, it will sell out
+                            fast!</p>
+                        <form data-pdp="false" data-product-id="product-id" novalidate>
+                            <div class="row">
+                                <div class="input-group col mb-1">
+                                    <input class="form-control border-0" type="email" name="email"
+                                        placeholder="Enter your email">
+                                </div>
+                                <small class="col-12 text-danger email-error d-none">Please enter a valid email address</small>
+                            </div>
+                            <span class="d-block mb-1">or</span>
+                            <div class="row">
+                                <div class="input-group col mb-1">
+                                    <label for="modal--newsletter__country" class="input-group-addon form-control">
+                                        <span class="position-absolute modal--newsletter__country-label align-items-center">+65</span>
+                                        <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.6 22.6" class="svg position-absolute"><path d="M1.9 5.4l9.4 9.4 9.4-9.4 1.9 1.9-11.3 11.3L0 7.3l1.9-1.9z"></path></svg>
+                                        <select id="modal--newsletter__country" class="custom-select">
+                                            <option value="" disabled="">Select Country</option>
+                                            <option value="KH" data-code="855">Cambodia</option>
+                                            <option value="HK" data-code="852">Hong Kong</option>
+                                            <option value="IL" data-code="972">Israel</option>
+                                            <option value="JP" data-code="81">Japan</option>
+                                            <option value="KR" data-code="82">South Korea</option>
+                                            <option value="LA" data-code="856">Laos</option>
+                                            <option value="MO" data-code="853">Macau</option>
+                                            <option value="MY" data-code="60">Malaysia</option>
+                                            <option value="MV" data-code="960">Maldives</option>
+                                            <option value="MM" data-code="95">Myanmar</option>
+                                            <option value="PG" data-code="675">Papua New Guinea</option>
+                                            <option value="PH" data-code="63">Philippines</option>
+                                            <option value="RE" data-code="262">Réunion</option>
+                                            <option value="RU" data-code="7">Russia</option>
+                                            <option value="SG" data-code="65" selected="">Singapore</option>
+                                            <option value="LK" data-code="94">Sri Lanka</option>
+                                            <option value="TW" data-code="886">Taiwan</option>
+                                            <option value="TR" data-code="90">Turkey</option>
+                                            <option value="VN" data-code="84">Vietnam</option>
+                                        </select>
+                                    </label>
+                                    <input id="modal--newsletter__phone" class="form-control border-left-0 mb-1" type="tel" placeholder="Phone number" aria-label="phone">
+                                </div>
+                                <small class="col-12 text-danger phone-error d-none">Please enter a valid phone number</small>
+                            </div>
+                            <div class="row">
+                                <div class="custom-control custom-checkbox col d-flex justify-content-center my-1">
+                                    <input type="checkbox" name="tos" class="custom-control-input" required id="agreement" />
+                                    <label class="custom-control-label font-size-sm text-underline" for="agreement">I agree to Privacy Policy &amp; ToS</label>
+                                </div>
+                                <small class="col-12 text-danger terms-error d-none">You have not agreed to the Privacy Policy & ToS</small>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col mt-1">
+                                    <input class="btn btn-lg btn-primary btn-block" type="submit" value="Submit form" />
+                                </div>
+                            </div>
+                            <p class="font-size-xs">By signing up via text you agree to receive recurring automated marketing
+                                messages at the phone number provided. Consent is not a condition of purchase. Reply STOP to
+                                unsubscribe. HELP for help. Msg & Data rates may apply. View Privacy Policy & ToS.</p>
+                        </form>
+                        <div class="subscribed d-none p-4">
+                            <p class="h1"><b>April Fools!</b></p>
+                            <p class="pb-2">Use <b>GOTCHA10</b> for 10% off your order today (for real this time).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade modal--newsletter" id="newsletterModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg modal-dialog-centered mx-g mx-lg-auto" role="document">
+                <div class="modal-content bg-secondary position-relative  overflow-hidden">
+                    <picture class="position-absolute w-100">
+                        <source srcset="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/Rectangle_2241.png?v=1696414159" media="(min-width: 992px)" />
+                        <img src="https://cdn.shopify.com/s/files/1/0073/5186/1332/files/newsletter-bigger-mobile.png?v=1646639302" class="w-100">
+                    </picture>
+                    <div class="modal-body px-0 pb-3 py-lg-4">
+                        <button type="button" class="close position-absolute font-size-sm text-white" data-dismiss="modal">
+                            <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" class="svg"><path d="M12 1l-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1-5-5z"></path></svg>
+                        </button>
+                        <div class="row justify-content-end mx-0">
+                            <form class="modal--newsletter__form col-lg-6 pr-lg-4 pr-3 pl-3 pl-lg-0">
+                                <h2 class="modal--newsletter__title h1 text-center text-white mb-0">Join the club</h2>
+                                <p class="font-size-lg text-white font-weight-bold text-center">& get a FREE hair wrap!</p>
+                                <p class="text-white text-white font-size-sm mb-g text-center">Get a FREE hair wrap on your first order, plus first access to new product launches, exclusive offers, routines, and beauty tips.</p>
+                                <div class="input-group mb-0">
+                                    <input id="modal--newsletter__email" class="form-control" type="email" placeholder="Email" aria-label="email">
+                                </div>
+                                <p class="text-center modal--newsletter__separator text-white mb-1 mt-1">and / or</p>
+                                <div class="input-group">
+                                    <label for="modal--newsletter__country" class="input-group-addon form-control">
+                                        <span class="position-absolute modal--newsletter__country-label align-items-center">+65</span>
+                                        <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.6 22.6" class="svg position-absolute"><path d="M1.9 5.4l9.4 9.4 9.4-9.4 1.9 1.9-11.3 11.3L0 7.3l1.9-1.9z"></path></svg>
+                                        <select id="modal--newsletter__country" class="custom-select">
+                                            <option value="" disabled="">Select Country</option>
+                                            <option value="KH" data-code="855">Cambodia</option>
+                                            <option value="HK" data-code="852">Hong Kong</option>
+                                            <option value="IL" data-code="972">Israel</option>
+                                            <option value="JP" data-code="81">Japan</option>
+                                            <option value="KR" data-code="82">South Korea</option>
+                                            <option value="LA" data-code="856">Laos</option>
+                                            <option value="MO" data-code="853">Macau</option>
+                                            <option value="MY" data-code="60">Malaysia</option>
+                                            <option value="MV" data-code="960">Maldives</option>
+                                            <option value="MM" data-code="95">Myanmar</option>
+                                            <option value="PG" data-code="675">Papua New Guinea</option>
+                                            <option value="PH" data-code="63">Philippines</option>
+                                            <option value="RE" data-code="262">Réunion</option>
+                                            <option value="RU" data-code="7">Russia</option>
+                                            <option value="SG" data-code="65" selected="">Singapore</option>
+                                            <option value="LK" data-code="94">Sri Lanka</option>
+                                            <option value="TW" data-code="886">Taiwan</option>
+                                            <option value="TR" data-code="90">Turkey</option>
+                                            <option value="VN" data-code="84">Vietnam</option>
+                                        </select>
+                                    </label>
+                                    <input id="modal--newsletter__phone" class="form-control border-left-0 mb-1" type="tel" placeholder="Phone number" aria-label="phone">
+                                </div>
+                                <input type="submit" class="btn btn-lg btn-primary btn-block" value="Submit" />
+                                <p class="font-size-xs text-white mt-g text-center mb-0 mx-1">Receive exclusive offers via email or automated marketing SMS (4/mth). For more info see our Privacy Policy (opt out any time). Msg & data rates may apply. Consent not required for purchase.</p>
+                            </form>
+                            <div class="modal--newsletter__completed col-lg-6 d-none align-items-center justify-content-center">
+                                <div class="d-flex flex-wrap justify-content-center">
+                                    <h2 class="modal--newsletter__title h1 text-center text-white">🎉<br>Sign-up successful! </h2>
+                                    <h3 class="modal--newsletter__title text-center text-white mb-g">Use code for your gift!</h3>
+                                    <button class="btn btn-lg btn-block bg-white text-primary">COPY: FREEWRAP <svg width="13" height="15" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg"><path d="M8.111 15H2.516a2.346 2.346 0 0 1-2.344-2.344v-7.94a2.346 2.346 0 0 1 2.344-2.343H8.11a2.346 2.346 0 0 1 2.344 2.344v7.94A2.346 2.346 0 0 1 8.111 15ZM2.516 3.545c-.647 0-1.172.526-1.172 1.172v7.94c0 .645.525 1.171 1.172 1.171H8.11c.646 0 1.172-.526 1.172-1.172v-7.94c0-.645-.526-1.171-1.172-1.171H2.516Zm10.283 7.646V2.344A2.346 2.346 0 0 0 10.455 0H3.951a.586.586 0 1 0 0 1.172h6.504c.646 0 1.172.526 1.172 1.172v8.847a.586.586 0 1 0 1.172 0Z" fill="#F4436C"></path></svg></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade modal--sweepstakes" id="sweepstakesModal" tabindex="-1" role="dialog" aria-labelledby="sweepstakesModalTitle" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                <div class="modal-content mx-g mx-lg-4">
+                    <div class="modal-body px-3 px-lg-4 py-3 py-lg-4">
+                        <div class="modal--sweepstakes__heading row justify-content-end mb-3 mb-lg-g">
+                            <div class="col-9 col-lg-8 pl-lg-0 text-center text-secondary pr-0 pr-lg-g">
+                                <h2 class="modal--sweepstakes__title h1 font-weight-bold mt-1 mt-lg-1 mb-0 mb-lg-0">Win $500 of products</h2>
+                                <p class="mb-lg-0 mt-lg-1">and exclusive savings on our Black Friday Deals and<br class="d-lg-none">future offers!</p>
+                            </div>
+                        </div>
+                        <button type="button" class="close position-absolute font-size-sm" data-dismiss="modal">
+                            <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" class="svg"><path d="M12 1l-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1-5-5z"></path></svg>
+                        </button>
+                        <div class="row justify-content-end">
+                            <form class="modal--sweepstakes__form col-lg-8 pl-lg-0 mt-1 mt-lg-0" data-thank-you-message="You are in!">
+                                <div class="input-group form-group mb-25">
+                                    <input id="modal--sweepstakes__email" class="form-control" type="email" placeholder="Email">
+                                </div>
+                                <div id="email-error" class="d-none input-error text-danger font-size-xs">Please enter a valid email address</div>
+                                <div class="form-group text-center mb-25 modal--sweepstakes__separator text-secondary">and / or</div>
+                                <div class="input-group form-group mb-g">
+                                    <label for="modal--sweepstakes__country" class="input-group-addon form-control">
+                                        <span class="position-absolute modal--sweepstakes__country-label align-items-center">+65</span>
+                                        <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.6 22.6" class="svg position-absolute"><path d="M1.9 5.4l9.4 9.4 9.4-9.4 1.9 1.9-11.3 11.3L0 7.3l1.9-1.9z"></path></svg>
+                                        <select id="modal--sweepstakes__country" class="custom-select">
+                                            <option value="" disabled="">Select Country</option>
+                                            <option value="KH" data-code="855">Cambodia</option>
+                                            <option value="HK" data-code="852">Hong Kong</option>
+                                            <option value="IL" data-code="972">Israel</option>
+                                            <option value="JP" data-code="81">Japan</option>
+                                            <option value="KR" data-code="82">South Korea</option>
+                                            <option value="LA" data-code="856">Laos</option>
+                                            <option value="MO" data-code="853">Macau</option>
+                                            <option value="MY" data-code="60">Malaysia</option>
+                                            <option value="MV" data-code="960">Maldives</option>
+                                            <option value="MM" data-code="95">Myanmar</option>
+                                            <option value="PG" data-code="675">Papua New Guinea</option>
+                                            <option value="PH" data-code="63">Philippines</option>
+                                            <option value="RE" data-code="262">Réunion</option>
+                                            <option value="RU" data-code="7">Russia</option>
+                                            <option value="SG" data-code="65" selected="">Singapore</option>
+                                            <option value="LK" data-code="94">Sri Lanka</option>
+                                            <option value="TW" data-code="886">Taiwan</option>
+                                            <option value="TR" data-code="90">Turkey</option>
+                                            <option value="VN" data-code="84">Vietnam</option>
+                                        </select>
+                                    </label>
+                                    <input id="modal--sweepstakes__phone" class="form-control border-left-0" type="tel" placeholder="Phone number">
+                                </div>
+                                <button type="submit" class="btn btn-lg btn-primary btn-block">Submit</button>
+                                <p class="modal--sweepstakes__toc font-size-sm text-center mt-1 mb-0 font-size-sm">By signing up, you agree to receive exclusive offers via email or automated marketing SMS (4/mth). For more info see our Privacy Policy (opt out any time). Msg & data rates may apply. </p>
+                            </form>
+                            <div class="modal--sweepstakes__thank-you text-center col-lg-6 d-none flex-column align-items-center justify-content-center mt-1 mb-5 my-lg-5 text-secondary">
+                                <h3 class="mb-g modal--sweepstakes__title font-weight-bold h1">You’re in!</h3>
+                                <p class="mb-3">Stay tuned for our biggest sale ever!</p>
+                                <a href="#" class="btn btn-lg btn-primary btn-block">Shop now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        <div class="modal fade exit-intent-popup" id="exit-intent-popup" tabindex="-1" role="dialog" aria-hidden="true">
+        	<div class="modal-dialog modal-dialog-centered">
+        		<div class="modal-content overflow-hidden border-0">
+        			<div class="modal-body p-0">
+        				<figure class="m-0 position-relative">
+        					<img src="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/d17ae0b2-d981-4cab-7c69-d70ea2ab7e00/public" class="w-100" />
+        					<figcaption class="position-absolute text-white  p-3 p-lg-4 d-flex flex-column justify-content-center text-center">
+        						<p class="exit-intent-popup__title font-weight-bold mb-2">OUR BIGGEST<br>SALE EVER</p>
+        						<p class="d-flex align-items-center">
+        							<span class="exit-intent-popup__upto font-weight-bold mr-g mb-25">UP<br>TO</span>
+        							<span class="exit-intent-popup__discount font-weight-bold">50% OFF</span>
+        						</p>ex
+        						<p class="exit-intent-popup__text h4">Dont’s miss out!</p>
+        						<button class="btn btn-primary btn-lg btn-block" data-dismiss="modal">Count me in</button>
+        					</figcaption>
+        				</figure>
+        				<button type="button" class="close position-absolute font-size-sm text-white" data-dismiss="modal">
+                            <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" class="svg"><path d="M12 1l-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1-5-5z"></path></svg>
+                        </button>
+        			</div>
+        		</div>
+        	</div>
+        </div>    </div>
+  <script src="/cocoandeve-styleguides/js/globals.js"></script>
+  <script src="/cocoandeve-styleguides/js/lazyload.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+  <script src="/cocoandeve-styleguides/js/bootstrap.js"></script>
+  <script src="/cocoandeve-styleguides/js/main.js"></script>
+</body>
+</html>
