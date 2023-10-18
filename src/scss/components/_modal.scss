@@ -1,3 +1,44 @@
-.modal .close {
-	opacity: 1;
+.modal {
+	.close {
+		opacity: 1;
+		top: 1em;
+        right: 1em;
+        z-index: $zindex-sticky;
+	}
+
+	.modal-content {
+		border-radius: calc-em(20);
+	}
+
+	.modal-body {
+		@include media-breakpoint-down(lg) {
+			padding-top: calc-em(160);
+		}
+	}
+
+	.input-group-addon {
+		select {
+			opacity: 0;
+		}
+
+		+ input {
+			flex-basis: 55%;
+
+			@include media-breakpoint-up(lg) {
+				flex-basis: 57.5%;
+			}
+		}
+
+		svg {
+			color: $gray-600;
+			height: calc-em(12);
+			right: calc-em(10);
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		@include media-breakpoint-up(lg) {
+			border-right-width: 2px;
+		}
+	}
 }
