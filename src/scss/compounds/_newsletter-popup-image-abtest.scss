@@ -1,0 +1,11 @@
+html.us-store {
+    .newsletter-abtest-active .modal--newsletter {
+        picture.d-none {
+            display: flex !important;
+        }
+
+        picture:not(.d-none) {
+            display: none;
+        }
+    }
+}
