@@ -43,10 +43,6 @@
 				top: calc-em(51);
 			}
 
-			.template-index .scrolled-down & {
-				top: calc-em(160);
-			}
-
 			&:not(.dropdown-menu__logged-in) {
 				@include media-breakpoint-up(lg) {
 					width: calc-em(330);
