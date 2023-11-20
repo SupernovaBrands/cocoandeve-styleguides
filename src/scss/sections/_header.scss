@@ -63,13 +63,7 @@
 		}
 	}
 
-	&.scrolled-down {
-		transform: translateY(-100%);
-		transition: all 0.1s ease-in-out;
-		position: fixed;
-	}
-
-	&.scrolled-up {
+	&.scrolled {
 		transition: all 0.4s ease-in-out, right 0s;
 		top: 0;
 		right: 0;
@@ -248,7 +242,7 @@
 }
 
 .modal-open {
-	.scrolled-up {
+	.scrolled {
 		@include media-breakpoint-up('lg') {
 			right: 15px;
 			transition: right 0s;
