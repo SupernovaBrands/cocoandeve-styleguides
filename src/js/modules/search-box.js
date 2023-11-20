@@ -45,7 +45,7 @@ const SearchBox = {
 		$('body').toggleClass('search-panel-active');
 		if (SearchBox.isSearchOpen()) {
 			$('.search-panel input[name="q"]').focus();
-			$('.main-header').addClass('scrolled-up').removeClass('scrolled-down');
+			$('.main-header').addClass('scrolled');
 		}
 	},
 	keywordListener(input) {

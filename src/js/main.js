@@ -361,24 +361,21 @@ $(document).ready(function () {
 
 		if (!isSearchOpen) {
 			if (scrollTop < lastScrollTop) {
-				navbarEl.removeClass('scrolled-down').addClass('scrolled-up');
+				navbarEl.addClass('scrolled');
 				if (scrollTop <= 0) {
 					// remove scrolled up for mobile menu show properly
-					navbarEl.removeClass('scrolled-up');
+					navbarEl.removeClass('scrolled');
 				}
 			} else if (scrollTop <= 0) {
 				// safari fix bounce effect
-				navbarEl.removeClass('scrolled-up');
+				navbarEl.removeClass('scrolled');
 			} else {
-				navbarEl.removeClass('scrolled-up').addClass('scrolled-down');
-				if (document.querySelector('.desktop-nav--abtest-v2')) {
-					navbarEl.addClass('scrolled-up').removeClass('scrolled-down');
-				}
+				navbarEl.addClass('scrolled');
 			}
 
 			lastScrollTop = scrollTop;
 		} else {
-			navbarEl.removeClass('scrolled-down scrolled-up');
+			navbarEl.removeClass('scrolled');
 		}
 	});
 
@@ -387,8 +384,7 @@ $(document).ready(function () {
 		document.body.classList.toggle('sidebar-menu-show');
 		document.querySelector('.nav-sidebar--abtest__toggle').classList.toggle('open');
 		const header = document.querySelector('.main-header');
-		header.classList.remove('scrolled-down');
-		header.classList.add('scrolled-up');
+		header.classList.add('scrolled');
 	});
 
 	$('.nav-item--mega-menu').hover(function () {
