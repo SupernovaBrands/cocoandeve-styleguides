@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import SvgChevronPrev from '~svg/chevron-prev.svg';
 import SvgChevronNext from '~svg/chevron-next.svg';
 import BaliBeauty from '~svg/swell-bali-beauty.svg';
@@ -6,6 +6,7 @@ import SwellRedemptionCard from '~comp/swell/cart-swell-redemption-card';
 import SwellTooltip from '~svg/swell-tooltip.svg';
 
 import swellDummyItems from '~mod/swell-data-sample';
+import { handleSwipe } from '../../modules/utils';
 
 const CartSwellRedemption = () => {
 	const swellRef = useRef(null);
@@ -21,6 +22,11 @@ const CartSwellRedemption = () => {
 	};
 	const itemAdded = (val) => setItemRedeemed(val);
 	const showError = (val) => setErrorMessage(val);
+
+	useEffect(() => {
+		handleSwipe(document.querySelector('.cart-drawer .swell-container'), scroll);
+	}, [swellRef]);
+
 	return (
 		<>
 			<div className="position-relative">
@@ -28,15 +34,15 @@ const CartSwellRedemption = () => {
 				{errorMessage && (
 					<p className="font-size-sm text-primary mb-g">You can only redeem 1 reward per order. Remove the current reward first before swapping to another one.</p>
 				)}
-				<button className="position-absolute btn-unstyled text-primary manual-gwp__left mr-3" aria-hidden="true" type="button" onClick={() => scroll('left')}>
-					<SvgChevronPrev class="svg" />
+				<button className="position-absolute btn-unstyled text-primary arrow__left mr-3 d-none d-lg-block" aria-hidden="true" type="button" onClick={() => scroll('left')}>
+					<SvgChevronPrev className="svg" />
 					<span className="d-none">Left</span>
 				</button>
-				<button className="position-absolute btn-unstyled text-primary manual-gwp__right" aria-hidden="true" type="button" onClick={() => scroll('right')}>
-					<SvgChevronNext class="svg" />
+				<button className="position-absolute btn-unstyled text-primary arrow__right d-none d-lg-block" aria-hidden="true" type="button" onClick={() => scroll('right')}>
+					<SvgChevronNext className="svg" />
 					<span className="d-none">Right</span>
 				</button>
-				<div className="manual-gwp__container d-flex mb-0 mt-2 text-center" ref={swellRef}>
+				<div className="manual-gwp__container swell-container d-flex mb-0 mt-2 text-center mr-ng mr-lg-n3" ref={swellRef}>
 					{swellDummyItems.map((item) => (
 						<SwellRedemptionCard
 							key={item.id}
