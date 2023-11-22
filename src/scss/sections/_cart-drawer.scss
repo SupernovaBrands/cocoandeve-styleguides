@@ -91,6 +91,37 @@
 	&__items-tip {
 		background-color: $body-color;
 	}
+
+	.upsell {
+		&__item {
+			flex: 0 0 calc-em(270);
+			@include media-breakpoint-up('lg') {
+				flex: 0 0 calc-em(318);
+			}
+
+			&__img {
+				max-width: calc-em(98);
+				max-height: calc-em(118);
+				flex: 0 0 calc-em(98);
+				@include media-breakpoint-up('lg') {
+					max-height: calc-em(98);
+				}
+			}
+		}
+
+		&.upsell__container {
+			scroll-behavior: smooth;
+		}
+	}
+}
+
+.arrow {
+	&__left,
+	&__right {
+		top: 0;
+	}
+	&__left { right: 1.25em; }
+	&__right { right: 0.5em; }
 }
 
 .cart-table {
@@ -107,13 +138,6 @@
 		overflow: hidden;
 		scroll-behavior: smooth;
 	}
-
-	&__left,
-	&__right {
-		top: 0;
-	}
-	&__left { right: 2em; }
-	&__right { right: 0.5em; }
 
 	&__item {
 		flex: 0 0 calc-em(96);

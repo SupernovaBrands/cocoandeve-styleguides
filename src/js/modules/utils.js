@@ -291,3 +291,52 @@ export const copyToClipboard = (element, copied) => {
 	$temp.remove();
 	$(element).text(copied);
 };
+
+export const handleSwipe = (selector, callback) => {
+	let xDown = null;
+	let yDown = null;
+	let direction = null;
+
+	const getTouches = (evt) => {
+		return evt.touches || evt.originalEvent.touches;
+	}
+
+	const handleTouchEnd = () => {
+		if (direction === 'left' || direction === 'right' && typeof callback === 'function') {
+			callback(direction);
+		}
+	}
+
+	const handleTouchStart = (evt) => {
+		const firstTouch = getTouches(evt)[0];
+		xDown = firstTouch.clientX;
+		yDown = firstTouch.clientY;
+	}
+
+	const handleTouchMove = (evt) => {
+		if (!xDown || !yDown) {
+			return;
+		}
+
+		const xUp = evt.touches[0].clientX;
+		const yUp = evt.touches[0].clientY;
+
+		const xDiff = xDown - xUp;
+		const yDiff = yDown - yUp;
+		if (Math.abs(xDiff) > Math.abs(yDiff)) {
+			if (xDiff > 0) {
+				direction = 'right';
+			} else {
+				direction = 'left';
+			}
+		} else {
+			direction = null
+			xDown = null;
+			yDown = null;
+		}
+	}
+
+	selector.addEventListener('touchstart', handleTouchStart, false);
+	selector.addEventListener('touchmove', handleTouchMove, false);
+	selector.addEventListener('touchend', handleTouchEnd, false);
+}
