@@ -97,7 +97,7 @@ export default class CartDiscountForm extends React.Component {
 			</div>
 		) : (
 			<div className="cart-drawer__discount-form-wrapper mt-2">
-				<div id="cart-drawer__discount-form">
+				<div id="cart-drawer__discount-form" className="cart-drawer__discount-form">
 					<div className="input-group py-1">
 						<input type="text" name="discount" className="bg-gray-400 form-control text-body border-right-0" placeholder={tStrings.cart_discount_input} value={code} onChange={this.onTextChange} onKeyUp={this.onKeyUp} readOnly={loading} data-cy="cart-discount" />
 						<button className="bg-gray-400 btn btn-link border border-0 rounded-left-0 font-weight-bold d-flex align-items-center text-primary bg-" type="button" onClick={this.applyDiscount} disabled={!code} data-cy="cart-apply-btn">

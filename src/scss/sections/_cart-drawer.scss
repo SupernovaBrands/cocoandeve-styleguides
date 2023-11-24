@@ -113,6 +113,20 @@
 			scroll-behavior: smooth;
 		}
 	}
+
+	&__discount-form {
+		button {
+			&:disabled {
+				opacity: 1;
+			}
+
+			&:hover,
+			&:focus,
+			&:active {
+				background-color: $gray-400 !important;
+			}
+		}
+	}
 }
 
 .arrow {
@@ -158,6 +172,21 @@
 			&:focus,
 			&:active {
 				box-shadow: none !important;
+			}
+
+			@include media-breakpoint-down('lg') {
+				&.btn-outline-primary:hover,
+				&.btn-outline-primary:active,
+				&.btn-outline-primary:focus {
+					background-color: white !important;
+					color: $primary;
+				}
+
+				&.btn-primary:hover,
+				&.btn-primary:active,
+				&.btn-primary:focus {
+					background-color: $primary !important;
+				}
 			}
 		}
 	}
