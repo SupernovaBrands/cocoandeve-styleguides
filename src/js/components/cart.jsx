@@ -673,7 +673,7 @@ export default class Cart extends React.Component {
 								)}
 
 								<CartSwellRedemption />
-								<hr />
+								<hr className="mb-g mb-lg-2" />
 
 								<CartDiscountForm
 									isApplied={discountData.applied}
@@ -685,7 +685,7 @@ export default class Cart extends React.Component {
 									onApply={this.onApplyDiscountCode}
 									onRemove={this.onRemoveDiscountCode}
 								/>
-								<hr />
+								<hr className="mt-g mt-lg-2" />
 
 								<div className="row">
 									<p className="col-8 mb-1 font-weight-bold" data-cy="cart-subtotal-label">{tStrings.cart_subtotal}</p>
