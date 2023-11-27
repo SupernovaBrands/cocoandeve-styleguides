@@ -31,6 +31,15 @@ html.uk-store {
                 padding-top: calc-em(2);
             }
 
+            .pay-wrapper.pdp-abtest-wrapper {
+                display: block !important;
+            }
+
+            .pay-wrapper .klarna__amount:not(.pdp-abtest-wrapper),
+            .pay-wrapper .product-form__atome:not(.pdp-abtest-wrapper) {
+                display: none;
+            }
+
             .pay-wrapper {
                 margin-bottom: 10px !important;
             }
@@ -47,6 +56,8 @@ html.uk-store {
                     position: relative !important;
                     transform: none;
                     padding: calc-em(10);
+                    padding-left: 0 !important;
+                    padding-right: 0 !important;
                     text-align: center;
 
                     p {
