@@ -50,7 +50,7 @@ export default class CartManualGwp extends React.Component {
 						const isLoading = loading && processingId === item.id;
 						const isSelected = !!(selectedKey.find((key) => isItemIdInKey(key, item.id)));
 						return (
-							<li key={item.id} className="manual-gwp__item d-flex flex-column mr-2">
+							<li key={item.id} className="manual-gwp__item d-flex flex-column">
 								<figure className="mb-0">
 									<picture className="d-block">
 										<img src={item.image} alt={item.title} className="w-100 overflow-hidden rounded-circle" />
@@ -60,7 +60,7 @@ export default class CartManualGwp extends React.Component {
 								<p className="flex-grow-1 my-1 font-size-base">{item.title}</p>
 								<button
 									type="button"
-									className={`btn btn-sm btn-block px-1 btn-${isSelected ? 'primary' : 'outline-primary'}`}
+									className={`btn btn-sm btn-block px-1 py-1 font-size-base btn-${isSelected ? 'primary' : 'outline-primary'}`}
 									onClick={() => {
 										if (isSelected) {
 											onRemoveItem(item.id);
