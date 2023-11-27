@@ -150,6 +150,7 @@
 	&__item {
 		flex: 0 0 calc-em(96);
 		width: calc-em(96);
+		margin-right: calc-em(25);
 
 		picture {
 			padding: 0 $grid-gutter-width / 2;
