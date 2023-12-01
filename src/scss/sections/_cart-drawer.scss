@@ -110,14 +110,10 @@
 
 	&__discount-form {
 		button {
+			border: $btn-border-width solid $primary;
 			&:disabled {
 				opacity: 1;
-			}
-
-			&:hover,
-			&:focus,
-			&:active {
-				background-color: $gray-400 !important;
+				border-color: $border-color;
 			}
 		}
 	}
