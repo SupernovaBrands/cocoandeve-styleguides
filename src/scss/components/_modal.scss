@@ -42,3 +42,25 @@
 		}
 	}
 }
+
+.modal--checkout-upsell {
+	&__title {
+		font-size: $h2-font-size;
+	}
+
+	.modal-dialog {
+		max-width: 353px;
+
+		@include media-breakpoint-up(lg) {
+			max-width: 385px;
+		}
+	}
+
+	.percentage-icon {
+		height: calc-em(36);
+	}
+
+	.product-card-btn {
+		border-radius: 50em !important;
+	}
+}
