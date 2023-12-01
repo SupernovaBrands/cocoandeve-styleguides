@@ -242,7 +242,7 @@
 }
 
 .modal-open {
-	.scrolled-up {
+	.scrolled {
 		@include media-breakpoint-up('lg') {
 			right: 15px;
 			transition: right 0s;
