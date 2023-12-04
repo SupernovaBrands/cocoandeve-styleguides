@@ -1,0 +1,83 @@
+html.uk-store {
+    @include media-breakpoint-down(md) {
+        .pdp-variant {
+            .pdp-abtest-wrapper {
+                display: block !important;
+            }
+
+            .pdp-banner:not(.pdp-abtest-wrapper) {
+                display: none !important;
+            }
+
+            .product-variant .custom-control-label {
+                border: none !important;
+                padding: 0 !important;
+                padding-left: calc-em(32) !important;
+
+                &::before {
+                    top: 0;
+                    left: 0;
+                }
+            }
+
+            .product-variant__price-label {
+                display: none;
+            }
+
+            .product-variant__price-badge {
+                display: inline-block !important;
+                font-size: calc-em(12);
+                font-weight: normal;
+                padding-top: calc-em(2);
+            }
+
+            .pay-wrapper.pdp-abtest-wrapper {
+                display: block !important;
+            }
+
+            .pay-wrapper .klarna__amount:not(.pdp-abtest-wrapper),
+            .pay-wrapper .product-form__atome:not(.pdp-abtest-wrapper) {
+                display: none;
+            }
+
+            .pay-wrapper {
+                margin-bottom: 10px !important;
+            }
+
+            .product-card--quiz {
+                background-color: $yellow-light;
+                margin-bottom: calc-em(35);
+
+                picture {
+                    display: none;
+                }
+
+                figcaption {
+                    position: relative !important;
+                    transform: none;
+                    padding: calc-em(10);
+                    padding-left: 0 !important;
+                    padding-right: 0 !important;
+                    text-align: center;
+
+                    p {
+                        margin: 0 !important;
+                        font-weight: normal !important;
+                    }
+
+                    br {
+                        display: none;
+                    }
+
+                    .btn {
+                        background-color: transparent !important;
+                        border: none;
+                        font-weight: normal;
+                        text-decoration: underline;
+                        padding: 0 !important;
+                    }
+                }
+            }
+        }
+    }
+}
