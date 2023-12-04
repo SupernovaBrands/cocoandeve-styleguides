@@ -9,7 +9,6 @@ import CartItem from '~comp/cart-item';
 import CartDiscountForm from '~comp/cart-discount-form';
 import CartManualGwp from '~comp/cart-manual-gwp';
 import CartUpsell from '~comp/cart-upsell';
-import CartExtras from '~comp/cart-extras';
 import CartRecentProducts from '~comp/cart-recent-products';
 
 import snCart from '~mod/sn-cart';
@@ -48,9 +47,6 @@ export default class Cart extends React.Component {
 			shippingMeter: {},
 			discountMeter: {},
 			recentProducts: [],
-			cartItemsTip: {
-				enabled: true,
-			},
 			pointsEarned: true,
 		};
 	}
@@ -121,7 +117,7 @@ export default class Cart extends React.Component {
 		models.comparePriceDiff = comparePriceDiff;
 		this.setCartCountEl(count);
 
-		models.upsellData = await this.getUpsell(items);
+		models.upsellData = items;
 
 		models.totalPrice = cart.original_total_price;
 		models.subtotalPrice = cart.original_total_price + comparePriceDiff;
@@ -477,10 +473,7 @@ export default class Cart extends React.Component {
 	}
 
 	onAddUpsell = (upsell) => {
-		if (upsell.upgrade_bundle_method === 'replace') {
-			return snCart.replaceItem(upsell.targetId, upsell.replaceToId, 1);
-		}
-		return snCart.addItem(upsell.replaceToId, 1);
+		return snCart.addItem(upsell.id, 1);
 	}
 
 	onApplyDiscountCode = (code) => {
@@ -573,14 +566,13 @@ export default class Cart extends React.Component {
 			shippingMeter,
 			discountMeter,
 			recentProducts,
-			cartItemsTip,
 			pointsEarned,
 		} = this.state;
 		return (
 			<div className="modal-dialog modal-dialog-scrollable modal-md m-0 w-100 mh-100 float-right">
 				<div className="modal-content mh-100 border-0 rounded-0">
-					<div className="modal-body mobile-wrapper pt-0 px-lg-0">
-						<div className="container d-flex flex-column align-items-stretch text-center pt-2">
+					<div className="modal-body mobile-wrapper pt-0 px-0">
+						<div className="container d-flex flex-column align-items-stretch text-center pt-2 px-g px-lg-3">
 							<h4 className="font-size-lg font-weight-bold">{tStrings.cart_drawer_title}</h4>
 							<button type="button" className="close text-body m-0 px-g pb-2 position-absolute" data-dismiss="modal" aria-label="Close" data-cy="cart-close-icon">
 								<SvgClose className="svg" aria-hidden="true" />
@@ -613,7 +605,7 @@ export default class Cart extends React.Component {
 						)}
 
 						{!loadingInit && (itemCount === 0 ? (
-							<div className="pt-3 text-center">
+							<div className="pt-3 text-center px-g px-lg-3">
 								<div className="container px-g cart-empty-shop-cta">
 									<p className="my-3 text-center">{tStrings.cart_empty}</p>
 									<a href="/collections" className="btn btn-primary" data-cy="shop-all-btn">Shop all products</a>
@@ -641,7 +633,7 @@ export default class Cart extends React.Component {
 							// eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
 							<form
 								id="cart-drawer-form"
-								className="container"
+								className="container px-g px-lg-3"
 								action="/cart"
 								method="post"
 								noValidate
@@ -664,17 +656,6 @@ export default class Cart extends React.Component {
 									))}
 								</ul>
 
-								{cartItemsTip.enabled && (
-									<div className="p-1 cart-drawer__items-tip text-white rounded text-center">
-										<p className="mb-0">
-											<span className="mr-2 font-size-sm">👻</span>
-											Add one more item,
-											<span className="ml-2 font-size-sm">👻</span>
-										</p>
-										<p className="mb-0">and get the third FREE* with code: XXXX</p>
-									</div>
-								)}
-
 								{manualGwp.enabled && (
 									<>
 										<CartManualGwp
@@ -692,7 +673,7 @@ export default class Cart extends React.Component {
 								)}
 
 								<CartSwellRedemption />
-								<hr />
+								<hr className="mb-g mb-lg-2" />
 
 								<CartDiscountForm
 									isApplied={discountData.applied}
@@ -704,7 +685,7 @@ export default class Cart extends React.Component {
 									onApply={this.onApplyDiscountCode}
 									onRemove={this.onRemoveDiscountCode}
 								/>
-								<hr />
+								<hr className="mt-g mt-lg-2" />
 
 								<div className="row">
 									<p className="col-8 mb-1 font-weight-bold" data-cy="cart-subtotal-label">{tStrings.cart_subtotal}</p>
@@ -742,14 +723,12 @@ export default class Cart extends React.Component {
 								<hr />
 
 								{upsellData && (<CartUpsell upsell={upsellData} onAddUpsell={this.onAddUpsell} />)}
-
-								<CartExtras totalPrice={totalPrice} />
 							</form>
 						))}
 					</div>
 
 					{!loadingInit && itemCount > 0 && (
-						<div className="modal-footer px-g">
+						<div className="modal-footer px-g px-lg-3 py-2">
 							<div className="row no-gutters w-100">
 								<span className="col-8 font-size-lg font-weight-bold" data-cy="cart-total-label">{tStrings.cart_total}</span>
 								<span className="col-4 font-size-lg font-weight-bold text-right" data-cy="cart-total-value">{formatMoney(totalPrice)}</span>

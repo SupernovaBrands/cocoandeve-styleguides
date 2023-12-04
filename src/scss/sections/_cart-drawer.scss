@@ -85,6 +85,47 @@
 	&__items-tip {
 		background-color: $body-color;
 	}
+
+	.upsell {
+		&__item {
+			flex: 0 0 calc-em(270);
+			@include media-breakpoint-up('lg') {
+				flex: 0 0 calc-em(318);
+			}
+
+			&__img {
+				max-width: calc-em(98);
+				max-height: calc-em(118);
+				flex: 0 0 calc-em(98);
+				@include media-breakpoint-up('lg') {
+					max-height: calc-em(98);
+				}
+			}
+		}
+
+		&.upsell__container {
+			scroll-behavior: smooth;
+		}
+	}
+
+	&__discount-form {
+		button {
+			border: $btn-border-width solid $primary;
+			&:disabled {
+				opacity: 1;
+				border-color: $border-color;
+			}
+		}
+	}
+}
+
+.arrow {
+	&__left,
+	&__right {
+		top: 0;
+	}
+	&__left { right: 1.25em; }
+	&__right { right: 0.5em; }
 }
 
 .cart-table {
@@ -102,16 +143,10 @@
 		scroll-behavior: smooth;
 	}
 
-	&__left,
-	&__right {
-		top: 0;
-	}
-	&__left { right: 2em; }
-	&__right { right: 0.5em; }
-
 	&__item {
 		flex: 0 0 calc-em(96);
 		width: calc-em(96);
+		margin-right: calc-em(25);
 
 		picture {
 			padding: 0 $grid-gutter-width / 2;
@@ -128,6 +163,21 @@
 			&:focus,
 			&:active {
 				box-shadow: none !important;
+			}
+
+			@include media-breakpoint-down('lg') {
+				&.btn-outline-primary:hover,
+				&.btn-outline-primary:active,
+				&.btn-outline-primary:focus {
+					background-color: white !important;
+					color: $primary;
+				}
+
+				&.btn-primary:hover,
+				&.btn-primary:active,
+				&.btn-primary:focus {
+					background-color: $primary !important;
+				}
 			}
 		}
 	}
