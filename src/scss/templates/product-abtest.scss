@@ -44,6 +44,12 @@ html.uk-store {
                 margin-bottom: 10px !important;
             }
 
+            .klarna__amount {
+                svg {
+                    display: none;
+                }
+            }
+
             .product-card--quiz {
                 background-color: $yellow-light;
                 margin-bottom: calc-em(35);
