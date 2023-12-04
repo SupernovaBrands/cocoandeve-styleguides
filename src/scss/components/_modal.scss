@@ -41,26 +41,24 @@
 			border-right-width: 2px;
 		}
 	}
-}
 
-.modal--checkout-upsell {
-	&__title {
-		font-size: $h2-font-size;
-	}
-
-	.modal-dialog {
-		max-width: 353px;
-
-		@include media-breakpoint-up(lg) {
-			max-width: 385px;
+	&--checkout-upsell {
+		&__title {
+			font-size: $h2-font-size;
 		}
-	}
 
-	.percentage-icon {
-		height: calc-em(36);
-	}
+		.modal-dialog {
+			@include media-breakpoint-up(lg) {
+				max-width: 385px;
+			}
+		}
 
-	.product-card-btn {
-		border-radius: 50em !important;
+		.percentage-icon {
+			height: calc-em(36);
+		}
+
+		.product-card-btn {
+			border-radius: 50em !important;
+		}
 	}
 }
