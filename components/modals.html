@@ -13,7 +13,6 @@
 	<div class="container mt-4">
 		<h1>Modal Waitlist</h1>
         <button class="btn btn-primary mb-4" data-toggle="modal" data-target="#productWaitlist">Launch Modal</button>
-        
 
 		<h1>Modal Newsletter</h1>
         <button class="btn btn-primary mb-4" data-toggle="modal" data-target="#newsletterModal">Launch Modal</button>
@@ -25,7 +24,10 @@
 		<button type="button" class="btn btn-primary mb-4" data-toggle="modal" data-target="#exit-intent-popup">Launch modal</button>
 
         <h1>Birthday</h1>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#birthdayModal">Launch modal</button>
+        <button type="button" class="btn btn-primary mb-4" data-toggle="modal" data-target="#birthdayModal">Launch modal</button>
+
+        <h1>Checkout Upsell</h1>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#checkout-upsell-popup">Launch modal</button>
 
 		<div class="modal fade modal--birthday" id="birthdayModal" tabindex="-1" role="dialog">
 		    <div class="modal-dialog modal-lg modal-dialog-centered mx-g mx-lg-auto" role="document">
@@ -290,7 +292,85 @@
         			</div>
         		</div>
         	</div>
-        </div>    </div>
+        </div>        <div class="modal fade modal--checkout-upsell" id="checkout-upsell-popup" tabindex="-1" role="dialog" aria-labelledby="checkout-upsell-popup" aria-hidden="true">
+        	<div class="modal-dialog modal-dialog-centered" role="document">
+        		<div class="modal-content">
+        			<button type="button" class="close position-absolute font-size-base" data-dismiss="modal">
+        				<svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" class="svg"><path d="M12 1l-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1-5-5z"></path></svg>
+        			</button>
+        			<div class="modal-body text-center px-3 px-lg-4 py-4">
+        				<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 36" class="svg percentage-icon mb-3">
+  <path d="M10.88 14.74a3.33 3.33 0 1 1 0-6.65 3.33 3.33 0 0 1 0 6.65Zm0-4.43a1.1 1.1 0 1 0 0 2.22 1.1 1.1 0 0 0 0-2.22ZM19.12 22.98a3.33 3.33 0 1 1 0-6.65 3.33 3.33 0 0 1 0 6.65Zm0-4.43a1.1 1.1 0 1 0 0 2.22 1.1 1.1 0 0 0 0-2.22ZM19.32 9.66l1.56 1.56-10.2 10.2-1.56-1.56 10.2-10.2Z"></path>
+  <path d="M29.54 36H.46V.2l3.23 1.26L6.04 0l2.24 1.4L10.52 0l2.24 1.4L15 0l2.24 1.4L19.48 0l2.24 1.4L23.96 0l2.35 1.46L29.54.2V36ZM2.67 33.79h24.66V3.44l-1.25.5-2.12-1.33L21.72 4l-2.24-1.4L17.24 4 15 2.6 12.76 4l-2.24-1.4L8.28 4 6.04 2.6 3.92 3.93l-1.25-.49V33.8Z"></path>
+  <path d="M22.82 27.28h-2.96v2.21h2.96v-2.21ZM17.65 27.28H7.18v2.21h10.47v-2.21Z"></path>
+</svg>
+        				<p class="modal--checkout-upsell__title mb-0 font-weight-bold">Exclusive Offer Awaits!</p>
+        				<p class="mb-3 mx-n1">Get additional discounted products now</p>
+        				<form action="" class="d-flex mb-3">
+        					<figure class="d-flex flex-grow-1 mb-0">
+        						<a href="#" class="flex-shrink-0">
+        							<picture class="d-block">
+        								<source srcset="https://via.placeholder.com/115x115" media="(min-width: 992px)">
+        								<img src="https://via.placeholder.com/115x115" alt="" class="w-100">
+        							</picture>
+        						</a>
+        						<figcaption class="d-flex flex-column media-body pl-g text-left py-1 justify-content-center pr-1 pr-lg-2">
+        							<span class="font-weight-bold font-size-sm mb-2">Like A Virgin Hair Masque</span>
+        							<button type="button" class="p-1 d-flex justify-content-between btn btn-choose btn-primary btn-block product-card-btn mb-0 font-size-sm font-weight-normal">
+        								<span class="product-card-btn__text">Add</span>
+        								<span class="product-card-btn__prices">
+        									<span class="text-linethrough">$44.90</span>
+        									<span class="">$34.90</span>
+        								</span>
+        							</button>
+        						</figcaption>
+        					</figure>
+        				</form>
+        				<form action="" class="d-flex mb-3">
+        					<figure class="d-flex flex-grow-1 mb-0">
+        						<a href="#" class="flex-shrink-0">
+        							<picture class="d-block">
+        								<source srcset="https://via.placeholder.com/115x115" media="(min-width: 992px)">
+        								<img src="https://via.placeholder.com/115x115" alt="" class="w-100">
+        							</picture>
+        						</a>
+        						<figcaption class="d-flex flex-column media-body pl-g text-left py-1 justify-content-center pr-1 pr-lg-2">
+        							<span class="font-weight-bold font-size-sm mb-2">Like A Virgin Hair Masque</span>
+        							<button type="button" class="p-1 d-flex justify-content-between btn btn-choose btn-primary btn-block product-card-btn mb-0 font-size-sm font-weight-normal">
+        								<span class="product-card-btn__text">Add</span>
+        								<span class="product-card-btn__prices">
+        									<span class="text-linethrough">$44.90</span>
+        									<span class="">$34.90</span>
+        								</span>
+        							</button>
+        						</figcaption>
+        					</figure>
+        				</form>
+        				<form action="" class="d-flex mb-3">
+        					<figure class="d-flex flex-grow-1 mb-0">
+        						<a href="#" class="flex-shrink-0">
+        							<picture class="d-block">
+        								<source srcset="https://via.placeholder.com/115x115" media="(min-width: 992px)">
+        								<img src="https://via.placeholder.com/115x115" alt="" class="w-100">
+        							</picture>
+        						</a>
+        						<figcaption class="d-flex flex-column media-body pl-g text-left py-1 justify-content-center pr-1 pr-lg-2">
+        							<span class="font-weight-bold font-size-sm mb-2">Bali Buffing Sugar</span>
+        							<button type="button" class="p-1 d-flex justify-content-between btn btn-choose btn-primary btn-block product-card-btn mb-0 font-size-sm font-weight-normal">
+        								<span class="product-card-btn__text">Add</span>
+        								<span class="product-card-btn__prices">
+        									<span class="text-linethrough">$44.90</span>
+        									<span class="">$34.90</span>
+        								</span>
+        							</button>
+        						</figcaption>
+        					</figure>
+        				</form>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+    </div>
   <script src="/cocoandeve-styleguides/js/globals.js"></script>
   <script src="/cocoandeve-styleguides/js/lazyload.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
