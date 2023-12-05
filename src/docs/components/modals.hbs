@@ -9,7 +9,6 @@
 	<div class="container mt-4">
 		<h1>Modal Waitlist</h1>
         <button class="btn btn-primary mb-4" data-toggle="modal" data-target="#productWaitlist">Launch Modal</button>
-        
 
 		<h1>Modal Newsletter</h1>
         <button class="btn btn-primary mb-4" data-toggle="modal" data-target="#newsletterModal">Launch Modal</button>
@@ -21,13 +20,17 @@
 		<button type="button" class="btn btn-primary mb-4" data-toggle="modal" data-target="#exit-intent-popup">Launch modal</button>
 
         <h1>Birthday</h1>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#birthdayModal">Launch modal</button>
+        <button type="button" class="btn btn-primary mb-4" data-toggle="modal" data-target="#birthdayModal">Launch modal</button>
+
+        <h1>Checkout Upsell</h1>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#checkout-upsell-popup">Launch modal</button>
 
 		{{>compounds/birthday-popup}}
         {{>compounds/modal-waitlist}}
         {{>compounds/newsletter-popup}}
         {{>compounds/sweepstakes-popup}}
         {{>compounds/exit-intent }}
+        {{>compounds/checkout-upsell-popup }}
     </div>
   {{> js jquery=true bootstrap=true main=true }}
 </body>
