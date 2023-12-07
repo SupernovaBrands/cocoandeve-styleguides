@@ -165,14 +165,6 @@
                 }
             }
 
-            .footer-grid-newsletter__newsletter-heading {
-                @include media-breakpoint-down(lg) {
-                    p {
-                        font-size: calc-em(14);
-                    }
-                }
-            }
-
             .footer__copy {
                 margin-top: 20px !important;
                 @include media-breakpoint-down(lg) {
@@ -221,6 +213,12 @@
             }
 
             .footer-grid-nav {
+                &__title {
+                    @include font-size($h2-font-size, true);
+                    @include media-breakpoint-up(lg) {
+                        @include font-size($h1-font-size, true);
+                    }
+                }
                 @include media-breakpoint-down(md) {
                     grid-template-areas: "nav-shop nav-about"
                         "nav-help nav-banner"
@@ -228,19 +226,19 @@
                 }
             }
 
+
+
             .footer-grid-newsletter {
                 @include media-breakpoint-down(md) {
-                    &__newsletter-heading {
-                        p {
+                    // &__newsletter-heading {
+                    //     p {
 
-                            font-size: calc-em(14);
-                        }
-                    }
+                    //         font-size: calc-em(14);
+                    //     }
+                    // }
 
-                    &__newsletter-form {
-                        .footer__note {
-                            font-size: calc-em(16);
-                        }
+                    &__newsletter-form .footer__note {
+                        @include font-size($font-size-base, true);
                     }
                 }
             }
