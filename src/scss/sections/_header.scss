@@ -153,6 +153,18 @@
 		}
 	}
 
+	&__promo-bar figure {
+		width: calc(100% - 10px);
+		&:after {
+			content: " ";
+			background-image: url(asset-url('discount-ribbon.svg'));
+			background-size: 100%;
+			background-position: center;
+			background-repeat: no-repeat;
+			position: absolute
+		}
+	}
+
 	&.show {
 		opacity: 1;
 		visibility: visible;
