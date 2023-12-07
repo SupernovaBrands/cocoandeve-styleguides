@@ -1,6 +1,10 @@
 .badge {
   min-width: calc-em(54);
   line-height: $line-height-base;
+
+  &--sm {
+    line-height: $font-size-base;
+  }
 }
 
 .circle-badge {
