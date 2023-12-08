@@ -134,6 +134,23 @@
 	&__right { right: 0.5em; }
 }
 
+.discount__banner {
+	width: calc(100% - 10px);
+	cursor: pointer;
+
+	.banner-decoration {
+		top: 0;
+		right: -10px;
+		height: 100%;
+		color: $pink-light;
+	}
+
+	svg.percent {
+		height: 2em;
+		color: $primary-light;
+	}
+}
+
 .cart-table {
 	&__item img {
 		max-width: calc-em(170);
