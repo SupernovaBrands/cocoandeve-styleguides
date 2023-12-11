@@ -113,7 +113,7 @@ export default class CartDiscountForm extends React.Component {
 					<SvgPercent className="svg percent text-primary" />
 					<div className="mobile-nav__banner-content pl-g d-flex justify-content-between w-100">
 						<p className="mb-0 font-size-sm">10% off on all bundles!<br />promocode: <b>AFTERPAY10</b></p>
-						<span className="d-flex text-primary font-weight-bold align-items-center font-size-sm">Use</span>
+						<span className="d-flex text-primary font-weight-bold align-items-center">Use</span>
 					</div>
 					<MenuBannerDecorative className="svg position-absolute banner-decoration" />
 				</div>
