@@ -151,8 +151,16 @@
                 color: $body-color;
             }
 
-            .footer__hr-first {
-                @include media-breakpoint-down(lg) {
+            .dropdown-toggle {
+                font-weight: normal !important;
+            }
+
+            .dropup .dropdown-toggle:after {
+                display: none;
+            }
+
+            @include media-breakpoint-down(lg) {
+                .footer__hr-first {
                     display: none;
                 }
             }
@@ -165,23 +173,19 @@
                 }
             }
 
-            .footer-grid-newsletter__newsletter-heading {
-                @include media-breakpoint-down(lg) {
-                    p {
-                        font-size: calc-em(14);
-                    }
-                }
-            }
-
             .footer__copy {
                 margin-top: 20px !important;
                 @include media-breakpoint-down(lg) {
-                    margin-top: 10px !important;
-                    font-size: calc-em(12);
+                    margin-top: $grid-gutter-width !important;
+                    @include font-size($font-size-sm);
                 }
             }
 
-            .footer-grid-new__newsletter-form {
+            .footer-grid-newsletter__newsletter-form {
+                &-desc {
+                    margin-bottom: map-get($spacers, 1);
+                }
+
                 input {
                     margin-right: -20px;
 
@@ -190,13 +194,14 @@
                     }
 
                     @include media-breakpoint-down(lg) {
-                        border-top-left-radius: 50px;
-                        border-bottom-left-radius: 50px;
+                        border-top-left-radius: $border-radius-lg;
+                        border-bottom-left-radius: $border-radius-lg;
                     }
                 }
 
                 button {
-                    border-radius: calc-em(50) !important;
+                    border-radius: $border-radius-lg !important;
+                    z-index: 3;
                     min-width: calc-em(160);
                 }
 
@@ -204,14 +209,15 @@
                     color: $gray-600;
                     opacity: 1;
                     @include media-breakpoint-down(lg) {
-                        font-size: calc-em(16) !important;
                         margin-top: calc-em(10) !important;
+                        @include font-size($font-size-base, true);
+                        margin-bottom: map-get($spacers, 1) !important;
                     }
                 }
             }
 
-            .footer-grid-nav__follow, .footer-grid-nav__currency {
-                @include media-breakpoint-down(lg) {
+            @include media-breakpoint-down(lg) {
+                .footer-grid-nav__follow, .footer-grid-nav__currency {
                     margin-bottom: 20px !important;
                 }
             }
@@ -220,27 +226,38 @@
                 display: none;
             }
 
+
             .footer-grid-nav {
-                @include media-breakpoint-down(md) {
-                    grid-template-areas: "nav-shop nav-about"
-                        "nav-help nav-banner"
-                        "nav-currency nav-follow";
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas: "nav-shop nav-about"
+                    "nav-help nav-currency"
+                    "nav-banner nav-banner-copy";
+                @include media-breakpoint-up(lg) {
+                    grid-template-areas: "nav-shop nav-about nav-help nav-follow nav-currency nav-banner";
+                    grid-template-columns: 1.5fr 1.5fr 2fr 1.5fr 1.5fr 1.5fr;
                 }
-            }
 
-            .footer-grid-newsletter {
-                @include media-breakpoint-down(md) {
-                    &__newsletter-heading {
-                        p {
+                &__banner-text {
+                    grid-area: nav-banner-copy;
+                }
 
-                            font-size: calc-em(14);
-                        }
+                &__banner img {
+                    max-width: calc-em(140);
+                    @include media-breakpoint-up(lg) {
+                        max-width: calc-em(160);
                     }
+                }
 
-                    &__newsletter-form {
-                        .footer__note {
-                            font-size: calc-em(16);
-                        }
+                &__title {
+                    @include font-size($h2-font-size);
+                    @include media-breakpoint-up(lg) {
+                        @include font-size($h1-font-size);
+                    }
+                }
+
+                @include media-breakpoint-up(lg) {
+                    &__currency-abtest .footer-grid-nav__follow {
+                        display: none !important;
                     }
                 }
             }
