@@ -236,11 +236,11 @@
                     grid-template-columns: 1.5fr 1.5fr 2fr 1.5fr 1.5fr 1.5fr;
                 }
 
-                @include media-breakpoint-down(md) {
-                    &__follow {
-                        display: none !important;
-                    }
-                }
+                // @include media-breakpoint-down(md) {
+                //     &__follow {
+                //         display: none !important;
+                //     }
+                // }
 
                 &__banner-text-abtest {
                     display: block !important;
