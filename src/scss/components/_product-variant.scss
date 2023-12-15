@@ -69,9 +69,3 @@
 	}
 }
 
-@include media-breakpoint-down(md) {
-	.product-form .swatch {
-		display: flex;
-		flex-wrap: wrap-reverse;
-	}
-}
