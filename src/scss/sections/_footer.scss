@@ -110,8 +110,8 @@ footer {
 
 	.dropdown.show .dropdown-menu {
 		opacity: 1;
-		transform: translate3d(0px, -360px, 0px) !important;
-		height: calc-em(360);
+		transform: translate3d(0px, -280px, 0px) !important;
+		height: calc-em(280);
 		top: 0;
 		@include media-breakpoint-down(lg) {
 			left: -25px !important;
