@@ -180,9 +180,8 @@
                 }
             }
 
-            .footer__copy {
-                margin-top: 20px !important;
-                @include media-breakpoint-down(lg) {
+            @include media-breakpoint-down(lg) {
+                .footer__copy {
                     margin-top: $grid-gutter-width !important;
                     @include font-size($font-size-sm);
                 }
