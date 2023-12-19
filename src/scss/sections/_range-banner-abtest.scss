@@ -35,7 +35,7 @@
 
 			@include media-breakpoint-up(md) {
 				&__subtitle {
-					@include font-size($font-size-base, true);
+					@include font-size($h2-font-size-lg, true);
 				}
 			}
 		}

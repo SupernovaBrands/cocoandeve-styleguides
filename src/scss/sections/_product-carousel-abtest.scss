@@ -61,10 +61,6 @@
 
             .product-card__title {
                 min-height: calc-em(50);
-                @include media-breakpoint-down(lg) {
-                    font-size: calc-em(20);
-                    min-height: calc-em(75);
-                }
             }
 
             .product-card__content-rating {
@@ -105,6 +101,14 @@
         }
 
         .instagram {
+            &__container {
+                @include make-container($gutter: 0);
+                @include make-container-max-widths();
+                @include media-breakpoint-up(lg) {
+                    padding-right: $grid-gutter-width;
+                    padding-left: $grid-gutter-width;
+                }
+            }
             background-color: $pink-light !important;
             padding-top: calc-em(50) !important;
             padding-bottom: calc-em(24);
@@ -153,6 +157,9 @@
 
             .dropdown-toggle {
                 font-weight: normal !important;
+                @include media-breakpoint-up(lg) {
+                    @include font-size($h2-font-size-lg, true);
+                }
             }
 
             .dropup .dropdown-toggle:after {
