@@ -154,6 +154,8 @@
 	}
 
 	&__promo-bar figure {
+		border-top-left-radius: calc-em(8);
+		border-bottom-left-radius: calc-em(8);
 		width: calc(100% - 10px);
 		&:after {
 			content: " ";
