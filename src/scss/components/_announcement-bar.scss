@@ -6,6 +6,16 @@
 
     &__timer {
 
+        @include media-breakpoint-down(md) {
+            &__title {
+                max-width: 45%;
+            }
+
+            &__countdown {
+                max-width: 55%;
+            }
+        }
+
         .list-inline-item {
             @include media-breakpoint-down(lg) {
                 font-size: calc-em(20);
