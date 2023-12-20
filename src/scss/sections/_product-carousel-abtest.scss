@@ -90,8 +90,8 @@
             }
             @include media-breakpoint-down(lg) {
                 .list-unstyled.row {
-                    padding-top: 20px !important;
-                    padding-bottom: 30px !important;
+                    padding-top: map-get($spacers, 2) !important;
+                    padding-bottom: map-get($spacers, 2) !important;
 
                     // li:first-child, li:nth-child(2) {
                     //     margin-bottom: 30px !important;
@@ -100,6 +100,13 @@
                     // li:last-child, li:nth-child(3) {
                     //     margin-bottom: 0px !important;
                     // }
+                }
+            }
+
+            .list-unstyled p {
+                @include font-size($font-size-sm);
+                @include media-breakpoint-up(lg) {
+                    @include font-size($font-size-base);
                 }
             }
 
@@ -169,15 +176,15 @@
                 color: $body-color;
             }
 
-            .dropdown-toggle {
-                font-weight: normal !important;
-                @include media-breakpoint-up(lg) {
+            @include media-breakpoint-up(lg) {
+                .dropdown-toggle {
+                    font-weight: normal !important;
                     @include font-size($h2-font-size-lg, true);
                 }
-            }
 
-            .dropup .dropdown-toggle:after {
-                display: none;
+                .dropup .dropdown-toggle:after {
+                    display: none;
+                }
             }
 
             @include media-breakpoint-down(lg) {
@@ -249,10 +256,9 @@
             .footer-grid-nav {
                 grid-template-columns: 1fr 1fr;
                 grid-template-areas: "nav-shop nav-about"
-                    "nav-help nav-currency"
-                    "nav-banner nav-banner-copy";
+                    "nav-help nav-currency";
                 @include media-breakpoint-up(lg) {
-                    grid-template-areas: "nav-shop nav-about nav-help nav-follow nav-currency nav-banner";
+                    grid-template-areas: "nav-shop nav-about nav-help nav-banner nav-follow nav-currency";
                     grid-template-columns: 1.5fr 1.5fr 2fr 1.5fr 1.5fr 1.5fr;
                 }
 
@@ -291,6 +297,10 @@
 
                     &__banner-text {
                         display: block !important;
+                    }
+
+                    &__follow svg {
+                        height: calc-em(20);
                     }
                 }
             }
