@@ -115,232 +115,177 @@
 	</nav>
 
 	<nav class="mobile-nav mobile-nav--original position-fixed d-lg-none">
-		<img class="mobile-nav__close svg text-white" src="icons/close.svg" replace-to-svg />
 		{{#unless critical}}
-		<ul id="mobileMenu" class="mobile-nav__menu accordion position-fixed h-100 col-12 bg-white list-unstyled py-2 mb-0"
+		<ul id="mobileMenu" class="mobile-nav__menu position-fixed h-100 col-12 bg-white list-unstyled py-2 mb-0 px-0"
 			role="tablist" aria-multiselectable="true">
-			<li class="mobile-nav__promo-bar  d-flex justify-content-between">
-				<figure class="media mb-0 align-items-center bg-pink-light w-100 pl-g position-relative py-1 my-0">
-					<img class="mr-g" src="icons/discount-icon.svg" replace-to-svg />
+			<li class="mobile-nav__logo  d-flex justify-content-between mx-g">
+				<a href="#" class="navbar-brand mx-auto mx-lg-0" aria-label="CocoAndEve Logo">
+					{{> components/svg-logo}}
+				</a>
+				<img class="mobile-nav__close svg position-absolute" src="icons/close.svg" replace-to-svg />
+			</li>
+			<li class="mobile-nav__promo-bar d-flex justify-content-between mx-g pb-0 mb-1">
+				<figure class="media mb-0 align-items-center bg-secondary-light pl-g position-relative py-1 my-0">
+					<img class="mr-1" src="icons/discount-icon.svg" replace-to-svg />
 					<figcaption class="media-body font-size-sm">
-						20% OFF OFF on Sunny Honey Range<br />Code: <b>TAN25</b>
+						20% OFF on Sunny Honey Range<br />Code: <b>TAN25</b>
 					</figcaption>
+					<span class="d-block text-primary pr-1 font-weight-bold">Use</span>
+					<img src="icons/menu-banner-decoration.svg" class="svg position-absolute banner-decoration text-secondary-light" replace-to-svg />
 				</figure>
 				{{!-- <img class="h-100" src="icons/discount-ribbon.svg" replace-to-svg> --}}
 			</li>
-			<li class="mobile-nav__promo-bar d-flex justify-content-between">
-				<figure class="media mb-0 align-items-center bg-secondary-light w-100 pl-g position-relative py-1 my-0">
-					<img class="mr-g" src="icons/icon-proud-to-be.svg" replace-to-svg />
+			<li class="mobile-nav__promo-bar d-flex justify-content-between mx-g mb-g ">
+				<figure class="media mb-0 align-items-center bg-pink-light pl-g position-relative py-1 my-0">
+					<img class="mr-1" src="icons/icon-proud-to-be.svg" replace-to-svg />
 					<figcaption class="media-body font-size-sm">
 						Find your perfect colour match!<br /><b>Get 10% OFF</b>
 					</figcaption>
+					<span class="d-block text-primary pr-1 font-weight-bold">Quiz</span>
+					<img src="icons/menu-banner-decoration.svg" class="svg position-absolute banner-decoration text-pink-light" replace-to-svg />
 				</figure>
 				{{!-- <img class="h-100" src="icons/discount-ribbon.svg" replace-to-svg> --}}
 			</li>
-			<li class="mb-1">
+			<li class="d-flex px-g">
+				<input type="radio" name="menu" class="d-none" id="headingHair">
+				<label for="headingHair" class="d-flex w-100 position-relative p-0 align-items-center justify-content-between" aria-expanded="false" aria-controls="hairCare">
+					<h4 class="m-0">Haircare</h4>
+					<img class="svg font-size-xs chevron-down" src="icons/chevron-next.svg" replace-to-svg />
+				</label>
+				<ul class="mobile-nav__menu-child list-unstyled p-0 position-absolute bg-white w-100" aria-labelledby="headingHair">
+					<li class="mobile-nav__logo d-flex justify-content-between mx-g align-items-center">
+						<input type="radio" name="menu" class="d-none" id="back-headingHair">
+						<label for="back-headingHair">
+							<img class="svg" src="icons/chevron-prev.svg" replace-to-svg />
+						</label>
+						<a href="#" class="navbar-brand mx-auto mx-lg-0" aria-label="CocoAndEve Logo">
+							{{> components/svg-logo}}
+						</a>
+						<img class="mobile-nav__close svg" src="icons/close.svg" replace-to-svg />
+					</li>
+					<li><h4 class="px-g py-1 mb-0">Hair</h4></li>
+					<li><a href="#" class="px-g py-1">Nourishing Hair Masque</a></li>
+					<li><a href="#" class="px-g py-1">Hair Heroes Gift Set</a></li>
+					<li><a href="#" class="px-g py-1">That's A Wrap Bundle</a></li>
+					<li><a href="#" class="px-g py-1">Microfibre Hair Towel Wrap</a></li>
+					<li><a href="#" class="px-g py-1">Moisture Boost Shower Cap</a></li>
+					<li><a href="#" class="px-g py-1">Hair Kits & Gifts</a></li>
+					<li><a href="#" class="px-g py-1"><strong>Shop All Hair</strong></a></li>
+				</ul>
+			</li>
+			<li class="d-flex px-g">
+				<input type="radio" name="menu" class="d-none" id="skinCare">
+				<label for="skinCare" class="d-flex w-100 position-relative p-0 align-items-center justify-content-between" aria-expanded="false" aria-controls="skinCare">
+					<h4 class="m-0">Self Tan</h4>
+					<img class="svg font-size-xs chevron-down" src="icons/chevron-next.svg" replace-to-svg />
+				</label>
+				<ul class="mobile-nav__menu-child list-unstyled  p-0 position-absolute bg-white w-100" aria-labelledby="headingSkin">
+					<li class="mobile-nav__logo d-flex justify-content-between mx-g align-items-center">
+						<input type="radio" name="menu" class="d-none" id="back-skinCare">
+						<label for="back-headingHair">
+							<img class="svg" src="icons/chevron-prev.svg" replace-to-svg />
+						</label>
+						<a href="#" class="navbar-brand mx-auto mx-lg-0" aria-label="CocoAndEve Logo">
+							{{> components/svg-logo}}
+						</a>
+						<img class="mobile-nav__close svg" src="icons/close.svg" replace-to-svg />
+					</li>
+					<li><h4 class="px-g py-1 mb-0">Self Tan</h4></li>
+					<li><a href="#" class="px-g py-1">Bali Bronzing Bundle</a></li>
+					<li><a href="#" class="px-g py-1">Bali Bronzing Foam</a></li>
+					<li><a href="#" class="px-g py-1">Bronzing Face Drops</a></li>
+					<li><a href="#" class="px-g py-1">Self Tan Travel Kit</a></li>
+					<li><a href="#" class="px-g py-1">Deluxe Vegan Kabuki Brush</a></li>
+					<li><a href="#" class="px-g py-1">Soft Velvet Tanning Mitt</a></li>
+					<li><a href="#" class="px-g py-1"><strong>Shop All Tan</strong></a></li>
+				</ul>
+			</li>
+			<li class="d-flex px-g">
+				<input type="radio" name="menu" class="d-none" id="skin">
+				<label for="skin" class="d-flex w-100 position-relative p-0 align-items-center justify-content-between" aria-expanded="false" aria-controls="skinCare">
+					<h4 class="m-0">Skin</h4>
+					<img class="svg font-size-xs chevron-down" src="icons/chevron-next.svg" replace-to-svg />
+				</label>
+				<ul class="mobile-nav__menu-child list-unstyled  p-0 position-absolute bg-white w-100" aria-labelledby="headingSkin">
+					<li class="mobile-nav__logo d-flex justify-content-between mx-g align-items-center">
+						<input type="radio" name="menu" class="d-none" id="back-skin">
+						<label for="back-headingHair">
+							<img class="svg" src="icons/chevron-prev.svg" replace-to-svg />
+						</label>
+						<a href="#" class="navbar-brand mx-auto mx-lg-0" aria-label="CocoAndEve Logo">
+							{{> components/svg-logo}}
+						</a>
+						<img class="mobile-nav__close svg" src="icons/close.svg" replace-to-svg />
+					</li>
+					<li><h4 class="px-g py-1 mb-0">Skin</h4></li>
+					<li><a href="#" class="px-g py-1">Bali Bronzing Bundle</a></li>
+					<li><a href="#" class="px-g py-1">Bali Bronzing Foam</a></li>
+					<li><a href="#" class="px-g py-1">Bronzing Face Drops</a></li>
+					<li><a href="#" class="px-g py-1">Self Tan Travel Kit</a></li>
+					<li><a href="#" class="px-g py-1">Deluxe Vegan Kabuki Brush</a></li>
+					<li><a href="#" class="px-g py-1">Soft Velvet Tanning Mitt</a></li>
+					<li><a href="#" class="px-g py-1"><strong>Shop All Skin</strong></a></li>
+				</ul>
+			</li>
+			<li class="d-flex px-g">
+				<input type="radio" name="menu" class="d-none" id="bodycare">
+				<label for="bodycare" class="d-flex w-100 position-relative p-0 align-items-center justify-content-between" aria-expanded="false" aria-controls="bodycare">
+					<h4 class="m-0">Bodycare</h4>
+					<img class="svg font-size-xs chevron-down" src="icons/chevron-next.svg" replace-to-svg />
+				</label>
+				<ul class="mobile-nav__menu-child list-unstyled  p-0 position-absolute bg-white w-100" aria-labelledby="bodycare">
+					<li class="mobile-nav__logo d-flex justify-content-between mx-g align-items-center">
+						<input type="radio" name="menu" class="d-none" id="back-bodycare">
+						<label for="back-bodycare">
+							<img class="svg" src="icons/chevron-prev.svg" replace-to-svg />
+						</label>
+						<a href="#" class="navbar-brand mx-auto mx-lg-0" aria-label="CocoAndEve Logo">
+							{{> components/svg-logo}}
+						</a>
+						<img class="mobile-nav__close svg" src="icons/close.svg" replace-to-svg />
+					</li>
+					<li><a href="#" class="px-g py-1">Bali Bod Bundle</a></li>
+					<li><a href="#" class="px-g py-1">Bali Buffing Sugar</a></li>
+					<li><a href="#" class="px-g py-1">Body Moisture Whip</a></li>
+					<li><a href="#" class="px-g py-1">Bounce Body Masque</a></li>
+					<li><a href="#" class="px-g py-1">Jelly Massage Mitt</a></li>
+					<li><a href="#" class="px-g py-1">Smooth-on Shell Scoop</a></li>
+					<li><a href="#" class="px-g py-1"><strong>Shop All Body</strong></a></li>
+				</ul>
+			</li>
+			<li class="d-flex px-g">
+				<input type="radio" name="menu" class="d-none" id="bundles">
+				<label for="bundles" class="d-flex w-100 position-relative p-0 align-items-center justify-content-between" aria-expanded="false" aria-controls="bundles">
+					<h4 class="m-0">Bundles</h4>
+					<img class="svg font-size-xs chevron-down" src="icons/chevron-next.svg" replace-to-svg />
+				</label>
+				<ul class="mobile-nav__menu-child list-unstyled  p-0 position-absolute bg-white w-100" aria-labelledby="bundles">
+					<li class="mobile-nav__logo d-flex justify-content-between mx-g align-items-center">
+						<input type="radio" name="menu" class="d-none" id="back-bundles">
+						<label for="back-bundles">
+							<img class="svg" src="icons/chevron-prev.svg" replace-to-svg />
+						</label>
+						<a href="#" class="navbar-brand mx-auto mx-lg-0" aria-label="CocoAndEve Logo">
+							{{> components/svg-logo}}
+						</a>
+						<img class="mobile-nav__close svg" src="icons/close.svg" replace-to-svg />
+					</li>
+					<li><a href="#" class="px-g py-1">Hair Heroes Gift Set</a></li>
+					<li><a href="#" class="px-g py-1">Bali Bod Bundle</a></li>
+					<li><a href="#" class="px-g py-1">Taste of the Tropics Kit</a></li>
+					<li><a href="#" class="px-g py-1">Mini Mask Duo</a></li>
+					<li><a href="#" class="px-g py-1">Shop all Products</a></li>
+					<li><a href="#" class="px-g py-1">Shop all Kits & Gifts</a></li>
+				</ul>
+			</li>
+			<li class="card px-g border-bottom flex-row py-1">Bali Beauty Club<img class="ml-1 mr-1" src="icons/palm-tree-v2.svg" replace-to-svg /></li>
+			<li class="my-g p-g">
 				<a href="#" class="btn btn-primary btn-block" data-cy="shopall-btn">Shop All</a>
 			</li>
-			<li class="card">
-				<figure id="headingHair" class="media card-header position-relative collapsed p-0 align-items-center"
-					data-toggle="collapse" data-target="#hairCare" aria-expanded="false" aria-controls="hairCare">
-					<img class="rounded" src="https://via.placeholder.com/40x40/EFADBA" alt="Generic placeholder image">
-					<figcaption class="media-body ml-1">
-						<h4 class="m-0">Haircare</h4>
-					</figcaption>
-					<img class="svg font-size-xs chevron-down" src="icons/chevron-down.svg" replace-to-svg />
-				</figure>
-				<ul id="hairCare" class="collapse list-unstyled card-body p-0" aria-labelledby="headingHair" data-parent="#mobileMenu">
-					<li><a href="#">Nourishing Hair Masque</a></li>
-					<li><a href="#">Hair Heroes Gift Set</a></li>
-					<li><a href="#">That's A Wrap Bundle</a></li>
-					<li><a href="#">Microfibre Hair Towel Wrap</a></li>
-					<li><a href="#">Moisture Boost Shower Cap</a></li>
-					<li><a href="#">Hair Kits & Gifts</a></li>
-					<li><a href="#"><strong>Shop All Hair</strong></a></li>
-				</ul>
-			</li>
-			<li class="card">
-				<figure id="headingSkin" class="media card-header position-relative collapsed p-0 align-items-center"
-					data-toggle="collapse" data-target="#skinCare" aria-expanded="false" aria-controls="skinCare">
-					<img class="rounded" src="https://via.placeholder.com/40x40/EFADBA" alt="Generic placeholder image">
-					<figcaption class="media-body ml-1">
-						<h4 class="m-0">Self Tan</h4>
-					</figcaption>
-					<img class="svg font-size-xs chevron-down" src="icons/chevron-down.svg" replace-to-svg />
-				</figure>
-				<ul id="skinCare" class="collapse list-unstyled card-body p-0" aria-labelledby="headingSkin" data-parent="#mobileMenu">
-					<li><a href="#">Bali Bronzing Bundle</a></li>
-					<li><a href="#">Bali Bronzing Foam</a></li>
-					<li><a href="#">Bronzing Face Drops</a></li>
-					<li><a href="#">Self Tan Travel Kit</a></li>
-					<li><a href="#">Deluxe Vegan Kabuki Brush</a></li>
-					<li><a href="#">Soft Velvet Tanning Mitt</a></li>
-					<li><a href="#"><strong>Shop All Tan</strong></a></li>
-				</ul>
-			</li>
-			<li class="card">
-				<figure id="headingSkins" class="media card-header position-relative collapsed p-0 align-items-center"
-					data-toggle="collapse" data-target="#skinsCare" aria-expanded="false" aria-controls="skinsCare">
-					<img class="rounded" src="https://via.placeholder.com/40x40/EFADBA" alt="Generic placeholder image">
-					<figcaption class="media-body ml-1">
-						<h4 class="m-0">Skin</h4>
-					</figcaption>
-					<img class="svg font-size-xs chevron-down" src="icons/chevron-down.svg" replace-to-svg />
-				</figure>
-				<ul id="skinsCare" class="collapse list-unstyled card-body p-0" aria-labelledby="headingTwo" data-parent="#mobileMenu">
-					<li><a href="#">Bali Bod Bundle</a></li>
-					<li><a href="#">Bali Buffing Sugar</a></li>
-					<li><a href="#"><strong>Shop All Skin</strong></a></li>
-				</ul>
-			</li>
-			<li class="card">
-				<figure id="headingBody" class="media card-header position-relative collapsed p-0 align-items-center"
-					data-toggle="collapse" data-target="#bodyCare" aria-expanded="false" aria-controls="bodyCare">
-					<img class="rounded" src="https://via.placeholder.com/40x40/EFADBA" alt="Generic placeholder image">
-					<figcaption class="media-body ml-1">
-						<h4 class="m-0">Bodycare</h4>
-					</figcaption>
-					<img class="svg font-size-xs chevron-down" src="icons/chevron-down.svg" replace-to-svg />
-				</figure>
-				<ul id="bodyCare" class="collapse list-unstyled card-body p-0" aria-labelledby="headingTwo" data-parent="#mobileMenu">
-					<li><a href="#">Bali Bod Bundle</a></li>
-					<li><a href="#">Bali Buffing Sugar</a></li>
-					<li><a href="#">Body Moisture Whip</a></li>
-					<li><a href="#">Bounce Body Masque</a></li>
-					<li><a href="#">Jelly Massage Mitt</a></li>
-					<li><a href="#">Smooth-on Shell Scoop</a></li>
-					<li><a href="#"><strong>Shop All Body</strong></a></li>
-				</ul>
-			</li>
-			<li class="card">
-				<figure id="headingBundles" class="media card-header position-relative collapsed p-0 align-items-center"
-					data-toggle="collapse" data-target="#collapseBundle" aria-expanded="false" aria-controls="collapseBundle">
-					<img class="rounded" src="https://via.placeholder.com/40x40/EFADBA" alt="Generic placeholder image">
-					<figcaption class="media-body ml-1">
-						<h4 class="m-0">Bundles</h4>
-					</figcaption>
-					<img class="svg font-size-xs chevron-down" src="icons/chevron-down.svg" replace-to-svg />
-				</figure>
-				<ul id="collapseBundle" class="collapse list-unstyled card-body p-0" aria-labelledby="headingBundles" data-parent="#mobileMenu">
-					<li><a href="#">Hair Heroes Gift Set</a></li>
-					<li><a href="#">Bali Bod Bundle</a></li>
-					<li><a href="#">Taste of the Tropics Kit</a></li>
-					<li><a href="#">Mini Mask Duo</a></li>
-					<li><a href="#">Shop all Products</a></li>
-					<li><a href="#">Shop all Kits & Gifts</a></li>
-				</ul>
-			</li>
-			<li><hr class="my-1 mx-0" >Bali Beauty Club<img class="ml-1 mr-1" src="icons/palm-tree-v2.svg" replace-to-svg /></li>
-			<li><a href="#">My Account</a></li>
-			<li><a href="#">My Account</a></li>
-			<li><a href="#">Track My Order</a></li>
-			<li><a href="#">Blog</a></li>
-			<li><a href="#">FAQ</a></li>
-			<li><a href="#">Result IRL</a></li>
-			<li><a href="#">Contact Us</a></li>
-			<li class="border-bottom border-top card py-1 my-g">
-				<h4 id="countrySelect" class="card-header position-relative collapsed p-0 mb-25 mt-25" data-toggle="collapse" data-target="#collapseCountry" aria-expanded="false" aria-controls="collapseCountry">
+			<li class="card py-1 px-g py-1 border-bottom mb-g">
+				<h4 id="countrySelect" class="card-header position-relative collapsed p-0 font-weight-normal" data-toggle="collapse" data-target="#collapseCountry" aria-expanded="false" aria-controls="collapseCountry">
 					Rest of the World (SGD)
-					<img class="svg font-size-xs chevron-down" src="icons/chevron-down.svg" replace-to-svg />
-				</h4>
-				<ul id="collapseCountry" class="collapse list-unstyled card-body p-0"
-					aria-labelledby="countrySelect" data-parent="#mobileMenu">
-					<li class="pt-g"><a href="#">USA (USD)</a></li>
-					<li><a href="#">United Kingdom (GBP)</a></li>
-					<li><a href="#">Canada (CAD)</a></li>
-					<li><a href="#">Australia (AUD)</a></li>
-					<li><a href="#">Europe (EUR)</a></li>
-					<li><a href="#">Germany (EUR)</a></li>
-					<li><a href="#">France (EUR)</a></li>
-					<li><a href="#">Rest of the World (SGD)</a></li>
-				</ul>
-			</li>
-		</ul>
-		<ul id="mobileMenuVariant" class="mobile-nav__menu accordion position-fixed h-100 col-9 bg-white list-unstyled py-2 mb-0 d-none mega-menu-collection-variant"
-			role="tablist" aria-multiselectable="true">
-			<li class="mb-1">
-				<a href="#" class="btn btn-primary btn-block" data-cy="shopall-btn">Shop All</a>
-			</li>
-			<li class="card">
-				<figure id="headingHair" class="media card-header position-relative collapsed p-0"
-					data-toggle="collapse" data-target="#hairCare" aria-expanded="false" aria-controls="hairCare">
-					<img class="rounded" src="https://via.placeholder.com/40x40/EFADBA" alt="Generic placeholder image">
-					<figcaption class="media-body ml-1">
-						<h4 class="m-0">Like a Virgin</h4>
-					</figcaption>
-					<img class="svg font-size-xs chevron-down" src="icons/chevron-down.svg" replace-to-svg />
-				</figure>
-				<ul id="hairCare" class="collapse list-unstyled card-body p-0"
-					role="tabpanel" aria-labelledby="headingHair" data-parent="#mobileMenu">
-					<li><a href="#">Shampoo & Conditioner</a></li>
-					<li><a href="#">Treatments</a></li>
-					<li><a href="#">Hair Styling</a></li>
-					<li><a href="#">Accesories</a></li>
-				</ul>
-			</li>
-			<li class="card">
-				<figure id="headingSkin" class="media card-header position-relative collapsed p-0"
-					data-toggle="collapse" data-target="#skinCare" aria-expanded="false" aria-controls="skinCare">
-					<img class="rounded" src="https://via.placeholder.com/40x40/EFADBA" alt="Generic placeholder image">
-					<figcaption class="media-body ml-1">
-						<h4 class="m-0">Sunny Honey</h4>
-					</figcaption>
-					<img class="svg font-size-xs chevron-down" src="icons/chevron-down.svg" replace-to-svg />
-				</figure>
-				<ul id="skinCare" class="collapse list-unstyled card-body p-0"
-					role="tabpanel" aria-labelledby="headingSkin" data-parent="#mobileMenu">
-					<li><a href="#">Body Tan</a></li>
-					<li><a href="#">Face Tan</a></li>
-					<li><a href="#">Tanning Mitt</a></li>
-					<li><a href="#">Accesories</a></li>
-				</ul>
-			</li>
-			<li class="card">
-				<figure id="headingBody" class="media card-header position-relative collapsed p-0"
-					data-toggle="collapse" data-target="#bodyCare" aria-expanded="false" aria-controls="bodyCare">
-					<img class="rounded" src="https://via.placeholder.com/40x40/EFADBA" alt="Generic placeholder image">
-					<figcaption class="media-body ml-1">
-						<h4 class="m-0">Glow Figure</h4>
-					</figcaption>
-					<img class="svg font-size-xs chevron-down" src="icons/chevron-down.svg" replace-to-svg />
-				</figure>
-				<ul id="bodyCare" class="collapse list-unstyled card-body p-0"
-					role="tabpanel" aria-labelledby="headingTwo" data-parent="#mobileMenu">
-					<li><a href="#">Body Wash</a></li>
-					<li><a href="#">Moisturisers</a></li>
-					<li><a href="#">Esfoliators</a></li>
-					<li><a href="#">Bali Bod Bundle</a></li>
-					<li><a href="#">Accesories</a></li>
-				</ul>
-			</li>
-			<li class="card">
-				<figure id="headingBundles" class="media card-header position-relative collapsed p-0"
-					data-toggle="collapse" data-target="#collapseBundle" aria-expanded="false" aria-controls="collapseBundle">
-					<img class="rounded" src="https://via.placeholder.com/40x40/EFADBA" alt="Generic placeholder image">
-					<figcaption class="media-body ml-1">
-						<h4 class="m-0">Value Kits</h4>
-					</figcaption>
-					<img class="svg font-size-xs chevron-down" src="icons/chevron-down.svg" replace-to-svg />
-				</figure>
-				<ul id="collapseBundle" class="collapse list-unstyled card-body p-0" role="tabpanel"
-					aria-labelledby="headingBundles" data-parent="#mobileMenu">
-					<li><a href="#">Gift sets</a></li>
-					<li><a href="#">Hair sets</a></li>
-					<li><a href="#">Tan sets</a></li>
-					<li><a href="#">Body sets</a></li>
-				</ul>
-			</li>
-			<li><hr class="my-1 mx-0" ></li>
-			<li><a href="#">My Account</a></li>
-			<li><a href="#">Track My Order</a></li>
-			<li><a href="#">Blog</a></li>
-			<li><a href="#">FAQ</a></li>
-			<li><a href="#">Result IRL</a></li>
-			<li><a href="#">Contact Us</a></li>
-			<li class="border-bottom border-top card py-1 my-g">
-				<h4 id="countrySelect" class="card-header position-relative collapsed p-0 mb-25 mt-25" data-toggle="collapse" data-target="#collapseCountry" aria-expanded="false" aria-controls="collapseCountry">
-					Rest of the World (SGD)
-					<img class="svg font-size-xs chevron-down" src="icons/chevron-down.svg" replace-to-svg />
+					<img class="svg font-size-xs chevron-down" src="icons/chevron-next.svg" replace-to-svg />
 				</h4>
 				<ul id="collapseCountry" class="collapse list-unstyled card-body p-0" role="tabpanel"
 					aria-labelledby="countrySelect" data-parent="#mobileMenu">
@@ -354,12 +299,19 @@
 					<li><a href="#">Rest of the World (SGD)</a></li>
 				</ul>
 			</li>
+			<li class="row px-g pt-g">
+				<a href="#" class="col-6 mb-1">Help</a>
+				<a href="#" class="col-6 mb-1">Track my order</a>
+				<a href="#" class="col-6 mb-1">Result IRL</a>
+				<a href="#" class="col-6 mb-1">BLog</a>
+			</li>
 		</ul>
 		{{/unless}}
 	</nav>
 	{{> components/mobile-menu-abtest }}
 	{{> components/tooltip}}
 	{{> components/tooltip-discount-applied}}
+	<!--
 	<nav class="text-center mobile-secnav p-g bg-white d-lg-none">
 		<ul class="nav justify-content-center">
 			<li class="nav-item">
@@ -382,6 +334,7 @@
 			</li>
 		</ul>
 	</nav>
+	-->
 	{{> compounds/search-box}}
 </header>
 {{> compounds/desktop-nav-abtest-v2}}
