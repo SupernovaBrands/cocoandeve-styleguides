@@ -111,6 +111,10 @@
 		font-size: calc-em(20);
 		color: #fff;
 	}
+	
+	&__close {
+		right: calc-em(15);
+	}
 
 	&__menu {
 		padding-left: $grid-gutter-width;
@@ -150,6 +154,36 @@
 
 		a:not(.btn) {
 			color: $body-color;
+		}
+
+		input:checked {
+			& ~ ul {
+				transform: translateX(0);
+				transition: transform 0.15s ease-in;
+				visibility: visible;
+			}
+		}
+	}
+
+	&__menu-child {
+		transform: translateX(100%);
+		transition: transform 0.15s ease-out;
+		visibility: hidden;
+		left: 0;
+		z-index: $zindex-dropdown;
+		height: 100vh !important;
+		top: 0;
+	}
+
+	&__promo-bar figure {
+		border-top-left-radius: calc-em(8);
+		border-bottom-left-radius: calc-em(8);
+		width: calc(100% - 10px);
+
+		.banner-decoration {
+			top: 0;
+			right: -10px;
+			height: 100%;
 		}
 	}
 
