@@ -46,6 +46,12 @@ html.us-store {
 					bottom: calc-em(30);
 				}
 			}
+
+			@include media-breakpoint-down(md) {
+				&__caption {
+					display: block !important;
+				}
+			}
 		}
 	}
 }

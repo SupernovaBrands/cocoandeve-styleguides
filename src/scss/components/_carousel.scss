@@ -379,14 +379,16 @@
 		}
 	}
 
-	&.floating-out-left {
-		@include media-breakpoint-up(lg) {
+	@include media-breakpoint-up(lg) {
+		&.floating-out-left {
+			height: 0;
 			left: -2%;
 		}
 	}
 
-	&.floating-out-right {
-		@include media-breakpoint-up(lg) {
+	@include media-breakpoint-up(lg) {
+		&.floating-out-right {
+			height: 0;
 			right: -2%;
 		}
 	}

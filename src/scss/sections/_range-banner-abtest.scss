@@ -19,12 +19,10 @@
 				top: 50%;
 				transform: translateY(-50%);
 				@include media-breakpoint-up(lg) {
-					&.hair {
-						top: 20%;
-						left: 0;
-						right: 0;
-						transform: none;
-					}
+					top: calc-em(50);
+					left: 0;
+					right: 0;
+					transform: none;
 				}
 			}
 
@@ -37,7 +35,11 @@
 
 			@include media-breakpoint-up(md) {
 				&__subtitle {
-					@include font-size($h4-font-size-lg, true);
+					@include font-size($h2-font-size-lg, true);
+				}
+
+				&__caption {
+					@include font-size($font-size-base, true);
 				}
 			}
 		}
