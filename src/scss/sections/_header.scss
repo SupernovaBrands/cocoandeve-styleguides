@@ -172,7 +172,7 @@
 		visibility: hidden;
 		left: 0;
 		z-index: $zindex-dropdown;
-		height: 100vh !important;
+		min-height: calc-em(780);
 		top: 0;
 	}
 
