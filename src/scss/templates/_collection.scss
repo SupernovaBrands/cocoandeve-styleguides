@@ -60,3 +60,78 @@
 .collection-footer {
 	border-color: $gray-400;
 }
+
+.arrange-abtest-variant-1 {
+	.collection-grid--orginal {
+		display: none !important;
+	}
+
+	.shop-all--abtest-1 {
+		display: flex !important;
+	}
+}
+
+.arrange-abtest-variant-2 {
+	.collection-grid--orginal {
+		display: none !important;
+	}
+
+	.shop-all--abtest-2 {
+		display: block !important;
+		overflow: hidden;
+		@include media-breakpoint-up(md) {
+			overflow: visible;
+		}
+	}
+
+	.product-card {
+		@include media-breakpoint-down(md) {
+			.product-card-btn {
+				flex-flow: column;
+				font-size: calc-em(14);
+
+				&__prices {
+					padding-top: 0;
+					padding-bottom: calc-em(5);
+					width: 100%;
+				}
+
+				&__text {
+					padding-bottom: 0;
+					padding-top: calc-em(5);
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	.carousel {
+		&--centered {
+			.carousel-inner {
+				transform: translateX(0);
+			}
+		}
+	}
+
+	.carousel-control {
+		.carousel-control-prev-icon,
+		.carousel-control-next-icon {
+			width: 2em;
+			height: 2em;
+		}
+
+		&.floating-out-left {
+			left: 2%;
+			@include media-breakpoint-up(lg) {
+				left: -1%;
+			}
+		}
+	
+		&.floating-out-right {
+			right: 2%;
+			@include media-breakpoint-up(lg) {
+				right: -1%;
+			}
+		}
+	}
+}

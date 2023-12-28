@@ -59,12 +59,18 @@
                 }
             }
 
+            .product-card img {
+                border-top-left-radius: $border-radius-lg;
+                border-top-right-radius: $border-radius-lg;
+            }
+
+            .product-card__content {
+                border-bottom-left-radius: $border-radius-lg !important;
+                border-bottom-right-radius: $border-radius-lg !important;
+            }
+
             .product-card__title {
                 min-height: calc-em(50);
-                @include media-breakpoint-down(lg) {
-                    font-size: calc-em(20);
-                    min-height: calc-em(75);
-                }
             }
 
             .product-card__content-rating {
@@ -84,16 +90,23 @@
             }
             @include media-breakpoint-down(lg) {
                 .list-unstyled.row {
-                    padding-top: 20px !important;
-                    padding-bottom: 30px !important;
+                    padding-top: map-get($spacers, 2) !important;
+                    padding-bottom: map-get($spacers, 2) !important;
 
-                    li:first-child, li:nth-child(2) {
-                        margin-bottom: 30px !important;
-                    }
+                    // li:first-child, li:nth-child(2) {
+                    //     margin-bottom: 30px !important;
+                    // }
 
-                    li:last-child, li:nth-child(3) {
-                        margin-bottom: 0px !important;
-                    }
+                    // li:last-child, li:nth-child(3) {
+                    //     margin-bottom: 0px !important;
+                    // }
+                }
+            }
+
+            .list-unstyled p {
+                @include font-size($font-size-sm);
+                @include media-breakpoint-up(lg) {
+                    @include font-size($font-size-base);
                 }
             }
 
@@ -102,9 +115,21 @@
                     margin-bottom: 40px !important;
                 }
             }
+
+            .services-list__delivery {
+                display: none !important;
+            }
         }
 
         .instagram {
+            &__container {
+                @include make-container($gutter: 0);
+                @include make-container-max-widths();
+                @include media-breakpoint-up(lg) {
+                    padding-right: $grid-gutter-width;
+                    padding-left: $grid-gutter-width;
+                }
+            }
             background-color: $pink-light !important;
             padding-top: calc-em(50) !important;
             padding-bottom: calc-em(24);
@@ -151,12 +176,15 @@
                 color: $body-color;
             }
 
-            .dropdown-toggle {
-                font-weight: normal !important;
-            }
+            @include media-breakpoint-up(lg) {
+                .dropdown-toggle {
+                    font-weight: normal !important;
+                    @include font-size($h2-font-size-lg, true);
+                }
 
-            .dropup .dropdown-toggle:after {
-                display: none;
+                .dropup .dropdown-toggle:after {
+                    margin-left: calc-em(9);
+                }
             }
 
             @include media-breakpoint-down(lg) {
@@ -173,9 +201,8 @@
                 }
             }
 
-            .footer__copy {
-                margin-top: 20px !important;
-                @include media-breakpoint-down(lg) {
+            @include media-breakpoint-down(lg) {
+                .footer__copy {
                     margin-top: $grid-gutter-width !important;
                     @include font-size($font-size-sm);
                 }
@@ -229,10 +256,9 @@
             .footer-grid-nav {
                 grid-template-columns: 1fr 1fr;
                 grid-template-areas: "nav-shop nav-about"
-                    "nav-help nav-currency"
-                    "nav-banner nav-banner-copy";
+                    "nav-help nav-currency";
                 @include media-breakpoint-up(lg) {
-                    grid-template-areas: "nav-shop nav-about nav-help nav-follow nav-currency nav-banner";
+                    grid-template-areas: "nav-shop nav-about nav-help nav-banner nav-follow nav-currency";
                     grid-template-columns: 1.5fr 1.5fr 2fr 1.5fr 1.5fr 1.5fr;
                 }
 
@@ -271,6 +297,10 @@
 
                     &__banner-text {
                         display: block !important;
+                    }
+
+                    &__follow svg {
+                        height: calc-em(20);
                     }
                 }
             }
