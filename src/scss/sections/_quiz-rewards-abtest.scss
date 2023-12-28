@@ -33,15 +33,6 @@ html.us-store {
 				&__subtitle {
 					@include font-size($font-size-base, true);
 				}
-
-				&__img img {
-					position: absolute;
-					width: auto !important;
-					bottom: 0;
-					z-index: 1;
-					left: 0;
-					right: 0;
-				}
 			}
 		}
 	}
