@@ -32,19 +32,19 @@
 	</div>
 	-->
 
-	<div id="product-image-carousel__indicator-bottom{{#if num}}{{num}}{{/if}}" class="product-image-carousel__indicator  d-flex carousel--swipe col-12 order-lg-1 carousel slide carousel--loop mb-1 mb-lg-0 px-0 px-lg-g" {{#if (gt totalSlide 5)}}data-slide-number="5" data-ride="carousel" data-interval="false"{{/if}}>
+	<div id="product-image-carousel__indicator-bottom{{#if num}}{{num}}{{/if}}" class="product-image-carousel__indicator-bottom mt-3 d-flex carousel--swipe col-12 order-lg-1 carousel slide carousel--loop mb-1 mb-lg-0 px-0" data-slide-number="7" data-ride="carousel" data-interval="false">
 	{{#if (gt totalSlide 5)}}
-		<a class="carousel-indicator chevron-up text-center align-items-center" href="#product-image-carousel__indicator-bottom{{#if num}}{{num}}{{/if}}" data-slide="prev" aria-hidden="true" disabled>
+		<a class="carousel-indicator chevron-up text-center align-items-center d-flex" href="#product-image-carousel__indicator-bottom{{#if num}}{{num}}{{/if}}" data-slide="prev" aria-hidden="true" disabled>
 			<img class="svg text-primary" src="icons/chevron-prev.svg" replace-to-svg />
 		</a>
 		{{/if}}
 
 		<div class="carousel-inner d-flex flex-nowrap {{#if (gt totalSlide 5)}}{{else}}justify-content-center justify-content-lg-start{{/if}}">
 			{{#times totalSlide}}
-			<div class="product-image-carousel__indicator__item carousel-item {{#if @first}}active{{/if}} col-12 px-lg-0 mw-100" data-target="#product-image-carousel{{#if num}}{{num}}{{/if}}" data-index="{{@index}}">
+			<div class="product-image-carousel__indicator__item carousel-item mx-1 {{#if @first}}active{{/if}} col-12 px-lg-0 mw-100" data-target="#product-image-carousel{{#if num}}{{num}}{{/if}}" data-index="{{@index}}">
 				<button class="btn-unstyled border d-block w-100 {{#if @first}}border-primary{{else}}border-white{{/if}}">
 					<picture class="embed-responsive embed-responsive-1by1 bg-shimmer {{#if @last}}with-video{{/if}}">
-						<img class="embed-responsive-item fit--cover" src="https://via.placeholder.com/150x150/EFADBA?text={{@index}}" alt="Slide {{@index}}">
+						<img class="embed-responsive-item fit--cover" src="https://via.placeholder.com/150x150/EFADBA?text={{@index}}" alt="Slide {{@index}}" width="70" height="70">
 						{{#if @last}}<img class="svg text-white" src="icons/play.svg" replace-to-svg />{{/if}}
 					</picture>
 				</button>
@@ -53,7 +53,7 @@
 		</div>
 
 		{{#if (gt totalSlide 5)}}
-		<a class="carousel-indicator chevron-down text-center align-items-center" href="#product-image-carousel__indicator-bottom{{#if num}}{{num}}{{/if}}" data-slide="next" aria-hidden="true">
+		<a class="carousel-indicator chevron-down text-center align-items-center d-flex" href="#product-image-carousel__indicator-bottom{{#if num}}{{num}}{{/if}}" data-slide="next" aria-hidden="true">
 			<img class="svg text-primary" src="icons/chevron-next.svg" replace-to-svg />
 		</a>
 		{{/if}}

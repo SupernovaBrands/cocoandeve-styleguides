@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html class="us-store">
 
 <head>
 	{{> html-head title="Product Page" maincss="product" }}
 </head>
 
-<body class="template-product">
+<body class="template-product pdp-rework-abtest">
 	{{> sections/header}}
 	<p class="text-center my-2 quiz-result-title d-none">We found your perfect match!</p>
 	<div class="container px-g mb-4 mt-lg-5">
@@ -133,13 +133,48 @@
 						</li>
 					</ul>
 
-					<div class="product-form-submit pay-wrapper mb-3 mb-lg-4">
+					<div class="klarna-free-shipping pay-wrapper mb-3 mb-lg-4">
 						<div class="mb-1">
 							or 4 interest-free installments of $15.70 by
 							<img src="{{ imageUrl }}/logo-klarna.svg" height="15px" class="ml-1 d-inline-block align-baseline" alt="Klarna" />
 						</div>
 
 						<div>Fast shipping worldwide</div>
+					</div>
+					<div class="klarna-free-shipping pay-wrapper d-none mb-3">
+						<div class="d-flex align-items-center mb-1">
+							<div class="klarna-icon d-flex align-items-center justify-content-center bg-pink-light rounded py-1">
+								<img src="{{ imageUrl }}/logo-klarna.svg" height="15px" class="d-inline-block align-baseline" alt="Klarna" />
+							</div>
+							<div class="d-flex flex-column pl-g font-size-sm">
+								<span>4 interest-free payments of $15.70</span>
+								<a href="">Learn more</a>
+							</div>
+						</div>
+						<div class="d-flex align-items-center mb-1">
+							<div class="free-shipping-icon d-flex align-items-center justify-content-center bg-secondary-light rounded py-1">
+								<img class="svg d-inline-block align-baseline" src="icons/fast-delivery.svg" replace-to-svg />
+							</div>
+							<div class="d-flex flex-column pl-g font-size-sm">
+								<b class="d-block">FREE</b>
+								<span>standard shipping on all orders above $50(SG)</span>
+							</div>
+						</div>
+					</div>
+					<div class="proud-to-be-wrapper mb-3 mb-lg-4">
+						<h3>Proud to be</h3>
+						<ul class="list-unstyled row mt-3 mb-1">
+							<li class="col-2 d-flex align-items-center mb-2 flex-column"><img class="svg mb-1" src="icons/natural-dha.svg" replace-to-svg /><span class="text-center flex-grow-1">100% Natural DHA</span></li>
+							<li class="col-2 d-flex align-items-center mb-2 flex-column"><img class="svg mb-1" src="icons/vegan.svg" replace-to-svg /><span class="text-center flex-grow-1">Vegan</span></li>
+							<li class="col-2 d-flex align-items-center mb-2 flex-column"><img class="svg mb-1" src="icons/dimethicone-free.svg" replace-to-svg /><span class="text-center flex-grow-1">Silicone Free</span></li>
+							<li class="col-2 d-flex align-items-center mb-2 flex-column"><img class="svg mb-1" src="icons/cruelty-free.svg" replace-to-svg /><span class="text-center  flex-grow-1"> Free</span></li>
+							<li class="col-2 d-flex align-items-center mb-2 flex-column"><img class="svg mb-1" src="icons/toxin-free.svg" replace-to-svg /><span class="text-center flex-grow-1">Toxin-free</span></li>
+							<li class="col-2 d-flex align-items-center mb-2 flex-column"><img class="svg mb-1" src="icons/gluten.svg" replace-to-svg /><span class="text-center flex-grow-1">Gluten Free</span></li>
+							<li class="col-2 d-flex align-items-center mb-2 flex-column"><img class="svg mb-1" src="icons/ethically.svg" replace-to-svg /><span class="text-center flex-grow-1">Ethically Sourced</span></li>
+							<li class="col-2 d-flex align-items-center mb-2 flex-column"><img class="svg mb-1" src="icons/paraben-free.svg" replace-to-svg /><span class="text-center flex-grow-1">Paraben Free</span></li>
+							<li class="col-2 d-flex align-items-center mb-2 flex-column"><img class="svg mb-1" src="icons/peta.svg" replace-to-svg /><span class="text-center flex-grow-1">Peta Approved</span></li>
+							<li class="col-2 d-flex align-items-center mb-2 flex-column"><img class="svg mb-1" src="icons/fragrance-free.svg" replace-to-svg /><span class="text-center flex-grow-1">Fragrance Free</span></li>
+						</ul>
 					</div>
 				</form>
 

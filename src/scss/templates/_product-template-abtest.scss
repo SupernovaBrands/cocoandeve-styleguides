@@ -1,6 +1,45 @@
 html.us-store,
 html.au-store {
     .pdp-rework-abtest {
-        
+        .product-image-carousel__indicator {
+            display: none !important;
+        }
+
+        .klarna-free-shipping {
+            display: block !important;
+            .free-shipping-icon, .klarna-icon {
+                width: 94px;
+            }
+        }
+
+        .klarna-free-shipping:not(.d-none) {
+            display: none !important;
+        }
+
+        .proud-to-be-wrapper {
+            svg {
+                height: 2em;
+            }
+        }
+
+        .product-image-carousel__container {
+            @include media-breakpoint-up(lg) {
+                flex: 0 0 58.33333%;
+                max-width: 58.33333%;
+            }
+        }
+
+        .product-image-carousel__indicator-bottom {
+            .with-video {
+                cursor: pointer;
+                .svg {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    font-size: calc-em(30);
+                }
+            }
+        }
     }
 }
