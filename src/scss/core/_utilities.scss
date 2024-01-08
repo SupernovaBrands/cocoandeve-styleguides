@@ -13,6 +13,7 @@
 @include bg-variant(".bg-sh-orange", $sh-orange, true);
 @include bg-variant(".bg-sh-orange-light", $sh-orange-light, true);
 @include bg-variant(".bg-bali-bod-blue-light", $bali-bod-blue-light, true);
+@include bg-variant(".bg-skin-peach", $skin-peach, true);
 
 // Grey 100 background color
 @include bg-variant(".bg-gray-100", $gray-100, true);

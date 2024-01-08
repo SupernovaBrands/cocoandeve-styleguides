@@ -27,6 +27,7 @@
 
 @include make-box('primary', $primary);
 @include make-box('primary-light', $primary-light);
+@include make-box('primary-light-second', $primary-light-second);
 @include make-box('primary-dark', $primary-dark);
 @include make-box('secondary', $secondary);
 @include make-box('secondary-light', $secondary-light);
@@ -44,3 +45,7 @@
 @include make-box('green-light', $green-light);
 @include make-box('yellow-light', $yellow-light);
 @include make-box('pink-light', $pink-light);
+@include make-box('suncare-blue', $suncare-blue);
+@include make-box('orange', $skincare-orange);
+@include make-box('pink-product', $pink-product);
+@include make-box('skin-peach', $skin-peach);
