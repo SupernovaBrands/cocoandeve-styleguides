@@ -49,21 +49,12 @@ $(document).ready(function () {
 	}
 
 	const adjustScrollThumb = (thumb, inner, scrollParent) => {
-		let innerOuterWidth;
-		if ($(inner).closest('.instagram-carousel').length > 0) {
-			// instagram scroll bugfix: out of container
-			// round to 1 decimal of item width
-			const itemWidth = Math.round($(inner).find('.carousel-item').outerWidth() * 10) / 10;
-			// instagram total images from instagram.js
-			innerOuterWidth = itemWidth * 15;
-		} else {
-			innerOuterWidth = inner.scrollWidth;
-		}
+		const totalItems = $(inner).find('.carousel-item').length || 1;
 		// eslint-disable-next-line no-param-reassign
-		thumb.style.width = `${(inner.clientWidth / innerOuterWidth) * 100}%`;
+		thumb.style.width = `${((inner.clientWidth / totalItems) / inner.clientWidth) * 100}%`;
 		// eslint-disable-next-line no-param-reassign
 		thumb.style.left = `${(inner.scrollLeft / inner.scrollWidth) * 100}%`;
-
+		/*
 		if (inner.clientWidth === inner.scrollWidth) {
 			inner.classList.add('justify-content-center');
 			scrollParent.classList.add('d-none');
@@ -71,22 +62,32 @@ $(document).ready(function () {
 			inner.classList.remove('justify-content-center');
 			scrollParent.classList.remove('d-none');
 		}
+		*/
 	};
 
 	if ($('.carousel--scroll-single').length > 0) {
-		$('.carousel--scroll:not(.carousel--scroll__featured)').each((index, carousel) => {
+		$('.carousel--scroll-single').each((index, carousel) => {
 			const inner = carousel.querySelector('.carousel-inner');
 			const scrollbar = carousel.querySelector('.scrollbar');
 			const scrollThumb = carousel.querySelector('.scrollbar--thumb');
+			const totalItems = $(inner).find('.carousel-item').length || 1;
 
 			if (scrollbar) {
 				carousel.addEventListener('adjustThumb', () => { adjustScrollThumb(scrollThumb, inner, scrollbar.parentNode); });
 				if (scrollThumb) adjustScrollThumb(scrollThumb, inner, scrollbar.parentNode);
 			}
 
+			console.log('carousel', carousel, scrollbar);
+
 			let x = 0;
 			let left = 0;
-			let itemIndex = 0;
+
+			const scrollbarWidth = scrollbar.clientWidth;
+			const gap = 15;
+			const leftTh = gap + 1;
+			const rightTh = scrollbar.clientWidth + gap;
+			const slideWidth = scrollbarWidth / totalItems;
+			let activeSlide = 0;
 
 			const innerDrag = (e) => {
 				inner.scrollLeft = left - (e.pageX || e.touches[0].pageX) + x;
@@ -95,8 +96,18 @@ $(document).ready(function () {
 			};
 
 			const scrollDrag = (e) => {
-				inner.scrollLeft = left + ((e.pageX || e.touches[0].pageX) - x) * (inner.scrollWidth / scrollbar.clientWidth);
-				if (scrollThumb) scrollThumb.style.left = `${(inner.scrollLeft / inner.scrollWidth) * 100}%`;
+				console.log('e.touches[0].pageX', e.touches[0].pageX);
+				const pageX = (e.pageX || e.touches[0].pageX);
+				let pos = pageX - leftTh;
+				if (pageX < leftTh) pos = 0;
+				else if (pageX > (rightTh - scrollThumb.clientWidth)) pos = scrollbarWidth - scrollThumb.clientWidth;
+				const slidePos = Math.floor(pos / slideWidth);
+				console.log('pos a', pos, activeSlide);
+				if (scrollThumb) scrollThumb.style.left = `${(pos / scrollbarWidth) * 100}%`;
+				if (activeSlide !== slidePos) {
+					activeSlide = slidePos;
+					$(carousel).carousel('next');
+				}
 				// checkButton();
 			};
 
@@ -108,6 +119,7 @@ $(document).ready(function () {
 			const eventStart = (e) => {
 				e.preventDefault();
 				x = (e.pageX || e.touches[0].pageX);
+				console.log('event start x', x);
 				left = inner.scrollLeft;
 
 				document.addEventListener(
@@ -133,18 +145,6 @@ $(document).ready(function () {
 				document.removeEventListener('touchmove', innerDrag);
 				document.removeEventListener('touchmove', scrollDrag);
 			});
-
-			const scrollItem = (direction) => (e) => {
-				e.preventDefault();
-				const item = carousel.querySelector('.carousel-item');
-				const itemToScroll = $(carousel).parent().hasClass('review-carousel') || $(carousel).parent().hasClass('instagram-carousel') ? 1 : 2;
-				itemIndex = Math.round(inner.scrollLeft / item.clientWidth) + (direction === 'left' ? -(itemToScroll) : itemToScroll);
-				left = itemIndex * item.clientWidth;
-				if (left < 0) left = 0;
-				else if (left > inner.scrollWidth - inner.clientWidth) left = inner.scrollWidth - inner.clientWidth;
-				$(inner).animate({ scrollLeft: left }, 300);
-				$(scrollThumb).animate({ left: `${(left / inner.scrollWidth) * 100}%` }, 300);
-			};
 		});
 	}
 });

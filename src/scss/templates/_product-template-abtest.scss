@@ -1,6 +1,27 @@
 html.us-store,
-html.au-store {
+html.au-store,
+html.dev-store {
     .pdp-rework-abtest {
+        .product-image-carousel__container {
+            .scrollbar {
+                height: 4px;
+                border-radius: 2px;
+                position: relative;
+                background: $gray-400;
+
+                .scrollbar--thumb {
+                    background: $gray-500;
+                    position: absolute;
+                    height: 4px;
+                    border-radius: 2px;
+                }
+
+                @include media-breakpoint-down(lg) {
+                    display: block !important;
+                }
+
+            }
+        }
         .product-image-carousel__indicator {
             display: none !important;
         }
