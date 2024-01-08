@@ -17,8 +17,35 @@ html.au-store {
         }
 
         .proud-to-be-wrapper {
+            display: block !important;
             svg {
                 height: 2em;
+            }
+        }
+
+        .product-desc-tabs,
+        .product-collapse-shipping-return-wrapper,
+        .yotpo-widget__keywords {
+            display: none;
+        }
+
+        .product-collapse-benefit-ingredients {
+            display: block !important;
+        }
+
+        .carousel--product-preview {
+            .item-third.d-lg-none {
+                display: none;
+            }
+            @include media-breakpoint-down(lg) {
+                .item-third {
+                    width: 100%;
+                    max-width: 100%;
+                }
+
+                .carousel-inner {
+                    width: 100%;
+                }
             }
         }
 
