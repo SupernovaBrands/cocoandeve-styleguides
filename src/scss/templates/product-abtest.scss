@@ -5,10 +5,6 @@ html.uk-store {
                 display: block !important;
             }
 
-            .pdp-banner:not(.pdp-abtest-wrapper) {
-                display: none !important;
-            }
-
             .product-variant .custom-control-label {
                 border: none !important;
                 padding: 0 !important;
@@ -47,41 +43,6 @@ html.uk-store {
             .klarna__amount {
                 svg {
                     display: none;
-                }
-            }
-
-            .product-card--quiz {
-                background-color: $yellow-light;
-                margin-bottom: calc-em(35);
-
-                picture {
-                    display: none;
-                }
-
-                figcaption {
-                    position: relative !important;
-                    transform: none;
-                    padding: calc-em(10);
-                    padding-left: 0 !important;
-                    padding-right: 0 !important;
-                    text-align: center;
-
-                    p {
-                        margin: 0 !important;
-                        font-weight: normal !important;
-                    }
-
-                    br {
-                        display: none;
-                    }
-
-                    .btn {
-                        background-color: transparent !important;
-                        border: none;
-                        font-weight: normal;
-                        text-decoration: underline;
-                        padding: 0 !important;
-                    }
                 }
             }
         }
