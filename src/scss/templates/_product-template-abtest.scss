@@ -1,0 +1,97 @@
+html.us-store,
+html.au-store,
+html.dev-store {
+    .pdp-rework-abtest {
+        .product-image-carousel__container {
+            .scrollbar {
+                height: calc-em(4);
+                border-radius: calc-em(2);
+
+                .scrollbar--thumb {
+                    height: calc-em(4);
+                    border-radius: calc-em(2);
+                }
+
+                @include media-breakpoint-down(lg) {
+                    display: block !important;
+                }
+
+            }
+        }
+
+        .scrollbar {
+            background: $gray-400;
+            .scrollbar--thumb {
+                background: $gray-500;
+            }
+        }
+
+        .product-image-carousel__indicator {
+            display: none !important;
+        }
+
+        .klarna-free-shipping {
+            display: block !important;
+            .free-shipping-icon, .klarna-icon {
+                width: calc-em(94);
+            }
+        }
+
+        .klarna-free-shipping:not(.d-none) {
+            display: none !important;
+        }
+
+        .proud-to-be-wrapper {
+            display: block !important;
+            svg {
+                height: 2em;
+            }
+        }
+
+        .product-desc-tabs,
+        .product-collapse-shipping-return-wrapper,
+        .yotpo-widget__keywords {
+            display: none;
+        }
+
+        .product-collapse-benefit-ingredients {
+            display: block !important;
+        }
+
+        .carousel--scroll-product {
+            .item-third.d-lg-none {
+                display: none;
+            }
+            @include media-breakpoint-down(lg) {
+                .item-third {
+                    width: 100%;
+                    max-width: 100%;
+                }
+
+                .carousel-inner {
+                    width: 100%;
+                }
+            }
+        }
+
+        .product-image-carousel__container {
+            @include media-breakpoint-up(lg) {
+                flex: 0 0 58.33333%;
+                max-width: 58.33333%;
+            }
+        }
+
+        .product-image-carousel__indicator-bottom {
+            .with-video {
+                cursor: pointer;
+                .svg {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    font-size: calc-em(30);
+                }
+            }
+        }
+    }
+}
