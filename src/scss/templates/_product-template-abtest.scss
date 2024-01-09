@@ -82,6 +82,29 @@ html.dev-store {
         }
 
         .product-image-carousel__indicator-bottom {
+            @include media-breakpoint-up(lg) {
+                display: flex !important;
+            }
+            .product-image-carousel__indicator__item {
+                button {
+                    width: calc-em(70);
+                    height: calc-em(70);
+                }
+            }
+            .carousel-indicator {
+                width: calc-em(60);
+                height: calc-em(60);
+                z-index: 1;
+                box-shadow: 0px 6.5px 8px 0px rgba(21, 21, 21, 0.16);
+
+                &[data-slide="prev"] {
+                    left: 0;
+                }
+
+                &[data-slide="next"] {
+                    right: 0;
+                }
+            }
             .with-video {
                 cursor: pointer;
                 .svg {
