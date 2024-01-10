@@ -26,14 +26,26 @@ html.dev-store {
             }
         }
 
-        .product-image-carousel__indicator {
+        .product-image-carousel__indicator, .product-upsell-2, .real-result--original, .sustainability-section {
             display: none !important;
         }
 
         .klarna-free-shipping {
             display: block !important;
-            .free-shipping-icon, .klarna-icon {
+            .free-shipping-icon, .klarna-icon, .afterpay-icon, .atome-icon, .shoppay-icon {
                 width: calc-em(94);
+            }
+
+            .afterpay-icon {
+                background-color: #C2FAE4;
+            }
+
+            .atome-icon {
+                background-color: #F0FF5F;
+            }
+
+            .shoppay-icon {
+                background-color: #E0F0E9;
             }
         }
 
@@ -52,6 +64,10 @@ html.dev-store {
         .product-collapse-shipping-return-wrapper,
         .yotpo-widget__keywords {
             display: none;
+        }
+
+        .related-products {
+            display: block !important;
         }
 
         .product-collapse-benefit-ingredients {
