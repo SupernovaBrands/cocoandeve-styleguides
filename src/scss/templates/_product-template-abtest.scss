@@ -12,7 +12,7 @@ html.dev-store {
                     border-radius: calc-em(2);
                 }
 
-                @include media-breakpoint-down(lg) {
+                @include media-breakpoint-down(md) {
                     display: block !important;
                 }
 
@@ -67,7 +67,7 @@ html.dev-store {
             display: none;
         }
 
-        .related-products {
+        .section-product-carousel {
             display: block !important;
         }
 
