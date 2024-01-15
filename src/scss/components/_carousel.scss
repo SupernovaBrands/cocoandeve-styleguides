@@ -106,6 +106,15 @@
 			}
 		}
 
+		&[data-slide-number="7"] {
+			.carousel-item {
+				@include media-breakpoint-up(lg) {
+					flex: 0 0 10%;
+					max-width: 10%;
+				}
+			}
+		}
+
 		@include media-breakpoint-down(sm) {
 			overflow-x: hidden;
 		}
