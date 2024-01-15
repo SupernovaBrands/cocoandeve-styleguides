@@ -109,8 +109,8 @@
 		&[data-slide-number="7"] {
 			.carousel-item {
 				@include media-breakpoint-up(lg) {
-					flex: 0 0 11.2%;
-					max-width: 11.2%;
+					flex: 0 0 10%;
+					max-width: 10%;
 				}
 			}
 		}
