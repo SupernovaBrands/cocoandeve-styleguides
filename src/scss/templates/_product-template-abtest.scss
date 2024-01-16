@@ -34,6 +34,7 @@ html.dev-store {
             display: block !important;
             .free-shipping-icon, .klarna-icon, .afterpay-icon, .atome-icon, .shoppay-icon {
                 width: calc-em(94);
+                height: calc-em(40);
             }
 
             .afterpay-icon {
@@ -65,6 +66,17 @@ html.dev-store {
         .yotpo-widget__keywords,
         .banner-services {
             display: none;
+        }
+
+        .product-accordion-comp {
+            border-color: #ADADAD !important;
+
+            @include media-breakpoint-down(md) {
+                border-top: none !important;
+            }
+            .border-bottom {
+                border-color: #ADADAD !important;
+            }
         }
 
         .section-product-carousel, .product-collapse-shipping-return {
@@ -132,6 +144,11 @@ html.dev-store {
                     font-size: calc-em(30);
                 }
             }
+        }
+
+        .product-tags-element {
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
         }
     }
 }
