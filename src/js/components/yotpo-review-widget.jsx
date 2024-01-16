@@ -518,7 +518,7 @@ const YotpoReviewWidget = (props) => {
 						</div>
 
 						{topics.length > 0 && (
-							<div className="input-group mt-2 col-lg-6 px-0">
+							<div className="yotpo-widget__keywords input-group mt-2 col-lg-6 px-0">
 								{topics.map((t, index) => {
 									const key = kebabCase(t.name);
 									const selected = selectedTopic === t.name;

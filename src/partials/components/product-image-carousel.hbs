@@ -1,5 +1,5 @@
 <div class="product-image-carousel__container col-12 col-lg-6 order-lg-2">
-	<figure id="product-image-carousel{{#if num}}{{num}}{{/if}}" class="product-image-carousel carousel carousel--product-preview slide mb-1 mb-lg-0 no-gutters__in-container" data-ride="carousel" data-interval="false" data-indicator="#product-image-carousel__indicator{{#if num}}{{num}}{{/if}}">
+	<figure id="product-image-carousel{{#if num}}{{num}}{{/if}}" class="carousel--scroll-product product-image-carousel carousel carousel--product-preview slide mb-1 mb-lg-0 no-gutters__in-container" data-ride="carousel" data-interval="false" data-indicator="#product-image-carousel__indicator{{#if num}}{{num}}{{/if}}">
 		<div class="carousel-inner">
 			{{#times totalSlide}}
 			<div class="col-12 px-0 carousel-item {{#if @first}}active{{/if}}">
@@ -25,9 +25,40 @@
 	<picture class="circle-badge position-absolute rounded-circle bg-primary d-flex p-1 mr-0 mt-2 mr-lg-1 mt-lg-1">
 		<img class="w-100" src="../images/badge-25.svg" />
 	</picture>
+	<!--
 	<div class="tooltip tooltip--sold-out bg-secondary p-1 rounded col-5 col-lg-3 text-white text-center ml-1">
 		<span class="d-block font-weight-bold">25</span>
 		<span class="font-size-xs">People bought today!.</span>
+	</div>
+	-->
+	<div class="scrollbar mt-1 mb-1 d-none position-relative">
+		<div class="scrollbar--thumb position-absolute"></div>
+	</div>
+	<div id="product-image-carousel__indicator-bottom{{#if num}}{{num}}{{/if}}" class="product-image-carousel__indicator-bottom d-none align-items-center mt-3 carousel--swipe col-12 order-lg-1 carousel slide carousel--loop mb-1 mb-lg-0 px-0" data-slide-number="7" data-ride="carousel" data-interval="false">
+	{{#if (gt totalSlide 5)}}
+		<a class="carousel-indicator chevron-up text-center align-items-center d-flex position-absolute justify-content-center bg-white rounded-circle" href="#product-image-carousel__indicator-bottom{{#if num}}{{num}}{{/if}}" data-slide="prev" aria-hidden="true" disabled>
+			<img class="svg text-primary" src="icons/chevron-prev.svg" replace-to-svg />
+		</a>
+		{{/if}}
+
+		<div class="carousel-inner d-flex flex-nowrap ml-2 {{#if (gt totalSlide 5)}}{{else}}justify-content-center justify-content-lg-start{{/if}}">
+			{{#times totalSlide}}
+			<div class="product-image-carousel__indicator__item carousel-item mx-1 {{#if @first}}active{{/if}} col-12 px-lg-0 mw-100" data-target="#product-image-carousel{{#if num}}{{num}}{{/if}}" data-index="{{@index}}">
+				<button class="btn-unstyled border d-block {{#if @first}}border-primary{{else}}border-white{{/if}}">
+					<picture class="embed-responsive embed-responsive-1by1 bg-shimmer {{#if @last}}with-video{{/if}}">
+						<img class="embed-responsive-item fit--cover" src="https://via.placeholder.com/150x150/EFADBA?text={{@index}}" alt="Slide {{@index}}" width="70" height="70">
+						{{#if @last}}<img class="svg text-white" src="icons/play.svg" replace-to-svg />{{/if}}
+					</picture>
+				</button>
+			</div>
+			{{/times}}
+		</div>
+
+		{{#if (gt totalSlide 5)}}
+		<a class="carousel-indicator chevron-down text-center align-items-center d-flex position-absolute justify-content-center bg-white rounded-circle" href="#product-image-carousel__indicator-bottom{{#if num}}{{num}}{{/if}}" data-slide="next" aria-hidden="true">
+			<img class="svg text-primary" src="icons/chevron-next.svg" replace-to-svg />
+		</a>
+		{{/if}}
 	</div>
 </div>
 

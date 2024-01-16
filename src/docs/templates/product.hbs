@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html class="dev-store">
 
 <head>
 	{{> html-head title="Product Page" maincss="product" }}
 </head>
 
-<body class="template-product">
+<body class="template-product pdp-rework-abtest">
 	{{> sections/header}}
 	<p class="text-center my-2 quiz-result-title d-none">We found your perfect match!</p>
 	<div class="container px-g mb-4 mt-lg-5">
@@ -133,13 +133,82 @@
 						</li>
 					</ul>
 
-					<div class="product-form-submit pay-wrapper mb-3 mb-lg-4">
+					<div class="klarna-free-shipping pay-wrapper mb-3 mb-lg-4">
 						<div class="mb-1">
 							or 4 interest-free installments of $15.70 by
 							<img src="{{ imageUrl }}/logo-klarna.svg" height="15px" class="ml-1 d-inline-block align-baseline" alt="Klarna" />
 						</div>
 
 						<div>Fast shipping worldwide</div>
+					</div>
+					<div class="klarna-free-shipping pay-wrapper d-none mb-3">
+						<div class="atome-wrapper d-flex align-items-center mb-1">
+							<div class="atome-icon d-flex align-items-center justify-content-center rounded py-1">
+								<img class="d-inline-block align-baseline" height="15px" src="{{ imageUrl }}/logo-atome.svg" alt="atome-icon" />
+							</div>
+							<div class="d-flex flex-column pl-g font-size-sm">
+								<span>4 interest-free payments of $15.70</span>
+								<a href="javascript:void(0);" data-toggle="modal" data-target="#modal-klarna" role="button" data-price="{{ product.price }}">Learn more</a>
+							</div>
+						</div>
+						<div class="shoppay-wrapper d-flex align-items-center mb-1">
+							<div class="shoppay-icon d-flex align-items-center justify-content-center rounded py-1">
+								<img class="d-inline-block align-baseline" height="15px" src="{{ imageUrl }}/logo-shoppay.svg" alt="shoppay-icon" />
+							</div>
+							<div class="d-flex flex-column pl-g font-size-sm">
+								<span>4 interest-free payments of $15.70</span>
+								<a href="javascript:void(0);" data-toggle="modal" data-target="#modal-klarna" role="button" data-price="{{ product.price }}">Learn more</a>
+							</div>
+						</div>
+						<div class="afterpay-wrapper d-flex align-items-center mb-1">
+							<div class="afterpay-icon d-flex align-items-center justify-content-center rounded py-1">
+								<img class="d-inline-block align-baseline" height="15px" src="{{ imageUrl }}/logo-afterpay.svg" alt="afterpay-icon" />
+							</div>
+							<div class="d-flex flex-column pl-g font-size-sm">
+								<span>4 interest-free payments of $15.70</span>
+								<a href="javascript:void(0);" data-toggle="modal" data-target="#modal-klarna" role="button" data-price="{{ product.price }}">Learn more</a>
+							</div>
+						</div>
+						<div class="d-flex align-items-center mb-1">
+							<div class="klarna-icon d-flex align-items-center justify-content-center bg-pink-light rounded py-1">
+								<img src="{{ imageUrl }}/logo-klarna.svg" height="15px" class="d-inline-block align-baseline" alt="Klarna" />
+							</div>
+							<div class="d-flex flex-column pl-g font-size-sm">
+								<span>4 interest-free payments of $15.70</span>
+								<a href="">Learn more</a>
+							</div>
+						</div>
+						<div class="d-flex align-items-center mb-1">
+							<div class="free-shipping-icon d-flex align-items-center justify-content-center bg-secondary-light rounded py-1">
+								<img class="svg d-inline-block align-baseline" src="icons/fast-delivery-2.svg" replace-to-svg />
+							</div>
+							<div class="d-flex flex-column pl-g font-size-sm">
+								<b class="d-block">FREE</b>
+								<span>standard shipping on all orders above $50(SG)</span>
+							</div>
+						</div>
+					</div>
+					<div class="proud-to-be-wrapper d-none mb-3 mb-lg-4">
+						<h2 class="mb-0">Proud to be</h2>
+						<div class="">
+							<div class="carousel--scroll position-relative">
+								<ul class="carousel-inner d-flex flex-nowrap row w-auto list-unstyled row mt-3 mb-1" role="listbox">
+									<li class="col-2 d-flex align-items-center flex-column carousel-item active"><img class="svg mb-1" src="icons/natural-dha.svg" replace-to-svg /><span class="text-center flex-grow-1 font-size-sm">100% Natural DHA</span></li>
+									<li class="col-2 d-flex align-items-center flex-column carousel-item"><img class="svg mb-1" src="icons/vegan.svg" replace-to-svg /><span class="text-center flex-grow-1 font-size-sm">Vegan</span></li>
+									<li class="col-2 d-flex align-items-center flex-column carousel-item"><img class="svg mb-1" src="icons/dimethicone-free.svg" replace-to-svg /><span class="text-center flex-grow-1 font-size-sm">Silicone Free</span></li>
+									<li class="col-2 d-flex align-items-center flex-column carousel-item"><img class="svg mb-1" src="icons/cruelty-free.svg" replace-to-svg /><span class="text-center  flex-grow-1 font-size-sm"> Free</span></li>
+									<li class="col-2 d-flex align-items-center flex-column carousel-item"><img class="svg mb-1" src="icons/toxin-free.svg" replace-to-svg /><span class="text-center flex-grow-1 font-size-sm">Toxin-free</span></li>
+									<li class="col-2 d-flex align-items-center flex-column carousel-item"><img class="svg mb-1" src="icons/gluten.svg" replace-to-svg /><span class="text-center flex-grow-1 font-size-sm">Gluten Free</span></li>
+									<li class="col-2 d-flex align-items-center flex-column carousel-item"><img class="svg mb-1" src="icons/ethically.svg" replace-to-svg /><span class="text-center flex-grow-1 font-size-sm">Ethically Sourced</span></li>
+									<li class="col-2 d-flex align-items-center flex-column carousel-item"><img class="svg mb-1" src="icons/paraben-free.svg" replace-to-svg /><span class="text-center flex-grow-1 font-size-sm">Paraben Free</span></li>
+									<li class="col-2 d-flex align-items-center flex-column carousel-item"><img class="svg mb-1" src="icons/peta.svg" replace-to-svg /><span class="text-center flex-grow-1">Peta Approved</span></li>
+									<li class="col-2 d-flex align-items-center flex-column carousel-item"><img class="svg mb-1" src="icons/fragrance-free.svg" replace-to-svg /><span class="text-center flex-grow-1 font-size-sm">Fragrance Free</span></li>
+								</ul>
+								<div class="scrollbar mt-1 mt-lg-3 d-lg-none">
+									<div class="scrollbar--thumb"></div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</form>
 
@@ -166,7 +235,7 @@
 				<a href="#" class="text-underline text-primary font-size-sm order-lg-2 mb-2" data-toggle="modal" data-target="#terms-modal" role="button">Terms and Conditions</a>
 				{{> compounds/modal-terms-and-condition }}
 
-				<div class="order-lg-1 mb-3 mb-lg-4">
+				<div class="product-desc-tabs order-lg-1 mb-3 mb-lg-4">
 					<ul class="product-info-tab nav nav-tabs justify-content-between" id="product-info-tab" role="tablist">
 						<li class="nav-item text-center">
 							<a class="nav-link border-0 text-body text-decoration-none pt-0 pb-1 active" id="product-benefits-tab" data-toggle="tab" href="#product-benefits" role="tab" aria-controls="product-benefits" aria-selected="true">Benefits</a>
@@ -222,7 +291,41 @@
 					</div>
 				</div>
 
-				<ul id="product-collapse" class="list-unstyled border-top mb-4 order-lg-2">
+				<ul id="product-collapse" class="product-accordion-comp list-unstyled border-top mb-4 order-lg-2">
+					<li class="product-collapse-benefit-ingredients d-none py-3 border-bottom">
+						<button id="product-collapse-1__toggle" class="btn-unstyled w-100 d-flex justify-content-between font-weight-bold text-body product-collapse__toggle collapsed" type="button" data-toggle="collapse" data-target="#product-collapse-benefit-ingeredient" aria-expanded="true" aria-controls="product-collapse-1">
+							Benefits & Ingredients
+							<img class="icon-plus svg" src="icons/plus.svg" replace-to-svg /><img class="icon-minus svg" src="icons/minus.svg" replace-to-svg />
+						</button>
+						<div id="product-collapse-benefit-ingeredient" class="product-collapse font-size-sm collapse" aria-labelledby="product-collapse-1__toggle" data-parent="#product-collapse">
+							<div  class="product-collapse-benefit mb-2 mt-2">
+								<ul class="list-check mb-0">
+									<li>Blurs Pigmentation and Perfects Skin.</li>
+									<li>Tropical Mango and Guava Scent.</li>
+									<li>Lightweight, non-sticky formula.</li>
+									<li>Fast drying and develops in just 2 hours</li>
+									<li>Vegan. 100% Natural DHA. No Nasties</li>
+								</ul>
+							</div>
+							<hr>
+							<div class="product-collapse-ingredient">
+								<p class="mb-1">100% Natural DHA:</p>
+								<p class="mb-1">Get a healthy looking, natural tan in just 2 hours that can last up to 2 weeks.</p>
+								<p class="mb-1">CellushapeTM:</p>
+								<p class="mb-1">Anti-cellulite properties to firm & nourish the skin. (explain more - what it is, studies)</p>
+								<p class="mb-1">Raw Virgin Coconut:</p>
+								<p class="mb-1">Hydrate and firm skin along with botanicals and amino acids.</p>
+								<p class="mb-1">Mango, Fig and Cocoa:</p>
+								<p class="mb-1">Enriched with powerful natural antioxidants to improve signs of ageing.</p>
+								<a id="product-ingredients__toggle" href="#product-ingredients" class="collapsed text-body text-underline mt-2 mb-1 d-inline-block"
+									role="button" data-toggle="collapse" data-target="#product-ingredients__full" aria-expanded="false"
+									aria-controls="product-ingredients">Full ingredients list</a>
+								<div id="product-ingredients__full" class="collapse" aria-labelledby="product-ingredients__toggle">
+									Aqua (Water), Dihydroxyacetone, Glycerin, Pentylene Glycol, PEG-40 Hydrogenated Castor Oil, Trideceth-9, Hydroxypropyl Methylcellulose, Coconut Oil Glycereth-8 Esters, Sodium Cocoyl Glutamate, Parfum (Fragrance), Citric Acid, Sodium Benzoate, Potassium Sorbate, Propylene Glycol, Erythrulose, Benzyl Alcohol, Trisodium Ethylenediamine Disuccinate, Lotus Maritimus Flower/Leaf Extract, Musa Sapientum (Banana) Extract, Citrus Aurantium Dulcis (Orange) Peel Extract, Citrus Nobilis (Mandarin Oil Green) Extract, Carica Papaya (Papaya) Fruit Extract, Cocos Nucifera (Coconut) Fruit Extract, Ficus Carica (Fig) Fruit Extract, Garcinia Mangostana Fruit Extract, Mangifera Indica (Mango) Fruit Extract, Theobroma Cacao (Cocoa) Seed Extract, Coumarin, Limonene, Butylphenyl Methylpropional, Benzyl Salicylate, CI 14700 (Red 4), CI 19140 (Yellow 5), CI 42090 (Blue 1).
+								</div>
+							</div>
+						</div>
+					</li>
 					<li class="py-3 border-bottom">
 						<button id="product-collapse-1__toggle" class="btn-unstyled w-100 d-flex justify-content-between font-weight-bold text-body product-collapse__toggle collapsed" type="button" data-toggle="collapse" data-target="#product-collapse-1" aria-expanded="true" aria-controls="product-collapse-1">
 							How to Use
@@ -260,9 +363,33 @@
 							<p class="mb-2">How often should I self-tan?</p>
 							<p class="mb-3">Each bottle has roughly 260 pumps and can last approximately 10-20 full body tanning sessions.</p>
 							<a class="font-weight-bold" href="">See all Product FAQs</a>
+							<div class="product-collapse-shipping-return d-none">
+								<hr>
+								<p class="mt-3 mb-2">Enjoy FREE shipping on orders over $39.*</p>
+								<table class="shipping-table table table-bordered text-center mt-3 mb-2">
+									<thead>
+										<tr>
+											<th>Country<br />(Minimum Spend)</th>
+											<th>Over<br />Minimum Spend</th>
+											<th>Below<br />Minimum Spend</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Austria<br>(€48)</td>
+											<td>FREE<br>3 - 4 days</td>
+											<td>€7.90<br>3 - 4 days</td>
+										</tr>
+									</tbody>
+								</table>
+								<p class="mb-3">Rest of the countries, <a href="#shipping-modal" data-toggle="modal">click here.</a></p>
+								<p class="mb-2">Return & Refund Policy</p>
+								<p class="mb-2">We offer a 30 day return & refund policy with a 100% money back guarantee. For more details see more.</p>
+								<p>Contact our customer service team, <a href="">click here.</a></p>
+							</div>
 						</div>
 					</li>
-					<li class="py-3 border-bottom">
+					<li class="py-3 border-bottom product-collapse-shipping-return-wrapper">
 						<button id="product-collapse-3__toggle" class="btn-unstyled w-100 d-flex justify-content-between font-weight-bold text-body product-collapse__toggle collapsed" type="button" data-toggle="collapse" data-target="#product-collapse-3" aria-expanded="true" aria-controls="product-collapse-3">
 							Shipping &amp; Returns
 							<img class="icon-plus svg" src="icons/plus.svg" replace-to-svg /><img class="icon-minus svg" src="icons/minus.svg" replace-to-svg />
@@ -338,6 +465,8 @@
 
 	{{> sections/pdp-banner-tan-different }}
 	{{> sections/pdp-banner-services }}
+
+	{{> sections/product-carousel class="related-products d-none" }}
 
 	{{> sections/footer}}
 
