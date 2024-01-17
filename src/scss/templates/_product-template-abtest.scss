@@ -2,6 +2,9 @@ html.us-store,
 html.au-store,
 html.dev-store {
     .pdp-rework-abtest {
+        h1.mb-2 {
+            margin-bottom: 10px !important;
+        }
         .product-image-carousel__container {
             .scrollbar {
                 height: calc-em(4);
@@ -33,7 +36,7 @@ html.dev-store {
         .klarna-free-shipping {
             display: block !important;
             .free-shipping-icon, .klarna-icon, .afterpay-icon, .atome-icon, .shoppay-icon {
-                width: calc-em(94);
+                min-width: calc-em(94);
                 height: calc-em(40);
             }
 
