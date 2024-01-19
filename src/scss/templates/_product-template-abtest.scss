@@ -2,6 +2,9 @@ html.us-store,
 html.au-store,
 html.dev-store {
     .pdp-rework-abtest {
+        h1.mb-2 {
+            margin-bottom: 10px !important;
+        }
         .product-image-carousel__container {
             .scrollbar {
                 height: calc-em(4);
@@ -33,7 +36,7 @@ html.dev-store {
         .klarna-free-shipping {
             display: block !important;
             .free-shipping-icon, .klarna-icon, .afterpay-icon, .atome-icon, .shoppay-icon {
-                width: calc-em(94);
+                min-width: calc-em(94);
                 height: calc-em(40);
             }
 
@@ -55,9 +58,15 @@ html.dev-store {
         }
 
         .proud-to-be-wrapper {
+            .col-2 {
+                @include media-breakpoint-down(md) {
+                    flex: 0 0 19%;
+                    max-width: 19%;
+                }
+            }
             display: block !important;
             svg {
-                height: 2em;
+                height: calc-em(26);
             }
         }
 
@@ -66,6 +75,12 @@ html.dev-store {
         .yotpo-widget__keywords,
         .banner-services {
             display: none;
+        }
+
+        .product-collapse-faq {
+            @include media-breakpoint-down(md) {
+                border-bottom: none !important;
+            }
         }
 
         .product-accordion-comp {
@@ -150,5 +165,9 @@ html.dev-store {
             margin-top: 0 !important;
             margin-bottom: 0 !important;
         }
+    }
+
+    .product-banner {
+        margin-bottom: 0 !important;
     }
 }
