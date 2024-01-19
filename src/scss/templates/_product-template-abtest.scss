@@ -58,9 +58,15 @@ html.dev-store {
         }
 
         .proud-to-be-wrapper {
+            .col-2 {
+                @include media-breakpoint-down(md) {
+                    flex: 0 0 19%;
+                    max-width: 19%;
+                }
+            }
             display: block !important;
             svg {
-                height: 2em;
+                height: calc-em(26);
             }
         }
 
@@ -69,6 +75,12 @@ html.dev-store {
         .yotpo-widget__keywords,
         .banner-services {
             display: none;
+        }
+
+        .product-collapse-faq {
+            @include media-breakpoint-down(md) {
+                border-bottom: none !important;
+            }
         }
 
         .product-accordion-comp {
@@ -153,5 +165,9 @@ html.dev-store {
             margin-top: 0 !important;
             margin-bottom: 0 !important;
         }
+    }
+
+    .product-banner {
+        margin-bottom: 0 !important;
     }
 }
