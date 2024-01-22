@@ -79,10 +79,10 @@
                 }
 
                 .carousel-control.floating-out-right {
-                    right: -20px;
+                    right: -calc-em(20);
                 }
                 .carousel-control.floating-out-left {
-                    left: -20px;
+                    left: -calc-em(20);
                 }
             }
         }
