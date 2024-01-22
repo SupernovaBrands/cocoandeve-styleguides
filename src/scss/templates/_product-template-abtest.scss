@@ -88,6 +88,7 @@ html.dev-store {
 
             @include media-breakpoint-down(md) {
                 border-top: none !important;
+                margin-bottom: 0 !important;
             }
             .border-bottom {
                 border-color: #ADADAD !important;
