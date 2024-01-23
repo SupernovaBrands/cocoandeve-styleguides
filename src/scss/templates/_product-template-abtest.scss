@@ -133,6 +133,11 @@ html.dev-store {
         .product-image-carousel__indicator-bottom {
             @include media-breakpoint-up(lg) {
                 display: flex !important;
+
+                .carousel-item {
+                    flex: 0 0 10%;
+                    max-width: 10%;
+                }
             }
             .product-image-carousel__indicator__item {
                 button {
