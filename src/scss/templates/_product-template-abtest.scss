@@ -57,6 +57,12 @@ html.dev-store {
             display: none !important;
         }
 
+        @include media-breakpoint-up(lg) {
+            .product-image-carousel__container, .product-image-carousel__indicator {
+                top: -3em;
+            }
+        }
+
         .proud-to-be-wrapper {
             .col-2 {
                 @include media-breakpoint-down(md) {
@@ -73,7 +79,8 @@ html.dev-store {
         .product-desc-tabs,
         .product-collapse-shipping-return-wrapper,
         .yotpo-widget__keywords,
-        .banner-services {
+        .banner-services,
+        .product-services-comp {
             display: none;
         }
 
@@ -81,6 +88,14 @@ html.dev-store {
             @include media-breakpoint-down(md) {
                 border-bottom: none !important;
             }
+        }
+
+        .pdp-banner {
+            margin-bottom: calc-em(20) !important;
+        }
+
+        .tcpopup-trigger {
+            font-size: calc-em(16);
         }
 
         .product-accordion-comp {
@@ -129,6 +144,11 @@ html.dev-store {
         .product-image-carousel__indicator-bottom {
             @include media-breakpoint-up(lg) {
                 display: flex !important;
+
+                .carousel-item {
+                    flex: 0 0 10%;
+                    max-width: 10%;
+                }
             }
             .product-image-carousel__indicator__item {
                 button {
