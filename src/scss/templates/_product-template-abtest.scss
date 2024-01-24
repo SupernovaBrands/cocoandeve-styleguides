@@ -57,6 +57,12 @@ html.dev-store {
             display: none !important;
         }
 
+        @include media-breakpoint-up(lg) {
+            .product-image-carousel__container, .product-image-carousel__indicator {
+                top: -3em;
+            }
+        }
+
         .proud-to-be-wrapper {
             .col-2 {
                 @include media-breakpoint-down(md) {
