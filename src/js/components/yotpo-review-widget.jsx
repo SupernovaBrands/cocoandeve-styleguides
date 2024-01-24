@@ -26,6 +26,7 @@ import SvgVerified from '~svg/verified.svg';
 import SvgThumbsUp from '~svg/thumbs-up.svg';
 import SvgThumbsDown from '~svg/thumbs-down.svg';
 import SvgChevronPrev from '~svg/chevron-prev.svg';
+import SvgPlayIcon from '~svg/play-icon.svg';
 import SvgChevronNext from '~svg/chevron-next.svg';
 import SvgTranslate from '~svg/translate.svg';
 import SvgCloseCircle from '~svg/close-rounded.svg';
@@ -75,7 +76,7 @@ const formatDate = (serverDate) => {
 };
 
 const YotpoReviewWidget = (props) => {
-	const apiUrl = 'https://supernova-reviews.herokuapp.com/api';
+	const apiUrl = 'https://reviews-api.cocoandeve.com/api';
 
 	const {
 		productId,
@@ -159,6 +160,16 @@ const YotpoReviewWidget = (props) => {
 			}
 			revs.push(newR);
 		});
+
+		// set dummy video data
+		if (revs[0]) {
+			const rev = revs[0];
+			rev.videos_data = [{
+				id: '1234',
+				video_url: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+				thumb_url: 'https://storage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg',
+			}];
+		}
 		setReviews(revs);
 		if (!init) setInit(true);
 		setRevLoading(false);
@@ -369,6 +380,8 @@ const YotpoReviewWidget = (props) => {
 		window.open(url, '', 'status=no,toolbar=no,location=no,menubar=no,directories=no,scrollbars=yes,resizeable=yes,height=400,width=580,top=200,left=400');
 	};
 
+	const getMediaData = (review) => review.images_data.concat(review.videos_data);
+
 	const showMoreContent = (review) => {
 		setReviews(
 			updateItemInArray(
@@ -380,6 +393,13 @@ const YotpoReviewWidget = (props) => {
 				}),
 			),
 		);
+	};
+
+	const playVideo = (ev, el) => {
+		ev.target.classList.add('d-none');
+		const videoEl = document.getElementById(el);
+		videoEl.setAttribute('controls', 'true');
+		videoEl.play();
 	};
 
 	useEffect(() => {
@@ -495,7 +515,7 @@ const YotpoReviewWidget = (props) => {
 				</li>
 			</ul>
 
-			<div className="tab-content mt-2" id="yotpo-widget__tabContent">
+			<div className="tab-content mt-2 yotpo-widget" id="yotpo-widget__tabContent">
 				<div id="yotpo-widget__reviews" className="tab-pane fade show active" role="tabpanel" aria-labelledby="yotpo-widget__reviews-tab">
 					<div id="yotpoFilterForm">
 						<p className="font-weight-bold mb-2">{tStrings.yotpo.filterReviews}</p>
@@ -661,11 +681,14 @@ const YotpoReviewWidget = (props) => {
 													</button>
 												)}
 											</p>
-											{review.images_data && review.images_data.length > 0 && (
+											{(getMediaData(review).length) && (
 												<div className="d-flex flex-nowrap row w-auto overflow-auto pr-g">
-													{review.images_data.map((image, index) => (
-														<button key={image.id} type="button" className={`d-inline-block btn-unstyled ${index === 0 ? 'ml-1 ml-lg-g mr-1' : 'mx-1'} mb-g`} data-toggle="modal" data-target="#yotpoImageModal" onClick={() => { setReviewModal(review); }}>
-															<img src={image.thumb_url.replace('https:', '')} alt={`${review.user_name} ${index}`} />
+													{getMediaData(review).map((media, index) => (
+														<button key={media.id} type="button" className={`position-relative d-inline-block btn-unstyled ${index === 0 ? 'ml-1 ml-lg-g mr-1' : 'mx-1'} mb-g`} data-toggle="modal" data-target="#yotpoImageModal" onClick={() => { setReviewModal(review); }}>
+															<img className="object-fit-contain" src={media.thumb_url.replace('https:', '')} alt={`${review.user_name} ${index}`} width="150" height="150" />
+															{media.video_url && (
+																<SvgPlayIcon className="svg text-white icon-play-video" />
+															)}
 														</button>
 													))}
 												</div>
@@ -789,15 +812,24 @@ const YotpoReviewWidget = (props) => {
 						<div className="modal-content mx-3 mx-lg-0">
 							<div className="row align-items-center">
 								<div className="col-lg-6 pr-lg-0">
-									{reviewModal.images_data.length === 1 ? (
-										<img src={reviewModal.images_data[0].image_url.replace('https:', '')} alt="Slide 1" className="d-block w-100" />
+									{getMediaData(reviewModal).length === 1 ? (
+										<img src={getMediaData(reviewModal)[0].image_url.replace('https:', '')} alt="Slide 1" className="d-block w-100" />
 									) : (
 										<div className="position-relative">
-											<div id="carouselYotpoImage" className="carousel slide" data-ride="carousel">
+											<div id="carouselYotpoImage" className="carousel slide" data-ride="carousel" data-interval="false">
 												<div className="carousel-inner">
-													{reviewModal.images_data.map((image, i) => (
-														<div key={image.id} className={`carousel-item ${(i === 0) ? 'active' : ''}`}>
-															<img src={image.image_url.replace('https:', '')} alt={`Slide ${i + 1}`} className="d-block w-100" />
+													{getMediaData(reviewModal).map((media, i) => (
+														<div key={media.id} className={`position-relative carousel-item ${(i === 0) ? 'active' : ''}`}>
+															{media.image_url && (<img src={media.image_url.replace('https:', '')} alt={`Slide ${i + 1}`} className="d-block w-100" />)}
+															{media.video_url && (
+																// eslint-disable-next-line jsx-a11y/media-has-caption
+																<video id={`video-review-${media.id}`} className="w-100" autoPlay={false} name="media" poster={media.thumb_url}>
+																	<source src={media.video_url} type="video/mp4" />
+																</video>
+															)}
+															{media.video_url && (
+																<SvgPlayIcon onClick={(ev) => playVideo(ev, `video-review-${media.id}`)} className="svg text-white icon-play-video" />
+															)}
 														</div>
 													))}
 												</div>
