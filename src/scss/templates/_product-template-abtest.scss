@@ -35,6 +35,11 @@ html.dev-store {
 
         .klarna-free-shipping {
             display: block !important;
+
+            @include media-breakpoint-down(md) {
+                margin-top: -10px;
+            }
+
             .free-shipping-icon, .klarna-icon, .afterpay-icon, .atome-icon, .shoppay-icon {
                 min-width: calc-em(94);
                 height: calc-em(40);
