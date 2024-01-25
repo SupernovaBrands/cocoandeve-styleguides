@@ -19,7 +19,7 @@ $(document).ready(function () {
 	/* activated by AB TEST trigger */
 	if ($('.carousel--scroll-product').length > 0) {
 		$('.carousel--scroll-product').each((index, carousel) => {
-			carousel.classList.remove('carousel--product-preview');
+			// carousel.classList.remove('carousel--product-preview');
 			const { parentNode } = carousel;
 			const inner = carousel.querySelector('.carousel-inner');
 			const scrollbar = parentNode.querySelector('.scrollbar');

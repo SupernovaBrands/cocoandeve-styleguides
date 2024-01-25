@@ -35,6 +35,11 @@ html.dev-store {
 
         .klarna-free-shipping {
             display: block !important;
+
+            @include media-breakpoint-down(md) {
+                margin-top: -10px;
+            }
+
             .free-shipping-icon, .klarna-icon, .afterpay-icon, .atome-icon, .shoppay-icon {
                 min-width: calc-em(94);
                 height: calc-em(40);
@@ -117,19 +122,18 @@ html.dev-store {
         .product-collapse-benefit-ingredients {
             display: block !important;
         }
-
+        
         .carousel--scroll-product {
-            .item-third.d-lg-none {
-                display: none;
-            }
             @include media-breakpoint-down(lg) {
                 .item-third {
-                    width: 100%;
-                    max-width: 100%;
+                    width: 50%;
+                    max-width: 50%;
+                    border-radius: 8px;
+                    overflow: hidden;
                 }
 
                 .carousel-inner {
-                    width: 100%;
+                    width: 195%;
                 }
             }
         }
@@ -140,6 +144,7 @@ html.dev-store {
                 max-width: 58.33333%;
             }
         }
+        
 
         .product-image-carousel__indicator-bottom {
             @include media-breakpoint-up(lg) {
