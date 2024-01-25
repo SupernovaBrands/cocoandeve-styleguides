@@ -558,3 +558,7 @@ if ($('#exit-intent-popup').length > 0) {
 if ($('.blog-nav-tags').length > 0) {
 	import(/* webpackChunkName: 'blog-nav-tags' */ '~mod/blog');
 }
+
+if ($('.carousel--scroll-product').length > 0) {
+	import(/* webpackChunkName: 'blog-nav-tags' */ '~mod/carousel-scroll-product');
+}
