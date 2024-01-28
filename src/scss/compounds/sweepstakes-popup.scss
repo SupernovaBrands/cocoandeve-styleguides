@@ -2,7 +2,8 @@
 	// --sweepstakes-popup-bg & --sweepstakes-popup-bg-lg set on liquid inline
 	// value based on theme settings
 	.modal-content {
-		background-image: var(--sweepstakes-popup-bg);
+		background-image: none;
+		background: $white;
 		background-size: 100%;
 		background-position: top center;
 		background-repeat: no-repeat;
@@ -12,6 +13,10 @@
 			background-position: center;
 			background-size: cover;
 		}
+	}
+
+	.sweepstakes-mobile__Popup {
+		background-image: none !important;
 	}
 
 	&__toc {
