@@ -684,11 +684,13 @@ const YotpoReviewWidget = (props) => {
 											{(getMediaData(review).length) && (
 												<div className="d-flex flex-nowrap row w-auto overflow-auto pr-g">
 													{getMediaData(review).map((media, index) => (
-														<button key={media.id} type="button" className={`position-relative d-inline-block btn-unstyled ${index === 0 ? 'ml-1 ml-lg-g mr-1' : 'mx-1'} mb-g`} data-toggle="modal" data-target="#yotpoImageModal" onClick={() => { setReviewModal(review); }}>
-															<img className="object-fit-contain" src={media.thumb_url.replace('https:', '')} alt={`${review.user_name} ${index}`} width="150" height="150" />
-															{media.video_url && (
-																<SvgPlayIcon className="svg text-white icon-play-video" />
-															)}
+														<button key={media.id} type="button" className={`yotpo-widget__button-img position-relative d-inline-block btn-unstyled ${index === 0 ? 'ml-1 ml-lg-g mr-1' : 'mx-1'} mb-g`} data-toggle="modal" data-target="#yotpoImageModal" onClick={() => { setReviewModal(review); }}>
+															<picture className="embed-responsive embed-responsive-1by1">
+																<img className="embed-responsive-item fit--cover" src={media.thumb_url.replace('https:', '')} alt={`${review.user_name} ${index}`} width="150" height="150" />
+																{media.video_url && (
+																	<SvgPlayIcon className="svg text-white icon-play-video" />
+																)}
+															</picture>
 														</button>
 													))}
 												</div>
@@ -809,9 +811,9 @@ const YotpoReviewWidget = (props) => {
 			<div className="modal fade yotpo-widget__modal" id="yotpoImageModal" tabIndex="-1" role="dialog" aria-hidden="true">
 				{!!reviewModal.id && (
 					<div className="modal-dialog modal-lg modal-dialog-centered" role="document">
-						<div className="modal-content mx-3 mx-lg-0">
+						<div className="modal-content mx-3 mx-lg-0 overflow-hidden">
 							<div className="row align-items-center">
-								<div className="col-lg-6 pr-lg-0">
+								<div className="col-lg-6 pr-lg-0 bg-white">
 									{getMediaData(reviewModal).length === 1 ? (
 										<img src={getMediaData(reviewModal)[0].image_url.replace('https:', '')} alt="Slide 1" className="d-block w-100" />
 									) : (
@@ -835,13 +837,13 @@ const YotpoReviewWidget = (props) => {
 												</div>
 											</div>
 											<a className="carousel-control-prev text-primary carousel-control--background" href="#carouselYotpoImage" role="button" data-slide="prev">
-												<span className="carousel-control-prev-icon d-flex justify-content-center align-items-center">
+												<span className="carousel-control-prev-icon d-flex justify-content-center align-items-center bg-pink-light">
 													<SvgChevronPrev className="svg" />
 												</span>
 												<span className="sr-only">Previous</span>
 											</a>
 											<a className="carousel-control-next text-primary carousel-control--background" href="#carouselYotpoImage" role="button" data-slide="next">
-												<span className="carousel-control-next-icon d-flex justify-content-center align-items-center">
+												<span className="carousel-control-next-icon d-flex justify-content-center align-items-center bg-pink-light">
 													<SvgChevronNext className="svg" />
 												</span>
 												<span className="sr-only">Next</span>
