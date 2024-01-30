@@ -1,7 +1,8 @@
 .stockist {
-
-	figure a {
-		background-color: $secondary-light;
+	&.container {
+		@include media-breakpoint-up(lg) {
+			max-width: calc-em(1000);
+		}
 	}
 
 	a {
