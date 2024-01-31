@@ -2,6 +2,7 @@
 
 	.custom-control-label {
 		padding-left: calc-em(50, $unit: 1rem);
+		
 		@include media-breakpoint-up(lg) {
 			padding-left: calc-em(69, $unit: 1rem);
 		}
@@ -15,6 +16,17 @@
 
 		.svg {
 			height: calc-em(16, $unit: 1rem);
+		}
+
+		@include media-breakpoint-down(md) {
+			border: none !important;
+			padding: 0 !important;
+			padding-left: calc-em(32) !important;
+
+			&::before {
+				top: 0;
+				left: 0;
+			}
 		}
 	}
 
