@@ -11,6 +11,10 @@
 		position: absolute;
 		margin-top: -#{calc-em(20)};
 	}
+	
+	&__intro {
+		max-width: calc-em(234);
+	} 
 }
 
 .navbar__secondary {
