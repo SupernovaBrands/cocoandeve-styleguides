@@ -16,6 +16,20 @@
 		}
 	}
 
+	.icon-play-video {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: calc-em(20);
+		height: calc-em(20);
+	}
+
+	&__button-img {
+		width: calc-em(75);
+		height: calc-em(75);
+	}
+
 	&__modal {
 		.close {
 			top: map-get($spacers, 1);
@@ -27,6 +41,16 @@
 			transform: translateY(-50%);
 			bottom: auto;
 			width: calc-em(40);
+		}
+
+		.icon-play-video {
+			width: calc-em(40);
+			height: calc-em(40);
+
+			@include media-breakpoint-up(lg) {
+				width: calc-em(80);
+				height: calc-em(80);
+			}
 		}
 	}
 }
