@@ -1,0 +1,11 @@
+html.dev-store,
+html.uk-store {
+    .product-card-image-resized {
+        .product-card__img-link img.embed-responsive-item {
+            width: 112%;
+            height: 112%;
+            top: -6%;
+            left: -6%;
+        }
+    }
+}
