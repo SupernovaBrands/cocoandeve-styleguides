@@ -122,6 +122,12 @@
 	}
 }
 
+.product-variant {
+	.save-tag {
+		padding: calc-em(3);
+	}
+}
+
 html.uk-store, html.dev-store {
 	.pdp-strip-banner {
 		.pdp-banner:not(.d-none) {
