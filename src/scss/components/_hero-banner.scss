@@ -1,0 +1,55 @@
+.hero-carousel {
+
+	.carousel-item__link__cta {
+		max-width: calc-em(181);
+		@include media-breakpoint-up(lg) {
+			max-width: calc-em(240);
+		}
+	}
+
+	img,
+	picture {
+		border-radius: calc-em(10);
+	}
+
+	.carousel-indicators--variant {
+
+		&-right {
+			left: auto;
+		}
+
+		li {
+			border-color: $gray-600 !important;
+			border-width: 2px !important;
+			width: calc-em(12);
+			height: calc-em(12);
+		}
+
+		.active {
+			background-color: $gray-600;
+		}
+
+		@include media-breakpoint-down(md) {
+			position: static;
+		}
+
+		@include media-breakpoint-up(lg) {
+			bottom: calc-em(30);
+		}
+	}
+
+	@include media-breakpoint-down(md) {
+		&__caption {
+			display: block !important;
+		}
+	}
+
+	@include media-breakpoint-up(lg) {
+		.carousel--caption-wrapper-lg__tos {
+			max-width: calc-em(240);
+		}
+		.terms--link__original {
+			display: none !important;
+		}
+	}
+}

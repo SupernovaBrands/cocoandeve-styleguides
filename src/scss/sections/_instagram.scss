@@ -11,6 +11,9 @@
       &--right {
         @include make-col(4, 7);
       }
+      img {
+        border-radius: calc-em(10);
+      }
     }
   }
 }

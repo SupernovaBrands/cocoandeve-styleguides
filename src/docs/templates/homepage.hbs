@@ -11,14 +11,14 @@
     <!-- hero banner -->
     {{> sections/hero-carousel }}
     {{> sections/product-carousel }}
-
-    {{> sections/playground }}
-    {{> sections/range-banner-abtest }}
-
+    {{> sections/instagram-carousel}}
     {{> sections/services }}
 
+    {{!-- {{> sections/playground }} --}}
+    {{> sections/range-banner }}
+
     <!-- Testimonials section-->
-    <section class="list-logo pt-4 pb-4 text-center container">
+    {{!-- <section class="list-logo pt-4 pb-4 text-center container">
       <p class="h1">Beauty editors love us</p>
       <div class="row flex-row flex-wrap mx-auto align-items-center">
         <div class="d-flex col-12 col-lg-11 flex-row flex-wrap mx-auto align-items-center justify-content-center">
@@ -44,16 +44,16 @@
           </picture>
         </div>
       </div>
-    </section>
+    </section> --}}
     <!-- real results section -->
-    {{> sections/real-result-carousel withFilter=true}}
-    {{> sections/instagram-carousel-abtest}}
+    {{!-- {{> sections/real-result-carousel withFilter=true}} --}}
 
-    {{> sections/quiz-rewards-abtest}}
-    {{> sections/list-logo-abtest}}
+
+    {{> sections/quiz-rewards}}
+    {{> sections/list-logo}}
 
     <!-- instagram section -->
-    {{> sections/instagram bgclass="bg-primary-light"}}
+    {{> sections/instagram bgclass="bg-pink-light"}}
     <button class="d-none btn text-white modal-newsletter--abtest__btn position-fixed rounded-pill px-g align-items-center">
       <span data-toggle="modal" data-target="#newsletterModal" class="font-weight-normal">Want 10% off?</span>
       <img class="svg pl-1 font-size-xs" src="icons/close.svg" replace-to-svg />

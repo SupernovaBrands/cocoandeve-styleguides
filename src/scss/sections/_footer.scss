@@ -1,12 +1,11 @@
 footer {
-	background-color: $secondary;
-	color: $white;
+	background-color: white;
+	color: $body-color;
 
 	a {
-		color: $white;
+		color: $body-color;
 
 		&:hover {
-			color: $white;
 			text-decoration: underline;
 		}
 	}
@@ -16,12 +15,8 @@ footer {
 	}
 
 	.footer__hr-bottom {
-		border-color: $white;
+		border-color: $body-color;
 		opacity: .2;
-	}
-
-	.footer__note {
-		opacity: .6;
 	}
 
 	.footer-grid-nav__follow-js {
@@ -29,6 +24,55 @@ footer {
 			margin-left: 4px;
 		}
 	}
+
+	.footer-grid-newsletter__newsletter-form {
+
+		input {
+
+			&::placeholder {
+				color: $gray-600;
+			}
+
+			@include media-breakpoint-down(lg) {
+				border-top-left-radius: $border-radius-lg;
+				border-bottom-left-radius: $border-radius-lg;
+			}
+		}
+
+		.input-group-append .btn {
+			border-radius: $border-radius-lg !important;
+			min-width: calc-em(160);
+			z-index: 3;
+		}
+	}
+
+	@include media-breakpoint-down(md) {
+		.footer__hr-second {
+			border-color: $body-color;
+			opacity: 1;
+		}
+
+		.footer__copy {
+			@include font-size($font-size-sm);
+		}
+
+		.footer__note {
+			@include font-size($font-size-base, true);
+		}
+	}
+
+	@include media-breakpoint-up(lg) {
+
+		.dropdown-toggle {
+			font-weight: normal !important;
+			@include font-size(calc-em(20));
+		}
+
+		.dropup .dropdown-toggle:after {
+			margin-left: calc-em(9);
+		}
+	}
+
 }
 
 .footer-grid-newsletter {
@@ -57,11 +101,10 @@ footer {
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: auto auto auto;
 	grid-template-areas: "nav-shop nav-about"
-		"nav-help nav-banner"
-		"nav-follow nav-currency";
+		"nav-help nav-currency";
 
 	@include media-breakpoint-up(lg) {
-		grid-template-columns: 2fr 2fr 2fr 4fr 2fr 2fr;
+		grid-template-columns: 1.5fr 1.5fr 2fr 1.5fr 1.5fr 1.5fr;
 		grid-template-rows: auto;
 		grid-template-areas: "nav-shop nav-about nav-help nav-banner nav-follow nav-currency";
 	}
@@ -115,6 +158,23 @@ footer {
 		top: 0;
 		@include media-breakpoint-down(lg) {
 			left: -25px !important;
+		}
+	}
+
+	&__title {
+		@include font-size($h2-font-size);
+		@include media-breakpoint-up(lg) {
+			@include font-size($h1-font-size);
+		}
+	}
+
+	@include media-breakpoint-up(lg) {
+		&__currency-desktop .footer-grid-nav__follow {
+			display: none !important;
+		}
+
+		&__follow svg {
+			height: calc-em(20);
 		}
 	}
 }
