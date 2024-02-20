@@ -141,9 +141,23 @@ html.uk-store, html.dev-store {
 }
 
 .add-blog-articles-pdp {
-		.carousel--scroll .scrollbar--thumb {
+	.carousel--scroll .scrollbar--thumb {
 		position: absolute;
 		left: 0;
 		background: #cecece;
+	}
+
+	.blog-carousel {
+		.carousel-control {
+			&--loop {
+				&.carousel-control-prev,
+				&.carousel-control-next {
+					span[class*=carousel-control] {
+						opacity: 1;
+						font-size: calc-em(14);
+					}
+				}
+			}
+		}
 	}
 }
