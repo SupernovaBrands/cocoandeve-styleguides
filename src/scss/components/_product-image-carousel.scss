@@ -26,4 +26,18 @@
 			}
 		}
 	}
+
+	&__container {
+		.scrollbar {
+			height: calc-em(4);
+			border-radius: calc-em(2);
+			background: $gray-400;
+
+			.scrollbar--thumb {
+				height: calc-em(4);
+				border-radius: calc-em(2);
+				background: $gray-500;
+			}
+		}
+	}
 }
