@@ -26,4 +26,57 @@
 			}
 		}
 	}
+
+	&__container {
+		.scrollbar {
+			height: calc-em(4);
+			border-radius: calc-em(2);
+			background: $gray-400;
+
+			.scrollbar--thumb {
+				height: calc-em(4);
+				border-radius: calc-em(2);
+				background: $gray-500;
+			}
+		}
+	}
+
+	&__indicator-bottom {
+        @include media-breakpoint-up(lg) {
+            .carousel-item {
+                flex: 0 0 10%;
+                max-width: 10%;
+            }
+        }
+        .product-image-carousel__indicator__item {
+            button {
+                width: calc-em(70);
+                height: calc-em(70);
+            }
+        }
+        .carousel-indicator {
+            width: calc-em(60);
+            height: calc-em(60);
+            z-index: 1;
+            box-shadow: 0px 6.5px 8px 0px rgba(21, 21, 21, 0.16);
+
+            &[data-slide="prev"] {
+                left: 0;
+            }
+
+            &[data-slide="next"] {
+                right: 0;
+            }
+        }
+        .with-video {
+            cursor: pointer;
+            .svg {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: calc-em(30);
+            }
+        }
+    }
 }

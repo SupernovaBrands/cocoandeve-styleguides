@@ -161,3 +161,93 @@ html.uk-store, html.dev-store {
 		}
 	}
 }
+
+.scrollbar {
+	background: $gray-400;
+	.scrollbar--thumb {
+		background: $gray-500;
+	}
+}
+
+.product-form afterpay-placement {
+	display: none !important;
+}
+
+.klarna-free-shipping {
+
+	@include media-breakpoint-down(md) {
+		margin-top: -10px;
+	}
+
+	.free-shipping-icon, .klarna-icon, .afterpay-icon, .atome-icon, .shoppay-icon {
+		min-width: calc-em(94);
+		height: calc-em(40);
+	}
+
+	.afterpay-icon {
+		background-color: #C2FAE4;
+	}
+
+	.atome-icon {
+		background-color: #F0FF5F;
+	}
+
+	.shoppay-icon {
+		background-color: #E0F0E9;
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	.product-image-carousel__container, .product-image-carousel__indicator {
+		top: -3em;
+	}
+}
+
+.proud-to-be-wrapper {
+	.col-2 {
+		@include media-breakpoint-down(md) {
+			flex: 0 0 19%;
+			max-width: 19%;
+		}
+	}
+	svg {
+		height: calc-em(26);
+	}
+}
+
+.product-collapse-faq {
+	@include media-breakpoint-down(md) {
+		border-bottom: none !important;
+	}
+}
+
+.product-accordion-comp {
+	border-color: #ADADAD !important;
+
+	@include media-breakpoint-down(md) {
+		border-top: none !important;
+		margin-bottom: 0 !important;
+	}
+	.border-bottom {
+		border-color: #ADADAD !important;
+	}
+}
+
+.carousel--scroll-product {
+	@include media-breakpoint-down(lg) {
+		.item-third {
+			width: 50%;
+			max-width: 50%;
+			border-radius: 8px;
+			overflow: hidden;
+		}
+
+		.carousel-inner {
+			width: 195%;
+		}
+	}
+}
+
+.tcpopup-trigger {
+	font-size: calc-em(16);
+}
