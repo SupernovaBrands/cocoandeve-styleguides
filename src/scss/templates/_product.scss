@@ -128,18 +128,6 @@
 	}
 }
 
-html.uk-store, html.dev-store {
-	.pdp-strip-banner {
-		.pdp-banner:not(.d-none) {
-			display: none !important;
-		}
-
-		.pdp-banner.d-none {
-			display: block !important;
-		}
-	}
-}
-
 .add-blog-articles-pdp {
 	.carousel--scroll .scrollbar--thumb {
 		position: absolute;
