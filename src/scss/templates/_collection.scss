@@ -135,3 +135,14 @@
 		}
 	}
 }
+
+.collection-banner-text {
+	.banner {
+		min-height: calc-em(550);
+
+		picture {
+			left: 0;
+    		bottom: 0;
+		}
+	}
+}
