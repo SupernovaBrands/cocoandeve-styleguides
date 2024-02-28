@@ -16,4 +16,10 @@
 			min-height: calc-em(386);
 		}
 	}
+
+	@include media-breakpoint-down(md) {
+		.ig-card__link {
+			min-height: calc-em(35, 14);
+		}
+	}
 }
