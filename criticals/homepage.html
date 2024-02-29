@@ -977,22 +977,11 @@
   <div class="d-none embed-responsive bg-shimmer"><img class="embed-responsive-item fit--cover" /></div>
 
   <main>
-    <section id="carouselWithRightBullets" class="hero-carousel carousel slide" data-ride="carousel">
-    	<ol class="carousel-indicators carousel-indicators--right">
-    		<li data-target="#carouselWithRightBullets" data-slide-to="0" class="active rounded-circle border border-white"></li>
-    		<li data-target="#carouselWithRightBullets" data-slide-to="1" class="rounded-circle border border-white"></li>
-    	</ol>
+    <section id="carouselWithRightBullets" class="hero-carousel container px-0 px-lg-g carousel slide" data-ride="carousel">
     
     	<div class="carousel-inner">
     		<div class="carousel-item active">
-    			<a href="#" class="carousel-item__link">
-    				<picture class="embed-responsive bg-shimmer">
-    					<source srcset="https://via.placeholder.com/1920x733.jpg/2596be" media="(min-width: 992px)" >
-    					<img class="embed-responsive-item fit--cover" alt="Img Alt" src="https://via.placeholder.com/828x926.jpg/EFADBA" />
-    				</picture>
-    				<em class="d-flex hero-carousel__note position-absolute text-body pb-1 pb-lg-g">*while stock last</em>
-    			</a>
-    			<figure class="d-none row mb-0 align-items-center mx-0 justify-content-center">
+    			<figure class="row mb-0 align-items-center mx-0 justify-content-center">
     				<a href="#" class="row col-lg-9 mx-0 px-0 pr-lg-g mb-g mb-lg-0">
     					<picture class="pt-0 col-6 pl-0 pr-25">
     						<source srcset="https://via.placeholder.com/427x518.jpg/2596be" media="(min-width: 992px)" >
@@ -1007,20 +996,14 @@
     					<p class="h1 mb-g pr-lg-g">Iconic Coconut <br class="d-block d-lg-none">Fig mask</p>
     					<p class="h4 mb-g mb-lg-3 font-weight-normal">Hair is cleaner for longer with a rich lather & zero drying sulfates.</p>
     					<a href="#" class="btn btn-lg rounded-pill btn-primary btn-block">Shop Now</a>
+    					<div class="text-center terms--link pt-25 d-none d-lg-block">
+    						<a class="py-2 text-underline text-primary font-size-xs text-muted" data-toggle="modal" data-target="#terms-modal" role="button">Terms and Conditions</a>
+    					</div>
     				</figcaption>
     			</figure>
     		</div>
     		<div class="carousel-item">
-    			<a href="#" class="carousel-item__link">
-    				<noscript class="loading-lazy">
-    					<picture class="embed-responsive bg-shimmer">
-    						<source srcset="https://via.placeholder.com/1920x733.jpg/2596be" media="(min-width: 992px)" >
-    						<img class="embed-responsive-item fit--cover" alt="Img Alt" src="https://via.placeholder.com/828x926.jpg/EFADBA" loading="lazy"/>
-    					</picture>
-    				</noscript>
-    				<em class="d-flex hero-carousel__note position-absolute text-body pb-1 pb-lg-g">*while stock last</em>
-    			</a>
-    			<figure class="d-none row mb-0 align-items-center mx-0 justify-content-center">
+    			<figure class="row mb-0 align-items-center mx-0 justify-content-center">
     				<a href="#" class="row col-lg-9 mx-0 px-0 pr-lg-g mb-g mb-lg-0">
     					<picture class="pt-0 col-6 pl-0 pr-25">
     						<source srcset="https://via.placeholder.com/427x518.jpg/2596be" media="(min-width: 992px)" >
@@ -1035,23 +1018,26 @@
     					<p class="h1 mb-g pr-lg-g">Iconic Coconut <br class="d-block d-lg-none">Fig mask</p>
     					<p class="h4 mb-g mb-lg-3 font-weight-normal">Hair is cleaner for longer with a rich lather & zero drying sulfates.</p>
     					<a href="#" class="btn btn-lg rounded-pill btn-primary btn-block">Shop Now</a>
+    					<div class="text-center terms--link pt-25 d-none d-lg-block">
+    						<a class="py-2 text-underline text-primary font-size-xs text-muted" data-toggle="modal" data-target="#terms-modal" role="button">Terms and Conditions</a>
+    					</div>
     				</figcaption>
     			</figure>
     		</div>
     	</div>
     
-    	<ol class="d-none carousel-indicators carousel-indicators--variant col-lg-3 mx-0 pt-g pt-lg-0 justify-content-lg-start">
+    	<ol class="carousel-indicators carousel-indicators--variant carousel-indicators--variant-right col-lg-3 mx-0 pt-g pt-lg-0 justify-content-lg-start">
     		<li data-target="#carouselWithRightBullets" data-slide-to="0" class="active rounded-circle border"></li>
     		<li data-target="#carouselWithRightBullets" data-slide-to="1" class="rounded-circle border"></li>
     	</ol>
-    	<div class="hero-carousel__caption d-none col-lg-3 text-center text-lg-left px-g pr-lg-0 mt-g mt-lg-0">
-    		<p class="h1 mb-g pr-lg-g">Iconic Coconut <br class="d-block d-lg-none">Fig mask</p>
-    		<p class="h4 mb-g mb-lg-3 font-weight-normal">Hair is cleaner for longer with a rich lather & zero drying sulfates.</p>
-    		<a href="#" class="btn btn-lg rounded-pill btn-primary btn-block">Shop Now</a>
+    	<div class="d-lg-none col-lg-3 text-center text-lg-left px-g pr-lg-0 carousel--caption-wrapper mt-g mt-lg-0">
+    		<p class="h1 mb-g pr-lg-g">Iconic Coconut</p>
+    		<p class="h4 mb-g mb-lg-3 font-weight-normal">15% OFF 1 ITEM<br>20% OFF 2 ITEMS<br>25% OFF 3 OR MORE</p>
+    		<a href="/collections/all" class="btn btn-lg rounded-pill btn-primary carousel-item__link-trigger carousel-item__link-trigger-cta btn-block px-0 mx-auto carousel-item__link__cta">Shop Now</a>
     	</div>
     </section>
-    <div class="pt-1 text-center text-lg-left terms--link container">
-    	<a class="py-2 text-underline text-primary font-size-sm" data-toggle="modal" data-target="#terms-modal" role="button">Terms and Conditions</a>
+    <div class="text-center text-lg-left terms--link container pt-25 pt-lg-1 d-lg-none">
+    	<a class="py-2 text-underline text-primary font-size-xs text-muted" data-toggle="modal" data-target="#terms-modal" role="button">Terms and Conditions</a>
     </div>
     <div class="modal fade modal--terms" id="terms-modal" tabindex="-1" role="dialog" aria-labelledby="terms-modalLabel" aria-hidden="true">
     	<div class="modal-dialog modal-dialog-centered mt-0" role="document">
@@ -1071,26 +1057,26 @@
     </div>
     <!-- product carousel section -->
     <section id="product-carousel-ab-original" class="product-carousel pt-4 pb-4 ">
-      <h2 class="h1 d-none text-center">The goods</h2>
-      <ul class="nav nav-tabs mx-auto nav-tabs--product text-center mb-2 justify-content-center" role="tablist">
-        <li class="nav-item" role="presentation">
-          <a id="new-tab" class="nav-link text-decoration-none h4 mb-0 font-weight-normal" data-toggle="tab" href="#new" role="tab"
+      <h2 class="h1 text-center mb-0 mb-lg-1">Our Products</h2>
+      <ul class="nav nav-tabs mx-auto nav-tabs--product text-center mb-0 justify-content-center border-0" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link border-0 text-decoration-none h4 mb-0 font-weight-normal" data-toggle="tab" href="#new" role="tab"
             aria-controls="new">New</a>
         </li>
-        <li class="nav-item" role="presentation">
-          <a id="bestsellers-tab" class="nav-link text-decoration-none h4 mb-0 font-weight-normal active" data-toggle="tab" href="#bestsellers"
+        <li class="nav-item">
+          <a class="nav-link border-0 text-decoration-none h4 mb-0 font-weight-normal active" data-toggle="tab" href="#bestsellers"
             role="tab" aria-controls="bestsellers"><span>Bestsellers</span><span class="d-none">Featured</span></a>
         </li>
-        <li class="nav-item" role="presentation">
-          <a id="value-sets-tab" class="nav-link text-decoration-none h4 mb-0 font-weight-normal" data-toggle="tab" href="#value-sets"
+        <li class="nav-item">
+          <a class="nav-link border-0 text-decoration-none h4 mb-0 font-weight-normal" data-toggle="tab" href="#value-sets"
             role="tab" aria-controls="value-sets">Value Sets</a>
         </li>
       </ul>
       <div class="tab-content container px-sm-0 px-md-2 text-center">
         <div class="tab-pane fade carousel slide carousel--loop" id="new" role="tabpanel" aria-labelledby="new-tab"
           data-slide-number="4">
-          <div class="carousel--centered pt-2">
-            <div class="carousel-inner row flex-nowrap mx-0">
+          <div class="carousel--centered pt-1">
+            <div class="carousel-inner row flex-nowrap mx-0" role="listbox">
               <div class=" carousel-item   col-9 col-md-3  active product-card text-center  " role="option">
               	
               	<a href="#" class="product-card__img-link rounded-top" aria-label="Sunny Honey Bali Bronzing Bundle">
@@ -1375,14 +1361,14 @@
               </div>
             </div>
           </div>
-          <a class="carousel-control carousel-control-prev carousel-control--background floating-out-left justify-content-start text-primary w-auto"
+          <a class="d-none d-lg-flex carousel-control carousel-control-prev carousel-control--background floating-out-left justify-content-start text-primary w-auto"
             href="#new" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon d-flex justify-content-center align-items-center" aria-hidden="true"><svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.627 22.627" class="svg"><path d="M16.2 1.885l-9.428 9.428 9.428 9.428-1.886 1.886L3 11.313 14.314 0z"></path></svg></span>
+            <span class="carousel-control-prev-icon d-flex justify-content-center align-items-center text-body bg-transparent" aria-hidden="true"><svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.627 22.627" class="svg"><path d="M16.2 1.885l-9.428 9.428 9.428 9.428-1.886 1.886L3 11.313 14.314 0z"></path></svg></span>
             <span class="sr-only">Previous</span>
           </a>
-          <a class="carousel-control carousel-control-next carousel-control--background floating-out-right justify-content-end text-primary w-auto"
+          <a class="d-none d-lg-flex carousel-control carousel-control-next carousel-control--background floating-out-right justify-content-end text-primary w-auto"
             href="#new" role="button" data-slide="next">
-            <span class="carousel-control-next-icon d-flex justify-content-center align-items-center" aria-hidden="true"><svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.627 22.627" class="svg"><path d="M5.428 20.742l9.428-9.428-9.428-9.428L7.314 0l11.314 11.314L7.314 22.627z"></path></svg></span>
+            <span class="carousel-control-next-icon d-flex justify-content-center align-items-center text-body bg-transparent" aria-hidden="true"><svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.627 22.627" class="svg"><path d="M5.428 20.742l9.428-9.428-9.428-9.428L7.314 0l11.314 11.314L7.314 22.627z"></path></svg></span>
             <span class="sr-only">Next</span>
           </a>
         </div>
@@ -2017,14 +2003,14 @@
             </div>
             -->
           </div>
-          <a class="carousel-control carousel-control-prev carousel-control--background floating-out-left justify-content-start text-primary w-auto"
+          <a class="d-none d-lg-flex carousel-control carousel-control-prev carousel-control--background floating-out-left justify-content-start text-primary w-auto"
             href="#bestsellers" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon d-flex justify-content-center align-items-center" aria-hidden="true"><svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.627 22.627" class="svg"><path d="M16.2 1.885l-9.428 9.428 9.428 9.428-1.886 1.886L3 11.313 14.314 0z"></path></svg></span>
+            <span class="carousel-control-prev-icon d-flex justify-content-center align-items-center text-body bg-transparent" aria-hidden="true"><svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.627 22.627" class="svg"><path d="M16.2 1.885l-9.428 9.428 9.428 9.428-1.886 1.886L3 11.313 14.314 0z"></path></svg></span>
             <span class="sr-only">Previous</span>
           </a>
-          <a class="carousel-control carousel-control-next carousel-control--background floating-out-right justify-content-end text-primary w-auto"
+          <a class="d-none d-lg-flex carousel-control carousel-control-next carousel-control--background floating-out-right justify-content-end text-primary w-auto"
             href="#bestsellers" role="button" data-slide="next">
-            <span class="carousel-control-next-icon d-flex justify-content-center align-items-center" aria-hidden="true"><svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.627 22.627" class="svg"><path d="M5.428 20.742l9.428-9.428-9.428-9.428L7.314 0l11.314 11.314L7.314 22.627z"></path></svg></span>
+            <span class="carousel-control-next-icon d-flex justify-content-center align-items-center text-body bg-transparent" aria-hidden="true"><svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.627 22.627" class="svg"><path d="M5.428 20.742l9.428-9.428-9.428-9.428L7.314 0l11.314 11.314L7.314 22.627z"></path></svg></span>
             <span class="sr-only">Next</span>
           </a>
         </div>
@@ -2349,18 +2335,18 @@
               </div>
             </div>
           </div>
-          <a class="carousel-control carousel-control-prev carousel-control--background floating-out-left justify-content-start text-primary w-auto"
+          <a class="d-none d-lg-flex carousel-control carousel-control-prev carousel-control--background floating-out-left justify-content-start text-primary w-auto"
             href="#value-sets" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon d-flex justify-content-center align-items-center" aria-hidden="true"><svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.627 22.627" class="svg"><path d="M16.2 1.885l-9.428 9.428 9.428 9.428-1.886 1.886L3 11.313 14.314 0z"></path></svg></span>
+            <span class="carousel-control-prev-icon d-flex justify-content-center align-items-center text-body bg-transparent" aria-hidden="true"><svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.627 22.627" class="svg"><path d="M16.2 1.885l-9.428 9.428 9.428 9.428-1.886 1.886L3 11.313 14.314 0z"></path></svg></span>
             <span class="sr-only">Previous</span>
           </a>
-          <a class="carousel-control carousel-control-next carousel-control--background floating-out-right justify-content-end text-primary w-auto"
+          <a class="d-none d-lg-flex carousel-control carousel-control-next carousel-control--background floating-out-right justify-content-end text-primary w-auto"
             href="#value-sets" role="button" data-slide="next">
-            <span class="carousel-control-next-icon d-flex justify-content-center align-items-center" aria-hidden="true"><svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.627 22.627" class="svg"><path d="M5.428 20.742l9.428-9.428-9.428-9.428L7.314 0l11.314 11.314L7.314 22.627z"></path></svg></span>
+            <span class="carousel-control-next-icon d-flex justify-content-center align-items-center text-body bg-transparent" aria-hidden="true"><svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.627 22.627" class="svg"><path d="M5.428 20.742l9.428-9.428-9.428-9.428L7.314 0l11.314 11.314L7.314 22.627z"></path></svg></span>
             <span class="sr-only">Next</span>
           </a>
         </div>
-        <a href="#" class="btn btn-lg btn-outline-primary mt-4">Shop All</a>
+        <a href="#" class="btn btn-lg btn-outline-primary mt-4 rounded-pill mt-2">Shop All</a>
       </div>
     </section>
   </main>
