@@ -3,6 +3,7 @@
 @import 'bootstrap/main';
 @import 'common';
 
+@import 'components/hero-banner';
 @import 'components/social-icons';
 @import 'components/hr';
 @import 'components/badge';
@@ -11,8 +12,13 @@
 @import 'components/carousel';
 @import 'components/product-variant';
 
-@import 'compounds/result-card';
-@import 'sections/playground';
+// @import 'compounds/result-card';
+@import 'sections/product-carousel';
+@import 'sections/instagram-carousel';
+@import 'sections/range-banner';
+// @import 'sections/playground';
 @import 'sections/instagram';
+@import 'sections/services-list';
+@import 'sections/quiz-rewards';
+@import 'sections/list-logo';
 // @import 'sections/product-carousel-tan-abtest';
-@import 'templates/homepage-abtest';

@@ -1,22 +1,22 @@
-<section id="carouselWithRightBullets" class="hero-carousel carousel slide" data-ride="carousel">
-	<ol class="carousel-indicators carousel-indicators--right">
+<section id="carouselWithRightBullets" class="hero-carousel container px-0 px-lg-g carousel slide" data-ride="carousel">
+	{{!-- <ol class="carousel-indicators carousel-indicators--right">
 		<li data-target="#carouselWithRightBullets" data-slide-to="0" class="active rounded-circle border border-white"></li>
 		<li data-target="#carouselWithRightBullets" data-slide-to="1" class="rounded-circle border border-white"></li>
-	</ol>
+	</ol> --}}
 
 	<div class="carousel-inner">
 		<div class="carousel-item active">
-			<a href="#" class="carousel-item__link">
+			{{!-- <a href="#" class="carousel-item__link">
 				<picture class="embed-responsive bg-shimmer">
 					<source srcset="https://via.placeholder.com/1920x733.jpg/2596be" media="(min-width: 992px)" >
 					<img class="embed-responsive-item fit--cover" alt="Img Alt" src="https://via.placeholder.com/828x926.jpg/EFADBA" />
 				</picture>
 				<em class="d-flex hero-carousel__note position-absolute text-body pb-1 pb-lg-g">*while stock last</em>
-			</a>
-			{{> compounds/hero-carousel-caption-abtest }}
+			</a> --}}
+			{{> compounds/hero-carousel-caption }}
 		</div>
 		<div class="carousel-item">
-			<a href="#" class="carousel-item__link">
+			{{!-- <a href="#" class="carousel-item__link">
 				<noscript class="loading-lazy">
 					<picture class="embed-responsive bg-shimmer">
 						<source srcset="https://via.placeholder.com/1920x733.jpg/2596be" media="(min-width: 992px)" >
@@ -24,22 +24,22 @@
 					</picture>
 				</noscript>
 				<em class="d-flex hero-carousel__note position-absolute text-body pb-1 pb-lg-g">*while stock last</em>
-			</a>
-			{{> compounds/hero-carousel-caption-abtest }}
+			</a> --}}
+			{{> compounds/hero-carousel-caption }}
 		</div>
 	</div>
 
-	<ol class="d-none carousel-indicators carousel-indicators--variant col-lg-3 mx-0 pt-g pt-lg-0 justify-content-lg-start">
+	<ol class="carousel-indicators carousel-indicators--variant carousel-indicators--variant-right col-lg-3 mx-0 pt-g pt-lg-0 justify-content-lg-start">
 		<li data-target="#carouselWithRightBullets" data-slide-to="0" class="active rounded-circle border"></li>
 		<li data-target="#carouselWithRightBullets" data-slide-to="1" class="rounded-circle border"></li>
 	</ol>
-	<div class="hero-carousel__caption d-none col-lg-3 text-center text-lg-left px-g pr-lg-0 mt-g mt-lg-0">
-		<p class="h1 mb-g pr-lg-g">Iconic Coconut <br class="d-block d-lg-none">Fig mask</p>
-		<p class="h4 mb-g mb-lg-3 font-weight-normal">Hair is cleaner for longer with a rich lather & zero drying sulfates.</p>
-		<a href="#" class="btn btn-lg rounded-pill btn-primary btn-block">Shop Now</a>
+	<div class="d-lg-none col-lg-3 text-center text-lg-left px-g pr-lg-0 carousel--caption-wrapper mt-g mt-lg-0">
+		<p class="h1 mb-g pr-lg-g">Iconic Coconut</p>
+		<p class="h4 mb-g mb-lg-3 font-weight-normal">15% OFF 1 ITEM<br>20% OFF 2 ITEMS<br>25% OFF 3 OR MORE</p>
+		<a href="/collections/all" class="btn btn-lg rounded-pill btn-primary carousel-item__link-trigger carousel-item__link-trigger-cta btn-block px-0 mx-auto carousel-item__link__cta">Shop Now</a>
 	</div>
 </section>
-<div class="pt-1 text-center text-lg-left terms--link container">
-	<a class="py-2 text-underline text-primary font-size-sm" data-toggle="modal" data-target="#terms-modal" role="button">Terms and Conditions</a>
+<div class="text-center text-lg-left terms--link container pt-25 pt-lg-1 d-lg-none">
+	<a class="py-2 text-underline text-primary font-size-xs text-muted" data-toggle="modal" data-target="#terms-modal" role="button">Terms and Conditions</a>
 </div>
 {{> compounds/modal-terms-and-condition }}

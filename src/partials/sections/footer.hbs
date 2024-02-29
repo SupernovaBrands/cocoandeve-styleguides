@@ -1,28 +1,27 @@
 <footer class="pt-md-6 pb-md-6 pt-4 pt-lg-4 pb-1 mobile-wrapper">
-	<div class="footer__first-row container mb-4">
-		<div class="footer-grid-newsletter">
+	<div class="container mb-4 mb-lg-3">
+		<div class="footer-grid-newsletter pb-lg-3">
 			<div class="footer-grid-newsletter__newsletter-heading">
 				<h5 class="h1">Newsletter</h5>
-				<p>Receive exclusive offers, promotions and beauty tips via email.</p>
+				<p class="footer-grid-newsletter__newsletter-form-desc mb-1">Receive exclusive offers, promotions and beauty tips via email.</p>
 			</div>
-			<div class="footer-grid-new__newsletter-form d-flex flex-wrap">
-				<p class="footer__note font-size-sm order-1 order-lg-0 mt-2 mt-lg-0 mb-0 mb-lg-1">Please read our Privacy Policy for more information about how we use your data.</p>
-				<form class="order-0 order-lg-1 col-12 col-lg-11 p-0">
+			<div class="footer-grid-newsletter__newsletter-form d-flex flex-wrap">
+				<p class="footer__note font-size-sm text-gray-600 order-1 order-lg-0 mt-1 mb-1 mt-lg-0 mb-0 mb-lg-1">Please read our Privacy Policy for more information about how we use your data.</p>
+				<form class="order-0 order-lg-1 col-12 p-0 col-lg-12">
 					<div class="input-group">
-						<input type="email" class="form-control" placeholder="Enter your email" aria-label="Enter your email">
+						<input type="email" class="form-control mr-n2" placeholder="Enter your email" aria-label="Enter your email">
 						<div class="input-group-append">
-							<button class="btn btn-primary" type="submit">Subscribe</button>
+							<button class="btn btn-primary h-100" type="submit">Subscribe</button>
 						</div>
 					</div>
 				</form>
 			</div>
 		</div>
 	</div>
-	<hr class="footer__hr-first" />
 	<div class="container mt-4">
 		<div class="footer-grid-nav">
 			<div class="footer-grid-nav__shop">
-				<h5 class="h2 footer-grid-nav__title">Shop</h5>
+				<h5 class="h3 footer-grid-nav__title">Shop</h5>
 				<ul class="list-unstyled">
 					<li><a href="">Hair</a></li>
 					<li><a href="">Tan</a></li>
@@ -31,7 +30,7 @@
 				</ul>
 			</div>
 			<div class="footer-grid-nav__about">
-				<h5 class="h2 footer-grid-nav__title">About Us</h5>
+				<h5 class="h3 footer-grid-nav__title">About Us</h5>
 				<ul class="list-unstyled">
 					<li><a href="">Our Story</a></li>
 					<li><a href="">Stockist</a></li>
@@ -40,7 +39,7 @@
 				</ul>
 			</div>
 			<div class="footer-grid-nav__help mt-3 mt-lg-0">
-				<h5 class="h2 footer-grid-nav__title">Help</h5>
+				<h5 class="h3 footer-grid-nav__title">Help</h5>
 				<ul class="list-unstyled">
 					<li><a href="">Track My Order</a></li>
 					<li><a href="">FAQ</a></li>
@@ -50,52 +49,15 @@
 					<li><a href="">Privacy Policy</a></li>
 				</ul>
 			</div>
-			<div class="footer-grid-nav__banner text-lg-center">
-				<a href="#">
-					<img class="mt-2 mt-lg-0 mb-lg-2" src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/Group_9525.png?v=1656597716" alt="Rewards">
-				</a>
-				<div class="footer-grid-nav__banner-text text-lg-left mt-2 d-none">Sign up to earn points &amp; exclusive rewards every time you shop.</div>
+			<div class="footer-grid-nav__follow d-none d-lg-block text-right">
+				{{>components/footer-social}}
 			</div>
-			<div class="footer-grid-nav__banner-text-abtest text-lg-center mt-2 d-none">Sign up to earn points &amp; exclusive rewards every time you shop.</div>
-			<div class="footer-grid-nav__follow my-3 my-lg-0">
-				<h5 class="h1 footer-grid-nav__title">Follow Us</h5>
-				<a href="https://www.instagram.com/cocoandeve/" class="d-inline-flex pr-1" target="_blank">
-					<img class="svg ml-0" src="icons/instagram.svg" replace-to-svg />
-				</a>
-				<a href="https://www.facebook.com/cocoandeve" class="d-inline-flex pr-1" target="_blank" aria-label="Go to to CocoandEve Facebook">
-					<img class="svg" src="icons/facebook-square.svg" replace-to-svg />
-				</a>
-				<a href="https://www.pinterest.com/cocoeve0497/_shop/" class="d-inline-flex pr-1" target="_blank" aria-label="Go to to CocoandEve Pinterest">
-					<img class="svg" src="icons/pinterest-square.svg" replace-to-svg />
-				</a>
-				<a href="https://www.youtube.com/channel/UCVd0r8NG3Q5E9DMppEYBabA" class="d-inline-flex pr-1" target="_blank" aria-label="Go to to CocoandEve Youtube">
-					<img class="svg" src="icons/youtube.svg" replace-to-svg />
-				</a>
-				<a href="https://www.tiktok.com/@coco_and_eve" class="d-inline-flex pr-1" target="_blank" aria-label="Go to to CocoandEve TikTok">
-					<img class="svg" src="icons/tiktok.svg" replace-to-svg />
-				</a>
-			</div>
-			<div class="footer-grid-nav__currency my-2 my-lg-0">
-				<h5 class="h1 footer-grid-nav__title">Currency</h5>
-				<div class="dropdown">
-					<a class="dropdown-toggle font-weight-bold" href="#" role="button" id="dropdownMenuLink"
-						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						US (USD)
-					</a>
-					<div class="dropdown-menu p-0 d-block overflow-hidden" aria-labelledby="dropdownMenuLink">
-						<a class="dropdown-item pt-1 pb-1 active" href="#">United Kingdom (GBP)</a>
-						<a class="dropdown-item pt-1 pb-1" href="#">USA (USD)</a>
-						<a class="dropdown-item pt-1 pb-1" href="#">Canada (CAD)</a>
-						<a class="dropdown-item pt-1 pb-1" href="#">Australia (AUD)</a>
-						<a class="dropdown-item pt-1 pb-1" href="#">Germany (EUR)</a>
-						<a class="dropdown-item pt-1 pb-1" href="#">France (EUR)</a>
-						<a class="dropdown-item pt-1 pb-1" href="#">Europe (EUR)</a>
-						<a class="dropdown-item pt-1 pb-1" href="#">Rest of the World (USD)</a>
-					</div>
-				</div>
+			<div class="footer-grid-nav__currency mb-2 my-lg-0 footer-grid-nav__currency-desktop text-lg-right">
+				{{>components/footer-social}}
+				{{>components/footer-currency}}
 			</div>
 		</div>
-		<hr class="footer__hr-bottom">
-		<p class="d-flex justify-content-center align-items-baseline mt-3">© 2022 Coco&amp;Eve  <img class="ml-25" src="icons/palm-tree-v2.svg" replace-to-svg /></p>
+		<hr class="footer__hr-bottom footer__hr-second mb-1 mt-lg-3 mb-lg-1">
+		<p class="footer__copy d-flex justify-content-center align-items-baseline mt-g mt-lg-3">© 2022 Coco&amp;Eve</p>
 	</div>
 </footer>

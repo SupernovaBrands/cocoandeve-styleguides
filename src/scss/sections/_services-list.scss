@@ -1,0 +1,8 @@
+@include media-breakpoint-down(lg) {
+	.section-service-list {
+
+		.list-unstyled p {
+			@include font-size($font-size-sm);
+		}
+	}
+}
