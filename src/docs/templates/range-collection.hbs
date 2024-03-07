@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	{{> html-head title="Collection" maincss="collection" }}
+</head>
+
+<body class="template-collection">
+	{{> sections/header}}
+	<figure class="collection-banner container-fluid position-relative align-items-center px-0">
+		<picture>
+			<source srcset="https://via.placeholder.com/1440x200" media="(min-width: 992px)" />
+			<img src="https://via.placeholder.com/828x442" class="w-100" alt="Collection Banner">
+		</picture>
+		<figcaption class="collection-banner__content col-12 d-flex d-lg-none position-absolute w-auto align-items-center my-auto top-0 bottom-0">
+			<h1 class="d-none mb-0">Shop All</h1>
+		</figcaption>
+	</figure>
+
+	<div class="container py-4 collection-banner-text px-0">
+		<div class="row mx-g mx-lg-0">
+			<div class="col-lg-6 col-12 bg-secondary-light px-2 px-lg-4 pb-0 pt-2 pt-lg-4 banner">
+				<h2 class="h1 mt-lg-2">Clean Slate Set!</h2>
+				<p>Purify your locks from roots to tips with our Detox Duo - a powerful pairing for revitalised and refreshed hair and a clarified scalp!</p>
+				<picture class="d-block position-absolute w-100">
+					<source srcset="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/6f100b4f-7750-4729-83e0-1e40f47a6b00/public" media="(min-width: 992px)" width="370" height="370">
+					<img src="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/e19ced48-c44b-4c1b-9934-d52e4abeac00/public" alt="Discover the Coco &amp; Eve playground-Skin" class="w-100 h-100" width="384" height="200" loading="lazy">
+				</picture>
+			</div>
+			<div class="col-lg-6 col-12 bg-gray-100 p-4 text-content d-flex justify-content-center">
+				<div class="d-block">
+					<img class="svg d-block" src="icons/natural-dha.svg" replace-to-svg />
+					<h2>Clarifying Detox Shampoo</h2>
+					<p>eliminates impurities and metals to leave hair thoroughly detoxified, cleansed and moisturised</p>
+					<h2 class="text-gray-500">Deep Clean Scalp Scrub</h2>
+					<h2 class="text-gray-500">60% in reduction of dandruff</h2>
+					<h2 class="text-gray-500">40% in reduction of sebum</h2>
+					<h2 class="text-gray-500">Deep Clean Scalp Scrub</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{{> sections/collection-range-products heading="Like A Virgin Range" }}
+	{{> sections/collection-range-products heading="Pro Youth Range" }}
+	{{> sections/collection-range-products heading="Essentials Range" }}
+	{{> sections/collection-range-results }}
+	{{> sections/collection-range-info }}
+	{{> sections/collection-range-reels }}
+	{{> sections/blog-recomendation class="mobile-wrapper"}}
+
+	<div class="container py-4">
+		<h2 class="h1 mb-2 text-center mb-3">What our customers <br class="d-lg-none">are saying</h2>
+		<div class="carousel slide pb-4" data-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item col-lg-4 text-center active">
+					<h3 class="mb-2 h3">Love how it feels on</h3>
+					<p class="font-italic font-weight-light">Love love love this product!!! I apply all over the face 3 times a week and leave it on for about 30 minutes. Feels awesome after!!! And for the first 3 weeks I did my acne spots every night.</p>
+					<span class="d-block mb-2">Deep Pore Cleanser</span>
+					<span class="d-block font-weight-bold">- Sofia R. <img src="icons/verified.svg" class="svg font-size-xs ml-25 text-primary" replace-to-svg> </span>
+					<span class="d-block font-size-sm">Verified buyer</span>
+				</div>
+				<div class="carousel-item col-lg-4 text-center">
+					<h3 class="mb-2 h3">Love how it feels on</h3>
+					<p class="font-italic font-weight-light">Love love love this product!!! I apply all over the face 3 times a week and leave it on for about 30 minutes. Feels awesome after!!! And for the first 3 weeks I did my acne spots every night.</p>
+					<span class="d-block mb-2">Deep Pore Cleanser</span>
+					<span class="d-block font-weight-bold">- Sofia R. <img src="icons/verified.svg" class="svg font-size-xs ml-25 text-primary" replace-to-svg></span>
+					<span class="d-block font-size-sm">Verified buyer</span>
+				</div>
+				<div class="carousel-item col-lg-4 text-center">
+					<h3 class="mb-2 h3">Love how it feels on</h3>
+					<p class="font-italic font-weight-light">Love love love this product!!! I apply all over the face 3 times a week and leave it on for about 30 minutes. Feels awesome after!!! And for the first 3 weeks I did my acne spots every night.</p>
+					<span class="d-block mb-2">Deep Pore Cleanser</span>
+					<span class="d-block font-weight-bold">- Sofia R. <img src="icons/verified.svg" class="svg font-size-xs ml-25 text-primary" replace-to-svg></span>
+					<span class="d-block font-size-sm">Verified buyer</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container py-4 px-g">
+		<h2 class="mb-g">Shop Our Lip Makeup Collection</h2>
+		<p class="font-size-xs">At Milk Makeup, we believe the best lip makeup gives you plenty of options to #Live YourLook in-whether you're feeling juicy shine or the perfect matte red to finish off your look. That's why we've got a collection of vegan lip makeup that covers the gamut: lip gloss, lip plumper, lip balm, lipstick, and more. Try best sellers like Electric Glossy Lip Plumper and Lip + Cheek for a fresh pop of color. Or swipe on a moisturizing layer of KUSH Lip Balm, then choose a shade and finish to match your mood. Ready to level up your lip looks? Start shopping.</p>
+	</div>
+
+	{{> sections/footer}}
+
+	{{> js jquery=true popper=true bootstrap=true main=true }}
+</body>
+</html>
