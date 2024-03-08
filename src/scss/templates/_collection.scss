@@ -153,7 +153,7 @@
 		}
 	}
 	svg {
-		height: calc-em(50);
+		height: calc-em(40);
 		margin-bottom: calc-em(40);
 
 		@include media-breakpoint-up(lg) {
@@ -188,11 +188,31 @@
 .collection-range-results {
 	.carousel-control-prev {
 		height: auto;
-		left: calc-em(-40);
+
+		@include media-breakpoint-up(lg) {
+			left: calc-em(-40);
+		}
 	}
 	.carousel-control-next {
 		height: auto;
-		right: calc-em(-40);
+		@include media-breakpoint-up(lg) {
+			left: calc-em(-40);
+		}
+	}
+
+	.text-points {
+		font-size: calc-em(24);
+
+		@include media-breakpoint-up(lg) {
+			font-size: $h1-font-size-lg;
+		}
+	}
+
+	.carousel-control-prev-icon,
+	.carousel-control-next-icon {
+		@include media-breakpoint-down(md) {
+			bottom: 20%;
+		}
 	}
 }
 
