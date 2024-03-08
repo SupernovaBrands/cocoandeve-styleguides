@@ -86,6 +86,7 @@ $dark: $body-color;
 $text-muted: $gray-500;
 $border-color: $gray-600;
 $blue-light: #6787b7;
+$skincare-light: #E8F9FD;
 
 $theme-colors: (
   'primary': $primary,
@@ -97,7 +98,10 @@ $theme-colors: (
   'sh-purple': $sh-purple,
   'pink-light': $pink-light,
   'blue-light': $blue-light,
-  'secondary-light': $secondary-light
+  'secondary-light': $secondary-light,
+  'yellow-light': $yellow-light,
+  'bali-bod-blue-light': $bali-bod-blue-light,
+  'skincare-light': $skincare-light
 );
 
 $shade-colors: (
