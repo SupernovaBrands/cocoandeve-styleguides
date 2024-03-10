@@ -313,9 +313,6 @@
 				border-radius: 8px;
 				overflow: hidden;
 
-				&:first-child {
-
-				}
 				&:last-child {
 					@include media-breakpoint-up(lg) {
 						min-height: calc-em(390);
