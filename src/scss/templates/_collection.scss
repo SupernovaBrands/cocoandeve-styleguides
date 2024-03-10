@@ -220,7 +220,7 @@
 		font-size: calc-em(24);
 
 		@include media-breakpoint-up(lg) {
-			font-size: $h1-font-size-lg;
+			font-size: calc-em(36);
 		}
 	}
 
@@ -344,6 +344,10 @@
 .collection-range-about {
 	svg.text-white {
 		width: calc-em(54);
+
+		@include media-breakpoint-up(lg) {
+			width: calc-em(44);
+		}
 	}
 
 	.control {
