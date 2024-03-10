@@ -7,7 +7,7 @@
 
 <body class="template-collection">
 	{{> sections/header}}
-	<figure class="collection-banner container-fluid position-relative align-items-center px-0 pb-lg-3 pb-0">
+	<figure class="collection-banner container-fluid position-relative align-items-center px-0 pb-lg-3 pb-0 mb-0">
 		<picture>
 			<source srcset="https://via.placeholder.com/1440x200" media="(min-width: 992px)" />
 			<img src="https://via.placeholder.com/828x442" class="w-100" alt="Collection Banner">
@@ -30,12 +30,12 @@
 			<div class="col-lg-6 col-12 bg-gray-100 px-2 py-3 p-lg-4 text-content d-flex justify-content-center">
 				<div class="d-block">
 					<img class="svg d-block" src="icons/natural-dha.svg" replace-to-svg />
-					<h2 class="font-size-lg">Clarifying Detox Shampoo</h2>
-					<p>eliminates impurities and metals to leave hair thoroughly detoxified, cleansed and moisturised</p>
-					<h2 class="text-gray-500">Deep Clean Scalp Scrub</h2>
-					<h2 class="text-gray-500">60% in reduction of dandruff</h2>
-					<h2 class="text-gray-500">40% in reduction of sebum</h2>
-					<h2 class="text-gray-500">Deep Clean Scalp Scrub</h2>
+					<h2 class="mb-g">Clarifying Detox Shampoo</h2>
+					<p class="mb-2">eliminates impurities and metals to leave hair thoroughly detoxified, cleansed and moisturised</p>
+					<h2 class="text-gray-500 mb-2">Deep Clean Scalp Scrub</h2>
+					<h2 class="text-gray-500 mb-2">60% in reduction of dandruff</h2>
+					<h2 class="text-gray-500 mb-2">40% in reduction of sebum</h2>
+					<h2 class="text-gray-500 mb-2">Deep Clean Scalp Scrub</h2>
 				</div>
 			</div>
 		</div>
@@ -49,32 +49,42 @@
 	{{> sections/collection-range-reels }}
 	{{> sections/blog-recomendation class="mobile-wrapper"}}
 
-	<div class="container py-3 py-lg-4">
+	<div class="container pb-4 pb-lg-4 pt-lg-2 pb-lg-4 collection-range-footer">
 		<h2 class="h1 mb-2 text-center mb-3">What our customers <br class="d-lg-none">are saying</h2>
-		<div class="carousel slide pb-4" data-ride="carousel">
+		<div class="carousel slide pb-4" data-ride="carousel" id="range-footer">
 			<div class="carousel-inner d-lg-flex">
 				<div class="carousel-item col-12 col-lg-4 text-center d-lg-block mr-lg-0 active">
-					<h3 class="mb-2 h3">Love how it feels on</h3>
-					<p class="font-italic font-weight-light">Love love love this product!!! I apply all over the face 3 times a week and leave it on for about 30 minutes. Feels awesome after!!! And for the first 3 weeks I did my acne spots every night.</p>
-					<span class="d-block mb-2">Deep Pore Cleanser</span>
+					<h3 class="mb-2">Love how it feels on</h3>
+					<p class="font-italic font-weight-light font-size-sm">Love love love this product!!! I apply all over the face 3 times a week and leave it on for about 30 minutes. Feels awesome after!!! And for the first 3 weeks I did my acne spots every night.</p>
+					<span class="d-block mb-2"><u>Deep Pore Cleanser</u></span>
 					<span class="d-block font-weight-bold">- Sofia R. <img src="icons/verified.svg" class="svg font-size-xs ml-25 text-primary" replace-to-svg> </span>
 					<span class="d-block font-size-sm">Verified buyer</span>
 				</div>
 				<div class="carousel-item col-12 col-lg-4 text-center d-lg-block mr-lg-0">
-					<h3 class="mb-2 h3">Love how it feels on</h3>
-					<p class="font-italic font-weight-light">Love love love this product!!! I apply all over the face 3 times a week and leave it on for about 30 minutes. Feels awesome after!!! And for the first 3 weeks I did my acne spots every night.</p>
-					<span class="d-block mb-2">Deep Pore Cleanser</span>
+					<h3 class="mb-2 ">Love how it feels on</h3>
+					<p class="font-italic font-weight-light font-size-sm">Love love love this product!!! I apply all over the face 3 times a week and leave it on for about 30 minutes. Feels awesome after!!! And for the first 3 weeks I did my acne spots every night.</p>
+					<span class="d-block mb-2"><u>Deep Pore Cleanser</u></span>
 					<span class="d-block font-weight-bold">- Sofia R. <img src="icons/verified.svg" class="svg font-size-xs ml-25 text-primary" replace-to-svg></span>
 					<span class="d-block font-size-sm">Verified buyer</span>
 				</div>
 				<div class="carousel-item col-12 col-lg-4 text-center d-lg-block mr-lg-0">
-					<h3 class="mb-2 h3">Love how it feels on</h3>
-					<p class="font-italic font-weight-light">Love love love this product!!! I apply all over the face 3 times a week and leave it on for about 30 minutes. Feels awesome after!!! And for the first 3 weeks I did my acne spots every night.</p>
-					<span class="d-block mb-2">Deep Pore Cleanser</span>
+					<h3 class="mb-2 ">Love how it feels on</h3>
+					<p class="font-italic font-weight-light font-size-sm">Love love love this product!!! I apply all over the face 3 times a week and leave it on for about 30 minutes. Feels awesome after!!! And for the first 3 weeks I did my acne spots every night.</p>
+					<span class="d-block mb-2"><u>Deep Pore Cleanser</u></span>
 					<span class="d-block font-weight-bold">- Sofia R. <img src="icons/verified.svg" class="svg font-size-xs ml-25 text-primary" replace-to-svg></span>
 					<span class="d-block font-size-sm">Verified buyer</span>
 				</div>
 			</div>
+			<a class="carousel-control carousel-control-prev carousel-control--background floating-out-left justify-content-start w-auto d-flex d-lg-none"
+			href="#range-footer" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon d-flex justify-content-center align-items-center text-body" aria-hidden="true"><img class="svg" src="icons/chevron-prev.svg" replace-to-svg /></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control carousel-control-next carousel-control--background floating-out-right justify-content-end w-auto d-flex d-lg-none"
+				href="#range-footer" role="button" data-slide="next">
+				<span class="carousel-control-next-icon d-flex justify-content-center align-items-center text-body" aria-hidden="true"><img class="svg" src="icons/chevron-next.svg" replace-to-svg /></span>
+				<span class="sr-only">Next</span>
+			</a>
 		</div>
 	</div>
 

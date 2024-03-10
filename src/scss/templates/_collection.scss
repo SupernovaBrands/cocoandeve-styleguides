@@ -139,8 +139,10 @@
 .collection-banner-text {
 	.banner {
 		min-height: calc-em(423);
+		border-radius: $border-radius-lg $border-radius-lg 0 0;
 		@include media-breakpoint-up(lg) {
 			min-height: calc-em(550);
+			border-radius: $border-radius-lg 0 0 $border-radius-lg;
 		}
 
 		picture {
@@ -163,6 +165,15 @@
 	}
 
 	.text-content {
+		border-radius: 0 0 $border-radius-lg $border-radius-lg;
+		@include media-breakpoint-up(lg) {
+			border-radius: 0 $border-radius-lg $border-radius-lg 0;
+		}
+
+		h2 {
+			@include font-size($h2-font-size);
+		}
+
 		p {
 			max-width: calc-em(400);
 		}
@@ -186,6 +197,11 @@
 }
 
 .collection-range-results {
+	@include media-breakpoint-up(lg) {
+		h2 {
+			@include font-size($h1-font-size);
+		}
+	}
 	.carousel-control-prev {
 		height: auto;
 
@@ -196,7 +212,7 @@
 	.carousel-control-next {
 		height: auto;
 		@include media-breakpoint-up(lg) {
-			left: calc-em(-40);
+			right: calc-em(-40);
 		}
 	}
 
@@ -214,9 +230,27 @@
 			bottom: 20%;
 		}
 	}
+
+	.font-size-xs {
+		@include media-breakpoint-up(lg) {
+			font-size: calc-em(14) !important;
+		}
+	}
 }
 
 .collection-range-about {
+	.nav-link {
+		@include media-breakpoint-up(lg) {
+			font-size: calc-em(20);
+		}
+	}
+
+	.tab-title {
+		@include media-breakpoint-up(lg) {
+			font-size: calc-em(24);
+		}
+	}
+
 	.nav-link.active {
 		font-weight: bold;
 		color: $body-color !important;
@@ -279,9 +313,6 @@
 				border-radius: 8px;
 				overflow: hidden;
 
-				&:first-child {
-
-				}
 				&:last-child {
 					@include media-breakpoint-up(lg) {
 						min-height: calc-em(390);
@@ -338,6 +369,20 @@
 			.text-white.d-none {
 				display: block !important;
 			}
+		}
+	}
+}
+
+.collection-range-footer {
+	.font-size-sm {
+		@include media-breakpoint-up(lg) {
+			font-size: $font-size-base;
+		}
+	}
+
+	h3 {
+		@include media-breakpoint-up(lg) {
+			font-size: calc-em(24);
 		}
 	}
 }
