@@ -1,0 +1,26 @@
+<div class="container py-4 collection-products px-0">
+	<h2 class="h1 text-center mb-2 d-block">{{heading}}</h2>
+	<div class="carousel slide carousel--loop carousel--swipe" id="new" role="tabpanel" aria-labelledby="new-tab" data-slide-number="4">
+		<div class="carousel--centered pt-2">
+			<div class="carousel-inner row flex-nowrap w-auto" role="listbox">
+				{{> components/product-card-carousel active="active" title="Sunny Honey Bali Bronzing Bundle" compare_price="$44.90" price="$34.90" carousel=true badge="New" }}
+				{{> components/product-card-carousel title="Bronzing Face Drops" compare_price="$44.90" price="$34.90" swatch="true" swatch_shade="true" carousel=true square_badge="New" }}
+				{{> components/product-card-carousel title="Sunny Honey Bali Bronzing Foam" compare_price="$44.90" price="$34.90" swatch="true" swatch_style="true" carousel=true }}
+				{{> components/product-card-carousel title="Like A Virgin Hair Masque" compare_price="$44.90" price="$34.90" carousel=true }}
+				{{> components/product-card-carousel title="Sunny Honey Bali Bronzing Bundle" compare_price="$44.90" price="$34.90" carousel=true }}
+				{{> components/product-card-carousel title="Sunny Honey Bali Bronzing Foam" compare_price="$44.90" price="$34.90" carousel=true }}
+				{{> components/product-card-carousel title="Like A Virgin Hair Masque" compare_price="$44.90" price="$34.90" carousel=true }}
+			</div>
+		</div>
+		<a class="carousel-control carousel-control-prev carousel-control--background floating-out-left justify-content-start w-auto"
+			href="#new" role="button" data-slide="prev">
+			<span class="carousel-control-prev-icon d-flex justify-content-center align-items-center text-body" aria-hidden="true"><img class="svg" src="icons/chevron-prev.svg" replace-to-svg /></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="carousel-control carousel-control-next carousel-control--background floating-out-right justify-content-end w-auto"
+			href="#new" role="button" data-slide="next">
+			<span class="carousel-control-next-icon d-flex justify-content-center align-items-center text-body" aria-hidden="true"><img class="svg" src="icons/chevron-next.svg" replace-to-svg /></span>
+			<span class="sr-only">Next</span>
+		</a>
+	</div>
+</div>
