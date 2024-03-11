@@ -1,11 +1,45 @@
-<form id="product-waitlist-form-oos" class="product-waitlist-form-oos bg-pink-light px-g py-2 order-lg-2 mt-3 mb-3 rounded {{class}}">
-	<h3 class="text-center h2">Restocking Jan 2022</h3>
-	<p class="text-center font-size-sm px-lg-3 mb-1">Our products have been a worldwide hit and we can't keep up with the stock. But we are on it, sign up and we will notify you when it’s available!</p>
-	<div class="input-group rounded">
-		<input type="email" name="email" class="form-control text-body border-right-0 rounded-right-0 rounded bg-white" placeholder="Enter your email" />
-		<button class="btn btn-primary rounded  mt-1 mt-lg-0 py-1 col-12 col-lg-auto" type="submit">Join the waitlist</button>
-	</div>
-	<p class="my-1 align-items-center justify-content-center d-none font-size-sm">Thanks! We’ve got your email!
-		<img class="svg text-secondary ml-1" src="icons/check-circle.svg" replace-to-svg />
-	</p>
-</form>
+<div class="product-waitlist product-waitlist__form w-100 p-3 mb-3 rounded bg-pink-light {{ class }}">
+	<p class="h2">Join the waitlist</p>
+	<p class="mb-3">Be the first to know when <strong>Sunny Honey Bali Bronzing Foam in medium shade</strong> is back in stock.</p>
+	<form data-pdp="false" data-product-id="product-id" novalidate>
+		<div class="row">
+			<div class="input-group col-12">
+				<label for="waitlist-phone" class="input-group-addon form-control bg-white pr-0">
+					{{> components/countries-options class='position-absolute' }}
+					<span class="align-items-center">+65</span>
+					<svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.6 22.6" class="svg font-size-sm"><path d="M1.9 5.4l9.4 9.4 9.4-9.4 1.9 1.9-11.3 11.3L0 7.3l1.9-1.9z"></path></svg>
+				</label>
+				<input id="waitlist-phone" class="form-control border-left-1 mb-g bg-white rounded" type="tel" placeholder="Phone number" aria-label="phone">
+			</div>
+			<small class="col-12 text-danger phone-error d-none">Please enter a valid phone number</small>
+		</div>
+		<span class="d-block mb-1 text-center">- Or -</span>
+		<div class="row">
+			<div class="input-group col mb-1">
+				<input class="form-control border-0 bg-white rounded" type="email" name="email" placeholder="Enter your email">
+			</div>
+			<small class="col-12 text-danger email-error d-none">Please enter a valid email address</small>
+		</div>
+		<div class="row">
+			<div class="input-group col d-flex my-1">
+				<div class="custom-control custom-checkbox col d-flex my-1">
+					<input type="checkbox" name="tos" class="custom-control-input" required id="agreement"/>
+					<label class="custom-control-label font-size-xs" for="agreement">
+						I agree to the <a class="link-secondary text-underline" target="_blank" href="/pages/privacy-policy-new" aria-label="Privacy Policy">Privacy Policy</a> and <a class="link-secondary text-underline" href="/pages/terms-and-conditions" target="_blank" aria-label="Terms of Use">Terms of Use</a>
+					</label>
+				</div>
+			</div>
+			<small class="col-12 text-danger terms-error d-none">You have not agreed to the Privacy Policy & ToS</small>
+		</div>
+		<div class="row">
+			<div class="form-group col mt-1">
+				<input class="btn btn-lg btn-primary btn-block" type="submit" value="Submit" />
+			</div>
+		</div>
+		<p class="font-size-xs">Receive exclusive offers via email or automated marketing SMS (4/mth). For more info see our <a class="link-secondary text-underline" target="_blank" href="/pages/privacy-policy-new" aria-label="Privacy Policy">Privacy Policy</a>. Opt out any time. Msg & data rates may apply. Consent not required for purchase.</p>
+	</form>
+</div>
+<div class="product-waitlist product-waitlist--launch product-waitlist__submitted w-100 p-3 mb-3 rounded text-center {{ class }} d-none">
+	<h3 class="mx-4 mx-lg-5">Thank you for subcribing to our waitlist!</h3>
+	<p class="font-size-sm mb-0">We'll keep you posted on our Bronzing Face Drop launch!. We hope you're exited as much as we are.</p>
+</div>
