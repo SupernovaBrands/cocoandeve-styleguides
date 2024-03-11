@@ -1,8 +1,8 @@
 <!-- product carousel section -->
 <section id="product-carousel-ab-original" class="product-carousel pt-4 pb-4 {{ class }}">
   {{#unless noTabs}}
-  <h2 class="h1 text-center mb-0 mb-lg-1">Our Products</h2>
-  <ul class="nav nav-tabs mx-auto nav-tabs--product text-center mb-0 justify-content-center border-0" role="tablist">
+  <h2 class="h1 text-center mb-1 mb-lg-2">Our Products</h2>
+  <ul class="nav nav-tabs mx-auto nav-tabs--product text-center mb-0 justify-content-center border-0 pb-4 pb-lg-2" role="tablist">
     <li class="nav-item">
       <a class="nav-link border-0 text-decoration-none h4 mb-0 font-weight-normal" data-toggle="tab" href="#new" role="tab"
         aria-controls="new">New</a>
@@ -20,7 +20,7 @@
   <div class="tab-content container px-sm-0 px-md-2 text-center">
     <div class="tab-pane fade carousel slide carousel--loop" id="new" role="tabpanel" aria-labelledby="new-tab"
       data-slide-number="4">
-      <div class="carousel--centered pt-1">
+      <div class="carousel--centered">
         <div class="carousel-inner row flex-nowrap mx-0" role="listbox">
           {{> components/product-card-carousel active="active" title="Sunny Honey Bali Bronzing Bundle" compare_price="$44.90" price="$34.90" carousel=true badge="New" }}
           {{> components/product-card-carousel title="Bronzing Face Drops" compare_price="$44.90" price="$34.90" swatch="true" swatch_shade="true" carousel=true square_badge="New" }}
@@ -44,7 +44,7 @@
     </div>
     <div class="tab-pane fade show active carousel slide carousel--loop tab-abtest" id="bestsellers" role="tabpanel"
       aria-labelledby="bestsellers-tab" data-slide-number="4">
-      <div class="carousel--centered pt-2">
+      <div class="carousel--centered">
         <div class="carousel-inner row flex-nowrap mx-0" role="listbox">
           {{> components/product-card-carousel active="active" title="Sunny Honey Bali Bronzing Bundle" compare_price="$44.90" price="$34.90" carousel=true }}
           {{> components/product-card-carousel title="Bronzing Face Drops" compare_price="$44.90" price="$34.90" swatch="true" swatch_style="true" badge="true" badge_image="badge-25.svg" carousel=true }}
@@ -81,7 +81,7 @@
     </div>
     <div class="tab-pane fade carousel slide carousel--loop" data-slide-number="4" id="value-sets" role="tabpanel"
       aria-labelledby="value-sets-tab">
-      <div class="carousel--centered pt-2">
+      <div class="carousel--centered">
         <div class="carousel-inner row flex-nowrap mx-0" role="listbox">
           {{> components/product-card-carousel active="active" title="Sunny Honey Bali Bronzing Bundle" compare_price="$44.90" price="$34.90" carousel=true }}
           {{> components/product-card-carousel title="Bronzing Face Drops" compare_price="$44.90" price="$34.90" swatch="true" swatch_shade="true" carousel=true }}
@@ -105,7 +105,7 @@
       </a>
     </div>
     {{#unless noShopAll}}
-    <a href="#" class="btn btn-lg btn-outline-primary mt-4 rounded-pill mt-2">Shop All</a>
+    <a href="#" class="btn btn-lg btn-outline-primary rounded-pill mt-2">Shop All</a>
     {{/unless}}
   </div>
 </section>
