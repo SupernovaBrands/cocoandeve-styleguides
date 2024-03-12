@@ -7,101 +7,54 @@
         <div class="container">
 
             <h1>POST CARD</h1>
-            <article class="post-card mb-4 mb-lg-3">
-                <figure class="mb-2 no-gutters__in-container">
-                    <img src="https://via.placeholder.com/375x190.jpg/EFADBA" class="w-100">
-                </figure>
-                <time>04 May, 2020</time>
-                <h3 class="mt-1 mb-1">5 things you’re doing wrong with your hair care routine</h3>
-                <p>Give these myths the brush off for a healthy scalp & shiny hair!</p>
-            </article>
+            <div class="row mb-0 mt-2">
+                {{> compounds/post-card class="col-12 col-lg-6" title="The Power of SPF Primers" text="Stop rushing your routine by multitasking your morning! Update test 3"}}
+                {{> compounds/post-card class="col-12 col-lg-6" title="Why You Need This Skin Perfecting Sunscreen in Your Summer Routine" text="Prime, protect and radiate with this season's hottest must-have!"}}
+            </div>
+
 
             <h1>POST CARDS GRID</h1>
-            <div class="row mb-5">
-                <article class="col-12 col-lg-4 post-card mb-4 mb-lg-3">
-                    <figure class="mb-2 no-gutters__in-container">
-                        <img src="https://via.placeholder.com/375x190.jpg/EFADBA" class="w-100">
-                    </figure>
-                    <time>04 May, 2020</time>
-                    <h3 class="mt-1 mb-1">5 things you’re doing wrong</h3>
-                    <p>Give these myths the brush off for a healthy scalp & shiny hair!</p>
-                </article>
-                <article class="col-12 col-lg-4 post-card mb-4 mb-lg-3">
-                    <figure class="mb-2 no-gutters__in-container">
-                        <img src="https://via.placeholder.com/375x190.jpg/EFADBA" class="w-100">
-                    </figure>
-                    <time>04 May, 2020</time>
-                    <h3 class="mt-1 mb-1">5 things you’re doing wrong with your hair care routine</h3>
-                    <p>Give these myths the brush off for a healthy scalp & shiny hair!</p>
-                </article>
-                <article class="col-12 col-lg-4 post-card mb-4 mb-lg-3">
-                    <figure class="mb-2 no-gutters__in-container">
-                        <img src="https://via.placeholder.com/375x190.jpg/EFADBA" class="w-100">
-                    </figure>
-                    <time>04 May, 2020</time>
-                    <h3 class="mt-1 mb-1">5 things you’re doing wrong with your hair care routine</h3>
-                    <p>Give these myths the brush off for a healthy scalp & shiny hair!</p>
-                </article>
+            <div class="row mb-0 mt-2">
+                {{> compounds/post-card class="col-12 col-lg-4" title="How to Get a Flawless Faux Tan That Lasts Through Party Season and Beyond" text="Discover the holy grail for a holiday glow!"}}
+                {{> compounds/post-card class="col-12 col-lg-4" title="Our Milky Toner Is the Glowy Skin Secret You Need To Know!" text="Even experts rave about it!"}}
+                {{> compounds/post-card class="col-12 col-lg-4" title="Which Hair Mask Should I Use?" text="The answer to your burning question ❤️‍🔥"}}
             </div>
 
             <h1>POST CARDS GRID NO IMAGE</h1>
             <div class="row mb-5">
-                <article class="col-12 col-lg-4 post-card">
-                    <time>04 May, 2020</time>
-                    <h3 class="mt-1 mb-1">5 things you’re doing wrong with your hair care routine</h3>
-                    <p>Give these myths the brush off for a healthy scalp & shiny hair!</p>
-                </article>
-                <article class="col-12 col-lg-4 post-card">
-                    <time>04 May, 2020</time>
-                    <h3 class="mt-1 mb-1">5 things you’re doing wrong with your hair care routine</h3>
-                    <p>Give these myths the brush off for a healthy scalp & shiny hair!</p>
-                </article>
-                <article class="col-12 col-lg-4 post-card">
-                    <time>04 May, 2020</time>
-                    <h3 class="mt-1 mb-1">5 things you’re doing wrong with your hair care routine</h3>
-                    <p>Give these myths the brush off for a healthy scalp & shiny hair!</p>
-                </article>
+                {{> compounds/post-card class="col-12 col-lg-4" noImage=true title="How to Get a Flawless Faux Tan That Lasts Through Party Season and Beyond" text="Discover the holy grail for a holiday glow!"}}
+                {{> compounds/post-card class="col-12 col-lg-4" noImage=true title="Our Milky Toner Is the Glowy Skin Secret You Need To Know!" text="Even experts rave about it!"}}
+                {{> compounds/post-card class="col-12 col-lg-4" noImage=true title="Which Hair Mask Should I Use?" text="The answer to your burning question ❤️‍🔥"}}
             </div>
 
             <h1>POST CARDS CAROUSEL</h1>
-            <article class="post-card mb-4 mb-lg-3">
-                <figure id="carouselWithGroupedControls" class="carousel carousel--fixed-height slide mb-2 no-gutters__in-container" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselWithGroupedControls" data-slide-to="0" class="active rounded-circle border-0"></li>
-                        <li data-target="#carouselWithGroupedControls" data-slide-to="1" class="rounded-circle border-0"></li>
-                        <li data-target="#carouselWithGroupedControls" data-slide-to="2" class="rounded-circle border-0"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                          <figure class="mb-0">
-                              <img src="https://via.placeholder.com/770x513" class="w-100" alt="First slide">
-                          </figure>
-                      </div>
-                      <div class="carousel-item">
-                          <figure class="mb-0">
-                              <img src="https://via.placeholder.com/252x448" class="w-100" alt="Second slide">
-                          </figure>
-                      </div>
-                      <div class="carousel-item">
-                          <figure class="mb-0">
-                              <img src="https://via.placeholder.com/528x793" class="w-100" alt="Third slide">
-                          </figure>
-                      </div>
+            <div class="row mb-2 mb-lg-4">
+                <div class="container px-0">
+                    <div id="carouselLoopCentered1" class="carousel slide d-flex carousel--loop carousel--loop-articles carousel--swipe blog-carousel" data-slide-number="4">
+                        <div class="carousel-inner d-flex flex-nowrap" aria-label="Blog Slider">
+                            {{> compounds/post-card carousel=true class="col-12 col-lg-6 carousel-item mr-lg-0 h-100 active" title="How to Get a Flawless Faux Tan That Lasts Through Party Season and Beyond" text="Discover the holy grail for a holiday glow!"}}
+                            {{> compounds/post-card carousel=true class="col-12 col-lg-6 carousel-item mr-lg-0 h-100" title="Our Milky Toner Is the Glowy Skin Secret You Need To Know!" text="Even experts rave about it!"}}
+                            {{> compounds/post-card carousel=true class="col-12 col-lg-6 carousel-item mr-lg-0 h-100" title="Which Hair Mask Should I Use?" text="The answer to your burning question ❤️‍🔥"}}
+                            {{> compounds/post-card carousel=true class="col-12 col-lg-6 carousel-item mr-lg-0 h-100" title="Our Milky Toner Is the Glowy Skin Secret You Need To Know!" text="Even experts rave about it!"}}
+                            {{> compounds/post-card carousel=true class="col-12 col-lg-6 carousel-item mr-lg-0 h-100" title="Which Hair Mask Should I Use?" text="The answer to your burning question ❤️‍🔥"}}
+                            {{> compounds/post-card carousel=true class="col-12 col-lg-6 carousel-item mr-lg-0 h-100" title="Our Milky Toner Is the Glowy Skin Secret You Need To Know!" text="Even experts rave about it!"}}
+                            {{> compounds/post-card carousel=true class="col-12 col-lg-6 carousel-item mr-lg-0 h-100" title="Which Hair Mask Should I Use?" text="The answer to your burning question ❤️‍🔥"}}
+                        </div>
+                        <a class="w-auto carousel-control carousel-control-prev carousel-control--background floating-out-left justify-content-start text-primary ml-lg-2" href="#carouselLoopCentered1" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon d-flex justify-content-center align-items-center bg-pink-light" aria-hidden="true">
+                                <img class="svg" src="icons/chevron-prev.svg" replace-to-svg />
+                            </span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="w-auto carousel-control carousel-control-next carousel-control--background floating-out-right justify-content-end text-primary mr-lg-2" href="#carouselLoopCentered1" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon d-flex justify-content-center align-items-center bg-pink-light" aria-hidden="true">
+                                <img class="svg" src="icons/chevron-next.svg" replace-to-svg />
+                            </span>
+                            <span class="sr-only">Next</span>
+                        </a>
                     </div>
-
-                    <a class="carousel-control carousel-control-prev carousel-control--background carousel-control--right-lg" href="#carouselWithGroupedControls" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon d-flex justify-content-center align-items-center" aria-hidden="true"><img class="svg" src="icons/chevron-prev.svg" replace-to-svg /></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control carousel-control-next carousel-control--background carousel-control--right-lg" href="#carouselWithGroupedControls" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon d-flex justify-content-center align-items-center" aria-hidden="true"><img class="svg" src="icons/chevron-next.svg" replace-to-svg /></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </figure>
-                <time>04 May, 2020</time>
-                <h3 class="mt-1 mb-1">5 things you’re doing wrong with your hair care routine</h3>
-                <p>Give these myths the brush off for a healthy scalp & shiny hair!</p>
-            </article>
+                </div>
+            </div>
         </div>
 
         {{> js jquery=true bootstrap=true main=true }}

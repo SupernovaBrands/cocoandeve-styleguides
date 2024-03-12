@@ -1,0 +1,26 @@
+<article class="{{ class }} mb-2">
+	<figure class="mb-2 {{#unless carousel}}no-gutters__in-container{{/unless}} border border-secondary-light h-100 d-flex flex-column flex-grow-1">
+		{{#unless noImage}}
+		<a href="#" class="hover-overlay d-block" aria-label="{{title}}">
+			<picture>
+				<source srcset="https://via.placeholder.com/736x374.jpg/EFADBA" media="(min-width: 992px)">
+				<img src="https://via.placeholder.com/828x420.jpg/EFADBA" class="w-100" alt="{{title}}" />
+			</picture>
+		</a>
+		{{/unless}}
+		<figcaption class="p-2 d-flex flex-column flex-grow-1">
+			<p class="mb-0">
+				<span class="badge badge--square badge-blog font-weight-normal bg-secondary-light text-gray-600 mr-25 mb-25">Hair</span>
+				<span class="badge badge--square badge-blog font-weight-normal bg-yellow-light text-gray-600 mr-25 mb-25">Tan</span>
+				<span class="badge badge--square badge-blog font-weight-normal bg-blue text-white mr-25 mb-25">Body</span>
+				<span class="badge badge--square badge-blog font-weight-normal bg-suncare-blue text-white mr-25 mb-25">Suncare</span>
+				<span class="badge badge--square badge-blog font-weight-normal bg-orange text-white mr-25 mb-25">Skin</span>
+			</p>
+			<p class="h2 mt-2">
+				<a href="#" class="text-body">{{title}}</a>
+			</p>
+			<p class="d-flex flex-column flex-grow-1">{{text}}</p>
+			<a href="#" class="btn btn-outline-primary align-self-start" aria-label="{{title}}">Read more</a>
+		</figcaption>
+	</figure>
+</article>
