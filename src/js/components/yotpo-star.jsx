@@ -1,9 +1,10 @@
-/* global tSettings */
+/* global tSettings screenLG */
 
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import ReviewStar from '~comp/review-star';
+import ReviewStarSingle from './review-star-single';
 
 const { yotpoKey } = tSettings;
 
@@ -23,10 +24,25 @@ const YotpoStar = (props) => {
 	}, [props.productId]);
 
 	return init ? (
-		<div className={`d-flex ${props.extraClass}`}>
-			<ReviewStar score={score} />
-			{props.showScore && <span className="ml-25">{`${score.toFixed(1)} stars`}</span>}
-			{props.showTotal && (
+		<div className={`d-flex ${props.extraClass} ${window.innerWidth < screenLG ? 'product-card__stars' : ''}`}>
+			{window.innerWidth < screenLG && (
+				<span className="d-flex justify-content-center">
+					<ReviewStarSingle score={score} />
+					<span className="ml-25">{`${score.toFixed(1)}/5.0`}</span>
+				</span>
+			)}
+			{window.innerWidth < screenLG && props.showTotal && (
+				<span className="ml-25">
+					<a className="link-secondary text-underline" href={`${props.productUrl}#write-a-review`}>
+						(
+						{total}
+						)
+					</a>
+				</span>
+			)}
+			{window.innerWidth >= screenLG && (<ReviewStar score={score} />)}
+			{window.innerWidth >= screenLG && props.showScore && <span className="ml-25">{`${score.toFixed(1)} stars`}</span>}
+			{window.innerWidth >= screenLG && props.showTotal && (
 				<span className="ml-25">
 					(
 					<a className="link-secondary text-underline" href={`${props.productUrl}#write-a-review`}>{total}</a>

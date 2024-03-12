@@ -1,4 +1,7 @@
 .product-card {
+	picture {
+		border-radius: $rounded $rounded 0 0;
+	}
 
 	.swatch-overlay {
 		display: flex;
@@ -112,6 +115,8 @@
 
 	&__content {
 		background-color: $pink-light;
+		border-radius: 0 0 $rounded $rounded;
+
 		@include media-breakpoint-down(md) {
 			padding-left: calc-em(5) !important;
 			padding-right: calc-em(5) !important;
