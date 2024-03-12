@@ -35,12 +35,6 @@
             text-decoration: none;
         }
     }
-    
-    picture {
-        @include media-breakpoint-down(md) {
-            max-width: calc-em(145);
-        }
-    }
 
     .product-card__title {
         min-height: calc-em(40);
