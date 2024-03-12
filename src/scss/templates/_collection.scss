@@ -282,13 +282,13 @@
 					display: block;
 					float: left;
 					min-height: 1px;
-					padding-left: 2px;
-					padding-right: 2px;
 					position: relative;
 					width: 50%;
 					max-width: 50%;
-					padding-left: 2px;
-					padding-right: 2px;
+					
+					@include media-breakpoint-down(lg) {
+						padding-right: calc-em(15);
+					}
 				}
 			}
 		}
@@ -305,12 +305,9 @@
 				position: relative;
 				width: 50%;
 				max-width: 50%;
-				padding-left: 2px;
-				padding-right: 2px;
 
 				width: 50%;
 				max-width: 50%;
-				border-radius: 8px;
 				overflow: hidden;
 
 				&:last-child {
@@ -319,7 +316,7 @@
 						height: calc-em(390);
 						align-self: center;
 						display: flex;
-						margin-left: -32%;
+						margin-left: -33.4%;
 						opacity: .5;
 						z-index: -1;
 						top: 50%;
@@ -343,17 +340,68 @@
 
 .collection-range-about {
 	svg.text-white {
-		width: calc-em(54);
+		width: calc-em(44);
 
 		@include media-breakpoint-up(lg) {
 			width: calc-em(44);
 		}
 	}
 
+	.overflow-hidden {
+		@include media-breakpoint-up(lg) {
+			overflow: visible !important;
+		}
+	}
+
 	.control {
-		right: calc-em(15);
-		bottom: calc-em(15);
+		right: calc-em(25);
+		bottom: calc-em(10);
 		z-index: 1;
+	}
+
+	.carousel-control-prev-icon, .carousel-control-next-icon {
+		background-color: transparent;
+
+		svg {
+			height: calc-em(20);
+		}
+	}
+
+	.carousel-control-prev {
+		left: -4%;
+	}
+
+	.carousel-control-next {
+		right: -4%;
+	}
+
+	.card-img {
+		border-radius: calc-em(8);
+
+		.font-size-lg {
+			@include media-breakpoint-down(md) {
+				max-width: calc-em(140);
+			}
+		}
+	}
+
+	.card-faq {
+		border-radius: calc-em(8);
+	}
+
+	.range-collapse {
+		&__toggle {
+			svg {
+				width: calc-em(12);
+			}
+
+			.icon-plus { display: none; }
+			.icon-minus { display: block; }
+			&.collapsed {
+				.icon-plus { display: block; }
+				.icon-minus { display: none; }
+			}
+		}
 	}
 
 	input.card-input:checked {
