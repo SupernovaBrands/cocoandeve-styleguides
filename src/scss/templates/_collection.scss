@@ -343,7 +343,7 @@
 		width: calc-em(44);
 
 		@include media-breakpoint-up(lg) {
-			width: calc-em(44);
+			width: calc-em(54);
 		}
 	}
 
@@ -436,5 +436,9 @@
 		@include media-breakpoint-up(lg) {
 			font-size: calc-em(24);
 		}
+	}
+
+	.svg {
+		height: calc-em(20);
 	}
 }
