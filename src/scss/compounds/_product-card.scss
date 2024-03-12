@@ -182,6 +182,13 @@
 		}
 	}
 
+	&__img-link img.embed-responsive-item {
+		max-width: 108% !important;
+		width: 108% !important;
+		height: 108%;
+		top: -4%;
+		left: -4%;
+	}
 }
 
 // secondary image
