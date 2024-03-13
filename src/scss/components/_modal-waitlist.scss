@@ -1,11 +1,14 @@
-.modal--launch-waitlist {
+.waitlist-popup {
+	&__title {
+		@include font-size($h2-font-size);
+		@include media-breakpoint-up(md) {
+			@include font-size($h1-font-size);
+		}
+	}
 
-	.modal-content {
-		background-color: $yellow-light;
-		max-width: calc(100% - #{$grid-gutter-width});
-
-		@include media-breakpoint-up('lg') {
-			width: 100%;
+	@include media-breakpoint-down(md) {
+		.waitlist-popup-image {
+			max-width: calc-em(250);
 		}
 	}
 }
