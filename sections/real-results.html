@@ -10,809 +10,144 @@
 </head>
 
 <body>
-  <section class="pt-4 pb-4 bg-yellow-light position-relative real-result--original" id="real-results">
-  	<div class="container p-0 p-md-1">
-  		<p class="pb-2 mb-0 h1 text-center">Real Results</p>
-  		<ul class="nav nav-tabs mx-auto nav-tabs--real-results text-center mb-5 justify-content-center d-none d-md-flex" role="tablist">
-  			<li class="nav-item">
-  				<a class="nav-link text-decoration-none h4 mb-0 font-weight-normal px-3 w-auto" href="#tan" aria-controls="tan">Tan & SPF</a>
-  			</li>
-  			<li class="nav-item" role="presentation">
-  				<a class="nav-link text-decoration-none h4 mb-0 font-weight-normal" href="#hair" role="tab">Hair</a>
-  			</li>
-  			<li class="nav-item">
-  				<a class="nav-link text-decoration-none h4 mb-0 font-weight-normal" href="#body" aria-controls="value-sets">Body</a>
-  			</li>
-  			<li class="nav-item" role="presentation">
-  				<a class="nav-link text-decoration-none active h4" href="#all" role="tab">All</a>
-  			</li>
-  		</ul>
-  		<div class="mb-4 mx-auto col-6 d-sm-block d-md-none">
-  			<label for="rangeResultSelect" id="rangeResultSelectLabel" class="sr-only">Range Real Result</label>
-  			<select id="rangeResultSelect" data-toggle="select" class="custom-select bg-white rounded-lg custom-select-lg" aria-labelledby="rangeResultSelectLabel">
-  				<option value="#all" selected>All</option>
-  				<option value="#tan">Tan & SPF</option>
-  				<option value="#hair">Hair</option>
-  				<option value="#body">Body</option>
-  				<option value="#suncare">Suncare</option>
-  			</select>
-  		</div>
-  
-  		<div class="carousel slide carousel--loop carousel--real-result carousel--swipe" id="real-result-carousel" data-slide-number="4" role="tabpanel" aria-labelledby="tan-tab">
-  			<div class="carousel--centered">
-  				<div class="carousel-inner row flex-nowrap mx-0" role="listbox">
-  					<div class="carousel-item col-9 col-lg-3 result-card active" data-category="#body" role="option">
-  					  <noscript class="loading-lazy">
-  					  <picture class="embed-responsive bg-shimmer">
-  					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
-  					    <img class="embed-responsive-item fit--cover" alt="/" src="https://via.placeholder.com/592x422.jpg/EFADBA" loading="lazy"/>
-  					  </picture>
-  					  </noscript>
-  					  <div class="p-2 bg-white h-100">
-  					    <p class="d-flex justify-content-between align-items-center mb-0">
-  					      <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114 20" class="svg text-primary h4 mb-0"><path d="M10.5 15.143L3.012 20.3l3.237-7.844L0 7.577l7.255-.054L10.5.3l3.245 7.222L21 7.577l-6.249 4.88 3.237 7.844zM56.816 14.842L49.328 20l3.237-7.844-6.25-4.88 7.256-.054L56.816 0l3.245 7.222 7.255.054-6.25 4.88L64.305 20zM79.823 15.293l-7.488 5.158 3.237-7.844-6.249-4.88 7.255-.054L79.823.451l3.245 7.222 7.255.054-6.249 4.88 3.237 7.844zM103.583 14.992l-7.488 5.158 3.237-7.844-6.25-4.88 7.256-.054L103.583.15l3.245 7.222 7.255.054-6.25 4.88 3.238 7.844zM34.26 14.842L26.77 20l3.237-7.844-6.249-4.88 7.255-.054L34.26 0l3.245 7.222 7.255.054-6.249 4.88L41.747 20z"></path></svg>
-  					      <strong class="badge badge-blue mb-1 mt-1">Body</strong>
-  					    </p>
-  					    <p>
-  					      <strong>Product:&nbsp;</strong>
-  					      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-  					        Bali Bronzing Foam (Dark)
-  					      </a>
-  					    </p>
-  					    <p>&quot;I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼&quot;</p>
-  					    <p class="text-underline font-weight-bold">@kaylaazjones</p>
-  					  </div>
-  					</div>
-  
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#tan" role="option">
-  					  <noscript class="loading-lazy">
-  					  <picture class="embed-responsive bg-shimmer">
-  					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
-  					    <img class="embed-responsive-item fit--cover" alt="/" src="https://via.placeholder.com/592x422.jpg/EFADBA" loading="lazy"/>
-  					  </picture>
-  					  </noscript>
-  					  <div class="p-2 bg-white h-100">
-  					    <p class="d-flex justify-content-between align-items-center mb-0">
-  					      <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114 20" class="svg text-primary h4 mb-0"><path d="M10.5 15.143L3.012 20.3l3.237-7.844L0 7.577l7.255-.054L10.5.3l3.245 7.222L21 7.577l-6.249 4.88 3.237 7.844zM56.816 14.842L49.328 20l3.237-7.844-6.25-4.88 7.256-.054L56.816 0l3.245 7.222 7.255.054-6.25 4.88L64.305 20zM79.823 15.293l-7.488 5.158 3.237-7.844-6.249-4.88 7.255-.054L79.823.451l3.245 7.222 7.255.054-6.249 4.88 3.237 7.844zM103.583 14.992l-7.488 5.158 3.237-7.844-6.25-4.88 7.256-.054L103.583.15l3.245 7.222 7.255.054-6.25 4.88 3.238 7.844zM34.26 14.842L26.77 20l3.237-7.844-6.249-4.88 7.255-.054L34.26 0l3.245 7.222 7.255.054-6.249 4.88L41.747 20z"></path></svg>
-  					      <strong class="badge badge-purple mb-1 mt-1">Tan</strong>
-  					    </p>
-  					    <p>
-  					      <strong>Product:&nbsp;</strong>
-  					      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-  					        Bali Bronzing Foam (Dark)
-  					      </a>
-  					    </p>
-  					    <p>&quot;Now that summer is officially over Coco &amp; Eve is making sure I keep my tan for the rest of the year 🤍&quot;</p>
-  					    <p class="text-underline font-weight-bold">@kaylaazjones</p>
-  					  </div>
-  					</div>
-  
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#hair" role="option">
-  					  <noscript class="loading-lazy">
-  					  <picture class="embed-responsive bg-shimmer">
-  					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
-  					    <img class="embed-responsive-item fit--cover" alt="/" src="https://via.placeholder.com/592x422.jpg/EFADBA" loading="lazy"/>
-  					  </picture>
-  					  </noscript>
-  					  <div class="p-2 bg-white h-100">
-  					    <p class="d-flex justify-content-between align-items-center mb-0">
-  					      <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114 20" class="svg text-primary h4 mb-0"><path d="M10.5 15.143L3.012 20.3l3.237-7.844L0 7.577l7.255-.054L10.5.3l3.245 7.222L21 7.577l-6.249 4.88 3.237 7.844zM56.816 14.842L49.328 20l3.237-7.844-6.25-4.88 7.256-.054L56.816 0l3.245 7.222 7.255.054-6.25 4.88L64.305 20zM79.823 15.293l-7.488 5.158 3.237-7.844-6.249-4.88 7.255-.054L79.823.451l3.245 7.222 7.255.054-6.249 4.88 3.237 7.844zM103.583 14.992l-7.488 5.158 3.237-7.844-6.25-4.88 7.256-.054L103.583.15l3.245 7.222 7.255.054-6.25 4.88 3.238 7.844zM34.26 14.842L26.77 20l3.237-7.844-6.249-4.88 7.255-.054L34.26 0l3.245 7.222 7.255.054-6.249 4.88L41.747 20z"></path></svg>
-  					      <strong class="badge badge-secondary mb-1 mt-1">Hair</strong>
-  					    </p>
-  					    <p>
-  					      <strong>Product:&nbsp;</strong>
-  					      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-  					        Bali Bronzing Foam (Dark)
-  					      </a>
-  					    </p>
-  					    <p>&quot;I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼&quot;</p>
-  					    <p class="text-underline font-weight-bold">@kaylaazjones</p>
-  					  </div>
-  					</div>
-  
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#tan" role="option">
-  					  <noscript class="loading-lazy">
-  					  <picture class="embed-responsive bg-shimmer">
-  					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
-  					    <img class="embed-responsive-item fit--cover" alt="/" src="https://via.placeholder.com/592x422.jpg/EFADBA" loading="lazy"/>
-  					  </picture>
-  					  </noscript>
-  					  <div class="p-2 bg-white h-100">
-  					    <p class="d-flex justify-content-between align-items-center mb-0">
-  					      <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114 20" class="svg text-primary h4 mb-0"><path d="M10.5 15.143L3.012 20.3l3.237-7.844L0 7.577l7.255-.054L10.5.3l3.245 7.222L21 7.577l-6.249 4.88 3.237 7.844zM56.816 14.842L49.328 20l3.237-7.844-6.25-4.88 7.256-.054L56.816 0l3.245 7.222 7.255.054-6.25 4.88L64.305 20zM79.823 15.293l-7.488 5.158 3.237-7.844-6.249-4.88 7.255-.054L79.823.451l3.245 7.222 7.255.054-6.249 4.88 3.237 7.844zM103.583 14.992l-7.488 5.158 3.237-7.844-6.25-4.88 7.256-.054L103.583.15l3.245 7.222 7.255.054-6.25 4.88 3.238 7.844zM34.26 14.842L26.77 20l3.237-7.844-6.249-4.88 7.255-.054L34.26 0l3.245 7.222 7.255.054-6.249 4.88L41.747 20z"></path></svg>
-  					      <strong class="badge badge-purple mb-1 mt-1">Tan</strong>
-  					    </p>
-  					    <p>
-  					      <strong>Product:&nbsp;</strong>
-  					      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-  					        Bali Bronzing Foam (Dark)
-  					      </a>
-  					    </p>
-  					    <p>&quot;Obsessed with how perfectly golden this leaves my skin! Best part: this is the WORLDS FIRST fake tan formula to help reduce cellulite AND have anti aging&quot;</p>
-  					    <p class="text-underline font-weight-bold">@kaylaazjones</p>
-  					  </div>
-  					</div>
-  
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#body" role="option">
-  					  <noscript class="loading-lazy">
-  					  <picture class="embed-responsive bg-shimmer">
-  					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
-  					    <img class="embed-responsive-item fit--cover" alt="/" src="https://via.placeholder.com/592x422.jpg/EFADBA" loading="lazy"/>
-  					  </picture>
-  					  </noscript>
-  					  <div class="p-2 bg-white h-100">
-  					    <p class="d-flex justify-content-between align-items-center mb-0">
-  					      <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114 20" class="svg text-primary h4 mb-0"><path d="M10.5 15.143L3.012 20.3l3.237-7.844L0 7.577l7.255-.054L10.5.3l3.245 7.222L21 7.577l-6.249 4.88 3.237 7.844zM56.816 14.842L49.328 20l3.237-7.844-6.25-4.88 7.256-.054L56.816 0l3.245 7.222 7.255.054-6.25 4.88L64.305 20zM79.823 15.293l-7.488 5.158 3.237-7.844-6.249-4.88 7.255-.054L79.823.451l3.245 7.222 7.255.054-6.249 4.88 3.237 7.844zM103.583 14.992l-7.488 5.158 3.237-7.844-6.25-4.88 7.256-.054L103.583.15l3.245 7.222 7.255.054-6.25 4.88 3.238 7.844zM34.26 14.842L26.77 20l3.237-7.844-6.249-4.88 7.255-.054L34.26 0l3.245 7.222 7.255.054-6.249 4.88L41.747 20z"></path></svg>
-  					      <strong class="badge badge-blue mb-1 mt-1">Body</strong>
-  					    </p>
-  					    <p>
-  					      <strong>Product:&nbsp;</strong>
-  					      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-  					        Bali Bronzing Foam (Dark)
-  					      </a>
-  					    </p>
-  					    <p>&quot;This hair oil made my hair VERY smooth, shiny and hydrated after using it 🥰 The elixir is very lightweight, no matter how much or how little you decide to use. I&#x27;m obsessed!&quot;</p>
-  					    <p class="text-underline font-weight-bold">@kaylaazjones</p>
-  					  </div>
-  					</div>
-  
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#tan" role="option">
-  					  <noscript class="loading-lazy">
-  					  <picture class="embed-responsive bg-shimmer">
-  					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
-  					    <img class="embed-responsive-item fit--cover" alt="/" src="https://via.placeholder.com/592x422.jpg/EFADBA" loading="lazy"/>
-  					  </picture>
-  					  </noscript>
-  					  <div class="p-2 bg-white h-100">
-  					    <p class="d-flex justify-content-between align-items-center mb-0">
-  					      <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114 20" class="svg text-primary h4 mb-0"><path d="M10.5 15.143L3.012 20.3l3.237-7.844L0 7.577l7.255-.054L10.5.3l3.245 7.222L21 7.577l-6.249 4.88 3.237 7.844zM56.816 14.842L49.328 20l3.237-7.844-6.25-4.88 7.256-.054L56.816 0l3.245 7.222 7.255.054-6.25 4.88L64.305 20zM79.823 15.293l-7.488 5.158 3.237-7.844-6.249-4.88 7.255-.054L79.823.451l3.245 7.222 7.255.054-6.249 4.88 3.237 7.844zM103.583 14.992l-7.488 5.158 3.237-7.844-6.25-4.88 7.256-.054L103.583.15l3.245 7.222 7.255.054-6.25 4.88 3.238 7.844zM34.26 14.842L26.77 20l3.237-7.844-6.249-4.88 7.255-.054L34.26 0l3.245 7.222 7.255.054-6.249 4.88L41.747 20z"></path></svg>
-  					      <strong class="badge badge-purple mb-1 mt-1">Tan</strong>
-  					    </p>
-  					    <p>
-  					      <strong>Product:&nbsp;</strong>
-  					      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-  					        Bali Bronzing Foam (Dark)
-  					      </a>
-  					    </p>
-  					    <p>&quot;Obsessed with how perfectly golden this leaves my skin! Best part: this is the WORLDS FIRST fake tan formula to help reduce cellulite AND have anti aging&quot;</p>
-  					    <p class="text-underline font-weight-bold">@kaylaazjones</p>
-  					  </div>
-  					</div>
-  
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#hair" role="option">
-  					  <noscript class="loading-lazy">
-  					  <picture class="embed-responsive bg-shimmer">
-  					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
-  					    <img class="embed-responsive-item fit--cover" alt="/" src="https://via.placeholder.com/592x422.jpg/EFADBA" loading="lazy"/>
-  					  </picture>
-  					  </noscript>
-  					  <div class="p-2 bg-white h-100">
-  					    <p class="d-flex justify-content-between align-items-center mb-0">
-  					      <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114 20" class="svg text-primary h4 mb-0"><path d="M10.5 15.143L3.012 20.3l3.237-7.844L0 7.577l7.255-.054L10.5.3l3.245 7.222L21 7.577l-6.249 4.88 3.237 7.844zM56.816 14.842L49.328 20l3.237-7.844-6.25-4.88 7.256-.054L56.816 0l3.245 7.222 7.255.054-6.25 4.88L64.305 20zM79.823 15.293l-7.488 5.158 3.237-7.844-6.249-4.88 7.255-.054L79.823.451l3.245 7.222 7.255.054-6.249 4.88 3.237 7.844zM103.583 14.992l-7.488 5.158 3.237-7.844-6.25-4.88 7.256-.054L103.583.15l3.245 7.222 7.255.054-6.25 4.88 3.238 7.844zM34.26 14.842L26.77 20l3.237-7.844-6.249-4.88 7.255-.054L34.26 0l3.245 7.222 7.255.054-6.249 4.88L41.747 20z"></path></svg>
-  					      <strong class="badge badge-secondary mb-1 mt-1">Hair</strong>
-  					    </p>
-  					    <p>
-  					      <strong>Product:&nbsp;</strong>
-  					      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-  					        Bali Bronzing Foam (Dark)
-  					      </a>
-  					    </p>
-  					    <p>&quot;These Tan Drops give my face the most natural and healthy looking tan. It contains healthy ingredients including Banana, Coconut Water , Dragon Fruit. It is 100% natural and contains 5 different Hyaluronic Acids. For the smoothest application, I like to add a few drops to my moisturizer!&quot;</p>
-  					    <p class="text-underline font-weight-bold">@kaylaazjones</p>
-  					  </div>
-  					</div>
-  
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#body" role="option">
-  					  <noscript class="loading-lazy">
-  					  <picture class="embed-responsive bg-shimmer">
-  					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
-  					    <img class="embed-responsive-item fit--cover" alt="/" src="https://via.placeholder.com/592x422.jpg/EFADBA" loading="lazy"/>
-  					  </picture>
-  					  </noscript>
-  					  <div class="p-2 bg-white h-100">
-  					    <p class="d-flex justify-content-between align-items-center mb-0">
-  					      <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114 20" class="svg text-primary h4 mb-0"><path d="M10.5 15.143L3.012 20.3l3.237-7.844L0 7.577l7.255-.054L10.5.3l3.245 7.222L21 7.577l-6.249 4.88 3.237 7.844zM56.816 14.842L49.328 20l3.237-7.844-6.25-4.88 7.256-.054L56.816 0l3.245 7.222 7.255.054-6.25 4.88L64.305 20zM79.823 15.293l-7.488 5.158 3.237-7.844-6.249-4.88 7.255-.054L79.823.451l3.245 7.222 7.255.054-6.249 4.88 3.237 7.844zM103.583 14.992l-7.488 5.158 3.237-7.844-6.25-4.88 7.256-.054L103.583.15l3.245 7.222 7.255.054-6.25 4.88 3.238 7.844zM34.26 14.842L26.77 20l3.237-7.844-6.249-4.88 7.255-.054L34.26 0l3.245 7.222 7.255.054-6.249 4.88L41.747 20z"></path></svg>
-  					      <strong class="badge badge-blue mb-1 mt-1">Body</strong>
-  					    </p>
-  					    <p>
-  					      <strong>Product:&nbsp;</strong>
-  					      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-  					        Bali Bronzing Foam (Dark)
-  					      </a>
-  					    </p>
-  					    <p>&quot;Ive never found a hair oil like this one! I love how my hair is hydrated, voluminous, shiny and strong! - I’d definitely recommend&quot;</p>
-  					    <p class="text-underline font-weight-bold">@kaylaazjones</p>
-  					  </div>
-  					</div>
-  
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#tan" role="option">
-  					  <noscript class="loading-lazy">
-  					  <picture class="embed-responsive bg-shimmer">
-  					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
-  					    <img class="embed-responsive-item fit--cover" alt="/" src="https://via.placeholder.com/592x422.jpg/EFADBA" loading="lazy"/>
-  					  </picture>
-  					  </noscript>
-  					  <div class="p-2 bg-white h-100">
-  					    <p class="d-flex justify-content-between align-items-center mb-0">
-  					      <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114 20" class="svg text-primary h4 mb-0"><path d="M10.5 15.143L3.012 20.3l3.237-7.844L0 7.577l7.255-.054L10.5.3l3.245 7.222L21 7.577l-6.249 4.88 3.237 7.844zM56.816 14.842L49.328 20l3.237-7.844-6.25-4.88 7.256-.054L56.816 0l3.245 7.222 7.255.054-6.25 4.88L64.305 20zM79.823 15.293l-7.488 5.158 3.237-7.844-6.249-4.88 7.255-.054L79.823.451l3.245 7.222 7.255.054-6.249 4.88 3.237 7.844zM103.583 14.992l-7.488 5.158 3.237-7.844-6.25-4.88 7.256-.054L103.583.15l3.245 7.222 7.255.054-6.25 4.88 3.238 7.844zM34.26 14.842L26.77 20l3.237-7.844-6.249-4.88 7.255-.054L34.26 0l3.245 7.222 7.255.054-6.249 4.88L41.747 20z"></path></svg>
-  					      <strong class="badge badge-purple mb-1 mt-1">Tan</strong>
-  					    </p>
-  					    <p>
-  					      <strong>Product:&nbsp;</strong>
-  					      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-  					        Bali Bronzing Foam (Dark)
-  					      </a>
-  					    </p>
-  					    <p>&quot;Obsessed with how perfectly golden this leaves my skin! Best part: this is the WORLDS FIRST fake tan formula to help reduce cellulite AND have anti aging&quot;</p>
-  					    <p class="text-underline font-weight-bold">@kaylaazjones</p>
-  					  </div>
-  					</div>
-  
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#tan" role="option">
-  					  <noscript class="loading-lazy">
-  					  <picture class="embed-responsive bg-shimmer">
-  					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
-  					    <img class="embed-responsive-item fit--cover" alt="/" src="https://via.placeholder.com/592x422.jpg/EFADBA" loading="lazy"/>
-  					  </picture>
-  					  </noscript>
-  					  <div class="p-2 bg-white h-100">
-  					    <p class="d-flex justify-content-between align-items-center mb-0">
-  					      <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114 20" class="svg text-primary h4 mb-0"><path d="M10.5 15.143L3.012 20.3l3.237-7.844L0 7.577l7.255-.054L10.5.3l3.245 7.222L21 7.577l-6.249 4.88 3.237 7.844zM56.816 14.842L49.328 20l3.237-7.844-6.25-4.88 7.256-.054L56.816 0l3.245 7.222 7.255.054-6.25 4.88L64.305 20zM79.823 15.293l-7.488 5.158 3.237-7.844-6.249-4.88 7.255-.054L79.823.451l3.245 7.222 7.255.054-6.249 4.88 3.237 7.844zM103.583 14.992l-7.488 5.158 3.237-7.844-6.25-4.88 7.256-.054L103.583.15l3.245 7.222 7.255.054-6.25 4.88 3.238 7.844zM34.26 14.842L26.77 20l3.237-7.844-6.249-4.88 7.255-.054L34.26 0l3.245 7.222 7.255.054-6.249 4.88L41.747 20z"></path></svg>
-  					      <strong class="badge badge-purple mb-1 mt-1">Tan</strong>
-  					    </p>
-  					    <p>
-  					      <strong>Product:&nbsp;</strong>
-  					      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-  					        Bali Bronzing Foam (Dark)
-  					      </a>
-  					    </p>
-  					    <p>&quot;I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼&quot;</p>
-  					    <p class="text-underline font-weight-bold">@kaylaazjones</p>
-  					  </div>
-  					</div>
-  
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#hair" role="option">
-  					  <noscript class="loading-lazy">
-  					  <picture class="embed-responsive bg-shimmer">
-  					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
-  					    <img class="embed-responsive-item fit--cover" alt="/" src="https://via.placeholder.com/592x422.jpg/EFADBA" loading="lazy"/>
-  					  </picture>
-  					  </noscript>
-  					  <div class="p-2 bg-white h-100">
-  					    <p class="d-flex justify-content-between align-items-center mb-0">
-  					      <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114 20" class="svg text-primary h4 mb-0"><path d="M10.5 15.143L3.012 20.3l3.237-7.844L0 7.577l7.255-.054L10.5.3l3.245 7.222L21 7.577l-6.249 4.88 3.237 7.844zM56.816 14.842L49.328 20l3.237-7.844-6.25-4.88 7.256-.054L56.816 0l3.245 7.222 7.255.054-6.25 4.88L64.305 20zM79.823 15.293l-7.488 5.158 3.237-7.844-6.249-4.88 7.255-.054L79.823.451l3.245 7.222 7.255.054-6.249 4.88 3.237 7.844zM103.583 14.992l-7.488 5.158 3.237-7.844-6.25-4.88 7.256-.054L103.583.15l3.245 7.222 7.255.054-6.25 4.88 3.238 7.844zM34.26 14.842L26.77 20l3.237-7.844-6.249-4.88 7.255-.054L34.26 0l3.245 7.222 7.255.054-6.249 4.88L41.747 20z"></path></svg>
-  					      <strong class="badge badge-secondary mb-1 mt-1">Hair</strong>
-  					    </p>
-  					    <p>
-  					      <strong>Product:&nbsp;</strong>
-  					      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-  					        Bali Bronzing Foam (Dark)
-  					      </a>
-  					    </p>
-  					    <p>&quot;I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼&quot;</p>
-  					    <p class="text-underline font-weight-bold">@kaylaazjones</p>
-  					  </div>
-  					</div>
-  
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#tan" role="option">
-  					  <noscript class="loading-lazy">
-  					  <picture class="embed-responsive bg-shimmer">
-  					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
-  					    <img class="embed-responsive-item fit--cover" alt="/" src="https://via.placeholder.com/592x422.jpg/EFADBA" loading="lazy"/>
-  					  </picture>
-  					  </noscript>
-  					  <div class="p-2 bg-white h-100">
-  					    <p class="d-flex justify-content-between align-items-center mb-0">
-  					      <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114 20" class="svg text-primary h4 mb-0"><path d="M10.5 15.143L3.012 20.3l3.237-7.844L0 7.577l7.255-.054L10.5.3l3.245 7.222L21 7.577l-6.249 4.88 3.237 7.844zM56.816 14.842L49.328 20l3.237-7.844-6.25-4.88 7.256-.054L56.816 0l3.245 7.222 7.255.054-6.25 4.88L64.305 20zM79.823 15.293l-7.488 5.158 3.237-7.844-6.249-4.88 7.255-.054L79.823.451l3.245 7.222 7.255.054-6.249 4.88 3.237 7.844zM103.583 14.992l-7.488 5.158 3.237-7.844-6.25-4.88 7.256-.054L103.583.15l3.245 7.222 7.255.054-6.25 4.88 3.238 7.844zM34.26 14.842L26.77 20l3.237-7.844-6.249-4.88 7.255-.054L34.26 0l3.245 7.222 7.255.054-6.249 4.88L41.747 20z"></path></svg>
-  					      <strong class="badge badge-purple mb-1 mt-1">Tan</strong>
-  					    </p>
-  					    <p>
-  					      <strong>Product:&nbsp;</strong>
-  					      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-  					        Bali Bronzing Foam (Dark)
-  					      </a>
-  					    </p>
-  					    <p>&quot;I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼&quot;</p>
-  					    <p class="text-underline font-weight-bold">@kaylaazjones</p>
-  					  </div>
-  					</div>
-  
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#body" role="option">
-  					  <noscript class="loading-lazy">
-  					  <picture class="embed-responsive bg-shimmer">
-  					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
-  					    <img class="embed-responsive-item fit--cover" alt="/" src="https://via.placeholder.com/592x422.jpg/EFADBA" loading="lazy"/>
-  					  </picture>
-  					  </noscript>
-  					  <div class="p-2 bg-white h-100">
-  					    <p class="d-flex justify-content-between align-items-center mb-0">
-  					      <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114 20" class="svg text-primary h4 mb-0"><path d="M10.5 15.143L3.012 20.3l3.237-7.844L0 7.577l7.255-.054L10.5.3l3.245 7.222L21 7.577l-6.249 4.88 3.237 7.844zM56.816 14.842L49.328 20l3.237-7.844-6.25-4.88 7.256-.054L56.816 0l3.245 7.222 7.255.054-6.25 4.88L64.305 20zM79.823 15.293l-7.488 5.158 3.237-7.844-6.249-4.88 7.255-.054L79.823.451l3.245 7.222 7.255.054-6.249 4.88 3.237 7.844zM103.583 14.992l-7.488 5.158 3.237-7.844-6.25-4.88 7.256-.054L103.583.15l3.245 7.222 7.255.054-6.25 4.88 3.238 7.844zM34.26 14.842L26.77 20l3.237-7.844-6.249-4.88 7.255-.054L34.26 0l3.245 7.222 7.255.054-6.249 4.88L41.747 20z"></path></svg>
-  					      <strong class="badge badge-blue mb-1 mt-1">Body</strong>
-  					    </p>
-  					    <p>
-  					      <strong>Product:&nbsp;</strong>
-  					      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-  					        Bali Bronzing Foam (Dark)
-  					      </a>
-  					    </p>
-  					    <p>&quot;I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼&quot;</p>
-  					    <p class="text-underline font-weight-bold">@kaylaazjones</p>
-  					  </div>
-  					</div>
-  
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#tan" role="option">
-  					  <noscript class="loading-lazy">
-  					  <picture class="embed-responsive bg-shimmer">
-  					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
-  					    <img class="embed-responsive-item fit--cover" alt="/" src="https://via.placeholder.com/592x422.jpg/EFADBA" loading="lazy"/>
-  					  </picture>
-  					  </noscript>
-  					  <div class="p-2 bg-white h-100">
-  					    <p class="d-flex justify-content-between align-items-center mb-0">
-  					      <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114 20" class="svg text-primary h4 mb-0"><path d="M10.5 15.143L3.012 20.3l3.237-7.844L0 7.577l7.255-.054L10.5.3l3.245 7.222L21 7.577l-6.249 4.88 3.237 7.844zM56.816 14.842L49.328 20l3.237-7.844-6.25-4.88 7.256-.054L56.816 0l3.245 7.222 7.255.054-6.25 4.88L64.305 20zM79.823 15.293l-7.488 5.158 3.237-7.844-6.249-4.88 7.255-.054L79.823.451l3.245 7.222 7.255.054-6.249 4.88 3.237 7.844zM103.583 14.992l-7.488 5.158 3.237-7.844-6.25-4.88 7.256-.054L103.583.15l3.245 7.222 7.255.054-6.25 4.88 3.238 7.844zM34.26 14.842L26.77 20l3.237-7.844-6.249-4.88 7.255-.054L34.26 0l3.245 7.222 7.255.054-6.249 4.88L41.747 20z"></path></svg>
-  					      <strong class="badge badge-purple mb-1 mt-1">Tan</strong>
-  					    </p>
-  					    <p>
-  					      <strong>Product:&nbsp;</strong>
-  					      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-  					        Bali Bronzing Foam (Dark)
-  					      </a>
-  					    </p>
-  					    <p>&quot;Now that summer is officially over Coco &amp; Eve is making sure I keep my tan for the rest of the year 🤍&quot;</p>
-  					    <p class="text-underline font-weight-bold">@kaylaazjones</p>
-  					  </div>
-  					</div>
-  
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#tan" role="option">
-  					  <noscript class="loading-lazy">
-  					  <picture class="embed-responsive bg-shimmer">
-  					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
-  					    <img class="embed-responsive-item fit--cover" alt="/" src="https://via.placeholder.com/592x422.jpg/EFADBA" loading="lazy"/>
-  					  </picture>
-  					  </noscript>
-  					  <div class="p-2 bg-white h-100">
-  					    <p class="d-flex justify-content-between align-items-center mb-0">
-  					      <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114 20" class="svg text-primary h4 mb-0"><path d="M10.5 15.143L3.012 20.3l3.237-7.844L0 7.577l7.255-.054L10.5.3l3.245 7.222L21 7.577l-6.249 4.88 3.237 7.844zM56.816 14.842L49.328 20l3.237-7.844-6.25-4.88 7.256-.054L56.816 0l3.245 7.222 7.255.054-6.25 4.88L64.305 20zM79.823 15.293l-7.488 5.158 3.237-7.844-6.249-4.88 7.255-.054L79.823.451l3.245 7.222 7.255.054-6.249 4.88 3.237 7.844zM103.583 14.992l-7.488 5.158 3.237-7.844-6.25-4.88 7.256-.054L103.583.15l3.245 7.222 7.255.054-6.25 4.88 3.238 7.844zM34.26 14.842L26.77 20l3.237-7.844-6.249-4.88 7.255-.054L34.26 0l3.245 7.222 7.255.054-6.249 4.88L41.747 20z"></path></svg>
-  					      <strong class="badge badge-purple mb-1 mt-1">Tan</strong>
-  					    </p>
-  					    <p>
-  					      <strong>Product:&nbsp;</strong>
-  					      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-  					        Bali Bronzing Foam (Dark)
-  					      </a>
-  					    </p>
-  					    <p>&quot;I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼&quot;</p>
-  					    <p class="text-underline font-weight-bold">@kaylaazjones</p>
-  					  </div>
-  					</div>
-  
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#hair" role="option">
-  					  <noscript class="loading-lazy">
-  					  <picture class="embed-responsive bg-shimmer">
-  					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
-  					    <img class="embed-responsive-item fit--cover" alt="/" src="https://via.placeholder.com/592x422.jpg/EFADBA" loading="lazy"/>
-  					  </picture>
-  					  </noscript>
-  					  <div class="p-2 bg-white h-100">
-  					    <p class="d-flex justify-content-between align-items-center mb-0">
-  					      <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114 20" class="svg text-primary h4 mb-0"><path d="M10.5 15.143L3.012 20.3l3.237-7.844L0 7.577l7.255-.054L10.5.3l3.245 7.222L21 7.577l-6.249 4.88 3.237 7.844zM56.816 14.842L49.328 20l3.237-7.844-6.25-4.88 7.256-.054L56.816 0l3.245 7.222 7.255.054-6.25 4.88L64.305 20zM79.823 15.293l-7.488 5.158 3.237-7.844-6.249-4.88 7.255-.054L79.823.451l3.245 7.222 7.255.054-6.249 4.88 3.237 7.844zM103.583 14.992l-7.488 5.158 3.237-7.844-6.25-4.88 7.256-.054L103.583.15l3.245 7.222 7.255.054-6.25 4.88 3.238 7.844zM34.26 14.842L26.77 20l3.237-7.844-6.249-4.88 7.255-.054L34.26 0l3.245 7.222 7.255.054-6.249 4.88L41.747 20z"></path></svg>
-  					      <strong class="badge badge-secondary mb-1 mt-1">Hair</strong>
-  					    </p>
-  					    <p>
-  					      <strong>Product:&nbsp;</strong>
-  					      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-  					        Bali Bronzing Foam (Dark)
-  					      </a>
-  					    </p>
-  					    <p>&quot;I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼&quot;</p>
-  					    <p class="text-underline font-weight-bold">@kaylaazjones</p>
-  					  </div>
-  					</div>
-  
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#tan" role="option">
-  					  <noscript class="loading-lazy">
-  					  <picture class="embed-responsive bg-shimmer">
-  					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
-  					    <img class="embed-responsive-item fit--cover" alt="/" src="https://via.placeholder.com/592x422.jpg/EFADBA" loading="lazy"/>
-  					  </picture>
-  					  </noscript>
-  					  <div class="p-2 bg-white h-100">
-  					    <p class="d-flex justify-content-between align-items-center mb-0">
-  					      <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114 20" class="svg text-primary h4 mb-0"><path d="M10.5 15.143L3.012 20.3l3.237-7.844L0 7.577l7.255-.054L10.5.3l3.245 7.222L21 7.577l-6.249 4.88 3.237 7.844zM56.816 14.842L49.328 20l3.237-7.844-6.25-4.88 7.256-.054L56.816 0l3.245 7.222 7.255.054-6.25 4.88L64.305 20zM79.823 15.293l-7.488 5.158 3.237-7.844-6.249-4.88 7.255-.054L79.823.451l3.245 7.222 7.255.054-6.249 4.88 3.237 7.844zM103.583 14.992l-7.488 5.158 3.237-7.844-6.25-4.88 7.256-.054L103.583.15l3.245 7.222 7.255.054-6.25 4.88 3.238 7.844zM34.26 14.842L26.77 20l3.237-7.844-6.249-4.88 7.255-.054L34.26 0l3.245 7.222 7.255.054-6.249 4.88L41.747 20z"></path></svg>
-  					      <strong class="badge badge-purple mb-1 mt-1">Tan</strong>
-  					    </p>
-  					    <p>
-  					      <strong>Product:&nbsp;</strong>
-  					      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-  					        Bali Bronzing Foam (Dark)
-  					      </a>
-  					    </p>
-  					    <p>&quot;I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼&quot;</p>
-  					    <p class="text-underline font-weight-bold">@kaylaazjones</p>
-  					  </div>
-  					</div>
-  
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#body" role="option">
-  					  <noscript class="loading-lazy">
-  					  <picture class="embed-responsive bg-shimmer">
-  					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
-  					    <img class="embed-responsive-item fit--cover" alt="/" src="https://via.placeholder.com/592x422.jpg/EFADBA" loading="lazy"/>
-  					  </picture>
-  					  </noscript>
-  					  <div class="p-2 bg-white h-100">
-  					    <p class="d-flex justify-content-between align-items-center mb-0">
-  					      <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114 20" class="svg text-primary h4 mb-0"><path d="M10.5 15.143L3.012 20.3l3.237-7.844L0 7.577l7.255-.054L10.5.3l3.245 7.222L21 7.577l-6.249 4.88 3.237 7.844zM56.816 14.842L49.328 20l3.237-7.844-6.25-4.88 7.256-.054L56.816 0l3.245 7.222 7.255.054-6.25 4.88L64.305 20zM79.823 15.293l-7.488 5.158 3.237-7.844-6.249-4.88 7.255-.054L79.823.451l3.245 7.222 7.255.054-6.249 4.88 3.237 7.844zM103.583 14.992l-7.488 5.158 3.237-7.844-6.25-4.88 7.256-.054L103.583.15l3.245 7.222 7.255.054-6.25 4.88 3.238 7.844zM34.26 14.842L26.77 20l3.237-7.844-6.249-4.88 7.255-.054L34.26 0l3.245 7.222 7.255.054-6.249 4.88L41.747 20z"></path></svg>
-  					      <strong class="badge badge-blue mb-1 mt-1">Body</strong>
-  					    </p>
-  					    <p>
-  					      <strong>Product:&nbsp;</strong>
-  					      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-  					        Bali Bronzing Foam (Dark)
-  					      </a>
-  					    </p>
-  					    <p>&quot;This hair oil made my hair VERY smooth, shiny and hydrated after using it 🥰 The elixir is very lightweight, no matter how much or how little you decide to use. I&#x27;m obsessed!&quot;</p>
-  					    <p class="text-underline font-weight-bold">@kaylaazjones</p>
-  					  </div>
-  					</div>
-  
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#tan" role="option">
-  					  <noscript class="loading-lazy">
-  					  <picture class="embed-responsive bg-shimmer">
-  					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
-  					    <img class="embed-responsive-item fit--cover" alt="/" src="https://via.placeholder.com/592x422.jpg/EFADBA" loading="lazy"/>
-  					  </picture>
-  					  </noscript>
-  					  <div class="p-2 bg-white h-100">
-  					    <p class="d-flex justify-content-between align-items-center mb-0">
-  					      <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114 20" class="svg text-primary h4 mb-0"><path d="M10.5 15.143L3.012 20.3l3.237-7.844L0 7.577l7.255-.054L10.5.3l3.245 7.222L21 7.577l-6.249 4.88 3.237 7.844zM56.816 14.842L49.328 20l3.237-7.844-6.25-4.88 7.256-.054L56.816 0l3.245 7.222 7.255.054-6.25 4.88L64.305 20zM79.823 15.293l-7.488 5.158 3.237-7.844-6.249-4.88 7.255-.054L79.823.451l3.245 7.222 7.255.054-6.249 4.88 3.237 7.844zM103.583 14.992l-7.488 5.158 3.237-7.844-6.25-4.88 7.256-.054L103.583.15l3.245 7.222 7.255.054-6.25 4.88 3.238 7.844zM34.26 14.842L26.77 20l3.237-7.844-6.249-4.88 7.255-.054L34.26 0l3.245 7.222 7.255.054-6.249 4.88L41.747 20z"></path></svg>
-  					      <strong class="badge badge-purple mb-1 mt-1">Tan</strong>
-  					    </p>
-  					    <p>
-  					      <strong>Product:&nbsp;</strong>
-  					      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-  					        Bali Bronzing Foam (Dark)
-  					      </a>
-  					    </p>
-  					    <p>&quot;Obsessed with how perfectly golden this leaves my skin! Best part: this is the WORLDS FIRST fake tan formula to help reduce cellulite AND have anti aging&quot;</p>
-  					    <p class="text-underline font-weight-bold">@kaylaazjones</p>
-  					  </div>
-  					</div>
-  
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#hair" role="option">
-  					  <noscript class="loading-lazy">
-  					  <picture class="embed-responsive bg-shimmer">
-  					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
-  					    <img class="embed-responsive-item fit--cover" alt="/" src="https://via.placeholder.com/592x422.jpg/EFADBA" loading="lazy"/>
-  					  </picture>
-  					  </noscript>
-  					  <div class="p-2 bg-white h-100">
-  					    <p class="d-flex justify-content-between align-items-center mb-0">
-  					      <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114 20" class="svg text-primary h4 mb-0"><path d="M10.5 15.143L3.012 20.3l3.237-7.844L0 7.577l7.255-.054L10.5.3l3.245 7.222L21 7.577l-6.249 4.88 3.237 7.844zM56.816 14.842L49.328 20l3.237-7.844-6.25-4.88 7.256-.054L56.816 0l3.245 7.222 7.255.054-6.25 4.88L64.305 20zM79.823 15.293l-7.488 5.158 3.237-7.844-6.249-4.88 7.255-.054L79.823.451l3.245 7.222 7.255.054-6.249 4.88 3.237 7.844zM103.583 14.992l-7.488 5.158 3.237-7.844-6.25-4.88 7.256-.054L103.583.15l3.245 7.222 7.255.054-6.25 4.88 3.238 7.844zM34.26 14.842L26.77 20l3.237-7.844-6.249-4.88 7.255-.054L34.26 0l3.245 7.222 7.255.054-6.249 4.88L41.747 20z"></path></svg>
-  					      <strong class="badge badge-secondary mb-1 mt-1">Hair</strong>
-  					    </p>
-  					    <p>
-  					      <strong>Product:&nbsp;</strong>
-  					      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-  					        Bali Bronzing Foam (Dark)
-  					      </a>
-  					    </p>
-  					    <p>&quot;These Tan Drops give my face the most natural and healthy looking tan. It contains healthy ingredients including Banana, Coconut Water , Dragon Fruit. It is 100% natural and contains 5 different Hyaluronic Acids. For the smoothest application, I like to add a few drops to my moisturizer!&quot;</p>
-  					    <p class="text-underline font-weight-bold">@kaylaazjones</p>
-  					  </div>
-  					</div>
-  
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#body" role="option">
-  					  <noscript class="loading-lazy">
-  					  <picture class="embed-responsive bg-shimmer">
-  					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
-  					    <img class="embed-responsive-item fit--cover" alt="/" src="https://via.placeholder.com/592x422.jpg/EFADBA" loading="lazy"/>
-  					  </picture>
-  					  </noscript>
-  					  <div class="p-2 bg-white h-100">
-  					    <p class="d-flex justify-content-between align-items-center mb-0">
-  					      <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114 20" class="svg text-primary h4 mb-0"><path d="M10.5 15.143L3.012 20.3l3.237-7.844L0 7.577l7.255-.054L10.5.3l3.245 7.222L21 7.577l-6.249 4.88 3.237 7.844zM56.816 14.842L49.328 20l3.237-7.844-6.25-4.88 7.256-.054L56.816 0l3.245 7.222 7.255.054-6.25 4.88L64.305 20zM79.823 15.293l-7.488 5.158 3.237-7.844-6.249-4.88 7.255-.054L79.823.451l3.245 7.222 7.255.054-6.249 4.88 3.237 7.844zM103.583 14.992l-7.488 5.158 3.237-7.844-6.25-4.88 7.256-.054L103.583.15l3.245 7.222 7.255.054-6.25 4.88 3.238 7.844zM34.26 14.842L26.77 20l3.237-7.844-6.249-4.88 7.255-.054L34.26 0l3.245 7.222 7.255.054-6.249 4.88L41.747 20z"></path></svg>
-  					      <strong class="badge badge-blue mb-1 mt-1">Body</strong>
-  					    </p>
-  					    <p>
-  					      <strong>Product:&nbsp;</strong>
-  					      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-  					        Bali Bronzing Foam (Dark)
-  					      </a>
-  					    </p>
-  					    <p>&quot;Ive never found a hair oil like this one! I love how my hair is hydrated, voluminous, shiny and strong! - I’d definitely recommend&quot;</p>
-  					    <p class="text-underline font-weight-bold">@kaylaazjones</p>
-  					  </div>
-  					</div>
-  
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#tan" role="option">
-  					  <noscript class="loading-lazy">
-  					  <picture class="embed-responsive bg-shimmer">
-  					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
-  					    <img class="embed-responsive-item fit--cover" alt="/" src="https://via.placeholder.com/592x422.jpg/EFADBA" loading="lazy"/>
-  					  </picture>
-  					  </noscript>
-  					  <div class="p-2 bg-white h-100">
-  					    <p class="d-flex justify-content-between align-items-center mb-0">
-  					      <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114 20" class="svg text-primary h4 mb-0"><path d="M10.5 15.143L3.012 20.3l3.237-7.844L0 7.577l7.255-.054L10.5.3l3.245 7.222L21 7.577l-6.249 4.88 3.237 7.844zM56.816 14.842L49.328 20l3.237-7.844-6.25-4.88 7.256-.054L56.816 0l3.245 7.222 7.255.054-6.25 4.88L64.305 20zM79.823 15.293l-7.488 5.158 3.237-7.844-6.249-4.88 7.255-.054L79.823.451l3.245 7.222 7.255.054-6.249 4.88 3.237 7.844zM103.583 14.992l-7.488 5.158 3.237-7.844-6.25-4.88 7.256-.054L103.583.15l3.245 7.222 7.255.054-6.25 4.88 3.238 7.844zM34.26 14.842L26.77 20l3.237-7.844-6.249-4.88 7.255-.054L34.26 0l3.245 7.222 7.255.054-6.249 4.88L41.747 20z"></path></svg>
-  					      <strong class="badge badge-purple mb-1 mt-1">Tan</strong>
-  					    </p>
-  					    <p>
-  					      <strong>Product:&nbsp;</strong>
-  					      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-  					        Bali Bronzing Foam (Dark)
-  					      </a>
-  					    </p>
-  					    <p>&quot;I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼&quot;</p>
-  					    <p class="text-underline font-weight-bold">@kaylaazjones</p>
-  					  </div>
-  					</div>
-  
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#hair" role="option">
-  					  <noscript class="loading-lazy">
-  					  <picture class="embed-responsive bg-shimmer">
-  					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
-  					    <img class="embed-responsive-item fit--cover" alt="/" src="https://via.placeholder.com/592x422.jpg/EFADBA" loading="lazy"/>
-  					  </picture>
-  					  </noscript>
-  					  <div class="p-2 bg-white h-100">
-  					    <p class="d-flex justify-content-between align-items-center mb-0">
-  					      <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114 20" class="svg text-primary h4 mb-0"><path d="M10.5 15.143L3.012 20.3l3.237-7.844L0 7.577l7.255-.054L10.5.3l3.245 7.222L21 7.577l-6.249 4.88 3.237 7.844zM56.816 14.842L49.328 20l3.237-7.844-6.25-4.88 7.256-.054L56.816 0l3.245 7.222 7.255.054-6.25 4.88L64.305 20zM79.823 15.293l-7.488 5.158 3.237-7.844-6.249-4.88 7.255-.054L79.823.451l3.245 7.222 7.255.054-6.249 4.88 3.237 7.844zM103.583 14.992l-7.488 5.158 3.237-7.844-6.25-4.88 7.256-.054L103.583.15l3.245 7.222 7.255.054-6.25 4.88 3.238 7.844zM34.26 14.842L26.77 20l3.237-7.844-6.249-4.88 7.255-.054L34.26 0l3.245 7.222 7.255.054-6.249 4.88L41.747 20z"></path></svg>
-  					      <strong class="badge badge-secondary mb-1 mt-1">Hair</strong>
-  					    </p>
-  					    <p>
-  					      <strong>Product:&nbsp;</strong>
-  					      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-  					        Bali Bronzing Foam (Dark)
-  					      </a>
-  					    </p>
-  					    <p>&quot;I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼&quot;</p>
-  					    <p class="text-underline font-weight-bold">@kaylaazjones</p>
-  					  </div>
-  					</div>
-  
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#body" role="option">
-  					  <noscript class="loading-lazy">
-  					  <picture class="embed-responsive bg-shimmer">
-  					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
-  					    <img class="embed-responsive-item fit--cover" alt="/" src="https://via.placeholder.com/592x422.jpg/EFADBA" loading="lazy"/>
-  					  </picture>
-  					  </noscript>
-  					  <div class="p-2 bg-white h-100">
-  					    <p class="d-flex justify-content-between align-items-center mb-0">
-  					      <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114 20" class="svg text-primary h4 mb-0"><path d="M10.5 15.143L3.012 20.3l3.237-7.844L0 7.577l7.255-.054L10.5.3l3.245 7.222L21 7.577l-6.249 4.88 3.237 7.844zM56.816 14.842L49.328 20l3.237-7.844-6.25-4.88 7.256-.054L56.816 0l3.245 7.222 7.255.054-6.25 4.88L64.305 20zM79.823 15.293l-7.488 5.158 3.237-7.844-6.249-4.88 7.255-.054L79.823.451l3.245 7.222 7.255.054-6.249 4.88 3.237 7.844zM103.583 14.992l-7.488 5.158 3.237-7.844-6.25-4.88 7.256-.054L103.583.15l3.245 7.222 7.255.054-6.25 4.88 3.238 7.844zM34.26 14.842L26.77 20l3.237-7.844-6.249-4.88 7.255-.054L34.26 0l3.245 7.222 7.255.054-6.249 4.88L41.747 20z"></path></svg>
-  					      <strong class="badge badge-blue mb-1 mt-1">Body</strong>
-  					    </p>
-  					    <p>
-  					      <strong>Product:&nbsp;</strong>
-  					      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-  					        Bali Bronzing Foam (Dark)
-  					      </a>
-  					    </p>
-  					    <p>&quot;I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼&quot;</p>
-  					    <p class="text-underline font-weight-bold">@kaylaazjones</p>
-  					  </div>
-  					</div>
-  
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#tan" role="option">
-  					  <noscript class="loading-lazy">
-  					  <picture class="embed-responsive bg-shimmer">
-  					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
-  					    <img class="embed-responsive-item fit--cover" alt="/" src="https://via.placeholder.com/592x422.jpg/EFADBA" loading="lazy"/>
-  					  </picture>
-  					  </noscript>
-  					  <div class="p-2 bg-white h-100">
-  					    <p class="d-flex justify-content-between align-items-center mb-0">
-  					      <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114 20" class="svg text-primary h4 mb-0"><path d="M10.5 15.143L3.012 20.3l3.237-7.844L0 7.577l7.255-.054L10.5.3l3.245 7.222L21 7.577l-6.249 4.88 3.237 7.844zM56.816 14.842L49.328 20l3.237-7.844-6.25-4.88 7.256-.054L56.816 0l3.245 7.222 7.255.054-6.25 4.88L64.305 20zM79.823 15.293l-7.488 5.158 3.237-7.844-6.249-4.88 7.255-.054L79.823.451l3.245 7.222 7.255.054-6.249 4.88 3.237 7.844zM103.583 14.992l-7.488 5.158 3.237-7.844-6.25-4.88 7.256-.054L103.583.15l3.245 7.222 7.255.054-6.25 4.88 3.238 7.844zM34.26 14.842L26.77 20l3.237-7.844-6.249-4.88 7.255-.054L34.26 0l3.245 7.222 7.255.054-6.249 4.88L41.747 20z"></path></svg>
-  					      <strong class="badge badge-purple mb-1 mt-1">Tan</strong>
-  					    </p>
-  					    <p>
-  					      <strong>Product:&nbsp;</strong>
-  					      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-  					        Bali Bronzing Foam (Dark)
-  					      </a>
-  					    </p>
-  					    <p>&quot;Now that summer is officially over Coco &amp; Eve is making sure I keep my tan for the rest of the year 🤍&quot;</p>
-  					    <p class="text-underline font-weight-bold">@kaylaazjones</p>
-  					  </div>
-  					</div>
-  
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#hair" role="option">
-  					  <noscript class="loading-lazy">
-  					  <picture class="embed-responsive bg-shimmer">
-  					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
-  					    <img class="embed-responsive-item fit--cover" alt="/" src="https://via.placeholder.com/592x422.jpg/EFADBA" loading="lazy"/>
-  					  </picture>
-  					  </noscript>
-  					  <div class="p-2 bg-white h-100">
-  					    <p class="d-flex justify-content-between align-items-center mb-0">
-  					      <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114 20" class="svg text-primary h4 mb-0"><path d="M10.5 15.143L3.012 20.3l3.237-7.844L0 7.577l7.255-.054L10.5.3l3.245 7.222L21 7.577l-6.249 4.88 3.237 7.844zM56.816 14.842L49.328 20l3.237-7.844-6.25-4.88 7.256-.054L56.816 0l3.245 7.222 7.255.054-6.25 4.88L64.305 20zM79.823 15.293l-7.488 5.158 3.237-7.844-6.249-4.88 7.255-.054L79.823.451l3.245 7.222 7.255.054-6.249 4.88 3.237 7.844zM103.583 14.992l-7.488 5.158 3.237-7.844-6.25-4.88 7.256-.054L103.583.15l3.245 7.222 7.255.054-6.25 4.88 3.238 7.844zM34.26 14.842L26.77 20l3.237-7.844-6.249-4.88 7.255-.054L34.26 0l3.245 7.222 7.255.054-6.249 4.88L41.747 20z"></path></svg>
-  					      <strong class="badge badge-secondary mb-1 mt-1">Hair</strong>
-  					    </p>
-  					    <p>
-  					      <strong>Product:&nbsp;</strong>
-  					      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-  					        Bali Bronzing Foam (Dark)
-  					      </a>
-  					    </p>
-  					    <p>&quot;I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼&quot;</p>
-  					    <p class="text-underline font-weight-bold">@kaylaazjones</p>
-  					  </div>
-  					</div>
-  
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#body" role="option">
-  					  <noscript class="loading-lazy">
-  					  <picture class="embed-responsive bg-shimmer">
-  					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
-  					    <img class="embed-responsive-item fit--cover" alt="/" src="https://via.placeholder.com/592x422.jpg/EFADBA" loading="lazy"/>
-  					  </picture>
-  					  </noscript>
-  					  <div class="p-2 bg-white h-100">
-  					    <p class="d-flex justify-content-between align-items-center mb-0">
-  					      <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114 20" class="svg text-primary h4 mb-0"><path d="M10.5 15.143L3.012 20.3l3.237-7.844L0 7.577l7.255-.054L10.5.3l3.245 7.222L21 7.577l-6.249 4.88 3.237 7.844zM56.816 14.842L49.328 20l3.237-7.844-6.25-4.88 7.256-.054L56.816 0l3.245 7.222 7.255.054-6.25 4.88L64.305 20zM79.823 15.293l-7.488 5.158 3.237-7.844-6.249-4.88 7.255-.054L79.823.451l3.245 7.222 7.255.054-6.249 4.88 3.237 7.844zM103.583 14.992l-7.488 5.158 3.237-7.844-6.25-4.88 7.256-.054L103.583.15l3.245 7.222 7.255.054-6.25 4.88 3.238 7.844zM34.26 14.842L26.77 20l3.237-7.844-6.249-4.88 7.255-.054L34.26 0l3.245 7.222 7.255.054-6.249 4.88L41.747 20z"></path></svg>
-  					      <strong class="badge badge-blue mb-1 mt-1">Body</strong>
-  					    </p>
-  					    <p>
-  					      <strong>Product:&nbsp;</strong>
-  					      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-  					        Bali Bronzing Foam (Dark)
-  					      </a>
-  					    </p>
-  					    <p>&quot;This hair oil made my hair VERY smooth, shiny and hydrated after using it 🥰 The elixir is very lightweight, no matter how much or how little you decide to use. I&#x27;m obsessed!&quot;</p>
-  					    <p class="text-underline font-weight-bold">@kaylaazjones</p>
-  					  </div>
-  					</div>
-  
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#tan" role="option">
-  					  <noscript class="loading-lazy">
-  					  <picture class="embed-responsive bg-shimmer">
-  					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
-  					    <img class="embed-responsive-item fit--cover" alt="/" src="https://via.placeholder.com/592x422.jpg/EFADBA" loading="lazy"/>
-  					  </picture>
-  					  </noscript>
-  					  <div class="p-2 bg-white h-100">
-  					    <p class="d-flex justify-content-between align-items-center mb-0">
-  					      <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114 20" class="svg text-primary h4 mb-0"><path d="M10.5 15.143L3.012 20.3l3.237-7.844L0 7.577l7.255-.054L10.5.3l3.245 7.222L21 7.577l-6.249 4.88 3.237 7.844zM56.816 14.842L49.328 20l3.237-7.844-6.25-4.88 7.256-.054L56.816 0l3.245 7.222 7.255.054-6.25 4.88L64.305 20zM79.823 15.293l-7.488 5.158 3.237-7.844-6.249-4.88 7.255-.054L79.823.451l3.245 7.222 7.255.054-6.249 4.88 3.237 7.844zM103.583 14.992l-7.488 5.158 3.237-7.844-6.25-4.88 7.256-.054L103.583.15l3.245 7.222 7.255.054-6.25 4.88 3.238 7.844zM34.26 14.842L26.77 20l3.237-7.844-6.249-4.88 7.255-.054L34.26 0l3.245 7.222 7.255.054-6.249 4.88L41.747 20z"></path></svg>
-  					      <strong class="badge badge-purple mb-1 mt-1">Tan</strong>
-  					    </p>
-  					    <p>
-  					      <strong>Product:&nbsp;</strong>
-  					      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-  					        Bali Bronzing Foam (Dark)
-  					      </a>
-  					    </p>
-  					    <p>&quot;Obsessed with how perfectly golden this leaves my skin! Best part: this is the WORLDS FIRST fake tan formula to help reduce cellulite AND have anti aging&quot;</p>
-  					    <p class="text-underline font-weight-bold">@kaylaazjones</p>
-  					  </div>
-  					</div>
-  
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#hair" role="option">
-  					  <noscript class="loading-lazy">
-  					  <picture class="embed-responsive bg-shimmer">
-  					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
-  					    <img class="embed-responsive-item fit--cover" alt="/" src="https://via.placeholder.com/592x422.jpg/EFADBA" loading="lazy"/>
-  					  </picture>
-  					  </noscript>
-  					  <div class="p-2 bg-white h-100">
-  					    <p class="d-flex justify-content-between align-items-center mb-0">
-  					      <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114 20" class="svg text-primary h4 mb-0"><path d="M10.5 15.143L3.012 20.3l3.237-7.844L0 7.577l7.255-.054L10.5.3l3.245 7.222L21 7.577l-6.249 4.88 3.237 7.844zM56.816 14.842L49.328 20l3.237-7.844-6.25-4.88 7.256-.054L56.816 0l3.245 7.222 7.255.054-6.25 4.88L64.305 20zM79.823 15.293l-7.488 5.158 3.237-7.844-6.249-4.88 7.255-.054L79.823.451l3.245 7.222 7.255.054-6.249 4.88 3.237 7.844zM103.583 14.992l-7.488 5.158 3.237-7.844-6.25-4.88 7.256-.054L103.583.15l3.245 7.222 7.255.054-6.25 4.88 3.238 7.844zM34.26 14.842L26.77 20l3.237-7.844-6.249-4.88 7.255-.054L34.26 0l3.245 7.222 7.255.054-6.249 4.88L41.747 20z"></path></svg>
-  					      <strong class="badge badge-secondary mb-1 mt-1">Hair</strong>
-  					    </p>
-  					    <p>
-  					      <strong>Product:&nbsp;</strong>
-  					      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-  					        Bali Bronzing Foam (Dark)
-  					      </a>
-  					    </p>
-  					    <p>&quot;These Tan Drops give my face the most natural and healthy looking tan. It contains healthy ingredients including Banana, Coconut Water , Dragon Fruit. It is 100% natural and contains 5 different Hyaluronic Acids. For the smoothest application, I like to add a few drops to my moisturizer!&quot;</p>
-  					    <p class="text-underline font-weight-bold">@kaylaazjones</p>
-  					  </div>
-  					</div>
-  
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#body" role="option">
-  					  <noscript class="loading-lazy">
-  					  <picture class="embed-responsive bg-shimmer">
-  					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
-  					    <img class="embed-responsive-item fit--cover" alt="/" src="https://via.placeholder.com/592x422.jpg/EFADBA" loading="lazy"/>
-  					  </picture>
-  					  </noscript>
-  					  <div class="p-2 bg-white h-100">
-  					    <p class="d-flex justify-content-between align-items-center mb-0">
-  					      <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114 20" class="svg text-primary h4 mb-0"><path d="M10.5 15.143L3.012 20.3l3.237-7.844L0 7.577l7.255-.054L10.5.3l3.245 7.222L21 7.577l-6.249 4.88 3.237 7.844zM56.816 14.842L49.328 20l3.237-7.844-6.25-4.88 7.256-.054L56.816 0l3.245 7.222 7.255.054-6.25 4.88L64.305 20zM79.823 15.293l-7.488 5.158 3.237-7.844-6.249-4.88 7.255-.054L79.823.451l3.245 7.222 7.255.054-6.249 4.88 3.237 7.844zM103.583 14.992l-7.488 5.158 3.237-7.844-6.25-4.88 7.256-.054L103.583.15l3.245 7.222 7.255.054-6.25 4.88 3.238 7.844zM34.26 14.842L26.77 20l3.237-7.844-6.249-4.88 7.255-.054L34.26 0l3.245 7.222 7.255.054-6.249 4.88L41.747 20z"></path></svg>
-  					      <strong class="badge badge-blue mb-1 mt-1">Body</strong>
-  					    </p>
-  					    <p>
-  					      <strong>Product:&nbsp;</strong>
-  					      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-  					        Bali Bronzing Foam (Dark)
-  					      </a>
-  					    </p>
-  					    <p>&quot;Ive never found a hair oil like this one! I love how my hair is hydrated, voluminous, shiny and strong! - I’d definitely recommend&quot;</p>
-  					    <p class="text-underline font-weight-bold">@kaylaazjones</p>
-  					  </div>
-  					</div>
-  
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#tan" role="option">
-  					  <noscript class="loading-lazy">
-  					  <picture class="embed-responsive bg-shimmer">
-  					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
-  					    <img class="embed-responsive-item fit--cover" alt="/" src="https://via.placeholder.com/592x422.jpg/EFADBA" loading="lazy"/>
-  					  </picture>
-  					  </noscript>
-  					  <div class="p-2 bg-white h-100">
-  					    <p class="d-flex justify-content-between align-items-center mb-0">
-  					      <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114 20" class="svg text-primary h4 mb-0"><path d="M10.5 15.143L3.012 20.3l3.237-7.844L0 7.577l7.255-.054L10.5.3l3.245 7.222L21 7.577l-6.249 4.88 3.237 7.844zM56.816 14.842L49.328 20l3.237-7.844-6.25-4.88 7.256-.054L56.816 0l3.245 7.222 7.255.054-6.25 4.88L64.305 20zM79.823 15.293l-7.488 5.158 3.237-7.844-6.249-4.88 7.255-.054L79.823.451l3.245 7.222 7.255.054-6.249 4.88 3.237 7.844zM103.583 14.992l-7.488 5.158 3.237-7.844-6.25-4.88 7.256-.054L103.583.15l3.245 7.222 7.255.054-6.25 4.88 3.238 7.844zM34.26 14.842L26.77 20l3.237-7.844-6.249-4.88 7.255-.054L34.26 0l3.245 7.222 7.255.054-6.249 4.88L41.747 20z"></path></svg>
-  					      <strong class="badge badge-purple mb-1 mt-1">Tan</strong>
-  					    </p>
-  					    <p>
-  					      <strong>Product:&nbsp;</strong>
-  					      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-  					        Bali Bronzing Foam (Dark)
-  					      </a>
-  					    </p>
-  					    <p>&quot;I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼&quot;</p>
-  					    <p class="text-underline font-weight-bold">@kaylaazjones</p>
-  					  </div>
-  					</div>
-  
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#hair" role="option">
-  					  <noscript class="loading-lazy">
-  					  <picture class="embed-responsive bg-shimmer">
-  					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
-  					    <img class="embed-responsive-item fit--cover" alt="/" src="https://via.placeholder.com/592x422.jpg/EFADBA" loading="lazy"/>
-  					  </picture>
-  					  </noscript>
-  					  <div class="p-2 bg-white h-100">
-  					    <p class="d-flex justify-content-between align-items-center mb-0">
-  					      <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114 20" class="svg text-primary h4 mb-0"><path d="M10.5 15.143L3.012 20.3l3.237-7.844L0 7.577l7.255-.054L10.5.3l3.245 7.222L21 7.577l-6.249 4.88 3.237 7.844zM56.816 14.842L49.328 20l3.237-7.844-6.25-4.88 7.256-.054L56.816 0l3.245 7.222 7.255.054-6.25 4.88L64.305 20zM79.823 15.293l-7.488 5.158 3.237-7.844-6.249-4.88 7.255-.054L79.823.451l3.245 7.222 7.255.054-6.249 4.88 3.237 7.844zM103.583 14.992l-7.488 5.158 3.237-7.844-6.25-4.88 7.256-.054L103.583.15l3.245 7.222 7.255.054-6.25 4.88 3.238 7.844zM34.26 14.842L26.77 20l3.237-7.844-6.249-4.88 7.255-.054L34.26 0l3.245 7.222 7.255.054-6.249 4.88L41.747 20z"></path></svg>
-  					      <strong class="badge badge-secondary mb-1 mt-1">Hair</strong>
-  					    </p>
-  					    <p>
-  					      <strong>Product:&nbsp;</strong>
-  					      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-  					        Bali Bronzing Foam (Dark)
-  					      </a>
-  					    </p>
-  					    <p>&quot;I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼&quot;</p>
-  					    <p class="text-underline font-weight-bold">@kaylaazjones</p>
-  					  </div>
-  					</div>
-  					<div class="carousel-item col-9 col-lg-3 result-card " data-category="#suncare" role="option">
-  					  <noscript class="loading-lazy">
-  					  <picture class="embed-responsive bg-shimmer">
-  					    <source srcset="https://via.placeholder.com/530x378.jpg/EFADBA" media="(min-width: 992px)" />
-  					    <img class="embed-responsive-item fit--cover" alt="/" src="https://via.placeholder.com/592x422.jpg/EFADBA" loading="lazy"/>
-  					  </picture>
-  					  </noscript>
-  					  <div class="p-2 bg-white h-100">
-  					    <p class="d-flex justify-content-between align-items-center mb-0">
-  					      <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114 20" class="svg text-primary h4 mb-0"><path d="M10.5 15.143L3.012 20.3l3.237-7.844L0 7.577l7.255-.054L10.5.3l3.245 7.222L21 7.577l-6.249 4.88 3.237 7.844zM56.816 14.842L49.328 20l3.237-7.844-6.25-4.88 7.256-.054L56.816 0l3.245 7.222 7.255.054-6.25 4.88L64.305 20zM79.823 15.293l-7.488 5.158 3.237-7.844-6.249-4.88 7.255-.054L79.823.451l3.245 7.222 7.255.054-6.249 4.88 3.237 7.844zM103.583 14.992l-7.488 5.158 3.237-7.844-6.25-4.88 7.256-.054L103.583.15l3.245 7.222 7.255.054-6.25 4.88 3.238 7.844zM34.26 14.842L26.77 20l3.237-7.844-6.249-4.88 7.255-.054L34.26 0l3.245 7.222 7.255.054-6.249 4.88L41.747 20z"></path></svg>
-  					      <strong class="badge badge-secondary mb-1 mt-1">Suncare</strong>
-  					    </p>
-  					    <p>
-  					      <strong>Product:&nbsp;</strong>
-  					      <a href="/products/sunny-honey-bali-bronzing-self-tan-mousse" title="Sunny Honey Bali Bronzing Foam" tabindex="0" class="text-underline">
-  					        Bali Bronzing Foam (Dark)
-  					      </a>
-  					    </p>
-  					    <p>&quot;I struggle with cellulite so wanted to try this 3 step process Glow Figure range! After using the products my skin was a lot softer, smoother and had more glow! They have an amazing lychee sent and contain unique patented cellushape techno formula which gives a reduction in cellulite. What more could a girl ask for! 😛💕🙌🏼&quot;</p>
-  					    <p class="text-underline font-weight-bold">@kaylaazjones</p>
-  					  </div>
-  					</div>
-  				</div>
+  <section class="instagram-reels container my-3 my-lg-4 text-center">
+  	<p class="h1 mb-2">Real Results</p>
+  	<ul class="list-unstyled nav nav-tabs nav-tabs--instagram justify-content-center border-0 mb-3">
+  		<li class="nav-item">
+  			<a href="#all" class="h4 font-weight-normal nav-link bg-white border-0 active px-g" data-toggle="tab" role="tab">All</a>
+  		</li>
+  		<li>
+  			<a href="#hair" class="h4 font-weight-normal nav-link bg-white border-0 px-g" data-toggle="tab" role="tab">Hair</a>
+  		</li>
+  		<li>
+  			<a href="#tan_spf" class="h4 font-weight-normal nav-link bg-white border-0 px-g" data-toggle="tab" role="tab">Tan & SPF</a>
+  		</li>
+  		<li>
+  			<a href="#body" class="h4 font-weight-normal nav-link bg-white border-0 px-g" data-toggle="tab" role="tab">Body</a>
+  		</li>
+  	</ul>
+  	<div class="carousel slide carousel--loop carousel--swipe mx-lg-ng" role="tabpanel" data-slide-number="4">
+  		<div class="carousel-inner row flex-nowrap mx-0">
+  			<div class="ig-card text-left mb-0 col-9 col-lg-3 carousel-item active" data-category="hair" data-video-id="">
+  				<video class="w-100 rounded-lg mb-1" muted loop playsinline webkit-playsinline autoplay name="media" poster="">
+  					<source
+  						src="https://cdn.shopify.com/videos/c/o/v/80ace9f8f186492bbe4b1fa00dca349a.mp4"
+  						type="video/mp4">
+  				</video>
+  				<p class="font-weight-bold mb-25">Meredith Langosh</p>
+  				<a href="#" class="font-size-sm text-body text-underline">Sunny Honey Bali Bronzing Foam</a>
   			</div>
-  			<a class="carousel-control carousel-control-prev carousel-control--background floating-out-left justify-content-start text-primary w-auto" href="#real-result-carousel" role="button" data-slide="prev">
-  				<span class="carousel-control-prev-icon d-flex justify-content-center align-items-center" aria-hidden="true"><svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.627 22.627" class="svg"><path d="M16.2 1.885l-9.428 9.428 9.428 9.428-1.886 1.886L3 11.313 14.314 0z"></path></svg></span>
-  				<span class="sr-only">Previous</span>
-  			</a>
-  			<a class="carousel-control carousel-control-next carousel-control--background floating-out-right justify-content-end text-primary w-auto" href="#real-result-carousel" role="button" data-slide="next">
-  				<span class="carousel-control-next-icon d-flex justify-content-center align-items-center" aria-hidden="true"><svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.627 22.627" class="svg"><path d="M5.428 20.742l9.428-9.428-9.428-9.428L7.314 0l11.314 11.314L7.314 22.627z"></path></svg></span>
-  				<span class="sr-only">Next</span>
-  			</a>
+  			<div class="ig-card text-left mb-0 col-9 col-lg-3 carousel-item" data-category="hair" data-video-id="">
+  				<video class="w-100 rounded-lg mb-1" muted loop playsinline webkit-playsinline autoplay name="media" poster="">
+  					<source
+  						src="https://cdn.shopify.com/videos/c/o/v/949ea964f27e4bcc982b596cca694036.mp4"
+  						type="video/mp4">
+  				</video>
+  				<p class="font-weight-bold mb-25">Meredith Langosh</p>
+  				<a href="#" class="font-size-sm text-body text-underline">Sunny Honey Bali Bronzing Foam</a>
+  			</div>
+  			<div class="ig-card text-left mb-0 col-9 col-lg-3 carousel-item" data-category="hair" data-video-id="">
+  				<video class="w-100 rounded-lg mb-1" muted loop playsinline webkit-playsinline autoplay name="media" poster="">
+  					<source
+  						src="https://cdn.shopify.com/videos/c/o/v/1a172216adc3439d8b10c43574075247.mp4"
+  						type="video/mp4">
+  				</video>
+  				<p class="font-weight-bold mb-25">Meredith Langosh</p>
+  				<a href="#" class="font-size-sm text-body text-underline">Sunny Honey Bali Bronzing Foam</a>
+  			</div>
+  			<div class="ig-card text-left mb-0 col-9 col-lg-3 carousel-item" data-category="hair" data-video-id="">
+  				<video class="w-100 rounded-lg mb-1" muted loop playsinline webkit-playsinline autoplay name="media" poster="">
+  					<source
+  						src="https://cdn.shopify.com/videos/c/o/v/57c3e426e86a4d499e50a0cfe8da171f.mp4"
+  						type="video/mp4">
+  				</video>
+  				<p class="font-weight-bold mb-25">Meredith Langosh</p>
+  				<a href="#" class="font-size-sm text-body text-underline">Sunny Honey Bali Bronzing Foam</a>
+  			</div>
+  			<div class="ig-card text-left mb-0 col-9 col-lg-3 carousel-item" data-category="hair" data-video-id="">
+  				<video class="w-100 rounded-lg mb-1" muted loop playsinline webkit-playsinline autoplay name="media" poster="">
+  					<source
+  						src="https://cdn.shopify.com/videos/c/o/v/80ace9f8f186492bbe4b1fa00dca349a.mp4"
+  						type="video/mp4">
+  				</video>
+  				<p class="font-weight-bold mb-25">Meredith Langosh</p>
+  				<a href="#" class="font-size-sm text-body text-underline">Sunny Honey Bali Bronzing Foam</a>
+  			</div>
+  			<div class="ig-card text-left mb-0 col-9 col-lg-3 carousel-item" data-category="tan_spf" data-video-id="">
+  				<video class="w-100 rounded-lg mb-1" muted loop playsinline webkit-playsinline autoplay name="media" poster="">
+  					<source
+  						src="https://cdn.shopify.com/videos/c/o/v/949ea964f27e4bcc982b596cca694036.mp4"
+  						type="video/mp4">
+  				</video>
+  				<p class="font-weight-bold mb-25">Meredith Langosh</p>
+  				<a href="#" class="font-size-sm text-body text-underline">Sunny Honey Bali Bronzing Foam</a>
+  			</div>
+  			<div class="ig-card text-left mb-0 col-9 col-lg-3 carousel-item" data-category="tan_spf" data-video-id="">
+  				<video class="w-100 rounded-lg mb-1" muted loop playsinline webkit-playsinline autoplay name="media" poster="">
+  					<source
+  						src="https://cdn.shopify.com/videos/c/o/v/1a172216adc3439d8b10c43574075247.mp4"
+  						type="video/mp4">
+  				</video>
+  				<p class="font-weight-bold mb-25">Meredith Langosh</p>
+  				<a href="#" class="font-size-sm text-body text-underline">Sunny Honey Bali Bronzing Foam</a>
+  			</div>
+  			<div class="ig-card text-left mb-0 col-9 col-lg-3 carousel-item" data-category="tan_spf" data-video-id="">
+  				<video class="w-100 rounded-lg mb-1" muted loop playsinline webkit-playsinline autoplay name="media" poster="">
+  					<source
+  						src="https://cdn.shopify.com/videos/c/o/v/57c3e426e86a4d499e50a0cfe8da171f.mp4"
+  						type="video/mp4">
+  				</video>
+  				<p class="font-weight-bold mb-25">Meredith Langosh</p>
+  				<a href="#" class="font-size-sm text-body text-underline">Sunny Honey Bali Bronzing Foam</a>
+  			</div>
+  			<div class="ig-card text-left mb-0 col-9 col-lg-3 carousel-item" data-category="tan_spf" data-video-id="">
+  				<video class="w-100 rounded-lg mb-1" muted loop playsinline webkit-playsinline autoplay name="media" poster="">
+  					<source
+  						src="https://cdn.shopify.com/videos/c/o/v/80ace9f8f186492bbe4b1fa00dca349a.mp4"
+  						type="video/mp4">
+  				</video>
+  				<p class="font-weight-bold mb-25">Meredith Langosh</p>
+  				<a href="#" class="font-size-sm text-body text-underline">Sunny Honey Bali Bronzing Foam</a>
+  			</div>
+  			<div class="ig-card text-left mb-0 col-9 col-lg-3 carousel-item" data-category="body" data-video-id="">
+  				<video class="w-100 rounded-lg mb-1" muted loop playsinline webkit-playsinline autoplay name="media" poster="">
+  					<source
+  						src="https://cdn.shopify.com/videos/c/o/v/949ea964f27e4bcc982b596cca694036.mp4"
+  						type="video/mp4">
+  				</video>
+  				<p class="font-weight-bold mb-25">Meredith Langosh</p>
+  				<a href="#" class="font-size-sm text-body text-underline">Sunny Honey Bali Bronzing Foam</a>
+  			</div>
+  			<div class="ig-card text-left mb-0 col-9 col-lg-3 carousel-item" data-category="body" data-video-id="">
+  				<video class="w-100 rounded-lg mb-1" muted loop playsinline webkit-playsinline autoplay name="media" poster="">
+  					<source
+  						src="https://cdn.shopify.com/videos/c/o/v/1a172216adc3439d8b10c43574075247.mp4"
+  						type="video/mp4">
+  				</video>
+  				<p class="font-weight-bold mb-25">Meredith Langosh</p>
+  				<a href="#" class="font-size-sm text-body text-underline">Sunny Honey Bali Bronzing Foam</a>
+  			</div>
+  			<div class="ig-card text-left mb-0 col-9 col-lg-3 carousel-item" data-category="body" data-video-id="">
+  				<video class="w-100 rounded-lg mb-1" muted loop playsinline webkit-playsinline autoplay name="media" poster="">
+  					<source
+  						src="https://cdn.shopify.com/videos/c/o/v/57c3e426e86a4d499e50a0cfe8da171f.mp4"
+  						type="video/mp4">
+  				</video>
+  				<p class="font-weight-bold mb-25">Meredith Langosh</p>
+  				<a href="#" class="font-size-sm text-body text-underline">Sunny Honey Bali Bronzing Foam</a>
+  			</div>
+  			<div class="ig-card text-left mb-0 col-9 col-lg-3 carousel-item" data-category="body" data-video-id="">
+  				<video class="w-100 rounded-lg mb-1" muted loop playsinline webkit-playsinline autoplay name="media" poster="">
+  					<source
+  						src="https://cdn.shopify.com/videos/c/o/v/80ace9f8f186492bbe4b1fa00dca349a.mp4"
+  						type="video/mp4">
+  				</video>
+  				<p class="font-weight-bold mb-25">Meredith Langosh</p>
+  				<a href="#" class="font-size-sm text-body text-underline">Sunny Honey Bali Bronzing Foam</a>
+  			</div>
   		</div>
   	</div>
-  	<div class="col-12 text-center">
-  		<a href="#" class="btn btn-lg btn-primary mb-2 mt-3">See All Results</a>
-  	</div>
+  	<a href="#" class="btn btn-lg btn-outline-primary rounded-pill mt-3">See All Results</a>
   </section>
 
   <script src="/cocoandeve-styleguides/js/globals.js"></script>
