@@ -29,4 +29,15 @@
             }
         }
     }
+
+    .carousel-control {
+        &--loop {
+            &.carousel-control-prev,
+            &.carousel-control-next {
+                span[class*=carousel-control] {
+                    font-size: calc-em(16);
+                }
+            }
+        }
+    }
 }
