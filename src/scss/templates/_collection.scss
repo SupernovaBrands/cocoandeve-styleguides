@@ -383,6 +383,11 @@
 				width: 50%;
 				max-width: 50%;
 				overflow: hidden;
+				
+				@include media-breakpoint-down(lg) {
+					min-height: calc-em(410);
+					height: calc-em(410);
+				}
 
 				&:last-child {
 					@include media-breakpoint-up(lg) {
