@@ -6,19 +6,9 @@
 <body class="mobile-wrapper">
 	<div class="container mt-4">
 		<h1>Upsell</h1>
-		<h2 class="mt-4">Blog</h2>
-		<div class="row">
-			<div class="col-12 col-lg-4">
-				{{> compounds/upsell-blog}}
-			</div>
-		</div>
 		<h2 class="mt-4">PDP</h2>
-		<div class="row">
-			<div class="col-12 col-lg-5">
-				{{> compounds/upsell-pdp class="mb-3"}}
-				{{> compounds/upsell-pdp class="mb-3" remove=true}}
-			</div>
-		</div>
+		{{> sections/pdp-upsell-2 class="mb-4"}}
 	</div>
+	{{> js jquery=true popper=true bootstrap=true main=true }}
 </body>
 </html>
