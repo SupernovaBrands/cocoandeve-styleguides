@@ -18,8 +18,19 @@
         border: 1px solid $primary-dark;
         border-radius: calc-em(8);
 
+        button {
+            margin-bottom: 0 !important;
+            width: 100%;
+        }
+
         @include media-breakpoint-up(lg) {
             max-width: calc-em(216);
+            margin-bottom: calc-em(36) !important;
+
+            button {
+                margin-bottom: calc-em(-17) !important;
+                width: 100%;
+            }
         }
     }
 
