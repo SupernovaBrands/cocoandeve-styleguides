@@ -6,32 +6,10 @@
 	<body>
 		<div class="container mb-5">
 			<h1 class="mt-4">Video Carousel</h1>
-
-			<h3 class="py-2">3 Items Centered and loop</h3>
-			<section class="how-to bg-primary-light py-2 no-gutters__in-container mb-5">
-				<h2 class="text-center h1 py-2 py-lg-1 mb-0">The Ultimate “HOW TO”s</h2>
-				<div id="carouselLoopCentered" class="carousel slide carousel--loop" data-slide-number="2">
-					<div class="carousel--centered">
-						<div class="carousel-inner row flex-nowrap mx-0" role="listbox">
-							{{> components/video-card carousel=true class="mb-0 carousel-item col-9 col-lg-4 active" src="https://www.youtube.com/embed/xwAfY_vdE9I" title="Multi-masking #selfcaresunday with Janet Amrani" imgtext="1"}}
-							{{> components/video-card carousel=true class="mb-0 carousel-item col-9 col-lg-4" src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/TAN_HOW_TO_BONNIE_LR.mp4?v=1610351992" title="Multi-masking #selfcaresunday with Janet Amrani" imgtext="2"}}
-							{{> components/video-card carousel=true class="mb-0 carousel-item col-9 col-lg-4" src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/TAN_HOW_TO_BONNIE_LR.mp4?v=1610351992" title="Multi-masking #selfcaresunday with Janet Amrani" imgtext="3"}}
-							{{> components/video-card carousel=true class="mb-0 carousel-item col-9 col-lg-4" src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/TAN_HOW_TO_BONNIE_LR.mp4?v=1610351992" title="Multi-masking #selfcaresunday with Janet Amrani" imgtext="4"}}
-							{{> components/video-card carousel=true class="mb-0 carousel-item col-9 col-lg-4" src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/TAN_HOW_TO_BONNIE_LR.mp4?v=1610351992" title="Multi-masking #selfcaresunday with Janet Amrani" imgtext="5"}}
-							{{> components/video-card carousel=true class="mb-0 carousel-item col-9 col-lg-4" src="https://cdn.shopify.com/s/files/1/0286/1327/9779/files/TAN_HOW_TO_BONNIE_LR.mp4?v=1610351992" title="Multi-masking #selfcaresunday with Janet Amrani" imgtext="6"}}
-						</div>
-					</div>
-
-					<a class="carousel-control carousel-control-prev text-primary carousel-control--background" href="#carouselLoopCentered" role="button" data-slide="prev">
-						<span class="carousel-control-prev-icon d-flex justify-content-center align-items-center" aria-hidden="true"><img class="svg" src="icons/chevron-prev.svg" replace-to-svg /></span>
-						<span class="sr-only">Previous</span>
-					</a>
-					<a class="carousel-control carousel-control-next text-primary carousel-control--background" href="#carouselLoopCentered" role="button" data-slide="next">
-						<span class="carousel-control-next-icon d-flex justify-content-center align-items-center" aria-hidden="true"><img class="svg" src="icons/chevron-next.svg" replace-to-svg /></span>
-						<span class="sr-only">Next</span>
-					</a>
-				</div>
-			</section>
+			<h2 class="text-center h1 mb-0 h1 pb-2 pb-lg-3 pt-1">The Ultimate How-Tos</h2>
+			<div class="article-list-wrapper how-to-wrapper  row mb-4">
+				{{> compounds/how-to-featured-carousel  id="how-to-section"}}
+			</div>
 		</div>
 
 		{{> components/video-modal}}
