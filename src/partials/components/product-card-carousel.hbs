@@ -2,16 +2,18 @@
 	{{# if square_badge}}<span class="badge bg-white position-absolute font-weight-normal font-size-sm">{{ square_badge }}</span>{{/if}}
 	<a href="#" class="product-card__img-link rounded-top" aria-label="{{ title }}">
 	<noscript class="loading-lazy">
-		<picture class="embed-responsive embed-responsive-1by1 bg-shimmer m-0">
+		<picture class="embed-responsive embed-responsive-1by1 m-0 pt-2">
 			{{#if collectiontemplate}}
-			<source srcset="https://via.placeholder.com/540x540/FFF2F4" media="(min-width: 992px)" />
+			<source srcset="https://via.placeholder.com/540x540/FFF2F4" media="(min-width: 992px)" width="260" height="260" />
 			{{else}}
-			<source srcset="https://via.placeholder.com/520x520/FFF2F4" media="(min-width: 992px)" />
+			<source srcset="https://via.placeholder.com/520x520/FFF2F4" media="(min-width: 992px)" width="260" height="260" />
 			{{/if}}
 			<img class="embed-responsive-item fit--cover pt-2 bg-pink-light"
 			alt="Image Alt"
 			aria-label="Image Area-Label"
 			loading="lazy"
+			width="296"
+			height="296"
 			src="https://via.placeholder.com/243x243/FFF2F4">
 			{{# if showTip }}
 				<span class="product-card__image-tip position-absolute text-white font-size-xs p-1 d-none d-lg-block">👻 Get 3 for 2 with code: HALLOWEEN 👻</span>
