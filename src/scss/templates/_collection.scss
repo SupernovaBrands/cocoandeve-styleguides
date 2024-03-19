@@ -230,6 +230,12 @@
 			font-size: calc-em(14) !important;
 		}
 	}
+
+	@include media-breakpoint-down(md) {
+		.text-content {
+			min-height: calc-em(500);
+		}
+	}
 }
 
 .collection-range-about {
