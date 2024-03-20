@@ -256,6 +256,15 @@
 		color: $body-color !important;
 	}
 
+	@include media-breakpoint-up(lg) {
+		p[data-target] {
+			&:hover {
+				color: $primary;
+				cursor: pointer;
+			}
+		}
+	}
+
 	.carousel {
 		&--item-with-preview {
 			@include media-breakpoint-down(md) {
