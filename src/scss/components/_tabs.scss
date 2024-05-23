@@ -8,6 +8,7 @@
       border-radius: 0;
       border-right: 0;
       padding: 0;
+      line-height: calc-em(40, $context: 16, $unit: 1);
       background-color: #fff;
 
       @include media-breakpoint-up(lg) {
@@ -53,6 +54,9 @@
   &--real-results {
     .nav-link {
       width: calc-em(90);
+      @include media-breakpoint-down(lg) {
+        width: calc-em(74);
+      }
     }
   }
 }
