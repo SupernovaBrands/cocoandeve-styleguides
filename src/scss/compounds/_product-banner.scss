@@ -38,6 +38,7 @@ $grid-column-width-xl: minmax(0, (map-get($container-max-widths, xl) - $grid-gut
 		img {
 			object-fit: cover;
 			object-position: left;
+			vertical-align: middle;
 		}
 	}
 
@@ -89,6 +90,35 @@ $grid-column-width-xl: minmax(0, (map-get($container-max-widths, xl) - $grid-gut
 		img {
 			width: calc-em(40);
 			margin-right: $grid-gutter-width-lg / 2;
+		}
+	}
+
+	&__slider-wrapper {
+		min-height: 480px;
+		.img-slider {
+			z-index: 9;
+			cursor: ew-resize;
+			width: 60px;
+			height: 100%;
+			background-color: transparent;
+			opacity: 1;
+			border-radius: 50%;
+
+			&:before {
+				content: " ";
+				border-left: 4px solid #ffffff;
+				height: 100%;
+				padding-left: -24px;
+				position: absolute;
+			}
+
+			.rounded-circle {
+				padding: 10px 14px;
+			}
+
+			svg {
+				height: 12px;
+			}
 		}
 	}
 }
