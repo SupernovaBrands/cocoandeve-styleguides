@@ -162,4 +162,19 @@
 			background-image: url('https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/53cff8f7-45b0-455d-a40e-0f4146fa3e00/public');
 		}
 	}
+	&.antioxidant-glow-cream-refill-pod {
+		&:before {
+			background: $primary;
+		}
+	}
+	&.refill-pod {
+		&:before {
+			background: $primary;
+		}
+	}
+	&.antioxidant-glow-cream {
+		&:before {
+			background: $primary;
+		}
+	}
 }
