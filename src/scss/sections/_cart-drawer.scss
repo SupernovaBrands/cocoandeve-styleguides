@@ -52,12 +52,6 @@
 		content: "\a0+";
 	}
 
-	&__discount-form-wrapper {
-		.small {
-			font-size: 80%;
-		}
-	}
-
 	&__services .svg {
 		font-size: calc-em(50);
 		margin-bottom: map-get($spacers, 1) / 2;
